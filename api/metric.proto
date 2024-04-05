@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+// A metric resource
+message Metric {
+  metadata = 1;
+  assessment_data = 2;
+  config_data = 3;
+}
+
+message metadata {
+  // the ID in as a uid
+  string id = 1;
+
+  string description = 2;
+
+  string version = 3;
+
+  string comments = 4;
+}
+
+message assessment_data {
+  repeated string target_resources: 1;
+  repeated string security_features: 2;
+  optional MetricImplementation implementation: 3;
+}
+
+message config_mapping {
+  string operator: 1;
+
+  google.protobuf.Value target_value: 2;
+  
+  int64 interval: 3;
+}
+
+
+// MetricImplementation defines the implementation of an individual metric.
+message MetricImplementation {
+  // The metric which is implemented
+  string metric_id = 1 [
+    (buf.validate.field).string.min_len = 1,
+    (tagger.tags) = "gorm:\"primaryKey\""
+  ];
+
+  enum Language {
+    LANGUAGE_UNSPECIFIED = 0;
+    LANGUAGE_REGO = 1;
+    LANGUAGE_CYPHER = 1;
+  }
+
+  // The language this metric is implemented in
+  Language lang = 2 [(buf.validate.field).enum.defined_only = true];
+
+  // The actual implementation
+  string code = 3 [(buf.validate.field).string.min_len = 1];
+
+  // The last time of update
+  google.protobuf.Timestamp updated_at = 4 [(tagger.tags) = "gorm:\"serializer:timestamppb;type:datetime\""];
+}

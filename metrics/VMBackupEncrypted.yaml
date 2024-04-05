@@ -1,0 +1,48 @@
+metric:
+  metadata:
+    uid: VMBackupEncrypted
+    description: This metric is used to assess that a VM's disks have only encrypted backups
+    version: 1.0 # ontology version
+    comments: "Developed in EMERALD, to be assessed using CSP-native collector, ..."
+  assessment-data:
+    target-resources: [VirtualMachine] # the resources that are assessed; can also be IDs
+    related-resources: [BlockStorage, Storage] # the resource types the assessment has to wait for; can also be IDs
+    security-feature: [Blockstorage.Backup.Storage.AtRestEncryption.enabled]
+  config-data:
+    operator: ==
+    target-value: true
+    interval: 1
+
+metric:
+  metadata:
+    uid: VMBackupEncrypted
+    description: This metric is used to assess that a VM's disks have only encrypted backups
+    version: 1.0 # ontology version
+    comments: "Developed in EMERALD, to be assessed using CSP-native collector, ..."
+  assessment-data: # different formatting idea: assessment data as a chain of related resources and their individual security features; every object references the related-resources directly above
+    - target-resources: [VirtualMachine] # the resources that are assessed; can also be IDs
+      related-resources: [BlockStorage] # the resource types the assessment has to wait for; can also be IDs
+    - target-resources: [BlockStorage]
+      # security-feature could be defined additionally here: [BlockStorage.immutability.enabled]
+      related-resources: [BlockStorage.Backup.Storage]
+    - target-resources: [Storage]
+      security-feature: [Storage.AtRestEncryption.enabled]
+  config-data:
+    operator: ==
+    target-value: true
+    interval: 1
+
+metric:
+  metadata:
+    uid: VMBackupEncrypted
+    description: This metric is used to assess that a VM's disks have only encrypted backups
+    version: 1.0 # ontology version
+    comments: "Developed in EMERALD, to be assessed using CSP-native collector, ..."
+  assessment-data: # different formatting idea: assessment data as a list of 
+    target-resources: [VirtualMachine] # the resources that are assessed; can also be IDs
+    related-resources: [BlockStorage, BlockStorage.Backup.Storage] # the evidence types the assessment has to wait for; can also be resource IDs
+    security-feature: [BlockStorage.Backup.Storage.AtRestEncryption.enabled]
+  config-data:
+    operator: ==
+    target-value: true
+    interval: 1
