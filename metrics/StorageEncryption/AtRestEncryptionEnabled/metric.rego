@@ -1,6 +1,6 @@
-package clouditor.metrics.at_rest_encryption_algorithm
+package metrics.storage_encryption.at_rest_encryption_algorithm
 
-import data.clouditor.compare
+import data.compare
 
 import input.atRestEncryption as enc
 

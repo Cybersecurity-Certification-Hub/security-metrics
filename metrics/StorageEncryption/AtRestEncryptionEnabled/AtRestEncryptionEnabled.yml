@@ -4,7 +4,6 @@
 - version: 1.0 
 - comments: At rest encryption is a standard practice to keep sensitive data confidential when it is stored permanently.
 --- # Configuration data
-- interval: 24
 - p1:
   - operator: ==
   - targetValue: True

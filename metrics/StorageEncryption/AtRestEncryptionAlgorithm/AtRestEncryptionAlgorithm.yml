@@ -4,7 +4,6 @@
 - version: 1.0
 - comments: A state of the art encryption algorithm is essential in keeping sensitive data confidential.
 --- # Configuration data
-- interval: 24
 - p1:
   - operator: ==
   - targetValue: AES256
