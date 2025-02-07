@@ -8,11 +8,11 @@ default applicable = false
 
 default compliant = false
 
-applicable {
+applicable if {
 	# we are only interested in code repositories
 	repo
 }
 
-compliant {
+compliant if {
 	compare(data.operator, data.target_value, repo.signedCommits)
 }

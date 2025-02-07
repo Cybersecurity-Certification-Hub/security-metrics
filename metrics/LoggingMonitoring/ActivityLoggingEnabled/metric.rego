@@ -9,10 +9,10 @@ default compliant = false
 
 enabled := input.resourceLogging.enabled
 
-applicable {
+applicable if {
 	enabled != null
 }
 
-compliant {
+compliant if {
 	compare(data.operator, data.target_value, enabled)
 }

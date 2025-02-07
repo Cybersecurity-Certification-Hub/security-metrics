@@ -8,12 +8,12 @@ default applicable = false
 
 default compliant = false
 
-applicable {
+applicable if {
         # we are only interested in active accounts, deactivated accounts are already inactive
 	identity.activated
 }
 
-compliant {
+compliant if {
 	ts := time.parse_rfc3339_ns(identity.lastActivity)
 	now := time.now_ns()
 
