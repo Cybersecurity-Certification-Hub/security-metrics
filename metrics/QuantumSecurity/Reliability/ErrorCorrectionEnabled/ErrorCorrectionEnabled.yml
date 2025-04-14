@@ -1,0 +1,9 @@
+--- # Metadata
+- id: ErrorCorrectionEnabled
+- description: This rule assesses whether a [QPU] has [ErrorCorrectionEnabled] [p1:enabled] correctly configured.
+- version: 1.0 
+- comments: Quantum error correction enables reliable execution of quantum circuits.
+--- # Configuration data
+- p1:
+  - operator: ==
+  - targetValue: True
