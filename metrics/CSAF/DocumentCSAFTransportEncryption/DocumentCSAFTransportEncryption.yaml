@@ -9,4 +9,4 @@
   - targetValue: true
 - p2:
   - operator: ==
-  - targetValue: TLS
+  - targetValue: "TLS"
