@@ -1,6 +1,6 @@
 package cch.metrics.python_runtime
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input as func
 
