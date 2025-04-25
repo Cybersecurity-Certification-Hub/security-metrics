@@ -1,6 +1,6 @@
-package metrics.network_security.web_application_firewall_enabled
+package cch.metrics.web_application_firewall_enabled
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input.accessRestriction.webApplicationFirewall as webApp
 

@@ -1,6 +1,6 @@
-package metrics.logging_monitoring.boot_logging_enabled
+package cch.metrics.boot_logging_enabled
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input.bootLogging as logging
 

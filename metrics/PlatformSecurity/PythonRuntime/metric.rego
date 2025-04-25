@@ -1,4 +1,4 @@
-package metrics.platform_security.python_runtime
+package cch.metrics.python_runtime
 
 import data.compare
 import rego.v1

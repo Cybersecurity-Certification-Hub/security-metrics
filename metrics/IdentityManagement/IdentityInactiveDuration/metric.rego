@@ -1,6 +1,6 @@
-package metrics.iam.identity_inactive_duration
+package cch.metrics.identity_inactive_duration
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input as identity
 
