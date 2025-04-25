@@ -1,6 +1,6 @@
-package metrics.iam.identity_password_policy_enabled
+package cch.metrics.identity_password_policy_enabled
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input as identity
 
