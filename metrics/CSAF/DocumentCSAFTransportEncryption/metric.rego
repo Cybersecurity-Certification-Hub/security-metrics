@@ -1,6 +1,6 @@
-package metrics.csaf.document_csaf_transport_encryption
+package cch.metrics.document_csaf_transport_encryption
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input as document
 

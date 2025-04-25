@@ -1,6 +1,6 @@
-package metrics.dlc.signed_commits
+package cch.metrics.signed_commits
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input.codeRepository as repo
 

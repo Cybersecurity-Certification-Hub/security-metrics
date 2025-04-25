@@ -1,6 +1,6 @@
-package metrics.logging_monitoring.anomaly_detection_output
+package cch.metrics.anomaly_detection_output
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input.anomalyDetection.applicationLogging as logging
 

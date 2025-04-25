@@ -1,6 +1,6 @@
-package metrics.dlc.approved_commit_author_enforced
+package cch.metrics.approved_commit_author_enforced
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input.codeRepository as repo
 

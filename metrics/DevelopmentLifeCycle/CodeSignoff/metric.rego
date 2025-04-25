@@ -1,6 +1,6 @@
-package metrics.dlc.code_signoff
+package cch.metrics.code_signoff
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input.codeRepository as repo
 

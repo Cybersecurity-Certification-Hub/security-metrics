@@ -1,6 +1,6 @@
-package metrics.logging_monitoring.anomaly_detection_enabled
+package cch.metrics.anomaly_detection_enabled
 
-import data.compare
+import data.cch.compare
 import rego.v1
 
 default applicable = false

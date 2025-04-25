@@ -1,6 +1,6 @@
-package metrics.application_security.no_known_vulnerabilities
+package cch.metrics.no_known_vulnerabilities
 
-import data.clouditor.compare
+import data.cch.compare
 import input.vulnerabilities as vul
 import rego.v1
 

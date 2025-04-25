@@ -1,5 +1,5 @@
 # Metadata
-id: AtRestEncryptionAlgorithm
+id: AtRestEncryptionEnabled
 description: This rule assesses whether a [Storage] has [AtRestEncryption] [p1:enabled] correctly configured.
 version: 1.0 
 comments: At rest encryption is a standard practice to keep sensitive data confidential when it is stored permanently.

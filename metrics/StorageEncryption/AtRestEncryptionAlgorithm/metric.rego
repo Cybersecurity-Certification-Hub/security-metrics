@@ -1,6 +1,6 @@
-package metrics.storage_encryption.at_rest_encryption_algorithm
+package cch.metrics.at_rest_encryption_algorithm
 
-import data.compare
+import data.cch.compare
 
 import input.atRestEncryption as enc
 

@@ -1,6 +1,6 @@
-package metrics.network_security.l_3_firewall_restricted_ports
+package cch.metrics.l_3_firewall_restricted_ports
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input.accessRestriction.l3Firewall as l3
 
