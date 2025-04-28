@@ -1,0 +1,10 @@
+# Metadata
+id: HighNotebookVulnerabilitiesDetected
+description: This rule assesses whether an [AImodel] has the compliant number of [p1:Vulnerability].
+version: 1.0
+comments: This metric assess if vulnerabilities are included in an AI model e.g. pickle magic numbers detected in the AI model what can lead to serialization attacks.
+--- 
+# Configuration data
+p1: 
+ operator: ==
+ targetValue: 0
