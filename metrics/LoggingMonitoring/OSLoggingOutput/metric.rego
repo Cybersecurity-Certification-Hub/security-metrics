@@ -8,8 +8,6 @@ default applicable = false
 
 default compliant = false
 
-metricConfiguration := data.target_value
-
 applicable if {
 	logging
 }
