@@ -1,0 +1,10 @@
+# Metadata
+id: NotebookVulnerabilitiesDetected
+description: This rule assesses wheter an [AInotebook] has [p1:enabled] set correctly.
+version: 1.0
+comments: possible values are integers
+--- 
+# Configuration data
+p1:
+  operator: ==
+  targetValue: [0]
