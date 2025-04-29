@@ -1,6 +1,6 @@
-package metrics.quantum.reliability
+package cch.metrics.quantum_error_correction_enabled
 
-import data.compare
+import data.cch.compare
 
 default applicable = false
 

@@ -1,6 +1,6 @@
-package metrics.quantum.reliability
+package cch.metrics.one_qubit_gate_error_rate
 
-import data.compare
+import data.cch.compare
 
 default applicable = false
 
