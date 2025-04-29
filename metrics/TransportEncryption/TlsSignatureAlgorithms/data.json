@@ -1,4 +1,4 @@
 {
-  "operator" : "==",
-  "target_value" : ""
+  "operator" : "isIn",
+  "target_value" : ["RSA", "ECDSA", "EdDSA"]
 }
