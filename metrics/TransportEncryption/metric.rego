@@ -1,6 +1,7 @@
 package cch.metrics.transport_encryption_enabled
 
 import data.cch.compare
+import rego.v1
 import input.transportEncryption as enc
 
 default compliant = false
