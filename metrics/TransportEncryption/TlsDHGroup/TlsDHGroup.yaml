@@ -1,0 +1,11 @@
+# Metadata
+id: TlsDhGroup
+description: This rule assesses whether a [Resource] has its [TransportEncryption] [p1:dhGroups] correctly configured.
+version: 1.0
+comments: Using secure Diffie-Hellman groups (e.g., 2048 bits or higher) ensures that key exchange is robust against eavesdropping and man-in-the-middle attacks.
+---
+# Configuration data
+configuration:
+  p1:
+    operator: isIn
+    targetValue: ["2048", "3072", "4096"]
