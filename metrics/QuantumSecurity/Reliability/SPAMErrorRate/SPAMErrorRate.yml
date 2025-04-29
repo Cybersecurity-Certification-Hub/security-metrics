@@ -1,6 +1,6 @@
 # Metadata
 id: SPAMErrorRate
-description: This rule assesses whether a [QPU] has [SPAMErrorRate] [p1:errorRate] below a specified threshold.
+description: This rule assesses whether a [QPU] has a [SPAMErrorRate] that is below a specified [p1:errorRate] threshold.
 version: 1.0 
 comments: State preparation and measuremnet (SPAM) error rates are a standard measure for the reliability of readout of the results for a quantum circuit.
 --- 

@@ -1,6 +1,7 @@
 package cch.metrics.quantum_spam_error_rate
 
 import data.cch.compare
+import rego.v1
 
 default applicable = false
 

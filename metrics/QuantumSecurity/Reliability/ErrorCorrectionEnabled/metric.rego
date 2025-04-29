@@ -1,6 +1,7 @@
 package cch.metrics.quantum_error_correction_enabled
 
 import data.cch.compare
+import rego.v1
 
 default applicable = false
 
