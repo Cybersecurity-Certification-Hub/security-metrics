@@ -1,4 +1,4 @@
 {
-    "operator" : "<",
-    "target_value" : 0.0001
+    "operator" : "==",
+    "target_value" : true
 }
