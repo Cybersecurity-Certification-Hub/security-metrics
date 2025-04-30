@@ -44,6 +44,15 @@ compare(operator, target_values, actual_value) := x if {
 	x := actual_value in target_values
 }
 
+# Checks if the actual_value (number) exists in target_values (array)
+compare(operator, target_values, actual_value) := x if {
+	operator == "isIn"
+
+	# Check if the input value actual_value is a number, otherwise the compare function for array must be used
+	is_number(actual_value)
+	x := actual_value in target_values
+}
+
 # Checks if the actual_values (array) contains the target_value (string)
 compare(operator, target_value, actual_values) := x if {
 	operator == "isIn"
