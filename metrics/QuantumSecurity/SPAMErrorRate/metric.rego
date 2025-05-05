@@ -1,4 +1,4 @@
-package cch.metrics.quantum_spam_error_rate
+package cch.metrics.spam_error_rate
 
 import data.cch.compare
 import rego.v1

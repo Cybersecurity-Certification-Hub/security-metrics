@@ -1,4 +1,4 @@
-package cch.metrics.quantum_error_correction_enabled
+package cch.metrics.error_correction_enabled
 
 import data.cch.compare
 import rego.v1
