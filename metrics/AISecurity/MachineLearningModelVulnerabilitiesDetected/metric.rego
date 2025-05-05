@@ -3,7 +3,7 @@ package cch.metrics.machine_learning_model_vulnerabilities_detected
 import data.cch.compare
 import rego.v1
 
-import input.MachineLearningModelVulnerabilities as vuln
+import input.MachineLearningModel.Vulnerabilities as vuln
 
 default applicable = false
 

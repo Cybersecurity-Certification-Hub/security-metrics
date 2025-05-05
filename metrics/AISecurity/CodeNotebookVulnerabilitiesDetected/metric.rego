@@ -3,7 +3,7 @@ package cch.metrics.code_notebook_vulnerabilities_detected
 import data.cch.compare
 import rego.v1
 
-import input.NotebookVulnerabilities as vuln
+import input.CodeNotebook.Vulnerabilities as vuln
 
 default applicable = false
 
