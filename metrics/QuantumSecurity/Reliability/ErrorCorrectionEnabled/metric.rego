@@ -8,7 +8,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
-	input.ErrorCorrectionEnabled
+	input.type[_] == "QPU"
 }
 
 compliant if {

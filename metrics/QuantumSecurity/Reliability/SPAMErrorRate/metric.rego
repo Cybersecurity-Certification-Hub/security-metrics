@@ -8,7 +8,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
-	input.SPAMErrorRate
+	input.type[_] == "QPU"
 }
 
 compliant if {

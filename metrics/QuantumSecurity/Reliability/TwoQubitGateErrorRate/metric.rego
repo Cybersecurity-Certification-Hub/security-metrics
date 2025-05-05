@@ -8,7 +8,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
-	input.TwoQubitGateErrorRate
+	input.type[_] == "QPU"
 }
 
 compliant if {
