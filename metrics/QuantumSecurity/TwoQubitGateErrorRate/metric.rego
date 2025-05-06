@@ -1,4 +1,4 @@
-package cch.metrics.two_qubit_error_rate
+package cch.metrics.two_qubit_gate_error_rate
 
 import data.cch.compare
 import rego.v1
