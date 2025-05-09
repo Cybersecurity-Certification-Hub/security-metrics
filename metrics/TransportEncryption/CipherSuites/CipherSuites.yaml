@@ -1,0 +1,28 @@
+--- # Metadata
+- id: CipherSuites # TODO: The name is not self-explaining. I would rather suggest something in the direction of "ValidCipherSuites", "CipherSuitesValidOnly", "CipherSuitesValidOnlyEnforced"
+# TODO: TLS1.2 and TLS1.3 are composed differently which can maybe affect our implementation (and the structure of target value).
+# TODO: Should we address specific resources?
+# TODO: TransportEncryption can be directly attached to a resource (e.g. Backup) or as part of HttpEndpoint (FileStorageService). How would that be addressed in the text (and rego)? 
+# TODO: "property [CipherSuites]" -> "functionality [CipherSuites]"?
+# TODO: How to handle "hasMultiple X" (here X=CipherSuite) in text consistently?
+- description: This rule assesses whether a [Resource] that has the property [TransportEncryption] set respectively, also has the property [CipherSuites] [p1] correctly configured.
+- version: 1.0
+- comments: All cipher suites provided must be valid, i.e. they must be included in the set of valid target values.
+--- # Configuration data
+- p1:
+  - operator: allIn
+  - targetValue:
+      validCipherSuites: # Just an example!
+        - authentication_mechanism: "ECDHE"
+          key_exchange_algorithm: "ECDSA"
+          mac_algorithm: "SHA256"
+          session_cipher: "AES_128_CBC"
+        - authentication_mechanism: "ECDHE"
+          key_exchange_algorithm: "ECDSA"
+          mac_algorithm: "SHA384"
+          session_cipher: "AES_256_CBC"
+        - authentication_mechanism: "ECDHE"
+          key_exchange_algorithm: "ECDSA"
+          mac_algorithm: "SHA256"
+          session_cipher: "AES_128_GCM"
+    
