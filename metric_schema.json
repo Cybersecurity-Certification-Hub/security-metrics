@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique, human-readable name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description using terms from the ontology"
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of the rule"
+    },
+    "comments": {
+      "type": "string",
+      "description": "Explanation and scenario where the metric is relevant"
+    },
+    "pointers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "operator": {
+            "type": "string",
+            "description": "Operator for the comparison"
+          },
+          "targetValue": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "Target value for string-type pointers"
+              },
+              {
+                "type": "boolean",
+                "description": "Target value for boolean-type pointers"
+              }
+            ]
+          }
+        },
+        "required": ["operator", "targetValue"]
+      }
+    },
+    "interval": {
+      "type": "integer",
+      "description": "Set the interval (in minutes) for the metric, i.e. the time between metric executions. Setting the interval also helps evidence collectors to determine their interval of collecting evidence. As a rule, they are the same."
+    }
+  },
+  "required": ["id", "description", "version", "comments", "pointers"]
+}
