@@ -1,10 +1,17 @@
 # Metadata
-id: MachineLearningModelVulnerabilitiesDetected
-description: This rule assesses whether an [MachineLearningModel] has the compliant number of [p1:Vulnerability].
+id: MachineLearningModelExplanation
+description: This rule assesses whether a [MachineLearningModel] provides explanation capabilities using recognized explanation methods with sufficient explanation quality.
 version: 1.0
-comments: This metric assess if vulnerabilities are included in an AI model e.g. pickle magic numbers detected in the AI model what can lead to serialization attacks.
---- 
+comments: Explainable AI is essential for understanding, debugging, and building trust in machine learning systems.
+---
 # Configuration data
-p1: 
- operator: ==
- targetValue: 0
+configuration:
+  explanationEnabled:
+    operator: ==
+    targetValue: true
+  explanationMethod:
+    operator: in
+    targetValue: ["Geek", "LIME"]
+  explanationQuality:
+    operator: ==
+    targetValue: 1
