@@ -1,19 +1,18 @@
-package cch.metrics.machine_learning_model_vulnerabilities_detected
+package cch.metrics.machine_learning_model_privacy
 
 import data.cch.compare
 import rego.v1
 
-import input.Vulnerabilities as vuln
-
 default applicable = false
-
 default compliant = false
 
 applicable if {
 	input.type[_] == "MachineLearningModel"
-	vuln
+	input.privacy.privacyTechniqueUsed
+	input.privacy.privacyGuaranteeLevel
 }
 
 compliant if {
-	compare(data.operator, data.target_value, count(vuln))
-}
+	input.privacy.privacyTechniqueUsed == "SHAPr"
+	compare("<=", 0.5, input.privacy.privacyGuaranteeLevel)
+} 
