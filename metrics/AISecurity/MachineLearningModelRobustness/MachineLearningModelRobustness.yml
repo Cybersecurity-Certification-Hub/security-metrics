@@ -5,6 +5,8 @@ version: 1.0
 comments: A robust machine learning model should be tested under adversarial conditions, with metrics such as CLEVER score. 
 --- 
 # Configuration data
+configuration:
+
 adversarialRobustnessTested:
     operator: ==
     targetValue: true
