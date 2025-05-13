@@ -1,10 +1,17 @@
 # Metadata
-id: MachineLearningModelVulnerabilitiesDetected
-description: This rule assesses whether an [MachineLearningModel] has the compliant number of [p1:Vulnerability].
+id: MachineLearningModelPoison
+description: This rule assesses whether a [MachineLearningModel] can defenses against data poisoning attacks.
 version: 1.0
-comments: This metric assess if vulnerabilities are included in an AI model e.g. pickle magic numbers detected in the AI model what can lead to serialization attacks.
---- 
+comments: Poisoning attacks aim to corrupt a model during training by injecting malicious samples. Models should have ability to face such situation.
+---
 # Configuration data
-p1: 
- operator: ==
- targetValue: 0
+configuration:
+  poisonDefenseEnabled:
+    operator: ==
+    targetValue: true
+  metricType:
+    operator: in 
+    targetValue: ["SLEEPAgent"]
+  poisonLevel:
+    operator: <=
+    targetValue: 0.5
