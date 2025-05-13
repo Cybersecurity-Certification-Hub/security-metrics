@@ -1,10 +1,14 @@
 # Metadata
-id: MachineLearningModelVulnerabilitiesDetected
-description: This rule assesses whether an [MachineLearningModel] has the compliant number of [p1:Vulnerability].
+id: MachineLearningModelPrivacy
+description: This rule assesses whether a [MachineLearningModel] has implemented privacy-preserving techniques such as differential privacy and make sure the given model is privacy-preserving enough.
 version: 1.0
-comments: This metric assess if vulnerabilities are included in an AI model e.g. pickle magic numbers detected in the AI model what can lead to serialization attacks.
---- 
+comments: Machine learning models should take privacy into account.
+---
 # Configuration data
-p1: 
- operator: ==
- targetValue: 0
+configuration:
+  privacyTechniqueUsed:
+    operator: in
+    targetValue: ["SHAPr"]
+  privacyGuaranteeLevel:
+    operator: <=
+    targetValue: 0.5
