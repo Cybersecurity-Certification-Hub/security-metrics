@@ -1,19 +1,20 @@
-package cch.metrics.machine_learning_model_vulnerabilities_detected
+package cch.metrics.machine_learning_model_poison
 
 import data.cch.compare
 import rego.v1
 
-import input.Vulnerabilities as vuln
-
 default applicable = false
-
 default compliant = false
 
+
 applicable if {
-	input.type[_] == "MachineLearningModel"
-	vuln
+    input.type[_] == "MachineLearningModel"
+    input.poison.poisonDefenseEnabled == true
+    input.poison.metricType == "SLEEPAgent"
+    input.poison.poisonLevel
 }
 
+
 compliant if {
-	compare(data.operator, data.target_value, count(vuln))
+    compare("<=", 0.5, input.poison.poisonLevel)
 }
