@@ -1,19 +1,23 @@
-package cch.metrics.machine_learning_model_vulnerabilities_detected
+package cch.metrics.machine_learning_model_robustness
 
 import data.cch.compare
 import rego.v1
 
-import input.Vulnerabilities as vuln
-
 default applicable = false
-
 default compliant = false
 
 applicable if {
 	input.type[_] == "MachineLearningModel"
-	vuln
+	input.robustness.adversarialRobustnessTested == true
+	input.robustness.metricType
+	input.robustness.metricValue
 }
 
 compliant if {
-	compare(data.operator, data.target_value, count(vuln))
-}
+
+	input.robustness.metricType == "CleverScore"
+	compare(">=", 0.5, input.robustness.metricValue)
+} else if {
+	input.robustness.metricType == "SPADEScore"
+	compare(">=", 0.5, input.robustness.metricValue)
+} 
