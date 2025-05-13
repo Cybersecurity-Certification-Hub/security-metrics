@@ -1,10 +1,17 @@
 # Metadata
-id: MachineLearningModelVulnerabilitiesDetected
-description: This rule assesses whether an [MachineLearningModel] has the compliant number of [p1:Vulnerability].
+id: MachineLearningModelRobustness
+description: This rule assesses whether a [MachineLearningModel] has been evaluated for (adversarial) robustness using specified metrics.
 version: 1.0
-comments: This metric assess if vulnerabilities are included in an AI model e.g. pickle magic numbers detected in the AI model what can lead to serialization attacks.
+comments: A robust machine learning model should be tested under adversarial conditions, with metrics such as CLEVER score. 
 --- 
 # Configuration data
-p1: 
- operator: ==
- targetValue: 0
+adversarialRobustnessTested:
+    operator: ==
+    targetValue: true
+metricType:
+    operator: in
+    targetValue: ["CleverScore", "SPADEScore"]
+acceptableRobustnessThreshold:
+    operator: >=
+    targetValue: 0.5
+
