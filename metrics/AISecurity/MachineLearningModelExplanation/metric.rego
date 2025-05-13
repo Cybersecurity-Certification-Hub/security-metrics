@@ -1,19 +1,19 @@
-package cch.metrics.machine_learning_model_vulnerabilities_detected
+package cch.metrics.machine_learning_model_explanation
 
 import data.cch.compare
 import rego.v1
 
-import input.Vulnerabilities as vuln
-
 default applicable = false
-
 default compliant = false
 
 applicable if {
-	input.type[_] == "MachineLearningModel"
-	vuln
-}
+    input.type[_] == "MachineLearningModel"
+    input.explanation.explanationEnabled == true
+    input.explanation.explanationMethod == "Geek"
+} else if {
+    input.explanation.explanationMethod == "LIME"
+} 
 
 compliant if {
-	compare(data.operator, data.target_value, count(vuln))
+    compare("==", 1, input.explanation.explanationQuality)
 }
