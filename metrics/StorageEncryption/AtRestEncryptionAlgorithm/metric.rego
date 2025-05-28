@@ -1,6 +1,6 @@
-package clouditor.metrics.at_rest_encryption_algorithm
+package cch.metrics.at_rest_encryption_algorithm
 
-import data.clouditor.compare
+import data.cch.compare
 
 import input.atRestEncryption as enc
 
@@ -8,10 +8,10 @@ default applicable = false
 
 default compliant = false
 
-applicable {
+applicable if {
 	enc
 }
 
-compliant {
+compliant if {
 	compare(data.operator, data.target_value, enc[_].algorithm)
 }
