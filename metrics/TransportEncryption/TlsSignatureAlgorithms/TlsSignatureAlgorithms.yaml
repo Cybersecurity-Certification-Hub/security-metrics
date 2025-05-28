@@ -1,5 +1,6 @@
 # Metadata
 id: TLSSignatureAlgorithm
+category: TransportEncryption
 description: This rule assesses whether a [Resource] has its [TransportEncryption] [p1:tlsSignatureAlgorithm] correctly configured.
 version: 1.0
 comments: Using secure TLS signature algorithms (e.g., ECDSA or RSA) ensures the authenticity and integrity of the communication, protecting against forgery and tampering.
