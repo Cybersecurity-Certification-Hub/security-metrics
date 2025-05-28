@@ -1,52 +1,54 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "http://json-schema.org/draft-2020-12/schema",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "description": "Unique, human-readable name"
     },
-    "description": {
-      "type": "string",
-      "description": "Description using terms from the ontology"
+    "category": {
+      "type": "string", 
+      "description": "Category of the metric, e.g., 'EndpointSecurity', 'IdentityManagement'"
     },
+    "description": {
+      "type": "string", 
+      "description": "Description using terms from the ontology."
+    },
+    "implementationGuidelines": {
+      "type": "object",
+      "additionalProperties": {
+          "type": "string",
+          "description": "Implementation guidelines for a specific evidence collector tool,  e.g., 'Use AES256 encryption for data at rest.'"
+      }
+  },
     "version": {
-      "type": "string",
-      "description": "Version of the rule"
+      "type": "string", 
+      "description": "Version of the metric."
     },
     "comments": {
       "type": "string",
-      "description": "Explanation and scenario where the metric is relevant"
+      "description": "Detailed explanation of the metric."
     },
-    "pointers": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "operator": {
-            "type": "string",
-            "description": "Operator for the comparison"
-          },
-          "targetValue": {
-            "oneOf": [
-              {
-                "type": "string",
-                "description": "Target value for string-type pointers"
-              },
-              {
-                "type": "boolean",
-                "description": "Target value for boolean-type pointers"
-              }
-            ]
-          }
+    "configuration": {
+    "type": "object",
+    "additionalProperties": {
+      "type": "object",
+      "properties": {
+        "operator": {
+          "type": "string",
+          "description": "Operator for the comparison, e.g., '==', '<=', 'isIn'. (See file 'metrics/operators.rego' for available operators.)"
         },
-        "required": ["operator", "targetValue"]
-      }
-    },
-    "interval": {
-      "type": "integer",
-      "description": "Set the interval (in minutes) for the metric, i.e. the time between metric executions. Setting the interval also helps evidence collectors to determine their interval of collecting evidence. As a rule, they are the same."
+        "targetValue": {
+          "type": "array",
+          "description": "Target value for the operator, e.g., 'true', 'false', 'enabled', 'disabled', 'AES256'.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["operator", "targetValue"]
     }
-  },
-  "required": ["id", "description", "version", "comments", "pointers"]
+  }
+},
+"required": ["id", "category", "description", "version", "comments", "configuration"]
 }
