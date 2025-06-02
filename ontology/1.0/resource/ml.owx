@@ -100,4 +100,14 @@
             <Class abbreviatedIRI="core:Vulnerability"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:MachineLearningModel</AbbreviatedIRI>
+        <Literal>MachineLearningModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:MachineLearningDataset</AbbreviatedIRI>
+        <Literal>MachineLearningDataset</Literal>
+    </AnnotationAssertion>
 </Ontology>
