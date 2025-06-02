@@ -145,6 +145,10 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:PolicyDocument</AbbreviatedIRI>
+        <Literal>PolicyDocument</Literal>
+    </AnnotationAssertion> <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:Resource</AbbreviatedIRI>
         <Literal>Resource</Literal>
     </AnnotationAssertion>
