@@ -17,7 +17,7 @@ jobs:
           with:
             args: java -jar robot.jar merge 
               --input ontology/1.0/ontology.owx 
-              --input ontology/1.0/resources.owx 
+              --input ontology/1.0/resource.owx 
               --input ontology/1.0/core.owx 
               --input ontology/1.0/data.owx 
               --input ontology/1.0/resource/application.owx 
