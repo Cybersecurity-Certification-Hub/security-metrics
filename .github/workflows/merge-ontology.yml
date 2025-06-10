@@ -30,7 +30,6 @@ jobs:
               --input ontology/1.0/core/properties.owx 
               --input ontology/1.0/core/security.owx 
               --output ontology/1.0/merged/merged-ontology.owl 
-              --format owl-xml
         - name: Validate merged ontology
           run: |
             java -jar robot.jar validate 
