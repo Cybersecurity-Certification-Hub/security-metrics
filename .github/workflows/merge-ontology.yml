@@ -18,7 +18,7 @@ jobs:
             sed -i '/uri="core\/evidence\.owx"/d' ontology/1.0/catalog-v001.xml
         - name: Delete evidence.owx from core file
           run: |
-             sed -i '/uri="core\/evidence\.owx"/d' ontology/1.0/core.owx
+             sed -i '/<Import>https:\/\/ontology.cybersecuritycertcluster.eu\/core\/evidence<\/Import>/d' ontology/1.0/core.owx
         - name: Merge owx files
           uses: docker://openjdk:11
           with:
