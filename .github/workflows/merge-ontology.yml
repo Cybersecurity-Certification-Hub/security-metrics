@@ -15,7 +15,7 @@ jobs:
         - name: Merge owx files
           uses: docker://openjdk:11
           with:
-            args: java -jar robot.jar -vvv merge 
+            args: java -jar robot.jar merge 
               --catalog ontology/1.0/catalog-v001.xml
               --input ontology/1.0/ontology.owx 
               --input ontology/1.0/resource.owx 
@@ -31,6 +31,13 @@ jobs:
               --input ontology/1.0/core/properties.owx 
               --input ontology/1.0/core/security.owx 
               --output ontology/1.0/merged/merged-ontology.owl 
+        - name: Convert to owx
+          uses: docker://openjdk:11
+          with:
+            args: java -jar robot.jar convert 
+              --input ontology/1.0/merged/merged-ontology.owl 
+              --output-format OWL/XML 
+              --output ontology/1.0/merged/merged-ontology.owx
         # - name: Validate merged ontology
         #   run: |
         #     java -jar robot.jar verify 
