@@ -33,7 +33,7 @@ jobs:
               --output ontology/1.0/merged/merged-ontology.owl 
         - name: Validate merged ontology
           run: |
-            java -jar robot.jar validate 
+            java -jar robot.jar verify 
               --input src/ontology/merged-ontology.owl 
               --output src/ontology/validation-report.txt
         # - name: Upload merged-ontology.owl
