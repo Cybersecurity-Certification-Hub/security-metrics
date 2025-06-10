@@ -1,0 +1,45 @@
+name: Merge Ontology
+
+on: [pull_request]
+
+jobs:
+    merge-ontology:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v2
+        - name: Download ROBOT
+          run: |
+            wget https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar
+        - name: Merge owx files
+          uses: docker://openjdk:11
+          with:
+            args: java -jar robot.jar merge \
+              --input ontology/1.0/ontology.owx \
+              --input ontology/1.0/resources.owx \
+              --input ontology/1.0/core.owx \
+              --input ontology/1.0/data.owx \
+              --input ontology/1.0/resource/application.owx \
+              --input ontology/1.0/resource/document.owx \
+              --input ontology/1.0/resource/human_resources.owx \
+              --input ontology/1.0/resource/infrastructure.owx \
+              --input ontology/1.0/resource/ml.owx \
+              --input ontology/1.0/core/framework.owx \
+              --input ontology/1.0/core/functionality.owx \
+              --input ontology/1.0/core/properties.owx \
+              --input ontology/1.0/core/security.owx \
+              --output ontology/1.0/merged/merged-ontology.owl \
+              --format owl-xml
+        - name: Validate merged ontology
+          run: |
+            java -jar robot.jar validate \
+              --input src/ontology/merged-ontology.owl \
+              --output src/ontology/validation-report.txt
+        # - name: Upload merged-ontology.owl
+        #   uses: actions/upload-artifact@v3
+        #   with:
+        #     name: merged-ontology
+        #     path: src/ontology/merged-ontology.owl
+
+            
