@@ -35,9 +35,9 @@ jobs:
           uses: docker://openjdk:11
           with:
             args: java -jar robot.jar convert 
-              --input ontology/1.0/merged/merged-ontology.owl 
-              --output-format OWL/XML 
-              --output ontology/1.0/merged/merged-ontology.owx
+              -i ontology/1.0/merged/merged-ontology.owl 
+              --format OWL/XML 
+              -o ontology/1.0/merged/merged-ontology.owx
         # - name: Validate merged ontology
         #   run: |
         #     java -jar robot.jar verify 
