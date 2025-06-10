@@ -15,7 +15,7 @@ jobs:
         - name: Merge owx files
           uses: docker://openjdk:11
           with:
-            args: java -jar robot.jar merge 
+            args: java -jar robot.jar -vvv merge 
               --input ontology/1.0/ontology.owx 
               --input ontology/1.0/resource.owx 
               --input ontology/1.0/core.owx 
