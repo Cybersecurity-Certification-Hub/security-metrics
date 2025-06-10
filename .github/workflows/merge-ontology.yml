@@ -16,6 +16,7 @@ jobs:
           uses: docker://openjdk:11
           with:
             args: java -jar robot.jar -vvv merge 
+              --catalog ontology/1.0/catalog-v001.xml
               --input ontology/1.0/ontology.owx 
               --input ontology/1.0/resource.owx 
               --input ontology/1.0/core.owx 
