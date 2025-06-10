@@ -43,10 +43,10 @@ jobs:
         #     java -jar robot.jar verify 
         #       --input src/ontology/merged-ontology.owl 
         #       --output src/ontology/validation-report.txt
-        - name: Upload Artifact merged-ontology.owl
+        - name: Upload Artifact merged-ontology.owx
           uses: actions/upload-artifact@v4
           with:
             name: merged-ontology
-            path: ontology/1.0/merged/merged-ontology.owl
+            path: ontology/1.0/merged/merged-ontology.owx
 
             
