@@ -25,19 +25,19 @@ jobs:
             args: java -jar robot.jar merge 
               --catalog ontology/1.0/catalog-v001.xml
               --input ontology/1.0/ontology.owx 
-              --input ontology/1.0/resource.owx 
-              --input ontology/1.0/core.owx 
-              --input ontology/1.0/data.owx 
-              --input ontology/1.0/resource/application.owx 
-              --input ontology/1.0/resource/document.owx 
-              --input ontology/1.0/resource/human_resources.owx 
-              --input ontology/1.0/resource/infrastructure.owx 
-              --input ontology/1.0/resource/ml.owx 
-              --input ontology/1.0/core/framework.owx 
-              --input ontology/1.0/core/functionality.owx 
-              --input ontology/1.0/core/properties.owx 
-              --input ontology/1.0/core/security.owx 
               --output ontology/1.0/merged/merged-ontology.owx 
+              # --input ontology/1.0/resource.owx 
+              #   --input ontology/1.0/core.owx 
+              #   --input ontology/1.0/data.owx 
+              #   --input ontology/1.0/resource/application.owx 
+              #   --input ontology/1.0/resource/document.owx 
+              #   --input ontology/1.0/resource/human_resources.owx 
+              #   --input ontology/1.0/resource/infrastructure.owx 
+              #   --input ontology/1.0/resource/ml.owx 
+              #   --input ontology/1.0/core/framework.owx 
+              #   --input ontology/1.0/core/functionality.owx 
+              #   --input ontology/1.0/core/properties.owx 
+              #   --input ontology/1.0/core/security.owx 
         # - name: Validate merged ontology
         #   run: |
         #     java -jar robot.jar verify 
