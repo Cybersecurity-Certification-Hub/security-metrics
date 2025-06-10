@@ -30,14 +30,14 @@ jobs:
               --input ontology/1.0/core/functionality.owx 
               --input ontology/1.0/core/properties.owx 
               --input ontology/1.0/core/security.owx 
-              --output ontology/1.0/merged/merged-ontology.owl 
-        - name: Convert to owx
-          uses: docker://openjdk:11
-          with:
-            args: java -jar robot.jar convert 
-              -i ontology/1.0/merged/merged-ontology.owl 
-              --format owx 
-              -o ontology/1.0/merged/merged-ontology.owx
+              --output ontology/1.0/merged/merged-ontology.owx 
+        # - name: Convert to owx
+        #   uses: docker://openjdk:11
+        #   with:
+        #     args: java -jar robot.jar convert 
+        #       -i ontology/1.0/merged/merged-ontology.owl 
+        #       --format owx 
+        #       -o ontology/1.0/merged/merged-ontology.owx
         # - name: Validate merged ontology
         #   run: |
         #     java -jar robot.jar verify 
