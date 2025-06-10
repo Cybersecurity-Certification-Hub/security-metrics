@@ -12,6 +12,10 @@ jobs:
         - name: Download ROBOT
           run: |
             wget https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar
+        # Delete core/evidence.owx from catalog file. We do not need the evidence object in the merged ontology, that would lead to an error in the proto file generation.
+        - name: Delete evidence.owx
+          run: |
+            sed -i '/uri="core\/evidence\.owx"/d' ontology/1.0/catalog-v001.xml
         - name: Merge owx files
           uses: docker://openjdk:11
           with:
@@ -31,13 +35,6 @@ jobs:
               --input ontology/1.0/core/properties.owx 
               --input ontology/1.0/core/security.owx 
               --output ontology/1.0/merged/merged-ontology.owx 
-        # - name: Convert to owx
-        #   uses: docker://openjdk:11
-        #   with:
-        #     args: java -jar robot.jar convert 
-        #       -i ontology/1.0/merged/merged-ontology.owl 
-        #       --format owx 
-        #       -o ontology/1.0/merged/merged-ontology.owx
         # - name: Validate merged ontology
         #   run: |
         #     java -jar robot.jar verify 
