@@ -20,6 +20,9 @@
     <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
     
     <Declaration>
+        <Class abbreviatedIRI="core:Data"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="res:Document"/>
     </Declaration>
     <Declaration>
