@@ -43,8 +43,8 @@ jobs:
             go install github.com/oxisto/owl2proto/cmd/owl2proto@latest
             $HOME/go/bin/owl2proto generate-proto \
             --root-resource-name=/classes/Resource ontology/1.0/ontology-merged.owx \
-            --header-file=internal/ontology/clouditor_header.proto \
-            --output-path=api/ontology/ontology.proto \
+            --header-file=ontology/clouditor_header.proto \
+            --output-path=ontology/1.0/ontology.proto \
             --full-semantic-mode=false \
             --deterministic-field-numbers=true
             buf format -w
