@@ -61,7 +61,7 @@ jobs:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         - name: Commit ontology.proto file
           run: |
-              git add api/ontology/ontology.proto
+              git add ontology/1.0/ontology.proto
               git commit -m "Add generated proto file [skip ci]" || echo "No changes to commit"
               git push
           env:
