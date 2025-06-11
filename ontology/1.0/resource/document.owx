@@ -20,7 +20,7 @@
     <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
     
     <Declaration>
-        <Class abbreviatedIRI="core:Data"/>
+        <Class abbreviatedIRI="res:Data"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="res:Document"/>
@@ -51,7 +51,7 @@
     </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="res:Document"/>
-        <Class abbreviatedIRI="core:Data"/>
+        <Class abbreviatedIRI="res:Data"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Document"/>
@@ -110,6 +110,10 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:ServiceMetadataDocument"/>
         <Class abbreviatedIRI="res:Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Data"/>
+        <Class abbreviatedIRI="res:Resource"/>
     </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

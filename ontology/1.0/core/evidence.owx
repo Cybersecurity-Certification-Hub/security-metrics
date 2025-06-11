@@ -16,12 +16,6 @@
     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <Class abbreviatedIRI="res:Data"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="res:Resource"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:CertificationTarget"/>
     </Declaration>
     <Declaration>
@@ -29,12 +23,6 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:Evidence"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="core:ResourceType"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="core:SecurityFeature"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:Tool"/>
@@ -51,19 +39,6 @@
     <Declaration>
         <ObjectProperty abbreviatedIRI="core:hasType"/>
     </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="core:Implementation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="core:Specification"/>
-    </Declaration>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="core:ResourceType"/>
-        <ObjectOneOf>
-            <NamedIndividual abbreviatedIRI="core:Implementation"/>
-            <NamedIndividual abbreviatedIRI="core:Specification"/>
-        </ObjectOneOf>
-    </EquivalentClasses>
     <SubClassOf>
         <Class abbreviatedIRI="core:CertificationTarget"/>
         <Class abbreviatedIRI="core:Core"/>
@@ -73,65 +48,8 @@
         <Class abbreviatedIRI="core:Core"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:ResourceType"/>
-        <Class abbreviatedIRI="core:Core"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:Tool"/>
         <Class abbreviatedIRI="core:Core"/>
-    </SubClassOf>
-        <SubClassOf>
-        <Class abbreviatedIRI="res:Data"/>
-        <Class abbreviatedIRI="res:Resource"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:Resource"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:parent"/>
-            <Class abbreviatedIRI="res:Resource"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:Resource"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:creation_time"/>
-            <Datatype abbreviatedIRI="xsd:dateTime"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:Resource"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:description"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:Resource"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:id"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:Resource"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:name"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:Resource"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:raw"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:Resource"/>
-        <DataHasValue>
-            <DataProperty abbreviatedIRI="prop:labels"/>
-            <Literal>xsd:java.util.Map&lt;String, String&gt;</Literal>
-        </DataHasValue>
     </SubClassOf>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="core:belongsTo"/>
@@ -145,25 +63,13 @@
         <ObjectProperty abbreviatedIRI="core:extractedBy"/>
         <Class abbreviatedIRI="core:Evidence"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="core:hasType"/>
-        <Class abbreviatedIRI="res:Resource"/>
-    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="core:belongsTo"/>
         <Class abbreviatedIRI="core:CertificationTarget"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="core:describes"/>
-        <Class abbreviatedIRI="core:SecurityFeature"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="core:extractedBy"/>
         <Class abbreviatedIRI="core:Tool"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="core:hasType"/>
-        <Class abbreviatedIRI="core:ResourceType"/>
     </ObjectPropertyRange>
 </Ontology>
 
