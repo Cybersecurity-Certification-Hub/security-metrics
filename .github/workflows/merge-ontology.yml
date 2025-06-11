@@ -37,7 +37,17 @@ jobs:
             args: java -jar robot.jar merge 
               --catalog ontology/1.0/catalog-v001.xml
               --input ontology/1.0/ontology.owx 
-              --output ontology/1.0/ontology-merged.owx 
+              --output ontology/1.0/ontology-merged.owx
+        - name: Generate proto file for ontology
+          run: |
+            go install github.com/oxisto/owl2proto/cmd/owl2proto 
+            owl2proto generate-proto \
+            --root-resource-name=/classes/Resource ontology/1.0/ontology-merged.owx \
+            --header-file=internal/ontology/clouditor_header.proto \
+            --output-path=api/ontology/ontology.proto \
+            --full-semantic-mode=false \
+            --deterministic-field-numbers=true
+            buf format -w
         - name: Upload Artifact ontology-merged.owx 
           uses: actions/upload-artifact@v4
           with:
@@ -47,6 +57,13 @@ jobs:
           run: |
               git add ontology/1.0/ontology-merged.owx 
               git commit -m "Add merged ontology file [skip ci]" || echo "No changes to commit"
+              git push
+          env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        - name: Commit ontology.proto file
+          run: |
+              git add api/ontology/ontology.proto
+              git commit -m "Add generated proto file [skip ci]" || echo "No changes to commit"
               git push
           env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
