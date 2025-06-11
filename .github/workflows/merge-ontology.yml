@@ -1,6 +1,9 @@
 name: Merge Ontology
 
 on: [pull_request]
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
     merge-ontology:
