@@ -41,7 +41,7 @@ jobs:
         - name: Generate proto file for ontology
           run: |
             go install github.com/oxisto/owl2proto/cmd/owl2proto@latest
-            owl2proto generate-proto \
+            $HOME/go/bin/owl2proto generate-proto \
             --root-resource-name=/classes/Resource ontology/1.0/ontology-merged.owx \
             --header-file=internal/ontology/clouditor_header.proto \
             --output-path=api/ontology/ontology.proto \
