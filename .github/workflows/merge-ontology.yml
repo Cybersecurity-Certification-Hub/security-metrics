@@ -47,7 +47,6 @@ jobs:
             --output-path=ontology/1.0/ontology.proto \
             --full-semantic-mode=false \
             --deterministic-field-numbers=true
-            buf format -w
         - name: Upload Artifact ontology-merged.owx 
           uses: actions/upload-artifact@v4
           with:
