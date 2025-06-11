@@ -26,27 +26,21 @@ jobs:
               --catalog ontology/1.0/catalog-v001.xml
               --input ontology/1.0/ontology.owx 
               --output ontology/1.0/merged/merged-ontology.owx 
-              # --input ontology/1.0/resource.owx 
-              #   --input ontology/1.0/core.owx 
-              #   --input ontology/1.0/data.owx 
-              #   --input ontology/1.0/resource/application.owx 
-              #   --input ontology/1.0/resource/document.owx 
-              #   --input ontology/1.0/resource/human_resources.owx 
-              #   --input ontology/1.0/resource/infrastructure.owx 
-              #   --input ontology/1.0/resource/ml.owx 
-              #   --input ontology/1.0/core/framework.owx 
-              #   --input ontology/1.0/core/functionality.owx 
-              #   --input ontology/1.0/core/properties.owx 
-              #   --input ontology/1.0/core/security.owx 
-        # - name: Validate merged ontology
-        #   run: |
-        #     java -jar robot.jar verify 
-        #       --input src/ontology/merged-ontology.owl 
-        #       --output src/ontology/validation-report.txt
+        - name: Validate merged ontology
+          run: |
+            java -jar robot.jar verify
+              --input ontology/1.0/merged/merged-ontology.owx 
+              --fail-on UNUSED
+              --output verify-report.tsv
         - name: Upload Artifact merged-ontology.owx
           uses: actions/upload-artifact@v4
           with:
             name: merged-ontology
             path: ontology/1.0/merged/merged-ontology.owx
+        - name: Upload Artifact verify-report.tsv
+          uses: actions/upload-artifact@v4
+          with:
+            name: merged-ontology
+            path: ontology/1.0/merged/verify-report.tsv
 
             
