@@ -37,15 +37,15 @@ jobs:
             args: java -jar robot.jar merge 
               --catalog ontology/1.0/catalog-v001.xml
               --input ontology/1.0/ontology.owx 
-              --output ontology/1.0/merged/merged-ontology.owx 
-        - name: Upload Artifact merged-ontology.owx
+              --output ontology/1.0/ontology-merged.owx 
+        - name: Upload Artifact ontology-merged.owx 
           uses: actions/upload-artifact@v4
           with:
-            name: merged-ontology
-            path: ontology/1.0/merged/merged-ontology.owx
+            name: ontology-merged
+            path: ontology/1.0/merged/ontology-merged.owx 
         - name: Commit merged OWX file
           run: |
-              git add ontology/1.0/merged/merged-ontology.owx
+              git add ontology/1.0/ontology-merged.owx 
               git commit -m "Add merged ontology file [skip ci]" || echo "No changes to commit"
               git push
           env:
