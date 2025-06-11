@@ -8,7 +8,16 @@ jobs:
 
         steps:
         - name: Checkout repository
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
+          with:
+            ref: ${{ github.head_ref }}
+        - name: Set up Git user
+          run: |
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        - name: Switch to branch
+          run: |
+            git checkout ${{ github.head_ref }}
         - name: Download ROBOT
           run: |
             wget https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar
@@ -33,8 +42,6 @@ jobs:
             path: ontology/1.0/merged/merged-ontology.owx
         - name: Commit merged OWX file
           run: |
-              git config --global user.name "github-actions[bot]"
-              git config --global user.email "github-actions[bot]@users.noreply.github.com"
               git add ontology/1.0/merged/merged-ontology.owx
               git commit -m "Add merged ontology file [skip ci]" || echo "No changes to commit"
               git push
