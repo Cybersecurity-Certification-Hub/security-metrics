@@ -27,7 +27,7 @@
     </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="res:MachineLearning"/>
-        <Class abbreviatedIRI="core:Data"/>
+        <Class abbreviatedIRI="res:Data"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:MachineLearningDataset" />
