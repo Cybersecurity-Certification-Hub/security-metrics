@@ -17,6 +17,7 @@
     <Import>https://ontology.cybersecuritycertcluster.eu/core/framework</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/core/functionality</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/core/properties</Import>
+    <Import>https://ontology.cybersecuritycertcluster.eu/core/resource</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/core/security</Import>
 </Ontology>
 

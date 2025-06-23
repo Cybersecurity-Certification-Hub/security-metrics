@@ -129,6 +129,9 @@
         <Class IRI="/classes/DDosProtection"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Data"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/DataLocation"/>
     </Declaration>
     <Declaration>
@@ -388,6 +391,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ResourceLogging"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ResourceType"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/RobustnessScore"/>
@@ -1041,13 +1047,16 @@
         <DataProperty IRI="/classes/privacyLabel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Data"/>
+        <ObjectProperty IRI="/classes/describes"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/robustness"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/privacyLevel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/classes/hasType"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/size"/>
@@ -1070,6 +1079,19 @@
     <Declaration>
         <DataProperty IRI="/classes/type"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/classes/Specification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/classes/Implementation"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="/classes/ResourceType"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="/classes/Implementation"/>
+            <NamedIndividual IRI="/classes/Specification"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="/classes/ABAC"/>
         <Class IRI="/classes/Authorization"/>
@@ -1592,6 +1614,10 @@
     <SubClassOf>
         <Class IRI="/classes/DDosProtection"/>
         <Class IRI="/classes/Availability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Data"/>
+        <Class IRI="/classes/Resource"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Data"/>
@@ -2742,12 +2768,65 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Resource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/parent"/>
+            <Class IRI="/classes/Resource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Resource"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/creation_time"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Resource"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Resource"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/id"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Resource"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Resource"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/raw"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Resource"/>
+        <DataHasValue>
+            <DataProperty IRI="/properties/labels"/>
+            <Literal>xsd:java.util.Map&lt;String, String&gt;</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/ResourceGroup"/>
         <Class IRI="/classes/CloudResource"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ResourceLogging"/>
         <Class IRI="/classes/Logging"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ResourceType"/>
+        <Class IRI="/classes/Core"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/RobustnessScore"/>
@@ -3460,6 +3539,18 @@ name = metadata.name</Literal>
         <ObjectProperty IRI="/properties/hasMultiple"/>
         <ObjectProperty IRI="/properties/has"/>
     </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/classes/hasType"/>
+        <Class IRI="/classes/Resource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/classes/describes"/>
+        <Class IRI="/classes/SecurityFeature"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/classes/hasType"/>
+        <Class IRI="/classes/ResourceType"/>
+    </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="/properties/algorithm"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
