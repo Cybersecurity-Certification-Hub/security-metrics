@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://ontology.cybersecuritycertcluster.eu/resource/human_resources"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/human_resources">
+    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="res" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+    <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
+    <Declaration>
+        <Class abbreviatedIRI="res:AwarenessTraining"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="res:HumanResources"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="res:SecurityTraining"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="res:Training"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:AwarenessTraining"/>
+        <Class abbreviatedIRI="res:Training"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:HumanResources"/>
+        <Class abbreviatedIRI="core:Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:SecurityTraining"/>
+        <Class abbreviatedIRI="res:Training"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Training"/>
+        <Class abbreviatedIRI="res:HumanResources"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Training"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:annualUpdateCompleted"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Training"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:successfullyCompletedPercentage"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+</Ontology>
