@@ -1,6 +1,6 @@
-package metrics.iam.admin_mfa_enabled
+package cch.metrics.admin_mfa_enabled
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input as identity
 
