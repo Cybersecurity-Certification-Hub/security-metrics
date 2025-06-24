@@ -7,22 +7,31 @@
       "description": "Unique, human-readable name"
     },
     "category": {
-      "type": "string", 
-      "description": "Category of the metric, e.g., 'EndpointSecurity', 'IdentityManagement'"
+      "type": "string",
+      "description": "Category of the metric",
+      "examples": [
+        "EndpointSecurity",
+        "IdentityManagement",
+        "NetworkSecurity",
+        "ApplicationSecurity"
+      ]
     },
     "description": {
-      "type": "string", 
+      "type": "string",
       "description": "Description using terms from the ontology."
     },
     "implementationGuidelines": {
       "type": "object",
       "additionalProperties": {
-          "type": "string",
-          "description": "Implementation guidelines for a specific evidence collector tool,  e.g., 'Use AES256 encryption for data at rest.'"
+        "type": "string",
+        "description": "Implementation guidelines for a specific evidence collector tool",
+        "examples": [
+          "Use AES256 encryption for data at rest."
+        ]
       }
-  },
+    },
     "version": {
-      "type": "string", 
+      "type": "string",
       "description": "Version of the metric."
     },
     "comments": {
@@ -30,25 +39,64 @@
       "description": "Detailed explanation of the metric."
     },
     "configuration": {
-    "type": "object",
-    "additionalProperties": {
       "type": "object",
-      "properties": {
-        "operator": {
-          "type": "string",
-          "description": "Operator for the comparison, e.g., '==', '<=', 'isIn'. (See file 'metrics/operators.rego' for available operators.)"
-        },
-        "targetValue": {
-          "type": "array",
-          "description": "Target value for the operator, e.g., 'true', 'false', 'enabled', 'disabled', 'AES256'.",
-          "items": {
-            "type": "string"
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "operator": {
+            "type": "string",
+            "description": "Operator for the comparison",
+            "examples": [
+              "==",
+              "<=",
+              ">=",
+              "<",
+              ">",
+              "isIn",
+              "allIn"
+            ]
+          },
+          "targetValue": {
+            "type": [
+              "integer",
+              "string",
+              "boolean",
+              "array"
+            ],
+            "description": "Target value for the operator",
+            "examples": [
+              "true",
+              "false",
+              "enabled",
+              "AES256",
+              200,
+              [
+                "AES256",
+                "RSA2048"
+              ]
+            ],
+            "items": {
+              "type": [
+                "string",
+                "boolean",
+                "integer"
+              ]
+            }
           }
-        }
-      },
-      "required": ["operator", "targetValue"]
+        },
+        "required": [
+          "operator",
+          "targetValue"
+        ]
+      }
     }
-  }
-},
-"required": ["id", "category", "description", "version", "comments", "configuration"]
+  },
+  "required": [
+    "id",
+    "category",
+    "description",
+    "version",
+    "comments",
+    "configuration"
+  ]
 }
