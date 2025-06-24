@@ -1,6 +1,6 @@
-package metrics.platform_security.java_runtime
+package cch.metrics.java_runtime
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input as func
 

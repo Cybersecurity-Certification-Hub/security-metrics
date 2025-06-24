@@ -1,6 +1,6 @@
-package metrics.automatic_updates_enabled
+package cch.metrics.automatic_updates_enabled
 
-import data.compare
+import data.cch.compare
 import input.automaticUpdates as au
 
 default applicable = false
