@@ -1,6 +1,6 @@
-package metrics.logging_monitoring.activity_logging_enabled
+package cch.metrics.activity_logging_enabled
 
-import data.compare
+import data.cch.compare
 import rego.v1
 
 default applicable = false

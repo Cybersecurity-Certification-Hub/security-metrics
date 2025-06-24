@@ -1,6 +1,6 @@
-package metrics.application_security.strong_cryptographic_hash
+package cch.metrics.strong_cryptographic_hash
 
-import data.clouditor.compare
+import data.cch.compare
 import rego.v1
 import input as app
 

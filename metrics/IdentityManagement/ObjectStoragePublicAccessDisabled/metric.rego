@@ -1,6 +1,6 @@
-package metrics.iam.object_storage_public_access_disabled
+package cch.metrics.object_storage_public_access_disabled
 
-import data.compare
+import data.cch.compare
 import input as storage
 
 default compliant = false
