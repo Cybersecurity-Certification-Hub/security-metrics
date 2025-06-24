@@ -1,6 +1,6 @@
-package metrics.iam.identity_recent_activity
+package cch.metrics.identity_inactive_duration
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input as identity
 
@@ -9,7 +9,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
-        # we are only interested in active accounts, deactivated accounts are already inactive
+    # we are only interested in active accounts, deactivated accounts are already inactive
 	identity.activated
 }
 
