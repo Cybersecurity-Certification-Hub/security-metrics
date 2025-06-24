@@ -1,0 +1,9 @@
+--- # Metadata
+- id: ResourceInventory
+- description: This rule evaluates whether all [Resources] have been collected, ensuring that no essential items are overlooked and that the overall resource inventory is complete.
+- version: 1.0 
+- comments: Resource inventory refers to the collection and management of resources used in a specific context, such as hardware, software, data, or services. This assessment ensures that all available resources are documented accurately. All resources are considered automatically compliant once we have registered an evidence for them.
+--- # Configuration data
+- p1:
+  - operator: ==
+  - targetValue: True
