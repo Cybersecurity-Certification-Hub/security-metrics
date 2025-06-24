@@ -76,6 +76,9 @@
         <Class abbreviatedIRI="core:RemoteDataLocation"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:ResourceType"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:SchemaValidation"/>
     </Declaration>
     <Declaration>
