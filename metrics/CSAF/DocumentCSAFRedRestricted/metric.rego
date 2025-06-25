@@ -20,6 +20,6 @@ applicable if {
 
 compliant if {
 	# RED/AMBER must NOT be freely accessible
-	auth := document.documentLocation.remoteDocumentLocation.authenticity
+	auth := document.dataLocation.remoteDataLocation.authenticity
 	not auth.noAuthentication
 }

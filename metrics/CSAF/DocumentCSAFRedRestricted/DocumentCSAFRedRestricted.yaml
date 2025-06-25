@@ -1,7 +1,7 @@
 # Metadata
 id: DocumentCSAFRedRestricted
 category: CSAF
-description: This rule assesses whether a [SecurityAdvisoryDocument] that provides the property [RemoteDocumentLocation] is access protected by ensuring that the [noAuthentication] property is not utilized.
+description: This rule assesses whether a [SecurityAdvisoryDocument] that provides the property [RemoteDocumentLocation] is access protected by ensuring that the [p1:noAuthentication] property is not utilized.
 version: 1.0 
 comments: A SecurityAdvisoryDocument labeled as "Amber" or "Red" must be protected by access controls. The specification can be found at https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#715-requirement-5-tlpamber-and-tlpred. 
 # Configuration data
