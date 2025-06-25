@@ -1,0 +1,4 @@
+{
+  "operator" : "isIn",
+  "target_value" :["2048", "3072", "4096"]
+}
