@@ -8,4 +8,4 @@ comments: Resources like virtual machines often offer a simple configuration tha
 configuration:
   p1:
     operator: <=
-    targetValue: 720 # defined in hours
+    targetValue: 720 # defined in hours, which is 30 days

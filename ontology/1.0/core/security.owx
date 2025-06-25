@@ -225,6 +225,9 @@
         <DataProperty abbreviatedIRI="core:retentionPeriod"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="core:rotationFrequency"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="core:securityAlertsEnabled"/>
     </Declaration>
     <Declaration>
@@ -372,6 +375,13 @@
             <DataProperty abbreviatedIRI="core:contextIsChecked"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Authenticity"/>
+        <DataHasValue>
+            <DataProperty abbreviatedIRI="core:rotationFrequency"/>
+            <Literal>xsd:java.time.Duration</Literal>
+        </DataHasValue>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Authorization"/>
@@ -1205,6 +1215,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:contextIsChecked</AbbreviatedIRI>
         <Literal>contextIsChecked</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:rotationFrequency</AbbreviatedIRI>
+        <Literal>rotationFrequency</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
