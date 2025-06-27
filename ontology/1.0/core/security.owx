@@ -1509,7 +1509,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
-        <Literal>//Maximum password rotation interval in months</Literal>
+        <Literal>Maximum password rotation interval in months</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
