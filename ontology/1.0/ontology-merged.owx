@@ -723,7 +723,7 @@
         <DataProperty IRI="/classes/retentionPeriod"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/rotationFrequency"/>
+        <DataProperty IRI="/classes/rotationInterval"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/runtimeLanguage"/>
@@ -1233,7 +1233,7 @@
     <SubClassOf>
         <Class IRI="/classes/Authenticity"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/rotationFrequency"/>
+            <DataProperty IRI="/classes/rotationInterval"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -4817,13 +4817,13 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/rotationFrequency</IRI>
-        <Literal>Maximum rotation frequency per month</Literal>
+        <IRI>/classes/rotationInterval</IRI>
+        <Literal>//Maximum password rotation interval in months</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/rotationFrequency</IRI>
-        <Literal>rotationFrequency</Literal>
+        <IRI>/classes/rotationInterval</IRI>
+        <Literal>rotationInterval</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
