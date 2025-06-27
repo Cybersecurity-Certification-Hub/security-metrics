@@ -723,6 +723,9 @@
         <DataProperty IRI="/classes/retentionPeriod"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/rotationFrequency"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/runtimeLanguage"/>
     </Declaration>
     <Declaration>
@@ -1225,6 +1228,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/contextIsChecked"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Authenticity"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/rotationFrequency"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4804,6 +4814,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/retentionPeriod</IRI>
         <Literal>retentionPeriod</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/rotationFrequency</IRI>
+        <Literal>Maximum rotation frequency per month</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/rotationFrequency</IRI>
+        <Literal>rotationFrequency</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
