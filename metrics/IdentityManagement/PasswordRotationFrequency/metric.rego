@@ -1,4 +1,4 @@
-package cch.metrics.rotation_frequency
+package cch.metrics.password_rotation_frequency
 
 import data.cch.compare
 import rego.v1
