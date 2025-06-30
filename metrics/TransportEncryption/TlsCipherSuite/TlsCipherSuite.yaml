@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: TlsCipherSuite
-category: TransportEncryption
 description: This rule assesses whether a [Resource] has its [TransportEncryption] [p1:cipherSuite] correctly configured.
+category: TransportEncryption
 version: 1.0
 comments: Using secure TLS cipher suites (e.g., those that provide forward secrecy and use strong encryption algorithms) ensures the confidentiality and integrity of the data in transit.
 ---

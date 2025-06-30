@@ -1,6 +1,7 @@
 # ====== Metadata ======
 id: TwoQubitGateErrorRate
 description: This rule assesses whether a [QPU] has a [TwoQubitGateErrorRate] that is below a specified [p1:errorRate] threshold.
+category: QuantumSecurity
 version: 1.0 
 comments: Physical gate error rates are a standard measure for the reliability of executing quantum circuits.
 # ====== Configuration ====== data

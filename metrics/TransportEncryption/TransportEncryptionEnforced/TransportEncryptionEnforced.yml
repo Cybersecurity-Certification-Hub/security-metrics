@@ -1,6 +1,7 @@
 # ====== Metadata ======
 id: TransportEncryptionEnforced
 description: This rule assesses whether a [Resource] has [TransportEncryption] [p1:enforced] correctly configured.
+category: TransportEncryption
 version: 1.0 
 comments: Transport encryption is a standard practice to keep sensitive data confidential when it is transmitted. Transport encryption should thus not only be enabled/offered, but also enforced.
 # ====== Configuration ====== data

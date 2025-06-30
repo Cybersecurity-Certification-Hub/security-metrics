@@ -1,6 +1,7 @@
 # ====== Metadata ======
 id: VirtualMachineDiskEncryptionEnabled
 description: This rule assesses whether a [VirtualMachine] with a non-empty [BlockStorage] that includes the property [atRestEncryption.customerKeyEncryption], has [p1:enabled] set correctly.
+category: StorageEncryption
 version: 1.0 
 comments: Ensuring that the disk encryption is enabled for all available BlockStorages enhances the security of sensitive data by protecting it at rest. This is particularly important for virtual machines that may store sensitive information or be subject to compliance requirements. Disk encryption helps prevent unauthorized access to data in case of physical theft or unauthorized access to the storage medium. It is a critical security measure for protecting data confidentiality and integrity in cloud environments.
 # ====== Configuration ====== data
