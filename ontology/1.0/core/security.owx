@@ -225,7 +225,7 @@
         <DataProperty abbreviatedIRI="core:retentionPeriod"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="core:rotationFrequency"/>
+        <DataProperty abbreviatedIRI="core:rotationInterval"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:securityAlertsEnabled"/>
@@ -378,10 +378,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Authenticity"/>
-        <DataHasValue>
-            <DataProperty abbreviatedIRI="core:rotationFrequency"/>
-            <Literal>xsd:java.time.Duration</Literal>
-        </DataHasValue>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:rotationInterval"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Authorization"/>
@@ -1218,8 +1218,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:rotationFrequency</AbbreviatedIRI>
-        <Literal>rotationFrequency</Literal>
+        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
+        <Literal>rotationInterval</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1505,6 +1505,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:retentionPeriod</AbbreviatedIRI>
         <Literal>retentionPeriod</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
+        <Literal>//Maximum password rotation interval in months</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
