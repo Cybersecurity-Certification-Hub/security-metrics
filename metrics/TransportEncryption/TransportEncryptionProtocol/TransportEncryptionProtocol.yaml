@@ -1,10 +1,9 @@
-# Metadata
+# ====== Metadata ======
 id: TransportEncryptionProtocol
 description: This rule assesses whether a [Resource] has its [TransportEncryption] [p1:protocol] correctly configured.
 version: 1.0 
 comments: Using TLS (Transport Layer Security) ensures that data in transit is encrypted, providing confidentiality and integrity against eavesdropping and tampering.
---- 
-# Configuration data
+# ====== Configuration ====== data
 configuration:
   p1:
     operator: ==
