@@ -4,8 +4,7 @@ description: This rule assesses whether a [Resource] has its [TransportEncryptio
 category: TransportEncryption
 version: 1.0
 comments: Using secure TLS cipher suites (e.g., those that provide forward secrecy and use strong encryption algorithms) ensures the confidentiality and integrity of the data in transit.
----
-# Configuration data
+# ====== Configuration ======
 configuration:
   p1:
     operator: isIn

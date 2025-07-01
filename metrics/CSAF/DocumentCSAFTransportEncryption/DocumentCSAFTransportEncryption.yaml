@@ -4,7 +4,7 @@ description: This rule assesses whether a [SecurityAdvisoryDocument] that provid
 category: CSAF
 version: 1.0 
 comments: A SecurityAdvisoryDocument must be accessible from a website that employs TLS for transport encryption. The specification can be found at https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#713-requirement-3-tls. 
-# ====== Configuration ====== data
+# ====== Configuration ======
 configuration:
   p1:
     operator: ==

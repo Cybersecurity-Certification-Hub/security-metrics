@@ -2,9 +2,9 @@
 id: AdminMFAEnabled
 description: This rule assesses whether an [Identity] that has the property [p1:privileged] set respectively, also has the property [enforceMFA] [p2:enabled] correctly configured.
 category: IdentityManagement
-version: 1.0 
+version: "1.0" 
 comments: MFA is a standard security measure for administrative users due to their extensive permissions. 
-# ====== Configuration ====== data
+# ====== Configuration ======
 configuration:
   p1:
     operator: ==
