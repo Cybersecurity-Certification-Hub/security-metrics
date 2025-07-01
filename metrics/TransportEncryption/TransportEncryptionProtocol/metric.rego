@@ -1,6 +1,5 @@
 package cch.metrics.transport_encryption_protocol
 
-
 import data.cch.compare
 import rego.v1
 import input.transportEncryption as enc
