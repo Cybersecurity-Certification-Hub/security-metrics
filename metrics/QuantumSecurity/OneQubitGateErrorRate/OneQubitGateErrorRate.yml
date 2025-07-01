@@ -1,10 +1,10 @@
-# Metadata
+# ====== Metadata ======
 id: OneQubitGateErrorRate
 description: This rule assesses whether a [QPU] has a [OneQubitGateErrorRate] that is below a specified [p1:errorRate] threshold.
-version: 1.0 
+category: QuantumSecurity
+version: "1.0" 
 comments: Physical gate error rates are a standard measure for the reliability of executing quantum circuits.
---- 
-# Configuration data
+# ====== Configuration ======
 configuration:
   p1:
     operator: <
