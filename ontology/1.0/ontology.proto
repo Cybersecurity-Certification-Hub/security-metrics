@@ -349,6 +349,8 @@ message CertificateBasedAuthentication {
 
 	bool context_is_checked = 14958;
 	bool enabled = 11983;
+	// Maximum password rotation interval in months
+	int32 rotation_interval = 9404;
 }
 
 // CipherSuite is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1283,6 +1285,8 @@ message TokenBasedAuthentication {
 	bool context_is_checked = 1232;
 	bool enabled = 10600;
 	bool enforced = 6934;
+	// Maximum password rotation interval in months
+	int32 rotation_interval = 17587;
 }
 
 // Key is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1683,6 +1687,8 @@ message MultiFactorAuthentiation {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool context_is_checked = 17335;
+	// Maximum password rotation interval in months
+	int32 rotation_interval = 11722;
 	repeated Authenticity authenticities  = 14915;
 }
 
@@ -1820,6 +1826,8 @@ message NoAuthentication {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool context_is_checked = 12023;
+	// Maximum password rotation interval in months
+	int32 rotation_interval = 11214;
 }
 
 // OSLogging is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1844,6 +1852,8 @@ message OTPBasedAuthentication {
 
 	bool activated = 7456;
 	bool context_is_checked = 18913;
+	// Maximum password rotation interval in months
+	int32 rotation_interval = 12621;
 }
 
 // ObjectStorage is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1942,6 +1952,8 @@ message PasswordBasedAuthentication {
 
 	bool activated = 11798;
 	bool context_is_checked = 1362;
+	// Maximum password rotation interval in months
+	int32 rotation_interval = 9048;
 }
 
 // PasswordPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2449,6 +2461,8 @@ message SingleSignOn {
 
 	bool context_is_checked = 14488;
 	bool enabled = 10569;
+	// Maximum password rotation interval in months
+	int32 rotation_interval = 9185;
 }
 
 // Code is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
