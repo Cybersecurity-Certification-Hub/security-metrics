@@ -1,6 +1,6 @@
 package cch.metrics.tls_dh_group
 
-import data.clouditor.compare
+import data.cch.compare
 import rego.v1
 import input.transportEncryption as enc
 
