@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: TransportEncryptionProtocolVersion
+description: This rule assesses whether a [Resource] has its [TransportEncryption] [p1:protocolVersion] correctly configured.
+category: TransportEncryption
+version: "1.0" 
+comments:  Using a secure transport encryption protocol version (e.g., TLS 1.2 or TLS 1.3) ensures that data in transit is protected against vulnerabilities.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: isIn
+    targetValue: [1.2, 1.3]
