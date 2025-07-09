@@ -1,4 +1,4 @@
-package metrics.csaf.document_csaf_filename_valid
+package cch.metrics.document_csaf_filename_valid
 
 import data.clouditor.compare
 import rego.v1
