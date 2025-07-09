@@ -5,8 +5,7 @@ on:
       paths:                # Run workflow only if YAML files in folder metrics or schema changes
         - "metrics/**/*.yml"
         - "metrics/**/*.yaml"
-        - "metric_schema.json"
-
+        
 jobs:
   validate:
     runs-on: ubuntu-latest
