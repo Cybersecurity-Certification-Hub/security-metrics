@@ -1,0 +1,50 @@
+name: Validate changed YAML files
+
+on:
+    pull_request:
+      paths:                # Run workflow only if YAML files in folder metrics or schema changes
+        - "metrics/**/*.yml"
+        - "metrics/**/*.yaml"
+        - "metric_schema.json"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history needed for diff
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install validator
+        run: pip install "check-jsonschema[yaml]"
+
+      - name: Get changed YAML files
+        id: diff
+        run: |
+          # List added/modified YAML files between base and head
+          files=$(git diff --name-only --diff-filter=AM \
+                   "${{ github.event.pull_request.base.sha }}" \
+                   "${{ github.event.pull_request.head.sha }}" |
+                   grep -E '\.ya?ml$' || true)
+
+          if [ -z "$files" ]; then
+            echo "No changed YAML files found."
+            echo "files=" >> "$GITHUB_OUTPUT"
+          else
+            echo "Changed YAML files:"
+            echo "$files"
+            echo "files=$files" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validate against schema
+        if: steps.diff.outputs.files != ''
+        run: |
+          # Validate each changed YAML file
+          check-jsonschema --schema-file schema.json ${{ steps.diff.outputs.files }}
