@@ -1,4 +1,4 @@
-package metrics.csaf.document_csaf_content_valid
+package cch.metrics.document_csaf_content_valid
 
 import data.compare
 import rego.v1
