@@ -47,4 +47,4 @@ jobs:
         if: steps.diff.outputs.files != ''
         run: |
           # Validate each changed YAML file
-          check-jsonschema --schema-file schema.json ${{ steps.diff.outputs.files }}
+          check-jsonschema --schemafile metric_schema.json ${{ steps.diff.outputs.files }}
