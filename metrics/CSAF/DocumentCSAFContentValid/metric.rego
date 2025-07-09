@@ -16,5 +16,5 @@ applicable if {
 compliant if {
 	# Check if errors are available
 	# If no errors exist, the document is valid
-	count(document.schemaValidation.errors) == 0
+	compare(data.operator, data.target_value, count(document.schemaValidation.errors))
 }
