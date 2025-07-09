@@ -2,9 +2,11 @@ name: Validate changed YAML files
 
 on:
     pull_request:
-      paths:                # Run workflow only if YAML files in folder metrics or schema changes
+      paths:                # Run workflow if YAML, rego or json files in folder metrics changes
         - "metrics/**/*.yml"
         - "metrics/**/*.yaml"
+        - "metrics/**/data.json"
+        - "metrics/**/metric.rego"
         
 jobs:
   validate:
@@ -23,7 +25,6 @@ jobs:
 
       - name: Install validator
         run: pip install "check-jsonschema[yaml]"
-
       - name: Get changed YAML files
         id: diff
         run: |
@@ -43,6 +44,20 @@ jobs:
 
           # write the files to the output variable
           echo "files=$files" >> "$GITHUB_OUTPUT"
+      - name: Check if companion files are available (data.json / metric.rego)
+        if: ${{ steps.diff.outputs.files != '' }}
+        run: |
+          missing=0
+          for f in ${{ steps.diff.outputs.files }}; do
+            dir=$(dirname "$f")
+            for companion in data.json metric.rego; do
+              if [ ! -f "$dir/$companion" ]; then
+                echo "::error file=$f::Missing $companion in $dir"
+                missing=1
+              fi
+            done
+          done
+          exit $missing
 
       - name: Validate against schema
         if: steps.diff.outputs.files != ''
