@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: TlsCipherSuite
+description: This rule assesses whether a [Resource] has its [TransportEncryption] [p1:cipherSuite] correctly configured.
+category: TransportEncryption
+version: "1.0"
+comments: Using secure TLS cipher suites (e.g., those that provide forward secrecy and use strong encryption algorithms) ensures the confidentiality and integrity of the data in transit.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: isIn
+    targetValue: ["TLS_AES_128_GCM_SHA256", "TLS_AES_256_GCM_SHA384", "TLS_CHACHA20_POLY1305", "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256", "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"]
