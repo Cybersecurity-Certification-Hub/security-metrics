@@ -27,20 +27,22 @@ jobs:
       - name: Get changed YAML files
         id: diff
         run: |
-          # List added/modified YAML files between base and head
+          # Collect added/modified YAML files between base and head
           files=$(git diff --name-only --diff-filter=AM \
-                   "${{ github.event.pull_request.base.sha }}" \
-                   "${{ github.event.pull_request.head.sha }}" |
-                   grep -E '\.ya?ml$' || true)
+                    "${{ github.event.pull_request.base.sha }}" \
+                    "${{ github.event.pull_request.head.sha }}" |
+                  grep -E '\.ya?ml$' |       # only *.yml / *.yaml
+                  grep -vE '^\.github/' |    # ignore workflow files
+                  tr '\n' ' ')               # convert newlines -> spaces
 
           if [ -z "$files" ]; then
             echo "No changed YAML files found."
-            echo "files=" >> "$GITHUB_OUTPUT"
           else
-            echo "Changed YAML files:"
-            echo "$files"
-            echo "files=$files" >> "$GITHUB_OUTPUT"
+            echo "Changed YAML files: $files"
           fi
+
+          # write the files to the output variable
+          echo "files=$files" >> "$GITHUB_OUTPUT"
 
       - name: Validate against schema
         if: steps.diff.outputs.files != ''
