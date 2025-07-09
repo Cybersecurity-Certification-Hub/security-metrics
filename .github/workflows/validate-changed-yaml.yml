@@ -2,6 +2,7 @@ name: Validate changed YAML files
 
 on:
     pull_request:
+      types: [opened, synchronize, reopened] # Run on PR creation, update, or reopening
       paths:                # Run workflow if YAML, rego or json files in folder metrics changes
         - "metrics/**/*.yml"
         - "metrics/**/*.yaml"
