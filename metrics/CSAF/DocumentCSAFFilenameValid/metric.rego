@@ -1,6 +1,6 @@
 package cch.metrics.document_csaf_filename_valid
 
-import data.clouditor.compare
+import data.cch.compare
 import rego.v1
 import input as document
 
