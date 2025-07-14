@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: DocumentCSAFFilenameValid
+category: CSAF
+description: This rule assesses whether a [SecurityAdvisoryDocument] that offers the property [RemoteDocumentLocation] has a valid filename in the property [p1:path].
+version: "1.0" 
+comments: A SecurityAdvisoryDocument should have a valid filename that adheres to the CSAF specification. This ensures that the document can be easily identified and retrieved. The following checks are done to ensure the filename is valid. The filename represents the last segment of the [RemoteDocumentLocation] property [path]. It is evaluated against the following rules, in which the document ID undergoes a series of transformations. Finally, it is verified whether the modified ID matches the filename from the URL. 1. The filename is converted to lowercase. 2. The filename is transformed based on the regex definition. 3. The filename has the valid extension `.json``. The specification can be found at https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#51-filename. 
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ==
+    targetValue: true
