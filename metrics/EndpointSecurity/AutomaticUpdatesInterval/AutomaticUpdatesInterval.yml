@@ -7,5 +7,5 @@ comments: Resources like virtual machines often offer a simple configuration tha
 # ====== Configuration ======
 configuration:
   p1:
-    operator: <=
+    operator: "<="
     targetValue: 720 # defined in hours
