@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique, human-readable name"
+    },
+    "category": {
+      "type": "string",
+      "description": "Category of the metric",
+      "examples": [
+        "EndpointSecurity",
+        "IdentityManagement",
+        "NetworkSecurity",
+        "ApplicationSecurity"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "description": "Description using terms from the ontology."
+    },
+    "implementationGuidelines": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "description": "Implementation guidelines for a specific evidence collector tool",
+        "examples": [
+          "Use AES256 encryption for data at rest."
+        ]
+      }
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of the metric."
+    },
+    "comments": {
+      "type": "string",
+      "description": "Detailed explanation of the metric."
+    },
+    "configuration": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "operator": {
+            "type": "string",
+            "description": "Operator for the comparison",
+            "examples": [
+              "==",
+              "<=",
+              ">=",
+              "<",
+              ">",
+              "isIn",
+              "allIn"
+            ]
+          },
+          "targetValue": {
+            "type": [
+              "integer",
+              "string",
+              "boolean",
+              "array"
+            ],
+            "description": "Target value for the operator",
+            "examples": [
+              "true",
+              "false",
+              "enabled",
+              "AES256",
+              200,
+              [
+                "AES256",
+                "RSA2048"
+              ]
+            ],
+            "items": {
+              "type": [
+                "string",
+                "boolean",
+                "integer",
+                "number"
+              ]
+            }
+          }
+        },
+        "required": [
+          "operator",
+          "targetValue"
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "category",
+    "description",
+    "version",
+    "comments",
+    "configuration"
+  ]
+}
