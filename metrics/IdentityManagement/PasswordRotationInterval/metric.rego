@@ -15,6 +15,6 @@ applicable if {
 }
 
 compliant if {
-	# time.Duration are nanoseconds, we must convert them to hours
+	# rotationInterval is in days
 	compare(data.operator, data.target_value, int.passwordBasedAuthentication.rotationInterval)
 }
