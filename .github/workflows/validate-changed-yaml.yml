@@ -63,5 +63,13 @@ jobs:
       - name: Validate against schema
         if: ${{ steps.diff.outputs.files != '' }}
         run: |
-          # Validate each changed YAML file
-          check-jsonschema --schemafile metric_schema.json ${{ steps.diff.outputs.files }}
+          set -e          # stop on first error
+          set -o pipefail # catch failures in pipes
+
+          # Validate each yaml file
+          for f in ${{ steps.diff.outputs.files }}; do
+            echo "Validating $f"
+            # --verbose prints the exact reason for a failure
+            check-jsonschema --schemafile metric_schema.json --verbose "$f"
+            echo "$f is valid"
+          done
