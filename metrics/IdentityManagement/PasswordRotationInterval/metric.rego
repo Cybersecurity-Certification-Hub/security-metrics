@@ -7,14 +7,13 @@ default applicable := false
 
 default compliant := false
 
-int := input.rotationInterval
+pwd := input.passwordBasedAuthentication
 
 applicable if {
-	# check resource type
-	"PolicyDocument" in document.type
+	pwd
 }
 
 compliant if {
 	# rotationInterval is in days
-	compare(data.operator, data.target_value, int.passwordBasedAuthentication.rotationInterval)
+	compare(data.operator, data.target_value, pwd.rotationInterval)
 }
