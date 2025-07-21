@@ -22,7 +22,8 @@ To create a new metric, please **check off every box** and adapt the examples be
 </details>
 
 <details>
-<summary> Example file TransportEncryptionEnabled.yaml</summary>
+<summary> Example TransportEncryptionEnabled.yaml</summary>
+	
 The yaml file is described by metadata and configuration properties. The json schema for this file can be found [here](metric_schema.json).
 A description of the properties can be found [here](README.md)
 
@@ -46,7 +47,7 @@ configuration:
 
 <details>
 <summary>metric.rego</summary>
-The metric is described by 
+
 The package name must be updated to match the metric name. An example of a `Object Storage Service` resource evaluated by this metric is shown under the metric.
 
 ```
