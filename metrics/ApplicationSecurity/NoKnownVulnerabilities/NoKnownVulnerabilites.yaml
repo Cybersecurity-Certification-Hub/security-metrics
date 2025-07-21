@@ -7,5 +7,5 @@ comments: Checking for known vulnerabilities ensures that resources are secure a
 # ====== Configuration ======
 configuration:
   p1:
-    operator: ==
+    operator: "=="
     targetValue: 0
