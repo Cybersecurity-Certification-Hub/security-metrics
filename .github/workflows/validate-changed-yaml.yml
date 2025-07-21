@@ -1,13 +1,13 @@
 name: Validate changed YAML files
 
 on:
-    pull_request:
-      types: [opened, synchronize, reopened] # Run on PR creation, update, or reopening
-      paths:                # Run workflow if YAML, rego or json files in folder metrics changes
-        - "metrics/**/*.yml"
-        - "metrics/**/*.yaml"
-        - "metrics/**/data.json"
-        - "metrics/**/metric.rego"
+  pull_request:
+    types: [opened, synchronize, reopened] # Run on PR creation, update, or reopening
+    paths:                # Run workflow if YAML, rego or json files in folder metrics changes
+      - "metrics/**/*.yml"
+      - "metrics/**/*.yaml"
+      - "metrics/**/data.json"
+      - "metrics/**/metric.rego"
         
 jobs:
   validate:
@@ -61,7 +61,7 @@ jobs:
           exit $missing
 
       - name: Validate against schema
-        if: steps.diff.outputs.files != ''
+        if: ${{ steps.diff.outputs.files != '' }}
         run: |
           # Validate each changed YAML file
           check-jsonschema --schemafile metric_schema.json ${{ steps.diff.outputs.files }}
