@@ -7,8 +7,8 @@ comments: MFA is a standard security measure for administrative users due to the
 # ====== Configuration ======
 configuration:
   p1:
-    operator: ==
+    operator: "=="
     targetValue: True
   p2:
-    operator: ==
+    operator: "=="
     targetValue: True

@@ -7,5 +7,5 @@ comments: Enforce approved commit author verifies that code modifications are ma
 # ====== Configuration ======
 configuration:
   p1:
-    operator: ==
+    operator: "=="
     targetValue: True

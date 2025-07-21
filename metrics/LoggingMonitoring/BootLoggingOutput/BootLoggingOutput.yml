@@ -7,5 +7,5 @@ comments: A resource should have boot logging output stored in a separate locati
 # ====== Configuration ======
 configuration:
   p1:
-    operator: >
+    operator: ">"
     targetValue: 0
