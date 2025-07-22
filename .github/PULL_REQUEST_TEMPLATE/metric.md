@@ -2,7 +2,7 @@
 
 To propose a new compliance metric, please make sure to **check off each box** below:
 
-- [ ] I have created a folder with the <MetricName>.
+- [ ] I have created a folder with the new <MetricName> within an existing category folder (e.g., `metrics/EndpointSecurity`) or create a new category folder.
 - [ ] I have created a file `data.json` ([example](metrics/TransportEncryption/TransportEncryptionEnabled/data.json)).
 - [ ] I have created a file `<MetricName>.yaml` ([example](metrics/TransportEncryption/TransportEncryptionEnabled/TransportEncryptionEnabled.yml)).
 - [ ] I have created a file `metric.rego` ([example](metrics/TransportEncryption/TransportEncryptionEnabled/metric.rego)).
