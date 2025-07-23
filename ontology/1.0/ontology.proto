@@ -1951,7 +1951,7 @@ message PasswordBasedAuthentication {
 
 	bool activated = 11798;
 	bool context_is_checked = 1362;
-	xsd:positiveInteger length = 17797;
+	int32 length = 17797;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 9048;
 }
