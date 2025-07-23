@@ -2660,6 +2660,13 @@
     <SubClassOf>
         <Class IRI="/classes/PasswordBasedAuthentication"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/length"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PasswordBasedAuthentication"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/properties/activated"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
