@@ -1633,6 +1633,8 @@ message MalwareProtection {
 
 	google.protobuf.Duration duration_since_active = 18754;
 	bool enabled = 18004;
+	// The interval refers to the update interval in days.
+	int32 interval = 7222;
 	int32 number_of_threats_found = 11973;
 	ApplicationLogging application_logging = 8181;
 }
