@@ -2661,7 +2661,7 @@
         <Class IRI="/classes/PasswordBasedAuthentication"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/length"/>
-            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
