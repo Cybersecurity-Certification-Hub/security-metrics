@@ -2466,6 +2466,13 @@
     <SubClassOf>
         <Class IRI="/classes/MalwareProtection"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/interval"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MalwareProtection"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/classes/numberOfThreatsFound"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
