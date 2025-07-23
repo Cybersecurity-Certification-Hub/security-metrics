@@ -7,5 +7,5 @@ comments: Enabling boot logging captures detailed information about the boot pro
 # ====== Configuration ======
 configuration:
   p1:
-    operator: ==
+    operator: "=="
     targetValue: True

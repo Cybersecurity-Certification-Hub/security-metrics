@@ -1,0 +1,75 @@
+name: Validate changed YAML files
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened] # Run on PR creation, update, or reopening
+    paths:                # Run workflow if YAML, rego or json files in folder metrics changes
+      - "metrics/**/*.yml"
+      - "metrics/**/*.yaml"
+      - "metrics/**/data.json"
+      - "metrics/**/metric.rego"
+        
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history needed for diff
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install validator
+        run: pip install "check-jsonschema[yaml]"
+      - name: Get changed YAML files
+        id: diff
+        run: |
+          # Collect added/modified YAML files between base and head
+          files=$(git diff --name-only --diff-filter=AM \
+                    "${{ github.event.pull_request.base.sha }}" \
+                    "${{ github.event.pull_request.head.sha }}" |
+                  grep -E '\.ya?ml$' |       # only *.yml / *.yaml
+                  grep -vE '^\.github/' |    # ignore workflow files
+                  tr '\n' ' ')               # convert newlines -> spaces
+
+          if [ -z "$files" ]; then
+            echo "No changed YAML files found."
+          else
+            echo "Changed YAML files: $files"
+          fi
+
+          # write the files to the output variable
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+      - name: Check if companion files are available (data.json / metric.rego)
+        if: ${{ steps.diff.outputs.files != '' }}
+        run: |
+          missing=0
+          for f in ${{ steps.diff.outputs.files }}; do
+            dir=$(dirname "$f")
+            for companion in data.json metric.rego; do
+              if [ ! -f "$dir/$companion" ]; then
+                echo "::error file=$f::Missing $companion in $dir"
+                missing=1
+              fi
+            done
+          done
+          exit $missing
+
+      - name: Validate against schema
+        if: ${{ steps.diff.outputs.files != '' }}
+        run: |
+          set -e          # stop on first error
+          set -o pipefail # catch failures in pipes
+
+          # Validate each yaml file
+          for f in ${{ steps.diff.outputs.files }}; do
+            echo "Validating $f"
+            # --verbose prints the exact reason for a failure
+            check-jsonschema --schemafile metric_schema.json --verbose "$f"
+            echo "$f is valid"
+          done
