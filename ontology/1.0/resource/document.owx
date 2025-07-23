@@ -32,6 +32,9 @@
         <Class abbreviatedIRI="cl:PolicyDocument"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="cl:LogDocument"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="cl:SecurityAdvisoryDocument"/>
     </Declaration>
     <Declaration>
@@ -144,6 +147,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>cl:GenericDocument</AbbreviatedIRI>
         <Literal>This is a placeholder for all other documents, e.g. index.txt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:LogDocument</AbbreviatedIRI>
+        <Literal>LogDocument</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
