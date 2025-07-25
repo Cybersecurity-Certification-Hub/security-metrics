@@ -7,5 +7,5 @@ comments: Using strong cryptographic hashes (e.g., SHA-256 or better) ensures da
 # ====== Configuration ======
 configuration:
   p1:
-    operator: allIn
+    operator: "allIn"
     targetValue: ["SHA-256", "SHA-3", "BLAKE2"]
