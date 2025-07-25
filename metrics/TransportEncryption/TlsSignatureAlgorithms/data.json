@@ -1,0 +1,4 @@
+{
+  "operator" : "isIn",
+  "target_value" : ["rsa_pss_rsae_sha256", "rsa_pss_rsae_sha384", "rsa_pss_rsae_sha512", "ecdsa_secp256r1_sha256", "ed25519"]
+}

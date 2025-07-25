@@ -2539,6 +2539,8 @@ message TransportEncryption {
 	bool enforced = 8230;
 	string protocol = 14651;
 	float protocol_version = 2365;
+	// tlsSignatureAlgorithm: e.g., rsa_pss_rsae_sha256/384/512, ecdsa_secp256r1_sha256, ed25519
+	string tls_signature_algorithm = 16510;
 	repeated CipherSuite cipher_suites  = 17881;
 }
 
