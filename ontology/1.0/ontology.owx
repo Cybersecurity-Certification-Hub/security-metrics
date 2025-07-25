@@ -14,13 +14,6 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/resource</Import>
-    <SubClassOf>
-        <Class IRI="/classes/PasswordBasedAuthentication"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/length"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
 </Ontology>
 
 
