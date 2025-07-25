@@ -7,8 +7,8 @@ comments: A SecurityAdvisoryDocument must be accessible from a website that empl
 # ====== Configuration ======
 configuration:
   p1:
-    operator: ==
+    operator: "=="
     targetValue: true
   p2:
-    operator: ==
+    operator: "=="
     targetValue: "TLS"
