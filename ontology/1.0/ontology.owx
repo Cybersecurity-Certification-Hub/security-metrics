@@ -14,13 +14,6 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/resource</Import>
-    <SubClassOf>
-        <Class IRI="/classes/MalwareProtection"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/interval"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
 </Ontology>
 
 
