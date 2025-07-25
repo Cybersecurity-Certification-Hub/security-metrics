@@ -4818,7 +4818,7 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/rotationInterval</IRI>
-        <Literal>Maximum password rotation interval in months</Literal>
+        <Literal>rotationInterval is given in days</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

@@ -348,7 +348,7 @@ message CertificateBasedAuthentication {
 
 	bool context_is_checked = 14958;
 	bool enabled = 11983;
-	// Maximum password rotation interval in months
+	// rotationInterval is given in days
 	int32 rotation_interval = 9404;
 }
 
@@ -1284,7 +1284,7 @@ message TokenBasedAuthentication {
 	bool context_is_checked = 1232;
 	bool enabled = 10600;
 	bool enforced = 6934;
-	// Maximum password rotation interval in months
+	// rotationInterval is given in days
 	int32 rotation_interval = 17587;
 }
 
@@ -1686,7 +1686,7 @@ message MultiFactorAuthentiation {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool context_is_checked = 17335;
-	// Maximum password rotation interval in months
+	// rotationInterval is given in days
 	int32 rotation_interval = 11722;
 	repeated Authenticity authenticities  = 14915;
 }
@@ -1825,7 +1825,7 @@ message NoAuthentication {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool context_is_checked = 12023;
-	// Maximum password rotation interval in months
+	// rotationInterval is given in days
 	int32 rotation_interval = 11214;
 }
 
@@ -1851,7 +1851,7 @@ message OTPBasedAuthentication {
 
 	bool activated = 7456;
 	bool context_is_checked = 18913;
-	// Maximum password rotation interval in months
+	// rotationInterval is given in days
 	int32 rotation_interval = 12621;
 }
 
@@ -1951,7 +1951,7 @@ message PasswordBasedAuthentication {
 
 	bool activated = 11798;
 	bool context_is_checked = 1362;
-	// Maximum password rotation interval in months
+	// rotationInterval is given in days
 	int32 rotation_interval = 9048;
 }
 
@@ -2460,7 +2460,7 @@ message SingleSignOn {
 
 	bool context_is_checked = 14488;
 	bool enabled = 10569;
-	// Maximum password rotation interval in months
+	// rotationInterval is given in days
 	int32 rotation_interval = 9185;
 }
 
