@@ -236,6 +236,9 @@
         <DataProperty abbreviatedIRI="core:status"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#scanInterval"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:activated"/>
     </Declaration>
     <Declaration>
@@ -670,14 +673,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:MalwareProtection"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:interval"/>
+            <DataProperty abbreviatedIRI="core:numberOfThreatsFound"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:MalwareProtection"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:numberOfThreatsFound"/>
+            <DataProperty IRI="#scanInterval"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -905,6 +908,10 @@
         <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
         <ObjectProperty abbreviatedIRI="core:usedBy"/>
     </SubObjectPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#scanInterval"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
@@ -1619,6 +1626,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:zone</AbbreviatedIRI>
         <Literal>zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#scanInterval</IRI>
+        <Literal>The scan interval refers to the frequency of scans in days, e.g. antimalware scans</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#scanInterval</IRI>
+        <Literal>scanInterval</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
