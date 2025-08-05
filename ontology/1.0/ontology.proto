@@ -1634,6 +1634,8 @@ message MalwareProtection {
 	google.protobuf.Duration duration_since_active = 18754;
 	bool enabled = 18004;
 	int32 number_of_threats_found = 11973;
+	// The scan interval refers to the frequency of scans in days, e.g. antimalware scans
+	int32 scan_interval = 3356;
 	ApplicationLogging application_logging = 8181;
 }
 
