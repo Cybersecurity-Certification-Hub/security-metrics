@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: <Enter ID here in CamelCase>
+description: <Enter description here>
+category: <Enter category here in CamelCase>
+version: "1.0" 
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True
