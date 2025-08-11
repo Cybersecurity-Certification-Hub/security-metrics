@@ -2,10 +2,10 @@
 id: <Enter ID here in CamelCase>
 description: "<Enter a description based on the Ontology terms here.>"
 category: "<Enter the category here in CamelCase.>"
-version: "1.0" 
+version: "1.0"
 comments: "<Enter further description of the metric here.>"
 # ====== Configuration ======
 configuration:
   p1:
     operator: "<Enter the operator here. Possible operators are ==, <=, >=, <, >, isIn, allIn>"
-    targetValue: True
+    targetValue: <Enter the target value here. Possible target values can be bool, string, integer, number.>
