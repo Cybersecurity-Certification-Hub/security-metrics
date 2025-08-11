@@ -8,4 +8,4 @@ comments: "<Enter further description of the metric here.>"
 configuration:
   p1:
     operator: "<Enter the operator here. Possible operators are ==, <=, >=, <, >, isIn, allIn>"
-    targetValue: <Enter the target value here. Possible target values can be bool, string, integer, number.>
+    targetValue: "<Enter the target value here. Possible target values can be bool, string, integer, number.>"
