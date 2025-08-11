@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: <Enter ID here in CamelCase>
-description: <Enter description here>
+description: "<Enter a description based on the Ontology terms here.>"
 category: <Enter category here in CamelCase>
 version: "1.0" 
 comments: ""
