@@ -1,4 +1,4 @@
 {
-    "operator": "==",
+    "operator": "<Enter the operator here. Possible operators are ==, <=, >=, <, >, isIn, allIn>",
     "target_value": true
 }
