@@ -206,6 +206,9 @@
         <DataProperty abbreviatedIRI="core:interval"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="core:length"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="core:mixedDuties"/>
     </Declaration>
     <Declaration>
@@ -234,6 +237,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#scanInterval"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:activated"/>
@@ -282,9 +288,6 @@
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="core:length"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:Storage"/>
@@ -674,6 +677,13 @@
         <Class abbreviatedIRI="core:MalwareProtection"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:numberOfThreatsFound"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MalwareProtection"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#scanInterval"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1535,7 +1545,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
-        <Literal>Maximum password rotation interval in months</Literal>
+        <Literal>rotationInterval is given in days</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
+        <Literal>rotationInterval</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1631,6 +1646,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:zone</AbbreviatedIRI>
         <Literal>zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#scanInterval</IRI>
+        <Literal>The scan interval refers to the frequency of scans in days, e.g. antimalware scans</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#scanInterval</IRI>
+        <Literal>scanInterval</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
