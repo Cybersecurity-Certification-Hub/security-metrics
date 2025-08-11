@@ -1,4 +1,4 @@
-package cch.metrics.XXX_XXX
+package cch.metrics.<Metric ID in snake_case>
 
 import data.cch.compare
 import rego.v1
