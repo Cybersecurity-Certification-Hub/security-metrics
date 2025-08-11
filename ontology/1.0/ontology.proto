@@ -1953,6 +1953,7 @@ message PasswordBasedAuthentication {
 
 	bool activated = 11798;
 	bool context_is_checked = 1362;
+	// The length refers to the length of the given class, e.g.  password length
 	int32 length = 17797;
 	// rotationInterval is given in days
 	int32 rotation_interval = 9048;
