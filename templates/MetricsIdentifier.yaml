@@ -7,5 +7,5 @@ comments: "<Enter further description of the metric here.>"
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
+    operator: "<Enter the operator here. Possible operators are ==, <=, >=, <, >, isIn, allIn>"
     targetValue: True
