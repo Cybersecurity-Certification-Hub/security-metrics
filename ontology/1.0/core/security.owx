@@ -7,16 +7,15 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://ontology.cybersecuritycertcluster.eu/core/security">
     <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/core/security#"/>
+    <Prefix name="cl" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
-    <Prefix name="cl" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
-    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    
     <Declaration>
         <Class abbreviatedIRI="core:ABAC"/>
     </Declaration>
@@ -174,9 +173,6 @@
         <ObjectProperty abbreviatedIRI="core:offersInterface"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:scope"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty abbreviatedIRI="core:usedBy"/>
     </Declaration>
     <Declaration>
@@ -187,6 +183,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:offers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:scope"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:apiHitsPerMonth"/>
@@ -237,6 +236,9 @@
         <DataProperty abbreviatedIRI="core:status"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#scanInterval"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:activated"/>
     </Declaration>
     <Declaration>
@@ -261,19 +263,19 @@
         <DataProperty abbreviatedIRI="prop:restrictedPorts"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="ind:AmazonWebServices"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ind:CircleCI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ind:GitHubActions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ind:TeamCity"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/CircleCI"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/GitHubActions"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/TeamCity"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
@@ -283,6 +285,24 @@
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Storage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:has"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LoggingService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:to"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Error"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:CipherSuite"/>
     </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="core:ABAC"/>
@@ -478,7 +498,7 @@
         <Class abbreviatedIRI="core:CryptographicHash"/>
         <Class abbreviatedIRI="core:Integrity"/>
     </SubClassOf>
-        <SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:CryptographicHash"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -608,7 +628,7 @@
         <Class abbreviatedIRI="core:Logging"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:to"/>
-            <Class abbreviatedIRI="cl:LoggingService"/>
+            <Class abbreviatedIRI="core:LoggingService"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -654,6 +674,13 @@
         <Class abbreviatedIRI="core:MalwareProtection"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:numberOfThreatsFound"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MalwareProtection"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#scanInterval"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -881,6 +908,10 @@
         <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
         <ObjectProperty abbreviatedIRI="core:usedBy"/>
     </SubObjectPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#scanInterval"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
@@ -1217,16 +1248,6 @@
         <Literal>contextIsChecked</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
-        <Literal>rotationInterval is given in days</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
-        <Literal>rotationInterval</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:creation_time</AbbreviatedIRI>
         <Literal>creationTime</Literal>
@@ -1492,11 +1513,6 @@
         <Literal>reqBody</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ind:resourceId</AbbreviatedIRI>
-        <Literal>resourceId</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:resourceType</AbbreviatedIRI>
         <Literal>The resource type. It is an array, because a type can be derived from another.</Literal>
@@ -1512,6 +1528,16 @@
         <Literal>retentionPeriod</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
+        <Literal>rotationInterval is given in days</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
+        <Literal>rotationInterval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:runtimeLanguage</AbbreviatedIRI>
         <Literal>runtimeLanguage</Literal>
@@ -1525,11 +1551,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:schemaURL</AbbreviatedIRI>
         <Literal>schemaURL</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:scope</AbbreviatedIRI>
-        <Literal>scope</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1607,24 +1628,44 @@
         <Literal>zone</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#scanInterval</IRI>
+        <Literal>The scan interval refers to the frequency of scans in days, e.g. antimalware scans</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices</IRI>
+        <IRI>#scanInterval</IRI>
+        <Literal>scanInterval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ind:AmazonWebServices</AbbreviatedIRI>
         <Literal xml:lang="english">Amazon Web Services</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/CircleCI</IRI>
+        <AbbreviatedIRI>ind:CircleCI</AbbreviatedIRI>
         <Literal xml:lang="english">CircleCI</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/GitHubActions</IRI>
+        <AbbreviatedIRI>ind:GitHubActions</AbbreviatedIRI>
         <Literal xml:lang="english">GitHub Actions</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/TeamCity</IRI>
+        <AbbreviatedIRI>ind:TeamCity</AbbreviatedIRI>
         <Literal xml:lang="english">TeamCity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ind:resourceId</AbbreviatedIRI>
+        <Literal>resourceId</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:scope</AbbreviatedIRI>
+        <Literal>scope</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
@@ -1635,4 +1676,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
