@@ -206,6 +206,9 @@
         <DataProperty abbreviatedIRI="core:interval"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="core:length"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="core:mixedDuties"/>
     </Declaration>
     <Declaration>
@@ -739,6 +742,13 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:PasswordBasedAuthentication"/>
         <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:length"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:PasswordBasedAuthentication"/>
+        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:activated"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
@@ -909,7 +919,7 @@
         <ObjectProperty abbreviatedIRI="core:usedBy"/>
     </SubObjectPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#scanInterval"/>
+        <DataProperty abbreviatedIRI="core:length"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <AnnotationAssertion>
@@ -1368,6 +1378,11 @@
         <Literal>lastActivity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:length</AbbreviatedIRI>
+        <Literal>The length refers to the length of the given class, e.g.  password length</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:length</AbbreviatedIRI>
         <Literal>length</Literal>
@@ -1531,6 +1546,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
         <Literal>rotationInterval is given in days</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
+        <Literal>rotationInterval</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
