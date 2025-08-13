@@ -1,0 +1,4 @@
+{
+    "operator": "<Enter the operator here. Possible operators are ==, <=, >=, <, >, isIn, allIn>",
+    "target_value": "<Enter the target value here. Possible target values can be bool, string, integer, number.>"
+}
