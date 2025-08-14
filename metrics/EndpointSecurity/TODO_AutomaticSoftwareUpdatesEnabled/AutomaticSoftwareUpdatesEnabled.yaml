@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "AutomaticSoftwareUpdatesEnabled"
+description: "Checks if automatic updates are enabled for software, or packages. | SecurityFeature.Integrity.AutomaticUpdate"
+category: "EndpointSecurity"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "true"

@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "MaxLoginAttempts"
+description: "Checks how many failed login attempts are allowed before the account gets blocked. | SecurityFeature.Authenticity.PasswordBasedAuthentication, Resource.Infrastructure.PasswordPolicy (properties for this should be defined)"
+category: "IdentityManagement"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "5"

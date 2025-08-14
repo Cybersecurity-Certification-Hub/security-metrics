@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "SshPubkeyAuthSignatureMethod"
+description: "Checks that for client authentication, "public key authentication" is used with secure methods. | TBD"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "TBD"

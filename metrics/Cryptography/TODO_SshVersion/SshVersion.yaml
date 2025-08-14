@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "SshVersion"
+description: "Checks that the used SSH protocol is secure. | TBD"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "'SSH-2'"

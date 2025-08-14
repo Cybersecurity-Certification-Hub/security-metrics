@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "ATPEnabled"
+description: "Check if Advanced Threat Protection is enabled for SQL DBs. | Resource.Infrastructure.Storage.DatabaseStorage (not sure though how to connect with ATP, no such security feature)"
+category: "DataProtection"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

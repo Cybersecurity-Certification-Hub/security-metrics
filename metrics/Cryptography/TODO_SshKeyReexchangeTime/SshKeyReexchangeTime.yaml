@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "SshKeyReexchangeTime"
+description: "Checks that the session keys are renewed after the recommended time. | TBD"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "1"

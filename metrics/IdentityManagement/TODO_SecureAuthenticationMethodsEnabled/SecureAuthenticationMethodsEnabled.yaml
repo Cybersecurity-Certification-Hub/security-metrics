@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "SecureAuthenticationMethodsEnabled"
+description: "Checks, if secure authentication methods are enabled, e.g., password, certificates, MFA, … | TBD"
+category: "IdentityManagement"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

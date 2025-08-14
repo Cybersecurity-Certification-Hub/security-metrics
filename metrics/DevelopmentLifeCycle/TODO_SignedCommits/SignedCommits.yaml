@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "SignedCommits"
+description: "Checks whether commits in the repository have valid cryptographic signatures. | Resource.Infrastructure.CodeRepository"
+category: "DevelopmentLifeCycle"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "100 %"

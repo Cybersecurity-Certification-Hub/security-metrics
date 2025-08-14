@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "SessionRenegotiationEnabled"
+description: "Checks that the extension "renegotiation_info" is not disabled. | TransportEncryption"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "true"

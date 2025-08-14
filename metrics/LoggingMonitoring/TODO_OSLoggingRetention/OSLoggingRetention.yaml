@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "OSLoggingRetention"
+description: "The time the log data must be kept | SecurityFeature.Auditing.Logging"
+category: "LoggingAndMonitoring"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

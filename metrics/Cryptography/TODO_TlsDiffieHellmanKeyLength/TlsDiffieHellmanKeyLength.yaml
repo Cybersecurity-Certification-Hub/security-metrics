@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "TlsDiffieHellmanKeyLength"
+description: "Checks the length of the Diffie-Hellman public key. | Functionality.CipherSuite"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: "3000"

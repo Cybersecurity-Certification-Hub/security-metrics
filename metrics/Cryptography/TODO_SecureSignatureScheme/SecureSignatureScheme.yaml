@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "SecureSignatureScheme"
+description: "TBD | TBD"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

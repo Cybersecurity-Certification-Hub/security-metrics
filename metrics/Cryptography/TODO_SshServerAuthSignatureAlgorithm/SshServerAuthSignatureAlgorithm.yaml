@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "SshServerAuthSignatureAlgorithm"
+description: "Checks that the signature algorithm for server authentication is secure and recommended. | TBD"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "TBD"

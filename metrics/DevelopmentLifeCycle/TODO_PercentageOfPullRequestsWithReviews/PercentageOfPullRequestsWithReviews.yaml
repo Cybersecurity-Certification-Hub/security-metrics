@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "PercentageOfPullRequestsWithReviews"
+description: "Percentage of Pull Requets that are merged that have code reviews | CICDTemplate?, maybe add new concept PullRequest (Merge Request) with id, text, comment, reviewer and so on"
+category: "DevelopmentLifeCycle"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">"
+    targetValue: "80%"

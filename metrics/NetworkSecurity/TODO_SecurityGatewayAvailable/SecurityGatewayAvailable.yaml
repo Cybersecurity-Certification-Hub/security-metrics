@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "SecurityGatewayAvailable"
+description: "Checks if a security gateway is available for a network interface. | TBD"
+category: "NetworkSecurity"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

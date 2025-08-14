@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "SshKeyExchange"
+description: "Checks that the SSH key exchange method is recommended. | TBD"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "TBD"

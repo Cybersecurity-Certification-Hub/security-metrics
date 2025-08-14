@@ -1,0 +1,15 @@
+package cch.metrics.prune_disabled_accounts
+
+import data.cch.compare
+import rego.v1
+import input as document
+
+default applicable := false
+
+default compliant := false
+
+applicable if {
+}
+
+compliant if {
+}

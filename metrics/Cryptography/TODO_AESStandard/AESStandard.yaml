@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "AESStandard"
+description: "Checks that the AES-256 encryption standard is explicitly configured wherever AES is used. | Functionality.CipherSuite"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "AES256"

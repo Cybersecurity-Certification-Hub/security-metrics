@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "BlockCipher"
+description: "Checks if used block cipher algorithms are secure. | Functionality.CipherSuite"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "'AES'"

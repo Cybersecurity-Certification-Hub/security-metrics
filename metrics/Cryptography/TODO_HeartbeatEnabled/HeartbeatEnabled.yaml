@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "HeartbeatEnabled"
+description: "Checks that the extension "heartbeat" is disabled. | TransportEncryption"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "false"

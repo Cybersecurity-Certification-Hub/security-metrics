@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "HasProvenanceAttestation"
+description: "TBD | TBD"
+category: "DevelopmentLifeCycle"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"
