@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "EncryptThenMacEnabled"
-description: "Checks that the extension "encrypt_then_mac" is not disabled. | TransportEncryption"
+description: "Checks that the extension `encrypt_then_mac` is not disabled. | TransportEncryption"
 category: "Cryptography"
 version: "1.0"
 comments: ""
