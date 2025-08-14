@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "IdentityTimeSinceLastActivity"
+description: "The last activity of an active user must be recent | Resource.Infrastructure.Identifiable.Identity WHERE activated == true"
+category: "IdentityManagement"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "< 90d"

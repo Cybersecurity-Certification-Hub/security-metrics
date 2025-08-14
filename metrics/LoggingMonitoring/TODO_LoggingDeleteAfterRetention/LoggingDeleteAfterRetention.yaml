@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "LoggingDeleteAfterRetention"
+description: "The data must be deleted after the retention | SecurityFeature.Auditing.Logging"
+category: "LoggingAndMonitoring"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

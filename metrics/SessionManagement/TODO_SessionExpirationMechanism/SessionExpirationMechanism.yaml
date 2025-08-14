@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "SessionExpirationMechanism"
+description: "TBD | TBD"
+category: "SessionManagement"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

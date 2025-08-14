@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "TransportEncryptionEnabled"
+description: "Checks if the transport encryption protocol is enabled. | SecurityFeature.Confidentiality.TransportEncryption (property: enabled)"
+category: "TransportEncryption"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "true"

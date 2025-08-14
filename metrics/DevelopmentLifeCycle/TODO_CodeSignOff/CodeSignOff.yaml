@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "CodeSignOff"
+description: "Checks if commits in the repository have a sign-off line in the commit messages. | Resource.Infrastructure.CodeRepository"
+category: "DevelopmentLifeCycle"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "100 %"

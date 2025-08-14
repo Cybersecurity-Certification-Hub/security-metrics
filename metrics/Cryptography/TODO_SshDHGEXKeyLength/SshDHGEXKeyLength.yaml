@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "SshDHGEXKeyLength"
+description: "Checks that the prime number length is more than 3072 bits for Diffie-Hellman Group Exchange. | TBD"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: "3000"

@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "LoginBlockDuration"
+description: "Checks how long the account stays locked after too many failed login attempts | SecurityFeature.Authenticity.PasswordBasedAuthentication, Resource.Infrastructure.PasswordPolicy (properties for this should be defined)"
+category: "IdentityManagement"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: "15"

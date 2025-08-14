@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "BackupEnabled"
+description: "Checks whether the DB backup is enabled. | SecurityFeature.Availability.Backup (property: enabled)"
+category: "StorageBackup"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "true"

@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "AutomaticSoftwareUpdatesSecurityOnly"
+description: "TBD | SecurityFeature.Integrity.AutomaticUpdate"
+category: "EndpointSecurity"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

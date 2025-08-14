@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "ResourceInventory"
+description: "TBD | TBD"
+category: "Inventory"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

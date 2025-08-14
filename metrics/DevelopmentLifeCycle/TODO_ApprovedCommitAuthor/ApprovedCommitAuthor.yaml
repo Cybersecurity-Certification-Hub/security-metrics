@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "ApprovedCommitAuthor"
+description: "Checks whether the authors of the commits are allowed to contribute. | Resource.Infrastructure.CodeRepository"
+category: "DevelopmentLifeCycle"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "100 %"

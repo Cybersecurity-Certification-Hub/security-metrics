@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "MFAEnabled"
+description: "Checks, if multi-factor authentication is enabled and at least 2FA. | TBD"
+category: "IdentityManagement"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

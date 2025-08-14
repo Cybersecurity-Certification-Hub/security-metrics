@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "LoggingServiceAuthentication"
+description: "The log storage must have authentication | Resource.Infrastructure.NetworkService.LoggingService which is connected to logging"
+category: "LoggingAndMonitoring"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

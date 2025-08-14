@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "UsageOfDASTInDevPipeline"
+description: "The usage of SAST in the Development Pipeline (e.g. GitHub Actions); The number? | CICDTemplate?"
+category: "DevelopmentLifeCycle"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: "1"

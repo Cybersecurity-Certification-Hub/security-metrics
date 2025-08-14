@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "TransportEncryptionProtocol"
+description: "Checks if the transport encryption protocol is secure and recommended to use. | SecurityFeature.Confidentiality.TransportEncryption (property: protocol)"
+category: "TransportEncryption"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "TLS"

@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "AtRestEncryptionAlgorithm"
+description: "TBD | SecurityFeature.Confidentiality.AtRestEncryption (property: algorithm)"
+category: "StorageEncryption"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "UnsuccessfulLoginAttemptsBlocker"
+description: "Checks whether unsuccessful login attempts lead to some kind of blocking | TBD"
+category: "IdentityManagement"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

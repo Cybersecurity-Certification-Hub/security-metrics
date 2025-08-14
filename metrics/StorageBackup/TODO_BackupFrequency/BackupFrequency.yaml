@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "BackupFrequency"
+description: "Checks, the frequency of data backups.  | SecurityFeature.Availability.Backup (property: interval)"
+category: "StorageBackup"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "based on data criticality"

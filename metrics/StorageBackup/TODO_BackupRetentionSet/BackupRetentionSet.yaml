@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "BackupRetentionSet"
+description: "Checks how long backup data is kept before it is automatically deleted. | SecurityFeature.Availability.Backup (property: retentionPeriod)"
+category: "StorageBackup"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "based on data criticality"

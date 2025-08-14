@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "AnomalyDetectionEnabled"
+description: "TBD | SecurityFeature.Auditing.AnomalyDetection"
+category: "LoggingAndMonitoring"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

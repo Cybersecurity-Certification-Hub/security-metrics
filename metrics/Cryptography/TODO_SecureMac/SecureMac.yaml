@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "SecureMac"
+description: "Checks whether the configured cryptographic MAC algorithm is strong and secure. | TBD"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "SshMacAlgorithm"
+description: "Checks that used MAC protection is secure and recommended. | TBD"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "TBD"

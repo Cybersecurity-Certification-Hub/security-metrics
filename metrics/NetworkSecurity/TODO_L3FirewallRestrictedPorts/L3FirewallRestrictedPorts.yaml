@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "L3FirewallRestrictedPorts"
+description: "TBD | TBD"
+category: "NetworkSecurity"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"

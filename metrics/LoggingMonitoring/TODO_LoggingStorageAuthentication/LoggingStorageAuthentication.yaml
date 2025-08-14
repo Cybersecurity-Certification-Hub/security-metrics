@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "LoggingStorageAuthentication"
+description: "The log service must have authentication | StorageService which is connected to logging"
+category: "LoggingAndMonitoring"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "TBD"
