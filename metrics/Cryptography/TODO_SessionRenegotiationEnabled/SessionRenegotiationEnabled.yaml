@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "SessionRenegotiationEnabled"
-description: "Checks that the extension "renegotiation_info" is not disabled. | TransportEncryption"
+description: "Checks that the extension `renegotiation_info` is not disabled. | TransportEncryption"
 category: "Cryptography"
 version: "1.0"
 comments: ""

@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "TruncatedHMACEnabled"
-description: "Checks that the extension "truncated_hmac" to truncate the HMAC output to 80 bits is disabled. | TransportEncryption"
+description: "Checks that the extension `truncated_hmac` to truncate the HMAC output to 80 bits is disabled. | TransportEncryption"
 category: "Cryptography"
 version: "1.0"
 comments: ""
