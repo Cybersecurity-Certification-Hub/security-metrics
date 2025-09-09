@@ -1,0 +1,10 @@
+# ====== Metadata ======
+id: 
+description: This rule assesses whether an [ExtractedShadowmodel] has the compliant number of [p1:RelativeAccuracy].
+category: AISecurity
+version: "1.0"
+comments: This metric assesses in which extent a model can be extracted and used to create a shadow model.
+# ====== Configuration ======
+p1: 
+ operator: "<"
+ targetValue: 33 
