@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: 
+id: StolenModelAccuracy
 description: This rule assesses whether an [ExtractedShadowmodel] has the compliant number of [p1:RelativeAccuracy].
 category: AISecurity
 version: "1.0"
