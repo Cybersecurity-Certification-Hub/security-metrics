@@ -1236,6 +1236,13 @@
     <SubClassOf>
         <Class IRI="/classes/Authenticity"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/length"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Authenticity"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/classes/rotationInterval"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
@@ -3572,7 +3579,7 @@ name = metadata.name</Literal>
         <Class IRI="/classes/ResourceType"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
-        <DataProperty IRI="/core/security#scanInterval"/>
+        <DataProperty IRI="/classes/length"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -4668,6 +4675,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/lastActivity</IRI>
         <Literal>lastActivity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/length</IRI>
+        <Literal>The length refers to the length of the given class, e.g.  password length</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
