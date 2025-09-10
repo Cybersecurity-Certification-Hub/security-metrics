@@ -1236,6 +1236,13 @@
     <SubClassOf>
         <Class IRI="/classes/Authenticity"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/length"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Authenticity"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/classes/rotationInterval"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
@@ -2666,13 +2673,6 @@
     <SubClassOf>
         <Class IRI="/classes/PasswordBasedAuthentication"/>
         <Class IRI="/classes/Authenticity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/PasswordBasedAuthentication"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/length"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/PasswordBasedAuthentication"/>
