@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: DataPoisoningDetected
-description: This rule assesses whether an [AImodel] has the compliant number of [p1:PoisonedData].
+description: This rule assesses whether an [MachineLearningModel] has the compliant number of [p1:PoisonedData].
 category: AISecurity
 version: "1.0"
 comments: This metric assesses if poisoned data is included that influences the AI model.
