@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "TlsCertificateSignatureKeyLength"
+description: "Checks the length of the keys in certificates. | Functionality.CipherSuite"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: "3000"

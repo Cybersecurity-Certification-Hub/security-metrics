@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "TlsSignatureSchemes"
+description: "Checks that used signature algorithms are secure and recommended by standards. | Functionality.CipherSuite"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "TBD"
