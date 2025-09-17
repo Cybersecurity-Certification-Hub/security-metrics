@@ -9,3 +9,5 @@ configuration:
   p1:
     operator: "=="
     targetValue: "100 %"
+
+TODO: Isn´t this the same metric as 'ApprovedCommitAuthorEnabled'?
