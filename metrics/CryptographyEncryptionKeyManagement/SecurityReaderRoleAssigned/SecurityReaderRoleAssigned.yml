@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: SecurityReaderRoleAssigned
+description: This rule assesses whether a [RoleAssignment] covering cryptographic oversight responsibilities has the property [p1:securityReaderRoleAssigned] indicating that at least one [Identity] is assigned to fulfil the responsibility.
+category: CryptographyEncryptionKeyManagement
+version: "1.0" 
+comments: Security reader duties should never remain unassigned; the metric also evaluates available user assignments to ensure the role is covered.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
