@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: KeyRotationFrequency
+description: This rule evaluates whether a [KeyManagementProcess] exposes the property [p1:keyRotationFrequency] measuring the number of days between rotations, ensuring cryptographic keys are renewed within the defined cryptoperiod.
+category: CryptographyEncryptionKeyManagement
+version: "1.0"
+comments: Extended key lifetimes increase exposure to compromise and regulatory violations; the metric confirms that key rotation completes within the allowed number of days so risk remains bounded.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 360

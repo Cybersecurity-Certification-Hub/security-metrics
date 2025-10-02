@@ -1,0 +1,46 @@
+[
+  {
+    "id": "CryptographyRolesCatalog",
+    "name": "Cryptography Roles and Responsibilities",
+    "description": "Catalog entries validating assignment of cryptographic oversight and operational duties.",
+    "metadata": {
+      "color": "#00695C"
+    },
+    "short_name": "CEK",
+    "assurance_levels": [
+      "baseline"
+    ],
+    "all_in_scope": true,
+    "categories": [
+      {
+        "name": "Cryptography, Encryption & Key Management",
+        "description": "Ensure cryptographic, encryption, and key management responsibilities are staffed.",
+        "controls": [
+          {
+            "id": "CEK-02",
+            "name": "CEK Roles and Responsibilities",
+            "description": "Define and implement cryptographic, encryption and key management roles and responsibilities.",
+            "metrics": [
+              {
+                "id": "SecurityOperatorRoleAssigned"
+              },
+              {
+                "id": "SecurityReaderRoleAssigned"
+              }
+            ]
+          },
+          {
+            "id": "CEK-12",
+            "name": "Key Rotation",
+            "description": "Rotate cryptographic keys in accordance with the calculated cryptoperiod, considering disclosure risks and regulatory requirements.",
+            "metrics": [
+              {
+                "id": "KeyRotationFrequency"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
