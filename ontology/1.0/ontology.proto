@@ -26,14 +26,14 @@
 
 syntax = "proto3";
 
-package confirmate.ontology.v1;
+package clouditor.ontology.v1;
 
 import "buf/validate/validate.proto";
 import "google/protobuf/descriptor.proto";
 import "google/protobuf/duration.proto";
 import "google/protobuf/timestamp.proto";
 
-option go_package = "confirmate.io/confirmate/v1/api/ontology";
+option go_package = "clouditor.io/clouditor/v2/api/ontology";
 
 extend google.protobuf.MessageOptions {
 	repeated string resource_type_names = 60000;
