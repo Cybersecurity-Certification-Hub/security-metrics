@@ -9,17 +9,8 @@ default applicable = false
 default compliant = false
 
 applicable if {
-    security_reader_assigned_users_available
-}
-
-applicable if {
-    flag := security_reader_role_flag
-    flag == true
-}
-
-applicable if {
-    flag := security_reader_role_flag
-    flag == false
+    users := security_reader_assigned_users_source
+    users != null
 }
 
 compliant if {
@@ -27,18 +18,22 @@ compliant if {
     compare(data.operator, data.target_value, assigned)
 }
 
-security_reader_assigned_users := users if {
-    users := object.get(assignments, "securityReaderAssignedUsers", null)
-    users != null
-}
-
-security_reader_assigned_users_available if {
-    security_reader_assigned_users
+applicable if {
+    _ := security_reader_role_flag
 }
 
 security_reader_role_flag := flag if {
     flag := object.get(assignments, "securityReaderRoleAssigned", null)
     flag != null
+}
+
+security_reader_assigned_users_source := users if {
+    users := object.get(assignments, "securityReaderAssignedUsers", null)
+}
+
+security_reader_assigned_users := users if {
+    users := security_reader_assigned_users_source
+    users != null
 }
 
 security_reader_role_assigned := true if {
@@ -67,6 +62,7 @@ security_reader_role_assigned := false if {
 
 # Fallback to explicit boolean flag if user assignments are not available.
 security_reader_role_assigned := flag if {
-    not security_reader_assigned_users_available
+    users := security_reader_assigned_users_source
+    users == null
     flag := security_reader_role_flag
 }
