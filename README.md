@@ -3,7 +3,7 @@ This repository collects security metrics that can be used for continuous certif
 
 The repository is structured as follows.
 - api: this folder is still preliminary. The idea is to define the metric data format in a programmatic way, e.g., using a protobuf file
-- catalogs: the catalogs folder holds files for different certification catalogs, benchmarks, etc. These files encode the requirements of the catalogs and map them to metrics. This way, continuous certification tools that apply the metrics can map assess the degree of compliance of a given catalog later.
+- catalogs: the catalogs folder holds files for different certification catalogs, benchmarks, etc. These files encode the requirements of the catalogs and map them to metrics. This way, continuous certification tools that apply the metrics can map assess the degree of compliance of a given catalog later. Example files include `demo_catalog.json`, `cryptography_roles_catalog.json`, `threat_vulnerability_management_catalog.json`, `supply_chain_management_catalog.json`, and `identity_access_management_catalog.json`.
 - metrics: this folder holds the actual metrics. It is structured into domains first and each domain contains a number of metric folders. One of these metric folders in turn holds the following information.
   - metric.yml: This file describes the metric data, e.g., a description and its target value (see the structure explanation below)
   - metric.rego: This file encodes the metric data as a [Rego](https://www.openpolicyagent.org/docs/latest/policy-language/) file that can automatically be evaluated using the [OPA](https://www.openpolicyagent.org) engine.

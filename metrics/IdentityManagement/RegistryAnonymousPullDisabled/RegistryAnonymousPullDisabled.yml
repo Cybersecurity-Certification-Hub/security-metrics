@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: RegistryAnonymousPullDisabled
+description: This rule checks that a [ContainerRegistry] exposes the property [p1:anonymousPullDisabled], ensuring anonymous image pulls require authentication.
+category: IdentityManagement
+version: "1.0"
+comments: Container registries should require authenticated pulls to apply IAM policies; the ontology should surface an [AnonymousPullDisabled] (or equivalent) feature on [ContainerRegistry], e.g., `containerRegistry.anonymousPullDisabled`, so evidence collectors can report it.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
