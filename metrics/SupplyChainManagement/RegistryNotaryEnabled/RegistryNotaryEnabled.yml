@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: RegistryNotaryEnabled
+description: This rule checks whether a [ContainerRegistry] exposes the property [p1:contentTrustEnabled] indicating that Notary content trust is enforced for image pulls and pushes.
+category: SupplyChainManagement
+version: "1.0"
+comments: Container registries should enable content trust so signed images are required; the ontology still needs a [ContentTrust] security feature on [ContainerRegistry] (e.g., `contentTrustEnabled`) so evidence collectors can emit the flag to back this metric.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
