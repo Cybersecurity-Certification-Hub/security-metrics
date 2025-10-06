@@ -1,0 +1,36 @@
+[
+  {
+    "id": "IdentityAccessManagementCatalog",
+    "name": "Identity & Access Management",
+    "description": "Controls for managing identity-driven access to cloud resources, including policies for private registries.",
+    "metadata": {
+      "color": "#00897B"
+    },
+    "short_name": "IAM",
+    "assurance_levels": [
+      "baseline"
+    ],
+    "all_in_scope": true,
+    "categories": [
+      {
+        "name": "Identity and Access Management Policy and Procedures",
+        "description": "Maintain policies and procedures for identity and access management across managed assets.",
+        "controls": [
+          {
+            "id": "IAM-01",
+            "name": "Identity and Access Management Policy and Procedures",
+            "description": "Establish, document, approve, implement, and annually review IAM policies and procedures.",
+            "metrics": [
+              {
+                "id": "RegistryPublicAccessDisabled"
+              },
+              {
+                "id": "RegistryAnonymousPullDisabled"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
