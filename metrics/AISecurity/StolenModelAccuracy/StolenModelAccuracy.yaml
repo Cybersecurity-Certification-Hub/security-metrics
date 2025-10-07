@@ -7,4 +7,4 @@ comments: This metric assesses in which extent a model can be extracted and used
 # ====== Configuration ======
 p1: 
  operator: "<"
- targetValue: 33 
+ targetValue: 70 
