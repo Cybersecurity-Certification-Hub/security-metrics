@@ -8,7 +8,7 @@ body:
   - type: dropdown
     id: browsers
     attributes:
-      label: Which tool? 
+      label: Which tool?
       multiple: false
       options:
         - Discovery
