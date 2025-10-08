@@ -5,7 +5,11 @@ labels:
   - migration
   - emerald
 body:
-  - type: markdown
+  - type: dropdown
+    id: browsers
     attributes:
-      value: |
-        Migrate the above metric to this repository
+      label: Which project? 
+      multiple: true
+      options:
+        - EMERALD
+        - COBALT
