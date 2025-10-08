@@ -9,11 +9,12 @@ body:
     id: browsers
     attributes:
       label: Which tool? 
-      multiple: no
+      multiple: false
       options:
         - Discovery
         - Codyze
         - eknows
         - AMOE
         - Other
-      default: TBD
+        - TBD
+      default: 5
