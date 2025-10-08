@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: BlockCipher
+description: This rule assesses whether a [Resource] has all its [TransportEncryption] [p1:cipherSuites] configured so that each cipher suite’s sessionCipher is correctly set to the AES block cipher family.
+category: Cryptography
+version: "1.0"
+comments: Aligned with BSI TR-02102-2, which recommends AES-based suites."
+
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "regex.match"
+    targetValue: "^AES([_-]|$)"
