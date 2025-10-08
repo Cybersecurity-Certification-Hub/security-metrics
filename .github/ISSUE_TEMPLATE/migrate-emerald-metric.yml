@@ -3,7 +3,7 @@ description: Create issue for migrating a metric from EMERALD to this repository
 title: 'Migrate EMERALD metric ""'
 labels:
   - migration
-  - emerald
+  - EMERALD
 body:
   - type: dropdown
     id: browsers
