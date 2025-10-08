@@ -1,0 +1,11 @@
+name: Migrate EMERALD Metric
+title: 'Migrate EMERALD metric "${{ metric }}"'
+labels:
+  - migration
+body:
+  - type: input
+    id: metric
+    attributes:
+      label: Metric name
+      description: Enter the EMERALD metric to migrate
+      required: true
