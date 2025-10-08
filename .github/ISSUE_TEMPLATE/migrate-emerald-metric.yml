@@ -1,12 +1,6 @@
 name: Migrate EMERALD Metric
-description: Migrate metric "${{ metric }}" from EMERALD to the cluster
-title: 'Migrate EMERALD metric "${{ metric }}"'
+description: Create issue for migrating a metric from EMERALD to this repository
+title: 'Migrate EMERALD metric ""'
 labels:
   - migration
   - emerald
-body:
-  - type: input
-    id: metric
-    attributes:
-      label: Metric name
-      description: Enter the EMERALD metric to migrate
