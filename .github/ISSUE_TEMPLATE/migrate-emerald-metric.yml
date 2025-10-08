@@ -8,4 +8,3 @@ body:
     attributes:
       label: Metric name
       description: Enter the EMERALD metric to migrate
-      required: true
