@@ -4,3 +4,8 @@ title: 'Migrate EMERALD metric ""'
 labels:
   - migration
   - emerald
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Migrate the above metric to this repository
