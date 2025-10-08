@@ -1,7 +1,9 @@
 name: Migrate EMERALD Metric
+description: Migrate metric "${{ metric }}" from EMERALD to the cluster
 title: 'Migrate EMERALD metric "${{ metric }}"'
 labels:
   - migration
+  - emerald
 body:
   - type: input
     id: metric
