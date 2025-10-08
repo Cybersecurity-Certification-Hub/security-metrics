@@ -8,8 +8,11 @@ body:
   - type: dropdown
     id: browsers
     attributes:
-      label: Which project? 
-      multiple: true
+      label: Which tool? 
+      multiple: no
       options:
-        - EMERALD
-        - COBALT
+        - Discovery
+        - Codyze
+        - eknows
+        - AMOE
+        - Other
