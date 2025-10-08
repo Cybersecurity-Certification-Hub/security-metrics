@@ -1,10 +1,20 @@
 name: Migrate EMERALD Metric
-title: 'Migrate EMERALD metric "${{ metric }}"'
+description: Create issue for migrating a metric from EMERALD to this repository
+title: 'Migrate EMERALD metric ""'
 labels:
   - migration
+  - emerald
 body:
-  - type: input
-    id: metric
+  - type: dropdown
+    id: browsers
     attributes:
-      label: Metric name
-      description: Enter the EMERALD metric to migrate
+      label: Which tool? 
+      multiple: false
+      options:
+        - Discovery
+        - Codyze
+        - eknows
+        - AMOE
+        - Other
+        - TBD
+      default: 5
