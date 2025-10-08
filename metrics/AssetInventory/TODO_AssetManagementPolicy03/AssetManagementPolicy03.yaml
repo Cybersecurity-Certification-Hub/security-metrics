@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "bd79e91e-e0e2-41b0-be97-9f60ea04c613"
+name: "AssetManagementPolicy03"
+description: "Which asset information is kept in the inventory? | Selector: PolicyDocument (Resource Type) and/or TBD (security feature)"
+implementationGuidelines:
+  AMOE:
+    question: ""
+    keywords: "[services, IP address, databases, inventory, assets, VM, application, asset management]"
+category: "AssetInventory"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[services, IP addresses, databases, VM, application, service plan instances, database instances]"
