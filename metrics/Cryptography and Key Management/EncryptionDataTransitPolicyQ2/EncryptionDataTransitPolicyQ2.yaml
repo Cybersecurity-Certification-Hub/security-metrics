@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "ff622c09-ec4f-4618-9041-c61833ac04cc"
+name: "EncryptionDataTransitPolicyQ2"
+description: "This metric assesses the unsupported encryption mechanisms for data in transit. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Which encryption mechanisms are not explicitly supported for data in transit?"
+    keywords: "[encryption, cryptography, data in transit,not supported, TLS - HPKP - HTTP Public Key Pinning]"
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[TLS - HPKP, HPKP, HTTP Public Key Pinning]"

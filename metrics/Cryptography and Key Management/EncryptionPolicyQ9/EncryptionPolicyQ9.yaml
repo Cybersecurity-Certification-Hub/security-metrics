@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "3eb95c39-cb8d-49e6-af70-ffc406a47a9a"
+name: "EncryptionPolicyQ9"
+description: "This metric assesses the required hash type. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "What hash type is required?"
+    keywords: "[encryption mechanisms, hash]"
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[SHA256,SHA-384, SHA-512,SHA-512/256]"

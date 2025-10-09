@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "ada880de-be30-449b-b64e-9512d035c6fd"
+name: "ComplianceResponseTimeQ1"
+description: "This metric assesses the maximum incident response time allowed. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "What is the maximum allowed response time for incidents?"
+    keywords: "[Response time, incident, maximum limit]"
+category: "Procurement Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "12"

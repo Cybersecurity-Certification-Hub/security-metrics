@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "213fd404-ac08-47f1-8724-8c53c82d7f9c"
+name: "TrainingCheckFrequencyQ1"
+description: "This metric assesses the frequency of monitoring training completion. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How often is the security training completion monitoring checked?"
+    keywords: "[completion frequency, security training, verification]"
+category: "Human Reseources"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "12"

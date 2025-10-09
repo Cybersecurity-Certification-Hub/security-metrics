@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "f1f0d3df-200d-4206-be04-e2c48d056dec"
+name: "ComplianceRecoveryTimeQ2"
+description: "This metric assesses the acceptable recovery time limit. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "What is the acceptable recovery time limit?"
+    keywords: "[Recovery time, acceptable limit]"
+category: "Procurement Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "12"

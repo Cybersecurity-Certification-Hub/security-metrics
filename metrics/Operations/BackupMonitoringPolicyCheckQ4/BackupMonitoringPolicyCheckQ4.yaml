@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "cc77962e-d2fb-401a-8468-e8333babf765"
+name: "BackupMonitoringPolicyCheckQ4"
+description: "This metric assesses the frequency of backup transmissions. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How often is the transmission of backups done?"
+    keywords: "[backup, data, transmission]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "1"

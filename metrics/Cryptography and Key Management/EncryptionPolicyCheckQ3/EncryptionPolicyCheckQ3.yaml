@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "cd8e50ab-074a-41d6-a93d-b9ce882c3d44"
+name: "EncryptionPolicyCheckQ3"
+description: "This metric assesses the encryption type in use. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "What encryption type is used?"
+    keywords: "[encryptioncryptography, data at rest protection]"
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[TLS, SSL]"

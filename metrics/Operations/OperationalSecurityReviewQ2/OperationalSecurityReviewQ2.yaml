@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "8af5bf55-ed8e-47f8-b323-4ff2c18197e8"
+name: "OperationalSecurityReviewQ2"
+description: "This metric assesses how often safeguard effectiveness is reviewed. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How often is the effectiveness of safeguards reviewed?"
+    keywords: "[safeguards effectiveness, review frequency]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "12"

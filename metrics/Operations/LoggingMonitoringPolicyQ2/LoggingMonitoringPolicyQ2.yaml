@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "26853fc8-0cd6-4f2e-b7a7-14d4addf1674"
+name: "LoggingMonitoringPolicyQ2"
+description: "This metric assesses the type of facility used for logging security events. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "In which type of facility are security event logged?"
+    keywords: "[logging, monitoring, policy, monitoring and logging]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[central logging facility, descentralized logging facility]"

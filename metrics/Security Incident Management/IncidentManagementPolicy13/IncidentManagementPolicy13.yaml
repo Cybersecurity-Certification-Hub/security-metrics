@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "57778126-a7ae-4021-9c61-ac1ec5c50c22"
+name: "IncidentManagementPolicy13"
+description: "This metric assesses the entity responsible for coordinating forensic investigations. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Which entity coordinates the forensic investigation?"
+    keywords: "[forensic, incident management]"
+category: "Security Incident Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[CERT]"

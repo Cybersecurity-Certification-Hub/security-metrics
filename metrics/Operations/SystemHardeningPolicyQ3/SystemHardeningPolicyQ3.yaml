@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "380307d4-cb39-4538-ba4b-d757fbbf5d97"
+name: "SystemHardeningPolicyQ3"
+description: "This metric assesses how often penetration tests are performed. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "What is the penetration test frequency?"
+    keywords: "[Annual, monthly, quarterly, hardening verification, server hardening, server and component hardening]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[yearly, annual, periodic, monthly, quarterly]"

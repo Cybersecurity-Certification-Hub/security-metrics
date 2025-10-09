@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "9ff75498-e0b8-4ffc-b69d-bdaac9233a9d"
+name: "AssetInventoryStatusManagementQ4"
+description: "This metric assesses the current status of assets. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "What status do the assets have?"
+    keywords: "[asset status, coverage, completeness, inventory]"
+category: "Asset Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "[active, inactive, under repair, disposed, donated, lost]"

@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "8815a8c7-0493-4d0a-a0fa-d9611165cce7"
+name: "IncidentManagementPolicy5"
+description: "This metric assesses the responsible contact point for reporting issues. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "To whom must staff report potential security and privacy issues?"
+    keywords: "[Incident Management, Incident Management general information]"
+category: "Security Incident Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[CERT, single point of contact]"

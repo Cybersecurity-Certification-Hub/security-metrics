@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "e70bb32d-5313-44df-9668-df5669e764f6"
+name: "NetworkSecurityPolicy01"
+description: "This metric assesses the network-level attacks addressed by implemented mechanisms. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Which network-level attacks are mitigated by the implemented mechanisms?"
+    keywords: "[network security, DoS, DDoS, proxy, IDS, Denial of service protection]"
+category: "Communication Security"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[dos, denial of service]"

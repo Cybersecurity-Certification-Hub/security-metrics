@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "c9711b2f-65d4-442d-9798-a04912701f4a"
+name: "EncryptionKeyPolicy01"
+description: "This metric assesses the encryption key parameters covered by the management policy. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Which encryption key parameters are in the scope of the management policy?"
+    keywords: "[encryption, key management, key lenght, standards]"
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[key lengths, cipher suites, CRL checks, none]"

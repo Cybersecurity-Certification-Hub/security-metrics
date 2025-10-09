@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "3272d68d-3a28-4d65-95c7-55f12292a2f0"
+name: "MonitoringProcessFrequencyQ2"
+description: "This metric assesses the recommended frequency of process verification. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How frequently should the processes be verified?"
+    keywords: "[data collection, consolidation, storage, tools]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "12"

@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "17863422-ebdd-42bd-b705-6d1bcdbb0561"
+name: "FlaggedEventsQ2"
+description: "This metric assesses the review timeframe for flagged events post-reporting. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How quickly must flagged events be reviewed after reporting?"
+    keywords: "[flagged events, review timeframe, detection]"
+category: "Identity & Access Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "12"

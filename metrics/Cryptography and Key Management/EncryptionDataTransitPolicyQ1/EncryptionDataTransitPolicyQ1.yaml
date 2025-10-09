@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "5ad85085-5fd1-494c-8eb6-b5420a6c70ce"
+name: "EncryptionDataTransitPolicyQ1"
+description: "This metric assesses the endpoint protection mechanism for data in transit. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Which endpoint protection mechanism is defined for data in transit?"
+    keywords: "[encryption, cryptography, data in transit, protection, PKI, payload, SSL, TLS, transport layer encryption, encrypted endpoints]"
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[encrypted endpoints, none]"

@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "4657f70f-3a89-459e-aa4d-8a942e7daf12"
+name: "DataRestoreTestFrequencyQ1"
+description: "This metric assesses the testing frequency of the data restore process. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How frequently is the data restore process tested?"
+    keywords: "[data, restore]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "100"

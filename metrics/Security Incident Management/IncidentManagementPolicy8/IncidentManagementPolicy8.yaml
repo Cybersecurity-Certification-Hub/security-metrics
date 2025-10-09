@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "251518a2-5fce-480f-9307-7f9fb9d92d7a"
+name: "IncidentManagementPolicy8"
+description: "This metric assesses the required testing frequency of the Incident Management plan. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How often must the Incident Management plan be tested?"
+    keywords: "[Incident Management, CERT]"
+category: "Security Incident Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "1"

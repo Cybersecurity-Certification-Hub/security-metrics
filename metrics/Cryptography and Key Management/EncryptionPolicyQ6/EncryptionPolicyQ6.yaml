@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "1536b2c0-08d9-4010-9853-9e3d20783bda"
+name: "EncryptionPolicyQ6"
+description: "This metric assesses the encryption requirements for mobile and portable devices. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How must mobile and portable devices be encrypted? "
+    keywords: "[encryption mechanisms, mobile devices, portable devices]"
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[password, passcode, Touch-ID, Face-ID]"

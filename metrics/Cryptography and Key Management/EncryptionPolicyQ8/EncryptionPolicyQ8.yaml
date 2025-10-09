@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "18e8e2dd-f7d9-4329-b990-229757dbcab7"
+name: "EncryptionPolicyQ8"
+description: "This metric assesses the required minimum certificate key length. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "What minimum certificate key length is required?"
+    keywords: "[encryption mechanisms , certificate]"
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: "2048"

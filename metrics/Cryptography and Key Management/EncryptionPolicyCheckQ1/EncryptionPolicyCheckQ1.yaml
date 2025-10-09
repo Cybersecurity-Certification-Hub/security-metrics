@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "cc40c536-b2c9-4dc3-b503-be92586166a6"
+name: "EncryptionPolicyCheckQ1"
+description: "This metric assesses the type of encryption used for passwords or keys. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Which type of encryption is used for passwords or keys?"
+    keywords: "[password, cryptography, data at rest protection]"
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[MD5, SHA256]"

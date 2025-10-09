@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "50c0d4d5-1780-473d-b7fd-dcd0a159fe60"
+name: "AssetInventoryDigitalQ6"
+description: "This metric assesses the frequency of digital asset security audits. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How frequently are security audits done for digital assets?"
+    keywords: "[data backup, firewalls, frequency, compliance]"
+category: "Asset Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "12"

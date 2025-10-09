@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "76a94461-c17e-4820-89ec-8c1cd470ddba"
+name: "EventMonitoringPolicyCheckQ1"
+description: "This metric assesses the functional events monitored by the SIEM. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Which functional events are monitored by the SIEM?"
+    keywords: "[logging, monitoring, metrics, events, availability, performance]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[availability, performance, all, none]"

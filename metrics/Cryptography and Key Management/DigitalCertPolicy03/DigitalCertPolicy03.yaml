@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "42a5a738-3ce4-4b50-a32c-69758682eef8"
+name: "DigitalCertPolicy03"
+description: "This metric assesses the validity period of wildcard digital certificates. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "What is the validity period of wildcard digital certificates?"
+    keywords: "[digital certificates, validity period, duration, wildcard, user facing certificates]"
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "3"

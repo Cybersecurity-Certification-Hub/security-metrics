@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "7ac64015-c0a0-4b78-af84-47c05e6c25f5"
+name: "SystemBackUpStorage01"
+description: "This metric assesses the storage location for backups. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Where are backups stored?"
+    keywords: "[backup, storage]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "second SSD disk"

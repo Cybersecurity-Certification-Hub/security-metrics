@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "f97a2fd9-0790-401b-8f05-21f9243c811e"
+name: "OperationalSecurityAssessmentQ1"
+description: "This metric assesses the implementation timeframe for documented safeguards. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How quickly must safeguards be implemented after they are documented?"
+    keywords: "[safeguards effectiveness, assessment frequency]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "12"

@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "6f92da23-50c6-4b1e-8fed-7417fd86f761"
+name: "HardeningReviewFrequencyQ2"
+description: "This metric assesses the frequency of hardening compliance reviews. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How often are system components reviewed for compliance with hardening requirements?"
+    keywords: "[review frequency, system components, compliance, hardening requirements]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "12"

@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "e2e97250-5435-4218-a757-8a050356a82c"
+name: "LoggingMonitoringDerivedPolicyQ1"
+description: "This metric assesses whether derived data security events are stored. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Are security events stored for derived data?"
+    keywords: "[logging, monitoring, policy, derived data, customer data, PII, monitoring and logging]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[yes, no, does not]"

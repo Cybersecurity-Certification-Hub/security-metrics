@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "df639bbe-64df-406a-87ac-5935fb5a922b"
+name: "ComplianceManagementQ2"
+description: "This metric assesses the frequency of checks for compliance with requirements. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How often is it checked through procedures that all requirements are met?"
+    keywords: "[compliance checks, frequency, requirements verification]"
+category: "Compliance"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "12"

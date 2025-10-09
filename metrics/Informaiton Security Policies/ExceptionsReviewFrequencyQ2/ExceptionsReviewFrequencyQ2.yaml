@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "f9dff7ab-d6b7-40e1-abf1-73d14ee70547"
+name: "ExceptionsReviewFrequencyQ2"
+description: "This metric assesses the review frequency of exception lists for validity. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How frequently is the list of exceptions reviewed to ensure they are still valid?"
+    keywords: "[exceptions list, review frequency, validity]"
+category: "Informaiton Security Policies"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "12"

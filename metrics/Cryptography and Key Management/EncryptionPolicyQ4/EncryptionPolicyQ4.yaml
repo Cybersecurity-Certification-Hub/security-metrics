@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "5e26a8d5-8d0a-48fe-9eaf-88b5b2501897"
+name: "EncryptionPolicyQ4"
+description: "This metric assesses the required minimum AES key length. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "What minimum key length must the Advanced Encryption Algorithm (AES) standard have? "
+    keywords: "[AES, encryption mechanisms,mobile devices, portable devices]"
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "256-bit"

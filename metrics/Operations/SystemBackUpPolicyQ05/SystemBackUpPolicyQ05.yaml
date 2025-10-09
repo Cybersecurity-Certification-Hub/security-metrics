@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "094bc5ff-8f94-495b-ae95-59ded51e1af5"
+name: "SystemBackUpPolicyQ05"
+description: "This metric assesses the backup frequency. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How often are backups made?"
+    keywords: "[backup, schedule]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "1"

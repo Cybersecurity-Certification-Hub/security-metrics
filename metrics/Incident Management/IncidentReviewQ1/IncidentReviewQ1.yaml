@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "d39aa85f-3594-4661-835b-5c61ec774e79"
+name: "IncidentReviewQ1"
+description: "This metric assesses the review frequency of incident handling and responses. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How often is the handling and responses to information security incidents reviewed?"
+    keywords: "[incident review, handling frequency, security incidents, response evaluation]"
+category: "Incident Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "12"

@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "874096f5-6b13-4e3b-bcac-33c22789d9ab"
+name: "EncryptionPolicyQ11"
+description: "This metric assesses which web services must encrypt data in transit. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "What type of web services must encrypt data in transit? "
+    keywords: "[encryption mechanisms, web services , data in transit]"
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[storage of sensitive or confidential information,transaction of sensitive or confidential information,user logons]"

@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "0528790f-b7c6-4998-a444-ee2d04c27773"
+name: "BackupPolicyQ3"
+description: "This metric assesses the availability of backup services for cloud customers. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Are there backup services for cloud customers?"
+    keywords: "[backup, customer, consumer, backup and restore process]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "in"
+    targetValue: "[no, yes]"

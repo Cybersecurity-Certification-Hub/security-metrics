@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "959aecc4-ca9d-4cfa-b248-fa72aa0bc55c"
+name: "DigitalCertPolicy01"
+description: "This metric assesses the supported verifiable certificates for Certification Authorities. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Which verifiable certificated are supported for Certificaiton Authorities?"
+    keywords: "[digital certificates, PKI, CA, x509, certificate authorities, publicly verifiable]"
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[publicly verifiable certificates]"

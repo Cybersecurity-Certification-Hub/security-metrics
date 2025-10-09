@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "0637a86e-1e5a-4498-bb5a-3b6c6d042d36"
+name: "MonitoringProcessTimeframeQ4"
+description: "This metric assesses the resolution timeframe for detected issues. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "What is the timeframe for resolving detected issues?"
+    keywords: "[issue resolution, timeframe, response, detected issues]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "12"

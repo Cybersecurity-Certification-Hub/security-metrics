@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "b8a2e8dc-1478-4b50-8619-e41bc8f35f81"
+name: "SystemBackUpStorage03"
+description: "This metric assesses how storage processes are monitored. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How is the storage process monitored?"
+    keywords: "[backup, storage]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "manually by the admin"

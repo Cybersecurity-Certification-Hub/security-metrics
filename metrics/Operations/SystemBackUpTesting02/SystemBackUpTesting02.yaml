@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "c636de5e-534b-4a33-9a14-fc3db2fa948e"
+name: "SystemBackUpTesting02"
+description: "This metric assesses how restore mistakes are handled. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How are restore mistakes dealt with?"
+    keywords: "[backup, monitoring]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "by the administrator"

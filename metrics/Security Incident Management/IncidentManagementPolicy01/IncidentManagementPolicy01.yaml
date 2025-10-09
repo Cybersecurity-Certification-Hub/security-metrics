@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "432ac53e-a72f-47a4-8e3a-79935f901d0f"
+name: "IncidentManagementPolicy01"
+description: "This metric assesses the responsible team for handling security incidents. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Which team is in charge of handling security incidents?"
+    keywords: "[Incident Management, CERT]"
+category: "Security Incident Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[CERT]"

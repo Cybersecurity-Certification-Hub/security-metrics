@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "77205811-518d-4f8d-afc0-a50befde75bd"
+name: "PatchManagementPolicyCheckQ2"
+description: "This metric assesses the prioritization criteria for unpatched system vulnerabilities. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Which vulnerabilities are prioritized for systems that cannot be patched?"
+    keywords: "[none, critical, all, "no-patch"-approach]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[critical, none, all, medium, severe]"

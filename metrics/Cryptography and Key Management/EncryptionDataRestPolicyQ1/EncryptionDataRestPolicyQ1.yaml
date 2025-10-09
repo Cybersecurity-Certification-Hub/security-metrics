@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "b960a7bc-e6b9-4ee1-99b0-45ecc5799523"
+name: "EncryptionDataRestPolicyQ1"
+description: "This metric assesses the defined up-front data encryption mechanism. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Which up-front data encryption mechamism is defined?"
+    keywords: "[encryption, cryptography, data at rest, protection, PKI, data at rest protection]"
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[PKI, public key infrastructure, none]"

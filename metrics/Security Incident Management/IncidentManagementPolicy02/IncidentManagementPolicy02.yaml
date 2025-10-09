@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "7f852bc8-ae5a-444f-9f49-9fbad901a8da"
+name: "IncidentManagementPolicy02"
+description: "This metric assesses the approach for reporting incidents to the CSP. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Which approach is used for reporting incidents to the CSP?"
+    keywords: "[Single Point of Contact, Single Point of Information (SPoI)]"
+category: "Security Incident Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[Single Point of Contact, Single Point of Information]"

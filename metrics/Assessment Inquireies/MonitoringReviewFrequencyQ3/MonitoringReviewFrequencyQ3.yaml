@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "d0f6a13b-e742-42ff-bf69-9ee077be3b42"
+name: "MonitoringReviewFrequencyQ3"
+description: "This metric assesses the frequency of monitoring procedure reviews for compliance. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "How often are monitoring procedures reviewed to ensure compliance with legal and internal policies?"
+    keywords: "[monitoring review, effectiveness, compliance, frequency]"
+category: "Assessment Inquireies"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "12"

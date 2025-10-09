@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "539cb290-e895-471e-b12c-02784d2a30de"
+name: "PatchManagementPolicyCheckQ1"
+description: "This metric assesses the subsystems included in the patch management process. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Which subsystems are covered by the patch management process?"
+    keywords: "[partial, full, every, none, patch management]"
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[every, none, partial]"

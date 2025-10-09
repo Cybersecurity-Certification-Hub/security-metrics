@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "a41484e2-7a02-4d32-a66f-08d1df84875d"
+name: "CompliancePolicy02"
+description: "This metric assesses the mechanisms for periodic compliance monitoring. | Selector: PolicyDocument (Resource Type)"
+implementationGuidelines:
+  AMOE:
+    question: "Which mechanisms are implemented to periodically monitor compliance requirements?"
+    keywords: "[audits, reviews, compliance]"
+category: "Compliance"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[audits]"
