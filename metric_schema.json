@@ -58,7 +58,7 @@
           },
           "targetValue": {
             "type": [
-              "integer",
+              "number",
               "string",
               "boolean",
               "array"
