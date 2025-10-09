@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "cd3036df-a2e9-4c55-9a73-766d4874b343"
+name: "MT-IAM-03.7H-1"
+description: "Multiple failed authentication attempts - Check whether the number of failed authentication attempts (per Cloud Asset) exceeds a defined threshold | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  AppTelemetry:
+    details: ["Number of failed authentication attempts (per Cloud Asset)"]
+category: "Identity & Access Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "0"

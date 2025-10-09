@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "4459a94d-bda0-4a84-a47d-0abdf208c14c"
+name: "MT-OPS-18.6H-1"
+description: "CSCs initial approval for patches and updates - Check whether updates/patches were initially approved before rollout | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  FSC:
+    details: ["- Information on to be applied patches/updates", "- Information on approval status from ticket"]
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "true"

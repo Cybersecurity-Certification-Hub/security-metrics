@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "edf9018c-6637-4acd-bc3a-c75bef8e3219"
+name: "MT-PM-04.8H-1"
+description: "Percentage of system components configured according to predefined standards - Check whether all applicable system components are configured to predefined standards | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  TBD:
+    details: ["- Overview of applicable system components and their configuration settings", "- Settings-Template (e.g., Infrastructure as a Code)"]
+category: "Procurement Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: "1"

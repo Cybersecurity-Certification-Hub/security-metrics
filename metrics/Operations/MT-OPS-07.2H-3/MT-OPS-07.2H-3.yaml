@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "1287c5b4-0439-428f-aa6e-eb56ff9b0030"
+name: "MT-OPS-07.2H-3"
+description: "Number of backup errors - Check the number of backup errors (per Region, Cloud Asset, etc.) | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  TBD:
+    details: ["- Number of backup error messages (per Region, Cloud Asset)"]
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "0"

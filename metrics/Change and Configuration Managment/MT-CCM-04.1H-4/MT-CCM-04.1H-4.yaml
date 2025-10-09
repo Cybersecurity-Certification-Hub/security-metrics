@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "c111caa3-0ca0-4d20-8229-dca2a6713ace"
+name: "MT-CCM-04.1H-4"
+description: "CodeSignoff - This metric is used to assess whether additions to the source code of a cloud service contains a signoff in the Git commit message. | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  TBD:
+    details: ["Ticket Information"]
+category: "Change and Configuration Managment"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "true"

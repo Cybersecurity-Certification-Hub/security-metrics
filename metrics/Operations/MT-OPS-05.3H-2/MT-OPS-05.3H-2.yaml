@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "bd0d254f-475f-4e66-9362-2b4db841039c"
+name: "MT-OPS-05.3H-2"
+description: "Correct configuration of malware protection mechanisms rate - Check that all necessary cloud assets have malware protection configuration according to policies | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  FSC:
+    details: ["- Overview of Cloud Assets that require malware protection (CMDB)", "- Malware protection configuration per asset", "- Malware configuration requirements from malware policy"]
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "1"

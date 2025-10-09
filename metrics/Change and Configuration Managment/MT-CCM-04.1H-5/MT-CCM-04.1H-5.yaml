@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "f54bda05-54e5-40ff-902a-ecd44e94b0e9"
+name: "MT-CCM-04.1H-5"
+description: "SignedCommits - This metric is used to assess whether additions to the source code of a cloud service contains a valid signature. | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  TBD:
+    details: ["Ticket Information"]
+category: "Change and Configuration Managment"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "true"

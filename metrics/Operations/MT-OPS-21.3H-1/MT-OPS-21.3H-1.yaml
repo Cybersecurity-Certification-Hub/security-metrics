@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "6971ed81-912b-4365-a0ee-713122b2fb23"
+name: "MT-OPS-21.3H-1"
+description: "Number of Deviations from established hardening baseline - Check whether system components comply with hardening requirements | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  TBD:
+    details: ["- Hardening Policy", "- Configuration per Cloud Asset"]
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "0"

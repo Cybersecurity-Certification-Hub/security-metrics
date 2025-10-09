@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "edf624e2-3701-46af-9901-af6c11b865f9"
+name: "MT-OPS-18.6H-4"
+description: "AutomaticUpdatesEnabled - This metric is used to assess if automatic updates are enabled for the cloud service/asset | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  TBD:
+    details: ["Cloud service/asset and respective update configuration"]
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "true"

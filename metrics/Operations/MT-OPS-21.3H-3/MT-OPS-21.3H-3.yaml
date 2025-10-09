@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "36956abd-fd21-43bf-ac76-1fafd7d28476"
+name: "MT-OPS-21.3H-3"
+description: "Frequency of hardening compliance checks - Check whether hardening/compliance checks are conducted in a defined frequency | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  TBD:
+    details: ["- Automatic Compliance Check Frequency (per Cloud Asset)"]
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "0"

@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "0b2e874a-bc20-4de7-8099-ee1631d8d6c0"
+name: "MT-ISP-03.10H-2"
+description: "Number of exceptions to (information security) policies and procedures that are about to expire - Check whether approved exceptions are about to expire in order to trigger the review and approval process of the defined exceptions | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  FSC:
+    details: ["- Date of initial approval/ Date of last review ", "- time limitation of the exceptions"]
+category: "Informaiton Security Policies"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "0"

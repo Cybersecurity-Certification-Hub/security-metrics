@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "2b4c9e61-4874-4ebb-aad4-2ca01eaa0c64"
+name: "MT-OPS-21.3H-4"
+description: "Remediation Time for Non-compliance cases - Check time needed to remediate non-compliant configurations after detection | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  TBD:
+    details: ["- Information on found deviation from system hardening requirements", "- information on time for remediation (e.g., ticket)"]
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "0"

@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "c1fb6d60-885d-4656-b71b-6a55df44dd91"
+name: "MT-HR-04.3H-3"
+description: "Review of security awareness training contents - Check whether training content has been updated at least annually | Selector: humanResources.training.securityTraining (Resource Type)"
+implementationGuidelines:
+  FSC:
+    details: ["- Security awareness training content", "- (Date of) changes to training contents / evidence of review of training content"]
+category: "Human Reseources"
+version: "1.0"
+comments: "consider updating metric to measure the date"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "WAHR"

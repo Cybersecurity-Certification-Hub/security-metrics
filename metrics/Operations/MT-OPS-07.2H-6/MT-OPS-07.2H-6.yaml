@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "76561973-2d64-410d-8368-eb18859f0d33"
+name: "MT-OPS-07.2H-6"
+description: "BackupRetentionSet - This metric is used to assess the configured backup retention (days) on a cloud service/asset | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  TBD:
+    details: ["- Cloud Service/Asset", "- Backup-Configuration (per Cloud Service/Asset)"]
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "35"

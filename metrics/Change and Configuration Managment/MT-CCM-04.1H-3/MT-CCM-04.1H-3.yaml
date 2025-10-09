@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "6ba0c7e7-12b9-4b24-b710-dd8284572d08"
+name: "MT-CCM-04.1H-3"
+description: "Change approval by CSC - Check whether there was a change approval by the CSC if applicable | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  FSC:
+    details: ["- Information from Change ticket", "- List of names and roles of authorised change approvers from the CSC"]
+category: "Change and Configuration Managment"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "WAHR"

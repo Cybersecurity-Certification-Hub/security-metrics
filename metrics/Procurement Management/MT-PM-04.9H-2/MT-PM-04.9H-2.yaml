@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "b3dac1ca-7618-4380-b928-1a7ddb6c4ae6"
+name: "MT-PM-04.9H-2"
+description: "Timely resolution of identified third party violations - Check whether identified violations/discrepancies from third parties are resolved in a timely manner | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  FSC:
+    details: ["- Date and time of identification of the third party violation ", "- Information on (internal) resolution time"]
+category: "Procurement Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "0"

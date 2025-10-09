@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "ecdc44a0-5cb3-4484-93ca-4aac191caafe"
+name: "MT-OPS-18.6H-2"
+description: "Average Patch/Update Rollout Time - Check average time from available patches/updates to approval/implementation | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  FSC:
+    details: ["- Information on patch/update availability", "- Information on rollout-time after CSC approval"]
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "0"

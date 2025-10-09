@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "3b22c195-8a9e-4fbd-bf80-0348429376ea"
+name: "MT-OPS-05.3H-4"
+description: "Number of detected irregularities - Check Log Files of regular scans for irregularities and track them per affected Cloud Asset | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  AppTelemetry:
+    details: ["- Malware protection scanning results", "- Affected Cloud Asset "]
+category: "Operations"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: "0"

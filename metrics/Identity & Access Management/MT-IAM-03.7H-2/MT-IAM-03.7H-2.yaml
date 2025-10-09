@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "f5397508-4fd4-478f-be0c-3789ba333de1"
+name: "MT-IAM-03.7H-2"
+description: "Authentication attempts from suspicious geolocations - Check whether there are any authentication attempts from suspicious geolocations | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  TBD:
+    details: ["- Geolocation of authentication attempts", "- Restricted/suspicious geolocations", ""]
+category: "Identity & Access Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "0"

@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "16520a21-50ef-4ed2-ba8f-df648269b72f"
+name: "MT-CO-03.4H-3"
+description: "Time to comply with audit recommendations - Check whether audit recommendations were complied with in a defined timeframe | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  FSC:
+    details: ["- Information on (internal) audit findings/recommendations", "- Information from e.g., ticket for audit finding/recommendation"]
+category: "Compliance"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "0"

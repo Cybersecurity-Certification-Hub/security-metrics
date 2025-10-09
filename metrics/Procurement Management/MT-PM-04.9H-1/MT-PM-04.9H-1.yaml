@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "88f207fe-6145-42af-985d-8f5e5014594f"
+name: "MT-PM-04.9H-1"
+description: "Supplier Performance Score - Check and monitor overall performance of suppliers according to defined metrics | Selector: TBD (Resource Type)"
+implementationGuidelines:
+  FSC:
+    details: ["- List of applicable suppliers", "- Defined metric (e.g., number of exceptions, risks etc. per supplier)"]
+category: "Procurement Management"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "TBD"
+    targetValue: "1"
