@@ -1,0 +1,4 @@
+{
+    "operator": "regex.match",
+    "target_value": "(?:^|[_-])(GCM|CCM|CBC)$"
+}
