@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: UniversalGateSetEnabled
+description: This rule assesses whether a [QPU] has [UniversalGateSetEnabled] [p1:enabled] correctly configured.
+category: QuantumSecurity
+version: "1.0" 
+comments: The physical operations shall include a finite set of gates capable of approximating any unitary operation on qubits. This is typically achieved through combinations of one-qubit gates and a two-qubit entangling gate, such as CNOT, enabling the execution of a broad range of quantum algorithms.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True
