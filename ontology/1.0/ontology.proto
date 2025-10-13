@@ -2108,6 +2108,32 @@ message RemoteAttestation {
 	bool status = 9341;
 }
 
+message SecurityProfile {
+	option (resource_type_names) = "SecurityProfile";
+	option (resource_type_names) = "SecurityFeature";
+
+	UefiSettings uefi_settings = 19301;
+	EncryptionAtHost encryption_at_host = 19302;
+}
+
+message UefiSettings {
+	option (resource_type_names) = "UefiSettings";
+	option (resource_type_names) = "SecurityFeature";
+
+	bool secure_boot_enabled = 19311;
+	bool v_tpm_enabled = 19312;
+}
+
+message EncryptionAtHost {
+	option (resource_type_names) = "EncryptionAtHost";
+	option (resource_type_names) = "SecurityFeature";
+
+	bool enabled = 19321;
+	bool cache_encryption_enabled = 19322;
+	bool temp_disk_encryption_enabled = 19323;
+	bool data_in_transit_encrypted_vm_storage_enabled = 19324;
+}
+
 // RemoteDataLocation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message RemoteDataLocation {
 	option (resource_type_names) = "RemoteDataLocation";
@@ -2601,6 +2627,7 @@ message VirtualMachine {
 	OSLogging os_logging = 8084;
 	repeated Redundancy redundancies  = 14823;
 	RemoteAttestation remote_attestation = 17180;
+	SecurityProfile security_profile = 19331;
 	optional string parent_id = 10949;
 	ResourceLogging resource_logging = 15452;
 	UsageStatistics usage_statistics = 14541;
