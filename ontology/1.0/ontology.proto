@@ -392,6 +392,7 @@ message Infrastructure {
 		KeyVault key_vault = 18627;
 		NetworkInterface network_interface = 9859;
 		NetworkSecurityGroup network_security_group = 12647;
+		PublicIpAddress public_ip_address = 19362;
 		FunctionService function_service = 4929;
 		GenericNetworkService generic_network_service = 1382;
 		LoadBalancer load_balancer = 4201;
@@ -643,6 +644,7 @@ message DDoSProtection {
 	option (resource_type_names) = "Availability";
 	option (resource_type_names) = "SecurityFeature";
 
+	bool enabled = 19340;
 }
 
 // Data is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1386,6 +1388,7 @@ message L3Firewall {
 	bool enabled = 9476;
 	bool inbound = 1000;
 	string restricted_ports = 7341;
+	bool intrusion_detection_enabled = 19341;
 }
 
 // Library is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1801,6 +1804,7 @@ message Networking {
 	oneof type {
 		NetworkInterface network_interface = 9859;
 		NetworkSecurityGroup network_security_group = 12647;
+		PublicIpAddress public_ip_address = 19362;
 		FunctionService function_service = 4929;
 		GenericNetworkService generic_network_service = 1382;
 		LoadBalancer load_balancer = 4201;
@@ -2146,6 +2150,7 @@ message Resource {
 		KeyVault key_vault = 18627;
 		NetworkInterface network_interface = 9859;
 		NetworkSecurityGroup network_security_group = 12647;
+		PublicIpAddress public_ip_address = 19362;
 		FunctionService function_service = 4929;
 		GenericNetworkService generic_network_service = 1382;
 		LoadBalancer load_balancer = 4201;
@@ -2601,9 +2606,31 @@ message VirtualMachine {
 	OSLogging os_logging = 8084;
 	repeated Redundancy redundancies  = 14823;
 	RemoteAttestation remote_attestation = 17180;
+	SecurityProfile security_profile = 19331;
 	optional string parent_id = 10949;
 	ResourceLogging resource_logging = 15452;
 	UsageStatistics usage_statistics = 14541;
+}
+
+// PublicIpAddress is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message PublicIpAddress {
+	option (resource_type_names) = "PublicIpAddress";
+	option (resource_type_names) = "Networking";
+	option (resource_type_names) = "Infrastructure";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 19363;
+	string description = 19364;
+	string id = 19365 [ (buf.validate.field).required = true ];
+	bool internet_accessible_endpoint = 19366;
+	map<string, string> labels = 19367;
+	string name = 19368 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 19369;
+	GeoLocation geo_location = 19370;
+	DDoSProtection d_do_s_protection = 19371;
+	optional string parent_id = 19372;
+	UsageStatistics usage_statistics = 19373;
 }
 
 // VirtualNetwork is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
