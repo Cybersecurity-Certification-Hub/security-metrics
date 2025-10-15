@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: PublicIpDdosProtection
+description: This rule assesses whether a [PublicIpAddress] has [DDoSProtection][p1:enabled] configured correctly.
+category: NetworkSecurity
+version: "1.0"
+comments: Public IP addresses should be associated with provider DDoS protection to absorb volumetric attacks and maintain network availability for exposed services.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True
