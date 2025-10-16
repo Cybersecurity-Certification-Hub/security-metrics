@@ -16,23 +16,6 @@
     <Import>https://ontology.cybersecuritycertcluster.eu/resource/application</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/resource/human_resources</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/resource/infrastructure</Import>
-    <Declaration>
-        <Class IRI="#RateLimiting"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="#RateLimiting"/>
-        <Class IRI="https://ontology.cybersecuritycertcluster.eu/classes/AccessRestriction"/>
-    </SubClassOf>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#RateLimiting</IRI>
-        <Literal>Rate limiting is used to control the frequency of incoming requests to prevent system overload</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#RateLimiting</IRI>
-        <Literal>RateLimiting</Literal>
-    </AnnotationAssertion>
 </Ontology>
 
 
