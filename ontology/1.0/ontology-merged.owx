@@ -420,6 +420,9 @@
         <Class IRI="/classes/SecurityFeature"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/SecurityInformationEventManagement"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/SecurityTraining"/>
     </Declaration>
     <Declaration>
@@ -2360,6 +2363,13 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/LoggingService"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/offers"/>
+            <Class IRI="/classes/SecurityInformationEventManagement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/MachineLearning"/>
         <Class IRI="/classes/Data"/>
     </SubClassOf>
@@ -2918,6 +2928,28 @@
     <SubClassOf>
         <Class IRI="/classes/SecurityFeature"/>
         <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityInformationEventManagement"/>
+        <Class IRI="/classes/Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityInformationEventManagement"/>
+        <Class IRI="/classes/SecurityFeature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityInformationEventManagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/to"/>
+            <Class IRI="/classes/LoggingService"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityInformationEventManagement"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/enabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SecurityTraining"/>
@@ -4374,6 +4406,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/SecurityFeature</IRI>
         <Literal xml:lang="english">SecurityFeature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/SecurityInformationEventManagement</IRI>
+        <Literal>Aggregates and correlates security telemetry across connected sources to support security incident detection and response (SIEM), e.g., Azure Security Insights (https://learn.microsoft.com/en-us/rest/api/securityinsights/).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/SecurityInformationEventManagement</IRI>
+        <Literal>SecurityInformationEventManagement</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
