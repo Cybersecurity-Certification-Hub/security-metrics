@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: SIEMEnabled
+description: This rule assesses whether a [LoggingService] offers [SecurityInformationEventManagement] with its [p1:enabled] property set correctly.
+category: LoggingMonitoring
+version: "1.0" 
+comments: Security Incident and Event Management solutions aggregate security telemetry to detect and manage incidents. Enabling the SIEM capability ensures analysts can collect, correlate, and investigate events, supporting security incident response and forensic workflows.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True

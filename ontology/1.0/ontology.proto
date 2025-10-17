@@ -104,6 +104,16 @@ message AnomalyDetection {
 	ApplicationLogging application_logging = 11132;
 }
 
+message SecurityInformationEventManagement {
+	option (resource_type_names) = "SecurityInformationEventManagement";
+	option (resource_type_names) = "Auditing";
+	option (resource_type_names) = "SecurityFeature";
+
+	bool enabled = 21162;
+	optional string workspace_id = 21163;
+	repeated string logging_service_ids  = 21164;
+}
+
 // Application is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 // This encapsulates the whole (source) code of an application.
 message Application {
@@ -1531,6 +1541,7 @@ message LoggingService {
 	repeated string compute_ids  = 10285;
 	GeoLocation geo_location = 4238;
 	repeated Logging loggings  = 5453;
+	SecurityInformationEventManagement security_information_event_management = 21165;
 	repeated Redundancy redundancies  = 1550;
 	optional string parent_id = 258;
 	optional string service_metadata_document_id = 16013;
@@ -2392,6 +2403,7 @@ message SecurityFeature {
 		LocalAttestation local_attestation = 4296;
 		RemoteAttestation remote_attestation = 13640;
 		AutomaticUpdates automatic_updates = 9990;
+		SecurityInformationEventManagement security_information_event_management = 21165;
 		DocumentChecksum document_checksum = 16099;
 		Immutability immutability = 2008;
 		DocumentSignature document_signature = 7943;
