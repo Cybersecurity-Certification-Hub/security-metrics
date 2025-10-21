@@ -5,7 +5,17 @@ description: "Which asset information is kept in the inventory? | Selector: Poli
 implementationGuidelines:
   AMOE:
     question: ""
-    keywords: "[services, IP address, databases, inventory, assets, VM, application, asset management]"
+    keywords:
+      [
+        "services",
+        "IP address",
+        "databases",
+        "inventory",
+        "assets",
+        "VM",
+        "application",
+        "asset management",
+      ]
 category: "AssetInventory"
 version: "1.0"
 comments: "TBD"

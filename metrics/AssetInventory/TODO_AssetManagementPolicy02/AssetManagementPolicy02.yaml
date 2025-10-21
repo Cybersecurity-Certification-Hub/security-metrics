@@ -5,7 +5,17 @@ description: "Which topics are defined for the secure management of physical ass
 implementationGuidelines:
   AMOE:
     question: ""
-    keywords: "[asset management, inventory management, asset, physical assets, disk, server, components, destruction]"
+    keywords:
+      [
+        "asset management",
+        "inventory management",
+        "asset",
+        "physical assets",
+        "disk",
+        "server",
+        "components",
+        "destruction",
+      ]
 category: "AssetInventory"
 version: "1.0"
 comments: "TBD"
