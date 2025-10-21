@@ -1,9 +1,9 @@
 # ====== Metadata ======
 id: T2CoherenceTime
-description: This rule assesses whether a [QPU] has a [T2CoherenceTime] that is above a specified [p1:time] threshold.
+description: This rule assesses whether a [QPU] has a [p1:T2CoherenceTime] that is above a specified threshold.
 category: QuantumSecurity
 version: "1.0" 
-comments: T1 and T2 coherence times are a standard measure for the reliability of executing quantum circuits. T2 is the qubits's dephasing time (in seconds). It measures the time for a qubit to lose the phase coherence of its superposition state.
+comments: T1 and T2 coherence times are a standard measure for the reliability of executing quantum circuits. T2 is the qubits' dephasing time (in seconds). It measures the time for a qubit to lose the phase coherence of its superposition state.
 # ====== Configuration ======
 configuration:
   p1:

@@ -1,9 +1,9 @@
 # ====== Metadata ======
 id: T1CoherenceTime
-description: This rule assesses whether a [QPU] has a [T1CoherenceTime] that is above a specified [p1:time] threshold.
+description: This rule assesses whether a [QPU] has a [p1:T1CoherenceTime] that is above a specified threshold.
 category: QuantumSecurity
 version: "1.0" 
-comments: T1 and T2 coherence times are a standard measure for the reliability of executing quantum circuits. T1 is the qubits's energy relaxation time (in seconds). It measures the time for an excited qubit state to decay to the ground state due to energy dissipation.
+comments: T1 and T2 coherence times are a standard measure for the reliability of executing quantum circuits. T1 is the qubits' energy relaxation time (in seconds). It measures the time for an excited qubit state to decay to the ground state due to energy dissipation.
 # ====== Configuration ======
 configuration:
   p1:
