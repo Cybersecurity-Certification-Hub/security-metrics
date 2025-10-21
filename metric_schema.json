@@ -21,13 +21,56 @@
       "description": "Description using terms from the ontology."
     },
     "implementationGuidelines": {
-      "type": "object",
-      "additionalProperties": {
-        "type": "string",
-        "description": "Implementation guidelines for a specific evidence collector tool",
-        "examples": [
-          "Use AES256 encryption for data at rest."
-        ]
+      "properties": {
+        "implementationGuidelines": {
+          "type": "object",
+          "properties": {
+            "AMOE": {
+              "type": "object",
+              "required": [
+                "question",
+                "keywords"
+              ],
+              "properties": {
+                "question": {
+                  "type": "string"
+                },
+                "keywords": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "additionalProperties": false
+            },
+            "FSC": {
+              "type": "object",
+              "required": [
+                "details"
+              ],
+              "properties": {
+                "details": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "AppTelemetry": {
+              "type": "object",
+              "required": [
+                "details"
+              ],
+              "properties": {
+                "details": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": {}
+        }
       }
     },
     "version": {
