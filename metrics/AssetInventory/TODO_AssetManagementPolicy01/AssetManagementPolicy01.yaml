@@ -5,7 +5,15 @@ description: "Which topics are comprised by the defined asset management policy?
 implementationGuidelines:
   AMOE:
     question: ""
-    keywords: "[asset management, inventory management, asset, inventory, ownership, decommissioning]"
+    keywords:
+      [
+        "asset management",
+        "inventory management",
+        "asset",
+        "inventory",
+        "ownership",
+        "decommissioning",
+      ]
 category: "AssetInventory"
 version: "1.0"
 comments: "TBD"
