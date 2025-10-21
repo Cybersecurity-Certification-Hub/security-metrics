@@ -4,7 +4,7 @@ name: "AssetManagementPolicy01"
 description: "Which topics are comprised by the defined asset management policy? | Selector: PolicyDocument (Resource Type) and/or TBD (security feature)"
 implementationGuidelines:
   AMOE:
-    question: 42
+    question: ""
     keywords: "[asset management, inventory management, asset, inventory, ownership, decommissioning]"
 category: "AssetInventory"
 version: "1.0"
