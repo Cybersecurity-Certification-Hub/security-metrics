@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: BlockCipherMode
+description: This rule assesses whether a [Resource] has all its [TransportEncryption] [p1:cipherSuites] configured so that each cipher suite’s sessionCipher mode is correctly configured.
+category: Cryptography
+version: "1.0"
+comments: Aligned with BSI TR-02102-2, which recommends using either CCM mode, or GCM mode, or CBC mode.
+
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "regex.match"
+    targetValue: "(?:^|[_-])(GCM|CCM|CBC)$"
