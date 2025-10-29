@@ -780,6 +780,9 @@
         <DataProperty IRI="/properties/call"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/criticality"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/enabled"/>
     </Declaration>
     <Declaration>
@@ -3210,6 +3213,13 @@
     <SubClassOf>
         <Class IRI="/classes/Vulnerability"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/criticality"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Vulnerability"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/properties/url"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
@@ -4305,7 +4315,13 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/Package</IRI>
-        <Literal>Represents a grouping of (source) code into logical unit, for example a package for a namespace.</Literal>
+        <Literal>Represents a grouping of (source) code into logical unit, for example a package for
+            a namespace.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Package</IRI>
+        <Literal>Package</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5231,6 +5247,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/collectionOf</IRI>
         <Literal xml:lang="english">collectionOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/criticality</IRI>
+        <Literal>criticality: Contains the criticality of a vulnerability, e.g., low, medium, high, critical</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
