@@ -926,11 +926,6 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Vulnerability</AbbreviatedIRI>
-        <Literal>criticality: Contains the criticalitiy of a vulnerability, e.g., low, medium, high, critical.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:Vulnerability</AbbreviatedIRI>
         <Literal>cve: Common Vulnerabilities and Exposures</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -997,6 +992,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:creation_time</AbbreviatedIRI>
         <Literal>creationTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:criticality</AbbreviatedIRI>
+        <Literal>criticality: Contains the criticality of a vulnerability, e.g., low, medium, high, critical</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
