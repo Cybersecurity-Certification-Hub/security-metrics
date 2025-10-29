@@ -4309,6 +4309,11 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Package</IRI>
+        <Literal>Package</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/PasswordBasedAuthentication</IRI>
         <Literal xml:lang="en">PasswordBasedAuthentication</Literal>
     </AnnotationAssertion>
