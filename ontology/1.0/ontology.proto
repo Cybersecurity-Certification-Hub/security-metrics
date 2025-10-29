@@ -1945,6 +1945,7 @@ message Operation {
 }
 
 // Package is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a grouping of (source) code into logical unit, for example a package for a namespace.
 message Package {
 	option (resource_type_names) = "Package";
 	option (resource_type_names) = "CodeModule";
