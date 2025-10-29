@@ -354,6 +354,9 @@
         <Class IRI="/classes/Operation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Package"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/PasswordBasedAuthentication"/>
     </Declaration>
     <Declaration>
@@ -2654,6 +2657,10 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Package"/>
+        <Class IRI="/classes/Module"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/PasswordBasedAuthentication"/>
         <Class IRI="/classes/Authenticity"/>
     </SubClassOf>
@@ -4294,6 +4301,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Operation</IRI>
         <Literal>Operation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Package</IRI>
+        <Literal>Represents a grouping of (source) code into logical unit, for example a package for a namespace.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
