@@ -112,6 +112,9 @@
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:criticality"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:source"/>
     </Declaration>
     <Declaration>
@@ -660,6 +663,13 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Vulnerability"/>
         <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:criticality"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Vulnerability"/>
+        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:cve"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
@@ -912,6 +922,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:SecurityAdvisoryFeed</AbbreviatedIRI>
         <Literal>SecurityAdvisoryFeed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:Vulnerability</AbbreviatedIRI>
+        <Literal>criticality: Contains the criticalitiy of a vulnerability, e.g., low, medium, high, critical.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
