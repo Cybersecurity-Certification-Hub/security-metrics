@@ -1675,6 +1675,7 @@ message MessagingHub {
 message CodeModule {
 
 	oneof type {
+		Package package = 5217;
 		SourceCodeFile source_code_file = 2804;
 	}
 }
@@ -1943,6 +1944,26 @@ message Operation {
 	}
 }
 
+// Package is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Package {
+	option (resource_type_names) = "Package";
+	option (resource_type_names) = "CodeModule";
+	option (resource_type_names) = "Code";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 17760;
+	string description = 13199;
+	string id = 11460 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 3230;
+	string name = 11479 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 603;
+	repeated string code_module_ids  = 6367;
+	optional string code_repository_id = 18580;
+	repeated Functionality functionalities  = 5551;
+	optional string parent_id = 5664;
+}
+
 // PasswordBasedAuthentication is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message PasswordBasedAuthentication {
 	option (resource_type_names) = "PasswordBasedAuthentication";
@@ -2176,6 +2197,7 @@ message Resource {
 		SecurityTraining security_training = 5053;
 		Application application = 18554;
 		Library library = 14265;
+		Package package = 5217;
 		SourceCodeFile source_code_file = 2804;
 	}
 }
@@ -2470,6 +2492,7 @@ message Code {
 	oneof type {
 		Application application = 18554;
 		Library library = 14265;
+		Package package = 5217;
 		SourceCodeFile source_code_file = 2804;
 	}
 }
