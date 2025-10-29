@@ -1,204 +1,217 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://ontology.cybersecuritycertcluster.eu/resource/application"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/application">
-    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/resource/code#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="res" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
-    <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
-    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    xml:base="https://ontology.cybersecuritycertcluster.eu/resource/application"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/application">
+    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/resource/code#" />
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#" />
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
+    <Prefix name="res" IRI="https://ontology.cybersecuritycertcluster.eu/classes/" />
+    <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/" />
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace" />
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#" />
+    <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/" />
+    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/" />
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#" />
     <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
-    
     <Declaration>
-        <Class abbreviatedIRI="res:Application"/>
+        <Class abbreviatedIRI="res:Application" />
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="res:SoftwareResource"/>
+        <Class abbreviatedIRI="res:SoftwareResource" />
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="res:Component"/>
+        <Class abbreviatedIRI="res:Component" />
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="res:SourceCodeFile"/>
+        <Class abbreviatedIRI="res:SourceCodeFile" />
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="res:Library"/>
+        <Class abbreviatedIRI="res:Package" />
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="res:Module"/>
+        <Class abbreviatedIRI="res:Library" />
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="ind:resourceId"/>
+        <Class abbreviatedIRI="res:Module" />
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <NamedIndividual abbreviatedIRI="ind:resourceId" />
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:de.fraunhofer.aisec.cpg.graph.Node"/>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description" />
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:listString"/>
+        <Datatype abbreviatedIRI="xsd:de.fraunhofer.aisec.cpg.graph.Node" />
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:listString" />
     </Declaration>
     <SubClassOf>
-        <Class abbreviatedIRI="res:Application"/>
-        <Class abbreviatedIRI="res:Component"/>
+        <Class abbreviatedIRI="res:Application" />
+        <Class abbreviatedIRI="res:Component" />
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:SourceCodeFile"/>
-        <Class abbreviatedIRI="res:Module"/>
+        <Class abbreviatedIRI="res:SourceCodeFile" />
+        <Class abbreviatedIRI="res:Module" />
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:Application"/>
+        <Class abbreviatedIRI="res:Package" />
+        <Class abbreviatedIRI="res:Module" />
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Application" />
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:programmingVersion"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <DataProperty abbreviatedIRI="res:programmingVersion" />
+            <Datatype abbreviatedIRI="xsd:string" />
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:Application"/>
+        <Class abbreviatedIRI="res:Application" />
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:runsOn"/>
-            <Class abbreviatedIRI="core:Compute"/>
+            <ObjectProperty abbreviatedIRI="prop:runsOn" />
+            <Class abbreviatedIRI="core:Compute" />
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:Application"/>
+        <Class abbreviatedIRI="res:Application" />
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="core:AutomaticUpdates"/>
+            <ObjectProperty abbreviatedIRI="prop:offers" />
+            <Class abbreviatedIRI="core:AutomaticUpdates" />
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:Application"/>
+        <Class abbreviatedIRI="res:Application" />
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:programmingLanguage"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <DataProperty abbreviatedIRI="prop:programmingLanguage" />
+            <Datatype abbreviatedIRI="xsd:string" />
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:Application"/>
+        <Class abbreviatedIRI="res:Application" />
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:translationUnits"/>
-            <Datatype abbreviatedIRI="xsd:listString"/>
+            <DataProperty abbreviatedIRI="prop:translationUnits" />
+            <Datatype abbreviatedIRI="xsd:listString" />
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:SoftwareResource"/>
-        <Class abbreviatedIRI="core:Resource"/>
+        <Class abbreviatedIRI="res:SoftwareResource" />
+        <Class abbreviatedIRI="core:Resource" />
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:SoftwareResource"/>
+        <Class abbreviatedIRI="res:SoftwareResource" />
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
-            <Class abbreviatedIRI="res:Module"/>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple" />
+            <Class abbreviatedIRI="res:Module" />
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:SoftwareResource"/>
+        <Class abbreviatedIRI="res:SoftwareResource" />
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="core:CodeRepository"/>
+            <ObjectProperty abbreviatedIRI="prop:has" />
+            <Class abbreviatedIRI="core:CodeRepository" />
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:SoftwareResource"/>
+        <Class abbreviatedIRI="res:SoftwareResource" />
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
-            <Class abbreviatedIRI="core:Functionality"/>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple" />
+            <Class abbreviatedIRI="core:Functionality" />
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:Component"/>
-        <Class abbreviatedIRI="res:SoftwareResource"/>
+        <Class abbreviatedIRI="res:Component" />
+        <Class abbreviatedIRI="res:SoftwareResource" />
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:Component"/>
+        <Class abbreviatedIRI="res:Component" />
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
-            <Class abbreviatedIRI="res:Library"/>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple" />
+            <Class abbreviatedIRI="res:Library" />
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:Library"/>
-        <Class abbreviatedIRI="res:Component"/>
+        <Class abbreviatedIRI="res:Library" />
+        <Class abbreviatedIRI="res:Component" />
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:Library"/>
+        <Class abbreviatedIRI="res:Library" />
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
-            <Class abbreviatedIRI="core:Vulnerability"/>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple" />
+            <Class abbreviatedIRI="core:Vulnerability" />
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:Module"/>
-        <Class abbreviatedIRI="res:SoftwareResource"/>
+        <Class abbreviatedIRI="res:Module" />
+        <Class abbreviatedIRI="res:SoftwareResource" />
     </SubClassOf>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label" />
         <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
         <Literal xml:lang="english">xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label" />
         <AbbreviatedIRI>xsd:listString</AbbreviatedIRI>
         <Literal>listString</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label" />
         <AbbreviatedIRI>owl:Thing</AbbreviatedIRI>
         <Literal>owl:Thing</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment" />
         <AbbreviatedIRI>res:Application</AbbreviatedIRI>
         <Literal>This encapsulates the whole (source) code of an application.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label" />
         <AbbreviatedIRI>res:Application</AbbreviatedIRI>
         <Literal xml:lang="english">Application</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label" />
         <AbbreviatedIRI>core:Resource</AbbreviatedIRI>
         <Literal>Resource</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label" />
         <AbbreviatedIRI>res:SoftwareResource</AbbreviatedIRI>
         <Literal>Code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label" />
         <AbbreviatedIRI>res:Component</AbbreviatedIRI>
         <Literal>Component</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label" />
         <AbbreviatedIRI>res:Library</AbbreviatedIRI>
         <Literal>Library</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label" />
         <AbbreviatedIRI>res:Module</AbbreviatedIRI>
         <Literal>CodeModule</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label" />
+        <AbbreviatedIRI>res:Package</AbbreviatedIRI>
+        <Literal>Package</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description" />
         <IRI>wptmp:entity#contextIsChecked</IRI>
         <Literal>Check additional information, e.g. which device is used or the time of the login</Literal>
     </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment" />
+        <AbbreviatedIRI>res:Package</AbbreviatedIRI>
+        <Literal>Represents a grouping of (source) code into logical unit, for example a package for
+            a namespace.</Literal>
+    </AnnotationAssertion>
 </Ontology>
-
-
-
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
