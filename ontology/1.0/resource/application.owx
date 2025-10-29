@@ -31,6 +31,9 @@
         <Class abbreviatedIRI="res:SourceCodeFile"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="res:Package"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="res:Library"/>
     </Declaration>
     <Declaration>
@@ -54,6 +57,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:SourceCodeFile"/>
+        <Class abbreviatedIRI="res:Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Package"/>
         <Class abbreviatedIRI="res:Module"/>
     </SubClassOf>
     <SubClassOf>
