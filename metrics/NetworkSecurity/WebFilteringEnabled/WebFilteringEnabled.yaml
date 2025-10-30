@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: WebFilteringEnabled
+description: This rule assesses whether an [NetworkInterface] that offers the property [Ratelimiter], has [p1:enabled] configured correctly.
+category: NetworkSecurity
+version: "1.0" 
+comments: The Web Application Filter protects web applications by setting a transfer limit to restrict the number of requests a user or system can send.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
