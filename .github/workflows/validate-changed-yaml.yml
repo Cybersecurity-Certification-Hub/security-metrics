@@ -1,14 +1,22 @@
 name: Validate changed YAML files
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened] # Run on PR creation, update, or reopening
-    paths:                # Run workflow if YAML, rego or json files in folder metrics changes
+  push: 
+    branches:
+      - main
+    paths: # Run workflow if YAML, rego or json files in folder metrics changes
       - "metrics/**/*.yml"
       - "metrics/**/*.yaml"
       - "metrics/**/data.json"
       - "metrics/**/metric.rego"
-        
+  pull_request:
+    types: [opened, synchronize, reopened] # Run on PR creation, update, or reopening
+    paths: # Run workflow if YAML, rego or json files in folder metrics changes
+      - "metrics/**/*.yml"
+      - "metrics/**/*.yaml"
+      - "metrics/**/data.json"
+      - "metrics/**/metric.rego"
+         
 jobs:
   validate:
     runs-on: ubuntu-latest
