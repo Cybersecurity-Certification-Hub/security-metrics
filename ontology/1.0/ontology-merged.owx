@@ -4315,8 +4315,7 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/Package</IRI>
-        <Literal>Represents a grouping of (source) code into logical unit, for example a package for
-            a namespace.</Literal>
+        <Literal>Represents a grouping of (source) code into logical unit, for example a package for a namespace.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

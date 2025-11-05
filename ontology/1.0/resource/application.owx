@@ -211,7 +211,6 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment" />
         <AbbreviatedIRI>res:Package</AbbreviatedIRI>
-        <Literal>Represents a grouping of (source) code into logical unit, for example a package for
-            a namespace.</Literal>
+        <Literal>Represents a grouping of (source) code into logical unit, for example a package for a namespace.</Literal>
     </AnnotationAssertion>
 </Ontology>
