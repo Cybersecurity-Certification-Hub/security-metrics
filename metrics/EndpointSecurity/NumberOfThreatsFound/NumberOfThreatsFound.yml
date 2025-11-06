@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: NumberOfThreatsFound
+description: This rule evaluates whether a [VirtualMachine] reporting [MalwareProtection] exposes the property [p1:numberOfThreatsFound] indicating no malware detections.
+category: EndpointSecurity
+version: "1.0"
+comments: Antimalware tooling should surface zero active detections on managed endpoints; evidence collectors can draw from `malwareProtection.numberOfThreatsFound` emitted by Wazuh, Microsoft Defender for Endpoint, or other supported telemetry sources.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: 0
