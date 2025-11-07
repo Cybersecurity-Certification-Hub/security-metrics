@@ -293,16 +293,16 @@
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <SubClassOf>
-        <Class IRI="/classes/EncryptionInUse"/>
-        <Class IRI="/classes/Confidentiality"/>
+        <Class abbreviatedIRI="core:EncryptionInUse"/>
+        <Class abbreviatedIRI="core:Confidentiality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/EncryptionOperation"/>
-        <Class IRI="/classes/CipherOperation"/>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <Class abbreviatedIRI="core:CipherOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/EncryptionOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:ABAC"/>
@@ -322,17 +322,17 @@
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/EqualityCheck"/>
-        <Class IRI="/classes/PolicyOperation"/>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <Class abbreviatedIRI="core:PolicyOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Error"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class abbreviatedIRI="core:Error"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Error"/>
+        <Class abbreviatedIRI="core:Error"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/message"/>
+            <DataProperty abbreviatedIRI="core:message"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -344,28 +344,28 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/EqualityCheck"/>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/leftPrincipal"/>
-            <Class IRI="/classes/Principal"/>
+            <ObjectProperty abbreviatedIRI="core:leftPrincipal"/>
+            <Class abbreviatedIRI="core:Principal"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/EqualityCheck"/>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/rightPrincipal"/>
-            <Class IRI="/classes/Principal"/>
+            <ObjectProperty abbreviatedIRI="core:rightPrincipal"/>
+            <Class abbreviatedIRI="core:Principal"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/EncryptionOperation"/>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Encryption"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Encryption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/EncryptionOperation"/>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/algorithm"/>
             <Datatype abbreviatedIRI="xsd:string"/>
@@ -373,15 +373,15 @@
     </SubClassOf>
 
     <SubClassOf>
-        <Class IRI="/classes/EncryptionOperation"/>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Secret"/>
+            <Class abbreviatedIRI="core:Secret"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
 
     <SubClassOf>
-        <Class IRI="/classes/EncryptionInUse"/>
+        <Class abbreviatedIRI="core:EncryptionInUse"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
@@ -644,12 +644,12 @@
         <Class abbreviatedIRI="core:Redundancy"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/JwtAuthentication"/>
-        <Class IRI="/classes/JwtBasedAuthentication"/>
+        <Class abbreviatedIRI="core:JwtAuthentication"/>
+        <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/JwtBasedAuthentication"/>
-        <Class IRI="/classes/Authenticity"/>
+        <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
+        <Class abbreviatedIRI="core:Authenticity"/>
     </SubClassOf>
     
     <SubClassOf>
@@ -690,49 +690,49 @@
         <Class abbreviatedIRI="core:Firewall"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Main"/>
-        <Class IRI="/classes/LocalEntryPoint"/>
+        <Class abbreviatedIRI="core:Main"/>
+        <Class abbreviatedIRI="core:LocalEntryPoint"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/MemoryOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:MemoryOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
 
     <SubClassOf>
-        <Class IRI="/classes/LibraryEntryPoint"/>
-        <Class IRI="/classes/LocalEntryPoint"/>
+        <Class abbreviatedIRI="core:LibraryEntryPoint"/>
+        <Class abbreviatedIRI="core:LocalEntryPoint"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/LoadConfiguration"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
+        <Class abbreviatedIRI="core:LoadConfiguration"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/LoadLibrary"/>
-        <Class IRI="/classes/DynamicLoadingOperation"/>
+        <Class abbreviatedIRI="core:LoadLibrary"/>
+        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/LoadSymbol"/>
-        <Class IRI="/classes/DynamicLoadingOperation"/>
+        <Class abbreviatedIRI="core:LoadSymbol"/>
+        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Logging"/>
+        <Class abbreviatedIRI="core:Logging"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/name"/>
+            <DataProperty abbreviatedIRI="core:name"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/MemoryOperation"/>
+        <Class abbreviatedIRI="core:MemoryOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Memory"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Memory"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ObjectStorageRequest"/>
+        <Class abbreviatedIRI="core:ObjectStorageRequest"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Storage"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Storage"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     
@@ -845,10 +845,10 @@
         <Class abbreviatedIRI="core:Authenticity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/JwtBasedAuthentication"/>
+        <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Token"/>
+            <Class abbreviatedIRI="core:Token"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     

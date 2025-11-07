@@ -545,14 +545,14 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ExitBoundaryOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:ExitBoundaryOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ExitBoundaryOperation"/>
+        <Class abbreviatedIRI="core:ExitBoundaryOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Boundary"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Boundary"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     
@@ -741,239 +741,239 @@
         <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/HttpEndpointOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:HttpEndpointOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/HttpEndpointOperation"/>
+        <Class abbreviatedIRI="core:HttpEndpointOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Http"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Http"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/HttpRequestHandlerOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:HttpRequestHandlerOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Principal"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class abbreviatedIRI="core:Principal"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ProctectedAsset"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class abbreviatedIRI="core:ProctectedAsset"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ProctectedAsset"/>
+        <Class abbreviatedIRI="core:ProctectedAsset"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/protects"/>
-            <Class IRI="/classes/Resource"/>
+            <ObjectProperty abbreviatedIRI="core:protects"/>
+            <Class abbreviatedIRI="core:Resource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ProctectedAsset"/>
+        <Class abbreviatedIRI="core:ProctectedAsset"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/Policy"/>
+            <Class abbreviatedIRI="core:Policy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ProtectedAssetOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:ProtectedAssetOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ProtectedAssetOperation"/>
+        <Class abbreviatedIRI="core:ProtectedAssetOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/ProctectedAsset"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:ProctectedAsset"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ProvideConfiguration"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
+        <Class abbreviatedIRI="core:ProvideConfiguration"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ProvideConfiguration"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Configuration"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProvideConfiguration"/>
+        <Class abbreviatedIRI="core:ProvideConfiguration"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationSource"/>
+            <Class abbreviatedIRI="core:Configuration"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ProvideConfigurationGroup"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProvideConfigurationGroup"/>
+        <Class abbreviatedIRI="core:ProvideConfiguration"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationGroup"/>
+            <Class abbreviatedIRI="core:ConfigurationSource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ProvideConfigurationGroup"/>
+        <Class abbreviatedIRI="core:ProvideConfigurationGroup"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ProvideConfigurationGroup"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationGroupSource"/>
+            <Class abbreviatedIRI="core:ConfigurationGroup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/RegisterConfigurationGroup"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/RegisterConfigurationGroup"/>
+        <Class abbreviatedIRI="core:ProvideConfigurationGroup"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationGroup"/>
+            <Class abbreviatedIRI="core:ConfigurationGroupSource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/UnlockEncryptedDisk"/>
-        <Class IRI="/classes/DiskEncryptionOperation"/>
+        <Class abbreviatedIRI="core:RegisterConfigurationGroup"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ValidateJwt"/>
-        <Class IRI="/classes/AuthenticationOperation"/>
+        <Class abbreviatedIRI="core:RegisterConfigurationGroup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class abbreviatedIRI="core:ConfigurationGroup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:UnlockEncryptedDisk"/>
+        <Class abbreviatedIRI="core:DiskEncryptionOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ValidateJwt"/>
+        <Class abbreviatedIRI="core:AuthenticationOperation"/>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/RegisterConfigurationOption"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
+        <Class abbreviatedIRI="core:RegisterConfigurationOption"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/SecretOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:SecretOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/SecretOperation"/>
+        <Class abbreviatedIRI="core:SecretOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Secret"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    
-    <SubClassOf>
-        <Class IRI="/classes/RegisterConfigurationOption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationOption"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/RegisterHttpEndpoint"/>
-        <Class IRI="/classes/HttpRequestHandlerOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/RegisterHttpEndpoint"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/HttpEndpoint"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Secret"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/ProvideConfigurationOption"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ReadConfiguration"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ReadConfiguration"/>
+        <Class abbreviatedIRI="core:RegisterConfigurationOption"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationGroup"/>
+            <Class abbreviatedIRI="core:ConfigurationOption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ReadConfigurationOption"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
+        <Class abbreviatedIRI="core:RegisterHttpEndpoint"/>
+        <Class abbreviatedIRI="core:HttpRequestHandlerOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ReadConfigurationOption"/>
+        <Class abbreviatedIRI="core:RegisterHttpEndpoint"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationOption"/>
+            <Class abbreviatedIRI="core:HttpEndpoint"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/ProvideConfigurationOption"/>
+        <Class abbreviatedIRI="core:ProvideConfigurationOption"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ReadConfiguration"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ReadConfiguration"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationOption"/>
+            <Class abbreviatedIRI="core:ConfigurationGroup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ProvideConfigurationOption"/>
+        <Class abbreviatedIRI="core:ReadConfigurationOption"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ReadConfigurationOption"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationOptionSource"/>
+            <Class abbreviatedIRI="core:ConfigurationOption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/LocalEntryPoint"/>
+        <Class abbreviatedIRI="core:ProvideConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/target"/>
-            <Class IRI="/classes/OperatingSystemArchitecture"/>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class abbreviatedIRI="core:ConfigurationOption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/LogOutput"/>
+        <Class abbreviatedIRI="core:ProvideConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Logging"/>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class abbreviatedIRI="core:ConfigurationOptionSource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LocalEntryPoint"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:target"/>
+            <Class abbreviatedIRI="core:OperatingSystemArchitecture"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/LogWrite"/>
-        <Class IRI="/classes/LogOperation"/>
+        <Class abbreviatedIRI="core:LogOutput"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Logging"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/LogWrite"/>
+        <Class abbreviatedIRI="core:LogWrite"/>
+        <Class abbreviatedIRI="core:LogOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LogWrite"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/logLevel"/>
+            <DataProperty abbreviatedIRI="core:logLevel"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/PolicyOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:PolicyOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/PolicyOperation"/>
+        <Class abbreviatedIRI="core:PolicyOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Policy"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Policy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/HttpRequestHandlerOperation"/>
+        <Class abbreviatedIRI="core:HttpRequestHandlerOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/HttpRequestHandler"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:HttpRequestHandler"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/IssueJwt"/>
-        <Class IRI="/classes/AuthenticationOperation"/>
+        <Class abbreviatedIRI="core:IssueJwt"/>
+        <Class abbreviatedIRI="core:AuthenticationOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/LoadLibrary"/>
+        <Class abbreviatedIRI="core:LoadLibrary"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/EntryPoint"/>
+            <Class abbreviatedIRI="core:EntryPoint"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     
@@ -1369,56 +1369,56 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/HttpEndpoint"/>
+        <Class abbreviatedIRI="core:HttpEndpoint"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/HttpRequestContext"/>
+            <Class abbreviatedIRI="core:HttpRequestContext"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/HttpEndpoint"/>
+        <Class abbreviatedIRI="core:HttpEndpoint"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/offers"/>
-            <Class IRI="/classes/Authorization"/>
+            <Class abbreviatedIRI="core:Authorization"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/HttpClientOperation"/>
+        <Class abbreviatedIRI="core:HttpClientOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/HttpClient"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:HttpClient"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/GetSecret"/>
-        <Class IRI="/classes/SecretOperation"/>
+        <Class abbreviatedIRI="core:GetSecret"/>
+        <Class abbreviatedIRI="core:SecretOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/HttpClient"/>
+        <Class abbreviatedIRI="core:HttpClient"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/isTLS"/>
+            <DataProperty abbreviatedIRI="core:isTLS"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/HttpClient"/>
+        <Class abbreviatedIRI="core:HttpClient"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Authenticity"/>
+            <Class abbreviatedIRI="core:Authenticity"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/FileOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:FileOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/FileOperation"/>
+        <Class abbreviatedIRI="core:FileOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/File"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:File"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     

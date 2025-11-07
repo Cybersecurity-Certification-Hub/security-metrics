@@ -114,72 +114,72 @@
         <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/File"/>
-        <Class IRI="/classes/FileLikeObject"/>
+        <Class abbreviatedIRI="core:File"/>
+        <Class abbreviatedIRI="core:FileLikeObject"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Token"/>
-        <Class IRI="/classes/Data"/>
+        <Class abbreviatedIRI="core:Token"/>
+        <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Value"/>
-        <Class IRI="/classes/Data"/>
-    </SubClassOf>
-    
-    <SubClassOf>
-        <Class IRI="/classes/FileHandle"/>
-        <Class IRI="/classes/FileLikeObject"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/LogDocument"/>
-        <Class IRI="/classes/Document"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/LogGet"/>
-        <Class IRI="/classes/LogOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/LogOperation"/>
-        <Class IRI="/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/PolicyRule"/>
-        <Class IRI="/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ReportDocument"/>
-        <Class IRI="/classes/GenericDocument"/>
+        <Class abbreviatedIRI="core:Value"/>
+        <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/LogOperation"/>
+        <Class abbreviatedIRI="core:FileHandle"/>
+        <Class abbreviatedIRI="core:FileLikeObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LogDocument"/>
+        <Class abbreviatedIRI="core:Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LogGet"/>
+        <Class abbreviatedIRI="core:LogOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LogOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:PolicyRule"/>
+        <Class abbreviatedIRI="core:Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ReportDocument"/>
+        <Class abbreviatedIRI="core:GenericDocument"/>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LogOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Logging"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Logging"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Policy"/>
-        <Class IRI="/classes/Data"/>
+        <Class abbreviatedIRI="core:Policy"/>
+        <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Policy"/>
+        <Class abbreviatedIRI="core:Policy"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Context"/>
+            <Class abbreviatedIRI="core:Context"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Policy"/>
+        <Class abbreviatedIRI="core:Policy"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/PolicyRule"/>
+            <Class abbreviatedIRI="core:PolicyRule"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/FileLikeObject"/>
-        <Class IRI="/classes/Data"/>
+        <Class abbreviatedIRI="core:FileLikeObject"/>
+        <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:MessageAuthenticationCode"/>
