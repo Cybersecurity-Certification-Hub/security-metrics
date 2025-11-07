@@ -91,6 +91,40 @@ message ActivityLogging {
 	repeated string logging_service_ids  = 589;
 }
 
+// Agnostic is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Agnostic {
+	option (resource_type_names) = "Agnostic";
+	option (resource_type_names) = "OperatingSystemArchitecture";
+	option (resource_type_names) = "Code";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 2486;
+	string description = 8346;
+	string id = 142 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 3423;
+	string name = 5900 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 10733;
+	repeated string code_module_ids  = 17881;
+	optional string code_repository_id = 16948;
+	repeated Functionality functionalities  = 4779;
+	optional string parent_id = 10692;
+}
+
+// Allocate is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Allocate {
+	option (resource_type_names) = "Allocate";
+	option (resource_type_names) = "MemoryOperation";
+
+}
+
+// AndRule is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message AndRule {
+	option (resource_type_names) = "AndRule";
+	option (resource_type_names) = "PolicyRule";
+
+}
+
 // AnomalyDetection is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 // Analyzes the activity of a NetworkService (which includes DatabaseServices).
 // Scope contains the resource ID of the protected resource.
@@ -145,12 +179,25 @@ message ApplicationLogging {
 	repeated string logging_service_ids  = 3793;
 }
 
+// AsymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message AsymmetricCipher {
+	option (resource_type_names) = "AsymmetricCipher";
+	option (resource_type_names) = "Cipher";
+	option (resource_type_names) = "Functionality";
+
+	int32 block_size = 18752;
+	string cipher_name = 10744;
+	int32 key_size = 8751;
+	Padding padding = 17545;
+}
+
 // AtRestEncryption is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message AtRestEncryption {
 
 	oneof type {
-		CustomerKeyEncryption customer_key_encryption = 14050;
-		ManagedKeyEncryption managed_key_encryption = 4126;
+		CustomerKeyEncryption customer_key_encryption = 11802;
+		DiskEncryption disk_encryption = 8972;
+		ManagedKeyEncryption managed_key_encryption = 11520;
 	}
 }
 
@@ -178,6 +225,27 @@ message Auditing {
 	}
 }
 
+// Authenticate is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Authenticate {
+	option (resource_type_names) = "Authenticate";
+	option (resource_type_names) = "AuthenticationOperation";
+	option (resource_type_names) = "Operation";
+	option (resource_type_names) = "Functionality";
+
+	Authenticity authenticity = 17604;
+	CodeRegion code_region = 14922;
+	optional string credential_id = 16875;
+}
+
+// AuthenticationOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+message AuthenticationOperation {
+
+	oneof type {
+		Authenticate authenticate = 1798;
+		AuthorizeJwt authorize_jwt = 1893;
+	}
+}
+
 // Authenticity is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Authenticity {
 
@@ -201,6 +269,17 @@ message Authorization {
 		WebApplicationFirewall web_application_firewall = 5789;
 		RBAC rbac = 18783;
 	}
+}
+
+// AuthorizeJwt is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message AuthorizeJwt {
+	option (resource_type_names) = "AuthorizeJwt";
+	option (resource_type_names) = "AuthenticationOperation";
+	option (resource_type_names) = "Operation";
+	option (resource_type_names) = "Functionality";
+
+	Authenticity authenticity = 8497;
+	CodeRegion code_region = 12233;
 }
 
 // AutomaticUpdates is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -290,6 +369,16 @@ message BlockStorage {
 	UsageStatistics usage_statistics = 17806;
 }
 
+// BlockStorageOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message BlockStorageOperation {
+	option (resource_type_names) = "BlockStorageOperation";
+	option (resource_type_names) = "Operation";
+	option (resource_type_names) = "Functionality";
+
+	optional string block_storage_id = 9129;
+	CodeRegion code_region = 7586;
+}
+
 // BootLogging is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message BootLogging {
 	option (resource_type_names) = "BootLogging";
@@ -302,6 +391,13 @@ message BootLogging {
 	google.protobuf.Duration retention_period = 2338;
 	bool security_alerts_enabled = 3133;
 	repeated string logging_service_ids  = 15790;
+}
+
+// Boundary is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Boundary {
+	option (resource_type_names) = "Boundary";
+	option (resource_type_names) = "Functionality";
+
 }
 
 // CICDService is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -352,11 +448,28 @@ message CertificateBasedAuthentication {
 	int32 rotation_interval = 9404;
 }
 
+// CheckAccess is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message CheckAccess {
+	option (resource_type_names) = "CheckAccess";
+	option (resource_type_names) = "ProtectedAssetOperation";
+
+}
+
+// Cipher is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+message Cipher {
+
+	oneof type {
+		AsymmetricCipher asymmetric_cipher = 10409;
+		HybridCipher hybrid_cipher = 5502;
+		SymmetricCipher symmetric_cipher = 8917;
+	}
+}
+
 // CipherOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message CipherOperation {
 
 	oneof type {
-		Decryption decryption = 12173;
+		Decryption decryption = 13899;
 	}
 }
 
@@ -372,6 +485,7 @@ message CipherSuite {
 	string mac_algorithm = 2344;
 	// naming schema: AES-128-GCM
 	string session_cipher = 5742;
+	repeated Cipher ciphers  = 5474;
 }
 
 // Infrastructure is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -389,7 +503,7 @@ message Infrastructure {
 		ContainerOrchestration container_orchestration = 3211;
 		ContainerRegistry container_registry = 8326;
 		Certificate certificate = 8542;
-		Key key = 5122;
+		Key key = 18164;
 		Secret secret = 16127;
 		Identity identity = 14693;
 		RoleAssignment role_assignment = 2361;
@@ -489,9 +603,154 @@ message Compute {
 message Confidentiality {
 
 	oneof type {
+		CustomerKeyEncryption customer_key_encryption = 11802;
+		DiskEncryption disk_encryption = 8972;
+		ManagedKeyEncryption managed_key_encryption = 11520;
+		TransportEncryption transport_encryption = 14131;
 		EncryptionInUse encryption_in_use = 15775;
-		TransportEncryption transport_encryption = 15929;
 	}
+}
+
+// Configuration is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Configuration {
+	option (resource_type_names) = "Configuration";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 9313;
+	string description = 4417;
+	string id = 6322 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 201;
+	string name = 6896 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 17099;
+	repeated string configuration_group_ids  = 4537;
+	DataLocation data_location = 18259;
+	optional string parent_id = 6916;
+}
+
+// ConfigurationDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ConfigurationDocument {
+	option (resource_type_names) = "ConfigurationDocument";
+	option (resource_type_names) = "Document";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 366;
+	string description = 13594;
+	string filetype = 17989;
+	string id = 6200 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 656;
+	string name = 1266 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 1506;
+	DataLocation data_location = 3882;
+	repeated DocumentChecksum document_checksums  = 8326;
+	repeated DocumentSignature document_signatures  = 18021;
+	optional string parent_id = 15783;
+	SchemaValidation schema_validation = 2692;
+	repeated SecurityFeature security_features  = 6789;
+}
+
+// ConfigurationGroup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ConfigurationGroup {
+	option (resource_type_names) = "ConfigurationGroup";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 12120;
+	string description = 3778;
+	string id = 17529 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 1612;
+	string name = 14875 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 15135;
+	optional string configuration_id = 2133;
+	repeated string configuration_option_ids  = 2785;
+	DataLocation data_location = 17869;
+	optional string parent_id = 7515;
+}
+
+// ConfigurationGroupSource is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ConfigurationGroupSource {
+	option (resource_type_names) = "ConfigurationGroupSource";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 10113;
+	string description = 9933;
+	string id = 12139 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 2039;
+	string name = 7188 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 10682;
+	DataLocation data_location = 12198;
+	optional string parent_id = 11898;
+}
+
+// ConfigurationOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ConfigurationOperation {
+	option (resource_type_names) = "ConfigurationOperation";
+	option (resource_type_names) = "Operation";
+	option (resource_type_names) = "Functionality";
+
+	CodeRegion code_region = 6561;
+	optional string configuration_id = 3044;
+}
+
+// ConfigurationOption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ConfigurationOption {
+	option (resource_type_names) = "ConfigurationOption";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 9806;
+	string description = 11906;
+	string id = 7923 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 16245;
+	string name = 17275 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 8644;
+	optional string configuration_group_id = 527;
+	DataLocation data_location = 15356;
+	optional string key_id = 7543;
+	optional string parent_id = 2843;
+	Value value = 14288;
+}
+
+// ConfigurationOptionSource is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ConfigurationOptionSource {
+	option (resource_type_names) = "ConfigurationOptionSource";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 9931;
+	string description = 9308;
+	string id = 6310 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 7763;
+	string name = 15744 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 9031;
+	DataLocation data_location = 16310;
+	optional string parent_id = 5779;
+}
+
+// ConfigurationSource is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ConfigurationSource {
+	option (resource_type_names) = "ConfigurationSource";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 13741;
+	string description = 10663;
+	string id = 7343 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 8766;
+	string name = 8639 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 16840;
+	repeated string configuration_group_source_ids  = 12585;
+	DataLocation data_location = 2532;
+	optional string parent_id = 9707;
 }
 
 // Container is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -589,6 +848,23 @@ message ContainerRegistry {
 	UsageStatistics usage_statistics = 17864;
 }
 
+// Context is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Context {
+	option (resource_type_names) = "Context";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 8888;
+	string description = 18745;
+	string id = 2967 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 16579;
+	string name = 12248 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 4517;
+	DataLocation data_location = 5123;
+	optional string parent_id = 8416;
+}
+
 // Core is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Core {
 
@@ -601,12 +877,30 @@ message Core {
 	}
 }
 
+// CreateEncryptedDisk is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message CreateEncryptedDisk {
+	option (resource_type_names) = "CreateEncryptedDisk";
+	option (resource_type_names) = "DiskEncryptionOperation";
+	option (resource_type_names) = "Operation";
+	option (resource_type_names) = "Functionality";
+
+	CodeRegion code_region = 18358;
+	DiskEncryption disk_encryption = 14076;
+}
+
+// CreateSecret is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message CreateSecret {
+	option (resource_type_names) = "CreateSecret";
+	option (resource_type_names) = "SecretOperation";
+
+}
+
 // Credential is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Credential {
 
 	oneof type {
 		Certificate certificate = 8542;
-		Key key = 5122;
+		Key key = 18164;
 		Secret secret = 16127;
 	}
 }
@@ -635,10 +929,14 @@ message CustomerKeyEncryption {
 	option (resource_type_names) = "CustomerKeyEncryption";
 	option (resource_type_names) = "AtRestEncryption";
 	option (resource_type_names) = "Encryption";
+	option (resource_type_names) = "Confidentiality";
+	option (resource_type_names) = "SecurityFeature";
 
-	string algorithm = 2351;
-	bool enabled = 15749;
-	string key_url = 9135;
+	string algorithm = 12685;
+	bool enabled = 14976;
+	string key_url = 13999;
+	Cipher cipher = 11750;
+	optional string secret_id = 15597;
 }
 
 // DDoSProtection is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -649,14 +947,43 @@ message DDoSProtection {
 
 }
 
+// Darwin is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Darwin {
+	option (resource_type_names) = "Darwin";
+	option (resource_type_names) = "OperatingSystemArchitecture";
+	option (resource_type_names) = "Code";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 11803;
+	string description = 6451;
+	string id = 18308 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 4761;
+	string name = 9393 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 12162;
+	repeated string code_module_ids  = 41;
+	optional string code_repository_id = 4523;
+	repeated Functionality functionalities  = 17232;
+	optional string parent_id = 1632;
+}
+
 // Data is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Data {
 
 	oneof type {
+		Configuration configuration = 6130;
+		ConfigurationGroup configuration_group = 17518;
+		ConfigurationGroupSource configuration_group_source = 18167;
+		ConfigurationOption configuration_option = 2178;
+		ConfigurationOptionSource configuration_option_source = 849;
+		ConfigurationSource configuration_source = 292;
+		Context context = 1041;
+		ConfigurationDocument configuration_document = 1193;
 		GenericDocument generic_document = 4992;
 		PolicyDocument policy_document = 14953;
 		SecurityAdvisoryDocument security_advisory_document = 14717;
 		ServiceMetadataDocument service_metadata_document = 272;
+		Key key = 18164;
 		MachineLearningDataset machine_learning_dataset = 2040;
 		MachineLearningModel machine_learning_model = 15393;
 	}
@@ -683,6 +1010,7 @@ message DatabaseConnect {
 	CodeRegion code_region = 5983;
 	repeated string database_service_ids  = 5749;
 	optional string database_storage_id = 3674;
+	optional string database_storage_id = 3674;
 }
 
 // DatabaseOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -705,6 +1033,7 @@ message DatabaseQuery {
 	bool modify = 7601;
 	CodeRegion code_region = 8496;
 	repeated string database_service_ids  = 14358;
+	optional string database_storage_id = 17880;
 	optional string database_storage_id = 17880;
 }
 
@@ -748,12 +1077,24 @@ message DatabaseStorage {
 	UsageStatistics usage_statistics = 283;
 }
 
+// DeAllocate is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message DeAllocate {
+	option (resource_type_names) = "DeAllocate";
+	option (resource_type_names) = "MemoryOperation";
+
+}
+
 // Decryption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message Decryption {
 	option (resource_type_names) = "Decryption";
 	option (resource_type_names) = "CipherOperation";
+	option (resource_type_names) = "Operation";
+	option (resource_type_names) = "Functionality";
 
-	string algorithm = 13837;
+	string algorithm = 7747;
+	Cipher cipher = 8737;
+	CodeRegion code_region = 7700;
+	optional string secret_id = 13919;
 }
 
 // DeviceProvisioningService is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -778,11 +1119,36 @@ message DeviceProvisioningService {
 	UsageStatistics usage_statistics = 8367;
 }
 
+// DiskEncryption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message DiskEncryption {
+	option (resource_type_names) = "DiskEncryption";
+	option (resource_type_names) = "AtRestEncryption";
+	option (resource_type_names) = "Encryption";
+	option (resource_type_names) = "Confidentiality";
+	option (resource_type_names) = "SecurityFeature";
+
+	string algorithm = 2867;
+	bool enabled = 9285;
+	string key_url = 6086;
+	optional string block_storage_id = 4264;
+	Cipher cipher = 916;
+	optional string secret_id = 17840;
+}
+
+// DiskEncryptionOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+message DiskEncryptionOperation {
+
+	oneof type {
+		CreateEncryptedDisk create_encrypted_disk = 2290;
+	}
+}
+
 // Document is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 // DataLocation: Describes the location as local or remote location
 message Document {
 
 	oneof type {
+		ConfigurationDocument configuration_document = 1193;
 		GenericDocument generic_document = 4992;
 		PolicyDocument policy_document = 14953;
 		SecurityAdvisoryDocument security_advisory_document = 14717;
@@ -826,12 +1192,29 @@ message DocumentDatabaseService {
 	UsageStatistics usage_statistics = 10074;
 }
 
+// DynamicLoading is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message DynamicLoading {
+	option (resource_type_names) = "DynamicLoading";
+	option (resource_type_names) = "Functionality";
+
+}
+
+// DynamicLoadingOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message DynamicLoadingOperation {
+	option (resource_type_names) = "DynamicLoadingOperation";
+	option (resource_type_names) = "MemoryOperation";
+
+	optional string operating_system_architecture_id = 8153;
+}
+
 // Encryption is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Encryption {
 
 	oneof type {
-		CustomerKeyEncryption customer_key_encryption = 14050;
-		ManagedKeyEncryption managed_key_encryption = 4126;
+		CustomerKeyEncryption customer_key_encryption = 11802;
+		DiskEncryption disk_encryption = 8972;
+		ManagedKeyEncryption managed_key_encryption = 11520;
+		TransportEncryption transport_encryption = 14131;
 	}
 }
 
@@ -853,6 +1236,19 @@ message Encryption {
 
 	string algorithm = 16274;
 	CodeRegion code_region = 9339;
+	Confidentiality confidentiality = 2898;
+}
+
+// EntryPoint is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message EntryPoint {
+	option (resource_type_names) = "EntryPoint";
+
+}
+
+// EqualityCheck is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message EqualityCheck {
+	option (resource_type_names) = "EqualityCheck";
+
 }
 
 // Error is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -863,11 +1259,41 @@ message Error {
 	string message = 3497;
 }
 
+// ExitBoundaryOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ExitBoundaryOperation {
+	option (resource_type_names) = "ExitBoundaryOperation";
+
+}
+
 // ExplainableResults is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message ExplainableResults {
 	option (resource_type_names) = "ExplainableResults";
 	option (resource_type_names) = "Reliability";
 	option (resource_type_names) = "SecurityFeature";
+
+}
+
+// File is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message File {
+	option (resource_type_names) = "File";
+
+}
+
+// FileHandle is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message FileHandle {
+	option (resource_type_names) = "FileHandle";
+
+}
+
+// FileLikeObject is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message FileLikeObject {
+	option (resource_type_names) = "FileLikeObject";
+
+}
+
+// FileOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message FileOperation {
+	option (resource_type_names) = "FileOperation";
 
 }
 
@@ -1015,22 +1441,44 @@ message FunctionService {
 message Functionality {
 
 	oneof type {
+		Boundary boundary = 10636;
+		AsymmetricCipher asymmetric_cipher = 10409;
+		HybridCipher hybrid_cipher = 5502;
+		SymmetricCipher symmetric_cipher = 8917;
 		CipherSuite cipher_suite = 11132;
 		CodeRegion code_region = 9184;
 		LocalDataLocation local_data_location = 12313;
 		RemoteDataLocation remote_data_location = 13541;
+		DynamicLoading dynamic_loading = 2731;
 		Error error = 6544;
 		HttpEndpoint http_endpoint = 4266;
 		HttpRequestHandler http_request_handler = 7403;
+		InitializationVector initialization_vector = 7483;
+		Input input = 2243;
+		KeyDerivationFunction key_derivation_function = 2001;
+		MessageAuthenticationCode message_authentication_code = 8921;
+		Authenticate authenticate = 1798;
+		AuthorizeJwt authorize_jwt = 1893;
+		BlockStorageOperation block_storage_operation = 14855;
+		Decryption decryption = 13899;
+		ConfigurationOperation configuration_operation = 15481;
 		Encryption encryption = 2715;
 		CryptographicHash cryptographic_hash = 7725;
 		DatabaseConnect database_connect = 10798;
 		DatabaseQuery database_query = 7698;
+		CreateEncryptedDisk create_encrypted_disk = 2290;
+		GetCurrentTimeOperation get_current_time_operation = 17282;
 		HttpRequest http_request = 2901;
+		InputValidationOperation input_validation_operation = 14785;
+		InstallUpdate install_update = 199;
 		LogOperation log_operation = 14250;
 		ObjectStorageRequest object_storage_request = 16887;
+		Output output = 7223;
+		Padding padding = 9245;
+		RateLimiting rate_limiting = 4546;
 		SchemaValidation schema_validation = 16331;
 		SecurityAdvisoryFeed security_advisory_feed = 13903;
+		Time time = 16225;
 		Vulnerability vulnerability = 5095;
 	}
 }
@@ -1108,6 +1556,30 @@ message GeoRedundancy {
 	repeated GeoLocation geo_locations  = 13910;
 }
 
+// GetCurrentTimeOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message GetCurrentTimeOperation {
+	option (resource_type_names) = "GetCurrentTimeOperation";
+	option (resource_type_names) = "Operation";
+	option (resource_type_names) = "Functionality";
+
+	CodeRegion code_region = 9108;
+	Time time = 14351;
+}
+
+// GetSecret is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message GetSecret {
+	option (resource_type_names) = "GetSecret";
+
+}
+
+// Hardware is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+message Hardware {
+
+	oneof type {
+		Memory memory = 967;
+	}
+}
+
 // CryptographicHash is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message CryptographicHash {
 	option (resource_type_names) = "CryptographicHash";
@@ -1118,6 +1590,19 @@ message CryptographicHash {
 	string algorithm = 9887;
 	bool uses_salt = 8538;
 	CodeRegion code_region = 6454;
+	Confidentiality confidentiality = 12937;
+}
+
+// Http is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Http {
+	option (resource_type_names) = "Http";
+
+}
+
+// HttpClient is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message HttpClient {
+	option (resource_type_names) = "HttpClient";
+
 }
 
 // HttpClientLibrary is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1125,6 +1610,12 @@ message HttpClientLibrary {
 	option (resource_type_names) = "HttpClientLibrary";
 	option (resource_type_names) = "Framework";
 	option (resource_type_names) = "Core";
+
+}
+
+// HttpClientOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message HttpClientOperation {
+	option (resource_type_names) = "HttpClientOperation";
 
 }
 
@@ -1143,6 +1634,12 @@ message HttpEndpoint {
 	TransportEncryption transport_encryption = 12277;
 }
 
+// HttpEndpointOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message HttpEndpointOperation {
+	option (resource_type_names) = "HttpEndpointOperation";
+
+}
+
 // HttpRequest is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message HttpRequest {
 	option (resource_type_names) = "HttpRequest";
@@ -1155,6 +1652,12 @@ message HttpRequest {
 	repeated HttpEndpoint http_endpoints  = 8204;
 }
 
+// HttpRequestContext is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message HttpRequestContext {
+	option (resource_type_names) = "HttpRequestContext";
+
+}
+
 // HttpRequestHandler is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message HttpRequestHandler {
 	option (resource_type_names) = "HttpRequestHandler";
@@ -1163,6 +1666,12 @@ message HttpRequestHandler {
 	string path = 3307;
 	optional string application_id = 9918;
 	repeated HttpEndpoint http_endpoints  = 8938;
+}
+
+// HttpRequestHandlerOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message HttpRequestHandlerOperation {
+	option (resource_type_names) = "HttpRequestHandlerOperation";
+
 }
 
 // HttpServer is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1181,6 +1690,22 @@ message HumanResources {
 		AwarenessTraining awareness_training = 13539;
 		SecurityTraining security_training = 5053;
 	}
+}
+
+// HybridCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message HybridCipher {
+	option (resource_type_names) = "HybridCipher";
+	option (resource_type_names) = "Cipher";
+	option (resource_type_names) = "Functionality";
+
+	int32 block_size = 4029;
+	string cipher_name = 4930;
+	int32 key_size = 5462;
+	AsymmetricCipher asymmetric_cipher = 4505;
+	KeyDerivationFunction key_derivation_function = 12920;
+	MessageAuthenticationCode message_authentication_code = 13152;
+	Padding padding = 14710;
+	SymmetricCipher symmetric_cipher = 17047;
 }
 
 // Identifiable is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1240,6 +1765,43 @@ message Immutability {
 	bool enabled = 1859;
 }
 
+// InitializationVector is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message InitializationVector {
+	option (resource_type_names) = "InitializationVector";
+	option (resource_type_names) = "Functionality";
+
+}
+
+// Input is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Input {
+	option (resource_type_names) = "Input";
+	option (resource_type_names) = "Functionality";
+
+}
+
+// InputValidationOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message InputValidationOperation {
+	option (resource_type_names) = "InputValidationOperation";
+	option (resource_type_names) = "Operation";
+	option (resource_type_names) = "Functionality";
+
+	CodeRegion code_region = 13110;
+	Input input = 8005;
+	Input input = 8005;
+	Output output = 15115;
+}
+
+// InstallUpdate is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message InstallUpdate {
+	option (resource_type_names) = "InstallUpdate";
+	option (resource_type_names) = "Operation";
+	option (resource_type_names) = "Functionality";
+
+	AutomaticUpdates automatic_updates = 18834;
+	AutomaticUpdates automatic_updates = 18834;
+	CodeRegion code_region = 11237;
+}
+
 // Integrity is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Integrity {
 
@@ -1260,6 +1822,12 @@ message IoT {
 		DeviceProvisioningService device_provisioning_service = 14564;
 		MessagingHub messaging_hub = 12819;
 	}
+}
+
+// IssueJwt is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message IssueJwt {
+	option (resource_type_names) = "IssueJwt";
+
 }
 
 // Job is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1284,6 +1852,12 @@ message Job {
 	UsageStatistics usage_statistics = 11249;
 }
 
+// JwtAuthentication is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message JwtAuthentication {
+	option (resource_type_names) = "JwtAuthentication";
+
+}
+
 // TokenBasedAuthentication is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message TokenBasedAuthentication {
 	option (resource_type_names) = "TokenBasedAuthentication";
@@ -1300,30 +1874,29 @@ message TokenBasedAuthentication {
 // Key is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message Key {
 	option (resource_type_names) = "Key";
-	option (resource_type_names) = "Credential";
-	option (resource_type_names) = "Infrastructure";
+	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	string algorithm = 1413;
-	google.protobuf.Timestamp creation_time = 4922;
-	string description = 17406;
-	bool enabled = 12499;
-	google.protobuf.Timestamp expiration_date = 15098;
-	string id = 15294 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 434;
-	bool is_managed = 16202;
-	int32 key_size = 16391;
-	map<string, string> labels = 4273;
-	string name = 18961 [ (buf.validate.field).required = true ];
-	google.protobuf.Timestamp not_before_date = 235;
+	string algorithm = 4145;
+	google.protobuf.Timestamp creation_time = 14400;
+	string description = 17066;
+	string id = 8404 [ (buf.validate.field).required = true ];
+	int32 key_size = 8995;
+	map<string, string> labels = 233;
+	string name = 707 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 11846;
-	GeoLocation geo_location = 16066;
-	optional string infrastructure_id = 15145;
-	repeated Logging loggings  = 360;
-	repeated Redundancy redundancies  = 12591;
-	optional string parent_id = 4414;
-	UsageStatistics usage_statistics = 9113;
+	string raw = 10463;
+	DataLocation data_location = 1996;
+	optional string parent_id = 10069;
+}
+
+// KeyDerivationFunction is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message KeyDerivationFunction {
+	option (resource_type_names) = "KeyDerivationFunction";
+	option (resource_type_names) = "Functionality";
+
+	string type = 3552;
+	Input input = 12916;
 }
 
 // KeyValueDatabaseService is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1419,6 +1992,12 @@ message Library {
 	repeated Vulnerability vulnerabilities  = 3131;
 }
 
+// LibraryEntryPoint is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message LibraryEntryPoint {
+	option (resource_type_names) = "LibraryEntryPoint";
+
+}
+
 // LoadBalancer is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 // A Load Balancer may have multiple access restriction features, e.g. a L3 firewall and a WAF
 message LoadBalancer {
@@ -1453,6 +2032,24 @@ message LoadBalancer {
 	UsageStatistics usage_statistics = 16809;
 }
 
+// LoadConfiguration is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message LoadConfiguration {
+	option (resource_type_names) = "LoadConfiguration";
+
+}
+
+// LoadLibrary is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message LoadLibrary {
+	option (resource_type_names) = "LoadLibrary";
+
+}
+
+// LoadSymbol is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message LoadSymbol {
+	option (resource_type_names) = "LoadSymbol";
+
+}
+
 // LocalAttestation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message LocalAttestation {
 	option (resource_type_names) = "LocalAttestation";
@@ -1474,6 +2071,12 @@ message LocalDataLocation {
 	optional string storage_id = 8744;
 }
 
+// LocalEntryPoint is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message LocalEntryPoint {
+	option (resource_type_names) = "LocalEntryPoint";
+
+}
+
 // LocalRedundancy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message LocalRedundancy {
 	option (resource_type_names) = "LocalRedundancy";
@@ -1482,6 +2085,24 @@ message LocalRedundancy {
 	option (resource_type_names) = "SecurityFeature";
 
 	repeated GeoLocation geo_locations  = 5006;
+}
+
+// LogDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message LogDocument {
+	option (resource_type_names) = "LogDocument";
+
+}
+
+// LogGet is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message LogGet {
+	option (resource_type_names) = "LogGet";
+
+}
+
+// LogOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message LogOperation {
+	option (resource_type_names) = "LogOperation";
+
 }
 
 // LogOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1495,6 +2116,12 @@ message LogOperation {
 	string value = 7549;
 	CodeRegion code_region = 11664;
 	Logging logging = 12393;
+}
+
+// LogWrite is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message LogWrite {
+	option (resource_type_names) = "LogWrite";
+
 }
 
 // Logger is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1633,6 +2260,12 @@ message MachineLearningService {
 	UsageStatistics usage_statistics = 5491;
 }
 
+// Main is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Main {
+	option (resource_type_names) = "Main";
+
+}
+
 // MalwareProtection is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 // analyzes the activity within a Compute resource
 message MalwareProtection {
@@ -1651,10 +2284,51 @@ message ManagedKeyEncryption {
 	option (resource_type_names) = "ManagedKeyEncryption";
 	option (resource_type_names) = "AtRestEncryption";
 	option (resource_type_names) = "Encryption";
+	option (resource_type_names) = "Confidentiality";
+	option (resource_type_names) = "SecurityFeature";
 
-	string algorithm = 16252;
-	bool enabled = 2205;
-	string key_url = 2861;
+	string algorithm = 4822;
+	bool enabled = 13201;
+	string key_url = 16982;
+	Cipher cipher = 8904;
+	optional string secret_id = 8250;
+}
+
+// Memory is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Memory {
+	option (resource_type_names) = "Memory";
+	option (resource_type_names) = "Hardware";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 13895;
+	string description = 3400;
+	string id = 5207 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 14359;
+	string mode = 16940;
+	string name = 13793 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 13754;
+	optional string parent_id = 14419;
+}
+
+// MemoryOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+message MemoryOperation {
+
+	oneof type {
+		Allocate allocate = 3503;
+		DeAllocate de_allocate = 3651;
+		DynamicLoadingOperation dynamic_loading_operation = 9577;
+	}
+}
+
+// MessageAuthenticationCode is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message MessageAuthenticationCode {
+	option (resource_type_names) = "MessageAuthenticationCode";
+	option (resource_type_names) = "Functionality";
+
+	string type = 16668;
+	Input input = 5283;
+	optional string key_id = 11118;
 }
 
 // MessagingHub is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1937,18 +2611,65 @@ message ObjectStorageService {
 	UsageStatistics usage_statistics = 14005;
 }
 
+// OperatingSystemArchitecture is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+message OperatingSystemArchitecture {
+
+	oneof type {
+		Agnostic agnostic = 14214;
+		Darwin darwin = 18646;
+		POSIX posix = 8103;
+		Win32 win32 = 6454;
+	}
+}
+
 // Operation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Operation {
 
 	oneof type {
+		Authenticate authenticate = 1798;
+		AuthorizeJwt authorize_jwt = 1893;
+		BlockStorageOperation block_storage_operation = 14855;
+		Decryption decryption = 13899;
+		ConfigurationOperation configuration_operation = 15481;
 		Encryption encryption = 2715;
 		CryptographicHash cryptographic_hash = 7725;
 		DatabaseConnect database_connect = 10798;
 		DatabaseQuery database_query = 7698;
+		CreateEncryptedDisk create_encrypted_disk = 2290;
+		GetCurrentTimeOperation get_current_time_operation = 17282;
 		HttpRequest http_request = 2901;
+		InputValidationOperation input_validation_operation = 14785;
+		InstallUpdate install_update = 199;
 		LogOperation log_operation = 14250;
 		ObjectStorageRequest object_storage_request = 16887;
 	}
+}
+
+// Output is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Output {
+	option (resource_type_names) = "Output";
+	option (resource_type_names) = "Functionality";
+
+}
+
+// POSIX is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message POSIX {
+	option (resource_type_names) = "POSIX";
+	option (resource_type_names) = "OperatingSystemArchitecture";
+	option (resource_type_names) = "Code";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 13531;
+	string description = 4720;
+	string id = 6746 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 8873;
+	string name = 18076 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 6560;
+	repeated string code_module_ids  = 1571;
+	optional string code_repository_id = 11937;
+	repeated Functionality functionalities  = 13007;
+	optional string parent_id = 15779;
 }
 
 // Package is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1970,6 +2691,14 @@ message Package {
 	optional string code_repository_id = 18580;
 	repeated Functionality functionalities  = 5551;
 	optional string parent_id = 5664;
+}
+
+// Padding is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Padding {
+	option (resource_type_names) = "Padding";
+	option (resource_type_names) = "Functionality";
+
+	string scheme = 15940;
 }
 
 // PasswordBasedAuthentication is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2005,6 +2734,12 @@ message PasswordPolicy {
 	UsageStatistics usage_statistics = 14852;
 }
 
+// Policy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Policy {
+	option (resource_type_names) = "Policy";
+
+}
+
 // PolicyDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message PolicyDocument {
 	option (resource_type_names) = "PolicyDocument";
@@ -2026,6 +2761,58 @@ message PolicyDocument {
 	optional string parent_id = 9358;
 	SchemaValidation schema_validation = 15790;
 	repeated SecurityFeature security_features  = 15024;
+}
+
+// PolicyOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message PolicyOperation {
+	option (resource_type_names) = "PolicyOperation";
+
+}
+
+// PolicyRule is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+message PolicyRule {
+
+	oneof type {
+		AndRule and_rule = 9691;
+	}
+}
+
+// Principal is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Principal {
+	option (resource_type_names) = "Principal";
+
+}
+
+// ProctectedAsset is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ProctectedAsset {
+	option (resource_type_names) = "ProctectedAsset";
+
+}
+
+// ProtectedAssetOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+message ProtectedAssetOperation {
+
+	oneof type {
+		CheckAccess check_access = 6126;
+	}
+}
+
+// ProvideConfiguration is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ProvideConfiguration {
+	option (resource_type_names) = "ProvideConfiguration";
+
+}
+
+// ProvideConfigurationGroup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ProvideConfigurationGroup {
+	option (resource_type_names) = "ProvideConfigurationGroup";
+
+}
+
+// ProvideConfigurationOption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ProvideConfigurationOption {
+	option (resource_type_names) = "ProvideConfigurationOption";
+
 }
 
 // QPU is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2070,6 +2857,27 @@ message RBAC {
 	float mixed_duties = 14446;
 }
 
+// RateLimiting is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message RateLimiting {
+	option (resource_type_names) = "RateLimiting";
+	option (resource_type_names) = "Functionality";
+
+	int32 max_requests = 10375;
+	int32 time_window_seconds = 5064;
+}
+
+// ReadConfiguration is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ReadConfiguration {
+	option (resource_type_names) = "ReadConfiguration";
+
+}
+
+// ReadConfigurationOption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ReadConfigurationOption {
+	option (resource_type_names) = "ReadConfigurationOption";
+
+}
+
 // Redundancy is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Redundancy {
 
@@ -2078,6 +2886,24 @@ message Redundancy {
 		LocalRedundancy local_redundancy = 2537;
 		ZoneRedundancy zone_redundancy = 11145;
 	}
+}
+
+// RegisterConfigurationGroup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message RegisterConfigurationGroup {
+	option (resource_type_names) = "RegisterConfigurationGroup";
+
+}
+
+// RegisterConfigurationOption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message RegisterConfigurationOption {
+	option (resource_type_names) = "RegisterConfigurationOption";
+
+}
+
+// RegisterHttpEndpoint is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message RegisterHttpEndpoint {
+	option (resource_type_names) = "RegisterHttpEndpoint";
+
 }
 
 // RelationalDatabaseService is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2149,6 +2975,18 @@ message RemoteDataLocation {
 	TransportEncryption transport_encryption = 3553;
 }
 
+// RemoteEntryPoint is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message RemoteEntryPoint {
+	option (resource_type_names) = "RemoteEntryPoint";
+
+}
+
+// ReportDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ReportDocument {
+	option (resource_type_names) = "ReportDocument";
+
+}
+
 // Resource is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Resource {
 
@@ -2164,7 +3002,7 @@ message Resource {
 		ContainerOrchestration container_orchestration = 3211;
 		ContainerRegistry container_registry = 8326;
 		Certificate certificate = 8542;
-		Key key = 5122;
+		Key key = 18164;
 		Secret secret = 16127;
 		Identity identity = 14693;
 		RoleAssignment role_assignment = 2361;
@@ -2195,18 +3033,32 @@ message Resource {
 		DatabaseStorage database_storage = 12299;
 		FileStorage file_storage = 2736;
 		ObjectStorage object_storage = 10870;
+		Configuration configuration = 6130;
+		ConfigurationGroup configuration_group = 17518;
+		ConfigurationGroupSource configuration_group_source = 18167;
+		ConfigurationOption configuration_option = 2178;
+		ConfigurationOptionSource configuration_option_source = 849;
+		ConfigurationSource configuration_source = 292;
+		Context context = 1041;
+		ConfigurationDocument configuration_document = 1193;
 		GenericDocument generic_document = 4992;
 		PolicyDocument policy_document = 14953;
 		SecurityAdvisoryDocument security_advisory_document = 14717;
 		ServiceMetadataDocument service_metadata_document = 272;
+		Key key = 18164;
 		MachineLearningDataset machine_learning_dataset = 2040;
 		MachineLearningModel machine_learning_model = 15393;
+		Memory memory = 967;
 		AwarenessTraining awareness_training = 13539;
 		SecurityTraining security_training = 5053;
 		Application application = 18554;
 		Library library = 14265;
 		Package package = 5217;
 		SourceCodeFile source_code_file = 2804;
+		Agnostic agnostic = 14214;
+		Darwin darwin = 18646;
+		POSIX posix = 8103;
+		Win32 win32 = 6454;
 	}
 }
 
@@ -2322,6 +3174,14 @@ message Secret {
 	UsageStatistics usage_statistics = 10517;
 }
 
+// SecretOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+message SecretOperation {
+
+	oneof type {
+		CreateSecret create_secret = 18761;
+	}
+}
+
 // SecurityAdvisoryDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message SecurityAdvisoryDocument {
 	option (resource_type_names) = "SecurityAdvisoryDocument";
@@ -2415,8 +3275,11 @@ message SecurityFeature {
 		GeoRedundancy geo_redundancy = 2436;
 		LocalRedundancy local_redundancy = 2537;
 		ZoneRedundancy zone_redundancy = 11145;
+		CustomerKeyEncryption customer_key_encryption = 11802;
+		DiskEncryption disk_encryption = 8972;
+		ManagedKeyEncryption managed_key_encryption = 11520;
+		TransportEncryption transport_encryption = 14131;
 		EncryptionInUse encryption_in_use = 15775;
-		TransportEncryption transport_encryption = 15929;
 		LocalAttestation local_attestation = 4296;
 		RemoteAttestation remote_attestation = 13640;
 		AutomaticUpdates automatic_updates = 9990;
@@ -2500,6 +3363,10 @@ message Code {
 		Library library = 14265;
 		Package package = 5217;
 		SourceCodeFile source_code_file = 2804;
+		Agnostic agnostic = 14214;
+		Darwin darwin = 18646;
+		POSIX posix = 8103;
+		Win32 win32 = 6454;
 	}
 }
 
@@ -2548,6 +3415,34 @@ message StorageService {
 	}
 }
 
+// SymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message SymmetricCipher {
+	option (resource_type_names) = "SymmetricCipher";
+	option (resource_type_names) = "Cipher";
+	option (resource_type_names) = "Functionality";
+
+	int32 auth_tag_size = 7608;
+	int32 block_size = 11096;
+	string cipher_name = 1930;
+	int32 key_size = 488;
+	string modus = 10292;
+	InitializationVector initialization_vector = 562;
+	Padding padding = 6575;
+}
+
+// Time is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Time {
+	option (resource_type_names) = "Time";
+	option (resource_type_names) = "Functionality";
+
+}
+
+// Token is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Token {
+	option (resource_type_names) = "Token";
+
+}
+
 // Training is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Training {
 
@@ -2561,14 +3456,23 @@ message Training {
 // enabled means the resource _can_ be reached via https, while enforced means it _can only_ be reached via https (or http traffic is redirected)
 message TransportEncryption {
 	option (resource_type_names) = "TransportEncryption";
+	option (resource_type_names) = "Encryption";
 	option (resource_type_names) = "Confidentiality";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 2648;
-	bool enforced = 8230;
-	string protocol = 14651;
-	float protocol_version = 2365;
-	repeated CipherSuite cipher_suites  = 17881;
+	bool enabled = 14517;
+	bool enforced = 9699;
+	string protocol = 6987;
+	float protocol_version = 11009;
+	Cipher cipher = 7770;
+	repeated CipherSuite cipher_suites  = 3447;
+	optional string secret_id = 11526;
+}
+
+// UnlockEncryptedDisk is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message UnlockEncryptedDisk {
+	option (resource_type_names) = "UnlockEncryptedDisk";
+
 }
 
 // UsageStatistics is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2601,6 +3505,18 @@ message VMImage {
 	repeated Redundancy redundancies  = 18349;
 	optional string parent_id = 13735;
 	UsageStatistics usage_statistics = 2369;
+}
+
+// ValidateJwt is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ValidateJwt {
+	option (resource_type_names) = "ValidateJwt";
+
+}
+
+// Value is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Value {
+	option (resource_type_names) = "Value";
+
 }
 
 // VirtualMachine is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2707,6 +3623,26 @@ message WebApplicationFirewall {
 	bool enabled = 8961;
 }
 
+// Win32 is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Win32 {
+	option (resource_type_names) = "Win32";
+	option (resource_type_names) = "OperatingSystemArchitecture";
+	option (resource_type_names) = "Code";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 9110;
+	string description = 2068;
+	string id = 8737 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 12211;
+	string name = 8220 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 17302;
+	repeated string code_module_ids  = 3880;
+	optional string code_repository_id = 11175;
+	repeated Functionality functionalities  = 13561;
+	optional string parent_id = 10856;
+}
+
 // Workflow is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message Workflow {
 	option (resource_type_names) = "Workflow";
@@ -2737,968 +3673,4 @@ message ZoneRedundancy {
 	option (resource_type_names) = "SecurityFeature";
 
 	repeated GeoLocation geo_locations  = 11767;
-}
-
-// functionality#AsymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#AsymmetricCipher {
-	option (resource_type_names) = "functionality#AsymmetricCipher";
-	option (resource_type_names) = "Cipher";
-	option (resource_type_names) = "Functionality";
-
-	int32 block_size = 5004;
-	string functionality#cipher_name = 10107;
-	int32 key_size = 3156;
-	functionality#Padding functionality#_padding = 7700;
-}
-
-// functionality#GetCurrentTimeOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#GetCurrentTimeOperation {
-	option (resource_type_names) = "functionality#GetCurrentTimeOperation";
-	option (resource_type_names) = "Operation";
-
-	functionality#Time functionality#_time = 9215;
-}
-
-// functionality#HybridCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#HybridCipher {
-	option (resource_type_names) = "functionality#HybridCipher";
-	option (resource_type_names) = "Cipher";
-	option (resource_type_names) = "Functionality";
-
-	int32 block_size = 6775;
-	string functionality#cipher_name = 1611;
-	int32 key_size = 637;
-	functionality#AsymmetricCipher functionality#_asymmetric_cipher = 5759;
-	functionality#KeyDerivationFunction functionality#_key_derivation_function = 6219;
-	functionality#MessageAuthenticationCode functionality#_message_authentication_code = 13543;
-	functionality#Padding functionality#_padding = 3994;
-	functionality#SymmetricCipher functionality#_symmetric_cipher = 4059;
-}
-
-// functionality#InitializationVector is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#InitializationVector {
-	option (resource_type_names) = "functionality#InitializationVector";
-	option (resource_type_names) = "Functionality";
-
-}
-
-// functionality#Input is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#Input {
-	option (resource_type_names) = "functionality#Input";
-	option (resource_type_names) = "Functionality";
-
-}
-
-// functionality#InputValidationOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#InputValidationOperation {
-	option (resource_type_names) = "functionality#InputValidationOperation";
-	option (resource_type_names) = "Operation";
-
-	functionality#Input functionality#_input = 8905;
-	functionality#Input functionality#_input = 8905;
-	functionality#Output functionality#_output = 1897;
-}
-
-// functionality#InstallUpdate is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#InstallUpdate {
-	option (resource_type_names) = "functionality#InstallUpdate";
-	option (resource_type_names) = "Operation";
-
-	AutomaticUpdates automatic_updates = 8359;
-	AutomaticUpdates automatic_updates = 8359;
-}
-
-// functionality#Key is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#Key {
-	option (resource_type_names) = "functionality#Key";
-
-}
-
-// functionality#KeyDerivationFunction is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#KeyDerivationFunction {
-	option (resource_type_names) = "functionality#KeyDerivationFunction";
-
-}
-
-// functionality#MessageAuthenticationCode is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#MessageAuthenticationCode {
-	option (resource_type_names) = "functionality#MessageAuthenticationCode";
-
-}
-
-// functionality#Output is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#Output {
-	option (resource_type_names) = "functionality#Output";
-
-}
-
-// functionality#Padding is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#Padding {
-	option (resource_type_names) = "functionality#Padding";
-
-}
-
-// functionality#RateLimiting is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#RateLimiting {
-	option (resource_type_names) = "functionality#RateLimiting";
-
-}
-
-// functionality#SymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#SymmetricCipher {
-	option (resource_type_names) = "functionality#SymmetricCipher";
-
-}
-
-// functionality#Time is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message functionality#Time {
-	option (resource_type_names) = "functionality#Time";
-
-}
-
-// Allocate is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Allocate {
-	option (resource_type_names) = "Allocate";
-	option (resource_type_names) = "MemoryOperation";
-
-}
-
-// Authenticate is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Authenticate {
-	option (resource_type_names) = "Authenticate";
-	option (resource_type_names) = "AuthenticationOperation";
-	option (resource_type_names) = "Operation";
-
-	Authenticity authenticity = 4357;
-	Credential credential = 15233;
-}
-
-// AuthenticationOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message AuthenticationOperation {
-
-	oneof type {
-		Authenticate authenticate = 5577;
-		AuthorizeJwt authorize_jwt = 10149;
-	}
-}
-
-// Authenticity is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Authenticity {
-	option (resource_type_names) = "Authenticity";
-
-}
-
-// AuthorizeJwt is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message AuthorizeJwt {
-	option (resource_type_names) = "AuthorizeJwt";
-	option (resource_type_names) = "AuthenticationOperation";
-	option (resource_type_names) = "Operation";
-
-	Authenticity authenticity = 12159;
-}
-
-// AutomaticUpdates is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message AutomaticUpdates {
-	option (resource_type_names) = "AutomaticUpdates";
-
-}
-
-// BlockStorage is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message BlockStorage {
-	option (resource_type_names) = "BlockStorage";
-
-}
-
-// BlockStorageOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message BlockStorageOperation {
-	option (resource_type_names) = "BlockStorageOperation";
-	option (resource_type_names) = "Operation";
-
-	BlockStorage block_storage = 4682;
-}
-
-// Boundary is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Boundary {
-	option (resource_type_names) = "Boundary";
-	option (resource_type_names) = "Functionality";
-
-}
-
-// CheckAccess is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message CheckAccess {
-	option (resource_type_names) = "CheckAccess";
-	option (resource_type_names) = "ProtectedAssetOperation";
-
-}
-
-// Cipher is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message Cipher {
-
-	oneof type {
-		functionality#AsymmetricCipher functionality#_asymmetric_cipher = 18459;
-		functionality#HybridCipher functionality#_hybrid_cipher = 9193;
-	}
-}
-
-// CipherOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message CipherOperation {
-
-	oneof type {
-		DecryptionOperation decryption_operation = 6979;
-	}
-}
-
-// CipherSuite is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message CipherSuite {
-	option (resource_type_names) = "CipherSuite";
-
-	repeated Cipher ciphers  = 16897;
-}
-
-// Confidentiality is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Confidentiality {
-	option (resource_type_names) = "Confidentiality";
-
-}
-
-// CreateEncryptedDisk is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message CreateEncryptedDisk {
-	option (resource_type_names) = "CreateEncryptedDisk";
-	option (resource_type_names) = "DiskEncryptionOperation";
-	option (resource_type_names) = "Operation";
-
-	DiskEncryption disk_encryption = 12657;
-}
-
-// CreateSecret is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message CreateSecret {
-	option (resource_type_names) = "CreateSecret";
-	option (resource_type_names) = "SecretOperation";
-
-}
-
-// Credential is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Credential {
-	option (resource_type_names) = "Credential";
-
-}
-
-// CryptographicOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message CryptographicOperation {
-	option (resource_type_names) = "CryptographicOperation";
-
-	Confidentiality confidentiality = 15663;
-}
-
-// DatabaseOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message DatabaseOperation {
-	option (resource_type_names) = "DatabaseOperation";
-
-	DatabaseStorage database_storage = 6728;
-}
-
-// DatabaseStorage is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message DatabaseStorage {
-	option (resource_type_names) = "DatabaseStorage";
-
-}
-
-// DeAllocate is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message DeAllocate {
-	option (resource_type_names) = "DeAllocate";
-	option (resource_type_names) = "MemoryOperation";
-
-}
-
-// DecryptionOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message DecryptionOperation {
-	option (resource_type_names) = "DecryptionOperation";
-	option (resource_type_names) = "CipherOperation";
-	option (resource_type_names) = "Operation";
-
-	Cipher cipher = 8536;
-	Secret secret = 13729;
-}
-
-// DiskEncryption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message DiskEncryption {
-	option (resource_type_names) = "DiskEncryption";
-
-}
-
-// DiskEncryptionOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message DiskEncryptionOperation {
-
-	oneof type {
-		CreateEncryptedDisk create_encrypted_disk = 5059;
-	}
-}
-
-// DynamicLoading is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message DynamicLoading {
-	option (resource_type_names) = "DynamicLoading";
-	option (resource_type_names) = "Functionality";
-
-}
-
-// DynamicLoadingOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message DynamicLoadingOperation {
-	option (resource_type_names) = "DynamicLoadingOperation";
-	option (resource_type_names) = "MemoryOperation";
-
-	OperatingSystemArchitecture operating_system_architecture = 8153;
-}
-
-// EntryPoint is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message EntryPoint {
-	option (resource_type_names) = "EntryPoint";
-
-}
-
-// EqualityCheck is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message EqualityCheck {
-	option (resource_type_names) = "EqualityCheck";
-
-}
-
-// ExitBoundaryOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ExitBoundaryOperation {
-	option (resource_type_names) = "ExitBoundaryOperation";
-
-}
-
-// FileOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message FileOperation {
-	option (resource_type_names) = "FileOperation";
-
-}
-
-// Functionality is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message Functionality {
-
-	oneof type {
-		functionality#InitializationVector functionality#_initialization_vector = 18514;
-		functionality#Input functionality#_input = 2890;
-		Boundary boundary = 10636;
-		functionality#AsymmetricCipher functionality#_asymmetric_cipher = 18459;
-		functionality#HybridCipher functionality#_hybrid_cipher = 9193;
-		DynamicLoading dynamic_loading = 2731;
-	}
-}
-
-// GetSecret is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message GetSecret {
-	option (resource_type_names) = "GetSecret";
-
-}
-
-// Http is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Http {
-	option (resource_type_names) = "Http";
-
-}
-
-// HttpClient is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message HttpClient {
-	option (resource_type_names) = "HttpClient";
-
-}
-
-// HttpClientOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message HttpClientOperation {
-	option (resource_type_names) = "HttpClientOperation";
-
-}
-
-// HttpEndpointOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message HttpEndpointOperation {
-	option (resource_type_names) = "HttpEndpointOperation";
-
-}
-
-// HttpRequestContext is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message HttpRequestContext {
-	option (resource_type_names) = "HttpRequestContext";
-
-}
-
-// HttpRequestHandlerOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message HttpRequestHandlerOperation {
-	option (resource_type_names) = "HttpRequestHandlerOperation";
-
-}
-
-// IssueJwt is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message IssueJwt {
-	option (resource_type_names) = "IssueJwt";
-
-}
-
-// LibraryEntryPoint is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message LibraryEntryPoint {
-	option (resource_type_names) = "LibraryEntryPoint";
-
-}
-
-// LoadConfiguration is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message LoadConfiguration {
-	option (resource_type_names) = "LoadConfiguration";
-
-}
-
-// LoadLibrary is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message LoadLibrary {
-	option (resource_type_names) = "LoadLibrary";
-
-}
-
-// LoadSymbol is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message LoadSymbol {
-	option (resource_type_names) = "LoadSymbol";
-
-}
-
-// LocalEntryPoint is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message LocalEntryPoint {
-	option (resource_type_names) = "LocalEntryPoint";
-
-}
-
-// LogGet is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message LogGet {
-	option (resource_type_names) = "LogGet";
-
-}
-
-// LogOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message LogOperation {
-	option (resource_type_names) = "LogOperation";
-
-}
-
-// LogWrite is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message LogWrite {
-	option (resource_type_names) = "LogWrite";
-
-}
-
-// Main is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Main {
-	option (resource_type_names) = "Main";
-
-}
-
-// MemoryOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message MemoryOperation {
-
-	oneof type {
-		Allocate allocate = 3503;
-		DeAllocate de_allocate = 3651;
-		DynamicLoadingOperation dynamic_loading_operation = 9577;
-	}
-}
-
-// OperatingSystemArchitecture is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message OperatingSystemArchitecture {
-	option (resource_type_names) = "OperatingSystemArchitecture";
-
-}
-
-// Operation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message Operation {
-
-	oneof type {
-		functionality#GetCurrentTimeOperation functionality#_get_current_time_operation = 4895;
-		functionality#InputValidationOperation functionality#_input_validation_operation = 4601;
-		functionality#InstallUpdate functionality#_install_update = 1299;
-		Authenticate authenticate = 5577;
-		AuthorizeJwt authorize_jwt = 10149;
-		BlockStorageOperation block_storage_operation = 3619;
-		DecryptionOperation decryption_operation = 6979;
-		CreateEncryptedDisk create_encrypted_disk = 5059;
-	}
-}
-
-// PolicyOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message PolicyOperation {
-	option (resource_type_names) = "PolicyOperation";
-
-}
-
-// Principal is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Principal {
-	option (resource_type_names) = "Principal";
-
-}
-
-// ProctectedAsset is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ProctectedAsset {
-	option (resource_type_names) = "ProctectedAsset";
-
-}
-
-// ProtectedAssetOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message ProtectedAssetOperation {
-
-	oneof type {
-		CheckAccess check_access = 6126;
-	}
-}
-
-// ProvideConfiguration is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ProvideConfiguration {
-	option (resource_type_names) = "ProvideConfiguration";
-
-}
-
-// ProvideConfigurationGroup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ProvideConfigurationGroup {
-	option (resource_type_names) = "ProvideConfigurationGroup";
-
-}
-
-// ProvideConfigurationOption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ProvideConfigurationOption {
-	option (resource_type_names) = "ProvideConfigurationOption";
-
-}
-
-// ReadConfiguration is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ReadConfiguration {
-	option (resource_type_names) = "ReadConfiguration";
-
-}
-
-// ReadConfigurationOption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ReadConfigurationOption {
-	option (resource_type_names) = "ReadConfigurationOption";
-
-}
-
-// RegisterConfigurationGroup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message RegisterConfigurationGroup {
-	option (resource_type_names) = "RegisterConfigurationGroup";
-
-}
-
-// RegisterConfigurationOption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message RegisterConfigurationOption {
-	option (resource_type_names) = "RegisterConfigurationOption";
-
-}
-
-// RegisterHttpEndpoint is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message RegisterHttpEndpoint {
-	option (resource_type_names) = "RegisterHttpEndpoint";
-
-}
-
-// RemoteEntryPoint is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message RemoteEntryPoint {
-	option (resource_type_names) = "RemoteEntryPoint";
-
-}
-
-// Secret is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Secret {
-	option (resource_type_names) = "Secret";
-
-}
-
-// SecretOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message SecretOperation {
-
-	oneof type {
-		CreateSecret create_secret = 18761;
-	}
-}
-
-// UnlockEncryptedDisk is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message UnlockEncryptedDisk {
-	option (resource_type_names) = "UnlockEncryptedDisk";
-
-}
-
-// ValidateJwt is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ValidateJwt {
-	option (resource_type_names) = "ValidateJwt";
-
-}
-
-// AtRestEncryption is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message AtRestEncryption {
-
-	oneof type {
-		DiskEncryption disk_encryption = 104;
-	}
-}
-
-// BlockStorage is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message BlockStorage {
-	option (resource_type_names) = "BlockStorage";
-
-}
-
-// Cipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Cipher {
-	option (resource_type_names) = "Cipher";
-
-}
-
-// Confidentiality is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message Confidentiality {
-
-	oneof type {
-		Encryption encryption = 6238;
-	}
-}
-
-// DiskEncryption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message DiskEncryption {
-	option (resource_type_names) = "DiskEncryption";
-	option (resource_type_names) = "AtRestEncryption";
-
-	BlockStorage block_storage = 16995;
-}
-
-// Encryption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Encryption {
-	option (resource_type_names) = "Encryption";
-	option (resource_type_names) = "Confidentiality";
-
-	Cipher cipher = 11722;
-	Secret secret = 15340;
-}
-
-// JwtAuthentication is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message JwtAuthentication {
-	option (resource_type_names) = "JwtAuthentication";
-
-}
-
-// Secret is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Secret {
-	option (resource_type_names) = "Secret";
-
-}
-
-// Agnostic is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Agnostic {
-	option (resource_type_names) = "Agnostic";
-	option (resource_type_names) = "OperatingSystemArchitecture";
-
-}
-
-// Darwin is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Darwin {
-	option (resource_type_names) = "Darwin";
-	option (resource_type_names) = "OperatingSystemArchitecture";
-
-}
-
-// OperatingSystemArchitecture is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message OperatingSystemArchitecture {
-
-	oneof type {
-		Agnostic agnostic = 3684;
-		Darwin darwin = 2724;
-	}
-}
-
-// POSIX is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message POSIX {
-	option (resource_type_names) = "POSIX";
-
-}
-
-// Win32 is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Win32 {
-	option (resource_type_names) = "Win32";
-
-}
-
-// document#InitializationVector is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message document#InitializationVector {
-	option (resource_type_names) = "document#InitializationVector";
-
-}
-
-// document#Input is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message document#Input {
-	option (resource_type_names) = "document#Input";
-
-}
-
-// document#Key is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message document#Key {
-	option (resource_type_names) = "document#Key";
-	option (resource_type_names) = "Data";
-
-}
-
-// document#KeyDerivationFunction is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message document#KeyDerivationFunction {
-	option (resource_type_names) = "document#KeyDerivationFunction";
-	option (resource_type_names) = "Functionality";
-
-	string type = 6920;
-	document#Input document#_input = 2597;
-}
-
-// document#MessageAuthenticationCode is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message document#MessageAuthenticationCode {
-	option (resource_type_names) = "document#MessageAuthenticationCode";
-	option (resource_type_names) = "Functionality";
-
-	string type = 9432;
-	document#Input document#_input = 4019;
-	document#Key document#_key = 13684;
-}
-
-// document#Output is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message document#Output {
-	option (resource_type_names) = "document#Output";
-	option (resource_type_names) = "Functionality";
-
-}
-
-// document#Padding is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message document#Padding {
-	option (resource_type_names) = "document#Padding";
-	option (resource_type_names) = "Functionality";
-
-	string document#scheme = 1035;
-}
-
-// document#RateLimiting is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message document#RateLimiting {
-	option (resource_type_names) = "document#RateLimiting";
-	option (resource_type_names) = "Functionality";
-
-	int32 document#max_requests = 5137;
-	int32 document#time_window_seconds = 11823;
-}
-
-// document#SymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message document#SymmetricCipher {
-	option (resource_type_names) = "document#SymmetricCipher";
-	option (resource_type_names) = "Cipher";
-
-	int32 document#auth_tag_size = 16247;
-	string document#modus = 18123;
-	document#InitializationVector document#_initialization_vector = 1536;
-}
-
-// document#Time is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message document#Time {
-	option (resource_type_names) = "document#Time";
-	option (resource_type_names) = "Functionality";
-
-}
-
-// AndRule is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message AndRule {
-	option (resource_type_names) = "AndRule";
-	option (resource_type_names) = "PolicyRule";
-
-}
-
-// Cipher is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message Cipher {
-
-	oneof type {
-		document#SymmetricCipher document#_symmetric_cipher = 3077;
-	}
-}
-
-// Configuration is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Configuration {
-	option (resource_type_names) = "Configuration";
-	option (resource_type_names) = "Data";
-
-	repeated ConfigurationGroup configuration_groups  = 218;
-}
-
-// ConfigurationDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ConfigurationDocument {
-	option (resource_type_names) = "ConfigurationDocument";
-	option (resource_type_names) = "Document";
-
-}
-
-// ConfigurationGroup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ConfigurationGroup {
-	option (resource_type_names) = "ConfigurationGroup";
-	option (resource_type_names) = "Data";
-
-	Configuration configuration = 7463;
-	repeated ConfigurationOption configuration_options  = 14677;
-}
-
-// ConfigurationGroupSource is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ConfigurationGroupSource {
-	option (resource_type_names) = "ConfigurationGroupSource";
-	option (resource_type_names) = "Data";
-
-}
-
-// ConfigurationOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ConfigurationOperation {
-	option (resource_type_names) = "ConfigurationOperation";
-	option (resource_type_names) = "Operation";
-
-	Configuration configuration = 18073;
-}
-
-// ConfigurationOption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ConfigurationOption {
-	option (resource_type_names) = "ConfigurationOption";
-	option (resource_type_names) = "Data";
-
-	ConfigurationGroup configuration_group = 10786;
-	Key key = 10079;
-	Value value = 8048;
-}
-
-// ConfigurationOptionSource is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ConfigurationOptionSource {
-	option (resource_type_names) = "ConfigurationOptionSource";
-	option (resource_type_names) = "Data";
-
-}
-
-// ConfigurationSource is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ConfigurationSource {
-	option (resource_type_names) = "ConfigurationSource";
-	option (resource_type_names) = "Data";
-
-	repeated ConfigurationGroupSource configuration_group_sources  = 4530;
-}
-
-// Context is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Context {
-	option (resource_type_names) = "Context";
-	option (resource_type_names) = "Data";
-
-}
-
-// Data is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message Data {
-
-	oneof type {
-		document#Key document#_key = 16103;
-		Configuration configuration = 11714;
-		ConfigurationGroup configuration_group = 13348;
-		ConfigurationGroupSource configuration_group_source = 18633;
-		ConfigurationOption configuration_option = 9720;
-		ConfigurationOptionSource configuration_option_source = 742;
-		ConfigurationSource configuration_source = 2812;
-		Context context = 15789;
-	}
-}
-
-// Document is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message Document {
-
-	oneof type {
-		ConfigurationDocument configuration_document = 14061;
-	}
-}
-
-// File is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message File {
-	option (resource_type_names) = "File";
-
-}
-
-// FileHandle is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message FileHandle {
-	option (resource_type_names) = "FileHandle";
-
-}
-
-// FileLikeObject is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message FileLikeObject {
-	option (resource_type_names) = "FileLikeObject";
-
-}
-
-// Functionality is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message Functionality {
-
-	oneof type {
-		document#KeyDerivationFunction document#_key_derivation_function = 11751;
-		document#MessageAuthenticationCode document#_message_authentication_code = 9278;
-		document#Output document#_output = 16569;
-		document#Padding document#_padding = 4729;
-		document#RateLimiting document#_rate_limiting = 10809;
-		document#Time document#_time = 11627;
-	}
-}
-
-// Key is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Key {
-	option (resource_type_names) = "Key";
-
-}
-
-// LogDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message LogDocument {
-	option (resource_type_names) = "LogDocument";
-
-}
-
-// Operation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message Operation {
-
-	oneof type {
-		ConfigurationOperation configuration_operation = 5556;
-	}
-}
-
-// Policy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Policy {
-	option (resource_type_names) = "Policy";
-
-}
-
-// PolicyRule is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message PolicyRule {
-
-	oneof type {
-		AndRule and_rule = 9691;
-	}
-}
-
-// ReportDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ReportDocument {
-	option (resource_type_names) = "ReportDocument";
-
-}
-
-// Token is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Token {
-	option (resource_type_names) = "Token";
-
-}
-
-// Value is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Value {
-	option (resource_type_names) = "Value";
-
-}
-
-// core:Confidentiality is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message core:Confidentiality {
-
-	oneof type {
-		core:Encryption core:_encryption = 12977;
-	}
-}
-
-// core:Encryption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message core:Encryption {
-	option (resource_type_names) = "core:Encryption";
-	option (resource_type_names) = "core:Confidentiality";
-
 }
