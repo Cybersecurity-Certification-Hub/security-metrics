@@ -1239,10 +1239,13 @@ message Encryption {
 	Confidentiality confidentiality = 2898;
 }
 
-// EntryPoint is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// EntryPoint is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message EntryPoint {
-	option (resource_type_names) = "EntryPoint";
 
+	oneof type {
+		LocalEntryPoint local_entry_point = 10973;
+		HttpEndpoint http_endpoint = 8995;
+	}
 }
 
 // EqualityCheck is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1450,9 +1453,12 @@ message Functionality {
 		LocalDataLocation local_data_location = 12313;
 		RemoteDataLocation remote_data_location = 13541;
 		DynamicLoading dynamic_loading = 2731;
+		LocalEntryPoint local_entry_point = 10973;
+		HttpEndpoint http_endpoint = 8995;
 		Error error = 6544;
-		HttpEndpoint http_endpoint = 4266;
-		HttpRequestHandler http_request_handler = 7403;
+		HttpClient http_client = 18121;
+		HttpRequestContext http_request_context = 4279;
+		HttpRequestHandler http_request_handler = 147;
 		InitializationVector initialization_vector = 7483;
 		Input input = 2243;
 		KeyDerivationFunction key_derivation_function = 2001;
@@ -1593,15 +1599,21 @@ message CryptographicHash {
 	Confidentiality confidentiality = 12937;
 }
 
-// Http is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Http is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Http {
-	option (resource_type_names) = "Http";
 
+	oneof type {
+		HttpClient http_client = 18121;
+		HttpRequestContext http_request_context = 4279;
+		HttpRequestHandler http_request_handler = 147;
+	}
 }
 
 // HttpClient is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message HttpClient {
 	option (resource_type_names) = "HttpClient";
+	option (resource_type_names) = "Http";
+	option (resource_type_names) = "Functionality";
 
 }
 
@@ -1624,14 +1636,16 @@ message HttpClientOperation {
 // Via the Authenticity relationship, the access type can be specified, e.g. public access (no authentication), password-based, etc.
 message HttpEndpoint {
 	option (resource_type_names) = "HttpEndpoint";
+	option (resource_type_names) = "RemoteEntryPoint";
+	option (resource_type_names) = "EntryPoint";
 	option (resource_type_names) = "Functionality";
 
-	string handler = 9890;
-	string method = 125;
-	string path = 17149;
-	string url = 8687;
-	Authenticity authenticity = 18568;
-	TransportEncryption transport_encryption = 12277;
+	string handler = 8702;
+	string method = 1347;
+	string path = 11504;
+	string url = 16076;
+	Authenticity authenticity = 18265;
+	TransportEncryption transport_encryption = 12830;
 }
 
 // HttpEndpointOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1655,17 +1669,20 @@ message HttpRequest {
 // HttpRequestContext is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message HttpRequestContext {
 	option (resource_type_names) = "HttpRequestContext";
+	option (resource_type_names) = "Http";
+	option (resource_type_names) = "Functionality";
 
 }
 
 // HttpRequestHandler is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message HttpRequestHandler {
 	option (resource_type_names) = "HttpRequestHandler";
+	option (resource_type_names) = "Http";
 	option (resource_type_names) = "Functionality";
 
-	string path = 3307;
-	optional string application_id = 9918;
-	repeated HttpEndpoint http_endpoints  = 8938;
+	string path = 6440;
+	optional string application_id = 18513;
+	repeated HttpEndpoint http_endpoints  = 16073;
 }
 
 // HttpRequestHandlerOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2074,6 +2091,8 @@ message LocalDataLocation {
 // LocalEntryPoint is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message LocalEntryPoint {
 	option (resource_type_names) = "LocalEntryPoint";
+	option (resource_type_names) = "EntryPoint";
+	option (resource_type_names) = "Functionality";
 
 }
 
@@ -2975,10 +2994,12 @@ message RemoteDataLocation {
 	TransportEncryption transport_encryption = 3553;
 }
 
-// RemoteEntryPoint is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// RemoteEntryPoint is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message RemoteEntryPoint {
-	option (resource_type_names) = "RemoteEntryPoint";
 
+	oneof type {
+		HttpEndpoint http_endpoint = 8995;
+	}
 }
 
 // ReportDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
