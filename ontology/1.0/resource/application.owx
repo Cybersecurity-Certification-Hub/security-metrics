@@ -18,6 +18,21 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#" />
     <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
     <Declaration>
+        <Class IRI="/classes/Agnostic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/POSIX"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Win32"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/OperatingSystemArchitecture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Darwin"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="res:Application" />
     </Declaration>
     <Declaration>
@@ -29,6 +44,10 @@
     <Declaration>
         <Class abbreviatedIRI="res:SourceCodeFile" />
     </Declaration>
+    <SubClassOf>
+        <Class IRI="/classes/Agnostic"/>
+        <Class IRI="/classes/OperatingSystemArchitecture"/>
+    </SubClassOf>
     <Declaration>
         <Class abbreviatedIRI="res:Package" />
     </Declaration>

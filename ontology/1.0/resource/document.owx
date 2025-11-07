@@ -18,7 +18,63 @@
     <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
-    
+    <Declaration>
+        <Class IRI="/classes/AndRule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/File"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Token"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/PolicyRule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ReportDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Policy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/FileHandle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/LogDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/FileLikeObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Context"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Configuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationGroupSource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationOption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationOptionSource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationSource"/>
+    </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:Data"/>
     </Declaration>
@@ -50,8 +106,122 @@
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <SubClassOf>
+        <Class IRI="#KeyDerivationFunction"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MessageAuthenticationCode"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MessageAuthenticationCode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="#Input"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MessageAuthenticationCode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="#Key"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MessageAuthenticationCode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Output"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Padding"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Padding"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#scheme"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RateLimiting"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RateLimiting"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#maxRequests"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RateLimiting"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#timeWindowSeconds"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SymmetricCipher"/>
+        <Class IRI="/classes/Cipher"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SymmetricCipher"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="#InitializationVector"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AndRule"/>
+        <Class IRI="/classes/PolicyRule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SymmetricCipher"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#authTagSize"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SymmetricCipher"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#modus"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class IRI="#Key"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="res:Document"/>
         <Class abbreviatedIRI="res:Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KeyDerivationFunction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="#Input"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KeyDerivationFunction"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Document"/>

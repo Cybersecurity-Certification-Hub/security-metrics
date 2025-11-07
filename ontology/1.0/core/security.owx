@@ -16,7 +16,15 @@
     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
     <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    
+    <Declaration>
+        <Class IRI="/classes/DiskEncryption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Encryption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/JwtAuthentication"/>
+    </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:ABAC"/>
     </Declaration>
@@ -324,10 +332,13 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ApplicationLog"/>
         <Class abbreviatedIRI="core:Logging"/>
+    </SubClassOf><SubClassOf>
+        <Class IRI="core:Encryption"/>
+        <Class IRI="core:Confidentiality"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
-        <Class abbreviatedIRI="core:Confidentiality"/>
+        <Class abbreviatedIRI="core:Encryption"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
