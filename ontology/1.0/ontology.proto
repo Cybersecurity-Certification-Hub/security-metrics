@@ -3755,7 +3755,7 @@ message ConfigurationOperation {
 		ProvideConfiguration provide_configuration = 9654;
 		ProvideConfigurationGroup provide_configuration_group = 9120;
 		ProvideConfigurationOption provide_configuration_option = 6933;
-		ReadConfiguration read_configuration = 13986;
+		ReadConfigurationGroup read_configuration_group = 17590;
 		ReadConfigurationOption read_configuration_option = 15865;
 		RegisterConfigurationGroup register_configuration_group = 13433;
 		RegisterConfigurationOption register_configuration_option = 6742;
@@ -3822,7 +3822,7 @@ message Functionality {
 
 	oneof type {
 		Principal principal = 16173;
-		ProctectedAsset proctected_asset = 15389;
+		ProtectedAsset protected_asset = 10697;
 	}
 }
 
@@ -3943,6 +3943,7 @@ message LogWrite {
 	option (resource_type_names) = "LogWrite";
 	option (resource_type_names) = "LogOperation";
 
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
 	string log_level = 17791;
 }
 
@@ -3973,12 +3974,14 @@ message Operation {
 }
 
 // Policy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy that can be applied to a resource or a set of resources. Policies can contain rules and operations that define how access to the resource is controlled.
 message Policy {
 	option (resource_type_names) = "Policy";
 
 }
 
 // PolicyOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents an operation that is part of a policy. This can be used to define rules or checks that need to be performed to enforce the policy.
 message PolicyOperation {
 	option (resource_type_names) = "PolicyOperation";
 	option (resource_type_names) = "Operation";
@@ -3987,30 +3990,34 @@ message PolicyOperation {
 }
 
 // Principal is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a principal that is allowed to access a resource. This can for example be a (structure representing) a user or a group of users.
 message Principal {
 	option (resource_type_names) = "Principal";
 	option (resource_type_names) = "Functionality";
 
 }
 
-// ProctectedAsset is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ProctectedAsset {
-	option (resource_type_names) = "ProctectedAsset";
+// ProtectedAsset is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents an asset that is protected by a policy. This can be an in-memory data structure, a file, a database, or any other resource that requires access control.
+message ProtectedAsset {
+	option (resource_type_names) = "ProtectedAsset";
 	option (resource_type_names) = "Functionality";
 
-	repeated Policy policies  = 2305;
-	Resource resource = 9650;
+	repeated Policy policies  = 2613;
+	Resource resource = 2677;
 }
 
 // ProtectedAssetOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Base class for operations that involve protected assets. These operations can include checks for access permissions, modifications, or any other actions that require validation against a policy.
 message ProtectedAssetOperation {
 	option (resource_type_names) = "ProtectedAssetOperation";
 	option (resource_type_names) = "Operation";
 
-	ProctectedAsset proctected_asset = 17841;
+	ProtectedAsset protected_asset = 13515;
 }
 
 // ProvideConfiguration is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents an operation to provide a [Configuration], e.g., in the form of a configuration file (through a [ConfigurationSource]). When the configuration file is loaded, a [LoadConfiguration] operation would be found in the code component (matching the configuration file's name in [LoadConfiguration.fileExpression]) and the [ProvideConfiguration] operation would be found in the configuration component. But also other sources of configuration could be represented by a [ProvideConfiguration] operation, such as environment variables or command-line arguments. Note: The [ProvideConfiguration] operation is part of the [ConfigurationSource.ops] and not of the [Configuration.ops] as it's an operation of the source, not the target.
 message ProvideConfiguration {
 	option (resource_type_names) = "ProvideConfiguration";
 	option (resource_type_names) = "ConfigurationOperation";
@@ -4029,6 +4036,7 @@ message ProvideConfigurationGroup {
 }
 
 // ProvideConfigurationOption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents an operation to provide a [ConfigurationOption]. It connects a [ConfigurationOptionSource] with a [ConfigurationOption].
 message ProvideConfigurationOption {
 	option (resource_type_names) = "ProvideConfigurationOption";
 	option (resource_type_names) = "ConfigurationOperation";
@@ -4037,15 +4045,17 @@ message ProvideConfigurationOption {
 	ConfigurationOptionSource configuration_option_source = 15417;
 }
 
-// ReadConfiguration is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message ReadConfiguration {
-	option (resource_type_names) = "ReadConfiguration";
+// ReadConfigurationGroup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents an operation to read a specific configuration group. Often this is done with a member access or a subscript operation on the configuration object, such as`conf.GROUP` or`conf["GROUP"]`.
+message ReadConfigurationGroup {
+	option (resource_type_names) = "ReadConfigurationGroup";
 	option (resource_type_names) = "ConfigurationOperation";
 
-	ConfigurationGroup configuration_group = 15967;
+	ConfigurationGroup configuration_group = 15875;
 }
 
 // ReadConfigurationOption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents an operation to read a specific configuration option. Often this is done with a member access such as `group.option` or a subscript operation such as `group["option"]`.
 message ReadConfigurationOption {
 	option (resource_type_names) = "ReadConfigurationOption";
 	option (resource_type_names) = "ConfigurationOperation";
@@ -4054,6 +4064,7 @@ message ReadConfigurationOption {
 }
 
 // RegisterConfigurationGroup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents an operation to register a new [ConfigurationGroup]. This is often done with a call, such as `conf.registerGroup("group")`. This might not be necessary for all configuration frameworks, some might allow to directly read the group (via [ReadConfigurationGroup]) without registering it first, or it is done implicitly. When code and configuration is interacting, we expect that the configuration file (such as an INI file) contains the [ConfigurationGroup] node and the code contains the [RegisterConfigurationGroup] and [ReadConfigurationGroup] nodes.
 message RegisterConfigurationGroup {
 	option (resource_type_names) = "RegisterConfigurationGroup";
 	option (resource_type_names) = "ConfigurationOperation";
@@ -4062,6 +4073,7 @@ message RegisterConfigurationGroup {
 }
 
 // RegisterConfigurationOption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents an operation to register a new [ConfigurationOption]. This is often done with a call, such as `conf.registerOption("option", "defaultValue")`. This might not be necessary for all configuration frameworks, some might allow to directly read the group (via  [RegisterConfigurationOption]) without registering it first, or it is done implicitly. When code and configuration is interacting, we expect that the configuration file (such as an INI file) contains the [ConfigurationOption] node and the code contains the [RegisterConfigurationOption] and [ReadConfigurationOption] nodes.
 message RegisterConfigurationOption {
 	option (resource_type_names) = "RegisterConfigurationOption";
 	option (resource_type_names) = "ConfigurationOperation";
@@ -4107,6 +4119,7 @@ message UnlockEncryptedDisk {
 }
 
 // ValidateJwt is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents an operation to check the validity of a JWT token.
 message ValidateJwt {
 	option (resource_type_names) = "ValidateJwt";
 	option (resource_type_names) = "AuthenticationOperation";
@@ -4447,6 +4460,7 @@ message Policy {
 }
 
 // PolicyRule is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a rule that is part of a policy. This can be used to define conditions that must be met for the policy to be enforced.
 message PolicyRule {
 	option (resource_type_names) = "PolicyRule";
 	option (resource_type_names) = "Data";
@@ -4461,6 +4475,7 @@ message ReportDocument {
 }
 
 // Token is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// A Token used for TokenBasedAuthentication.
 message Token {
 	option (resource_type_names) = "Token";
 	option (resource_type_names) = "Data";
