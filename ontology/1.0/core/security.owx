@@ -1055,6 +1055,32 @@
         <ObjectProperty abbreviatedIRI="core:usedBy"/>
     </SubObjectPropertyOf>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Encryption</IRI>
+        <Literal>This represents an encryption.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Encryption</IRI>
+        <Literal>Encryption</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/JwtAuthentication</IRI>
+        <Literal>Represents a JWT-based authentication, which extends the [TokenBasedAuth].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/JwtAuthentication</IRI>
+        <Literal>JwtAuthentication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/JwtBasedAuthentication</IRI>
+        <Literal>Represents a token-based authentication.</Literal>
+    </AnnotationAssertion>
+    
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
         <Literal xml:lang="english">xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>

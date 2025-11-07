@@ -1636,6 +1636,246 @@
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Main</IRI>
+        <Literal>The main function of a program.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Main</IRI>
+        <Literal>Main</Literal>
+    </AnnotationAssertion>
+    
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LogWrite</IRI>
+        <Literal>A log write operation e.g. `loggint.warn(&quot;...&quot;)`.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LogWrite</IRI>
+        <Literal>LogWrite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LogGet</IRI>
+        <Literal>A log get operation e.g. `logging.getLogger(&quot;...&quot;)`.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LogGet</IRI>
+        <Literal>LogGet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LogOperation</IRI>
+        <Literal>LogOperation</Literal>
+    </AnnotationAssertion>
+    
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LoadConfiguration</IRI>
+        <Literal>Represents an operation to load a configuration from a source, such as a file.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LoadConfiguration</IRI>
+        <Literal>LoadConfiguration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LocalEntryPoint</IRI>
+        <Literal>Represents a local entry point into the execution of the program, such as a main function.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LocalEntryPoint</IRI>
+        <Literal>LocalEntryPoint</Literal>
+    </AnnotationAssertion>
+    
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LoadLibrary</IRI>
+        <Literal>Represents an operation that loads a shared library during runtime. A common example would be a call to `dlopen` in C/C++.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LoadLibrary</IRI>
+        <Literal>LoadLibrary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LoadSymbol</IRI>
+        <Literal>Represents an operation that loads a symbol during runtime. A common example would be a call to`dlsym` in C/C++.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LoadSymbol</IRI>
+        <Literal>LoadSymbol</Literal>
+    </AnnotationAssertion>
+    
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/HttpRequestHandlerOperation</IRI>
+        <Literal>HttpRequestHandlerOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/IssueJwt</IRI>
+        <Literal>Represents an operation to issue a new JWT token.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/IssueJwt</IRI>
+        <Literal>IssueJwt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LibraryEntryPoint</IRI>
+        <Literal>Represents an entry point that is triggered if the code is loaded as a (dynamic) library.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LibraryEntryPoint</IRI>
+        <Literal>LibraryEntryPoint</Literal>
+    </AnnotationAssertion>
+    
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/GetSecret</IRI>
+        <Literal>An operation that retrieves a secret from a (remote) location. This can be a local keystore, a remote key server or a hardware device such as a TPM or HSM.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/GetSecret</IRI>
+        <Literal>GetSecret</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Http</IRI>
+        <Literal>Abstract class for all HTTP related functionalities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Http</IRI>
+        <Literal>Http</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/HttpClient</IRI>
+        <Literal>HTTP Client.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/HttpClient</IRI>
+        <Literal>HttpClient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/HttpClientOperation</IRI>
+        <Literal>Base class for operations on an [HttpClient].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/HttpClientOperation</IRI>
+        <Literal>HttpClientOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/HttpEndpointOperation</IRI>
+        <Literal>Base class for operations on an [HttpEndpoint].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/HttpEndpointOperation</IRI>
+        <Literal>HttpEndpointOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/HttpRequestContext</IRI>
+        <Literal>Represents an abstract concept of request context. This usually holds the contextual information of a specific HTTP request.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/HttpRequestContext</IRI>
+        <Literal>HttpRequestContext</Literal>
+    </AnnotationAssertion>
+    
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/DynamicLoading</IRI>
+        <Literal>Represents an entity that loads a piece of code dynamically during runtime. Examples include a class loader in Java, loading shared library code in C++. Interpreters, such as Python can also load code dynamically during runtime.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/DynamicLoading</IRI>
+        <Literal>DynamicLoading</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/DynamicLoadingOperation</IRI>
+        <Literal>Represents an operation used by the [DynamicLoading] concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/DynamicLoadingOperation</IRI>
+        <Literal>DynamicLoadingOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/FileOperation</IRI>
+        <Literal>FileOperation</Literal>
+    </AnnotationAssertion>
+    
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/DiskEncryptionOperation</IRI>
+        <Literal>DiskEncryptionOperation</Literal>
+    </AnnotationAssertion>
+    
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/DeAllocate</IRI>
+        <Literal>Represents a memory de-allocation operation. This can be done using `free` in C or `delete` in C++ or by calling a destructor in managed languages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/DeAllocate</IRI>
+        <Literal>DeAllocate</Literal>
+    </AnnotationAssertion>
+    
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/CheckAccess</IRI>
+        <Literal>Represents an operation that checks whether a user or principal has access to a protected</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/CheckAccess</IRI>
+        <Literal>CheckAccess</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Cipher</IRI>
+        <Literal>Represents a cipher suite. E.g. `AES-XTS-plain64`.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Cipher</IRI>
+        <Literal>enum:cipherName=coolCipher,unCoolCipher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Cipher</IRI>
+        <Literal>Cipher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/CipherOperation</IRI>
+        <Literal>CipherOperation</Literal>
+    </AnnotationAssertion>
+    
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/AuthorizeJwt</IRI>
         <Literal>Represents an authorization operation based on JWT tokens.</Literal>
     </AnnotationAssertion>
@@ -1976,12 +2216,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:LogOutput</AbbreviatedIRI>
-        <Literal>A LogOperation is used by an application</Literal>
+        <Literal>A generic Logoutput.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:LogOutput</AbbreviatedIRI>
-        <Literal xml:lang="english">LogOperation</Literal>
+        <IRI>/classes/LogOutput</IRI>
+        <Literal>LogOutput</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
