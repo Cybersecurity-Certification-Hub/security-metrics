@@ -775,16 +775,16 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:Secret"/>
+        <Class abbreviatedIRI="cl:Secret"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:basedOn"/>
-            <Class abbreviatedIRI="core:Cipher"/>
+            <ObjectProperty abbreviatedIRI="cl:basedOn"/>
+            <Class abbreviatedIRI="cl:Cipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:Secret"/>
+        <Class abbreviatedIRI="cl:Secret"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:keySize"/>
+            <DataProperty abbreviatedIRI="cl:keySize"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
