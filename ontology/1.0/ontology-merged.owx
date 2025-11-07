@@ -2456,6 +2456,10 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/EntryPoint"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/Error"/>
         <Class IRI="/classes/Functionality"/>
     </SubClassOf>
@@ -2590,12 +2594,20 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Http"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/HttpClient"/>
+        <Class IRI="/classes/Http"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/HttpClientLibrary"/>
         <Class IRI="/classes/Framework"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/HttpEndpoint"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class IRI="/classes/RemoteEntryPoint"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/HttpEndpoint"/>
@@ -2672,8 +2684,12 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/HttpRequestContext"/>
+        <Class IRI="/classes/Http"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/HttpRequestHandler"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class IRI="/classes/Http"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/HttpRequestHandler"/>
@@ -3047,6 +3063,10 @@
             <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/AtRestEncryption"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/LocalEntryPoint"/>
+        <Class IRI="/classes/EntryPoint"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/LocalRedundancy"/>
@@ -3629,6 +3649,10 @@
             <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/TransportEncryption"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RemoteEntryPoint"/>
+        <Class IRI="/classes/EntryPoint"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Resource"/>
@@ -5822,6 +5846,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/zone</IRI>
         <Literal>zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/core/functionality/classes/EntryPoint</IRI>
+        <Literal>Represents an entry point into the execution of the program. This can be a &quot;local&quot; entry point, such as a main function, a library initialization function or a &quot;remote&quot; entry point, such as a network endpoint.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/core/functionality/classes/EntryPoint</IRI>
+        <Literal>EntryPoint</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
