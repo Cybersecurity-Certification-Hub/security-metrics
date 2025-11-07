@@ -850,6 +850,33 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/DiskEncryptionOperation"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DiskEncryptionOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/DiskEncryption"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DynamicLoading"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DynamicLoadingOperation"/>
+        <Class IRI="/classes/MemoryOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DynamicLoadingOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/OperatingSystemArchitecture"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
         <Class abbreviatedIRI="core:CryptographicOperation"/>
         <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
@@ -899,8 +926,16 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:DecryptionOperation"/>
-        <Class abbreviatedIRI="core:CryptographicOperation"/>
+        <Class abbreviatedIRI="core:CipherOperation"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DecryptionOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/Secret"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
     <SubClassOf>
         <Class abbreviatedIRI="core:DecryptionOperation"/>
         <DataSomeValuesFrom>

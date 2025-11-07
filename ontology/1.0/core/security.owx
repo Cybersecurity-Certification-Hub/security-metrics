@@ -332,7 +332,38 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ApplicationLog"/>
         <Class abbreviatedIRI="core:Logging"/>
-    </SubClassOf><SubClassOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DiskEncryption"/>
+        <Class IRI="/classes/AtRestEncryption"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DiskEncryption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/target"/>
+            <Class IRI="/classes/BlockStorage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Encryption"/>
+        <Class IRI="/classes/Confidentiality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Encryption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/basedOn"/>
+            <Class IRI="/classes/Cipher"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Encryption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/Secret"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
         <Class IRI="core:Encryption"/>
         <Class IRI="core:Confidentiality"/>
     </SubClassOf>

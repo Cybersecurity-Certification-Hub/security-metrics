@@ -1661,17 +1661,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/DecryptionOperation"/>
-        <Class IRI="/classes/CipherOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DecryptionOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Secret"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DecryptionOperation"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/algorithm"/>
             <Datatype abbreviatedIRI="xsd:string"/>
@@ -1680,28 +1669,6 @@
     <SubClassOf>
         <Class IRI="/classes/DeviceProvisioningService"/>
         <Class IRI="/classes/IoT"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DiskEncryption"/>
-        <Class IRI="/classes/AtRestEncryption"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DiskEncryption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/target"/>
-            <Class IRI="/classes/BlockStorage"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DiskEncryptionOperation"/>
-        <Class IRI="/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DiskEncryptionOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/DiskEncryption"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Document"/>
@@ -1745,39 +1712,6 @@
     <SubClassOf>
         <Class IRI="/classes/DocumentDatabaseService"/>
         <Class IRI="/classes/DatabaseService"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DynamicLoading"/>
-        <Class IRI="/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DynamicLoadingOperation"/>
-        <Class IRI="/classes/MemoryOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DynamicLoadingOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/OperatingSystemArchitecture"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Encryption"/>
-        <Class IRI="/classes/Confidentiality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Encryption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/basedOn"/>
-            <Class IRI="/classes/Cipher"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Encryption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Secret"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/EncryptionInUse"/>
