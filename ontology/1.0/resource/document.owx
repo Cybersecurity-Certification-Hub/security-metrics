@@ -114,6 +114,18 @@
         <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/File"/>
+        <Class IRI="/classes/FileLikeObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/FileHandle"/>
+        <Class IRI="/classes/FileLikeObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/FileLikeObject"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:MessageAuthenticationCode"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
