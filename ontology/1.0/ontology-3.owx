@@ -1753,10 +1753,7 @@
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/EntryPoint"/>
-        <Class IRI="/classes/Functionality"/>
-    </SubClassOf>
+
     <SubClassOf>
         <Class IRI="/classes/EqualityCheck"/>
         <Class IRI="/classes/PolicyOperation"/>
@@ -1936,14 +1933,7 @@
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Http"/>
-        <Class IRI="/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/HttpClient"/>
-        <Class IRI="/classes/Http"/>
-    </SubClassOf>
+
     <SubClassOf>
         <Class IRI="/classes/HttpClient"/>
         <ObjectSomeValuesFrom>
@@ -2076,14 +2066,8 @@
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/HttpRequestContext"/>
-        <Class IRI="/classes/Http"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/HttpRequestHandler"/>
-        <Class IRI="/classes/Http"/>
-    </SubClassOf>
+
+
     <SubClassOf>
         <Class IRI="/classes/HttpRequestHandler"/>
         <ObjectSomeValuesFrom>
@@ -2405,10 +2389,7 @@
             <Class IRI="/classes/AtRestEncryption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/LocalEntryPoint"/>
-        <Class IRI="/classes/EntryPoint"/>
-    </SubClassOf>
+
     <SubClassOf>
         <Class IRI="/classes/LocalEntryPoint"/>
         <ObjectSomeValuesFrom>
@@ -3161,10 +3142,7 @@
             <Class IRI="/classes/TransportEncryption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/RemoteEntryPoint"/>
-        <Class IRI="/classes/EntryPoint"/>
-    </SubClassOf>
+
     <SubClassOf>
         <Class IRI="/classes/ReportDocument"/>
         <Class IRI="/classes/GenericDocument"/>
@@ -4869,16 +4847,7 @@ name = metadata.name</Literal>
         <IRI>/classes/EncryptionOperation</IRI>
         <Literal>EncryptionOperation</Literal>
     </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/EntryPoint</IRI>
-        <Literal>Represents an entry point into the execution of the program. This can be a &quot;local&quot; entry point, such as a main function, a library initialization function or a &quot;remote&quot; entry point, such as a network endpoint.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/EntryPoint</IRI>
-        <Literal>EntryPoint</Literal>
-    </AnnotationAssertion>
+   
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/EqualityCheck</IRI>

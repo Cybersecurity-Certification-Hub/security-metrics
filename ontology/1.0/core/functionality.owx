@@ -175,9 +175,6 @@
         <Class abbreviatedIRI="core:Boundary"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:AsymmetricCipher"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:GetCurrentTimeOperation"/>
     </Declaration>
     <Declaration>
@@ -230,6 +227,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:DatabaseConnect"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:AsymmetricCipher"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:DatabaseOperation"/>
@@ -494,8 +494,40 @@
         <DataProperty abbreviatedIRI="prop:algorithm"/>
     </Declaration>
     <SubClassOf>
+        <Class abbreviatedIRI="core:HttpRequestHandler"/>
+        <Class abbreviatedIRI="core:Http"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Http"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpClient"/>
+        <Class abbreviatedIRI="core:Http"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpRequestContext"/>
+        <Class abbreviatedIRI="core:Http"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:CipherSuite"/>
         <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EntryPoint"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LocalEntryPoint"/>
+        <Class abbreviatedIRI="core:EntryPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EntryPoint"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:RemoteEntryPoint"/>
+        <Class abbreviatedIRI="core:EntryPoint"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Cipher"/>
@@ -989,7 +1021,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpEndpoint"/>
-        <Class abbreviatedIRI="core:Functionality"/>
+        <Class abbreviatedIRI="core:RemoteEntryPoint"/>
     </SubClassOf>
      <SubClassOf>
         <Class abbreviatedIRI="core:HttpEndpoint"/>
@@ -1064,10 +1096,6 @@
             <DataProperty abbreviatedIRI="prop:call"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:HttpRequestHandler"/>
-        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpRequestHandler"/>
@@ -1509,6 +1537,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:creation_time</AbbreviatedIRI>
         <Literal>creationTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/EntryPoint</IRI>
+        <Literal>Represents an entry point into the execution of the program. This can be a &quot;local&quot; entry point, such as a main function, a library initialization function or a &quot;remote&quot; entry point, such as a network endpoint.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/EntryPoint</IRI>
+        <Literal>EntryPoint</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
