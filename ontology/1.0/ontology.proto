@@ -1475,6 +1475,7 @@ message Functionality {
 		CreateEncryptedDisk create_encrypted_disk = 2290;
 		GetCurrentTimeOperation get_current_time_operation = 17282;
 		HttpRequest http_request = 2901;
+		HttpRequest http_request = 2901;
 		InputValidationOperation input_validation_operation = 14785;
 		InstallUpdate install_update = 199;
 		LogOperation log_operation = 14250;
@@ -1625,10 +1626,12 @@ message HttpClientLibrary {
 
 }
 
-// HttpClientOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// HttpClientOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message HttpClientOperation {
-	option (resource_type_names) = "HttpClientOperation";
 
+	oneof type {
+		HttpRequest http_request = 2901;
+	}
 }
 
 // HttpEndpoint is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2656,6 +2659,7 @@ message Operation {
 		DatabaseQuery database_query = 7698;
 		CreateEncryptedDisk create_encrypted_disk = 2290;
 		GetCurrentTimeOperation get_current_time_operation = 17282;
+		HttpRequest http_request = 2901;
 		HttpRequest http_request = 2901;
 		InputValidationOperation input_validation_operation = 14785;
 		InstallUpdate install_update = 199;
