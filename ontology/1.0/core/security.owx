@@ -690,6 +690,15 @@
         <Class abbreviatedIRI="core:Firewall"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Main"/>
+        <Class IRI="/classes/LocalEntryPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MemoryOperation"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+
+    <SubClassOf>
         <Class IRI="/classes/LibraryEntryPoint"/>
         <Class IRI="/classes/LocalEntryPoint"/>
     </SubClassOf>
@@ -704,6 +713,27 @@
     <SubClassOf>
         <Class IRI="/classes/LoadSymbol"/>
         <Class IRI="/classes/DynamicLoadingOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Logging"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MemoryOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/Memory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ObjectStorageRequest"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/Storage"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     
     <SubClassOf>

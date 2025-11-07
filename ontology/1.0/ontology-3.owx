@@ -2148,45 +2148,12 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/LocalEntryPoint"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/target"/>
-            <Class IRI="/classes/OperatingSystemArchitecture"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/classes/LocalRedundancy"/>
         <Class IRI="/classes/Redundancy"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/LogDocument"/>
-        <Class IRI="/classes/Document"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/LogGet"/>
-        <Class IRI="/classes/LogOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/LogOperation"/>
-        <Class IRI="/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/LogOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Logging"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/classes/LogOutput"/>
         <Class IRI="/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/LogOutput"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Logging"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/LogOutput"/>
@@ -2210,17 +2177,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/LogWrite"/>
-        <Class IRI="/classes/LogOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/LogWrite"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/logLevel"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/classes/Logger"/>
         <Class IRI="/classes/Framework"/>
     </SubClassOf>
@@ -2240,13 +2196,6 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/monitoringEnabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Logging"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/name"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2375,10 +2324,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Main"/>
-        <Class IRI="/classes/LocalEntryPoint"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/classes/MalwareProtection"/>
         <Class IRI="/classes/Auditing"/>
     </SubClassOf>
@@ -2413,20 +2358,6 @@
     <SubClassOf>
         <Class IRI="/classes/ManagedKeyEncryption"/>
         <Class IRI="/classes/AtRestEncryption"/>
-    </SubClassOf>
-    
-   
-    <SubClassOf>
-        <Class IRI="/classes/MemoryOperation"/>
-        <Class IRI="/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/MemoryOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Memory"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/MessagingHub"/>
         <Class IRI="/classes/IoT"/>
@@ -2559,13 +2490,6 @@
     <SubClassOf>
         <Class IRI="/classes/ObjectStorageRequest"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Storage"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ObjectStorageRequest"/>
-        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/to"/>
             <Class IRI="/classes/ObjectStorage"/>
         </ObjectSomeValuesFrom>
@@ -2599,7 +2523,6 @@
             <Class IRI="/classes/CodeRegion"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    
     <SubClassOf>
         <Class IRI="/classes/PasswordBasedAuthentication"/>
         <Class IRI="/classes/Authenticity"/>
@@ -2616,128 +2539,8 @@
         <Class IRI="/classes/CloudResource"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Policy"/>
-        <Class IRI="/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Policy"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Context"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Policy"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/PolicyRule"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/classes/PolicyDocument"/>
         <Class IRI="/classes/Document"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/PolicyOperation"/>
-        <Class IRI="/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/PolicyOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Policy"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/PolicyRule"/>
-        <Class IRI="/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Principal"/>
-        <Class IRI="/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProctectedAsset"/>
-        <Class IRI="/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProctectedAsset"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/protects"/>
-            <Class IRI="/classes/Resource"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProctectedAsset"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/Policy"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProtectedAssetOperation"/>
-        <Class IRI="/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProtectedAssetOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/ProctectedAsset"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProvideConfiguration"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProvideConfiguration"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Configuration"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProvideConfiguration"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationSource"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProvideConfigurationGroup"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProvideConfigurationGroup"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationGroup"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProvideConfigurationGroup"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationGroupSource"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProvideConfigurationOption"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProvideConfigurationOption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationOption"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProvideConfigurationOption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationOptionSource"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/QPU"/>
@@ -2788,72 +2591,6 @@
             <DataProperty IRI="/classes/mixedDuties"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ReadConfiguration"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ReadConfiguration"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationGroup"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ReadConfigurationOption"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ReadConfigurationOption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationOption"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Redundancy"/>
-        <Class IRI="/classes/Availability"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Redundancy"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/GeoLocation"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/RegisterConfigurationGroup"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/RegisterConfigurationGroup"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationGroup"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/RegisterConfigurationOption"/>
-        <Class IRI="/classes/ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/RegisterConfigurationOption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationOption"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/RegisterHttpEndpoint"/>
-        <Class IRI="/classes/HttpRequestHandlerOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/RegisterHttpEndpoint"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/HttpEndpoint"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/RelationalDatabaseService"/>

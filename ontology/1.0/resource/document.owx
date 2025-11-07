@@ -122,6 +122,49 @@
         <Class IRI="/classes/FileLikeObject"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/LogDocument"/>
+        <Class IRI="/classes/Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/LogGet"/>
+        <Class IRI="/classes/LogOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/LogOperation"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyRule"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class IRI="/classes/LogOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/Logging"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Policy"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Policy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/Context"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Policy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
+            <Class IRI="/classes/PolicyRule"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
         <Class IRI="/classes/FileLikeObject"/>
         <Class IRI="/classes/Data"/>
     </SubClassOf>

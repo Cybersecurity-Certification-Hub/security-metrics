@@ -756,6 +756,188 @@
         <Class IRI="/classes/Operation"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Principal"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ProctectedAsset"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ProctectedAsset"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/protects"/>
+            <Class IRI="/classes/Resource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ProctectedAsset"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
+            <Class IRI="/classes/Policy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ProtectedAssetOperation"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ProtectedAssetOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/ProctectedAsset"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ProvideConfiguration"/>
+        <Class IRI="/classes/ConfigurationOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ProvideConfiguration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/Configuration"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ProvideConfiguration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ConfigurationSource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ProvideConfigurationGroup"/>
+        <Class IRI="/classes/ConfigurationOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ProvideConfigurationGroup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ConfigurationGroup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ProvideConfigurationGroup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ConfigurationGroupSource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RegisterConfigurationGroup"/>
+        <Class IRI="/classes/ConfigurationOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RegisterConfigurationGroup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ConfigurationGroup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RegisterConfigurationOption"/>
+        <Class IRI="/classes/ConfigurationOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RegisterConfigurationOption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ConfigurationOption"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RegisterHttpEndpoint"/>
+        <Class IRI="/classes/HttpRequestHandlerOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RegisterHttpEndpoint"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/HttpEndpoint"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class IRI="/classes/ProvideConfigurationOption"/>
+        <Class IRI="/classes/ConfigurationOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ReadConfiguration"/>
+        <Class IRI="/classes/ConfigurationOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ReadConfiguration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ConfigurationGroup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ReadConfigurationOption"/>
+        <Class IRI="/classes/ConfigurationOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ReadConfigurationOption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ConfigurationOption"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class IRI="/classes/ProvideConfigurationOption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ConfigurationOption"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ProvideConfigurationOption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ConfigurationOptionSource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class IRI="/classes/LocalEntryPoint"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/target"/>
+            <Class IRI="/classes/OperatingSystemArchitecture"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/LogOutput"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/Logging"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/LogWrite"/>
+        <Class IRI="/classes/LogOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/LogWrite"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/logLevel"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyOperation"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/Policy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
         <Class IRI="/classes/HttpRequestHandlerOperation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/classes/linkedConcept"/>
