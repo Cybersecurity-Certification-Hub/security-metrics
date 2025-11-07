@@ -204,6 +204,16 @@
         <Literal>Represents an operation that checks whether two principals are equal.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/POSIX</IRI>
+        <Literal>Represents a POSIX architecture, commonly found on Linux systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/POSIX</IRI>
+        <Literal>POSIX</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/EqualityCheck</IRI>
         <Literal>EqualityCheck</Literal>
@@ -253,6 +263,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label" />
         <AbbreviatedIRI>res:SoftwareResource</AbbreviatedIRI>
         <Literal>Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Win32</IRI>
+        <Literal>Represents a Win32 architecture, commonly found on Windows systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Win32</IRI>
+        <Literal>Win32</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label" />

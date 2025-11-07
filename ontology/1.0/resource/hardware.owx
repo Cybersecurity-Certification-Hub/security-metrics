@@ -50,4 +50,14 @@
         <IRI>/classes/Memory</IRI>
         <Literal>Memory</Literal>
     </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/mode</IRI>
+        <Literal>Describes the mode of a certain class in the ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/mode</IRI>
+        <Literal>mode</Literal>
+    </AnnotationAssertion>
 </Ontology>

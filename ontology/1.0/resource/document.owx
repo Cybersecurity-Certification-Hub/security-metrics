@@ -572,6 +572,26 @@
         <IRI>/classes/FileLikeObject</IRI>
         <Literal>FileLikeObject</Literal>
     </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Token</IRI>
+        <Literal>A Token used for TokenBasedAuthentication.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Token</IRI>
+        <Literal>Token</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/PolicyRule</IRI>
+        <Literal>Represents a rule that is part of a policy. This can be used to define conditions that must be met for the policy to be enforced.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/PolicyRule</IRI>
+        <Literal>PolicyRule</Literal>
+    </AnnotationAssertion>
     
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

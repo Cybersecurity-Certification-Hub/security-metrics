@@ -1390,7 +1390,11 @@ ips += externalIP
 ips += loadBalancerIP
 name = metadata.name</Literal>
     </DataPropertyAssertion>
-    
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Secret</IRI>
+        <Literal>Secret</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
@@ -2075,6 +2079,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>cl:resourceType</AbbreviatedIRI>
         <Literal>The resource type. It is an array, because a type can be derived from another.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/PasswordPolicy</IRI>
+        <Literal>PasswordPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
