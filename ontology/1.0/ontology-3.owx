@@ -2676,17 +2676,8 @@
         <Class IRI="/classes/ManagedKeyEncryption"/>
         <Class IRI="/classes/AtRestEncryption"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Memory"/>
-        <Class IRI="/classes/Resource"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Memory"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/mode"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
+    
+   
     <SubClassOf>
         <Class IRI="/classes/MemoryOperation"/>
         <Class IRI="/classes/Operation"/>
@@ -2860,10 +2851,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/OperatingSystemArchitecture"/>
-        <Class IRI="/classes/SoftwareResource"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/classes/Operation"/>
         <Class IRI="/classes/Functionality"/>
     </SubClassOf>
@@ -2874,10 +2861,7 @@
             <Class IRI="/classes/CodeRegion"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/POSIX"/>
-        <Class IRI="/classes/OperatingSystemArchitecture"/>
-    </SubClassOf>
+    
     <SubClassOf>
         <Class IRI="/classes/PasswordBasedAuthentication"/>
         <Class IRI="/classes/Authenticity"/>
@@ -3501,10 +3485,7 @@
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/TransportEncryption"/>
-        <Class IRI="/classes/Encryption"/>
-    </SubClassOf>
+    
     <SubClassOf>
         <Class IRI="/classes/TransportEncryption"/>
         <ObjectSomeValuesFrom>
@@ -3670,10 +3651,6 @@
             <DataProperty IRI="/properties/enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Win32"/>
-        <Class IRI="/classes/OperatingSystemArchitecture"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Workflow"/>
@@ -5392,16 +5369,7 @@ name = metadata.name</Literal>
         <IRI>/classes/ManagedKeyEncryption</IRI>
         <Literal xml:lang="english">ManagedKeyEncryption</Literal>
     </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/Memory</IRI>
-        <Literal>A generic concept to describe memory operations with a program. This includes allocation and de-allocation of memory as well as copying memory regions.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/Memory</IRI>
-        <Literal>Memory</Literal>
-    </AnnotationAssertion>
+    
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/MemoryOperation</IRI>
@@ -5506,16 +5474,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/ObjectStorageService</IRI>
         <Literal>ObjectStorageService</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/OperatingSystemArchitecture</IRI>
-        <Literal>Represents an architecture of an operating system.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/OperatingSystemArchitecture</IRI>
-        <Literal>OperatingSystemArchitecture</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
