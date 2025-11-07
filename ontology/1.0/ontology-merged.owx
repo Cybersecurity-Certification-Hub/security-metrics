@@ -24,6 +24,15 @@
         <Class IRI="/classes/ActivityLog"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Agnostic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Allocate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/AndRule"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/AnomalyDetection"/>
     </Declaration>
     <Declaration>
@@ -31,6 +40,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ApplicationLog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/AsymmetricCipher"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/AtRestEncryption"/>
@@ -42,10 +54,19 @@
         <Class IRI="/classes/Auditing"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Authenticate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/AuthenticationOperation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Authenticity"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Authorization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/AuthorizeJwt"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/AutomaticUpdates"/>
@@ -63,7 +84,13 @@
         <Class IRI="/classes/BlockStorage"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/BlockStorageOperation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/BootLog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Boundary"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/CICDService"/>
@@ -73,6 +100,15 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/CertificateBasedAuthentication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/CheckAccess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Cipher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/CipherOperation"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/CipherSuite"/>
@@ -99,6 +135,30 @@
         <Class IRI="/classes/Confidentiality"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Configuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationGroupSource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationOption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationOptionSource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationSource"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Container"/>
     </Declaration>
     <Declaration>
@@ -111,7 +171,16 @@
         <Class IRI="/classes/ContainerRegistry"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Context"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Core"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/CreateEncryptedDisk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/CreateSecret"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Credential"/>
@@ -127,6 +196,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/DDosProtection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Darwin"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Data"/>
@@ -150,10 +222,19 @@
         <Class IRI="/classes/DatabaseStorage"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/DeAllocate"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/DecryptionOperation"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/DeviceProvisioningService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/DiskEncryption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/DiskEncryptionOperation"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Document"/>
@@ -162,16 +243,46 @@
         <Class IRI="/classes/DocumentDatabaseService"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/DynamicLoading"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/DynamicLoadingOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Encryption"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/EncryptionInUse"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/EncryptionOperation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/EntryPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/EqualityCheck"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Error"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/ExitBoundaryOperation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/ExplainableResults"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/File"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/FileHandle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/FileLikeObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/FileOperation"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/FileStorage"/>
@@ -207,25 +318,55 @@
         <Class IRI="/classes/GeoRedundancy"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/GetCurrentTimeOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/GetSecret"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Hardware"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/HashOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Http"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/HttpClient"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/HttpClientLibrary"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/HttpClientOperation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/HttpEndpoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/HttpEndpointOperation"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/HttpRequest"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/HttpRequestContext"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/HttpRequestHandler"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/HttpRequestHandlerOperation"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/HttpServer"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/HumanResources"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/HybridCipher"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Identifiable"/>
@@ -240,19 +381,40 @@
         <Class IRI="/classes/Immutability"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/InitializationVector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Input"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/InputValidationOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/InstallUpdate"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Integrity"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/IoT"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/IssueJwt"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Job"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/JwtAuthentication"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/JwtBasedAuthentication"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Key"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/KeyDerivationFunction"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/KeyValueDatabaseService"/>
@@ -267,7 +429,19 @@
         <Class IRI="/classes/Library"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/LibraryEntryPoint"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/LoadBalancer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/LoadConfiguration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/LoadLibrary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/LoadSymbol"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/LocalAttestation"/>
@@ -276,10 +450,25 @@
         <Class IRI="/classes/LocalDataLocation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/LocalEntryPoint"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/LocalRedundancy"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/LogDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/LogGet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/LogOperation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/LogOutput"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/LogWrite"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Logger"/>
@@ -303,10 +492,22 @@
         <Class IRI="/classes/MachineLearningService"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Main"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/MalwareProtection"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ManagedKeyEncryption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Memory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/MemoryOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/MessageAuthenticationCode"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/MessagingHub"/>
@@ -351,10 +552,22 @@
         <Class IRI="/classes/ObjectStorageService"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/OperatingSystemArchitecture"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Operation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Output"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/POSIX"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Package"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Padding"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/PasswordBasedAuthentication"/>
@@ -363,7 +576,34 @@
         <Class IRI="/classes/PasswordPolicy"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Policy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/PolicyDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/PolicyOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/PolicyRule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Principal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ProctectedAsset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ProtectedAssetOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ProvideConfiguration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ProvideConfigurationGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ProvideConfigurationOption"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/QPU"/>
@@ -372,7 +612,25 @@
         <Class IRI="/classes/RBAC"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/RateLimiting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ReadConfiguration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ReadConfigurationOption"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Redundancy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/RegisterConfigurationGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/RegisterConfigurationOption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/RegisterHttpEndpoint"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/RelationalDatabaseService"/>
@@ -385,6 +643,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/RemoteDataLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/RemoteEntryPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ReportDocument"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Resource"/>
@@ -409,6 +673,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Secret"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/SecretOperation"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/SecurityAdvisoryDocument"/>
@@ -447,16 +714,34 @@
         <Class IRI="/classes/StorageService"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/SymmetricCipher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Token"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Training"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/TransportEncryption"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/UnlockEncryptedDisk"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/UsageStatistics"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/VMImage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ValidateJwt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/Value"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/VirtualMachine"/>
@@ -474,301 +759,28 @@
         <Class IRI="/classes/WebApplicationFirewall"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Win32"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Workflow"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ZoneRedundancy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/core/functionality#AsymmetricCipher"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality#GetCurrentTimeOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality#HybridCipher"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality#InitializationVector"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality#Input"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality#InputValidationOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality#InstallUpdate"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality#Key"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality#KeyDerivationFunction"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality#MessageAuthenticationCode"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality#Output"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality#Padding"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality#RateLimiting"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality#SymmetricCipher"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality#Time"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/Allocate"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/Authenticate"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/AuthenticationOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/AuthorizeJwt"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/BlockStorageOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/Boundary"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/CheckAccess"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/Cipher"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/CipherOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/CreateEncryptedDisk"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/CreateSecret"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/DeAllocate"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/DiskEncryptionOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/DynamicLoading"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/DynamicLoadingOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/EntryPoint"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/EqualityCheck"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/ExitBoundaryOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/FileOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/GetSecret"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/Http"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/HttpClient"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/HttpClientOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/HttpEndpointOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/HttpRequestContext"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/HttpRequestHandlerOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/IssueJwt"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/LibraryEntryPoint"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/LoadConfiguration"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/LoadLibrary"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/LoadSymbol"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/LocalEntryPoint"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/LogGet"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/LogOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/LogWrite"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/Main"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/MemoryOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/PolicyOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/Principal"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/ProctectedAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/ProtectedAssetOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/ProvideConfiguration"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/ProvideConfigurationGroup"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/ProvideConfigurationOption"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/ReadConfiguration"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/ReadConfigurationOption"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/RegisterConfigurationGroup"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/RegisterConfigurationOption"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/RegisterHttpEndpoint"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/RemoteEntryPoint"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/SecretOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/UnlockEncryptedDisk"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/ValidateJwt"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/security/classes/DiskEncryption"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/security/classes/Encryption"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/security/classes/JwtAuthentication"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/application/classes/Agnostic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/application/classes/Darwin"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/application/classes/OperatingSystemArchitecture"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/application/classes/POSIX"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/application/classes/Win32"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/AndRule"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/Configuration"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/ConfigurationDocument"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/ConfigurationGroup"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/ConfigurationGroupSource"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/ConfigurationOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/ConfigurationOption"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/ConfigurationOptionSource"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/ConfigurationSource"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/Context"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/File"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/FileHandle"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/FileLikeObject"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/LogDocument"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/Policy"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/PolicyRule"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/ReportDocument"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/Token"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/Value"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/classes/basedOn"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/bootLog"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/classes/keyExchange"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/classes/leftPrincipal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/classes/linkedConcept"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/measures"/>
@@ -781,6 +793,12 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/output"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/classes/protects"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/classes/rightPrincipal"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/scope"/>
@@ -796,21 +814,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/validatedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/core/functionality#keyExchange"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/core/functionality/classes/leftPrincipal"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/core/functionality/classes/linkedConcept"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/core/functionality/classes/protects"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/core/functionality/classes/rightPrincipal"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/properties/backend"/>
@@ -864,13 +867,22 @@
         <DataProperty IRI="/classes/apiHitsPerMonth"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/authTagSize"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/authenticationMechanism"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/blockSize"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/broadAssignments"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/calls"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/cipherName"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/code"/>
@@ -942,6 +954,9 @@
         <DataProperty IRI="/classes/isManaged"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/isTLS"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/keyExchangeAlgorithm"/>
     </Declaration>
     <Declaration>
@@ -957,16 +972,28 @@
         <DataProperty IRI="/classes/local"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/logLevel"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/loginDefenderEnabled"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/macAlgorithm"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/maxRequests"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/message"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/mixedDuties"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/mode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/modus"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/monitoringEnabled"/>
@@ -1038,6 +1065,9 @@
         <DataProperty IRI="/classes/schemaURL"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/scheme"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/securityAlertsEnabled"/>
     </Declaration>
     <Declaration>
@@ -1059,37 +1089,13 @@
         <DataProperty IRI="/classes/status"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/timeWindowSeconds"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/usesSalt"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/zone"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/core/functionality#authTagSize"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/core/functionality#cipherName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/core/functionality#maxRequests"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/core/functionality#modus"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/core/functionality#scheme"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/core/functionality#timeWindowSeconds"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/core/functionality/classes/blockSize"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/core/functionality/classes/isTLS"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/core/functionality/classes/logLevel"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/activated"/>
@@ -1374,34 +1380,10 @@
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/core/functionality/classes/AutomaticUpdates"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document#RateLimiting"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/core/security/classes/target"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/OneQubitErrorRate"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/resource/document/properties/hasMultiple"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/Operation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/security/classes/Secret"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/Functionality"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/CipherSuite"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/DiskEncryption"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/SpamErrorRate"/>
@@ -1410,34 +1392,19 @@
         <DataProperty IRI="/classes/privacyLabel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/resource/document#KeyDerivationFunction"/>
+        <DataProperty IRI="/classes//mode"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/describes"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/core/security#/properties/has"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/privacyLevel"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/resource/document/classes/type"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/resource/document#scheme"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document#SymmetricCipher"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document#Padding"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/Operation"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/size"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/Data"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/TwoQubitErrorRate"/>
@@ -1446,22 +1413,7 @@
         <DataProperty IRI="/classes/errorCorrectionEnabled"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/core/functionality/classes/OperatingSystemArchitecture"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/resource/document#maxRequests"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/Document"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document#Output"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/poisonLevel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document#MessageAuthenticationCode"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/successfullyCompletedPercentage"/>
@@ -1470,118 +1422,25 @@
         <DataProperty IRI="/classes/type"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/resource/document#InitializationVector"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/resource/document/properties/has"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/classes/CipherOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/security/classes/Confidentiality"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Implementation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/resource/document#Key"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/core/functionality/properties/has"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/resource/document#modus"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/Confidentiality"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document#Time"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/core/security/properties/has"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/robustness"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/resource/document#authTagSize"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/classes/hasType"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/security/classes/AtRestEncryption"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/Authenticity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/CryptographicOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/Functionality"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document#Input"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/DecryptionOperation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/core/security/classes/basedOn"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/security/classes/Cipher"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/Cipher"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/BlockStorage"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/annualUpdateCompleted"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Encryption"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/core/functionality/classes/keySize"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/security/classes/BlockStorage"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="core:Encryption"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="core:Confidentiality"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/resource/document/classes/Key"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/Secret"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/resource/document/classes/linkedConcept"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/DatabaseOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/DatabaseStorage"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/core/functionality/properties/hasMultiple"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/functionality/classes/Credential"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/resource/document#timeWindowSeconds"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Specification"/>
@@ -1593,10 +1452,6 @@
             <NamedIndividual IRI="/classes/Specification"/>
         </ObjectOneOf>
     </EquivalentClasses>
-    <SubClassOf>
-        <Class IRI="core:Encryption"/>
-        <Class IRI="core:Confidentiality"/>
-    </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ABAC"/>
         <Class IRI="/classes/Authorization"/>
@@ -1612,6 +1467,18 @@
     <SubClassOf>
         <Class IRI="/classes/ActivityLog"/>
         <Class IRI="/classes/Logging"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Agnostic"/>
+        <Class IRI="/classes/OperatingSystemArchitecture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Allocate"/>
+        <Class IRI="/classes/MemoryOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AndRule"/>
+        <Class IRI="/classes/PolicyRule"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/AnomalyDetection"/>
@@ -1682,6 +1549,10 @@
         <Class IRI="/classes/Logging"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/AsymmetricCipher"/>
+        <Class IRI="/classes/Cipher"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/AtRestEncryption"/>
         <Class IRI="/classes/Encryption"/>
     </SubClassOf>
@@ -1722,6 +1593,28 @@
         <Class IRI="/classes/SecurityFeature"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Authenticate"/>
+        <Class IRI="/classes/AuthenticationOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Authenticate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <Class IRI="/classes/Credential"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AuthenticationOperation"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AuthenticationOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/Authenticity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/Authenticity"/>
         <Class IRI="/classes/SecurityFeature"/>
     </SubClassOf>
@@ -1742,6 +1635,10 @@
     <SubClassOf>
         <Class IRI="/classes/Authorization"/>
         <Class IRI="/classes/SecurityFeature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AuthorizeJwt"/>
+        <Class IRI="/classes/AuthenticationOperation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/AutomaticUpdates"/>
@@ -1820,8 +1717,23 @@
         <Class IRI="/classes/Storage"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/BlockStorageOperation"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/BlockStorageOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/BlockStorage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/BootLog"/>
         <Class IRI="/classes/Logging"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Boundary"/>
+        <Class IRI="/classes/Functionality"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/CICDService"/>
@@ -1843,8 +1755,62 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/CheckAccess"/>
+        <Class IRI="/classes/ProtectedAssetOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Cipher"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Cipher"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <Class IRI="/classes/Padding"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Cipher"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/blockSize"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Cipher"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/cipherName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Cipher"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/keySize"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CipherOperation"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CipherOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/Cipher"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/CipherSuite"/>
         <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CipherSuite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core/functionality/properties/hasMultiple"/>
+            <Class IRI="/classes/Cipher"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/CipherSuite"/>
@@ -2015,6 +1981,94 @@
         <Class IRI="/classes/SecurityFeature"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Configuration"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Configuration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/resource/document/properties/hasMultiple"/>
+            <Class IRI="/classes/ConfigurationGroup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationDocument"/>
+        <Class IRI="/classes/Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationGroup"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationGroup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <Class IRI="/classes/Configuration"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationGroup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/resource/document/properties/hasMultiple"/>
+            <Class IRI="/classes/ConfigurationOption"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationGroupSource"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationOperation"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/Configuration"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationOption"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationOption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <Class IRI="/classes/ConfigurationGroup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationOption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <Class IRI="/classes/Key"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationOption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <Class IRI="/classes/Value"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationOptionSource"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationSource"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationSource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/resource/document/properties/hasMultiple"/>
+            <Class IRI="/classes/ConfigurationGroupSource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/Container"/>
         <Class IRI="/classes/Compute"/>
     </SubClassOf>
@@ -2057,6 +2111,18 @@
     <SubClassOf>
         <Class IRI="/classes/ContainerRegistry"/>
         <Class IRI="/classes/CloudResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Context"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CreateEncryptedDisk"/>
+        <Class IRI="/classes/DiskEncryptionOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CreateSecret"/>
+        <Class IRI="/classes/SecretOperation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Credential"/>
@@ -2120,12 +2186,23 @@
         <Class IRI="/classes/Operation"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/CryptographicOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/Confidentiality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/CustomerKeyEncryption"/>
         <Class IRI="/classes/AtRestEncryption"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/DDosProtection"/>
         <Class IRI="/classes/Availability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Darwin"/>
+        <Class IRI="/classes/OperatingSystemArchitecture"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Data"/>
@@ -2163,6 +2240,13 @@
     <SubClassOf>
         <Class IRI="/classes/DatabaseOperation"/>
         <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DatabaseOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/DatabaseStorage"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/DatabaseOperation"/>
@@ -2226,8 +2310,19 @@
         <Class IRI="/classes/Storage"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/DeAllocate"/>
+        <Class IRI="/classes/MemoryOperation"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/DecryptionOperation"/>
         <Class IRI="/classes/CipherOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DecryptionOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <Class IRI="/classes/Secret"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/DecryptionOperation"/>
@@ -2239,6 +2334,28 @@
     <SubClassOf>
         <Class IRI="/classes/DeviceProvisioningService"/>
         <Class IRI="/classes/IoT"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DiskEncryption"/>
+        <Class IRI="/classes/AtRestEncryption"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DiskEncryption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/target"/>
+            <Class IRI="/classes/BlockStorage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DiskEncryptionOperation"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DiskEncryptionOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/DiskEncryption"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Document"/>
@@ -2282,6 +2399,39 @@
     <SubClassOf>
         <Class IRI="/classes/DocumentDatabaseService"/>
         <Class IRI="/classes/DatabaseService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DynamicLoading"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DynamicLoadingOperation"/>
+        <Class IRI="/classes/MemoryOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DynamicLoadingOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <Class IRI="/classes/OperatingSystemArchitecture"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Encryption"/>
+        <Class IRI="/classes/Confidentiality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Encryption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/basedOn"/>
+            <Class IRI="/classes/Cipher"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Encryption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core/security#/properties/has"/>
+            <Class IRI="/classes/Secret"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/EncryptionInUse"/>
@@ -2405,6 +2555,21 @@
     <SubClassOf>
         <Class IRI="/classes/GeoRedundancy"/>
         <Class IRI="/classes/Redundancy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/GetCurrentTimeOperation"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/GetCurrentTimeOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/Time"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Hardware"/>
+        <Class IRI="/classes/Resource"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/HashOperation"/>
@@ -2547,6 +2712,38 @@
         <Class IRI="/classes/Resource"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/HybridCipher"/>
+        <Class IRI="/classes/Cipher"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/HybridCipher"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/keyExchange"/>
+            <Class IRI="/classes/AsymmetricCipher"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/HybridCipher"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <Class IRI="/classes/KeyDerivationFunction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/HybridCipher"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <Class IRI="/classes/MessageAuthenticationCode"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/HybridCipher"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <Class IRI="/classes/SymmetricCipher"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/Identifiable"/>
         <Class IRI="/classes/CloudResource"/>
     </SubClassOf>
@@ -2633,6 +2830,57 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/InitializationVector"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Input"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/InputValidationOperation"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/InputValidationOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/Input"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/InputValidationOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <Class IRI="/classes/Input"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/InputValidationOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <Class IRI="/classes/Output"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/InstallUpdate"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/InstallUpdate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/AutomaticUpdates"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/InstallUpdate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <Class IRI="/classes/AutomaticUpdates"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/Integrity"/>
         <Class IRI="/classes/SecurityFeature"/>
     </SubClassOf>
@@ -2668,6 +2916,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Key"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Key"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/keySize"/>
             <Datatype abbreviatedIRI="xsd:int"/>
@@ -2677,6 +2929,24 @@
         <Class IRI="/classes/Key"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/algorithm"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/KeyDerivationFunction"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/KeyDerivationFunction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <Class IRI="/classes/Input"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/KeyDerivationFunction"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/type"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -2991,6 +3261,42 @@
         <Class IRI="/classes/AtRestEncryption"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Memory"/>
+        <Class IRI="/classes/Hardware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Memory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes//mode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MessageAuthenticationCode"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MessageAuthenticationCode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <Class IRI="/classes/Input"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MessageAuthenticationCode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <Class IRI="/classes/Key"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MessageAuthenticationCode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/MessagingHub"/>
         <Class IRI="/classes/IoT"/>
     </SubClassOf>
@@ -3145,6 +3451,10 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/OperatingSystemArchitecture"/>
+        <Class IRI="/classes/SoftwareResource"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/Operation"/>
         <Class IRI="/classes/Functionality"/>
     </SubClassOf>
@@ -3156,8 +3466,27 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Output"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/POSIX"/>
+        <Class IRI="/classes/OperatingSystemArchitecture"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/Package"/>
         <Class IRI="/classes/Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Padding"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Padding"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/scheme"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/PasswordBasedAuthentication"/>
@@ -3226,6 +3555,24 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/mixedDuties"/>
             <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RateLimiting"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RateLimiting"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/maxRequests"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RateLimiting"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/timeWindowSeconds"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3549,6 +3896,35 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/SymmetricCipher"/>
+        <Class IRI="/classes/Cipher"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SymmetricCipher"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <Class IRI="/classes/InitializationVector"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SymmetricCipher"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/authTagSize"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SymmetricCipher"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/modus"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Time"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/Training"/>
         <Class IRI="/classes/HumanResources"/>
     </SubClassOf>
@@ -3568,7 +3944,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/TransportEncryption"/>
-        <Class IRI="/classes/Confidentiality"/>
+        <Class IRI="/classes/Encryption"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/TransportEncryption"/>
@@ -3732,514 +4108,16 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Win32"/>
+        <Class IRI="/classes/OperatingSystemArchitecture"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/Workflow"/>
         <Class IRI="/classes/CICDService"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ZoneRedundancy"/>
         <Class IRI="/classes/Redundancy"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#AsymmetricCipher"/>
-        <Class IRI="/core/functionality/classes/Cipher"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#GetCurrentTimeOperation"/>
-        <Class IRI="/core/functionality/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#GetCurrentTimeOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/classes/linkedConcept"/>
-            <Class IRI="/core/functionality#Time"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#HybridCipher"/>
-        <Class IRI="/core/functionality/classes/Cipher"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#HybridCipher"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality#keyExchange"/>
-            <Class IRI="/core/functionality#AsymmetricCipher"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#HybridCipher"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
-            <Class IRI="/core/functionality#KeyDerivationFunction"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#HybridCipher"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
-            <Class IRI="/core/functionality#MessageAuthenticationCode"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#HybridCipher"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
-            <Class IRI="/core/functionality#SymmetricCipher"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#InitializationVector"/>
-        <Class IRI="/core/functionality/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#Input"/>
-        <Class IRI="/core/functionality/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#InputValidationOperation"/>
-        <Class IRI="/core/functionality/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#InputValidationOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/classes/linkedConcept"/>
-            <Class IRI="/core/functionality#Input"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#InputValidationOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
-            <Class IRI="/core/functionality#Input"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#InputValidationOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
-            <Class IRI="/core/functionality#Output"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#InstallUpdate"/>
-        <Class IRI="/core/functionality/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#InstallUpdate"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/classes/linkedConcept"/>
-            <Class IRI="/core/functionality/classes/AutomaticUpdates"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality#InstallUpdate"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
-            <Class IRI="/core/functionality/classes/AutomaticUpdates"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/Allocate"/>
-        <Class IRI="/core/functionality/classes/MemoryOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/Authenticate"/>
-        <Class IRI="/core/functionality/classes/AuthenticationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/Authenticate"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
-            <Class IRI="/core/functionality/classes/Credential"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/AuthenticationOperation"/>
-        <Class IRI="/core/functionality/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/AuthenticationOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/classes/linkedConcept"/>
-            <Class IRI="/core/functionality/classes/Authenticity"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/AuthorizeJwt"/>
-        <Class IRI="/core/functionality/classes/AuthenticationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/BlockStorageOperation"/>
-        <Class IRI="/core/functionality/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/BlockStorageOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/classes/linkedConcept"/>
-            <Class IRI="/core/functionality/classes/BlockStorage"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/Boundary"/>
-        <Class IRI="/core/functionality/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/CheckAccess"/>
-        <Class IRI="/core/functionality/classes/ProtectedAssetOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/Cipher"/>
-        <Class IRI="/core/functionality/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/Cipher"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
-            <Class IRI="/core/functionality#Padding"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/Cipher"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/core/functionality#cipherName"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/Cipher"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/core/functionality/classes/blockSize"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/Cipher"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/core/functionality/classes/keySize"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/CipherOperation"/>
-        <Class IRI="/core/functionality/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/CipherOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/classes/linkedConcept"/>
-            <Class IRI="/core/functionality/classes/Cipher"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/CipherSuite"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/hasMultiple"/>
-            <Class IRI="/core/functionality/classes/Cipher"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/CreateEncryptedDisk"/>
-        <Class IRI="/core/functionality/classes/DiskEncryptionOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/CreateSecret"/>
-        <Class IRI="/core/functionality/classes/SecretOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/CryptographicOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/classes/linkedConcept"/>
-            <Class IRI="/core/functionality/classes/Confidentiality"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/DatabaseOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/classes/linkedConcept"/>
-            <Class IRI="/core/functionality/classes/DatabaseStorage"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/DeAllocate"/>
-        <Class IRI="/core/functionality/classes/MemoryOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/DecryptionOperation"/>
-        <Class IRI="/core/functionality/classes/CipherOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/DecryptionOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
-            <Class IRI="/core/functionality/classes/Secret"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/DiskEncryptionOperation"/>
-        <Class IRI="/core/functionality/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/DiskEncryptionOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/classes/linkedConcept"/>
-            <Class IRI="/core/functionality/classes/DiskEncryption"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/DynamicLoading"/>
-        <Class IRI="/core/functionality/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/DynamicLoadingOperation"/>
-        <Class IRI="/core/functionality/classes/MemoryOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/functionality/classes/DynamicLoadingOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
-            <Class IRI="/core/functionality/classes/OperatingSystemArchitecture"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/security/classes/DiskEncryption"/>
-        <Class IRI="/core/security/classes/AtRestEncryption"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/security/classes/DiskEncryption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/security/classes/target"/>
-            <Class IRI="/core/security/classes/BlockStorage"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/security/classes/Encryption"/>
-        <Class IRI="/core/security/classes/Confidentiality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/security/classes/Encryption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/security/classes/basedOn"/>
-            <Class IRI="/core/security/classes/Cipher"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/security/classes/Encryption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/security/properties/has"/>
-            <Class IRI="/core/security/classes/Secret"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/application/classes/Agnostic"/>
-        <Class IRI="/resource/application/classes/OperatingSystemArchitecture"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/application/classes/Darwin"/>
-        <Class IRI="/resource/application/classes/OperatingSystemArchitecture"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#Key"/>
-        <Class IRI="/resource/document/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#KeyDerivationFunction"/>
-        <Class IRI="/resource/document/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#KeyDerivationFunction"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
-            <Class IRI="/resource/document#Input"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#KeyDerivationFunction"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/resource/document/classes/type"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#MessageAuthenticationCode"/>
-        <Class IRI="/resource/document/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#MessageAuthenticationCode"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
-            <Class IRI="/resource/document#Input"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#MessageAuthenticationCode"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
-            <Class IRI="/resource/document#Key"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#MessageAuthenticationCode"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/resource/document/classes/type"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#Output"/>
-        <Class IRI="/resource/document/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#Padding"/>
-        <Class IRI="/resource/document/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#Padding"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/resource/document#scheme"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#RateLimiting"/>
-        <Class IRI="/resource/document/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#RateLimiting"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/resource/document#maxRequests"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#RateLimiting"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/resource/document#timeWindowSeconds"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#SymmetricCipher"/>
-        <Class IRI="/resource/document/classes/Cipher"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#SymmetricCipher"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
-            <Class IRI="/resource/document#InitializationVector"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#SymmetricCipher"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/resource/document#authTagSize"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#SymmetricCipher"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/resource/document#modus"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document#Time"/>
-        <Class IRI="/resource/document/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/AndRule"/>
-        <Class IRI="/resource/document/classes/PolicyRule"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/Configuration"/>
-        <Class IRI="/resource/document/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/Configuration"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/hasMultiple"/>
-            <Class IRI="/resource/document/classes/ConfigurationGroup"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/ConfigurationDocument"/>
-        <Class IRI="/resource/document/classes/Document"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/ConfigurationGroup"/>
-        <Class IRI="/resource/document/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/ConfigurationGroup"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
-            <Class IRI="/resource/document/classes/Configuration"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/ConfigurationGroup"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/hasMultiple"/>
-            <Class IRI="/resource/document/classes/ConfigurationOption"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/ConfigurationGroupSource"/>
-        <Class IRI="/resource/document/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/ConfigurationOperation"/>
-        <Class IRI="/resource/document/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/ConfigurationOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/classes/linkedConcept"/>
-            <Class IRI="/resource/document/classes/Configuration"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/ConfigurationOption"/>
-        <Class IRI="/resource/document/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/ConfigurationOption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
-            <Class IRI="/resource/document/classes/ConfigurationGroup"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/ConfigurationOption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
-            <Class IRI="/resource/document/classes/Key"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/ConfigurationOption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
-            <Class IRI="/resource/document/classes/Value"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/ConfigurationOptionSource"/>
-        <Class IRI="/resource/document/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/ConfigurationSource"/>
-        <Class IRI="/resource/document/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/ConfigurationSource"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/hasMultiple"/>
-            <Class IRI="/resource/document/classes/ConfigurationGroupSource"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/resource/document/classes/Context"/>
-        <Class IRI="/resource/document/classes/Data"/>
     </SubClassOf>
     <ClassAssertion>
         <Class IRI="/classes/CICDService"/>
@@ -6464,6 +6342,26 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/value</IRI>
         <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/resource/application/classes/OperatingSystemArchitecture</IRI>
+        <Literal>Represents an architecture of an operating system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/resource/application/classes/OperatingSystemArchitecture</IRI>
+        <Literal>OperatingSystemArchitecture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/resource/hardware/classes/Memory</IRI>
+        <Literal>A generic concept to describe memory operations with a program. This includes allocation and de-allocation of memory as well as copying memory regions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/resource/hardware/classes/Memory</IRI>
+        <Literal>Memory</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
