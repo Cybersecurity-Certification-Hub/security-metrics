@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://ontology.cybersecuritycertcluster.eu/resource/human_resources"
+     xml:base="https://ontology.cybersecuritycertcluster.eu/resource/hardware"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
