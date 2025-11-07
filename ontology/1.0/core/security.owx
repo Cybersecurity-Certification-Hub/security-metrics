@@ -17,13 +17,13 @@
     <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <Class IRI="/classes/DiskEncryption"/>
+        <Class abbreviatedIRI="core:DiskEncryption"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Encryption"/>
+        <Class abbreviatedIRI="core:Encryption"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/JwtAuthentication"/>
+        <Class abbreviatedIRI="core:JwtAuthentication"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:ABAC"/>
@@ -334,28 +334,28 @@
         <Class abbreviatedIRI="core:Logging"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/DiskEncryption"/>
-        <Class IRI="/classes/AtRestEncryption"/>
+        <Class abbreviatedIRI="core:DiskEncryption"/>
+        <Class abbreviatedIRI="core:AtRestEncryption"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/DiskEncryption"/>
+        <Class abbreviatedIRI="core:DiskEncryption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/target"/>
-            <Class IRI="/classes/BlockStorage"/>
+            <ObjectProperty abbreviatedIRI="core:target"/>
+            <Class abbreviatedIRI="core:BlockStorage"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Encryption"/>
+        <Class abbreviatedIRI="core:Encryption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/basedOn"/>
-            <Class IRI="/classes/Cipher"/>
+            <ObjectProperty abbreviatedIRI="core:basedOn"/>
+            <Class abbreviatedIRI="core:Cipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Encryption"/>
+        <Class abbreviatedIRI="core:Encryption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Secret"/>
+            <ObjectProperty abbreviatedIRI="/properties/has"/>
+            <Class abbreviatedIRI="core:Secret"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -835,6 +835,10 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:TransportEncryption"/>
+        <Class abbreviatedIRI="core:Encryption"/>
+        </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:SingleSignOn"/>
         <Class abbreviatedIRI="core:Authenticity"/>
     </SubClassOf>
@@ -844,10 +848,6 @@
             <DataProperty abbreviatedIRI="prop:enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:TransportEncryption"/>
-        <Class abbreviatedIRI="core:Confidentiality"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:TransportEncryption"/>
