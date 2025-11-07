@@ -525,6 +525,32 @@
             <Class IRI="/classes/Cipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CreateEncryptedDisk"/>
+        <Class IRI="/classes/DiskEncryptionOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CreateSecret"/>
+        <Class IRI="/classes/SecretOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CryptographicOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/Confidentiality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DatabaseOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/DatabaseStorage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DeAllocate"/>
+        <Class IRI="/classes/MemoryOperation"/>
+    </SubClassOf>
     
     <SubClassOf>
         <Class IRI="/classes/Cipher"/>
@@ -866,6 +892,10 @@
             <DataProperty abbreviatedIRI="prop:modify"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DecryptionOperation"/>
+        <Class IRI="/classes/CipherOperation"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:DecryptionOperation"/>

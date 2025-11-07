@@ -183,6 +183,100 @@
         <Class IRI="/classes/PolicyRule"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Configuration"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Configuration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
+            <Class IRI="/classes/ConfigurationGroup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationDocument"/>
+        <Class IRI="/classes/Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationGroup"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationGroup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/Configuration"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationGroup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
+            <Class IRI="/classes/ConfigurationOption"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationGroupSource"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Context"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationOperation"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/classes/linkedConcept"/>
+            <Class IRI="/classes/Configuration"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationOption"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationOption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ConfigurationGroup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationOption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/Key"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationOption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/Value"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationOptionSource"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationSource"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ConfigurationSource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
+            <Class IRI="/classes/ConfigurationGroupSource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
         <Class IRI="#SymmetricCipher"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#authTagSize"/>

@@ -1282,16 +1282,10 @@
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
+    
     <SubClassOf>
         <Class IRI="/classes/CipherSuite"/>
         <Class IRI="/classes/Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/CipherSuite"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/Cipher"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/CipherSuite"/>
@@ -1455,94 +1449,6 @@
         <Class IRI="/classes/SecurityFeature"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Configuration"/>
-        <Class IRI="/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Configuration"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/ConfigurationGroup"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationDocument"/>
-        <Class IRI="/classes/Document"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationGroup"/>
-        <Class IRI="/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationGroup"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Configuration"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationGroup"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/ConfigurationOption"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationGroupSource"/>
-        <Class IRI="/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationOperation"/>
-        <Class IRI="/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Configuration"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationOption"/>
-        <Class IRI="/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationOption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationGroup"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationOption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Key"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationOption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Value"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationOptionSource"/>
-        <Class IRI="/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationSource"/>
-        <Class IRI="/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationSource"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/ConfigurationGroupSource"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/classes/Container"/>
         <Class IRI="/classes/Compute"/>
     </SubClassOf>
@@ -1585,18 +1491,6 @@
     <SubClassOf>
         <Class IRI="/classes/ContainerRegistry"/>
         <Class IRI="/classes/CloudResource"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Context"/>
-        <Class IRI="/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/CreateEncryptedDisk"/>
-        <Class IRI="/classes/DiskEncryptionOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/CreateSecret"/>
-        <Class IRI="/classes/SecretOperation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Credential"/>
@@ -1660,23 +1554,12 @@
         <Class IRI="/classes/Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/CryptographicOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Confidentiality"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/classes/CustomerKeyEncryption"/>
         <Class IRI="/classes/AtRestEncryption"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/DDosProtection"/>
         <Class IRI="/classes/Availability"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Darwin"/>
-        <Class IRI="/classes/OperatingSystemArchitecture"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Data"/>
@@ -1714,13 +1597,6 @@
     <SubClassOf>
         <Class IRI="/classes/DatabaseOperation"/>
         <Class IRI="/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DatabaseOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/DatabaseStorage"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/DatabaseOperation"/>
@@ -1782,10 +1658,6 @@
     <SubClassOf>
         <Class IRI="/classes/DatabaseStorage"/>
         <Class IRI="/classes/Storage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DeAllocate"/>
-        <Class IRI="/classes/MemoryOperation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/DecryptionOperation"/>

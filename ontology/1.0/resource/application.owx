@@ -48,6 +48,11 @@
         <Class IRI="/classes/Agnostic"/>
         <Class IRI="/classes/OperatingSystemArchitecture"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Darwin"/>
+        <Class IRI="/classes/OperatingSystemArchitecture"/>
+    </SubClassOf>
+    
     <Declaration>
         <Class abbreviatedIRI="res:Package" />
     </Declaration>
