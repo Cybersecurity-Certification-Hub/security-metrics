@@ -18,19 +18,19 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#" />
     <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
     <Declaration>
-        <Class IRI="/classes/Agnostic"/>
+        <Class abbreviatedIRI="core:Agnostic"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/POSIX"/>
+        <Class abbreviatedIRI="core:POSIX"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Win32"/>
+        <Class abbreviatedIRI="core:Win32"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/OperatingSystemArchitecture"/>
+        <Class abbreviatedIRI="core:OperatingSystemArchitecture"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Darwin"/>
+        <Class abbreviatedIRI="core:Darwin"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="res:Application" />
@@ -45,14 +45,25 @@
         <Class abbreviatedIRI="res:SourceCodeFile" />
     </Declaration>
     <SubClassOf>
-        <Class IRI="/classes/Agnostic"/>
-        <Class IRI="/classes/OperatingSystemArchitecture"/>
+        <Class abbreviatedIRI="core:Win32"/>
+        <Class abbreviatedIRI="core:OperatingSystemArchitecture"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Darwin"/>
-        <Class IRI="/classes/OperatingSystemArchitecture"/>
+        <Class abbreviatedIRI="core:Agnostic"/>
+        <Class abbreviatedIRI="core:OperatingSystemArchitecture"/>
     </SubClassOf>
-    
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Darwin"/>
+        <Class abbreviatedIRI="core:OperatingSystemArchitecture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:OperatingSystemArchitecture"/>
+        <Class abbreviatedIRI="core:SoftwareResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:POSIX"/>
+        <Class abbreviatedIRI="core:OperatingSystemArchitecture"/>
+    </SubClassOf>
     <Declaration>
         <Class abbreviatedIRI="res:Package" />
     </Declaration>
@@ -211,6 +222,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label" />
         <AbbreviatedIRI>res:Component</AbbreviatedIRI>
         <Literal>Component</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/OperatingSystemArchitecture</IRI>
+        <Literal>Represents an architecture of an operating system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/OperatingSystemArchitecture</IRI>
+        <Literal>OperatingSystemArchitecture</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label" />

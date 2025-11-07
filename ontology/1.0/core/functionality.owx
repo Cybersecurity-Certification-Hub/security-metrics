@@ -16,208 +16,208 @@
     <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <Class IRI="/classes/Allocate"/>
+        <Class abbreviatedIRI="core:Allocate"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Principal"/>
+        <Class abbreviatedIRI="core:Principal"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ValidateJwt"/>
+        <Class abbreviatedIRI="core:ValidateJwt"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ProtectedAssetOperation"/>
+        <Class abbreviatedIRI="core:ProtectedAssetOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/UnlockEncryptedDisk"/>
+        <Class abbreviatedIRI="core:UnlockEncryptedDisk"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ReadConfiguration"/>
+        <Class abbreviatedIRI="core:ReadConfiguration"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ReadConfigurationOption"/>
+        <Class abbreviatedIRI="core:ReadConfigurationOption"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/RegisterConfigurationGroup"/>
+        <Class abbreviatedIRI="core:RegisterConfigurationGroup"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/RegisterConfigurationOption"/>
+        <Class abbreviatedIRI="core:RegisterConfigurationOption"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/RegisterHttpEndpoint"/>
+        <Class abbreviatedIRI="core:RegisterHttpEndpoint"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/RemoteEntryPoint"/>
+        <Class abbreviatedIRI="core:RemoteEntryPoint"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/SecretOperation"/>
+        <Class abbreviatedIRI="core:SecretOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ProvideConfiguration"/>
+        <Class abbreviatedIRI="core:ProvideConfiguration"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ProvideConfigurationGroup"/>
+        <Class abbreviatedIRI="core:ProvideConfigurationGroup"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ProvideConfigurationOption"/>
+        <Class abbreviatedIRI="core:ProvideConfigurationOption"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ProctectedAsset"/>
+        <Class abbreviatedIRI="core:ProctectedAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/MemoryOperation"/>
+        <Class abbreviatedIRI="core:MemoryOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/PolicyOperation"/>
+        <Class abbreviatedIRI="core:PolicyOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Authenticate"/>
+        <Class abbreviatedIRI="core:Authenticate"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Main"/>
+        <Class abbreviatedIRI="core:Main"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/LibraryEntryPoint"/>
+        <Class abbreviatedIRI="core:LibraryEntryPoint"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/LoadConfiguration"/>
+        <Class abbreviatedIRI="core:LoadConfiguration"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/LocalEntryPoint"/>
+        <Class abbreviatedIRI="core:LocalEntryPoint"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/LogWrite"/>
+        <Class abbreviatedIRI="core:LogWrite"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/LogGet"/>
+        <Class abbreviatedIRI="core:LogGet"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/LogOperation"/>
+        <Class abbreviatedIRI="core:LogOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/LoadLibrary"/>
+        <Class abbreviatedIRI="core:LoadLibrary"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/LoadSymbol"/>
+        <Class abbreviatedIRI="core:LoadSymbol"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/DiskEncryptionOperation"/>
+        <Class abbreviatedIRI="core:DiskEncryptionOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/DynamicLoading"/>
+        <Class abbreviatedIRI="core:DynamicLoading"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/IssueJwt"/>
+        <Class abbreviatedIRI="core:IssueJwt"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/HttpClientOperation"/>
+        <Class abbreviatedIRI="core:HttpClientOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/HttpEndpointOperation"/>
+        <Class abbreviatedIRI="core:HttpEndpointOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/HttpRequestContext"/>
+        <Class abbreviatedIRI="core:HttpRequestContext"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/HttpRequestHandlerOperation"/>
+        <Class abbreviatedIRI="core:HttpRequestHandlerOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Http"/>
+        <Class abbreviatedIRI="core:Http"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/HttpClient"/>
+        <Class abbreviatedIRI="core:HttpClient"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/FileOperation"/>
+        <Class abbreviatedIRI="core:FileOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/GetSecret"/>
+        <Class abbreviatedIRI="core:GetSecret"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/EntryPoint"/>
+        <Class abbreviatedIRI="core:EntryPoint"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ExitBoundaryOperation"/>
+        <Class abbreviatedIRI="core:ExitBoundaryOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/EqualityCheck"/>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/DynamicLoadingOperation"/>
+        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/CreateEncryptedDisk"/>
+        <Class abbreviatedIRI="core:CreateEncryptedDisk"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/CreateSecret"/>
+        <Class abbreviatedIRI="core:CreateSecret"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/DeAllocate"/>
+        <Class abbreviatedIRI="core:DeAllocate"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/AuthenticationOperation"/>
+        <Class abbreviatedIRI="core:AuthenticationOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/AuthorizeJwt"/>
+        <Class abbreviatedIRI="core:AuthorizeJwt"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/BlockStorageOperation"/>
+        <Class abbreviatedIRI="core:BlockStorageOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/CheckAccess"/>
+        <Class abbreviatedIRI="core:CheckAccess"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Cipher"/>
+        <Class abbreviatedIRI="core:Cipher"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/CipherOperation"/>
+        <Class abbreviatedIRI="core:CipherOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Boundary"/>
+        <Class abbreviatedIRI="core:Boundary"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#AsymmetricCipher"/>
+        <Class abbreviatedIRI="core:AsymmetricCipher"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GetCurrentTimeOperation"/>
+        <Class abbreviatedIRI="core:GetCurrentTimeOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HybridCipher"/>
+        <Class abbreviatedIRI="core:HybridCipher"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#InitializationVector"/>
+        <Class abbreviatedIRI="core:InitializationVector"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Input"/>
+        <Class abbreviatedIRI="core:Input"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#InputValidationOperation"/>
+        <Class abbreviatedIRI="core:InputValidationOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#InstallUpdate"/>
+        <Class abbreviatedIRI="core:InstallUpdate"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Key"/>
+        <Class abbreviatedIRI="core:Key"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#KeyDerivationFunction"/>
+        <Class abbreviatedIRI="core:KeyDerivationFunction"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MessageAuthenticationCode"/>
+        <Class abbreviatedIRI="core:MessageAuthenticationCode"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Output"/>
+        <Class abbreviatedIRI="core:Output"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Padding"/>
+        <Class abbreviatedIRI="core:Padding"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#RateLimiting"/>
+        <Class abbreviatedIRI="core:RateLimiting"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SymmetricCipher"/>
+        <Class abbreviatedIRI="core:SymmetricCipher"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Time"/>
+        <Class abbreviatedIRI="core:Time"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:CipherSuite"/>
@@ -334,49 +334,49 @@
         <DataProperty abbreviatedIRI="core:description"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#keyExchange"/>
+        <ObjectProperty abbreviatedIRI="core:keyExchange"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/classes/protects"/>
+        <ObjectProperty abbreviatedIRI="core:protects"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/classes/leftPrincipal"/>
+        <ObjectProperty abbreviatedIRI="core:leftPrincipal"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/classes/rightPrincipal"/>
+        <ObjectProperty abbreviatedIRI="core:rightPrincipal"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/classes/linkedConcept"/>
+        <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:proxyTarget"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#scheme"/>
+        <DataProperty abbreviatedIRI="core:scheme"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/blockSize"/>
+        <DataProperty abbreviatedIRI="core:blockSize"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/isTLS"/>
+        <DataProperty abbreviatedIRI="core:isTLS"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/logLevel"/>
+        <DataProperty abbreviatedIRI="core:logLevel"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#authTagSize"/>
+        <DataProperty abbreviatedIRI="core:authTagSize"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#cipherName"/>
+        <DataProperty abbreviatedIRI="core:cipherName"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#maxRequests"/>
+        <DataProperty abbreviatedIRI="core:maxRequests"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#modus"/>
+        <DataProperty abbreviatedIRI="core:modus"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#timeWindowSeconds"/>
+        <DataProperty abbreviatedIRI="core:timeWindowSeconds"/>
     </Declaration>
     
     <Declaration>
@@ -498,235 +498,235 @@
         <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Cipher"/>
+        <Class abbreviatedIRI="core:Cipher"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="#Padding"/>
+            <Class abbreviatedIRI="core:Padding"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Cipher"/>
+        <Class abbreviatedIRI="core:Cipher"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="#cipherName"/>
+            <DataProperty abbreviatedIRI="core:cipherName"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Cipher"/>
+        <Class abbreviatedIRI="core:Cipher"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/blockSize"/>
+            <DataProperty abbreviatedIRI="core:blockSize"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/CipherSuite"/>
+        <Class abbreviatedIRI="core:CipherSuite"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/Cipher"/>
+            <Class abbreviatedIRI="core:Cipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/CreateEncryptedDisk"/>
-        <Class IRI="/classes/DiskEncryptionOperation"/>
+        <Class abbreviatedIRI="core:CreateEncryptedDisk"/>
+        <Class abbreviatedIRI="core:DiskEncryptionOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/CreateSecret"/>
-        <Class IRI="/classes/SecretOperation"/>
+        <Class abbreviatedIRI="core:CreateSecret"/>
+        <Class abbreviatedIRI="core:SecretOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/CryptographicOperation"/>
+        <Class abbreviatedIRI="core:CryptographicOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Confidentiality"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Confidentiality"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/DatabaseOperation"/>
+        <Class abbreviatedIRI="core:DatabaseOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/DatabaseStorage"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:DatabaseStorage"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/DeAllocate"/>
-        <Class IRI="/classes/MemoryOperation"/>
+        <Class abbreviatedIRI="core:DeAllocate"/>
+        <Class abbreviatedIRI="core:MemoryOperation"/>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/Cipher"/>
+        <Class abbreviatedIRI="core:Cipher"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/keySize"/>
+            <DataProperty abbreviatedIRI="core:keySize"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/CipherOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:CipherOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/CipherOperation"/>
+        <Class abbreviatedIRI="core:CipherOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Cipher"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Cipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/Cipher"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class abbreviatedIRI="core:Cipher"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#AsymmetricCipher"/>
-        <Class IRI="/classes/Cipher"/>
+        <Class abbreviatedIRI="core:AsymmetricCipher"/>
+        <Class abbreviatedIRI="core:Cipher"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#GetCurrentTimeOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:GetCurrentTimeOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#GetCurrentTimeOperation"/>
+        <Class abbreviatedIRI="core:GetCurrentTimeOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="#Time"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Time"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#HybridCipher"/>
-        <Class IRI="/classes/Cipher"/>
+        <Class abbreviatedIRI="core:HybridCipher"/>
+        <Class abbreviatedIRI="core:Cipher"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#HybridCipher"/>
+        <Class abbreviatedIRI="core:HybridCipher"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#keyExchange"/>
-            <Class IRI="#AsymmetricCipher"/>
+            <ObjectProperty abbreviatedIRI="core:keyExchange"/>
+            <Class abbreviatedIRI="core:AsymmetricCipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#HybridCipher"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="#KeyDerivationFunction"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#HybridCipher"/>
+        <Class abbreviatedIRI="core:HybridCipher"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="#MessageAuthenticationCode"/>
+            <Class abbreviatedIRI="core:KeyDerivationFunction"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#HybridCipher"/>
+        <Class abbreviatedIRI="core:HybridCipher"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="#SymmetricCipher"/>
+            <Class abbreviatedIRI="core:MessageAuthenticationCode"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Allocate"/>
-        <Class IRI="/classes/MemoryOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Allocate"/>
-        <Class IRI="/classes/MemoryOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Authenticate"/>
-        <Class IRI="/classes/AuthenticationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Authenticate"/>
+        <Class abbreviatedIRI="core:HybridCipher"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Credential"/>
+            <Class abbreviatedIRI="core:SymmetricCipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/AuthorizeJwt"/>
-        <Class IRI="/classes/AuthenticationOperation"/>
+        <Class abbreviatedIRI="core:Allocate"/>
+        <Class abbreviatedIRI="core:MemoryOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/BlockStorageOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:Allocate"/>
+        <Class abbreviatedIRI="core:MemoryOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/BlockStorageOperation"/>
+        <Class abbreviatedIRI="core:Authenticate"/>
+        <Class abbreviatedIRI="core:AuthenticationOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Authenticate"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/BlockStorage"/>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class abbreviatedIRI="core:Credential"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Boundary"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class abbreviatedIRI="core:AuthorizeJwt"/>
+        <Class abbreviatedIRI="core:AuthenticationOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/CheckAccess"/>
-        <Class IRI="/classes/ProtectedAssetOperation"/>
+        <Class abbreviatedIRI="core:BlockStorageOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:BlockStorageOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:BlockStorage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Boundary"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CheckAccess"/>
+        <Class abbreviatedIRI="core:ProtectedAssetOperation"/>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/AuthenticationOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:AuthenticationOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/AuthenticationOperation"/>
+        <Class abbreviatedIRI="core:AuthenticationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Authenticity"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Authenticity"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#InitializationVector"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class abbreviatedIRI="core:InitializationVector"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Input"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class abbreviatedIRI="core:Input"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#InputValidationOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:InputValidationOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#InputValidationOperation"/>
+        <Class abbreviatedIRI="core:InputValidationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="#Input"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Input"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#InstallUpdate"/>
+        <Class abbreviatedIRI="core:InstallUpdate"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/AutomaticUpdates"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:AutomaticUpdates"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#InstallUpdate"/>
+        <Class abbreviatedIRI="core:InstallUpdate"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/AutomaticUpdates"/>
+            <Class abbreviatedIRI="core:AutomaticUpdates"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="#InputValidationOperation"/>
+        <Class abbreviatedIRI="core:InputValidationOperation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="#Input"/>
+            <Class abbreviatedIRI="core:Input"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#InputValidationOperation"/>
+        <Class abbreviatedIRI="core:InputValidationOperation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="#Output"/>
+            <Class abbreviatedIRI="core:Output"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#InstallUpdate"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:InstallUpdate"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:CipherSuite"/>
@@ -850,29 +850,29 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/DiskEncryptionOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:DiskEncryptionOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/DiskEncryptionOperation"/>
+        <Class abbreviatedIRI="core:DiskEncryptionOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/DiskEncryption"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:DiskEncryption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/DynamicLoading"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class abbreviatedIRI="core:DynamicLoading"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/DynamicLoadingOperation"/>
-        <Class IRI="/classes/MemoryOperation"/>
+        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
+        <Class abbreviatedIRI="core:MemoryOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/DynamicLoadingOperation"/>
+        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/OperatingSystemArchitecture"/>
+            <Class abbreviatedIRI="core:OperatingSystemArchitecture"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     
@@ -921,18 +921,18 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/DecryptionOperation"/>
-        <Class IRI="/classes/CipherOperation"/>
+        <Class abbreviatedIRI="core:DecryptionOperation"/>
+        <Class abbreviatedIRI="core:CipherOperation"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:DecryptionOperation"/>
         <Class abbreviatedIRI="core:CipherOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/DecryptionOperation"/>
+        <Class abbreviatedIRI="core:DecryptionOperation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Secret"/>
+            <Class abbreviatedIRI="core:Secret"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     

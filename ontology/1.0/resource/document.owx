@@ -19,61 +19,61 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
     <Declaration>
-        <Class IRI="/classes/AndRule"/>
+        <Class abbreviatedIRI="core:AndRule"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Value"/>
+        <Class abbreviatedIRI="core:Value"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/File"/>
+        <Class abbreviatedIRI="core:File"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Token"/>
+        <Class abbreviatedIRI="core:Token"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/PolicyRule"/>
+        <Class abbreviatedIRI="core:PolicyRule"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ReportDocument"/>
+        <Class abbreviatedIRI="core:ReportDocument"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Policy"/>
+        <Class abbreviatedIRI="core:Policy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/FileHandle"/>
+        <Class abbreviatedIRI="core:FileHandle"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/LogDocument"/>
+        <Class abbreviatedIRI="core:LogDocument"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/FileLikeObject"/>
+        <Class abbreviatedIRI="core:FileLikeObject"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Context"/>
+        <Class abbreviatedIRI="core:Context"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/Configuration"/>
+        <Class abbreviatedIRI="core:Configuration"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ConfigurationDocument"/>
+        <Class abbreviatedIRI="core:ConfigurationDocument"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ConfigurationGroup"/>
+        <Class abbreviatedIRI="core:ConfigurationGroup"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ConfigurationGroupSource"/>
+        <Class abbreviatedIRI="core:ConfigurationGroupSource"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ConfigurationOperation"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ConfigurationOption"/>
+        <Class abbreviatedIRI="core:ConfigurationOption"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ConfigurationOptionSource"/>
+        <Class abbreviatedIRI="core:ConfigurationOptionSource"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ConfigurationSource"/>
+        <Class abbreviatedIRI="core:ConfigurationSource"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:Data"/>
@@ -106,214 +106,214 @@
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <SubClassOf>
-        <Class IRI="#KeyDerivationFunction"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class abbreviatedIRI="core:KeyDerivationFunction"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MessageAuthenticationCode"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class abbreviatedIRI="core:MessageAuthenticationCode"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MessageAuthenticationCode"/>
+        <Class abbreviatedIRI="core:MessageAuthenticationCode"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="#Input"/>
+            <Class abbreviatedIRI="core:Input"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MessageAuthenticationCode"/>
+        <Class abbreviatedIRI="core:MessageAuthenticationCode"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="#Key"/>
+            <Class abbreviatedIRI="core:Key"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MessageAuthenticationCode"/>
+        <Class abbreviatedIRI="core:MessageAuthenticationCode"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/type"/>
+            <DataProperty abbreviatedIRI="core:type"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Output"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class abbreviatedIRI="core:Output"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Padding"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class abbreviatedIRI="core:Padding"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Padding"/>
+        <Class abbreviatedIRI="core:Padding"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="#scheme"/>
+            <DataProperty abbreviatedIRI="core:scheme"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#RateLimiting"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class abbreviatedIRI="core:RateLimiting"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#RateLimiting"/>
+        <Class abbreviatedIRI="core:RateLimiting"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="#maxRequests"/>
+            <DataProperty abbreviatedIRI="core:maxRequests"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#RateLimiting"/>
+        <Class abbreviatedIRI="core:RateLimiting"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="#timeWindowSeconds"/>
+            <DataProperty abbreviatedIRI="core:timeWindowSeconds"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SymmetricCipher"/>
-        <Class IRI="/classes/Cipher"/>
+        <Class abbreviatedIRI="core:SymmetricCipher"/>
+        <Class abbreviatedIRI="core:Cipher"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SymmetricCipher"/>
+        <Class abbreviatedIRI="core:SymmetricCipher"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="#InitializationVector"/>
+            <Class abbreviatedIRI="core:InitializationVector"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/AndRule"/>
-        <Class IRI="/classes/PolicyRule"/>
+        <Class abbreviatedIRI="core:AndRule"/>
+        <Class abbreviatedIRI="core:PolicyRule"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Configuration"/>
-        <Class IRI="/classes/Data"/>
+        <Class abbreviatedIRI="core:Configuration"/>
+        <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Configuration"/>
+        <Class abbreviatedIRI="core:Configuration"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/ConfigurationGroup"/>
+            <Class abbreviatedIRI="core:ConfigurationGroup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ConfigurationDocument"/>
-        <Class IRI="/classes/Document"/>
+        <Class abbreviatedIRI="core:ConfigurationDocument"/>
+        <Class abbreviatedIRI="core:Document"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ConfigurationGroup"/>
-        <Class IRI="/classes/Data"/>
+        <Class abbreviatedIRI="core:ConfigurationGroup"/>
+        <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ConfigurationGroup"/>
+        <Class abbreviatedIRI="core:ConfigurationGroup"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Configuration"/>
+            <Class abbreviatedIRI="core:Configuration"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ConfigurationGroup"/>
+        <Class abbreviatedIRI="core:ConfigurationGroup"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/ConfigurationOption"/>
+            <Class abbreviatedIRI="core:ConfigurationOption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ConfigurationGroupSource"/>
-        <Class IRI="/classes/Data"/>
+        <Class abbreviatedIRI="core:ConfigurationGroupSource"/>
+        <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Context"/>
-        <Class IRI="/classes/Data"/>
+        <Class abbreviatedIRI="core:Context"/>
+        <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="/classes/ConfigurationOperation"/>
-        <Class IRI="/classes/Operation"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ConfigurationOperation"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Configuration"/>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Configuration"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ConfigurationOption"/>
-        <Class IRI="/classes/Data"/>
+        <Class abbreviatedIRI="core:ConfigurationOption"/>
+        <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ConfigurationOption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ConfigurationGroup"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ConfigurationOption"/>
+        <Class abbreviatedIRI="core:ConfigurationOption"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Key"/>
+            <Class abbreviatedIRI="core:ConfigurationGroup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ConfigurationOption"/>
+        <Class abbreviatedIRI="core:ConfigurationOption"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Value"/>
+            <Class abbreviatedIRI="core:Key"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ConfigurationOptionSource"/>
-        <Class IRI="/classes/Data"/>
+        <Class abbreviatedIRI="core:ConfigurationOption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class abbreviatedIRI="core:Value"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ConfigurationSource"/>
-        <Class IRI="/classes/Data"/>
+        <Class abbreviatedIRI="core:ConfigurationOptionSource"/>
+        <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ConfigurationSource"/>
+        <Class abbreviatedIRI="core:ConfigurationSource"/>
+        <Class abbreviatedIRI="core:Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ConfigurationSource"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/ConfigurationGroupSource"/>
+            <Class abbreviatedIRI="core:ConfigurationGroupSource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="#SymmetricCipher"/>
+        <Class abbreviatedIRI="core:SymmetricCipher"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="#authTagSize"/>
+            <DataProperty abbreviatedIRI="core:authTagSize"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SymmetricCipher"/>
+        <Class abbreviatedIRI="core:SymmetricCipher"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="#modus"/>
+            <DataProperty abbreviatedIRI="core:modus"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Time"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class abbreviatedIRI="core:Time"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     
     <SubClassOf>
-        <Class IRI="#Key"/>
-        <Class IRI="/classes/Data"/>
+        <Class abbreviatedIRI="core:Key"/>
+        <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:Document"/>
         <Class abbreviatedIRI="res:Data"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#KeyDerivationFunction"/>
+        <Class abbreviatedIRI="core:KeyDerivationFunction"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="#Input"/>
+            <Class abbreviatedIRI="core:Input"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#KeyDerivationFunction"/>
+        <Class abbreviatedIRI="core:KeyDerivationFunction"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/type"/>
+            <DataProperty abbreviatedIRI="core:type"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>

@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/hardware">
-    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu#"/>
+    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/resource/hardware#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="res" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
@@ -17,10 +17,37 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
     <Declaration>
-        <Class IRI="/classes/Memory"/>
+        <Class abbreviatedIRI="core:Hardware"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/mode"/>
+        <Class abbreviatedIRI="core:Memory"/>
     </Declaration>
-    
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:mode"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Hardware" />
+        <Class abbreviatedIRI="core:Resource" />
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Memory" />
+        <Class abbreviatedIRI="core:Hardware" />
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Memory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:/mode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Memory</IRI>
+        <Literal>A generic concept to describe memory operations with a program. This includes allocation and de-allocation of memory as well as copying memory regions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Memory</IRI>
+        <Literal>Memory</Literal>
+    </AnnotationAssertion>
 </Ontology>
