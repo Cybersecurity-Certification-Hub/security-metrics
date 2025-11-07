@@ -1952,10 +1952,7 @@
         <Class IRI="/classes/HttpClientLibrary"/>
         <Class IRI="/classes/Framework"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/HttpClientOperation"/>
-        <Class IRI="/classes/Operation"/>
-    </SubClassOf>
+    
     <SubClassOf>
         <Class IRI="/classes/HttpClientOperation"/>
         <ObjectSomeValuesFrom>
@@ -2041,10 +2038,7 @@
             <Class IRI="/classes/Http"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/HttpRequest"/>
-        <Class IRI="/classes/HttpClientOperation"/>
-    </SubClassOf>
+    
     <SubClassOf>
         <Class IRI="/classes/HttpRequest"/>
         <ObjectSomeValuesFrom>

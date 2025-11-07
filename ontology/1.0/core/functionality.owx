@@ -506,6 +506,14 @@
         <Class abbreviatedIRI="core:Http"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:HttpClientOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpRequest"/>
+        <Class abbreviatedIRI="core:HttpClientOperation"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:HttpRequestContext"/>
         <Class abbreviatedIRI="core:Http"/>
     </SubClassOf>
@@ -1323,6 +1331,16 @@
         <DataProperty abbreviatedIRI="prop:enabled"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/HttpClientOperation</IRI>
+        <Literal>Base class for operations on an [HttpClient].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/HttpClientOperation</IRI>
+        <Literal>HttpClientOperation</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
