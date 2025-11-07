@@ -175,7 +175,7 @@
         <Class IRI="/classes/Boundary"/>
     </Declaration>
     <Declaration>
-    <Class IRI="#AsymmetricCipher"/>
+        <Class IRI="#AsymmetricCipher"/>
     </Declaration>
     <Declaration>
         <Class IRI="#GetCurrentTimeOperation"/>
