@@ -7828,6 +7828,16 @@ name = metadata.name</Literal>
         <Literal>mode</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/resource/infrastructure/classes/Key</IRI>
+        <Literal>The node that represents the &quot;key&quot; of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/resource/infrastructure/classes/Key</IRI>
+        <Literal>Key</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/resource/infrastructure/classes/PasswordPolicy</IRI>
         <Literal>PasswordPolicy</Literal>
