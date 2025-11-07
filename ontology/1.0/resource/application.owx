@@ -229,6 +229,17 @@
         <Literal>Represents an architecture of an operating system.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Agnostic</IRI>
+        <Literal>Represents an agnostic architecture, which is not tied to a specific operating system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Agnostic</IRI>
+        <Literal>Agnostic</Literal>
+    </AnnotationAssertion>
+    
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/OperatingSystemArchitecture</IRI>
         <Literal>OperatingSystemArchitecture</Literal>

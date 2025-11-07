@@ -2636,11 +2636,6 @@
             <Class IRI="/classes/TransportEncryption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-
-    <SubClassOf>
-        <Class IRI="/classes/ReportDocument"/>
-        <Class IRI="/classes/GenericDocument"/>
-    </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Resource"/>
         <ObjectSomeValuesFrom>
@@ -2738,31 +2733,6 @@
     <SubClassOf>
         <Class IRI="/classes/Secret"/>
         <Class IRI="/classes/Credential"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Secret"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/basedOn"/>
-            <Class IRI="/classes/Cipher"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Secret"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/keySize"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/SecretOperation"/>
-        <Class IRI="/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/SecretOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/linkedConcept"/>
-            <Class IRI="/classes/Secret"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SecurityAdvisoryDocument"/>
@@ -2932,14 +2902,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Token"/>
-        <Class IRI="/classes/Data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Tool"/>
-        <Class IRI="/classes/Core"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/classes/Training"/>
         <Class IRI="/classes/HumanResources"/>
     </SubClassOf>
@@ -2957,7 +2919,6 @@
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
-    
     <SubClassOf>
         <Class IRI="/classes/TransportEncryption"/>
         <ObjectSomeValuesFrom>
@@ -2994,10 +2955,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/UnlockEncryptedDisk"/>
-        <Class IRI="/classes/DiskEncryptionOperation"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/classes/UsageStatistics"/>
         <Class IRI="/classes/Auditing"/>
     </SubClassOf>
@@ -3011,14 +2968,6 @@
     <SubClassOf>
         <Class IRI="/classes/VMImage"/>
         <Class IRI="/classes/Image"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ValidateJwt"/>
-        <Class IRI="/classes/AuthenticationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Value"/>
-        <Class IRI="/classes/Data"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/VirtualMachine"/>
@@ -3448,10 +3397,6 @@ name = metadata.name</Literal>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="/classes/hasMultipleSet"/>
-        <ObjectProperty IRI="/properties/has"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="/classes/leftPrincipal"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -3476,32 +3421,12 @@ name = metadata.name</Literal>
         <ObjectProperty IRI="/properties/has"/>
     </SubObjectPropertyOf>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="/classes/belongsTo"/>
-        <Class IRI="/classes/Evidence"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/classes/describes"/>
-        <Class IRI="/classes/Evidence"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/classes/extractedBy"/>
-        <Class IRI="/classes/Evidence"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="/classes/hasType"/>
         <Class IRI="/classes/Resource"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="/classes/belongsTo"/>
-        <Class IRI="/classes/CertificationTarget"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="/classes/describes"/>
         <Class IRI="/classes/SecurityFeature"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/classes/extractedBy"/>
-        <Class IRI="/classes/Tool"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/classes/hasType"/>
@@ -3613,11 +3538,6 @@ name = metadata.name</Literal>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/description</IRI>
-        <Literal>leftPrincipal</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
         <Literal xml:lang="english">xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
     </AnnotationAssertion>
@@ -3630,161 +3550,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>owl:Thing</AbbreviatedIRI>
         <Literal>owl:Thing</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#AsymmetricCipher</IRI>
-        <Literal>AsymmetricCipher</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#GetCurrentTimeOperation</IRI>
-        <Literal>GetCurrentTimeOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#HybridCipher</IRI>
-        <Literal>HybridCipher</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#InitializationVector</IRI>
-        <Literal>Represents an Initialization Vector of a cipher.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#InitializationVector</IRI>
-        <Literal>InitializationVector</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Input</IRI>
-        <Literal>A certain Input for e.g. a function.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Input</IRI>
-        <Literal>Input</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#InputValidationOperation</IRI>
-        <Literal>InputValidationOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#InstallUpdate</IRI>
-        <Literal>InstallUpdateOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Key</IRI>
-        <Literal>A key used for encryption algorithms.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Key</IRI>
-        <Literal>Key</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#KeyDerivationFunction</IRI>
-        <Literal>KeyDerivationFunction</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#MessageAuthenticationCode</IRI>
-        <Literal>MessageAuthenticationCode</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Output</IRI>
-        <Literal>Output</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Padding</IRI>
-        <Literal>A padding for a cipher.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Padding</IRI>
-        <Literal>Padding</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#RateLimiting</IRI>
-        <Literal>RateLimiting</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#SymmetricCipher</IRI>
-        <Literal>Represents a symmetric cipher.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#SymmetricCipher</IRI>
-        <Literal>SymmetricCipher</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Time</IRI>
-        <Literal>Time</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#authTagSize</IRI>
-        <Literal>AuthTagSize of a symmetric cipher</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#authTagSize</IRI>
-        <Literal>authTagSize</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#cipherName</IRI>
-        <Literal>Name of a cryptographic cipher.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#cipherName</IRI>
-        <Literal>cipherName</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#keyExchange</IRI>
-        <Literal>keyExchange</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#maxRequests</IRI>
-        <Literal>maxRequests</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#modus</IRI>
-        <Literal>Describes a modus of something being executed. (e.g. used by an Encryption)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#modus</IRI>
-        <Literal>modus</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#scheme</IRI>
-        <Literal>Describes a certain scheme e.g. a padding scheme.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#scheme</IRI>
-        <Literal>scheme</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#timeWindowSeconds</IRI>
-        <Literal>timeWindowSeconds</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3810,31 +3575,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/ActivityLog</IRI>
         <Literal>ActivityLogging</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/Agnostic</IRI>
-        <Literal>Represents an agnostic architecture, which is not tied to a specific operating system.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/Agnostic</IRI>
-        <Literal>Agnostic</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/Allocate</IRI>
-        <Literal>Allocate</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/AndRule</IRI>
-        <Literal>Represents a rule that combines two other rules using a logical AND operation. This means that both rules must be satisfied for the combined rule to be satisfied.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/AndRule</IRI>
-        <Literal>AndRule</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3882,26 +3622,6 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">Auditing</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/Authenticate</IRI>
-        <Literal>Represents an authentication operation.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/Authenticate</IRI>
-        <Literal>Authenticate</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/AuthenticationOperation</IRI>
-        <Literal>Abstract base class for all authentication operations.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/AuthenticationOperation</IRI>
-        <Literal>AuthenticationOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Authenticity</IRI>
         <Literal xml:lang="english">Authenticity</Literal>
@@ -3910,16 +3630,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Authorization</IRI>
         <Literal xml:lang="english">Authorization</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/AuthorizeJwt</IRI>
-        <Literal>Represents an authorization operation based on JWT tokens.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/AuthorizeJwt</IRI>
-        <Literal>AuthorizeJwt</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3953,23 +3663,8 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/BlockStorageOperation</IRI>
-        <Literal>BlockStorageOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/BootLog</IRI>
         <Literal>BootLogging</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/Boundary</IRI>
-        <Literal>Represents a boundary in data processing, which can be used to define the scope of a policy or the separation between different policies. For example, a boundary could be defined around an [HttpEndpoint], so that the policy applies once data either comes in or goes out of the HTTP endpoint.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/Boundary</IRI>
-        <Literal>Boundary</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

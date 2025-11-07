@@ -118,6 +118,15 @@
         <Class IRI="/classes/FileLikeObject"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Token"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Value"/>
+        <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    
+    <SubClassOf>
         <Class IRI="/classes/FileHandle"/>
         <Class IRI="/classes/FileLikeObject"/>
     </SubClassOf>
@@ -136,6 +145,10 @@
     <SubClassOf>
         <Class IRI="/classes/PolicyRule"/>
         <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ReportDocument"/>
+        <Class IRI="/classes/GenericDocument"/>
     </SubClassOf>
     
     <SubClassOf>
@@ -434,6 +447,17 @@
         <Class abbreviatedIRI="res:Data"/>
         <Class abbreviatedIRI="res:Resource"/>
     </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AndRule</IRI>
+        <Literal>Represents a rule that combines two other rules using a logical AND operation. This means that both rules must be satisfied for the combined rule to be satisfied.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/AndRule</IRI>
+        <Literal>AndRule</Literal>
+    </AnnotationAssertion>
+    
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
