@@ -2606,6 +2606,10 @@
         <Class IRI="/classes/Framework"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/HttpClientOperation"/>
+        <Class IRI="/classes/Operation"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/HttpEndpoint"/>
         <Class IRI="/classes/RemoteEntryPoint"/>
     </SubClassOf>
@@ -2657,6 +2661,10 @@
             <DataProperty IRI="/properties/url"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/HttpRequest"/>
+        <Class IRI="/classes/HttpClientOperation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/HttpRequest"/>
@@ -5856,6 +5864,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/core/functionality/classes/EntryPoint</IRI>
         <Literal>EntryPoint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/core/functionality/classes/HttpClientOperation</IRI>
+        <Literal>Base class for operations on an [HttpClient].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/core/functionality/classes/HttpClientOperation</IRI>
+        <Literal>HttpClientOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
