@@ -193,9 +193,6 @@
         <Class abbreviatedIRI="core:InstallUpdate"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:Key"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:KeyDerivationFunction"/>
     </Declaration>
     <Declaration>
