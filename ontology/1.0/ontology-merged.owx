@@ -1398,7 +1398,7 @@
         <ObjectProperty IRI="/classes/describes"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/core/security#/properties/has"/>
+        <ObjectProperty IRI="prop:has"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/privacyLevel"/>
@@ -1435,9 +1435,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/core/functionality/properties/offers"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/core/security/properties/has"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/robustness"/>
@@ -2441,7 +2438,7 @@
     <SubClassOf>
         <Class IRI="/classes/Encryption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/security#/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Secret"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2485,7 +2482,7 @@
     <SubClassOf>
         <Class IRI="/classes/EncryptionOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/security/properties/has"/>
+            <ObjectProperty IRI="prop:has"/>
             <Class IRI="/classes/Secret"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3092,7 +3089,7 @@
     <SubClassOf>
         <Class IRI="/classes/JwtBasedAuthentication"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/security/properties/has"/>
+            <ObjectProperty IRI="prop:has"/>
             <Class IRI="/classes/Token"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
