@@ -682,8 +682,8 @@ message ConfigurationDocument {
 	string name = 1266 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 1506;
+	repeated CryptographicHash cryptographic_hashs  = 6259;
 	DataLocation data_location = 3882;
-	repeated DocumentChecksum document_checksums  = 8326;
 	repeated DocumentSignature document_signatures  = 18021;
 	optional string parent_id = 15783;
 	SchemaValidation schema_validation = 2692;
@@ -959,14 +959,14 @@ message Credential {
 	}
 }
 
-// DocumentChecksum is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message DocumentChecksum {
-	option (resource_type_names) = "DocumentChecksum";
+// CryptographicHash is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message CryptographicHash {
+	option (resource_type_names) = "CryptographicHash";
 	option (resource_type_names) = "Integrity";
 	option (resource_type_names) = "SecurityFeature";
 
-	string algorithm = 943;
-	repeated Error errors  = 17465;
+	string algorithm = 18383;
+	repeated Error errors  = 8192;
 }
 
 // CryptographicOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1991,7 +1991,7 @@ message Integrity {
 		LocalAttestation local_attestation = 4296;
 		RemoteAttestation remote_attestation = 13640;
 		AutomaticUpdates automatic_updates = 9990;
-		DocumentChecksum document_checksum = 16099;
+		CryptographicHash cryptographic_hash = 18167;
 		Immutability immutability = 2008;
 		DocumentSignature document_signature = 7943;
 	}
@@ -2331,8 +2331,8 @@ message LogDocument {
 	string name = 11879 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 546;
+	repeated CryptographicHash cryptographic_hashs  = 10222;
 	DataLocation data_location = 1917;
-	repeated DocumentChecksum document_checksums  = 10420;
 	repeated DocumentSignature document_signatures  = 11368;
 	optional string parent_id = 2000;
 	SchemaValidation schema_validation = 11439;
@@ -3073,8 +3073,8 @@ message PolicyDocument {
 	string name = 2052 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5038;
+	repeated CryptographicHash cryptographic_hashs  = 16546;
 	DataLocation data_location = 8404;
-	repeated DocumentChecksum document_checksums  = 18616;
 	repeated DocumentSignature document_signatures  = 11914;
 	optional string parent_id = 9358;
 	SchemaValidation schema_validation = 15790;
@@ -3386,8 +3386,8 @@ message ReportDocument {
 	string name = 14944 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 2605;
+	repeated CryptographicHash cryptographic_hashs  = 15079;
 	DataLocation data_location = 9894;
-	repeated DocumentChecksum document_checksums  = 4132;
 	repeated DocumentSignature document_signatures  = 13518;
 	optional string parent_id = 13110;
 	SchemaValidation schema_validation = 4176;
@@ -3616,8 +3616,8 @@ message SecurityAdvisoryDocument {
 	string name = 15161 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 3544;
+	repeated CryptographicHash cryptographic_hashs  = 1381;
 	DataLocation data_location = 11892;
-	repeated DocumentChecksum document_checksums  = 13033;
 	repeated DocumentSignature document_signatures  = 16307;
 	optional string parent_id = 263;
 	SchemaValidation schema_validation = 18581;
@@ -3702,7 +3702,7 @@ message SecurityFeature {
 		LocalAttestation local_attestation = 4296;
 		RemoteAttestation remote_attestation = 13640;
 		AutomaticUpdates automatic_updates = 9990;
-		DocumentChecksum document_checksum = 16099;
+		CryptographicHash cryptographic_hash = 18167;
 		Immutability immutability = 2008;
 		DocumentSignature document_signature = 7943;
 		ExplainableResults explainable_results = 6217;
@@ -3744,8 +3744,8 @@ message ServiceMetadataDocument {
 	string name = 10912 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 8064;
+	repeated CryptographicHash cryptographic_hashs  = 7970;
 	DataLocation data_location = 16095;
-	repeated DocumentChecksum document_checksums  = 1270;
 	repeated DocumentSignature document_signatures  = 14892;
 	optional string parent_id = 13735;
 	SchemaValidation schema_validation = 9192;
