@@ -5419,11 +5419,6 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/CryptographicHash</IRI>
-        <Literal>DocumentChecksum</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/CryptographicOperation</IRI>
         <Literal>CryptographicOperation</Literal>
     </AnnotationAssertion>
