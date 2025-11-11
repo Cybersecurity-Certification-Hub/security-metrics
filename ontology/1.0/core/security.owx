@@ -375,7 +375,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="prop:has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Secret"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -847,7 +847,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="prop:has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Token"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
