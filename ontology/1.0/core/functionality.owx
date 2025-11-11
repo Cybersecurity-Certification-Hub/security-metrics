@@ -2112,7 +2112,7 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:leftPrinciple</AbbreviatedIRI>
+        <AbbreviatedIRI>core:leftPrincipal</AbbreviatedIRI>
         <Literal>leftPrincipal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
