@@ -1328,10 +1328,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpRequest"/>
-        <Class abbreviatedIRI="core:Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:HttpRequest"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:to"/>
             <Class abbreviatedIRI="core:HttpEndpoint"/>
