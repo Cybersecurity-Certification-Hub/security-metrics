@@ -1273,7 +1273,6 @@ message EncryptionInUse {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 8542;
-	bool enabled = 8542;
 }
 
 // Encryption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1282,7 +1281,6 @@ message Encryption {
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	string algorithm = 2211;
 	string algorithm = 2211;
 	CodeRegion code_region = 8162;
 	Encryption encryption = 13260;
