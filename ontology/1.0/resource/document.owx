@@ -449,153 +449,153 @@
     </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/AndRule</IRI>
+        <AbbreviatedIRI>core:AndRule</AbbreviatedIRI>
         <Literal>Represents a rule that combines two other rules using a logical AND operation. This means that both rules must be satisfied for the combined rule to be satisfied.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/AndRule</IRI>
+        <AbbreviatedIRI>core:AndRule</AbbreviatedIRI>
         <Literal>AndRule</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/Configuration</IRI>
+        <AbbreviatedIRI>core:Configuration</AbbreviatedIRI>
         <Literal>Represents the abstract concept of a &quot;configuration&quot;. This is a common pattern in many programming languages, where a data structure in code represents an aggregation of configuration values. For example, in Python, the [`configparser`](https://docs.python.org/3/library/configparser.html) module is used to read INI files, and the config values are represented as a dictionary-like object. Often, the configuration is loaded from multiple sources, such as INI files, environment variables, and command-line arguments.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/Configuration</IRI>
+        <AbbreviatedIRI>core:Configuration</AbbreviatedIRI>
         <Literal>Configuration</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/ConfigurationGroup</IRI>
+        <AbbreviatedIRI>core:ConfigurationGroup</AbbreviatedIRI>
         <Literal>Represents a group of configuration values within one [conf]. Depending on the type of configuration data structure, there might only be one group (e.g., a &quot;default&quot; one), or there might be several groups. For example, when loading a config from an INI file, each section would be mapped to a [ConfigurationGroup], and each key-value pair would be mapped to an [ConfigurationOption] within this group.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/ConfigurationGroup</IRI>
+        <AbbreviatedIRI>core:ConfigurationGroup</AbbreviatedIRI>
         <Literal>ConfigurationGroup</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/ConfigurationGroupSource</IRI>
+        <AbbreviatedIRI>core:ConfigurationGroupSource</AbbreviatedIRI>
         <Literal>Represents a possible group source for a configuration group. For example, when loading an INI file with our INI file frontend, each section is presented as a [RecordDeclaration]. This record declaration would be the source of the configuration group.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/ConfigurationGroupSource</IRI>
+        <AbbreviatedIRI>core:ConfigurationGroupSource</AbbreviatedIRI>
         <Literal>ConfigurationGroupSource</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/ConfigurationOperation</IRI>
+        <AbbreviatedIRI>core:ConfigurationOperation</AbbreviatedIRI>
         <Literal>A common abstract class for configuration operations, such as reading options or a whole file.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/ConfigurationOperation</IRI>
+        <AbbreviatedIRI>core:ConfigurationOperation</AbbreviatedIRI>
         <Literal>ConfigurationOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/ConfigurationOption</IRI>
+        <AbbreviatedIRI>core:ConfigurationOption</AbbreviatedIRI>
         <Literal>Represents a configuration option within one [group]. Usually there is one option for each entry in a configuration data structure.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/ConfigurationOption</IRI>
+        <AbbreviatedIRI>core:ConfigurationOption</AbbreviatedIRI>
         <Literal>ConfigurationOption</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/ConfigurationOptionSource</IRI>
+        <AbbreviatedIRI>core:ConfigurationOptionSource</AbbreviatedIRI>
         <Literal>Represents a possible option source for a configuration option. For example, when loading an INI file with our INI file frontend, each key-value pair is presented as a [FieldDeclaration]. This field declaration would be the source to the configuration option.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/ConfigurationOptionSource</IRI>
+        <AbbreviatedIRI>core:ConfigurationOptionSource</AbbreviatedIRI>
         <Literal>ConfigurationOptionSource</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/ConfigurationSource</IRI>
+        <AbbreviatedIRI>core:ConfigurationSource</AbbreviatedIRI>
         <Literal>Represents a possible source for a configuration. For example, when loading an INI file with our INI file frontend, the whole file would be represented as a [TranslationUnitDeclaration]. This translation unit declaration would be the source of the configuration.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/ConfigurationSource</IRI>
+        <AbbreviatedIRI>core:ConfigurationSource</AbbreviatedIRI>
         <Literal>ConfigurationSource</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/Context</IRI>
+        <AbbreviatedIRI>core:Context</AbbreviatedIRI>
         <Literal>Represents a context in which a policy is applied. Typically, a context contains information about a user or some other form of identity (e.g. a [Principal]).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/CreateEncryptedDisk</IRI>
+        <AbbreviatedIRI>core:CreateEncryptedDisk</AbbreviatedIRI>
         <Literal>CreateEncryptedDisk</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/CreateSecret</IRI>
+        <AbbreviatedIRI>core:CreateSecret</AbbreviatedIRI>
         <Literal>CreateSecret</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/CryptographicHash</IRI>
+        <AbbreviatedIRI>core:CryptographicHash</AbbreviatedIRI>
         <Literal>CryptographicHash</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/File</IRI>
+        <AbbreviatedIRI>core:File</AbbreviatedIRI>
         <Literal>File</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/FileHandle</IRI>
+        <AbbreviatedIRI>core:FileHandle</AbbreviatedIRI>
         <Literal>This class represents a file handle.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/FileHandle</IRI>
+        <AbbreviatedIRI>core:FileHandle</AbbreviatedIRI>
         <Literal>FileHandle</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/FileLikeObject</IRI>
+        <AbbreviatedIRI>core:FileLikeObject</AbbreviatedIRI>
         <Literal>This is the base class for all file-like objects. It provides the common properties and methods that are shared by all file-like objects.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/FileLikeObject</IRI>
+        <AbbreviatedIRI>core:FileLikeObject</AbbreviatedIRI>
         <Literal>FileLikeObject</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/Token</IRI>
+        <AbbreviatedIRI>core:Token</AbbreviatedIRI>
         <Literal>A Token used for TokenBasedAuthentication.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/Token</IRI>
+        <AbbreviatedIRI>core:Token</AbbreviatedIRI>
         <Literal>Token</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/PolicyRule</IRI>
+        <AbbreviatedIRI>core:PolicyRule</AbbreviatedIRI>
         <Literal>Represents a rule that is part of a policy. This can be used to define conditions that must be met for the policy to be enforced.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/PolicyRule</IRI>
+        <AbbreviatedIRI>core:PolicyRule</AbbreviatedIRI>
         <Literal>PolicyRule</Literal>
     </AnnotationAssertion>
     
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/Context</IRI>
+        <AbbreviatedIRI>core:Context</AbbreviatedIRI>
         <Literal>Context</Literal>
     </AnnotationAssertion>
     
