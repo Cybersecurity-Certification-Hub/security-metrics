@@ -1610,9 +1610,8 @@ message Functionality {
 		ExitBoundaryOperation exit_boundary_operation = 13411;
 		FileOperation file_operation = 18627;
 		GetCurrentTimeOperation get_current_time_operation = 17282;
-		HttpRequest http_request = 2901;
+		HttpRequest http_request = 8271;
 		HttpEndpointOperation http_endpoint_operation = 5345;
-		HttpRequest http_request = 2901;
 		RegisterHttpEndpoint register_http_endpoint = 3440;
 		InputValidationOperation input_validation_operation = 14785;
 		InstallUpdateOperation install_update_operation = 10922;
@@ -1776,7 +1775,7 @@ message HttpClientLibrary {
 message HttpClientOperation {
 
 	oneof type {
-		HttpRequest http_request = 2901;
+		HttpRequest http_request = 8271;
 	}
 }
 
@@ -1813,13 +1812,15 @@ message HttpEndpointOperation {
 // HttpRequest is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message HttpRequest {
 	option (resource_type_names) = "HttpRequest";
+	option (resource_type_names) = "HttpClientOperation";
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	string call = 3127;
-	string req_body = 14536;
-	CodeRegion code_region = 6045;
-	repeated HttpEndpoint http_endpoints  = 8204;
+	string call = 16831;
+	string req_body = 5634;
+	CodeRegion code_region = 7401;
+	HttpClient http_client = 16379;
+	repeated HttpEndpoint http_endpoints  = 8773;
 }
 
 // HttpRequestContext is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2925,9 +2926,8 @@ message Operation {
 		ExitBoundaryOperation exit_boundary_operation = 13411;
 		FileOperation file_operation = 18627;
 		GetCurrentTimeOperation get_current_time_operation = 17282;
-		HttpRequest http_request = 2901;
+		HttpRequest http_request = 8271;
 		HttpEndpointOperation http_endpoint_operation = 5345;
-		HttpRequest http_request = 2901;
 		RegisterHttpEndpoint register_http_endpoint = 3440;
 		InputValidationOperation input_validation_operation = 14785;
 		InstallUpdateOperation install_update_operation = 10922;
