@@ -1383,9 +1383,6 @@
         <DataProperty IRI="/classes/OneQubitErrorRate"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/resource/document/properties/hasMultiple"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/SpamErrorRate"/>
     </Declaration>
     <Declaration>
@@ -1419,19 +1416,7 @@
         <DataProperty IRI="/classes/type"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/resource/document/properties/has"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/core/security/properties/enabled"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="/classes/Implementation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/core/functionality/properties/has"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/core/functionality/properties/offers"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/robustness"/>
@@ -1440,13 +1425,7 @@
         <ObjectProperty IRI="/classes/hasType"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/core/security/properties/algorithm"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/annualUpdateCompleted"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/core/functionality/properties/hasMultiple"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Specification"/>
@@ -1605,7 +1584,7 @@
     <SubClassOf>
         <Class IRI="/classes/Authenticate"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Credential"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1771,7 +1750,7 @@
     <SubClassOf>
         <Class IRI="/classes/Cipher"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Padding"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1814,7 +1793,7 @@
     <SubClassOf>
         <Class IRI="/classes/CipherSuite"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/hasMultiple"/>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/Cipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1993,7 +1972,7 @@
     <SubClassOf>
         <Class IRI="/classes/Configuration"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/hasMultiple"/>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/ConfigurationGroup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2008,14 +1987,14 @@
     <SubClassOf>
         <Class IRI="/classes/ConfigurationGroup"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Configuration"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ConfigurationGroup"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/hasMultiple"/>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/ConfigurationOption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2041,21 +2020,21 @@
     <SubClassOf>
         <Class IRI="/classes/ConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/ConfigurationGroup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Key"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Value"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2070,7 +2049,7 @@
     <SubClassOf>
         <Class IRI="/classes/ConfigurationSource"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/hasMultiple"/>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/ConfigurationGroupSource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2326,7 +2305,7 @@
     <SubClassOf>
         <Class IRI="/classes/DecryptionOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Secret"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2417,7 +2396,7 @@
     <SubClassOf>
         <Class IRI="/classes/DynamicLoadingOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/OperatingSystemArchitecture"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2442,13 +2421,6 @@
     <SubClassOf>
         <Class IRI="/classes/EncryptionInUse"/>
         <Class IRI="/classes/Confidentiality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/EncryptionInUse"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/core/security/properties/enabled"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/EncryptionInUse"/>
@@ -2482,13 +2454,6 @@
             <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Secret"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/EncryptionOperation"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/core/security/properties/algorithm"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/EncryptionOperation"/>
@@ -2702,7 +2667,7 @@
     <SubClassOf>
         <Class IRI="/classes/HttpClient"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Authenticity"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2735,15 +2700,8 @@
     <SubClassOf>
         <Class IRI="/classes/HttpEndpoint"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/HttpRequestContext"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/HttpEndpoint"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/offers"/>
-            <Class IRI="/classes/Authorization"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2751,6 +2709,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/Authenticity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/HttpEndpoint"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/offers"/>
+            <Class IRI="/classes/Authorization"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2904,21 +2869,21 @@
     <SubClassOf>
         <Class IRI="/classes/HybridCipher"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/KeyDerivationFunction"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/HybridCipher"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/MessageAuthenticationCode"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/HybridCipher"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/SymmetricCipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3030,14 +2995,14 @@
     <SubClassOf>
         <Class IRI="/classes/InputValidationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Input"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/InputValidationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Output"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3055,7 +3020,7 @@
     <SubClassOf>
         <Class IRI="/classes/InstallUpdate"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/AutomaticUpdates"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3133,7 +3098,7 @@
     <SubClassOf>
         <Class IRI="/classes/KeyDerivationFunction"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Input"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3242,7 +3207,7 @@
     <SubClassOf>
         <Class IRI="/classes/LoadLibrary"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/hasMultiple"/>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/EntryPoint"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3565,14 +3530,14 @@
     <SubClassOf>
         <Class IRI="/classes/MessageAuthenticationCode"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Input"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/MessageAuthenticationCode"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Key"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3804,14 +3769,14 @@
     <SubClassOf>
         <Class IRI="/classes/Policy"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Context"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Policy"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/hasMultiple"/>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/PolicyRule"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3852,7 +3817,7 @@
     <SubClassOf>
         <Class IRI="/classes/ProctectedAsset"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/hasMultiple"/>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/Policy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3874,14 +3839,14 @@
     <SubClassOf>
         <Class IRI="/classes/ProvideConfiguration"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Configuration"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ProvideConfiguration"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/ConfigurationSource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3892,14 +3857,14 @@
     <SubClassOf>
         <Class IRI="/classes/ProvideConfigurationGroup"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/ConfigurationGroup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ProvideConfigurationGroup"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/ConfigurationGroupSource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3910,14 +3875,14 @@
     <SubClassOf>
         <Class IRI="/classes/ProvideConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/ConfigurationOption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ProvideConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/ConfigurationOptionSource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3996,7 +3961,7 @@
     <SubClassOf>
         <Class IRI="/classes/ReadConfiguration"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/ConfigurationGroup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -4007,7 +3972,7 @@
     <SubClassOf>
         <Class IRI="/classes/ReadConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/ConfigurationOption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -4029,7 +3994,7 @@
     <SubClassOf>
         <Class IRI="/classes/RegisterConfigurationGroup"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/ConfigurationGroup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -4040,7 +4005,7 @@
     <SubClassOf>
         <Class IRI="/classes/RegisterConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/ConfigurationOption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -4051,7 +4016,7 @@
     <SubClassOf>
         <Class IRI="/classes/RegisterHttpEndpoint"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/core/functionality/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/HttpEndpoint"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -4404,7 +4369,7 @@
     <SubClassOf>
         <Class IRI="/classes/SymmetricCipher"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/resource/document/properties/has"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/InitializationVector"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
