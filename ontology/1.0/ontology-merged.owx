@@ -5043,6 +5043,31 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Agnostic</IRI>
+        <Literal>Represents an agnostic architecture, which is not tied to a specific operating system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Agnostic</IRI>
+        <Literal>Agnostic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Allocate</IRI>
+        <Literal>Allocate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AndRule</IRI>
+        <Literal>Represents a rule that combines two other rules using a logical AND operation. This means that both rules must be satisfied for the combined rule to be satisfied.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/AndRule</IRI>
+        <Literal>AndRule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/AnomalyDetection</IRI>
         <Literal>Analyzes the activity of a NetworkService (which includes DatabaseServices).</Literal>
     </AnnotationAssertion>
@@ -5073,6 +5098,11 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/AsymmetricCipher</IRI>
+        <Literal>AsymmetricCipher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/AtRestEncryption</IRI>
         <Literal xml:lang="english">AtRestEncryption</Literal>
     </AnnotationAssertion>
@@ -5087,6 +5117,26 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">Auditing</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Authenticate</IRI>
+        <Literal>Represents an authentication operation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Authenticate</IRI>
+        <Literal>Authenticate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AuthenticationOperation</IRI>
+        <Literal>Abstract base class for all authentication operations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/AuthenticationOperation</IRI>
+        <Literal>AuthenticationOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Authenticity</IRI>
         <Literal xml:lang="english">Authenticity</Literal>
@@ -5095,6 +5145,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Authorization</IRI>
         <Literal xml:lang="english">Authorization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AuthorizeJwt</IRI>
+        <Literal>Represents an authorization operation based on JWT tokens.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/AuthorizeJwt</IRI>
+        <Literal>AuthorizeJwt</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5128,8 +5188,23 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/BlockStorageOperation</IRI>
+        <Literal>BlockStorageOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/BootLog</IRI>
         <Literal>BootLogging</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Boundary</IRI>
+        <Literal>Represents a boundary in data processing, which can be used to define the scope of a policy or the separation between different policies. For example, a boundary could be defined around an [HttpEndpoint], so that the policy applies once data either comes in or goes out of the HTTP endpoint.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Boundary</IRI>
+        <Literal>Boundary</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5145,6 +5220,36 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/CertificateBasedAuthentication</IRI>
         <Literal xml:lang="english">CertificateBasedAuthentication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/CheckAccess</IRI>
+        <Literal>Represents an operation that checks whether a user or principal has access to a protected</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/CheckAccess</IRI>
+        <Literal>CheckAccess</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Cipher</IRI>
+        <Literal>Represents a cipher suite. E.g. `AES-XTS-plain64`.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Cipher</IRI>
+        <Literal>enum:cipherName=coolCipher,unCoolCipher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Cipher</IRI>
+        <Literal>Cipher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/CipherOperation</IRI>
+        <Literal>CipherOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5192,6 +5297,76 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">Confidentiality</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Configuration</IRI>
+        <Literal>Represents the abstract concept of a &quot;configuration&quot;. This is a common pattern in many programming languages, where a data structure in code represents an aggregation of configuration values. For example, in Python, the [`configparser`](https://docs.python.org/3/library/configparser.html) module is used to read INI files, and the config values are represented as a dictionary-like object. Often, the configuration is loaded from multiple sources, such as INI files, environment variables, and command-line arguments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Configuration</IRI>
+        <Literal>Configuration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ConfigurationGroup</IRI>
+        <Literal>Represents a group of configuration values within one [conf]. Depending on the type of configuration data structure, there might only be one group (e.g., a &quot;default&quot; one), or there might be several groups. For example, when loading a config from an INI file, each section would be mapped to a [ConfigurationGroup], and each key-value pair would be mapped to an [ConfigurationOption] within this group.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ConfigurationGroup</IRI>
+        <Literal>ConfigurationGroup</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ConfigurationGroupSource</IRI>
+        <Literal>Represents a possible group source for a configuration group. For example, when loading an INI file with our INI file frontend, each section is presented as a [RecordDeclaration]. This record declaration would be the source of the configuration group.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ConfigurationGroupSource</IRI>
+        <Literal>ConfigurationGroupSource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ConfigurationOperation</IRI>
+        <Literal>A common abstract class for configuration operations, such as reading options or a whole file.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ConfigurationOperation</IRI>
+        <Literal>ConfigurationOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ConfigurationOption</IRI>
+        <Literal>Represents a configuration option within one [group]. Usually there is one option for each entry in a configuration data structure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ConfigurationOption</IRI>
+        <Literal>ConfigurationOption</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ConfigurationOptionSource</IRI>
+        <Literal>Represents a possible option source for a configuration option. For example, when loading an INI file with our INI file frontend, each key-value pair is presented as a [FieldDeclaration]. This field declaration would be the source to the configuration option.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ConfigurationOptionSource</IRI>
+        <Literal>ConfigurationOptionSource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ConfigurationSource</IRI>
+        <Literal>Represents a possible source for a configuration. For example, when loading an INI file with our INI file frontend, the whole file would be represented as a [TranslationUnitDeclaration]. This translation unit declaration would be the source of the configuration.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ConfigurationSource</IRI>
+        <Literal>ConfigurationSource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Container</IRI>
         <Literal xml:lang="english">Container</Literal>
@@ -5212,6 +5387,26 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">ContainerRegistry</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Context</IRI>
+        <Literal>Represents a context in which a policy is applied. Typically, a context contains information about a user or some other form of identity (e.g. a [Principal]).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Context</IRI>
+        <Literal>Context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/CreateEncryptedDisk</IRI>
+        <Literal>CreateEncryptedDisk</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/CreateSecret</IRI>
+        <Literal>CreateSecret</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
         <IRI>/classes/Credential</IRI>
         <Literal>usedByMultiple: In which resources the credential is being used</Literal>
@@ -5220,6 +5415,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Credential</IRI>
         <Literal>Credential</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/CryptographicHash</IRI>
+        <Literal>CryptographicHash</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5240,6 +5440,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/DDosProtection</IRI>
         <Literal xml:lang="en">DDoSProtection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Darwin</IRI>
+        <Literal>Represents a Darwin architecture, commonly found on macOS systems. macOS is a certified. [UNIX](https://www.opengroup.org/openbrand/register/apple.htm) and is (mostly) POSIX compatible.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Darwin</IRI>
+        <Literal>Darwin</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5287,6 +5497,16 @@ name = metadata.name</Literal>
         <Literal>DatabaseStorage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/DeAllocate</IRI>
+        <Literal>Represents a memory de-allocation operation. This can be done using `free` in C or `delete` in C++ or by calling a destructor in managed languages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/DeAllocate</IRI>
+        <Literal>DeAllocate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/DecryptionOperation</IRI>
         <Literal>Decryption</Literal>
@@ -5295,6 +5515,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/DeviceProvisioningService</IRI>
         <Literal xml:lang="english">DeviceProvisioningService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/DiskEncryptionOperation</IRI>
+        <Literal>DiskEncryptionOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5312,6 +5537,36 @@ name = metadata.name</Literal>
         <Literal>DocumentDatabaseService</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/DynamicLoading</IRI>
+        <Literal>Represents an entity that loads a piece of code dynamically during runtime. Examples include a class loader in Java, loading shared library code in C++. Interpreters, such as Python can also load code dynamically during runtime.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/DynamicLoading</IRI>
+        <Literal>DynamicLoading</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/DynamicLoadingOperation</IRI>
+        <Literal>Represents an operation used by the [DynamicLoading] concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/DynamicLoadingOperation</IRI>
+        <Literal>DynamicLoadingOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Encryption</IRI>
+        <Literal>This represents an encryption.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Encryption</IRI>
+        <Literal>Encryption</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/EncryptionInUse</IRI>
         <Literal>EncryptionInUse</Literal>
@@ -5323,8 +5578,73 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/EncryptionOperation</IRI>
+        <Literal>EncryptionOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/EntryPoint</IRI>
+        <Literal>Represents an entry point into the execution of the program. This can be a &quot;local&quot; entry point, such as a main function, a library initialization function or a &quot;remote&quot; entry point, such as a network endpoint.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/EntryPoint</IRI>
+        <Literal>EntryPoint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/EqualityCheck</IRI>
+        <Literal>Represents an operation that checks whether two principals are equal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/EqualityCheck</IRI>
+        <Literal>EqualityCheck</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Error</IRI>
         <Literal>Error</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ExitBoundaryOperation</IRI>
+        <Literal>Represents an exit operation that is part of a [Boundary]. This operation is used to define the point at which data leaves the boundary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ExitBoundaryOperation</IRI>
+        <Literal>ExitBoundaryOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/File</IRI>
+        <Literal>File</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/FileHandle</IRI>
+        <Literal>This class represents a file handle.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/FileHandle</IRI>
+        <Literal>FileHandle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/FileLikeObject</IRI>
+        <Literal>This is the base class for all file-like objects. It provides the common properties and methods that are shared by all file-like objects.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/FileLikeObject</IRI>
+        <Literal>FileLikeObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/FileOperation</IRI>
+        <Literal>FileOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5398,8 +5718,43 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/GetCurrentTimeOperation</IRI>
+        <Literal>GetCurrentTimeOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/GetSecret</IRI>
+        <Literal>An operation that retrieves a secret from a (remote) location. This can be a local keystore, a remote key server or a hardware device such as a TPM or HSM.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/GetSecret</IRI>
+        <Literal>GetSecret</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/HashOperation</IRI>
         <Literal>CryptographicHash</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Http</IRI>
+        <Literal>Abstract class for all HTTP related functionalities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Http</IRI>
+        <Literal>Http</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/HttpClient</IRI>
+        <Literal>HTTP Client.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/HttpClient</IRI>
+        <Literal>HttpClient</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5432,9 +5787,29 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">HttpEndpoint</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/HttpEndpointOperation</IRI>
+        <Literal>Base class for operations on an [HttpEndpoint].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/HttpEndpointOperation</IRI>
+        <Literal>HttpEndpointOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/HttpRequest</IRI>
         <Literal xml:lang="english">HttpRequest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/HttpRequestContext</IRI>
+        <Literal>Represents an abstract concept of request context. This usually holds the contextual information of a specific HTTP request.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/HttpRequestContext</IRI>
+        <Literal>HttpRequestContext</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5443,8 +5818,18 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/HttpRequestHandlerOperation</IRI>
+        <Literal>HttpRequestHandlerOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/HttpServer</IRI>
         <Literal xml:lang="english">HttpServer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/HybridCipher</IRI>
+        <Literal>HybridCipher</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5467,6 +5852,36 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">Immutability</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/InitializationVector</IRI>
+        <Literal>Represents an Initialization Vector of a cipher.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/InitializationVector</IRI>
+        <Literal>InitializationVector</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Input</IRI>
+        <Literal>A certain Input for e.g. a function.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Input</IRI>
+        <Literal>Input</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/InputValidationOperation</IRI>
+        <Literal>InputValidationOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/InstallUpdate</IRI>
+        <Literal>InstallUpdateOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Integrity</IRI>
         <Literal xml:lang="english">Integrity</Literal>
@@ -5477,14 +5892,64 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">IoT</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/IssueJwt</IRI>
+        <Literal>Represents an operation to issue a new JWT token.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/IssueJwt</IRI>
+        <Literal>IssueJwt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Job</IRI>
         <Literal xml:lang="english">Job</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/JwtAuthentication</IRI>
+        <Literal>Represents a JWT-based authentication, which extends the [TokenBasedAuth].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/JwtAuthentication</IRI>
+        <Literal>JwtAuthentication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/JwtBasedAuthentication</IRI>
+        <Literal>Represents a token-based authentication.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/JwtBasedAuthentication</IRI>
         <Literal>TokenBasedAuthentication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Key</IRI>
+        <Literal>A key used for encryption algorithms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Key</IRI>
+        <Literal>The node that represents the &quot;key&quot; of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Key</IRI>
+        <Literal>Key</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Key</IRI>
+        <Literal>SelectorKey</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/KeyDerivationFunction</IRI>
+        <Literal>KeyDerivationFunction</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5508,6 +5973,16 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LibraryEntryPoint</IRI>
+        <Literal>Represents an entry point that is triggered if the code is loaded as a (dynamic) library.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LibraryEntryPoint</IRI>
+        <Literal>LibraryEntryPoint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/LoadBalancer</IRI>
         <Literal>A Load Balancer may have multiple access restriction features, e.g. a L3 firewall and a WAF</Literal>
     </AnnotationAssertion>
@@ -5515,6 +5990,36 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/LoadBalancer</IRI>
         <Literal>LoadBalancer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LoadConfiguration</IRI>
+        <Literal>Represents an operation to load a configuration from a source, such as a file.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LoadConfiguration</IRI>
+        <Literal>LoadConfiguration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LoadLibrary</IRI>
+        <Literal>Represents an operation that loads a shared library during runtime. A common example would be a call to `dlopen` in C/C++.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LoadLibrary</IRI>
+        <Literal>LoadLibrary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LoadSymbol</IRI>
+        <Literal>Represents an operation that loads a symbol during runtime. A common example would be a call to`dlsym` in C/C++.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LoadSymbol</IRI>
+        <Literal>LoadSymbol</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5527,14 +6032,54 @@ name = metadata.name</Literal>
         <Literal>LocalDataLocation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LocalEntryPoint</IRI>
+        <Literal>Represents a local entry point into the execution of the program, such as a main function.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LocalEntryPoint</IRI>
+        <Literal>LocalEntryPoint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/LocalRedundancy</IRI>
         <Literal>LocalRedundancy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LogGet</IRI>
+        <Literal>A log get operation e.g. `logging.getLogger(&quot;...&quot;)`.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LogGet</IRI>
+        <Literal>LogGet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LogOperation</IRI>
+        <Literal>LogOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/LogOutput</IRI>
         <Literal>A generic Logoutput.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LogOutput</IRI>
+        <Literal>LogOutput</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LogWrite</IRI>
+        <Literal>A log write operation e.g. `loggint.warn(&quot;...&quot;)`.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LogWrite</IRI>
+        <Literal>LogWrite</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5563,6 +6108,16 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Main</IRI>
+        <Literal>The main function of a program.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Main</IRI>
+        <Literal>Main</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/MalwareProtection</IRI>
         <Literal>analyzes the activity within a Compute resource</Literal>
     </AnnotationAssertion>
@@ -5575,6 +6130,31 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/ManagedKeyEncryption</IRI>
         <Literal xml:lang="english">ManagedKeyEncryption</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Memory</IRI>
+        <Literal>A generic concept to describe memory operations with a program. This includes allocation and de-allocation of memory as well as copying memory regions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Memory</IRI>
+        <Literal>Memory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/MemoryOperation</IRI>
+        <Literal>A common abstract class for memory operations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/MemoryOperation</IRI>
+        <Literal>MemoryOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/MessageAuthenticationCode</IRI>
+        <Literal>MessageAuthenticationCode</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5672,9 +6252,34 @@ name = metadata.name</Literal>
         <Literal>ObjectStorageService</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/OperatingSystemArchitecture</IRI>
+        <Literal>Represents an architecture of an operating system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/OperatingSystemArchitecture</IRI>
+        <Literal>OperatingSystemArchitecture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Operation</IRI>
         <Literal>Operation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Output</IRI>
+        <Literal>Output</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/POSIX</IRI>
+        <Literal>Represents a POSIX architecture, commonly found on Linux systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/POSIX</IRI>
+        <Literal>POSIX</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5687,6 +6292,16 @@ name = metadata.name</Literal>
         <Literal>Package</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Padding</IRI>
+        <Literal>A padding for a cipher.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Padding</IRI>
+        <Literal>Padding</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/PasswordBasedAuthentication</IRI>
         <Literal xml:lang="en">PasswordBasedAuthentication</Literal>
@@ -5697,14 +6312,149 @@ name = metadata.name</Literal>
         <Literal>PasswordPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Policy</IRI>
+        <Literal>Represents a policy that can be applied to a resource or a set of resources. Policies can contain rules and operations that define how access to the resource is controlled.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Policy</IRI>
+        <Literal>Policy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/PolicyOperation</IRI>
+        <Literal>Represents an operation that is part of a policy. This can be used to define rules or checks that need to be performed to enforce the policy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/PolicyOperation</IRI>
+        <Literal>PolicyOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/PolicyRule</IRI>
+        <Literal>Represents a rule that is part of a policy. This can be used to define conditions that must be met for the policy to be enforced.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/PolicyRule</IRI>
+        <Literal>PolicyRule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Principal</IRI>
+        <Literal>Represents a principal that is allowed to access a resource. This can for example be a (structure representing) a user or a group of users.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Principal</IRI>
+        <Literal>Principal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ProctectedAsset</IRI>
+        <Literal>Represents an asset that is protected by a policy. This can be an in-memory data structure, a file, a database, or any other resource that requires access control.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ProctectedAsset</IRI>
+        <Literal>ProtectedAsset</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ProtectedAssetOperation</IRI>
+        <Literal>Base class for operations that involve protected assets. These operations can include checks for access permissions, modifications, or any other actions that require validation against a policy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ProtectedAssetOperation</IRI>
+        <Literal>ProtectedAssetOperation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ProvideConfiguration</IRI>
+        <Literal>Represents an operation to provide a [Configuration], e.g., in the form of a configuration file (through a [ConfigurationSource]). When the configuration file is loaded, a [LoadConfiguration] operation would be found in the code component (matching the configuration file&apos;s name in [LoadConfiguration.fileExpression]) and the [ProvideConfiguration] operation would be found in the configuration component. But also other sources of configuration could be represented by a [ProvideConfiguration] operation, such as environment variables or command-line arguments. Note: The [ProvideConfiguration] operation is part of the [ConfigurationSource.ops] and not of the [Configuration.ops] as it&apos;s an operation of the source, not the target.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ProvideConfiguration</IRI>
+        <Literal>ProvideConfiguration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ProvideConfigurationGroup</IRI>
+        <Literal>ProvideConfigurationGroup</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ProvideConfigurationOption</IRI>
+        <Literal>Represents an operation to provide a [ConfigurationOption]. It connects a [ConfigurationOptionSource] with a [ConfigurationOption].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ProvideConfigurationOption</IRI>
+        <Literal>ProvideConfigurationOption</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/RBAC</IRI>
         <Literal xml:lang="english">RBAC</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/RateLimiting</IRI>
+        <Literal>RateLimiting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ReadConfiguration</IRI>
+        <Literal>Represents an operation to read a specific configuration group. Often this is done with a member access or a subscript operation on the configuration object, such as`conf.GROUP` or`conf[&quot;GROUP&quot;]`.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ReadConfiguration</IRI>
+        <Literal>ReadConfigurationGroup</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ReadConfigurationOption</IRI>
+        <Literal>Represents an operation to read a specific configuration option. Often this is done with a member access such as `group.option` or a subscript operation such as `group[&quot;option&quot;]`.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ReadConfigurationOption</IRI>
+        <Literal>ReadConfigurationOption</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Redundancy</IRI>
         <Literal>Redundancy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/RegisterConfigurationGroup</IRI>
+        <Literal>Represents an operation to register a new [ConfigurationGroup]. This is often done with a call, such as `conf.registerGroup(&quot;group&quot;)`. This might not be necessary for all configuration frameworks, some might allow to directly read the group (via [ReadConfigurationGroup]) without registering it first, or it is done implicitly. When code and configuration is interacting, we expect that the configuration file (such as an INI file) contains the [ConfigurationGroup] node and the code contains the [RegisterConfigurationGroup] and [ReadConfigurationGroup] nodes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/RegisterConfigurationGroup</IRI>
+        <Literal>RegisterConfigurationGroup</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/RegisterConfigurationOption</IRI>
+        <Literal>Represents an operation to register a new [ConfigurationOption]. This is often done with a call, such as `conf.registerOption(&quot;option&quot;, &quot;defaultValue&quot;)`. This might not be necessary for all configuration frameworks, some might allow to directly read the group (via  [RegisterConfigurationOption]) without registering it first, or it is done implicitly. When code and configuration is interacting, we expect that the configuration file (such as an INI file) contains the [ConfigurationOption] node and the code contains the [RegisterConfigurationOption] and [ReadConfigurationOption] nodes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/RegisterConfigurationOption</IRI>
+        <Literal>RegisterConfigurationOption</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/RegisterHttpEndpoint</IRI>
+        <Literal>RegisterHttpEndpoint</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5715,6 +6465,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/RemoteDataLocation</IRI>
         <Literal>RemoteDataLocation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/RemoteEntryPoint</IRI>
+        <Literal>Represents an entry point that can be triggered remotely, such as a network endpoint.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/RemoteEntryPoint</IRI>
+        <Literal>RemoteEntryPoint</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5740,6 +6500,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/SchemaValidation</IRI>
         <Literal>SchemaValidation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Secret</IRI>
+        <Literal>Secret</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/SecretOperation</IRI>
+        <Literal>SecretOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5803,6 +6573,31 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/SymmetricCipher</IRI>
+        <Literal>Represents a symmetric cipher.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/SymmetricCipher</IRI>
+        <Literal>SymmetricCipher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Time</IRI>
+        <Literal>Time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Token</IRI>
+        <Literal>A Token used for TokenBasedAuthentication.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Token</IRI>
+        <Literal>Token</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/TransportEncryption</IRI>
         <Literal>enabled means the resource _can_ be reached via https, while enforced means it _can only_ be reached via https (or http traffic is redirected)</Literal>
     </AnnotationAssertion>
@@ -5813,6 +6608,11 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/UnlockEncryptedDisk</IRI>
+        <Literal>UnlockEncryptedDisk</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/UsageStatistics</IRI>
         <Literal>UsageStatistics</Literal>
     </AnnotationAssertion>
@@ -5820,6 +6620,26 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/VMImage</IRI>
         <Literal xml:lang="en">VMImage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ValidateJwt</IRI>
+        <Literal>Represents an operation to check the validity of a JWT token.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ValidateJwt</IRI>
+        <Literal>ValidateJwt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Value</IRI>
+        <Literal>The node that represents the &quot;value&quot; of this option. For example, in an INI file, this would be the [FieldDeclaration.initializer] node that represents the value.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Value</IRI>
+        <Literal>Value</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5862,6 +6682,16 @@ name = metadata.name</Literal>
         <Literal>WebApplicationFirewall</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Win32</IRI>
+        <Literal>Represents a Win32 architecture, commonly found on Windows systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Win32</IRI>
+        <Literal>Win32</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Workflow</IRI>
         <Literal xml:lang="english">Workflow</Literal>
@@ -5883,6 +6713,16 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/authTagSize</IRI>
+        <Literal>AuthTagSize of a symmetric cipher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/authTagSize</IRI>
+        <Literal>authTagSize</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/authenticationMechanism</IRI>
         <Literal>for example: RSA, ECDSA</Literal>
     </AnnotationAssertion>
@@ -5895,6 +6735,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/basedOn</IRI>
         <Literal>basedOn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/blockSize</IRI>
+        <Literal>Block size of a cipher.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/blockSize</IRI>
+        <Literal>blockSize</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5915,6 +6765,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/calls</IRI>
         <Literal>calls</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/cipherName</IRI>
+        <Literal>Name of a cryptographic cipher.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/cipherName</IRI>
+        <Literal>cipherName</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6033,8 +6893,18 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/keyExchange</IRI>
+        <Literal>keyExchange</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/keyExchangeAlgorithm</IRI>
         <Literal>keyExchangeAlgorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/keySize</IRI>
+        <Literal>Key size refers to the length of a key used in an enryption.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6057,9 +6927,29 @@ name = metadata.name</Literal>
         <Literal>length</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/linkedConcept</IRI>
+        <Literal>Link to a concept of the CPG</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/linkedConcept</IRI>
+        <Literal>linkedConcept</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/local</IRI>
         <Literal>local</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/logLevel</IRI>
+        <Literal>enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/logLevel</IRI>
+        <Literal>logLevel</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6075,6 +6965,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/macAlgorithm</IRI>
         <Literal>macAlgorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/maxRequests</IRI>
+        <Literal>maxRequests</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6095,6 +6990,26 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/mixedDuties</IRI>
         <Literal>mixedDuties</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/mode</IRI>
+        <Literal>Describes the mode of a certain class in the ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/mode</IRI>
+        <Literal>mode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/modus</IRI>
+        <Literal>Describes a modus of something being executed. (e.g. used by an Encryption)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/modus</IRI>
+        <Literal>modus</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6160,6 +7075,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/programmingVersion</IRI>
         <Literal>programmingVersion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/protects</IRI>
+        <Literal>protects</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6242,6 +7162,16 @@ name = metadata.name</Literal>
         <Literal>schemaURL</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/scheme</IRI>
+        <Literal>Describes a certain scheme e.g. a padding scheme.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/scheme</IRI>
+        <Literal>scheme</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/scope</IRI>
         <Literal>scope</Literal>
@@ -6298,6 +7228,11 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/timeWindowSeconds</IRI>
+        <Literal>timeWindowSeconds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/usedBy</IRI>
         <Literal>usedBy</Literal>
     </AnnotationAssertion>
@@ -6320,706 +7255,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/zone</IRI>
         <Literal>zone</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#AsymmetricCipher</IRI>
-        <Literal>AsymmetricCipher</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#GetCurrentTimeOperation</IRI>
-        <Literal>GetCurrentTimeOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#HybridCipher</IRI>
-        <Literal>HybridCipher</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality#InitializationVector</IRI>
-        <Literal>Represents an Initialization Vector of a cipher.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#InitializationVector</IRI>
-        <Literal>InitializationVector</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality#Input</IRI>
-        <Literal>A certain Input for e.g. a function.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#Input</IRI>
-        <Literal>Input</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#InputValidationOperation</IRI>
-        <Literal>InputValidationOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#InstallUpdate</IRI>
-        <Literal>InstallUpdateOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality#Key</IRI>
-        <Literal>A key used for encryption algorithms.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#Key</IRI>
-        <Literal>Key</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#KeyDerivationFunction</IRI>
-        <Literal>KeyDerivationFunction</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#MessageAuthenticationCode</IRI>
-        <Literal>MessageAuthenticationCode</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#Output</IRI>
-        <Literal>Output</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality#Padding</IRI>
-        <Literal>A padding for a cipher.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#Padding</IRI>
-        <Literal>Padding</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#RateLimiting</IRI>
-        <Literal>RateLimiting</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality#SymmetricCipher</IRI>
-        <Literal>Represents a symmetric cipher.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#SymmetricCipher</IRI>
-        <Literal>SymmetricCipher</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#Time</IRI>
-        <Literal>Time</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality#authTagSize</IRI>
-        <Literal>AuthTagSize of a symmetric cipher</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#authTagSize</IRI>
-        <Literal>authTagSize</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality#cipherName</IRI>
-        <Literal>Name of a cryptographic cipher.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#cipherName</IRI>
-        <Literal>cipherName</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#keyExchange</IRI>
-        <Literal>keyExchange</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#maxRequests</IRI>
-        <Literal>maxRequests</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality#modus</IRI>
-        <Literal>Describes a modus of something being executed. (e.g. used by an Encryption)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#modus</IRI>
-        <Literal>modus</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality#scheme</IRI>
-        <Literal>Describes a certain scheme e.g. a padding scheme.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#scheme</IRI>
-        <Literal>scheme</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality#timeWindowSeconds</IRI>
-        <Literal>timeWindowSeconds</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/Allocate</IRI>
-        <Literal>Allocate</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/Authenticate</IRI>
-        <Literal>Represents an authentication operation.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/Authenticate</IRI>
-        <Literal>Authenticate</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/AuthenticationOperation</IRI>
-        <Literal>Abstract base class for all authentication operations.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/AuthenticationOperation</IRI>
-        <Literal>AuthenticationOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/AuthorizeJwt</IRI>
-        <Literal>Represents an authorization operation based on JWT tokens.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/AuthorizeJwt</IRI>
-        <Literal>AuthorizeJwt</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/BlockStorageOperation</IRI>
-        <Literal>BlockStorageOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/Boundary</IRI>
-        <Literal>Represents a boundary in data processing, which can be used to define the scope of a policy or the separation between different policies. For example, a boundary could be defined around an [HttpEndpoint], so that the policy applies once data either comes in or goes out of the HTTP endpoint.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/Boundary</IRI>
-        <Literal>Boundary</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/CheckAccess</IRI>
-        <Literal>Represents an operation that checks whether a user or principal has access to a protected</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/CheckAccess</IRI>
-        <Literal>CheckAccess</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/Cipher</IRI>
-        <Literal>Represents a cipher suite. E.g. `AES-XTS-plain64`.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/Cipher</IRI>
-        <Literal>enum:cipherName=coolCipher,unCoolCipher</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/Cipher</IRI>
-        <Literal>Cipher</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/CipherOperation</IRI>
-        <Literal>CipherOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/DeAllocate</IRI>
-        <Literal>Represents a memory de-allocation operation. This can be done using `free` in C or `delete` in C++ or by calling a destructor in managed languages.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/DeAllocate</IRI>
-        <Literal>DeAllocate</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/DiskEncryptionOperation</IRI>
-        <Literal>DiskEncryptionOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/DynamicLoading</IRI>
-        <Literal>Represents an entity that loads a piece of code dynamically during runtime. Examples include a class loader in Java, loading shared library code in C++. Interpreters, such as Python can also load code dynamically during runtime.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/DynamicLoading</IRI>
-        <Literal>DynamicLoading</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/DynamicLoadingOperation</IRI>
-        <Literal>Represents an operation used by the [DynamicLoading] concept.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/DynamicLoadingOperation</IRI>
-        <Literal>DynamicLoadingOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/EntryPoint</IRI>
-        <Literal>Represents an entry point into the execution of the program. This can be a &quot;local&quot; entry point, such as a main function, a library initialization function or a &quot;remote&quot; entry point, such as a network endpoint.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/EntryPoint</IRI>
-        <Literal>EntryPoint</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/FileOperation</IRI>
-        <Literal>FileOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/GetSecret</IRI>
-        <Literal>An operation that retrieves a secret from a (remote) location. This can be a local keystore, a remote key server or a hardware device such as a TPM or HSM.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/GetSecret</IRI>
-        <Literal>GetSecret</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/Http</IRI>
-        <Literal>Abstract class for all HTTP related functionalities.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/Http</IRI>
-        <Literal>Http</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/HttpClient</IRI>
-        <Literal>HTTP Client.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/HttpClient</IRI>
-        <Literal>HttpClient</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/HttpClientOperation</IRI>
-        <Literal>Base class for operations on an [HttpClient].</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/HttpClientOperation</IRI>
-        <Literal>HttpClientOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/HttpEndpointOperation</IRI>
-        <Literal>Base class for operations on an [HttpEndpoint].</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/HttpEndpointOperation</IRI>
-        <Literal>HttpEndpointOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/HttpRequestContext</IRI>
-        <Literal>Represents an abstract concept of request context. This usually holds the contextual information of a specific HTTP request.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/HttpRequestContext</IRI>
-        <Literal>HttpRequestContext</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/HttpRequestHandlerOperation</IRI>
-        <Literal>HttpRequestHandlerOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/IssueJwt</IRI>
-        <Literal>Represents an operation to issue a new JWT token.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/IssueJwt</IRI>
-        <Literal>IssueJwt</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/Key</IRI>
-        <Literal>The node that represents the &quot;key&quot; of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/Key</IRI>
-        <Literal>Key</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/Key</IRI>
-        <Literal>SelectorKey</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/LibraryEntryPoint</IRI>
-        <Literal>Represents an entry point that is triggered if the code is loaded as a (dynamic) library.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/LibraryEntryPoint</IRI>
-        <Literal>LibraryEntryPoint</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/LoadConfiguration</IRI>
-        <Literal>Represents an operation to load a configuration from a source, such as a file.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/LoadConfiguration</IRI>
-        <Literal>LoadConfiguration</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/LoadLibrary</IRI>
-        <Literal>Represents an operation that loads a shared library during runtime. A common example would be a call to `dlopen` in C/C++.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/LoadLibrary</IRI>
-        <Literal>LoadLibrary</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/LoadSymbol</IRI>
-        <Literal>Represents an operation that loads a symbol during runtime. A common example would be a call to`dlsym` in C/C++.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/LoadSymbol</IRI>
-        <Literal>LoadSymbol</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/LocalEntryPoint</IRI>
-        <Literal>Represents a local entry point into the execution of the program, such as a main function.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/LocalEntryPoint</IRI>
-        <Literal>LocalEntryPoint</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/LogGet</IRI>
-        <Literal>A log get operation e.g. `logging.getLogger(&quot;...&quot;)`.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/LogGet</IRI>
-        <Literal>LogGet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/LogOperation</IRI>
-        <Literal>LogOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/LogOutput</IRI>
-        <Literal>LogOutput</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/LogWrite</IRI>
-        <Literal>A log write operation e.g. `loggint.warn(&quot;...&quot;)`.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/LogWrite</IRI>
-        <Literal>LogWrite</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/Main</IRI>
-        <Literal>The main function of a program.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/Main</IRI>
-        <Literal>Main</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/MemoryOperation</IRI>
-        <Literal>A common abstract class for memory operations.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/MemoryOperation</IRI>
-        <Literal>MemoryOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/Policy</IRI>
-        <Literal>Represents a policy that can be applied to a resource or a set of resources. Policies can contain rules and operations that define how access to the resource is controlled.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/Policy</IRI>
-        <Literal>Policy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/PolicyOperation</IRI>
-        <Literal>Represents an operation that is part of a policy. This can be used to define rules or checks that need to be performed to enforce the policy.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/PolicyOperation</IRI>
-        <Literal>PolicyOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/Principal</IRI>
-        <Literal>Represents a principal that is allowed to access a resource. This can for example be a (structure representing) a user or a group of users.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/Principal</IRI>
-        <Literal>Principal</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/ProctectedAsset</IRI>
-        <Literal>Represents an asset that is protected by a policy. This can be an in-memory data structure, a file, a database, or any other resource that requires access control.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/ProctectedAsset</IRI>
-        <Literal>ProtectedAsset</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/ProtectedAssetOperation</IRI>
-        <Literal>Base class for operations that involve protected assets. These operations can include checks for access permissions, modifications, or any other actions that require validation against a policy.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/ProtectedAssetOperation</IRI>
-        <Literal>ProtectedAssetOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/ProvideConfiguration</IRI>
-        <Literal>Represents an operation to provide a [Configuration], e.g., in the form of a configuration file (through a [ConfigurationSource]). When the configuration file is loaded, a [LoadConfiguration] operation would be found in the code component (matching the configuration file&apos;s name in [LoadConfiguration.fileExpression]) and the [ProvideConfiguration] operation would be found in the configuration component. But also other sources of configuration could be represented by a [ProvideConfiguration] operation, such as environment variables or command-line arguments. Note: The [ProvideConfiguration] operation is part of the [ConfigurationSource.ops] and not of the [Configuration.ops] as it&apos;s an operation of the source, not the target.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/ProvideConfiguration</IRI>
-        <Literal>ProvideConfiguration</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/ProvideConfigurationGroup</IRI>
-        <Literal>ProvideConfigurationGroup</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/ProvideConfigurationOption</IRI>
-        <Literal>Represents an operation to provide a [ConfigurationOption]. It connects a [ConfigurationOptionSource] with a [ConfigurationOption].</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/ProvideConfigurationOption</IRI>
-        <Literal>ProvideConfigurationOption</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/ReadConfiguration</IRI>
-        <Literal>Represents an operation to read a specific configuration group. Often this is done with a member access or a subscript operation on the configuration object, such as`conf.GROUP` or`conf[&quot;GROUP&quot;]`.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/ReadConfiguration</IRI>
-        <Literal>ReadConfigurationGroup</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/ReadConfigurationOption</IRI>
-        <Literal>Represents an operation to read a specific configuration option. Often this is done with a member access such as `group.option` or a subscript operation such as `group[&quot;option&quot;]`.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/ReadConfigurationOption</IRI>
-        <Literal>ReadConfigurationOption</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/RegisterConfigurationGroup</IRI>
-        <Literal>Represents an operation to register a new [ConfigurationGroup]. This is often done with a call, such as `conf.registerGroup(&quot;group&quot;)`. This might not be necessary for all configuration frameworks, some might allow to directly read the group (via [ReadConfigurationGroup]) without registering it first, or it is done implicitly. When code and configuration is interacting, we expect that the configuration file (such as an INI file) contains the [ConfigurationGroup] node and the code contains the [RegisterConfigurationGroup] and [ReadConfigurationGroup] nodes.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/RegisterConfigurationGroup</IRI>
-        <Literal>RegisterConfigurationGroup</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/RegisterConfigurationOption</IRI>
-        <Literal>Represents an operation to register a new [ConfigurationOption]. This is often done with a call, such as `conf.registerOption(&quot;option&quot;, &quot;defaultValue&quot;)`. This might not be necessary for all configuration frameworks, some might allow to directly read the group (via  [RegisterConfigurationOption]) without registering it first, or it is done implicitly. When code and configuration is interacting, we expect that the configuration file (such as an INI file) contains the [ConfigurationOption] node and the code contains the [RegisterConfigurationOption] and [ReadConfigurationOption] nodes.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/RegisterConfigurationOption</IRI>
-        <Literal>RegisterConfigurationOption</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/RegisterHttpEndpoint</IRI>
-        <Literal>RegisterHttpEndpoint</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/RemoteEntryPoint</IRI>
-        <Literal>Represents an entry point that can be triggered remotely, such as a network endpoint.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/RemoteEntryPoint</IRI>
-        <Literal>RemoteEntryPoint</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/SecretOperation</IRI>
-        <Literal>SecretOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/UnlockEncryptedDisk</IRI>
-        <Literal>UnlockEncryptedDisk</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/ValidateJwt</IRI>
-        <Literal>Represents an operation to check the validity of a JWT token.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/ValidateJwt</IRI>
-        <Literal>ValidateJwt</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/Value</IRI>
-        <Literal>The node that represents the &quot;value&quot; of this option. For example, in an INI file, this would be the [FieldDeclaration.initializer] node that represents the value.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/Value</IRI>
-        <Literal>Value</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/blockSize</IRI>
-        <Literal>Block size of a cipher.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/blockSize</IRI>
-        <Literal>blockSize</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/keySize</IRI>
-        <Literal>Key size refers to the length of a key used in an enryption.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/linkedConcept</IRI>
-        <Literal>Link to a concept of the CPG</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/linkedConcept</IRI>
-        <Literal>linkedConcept</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/functionality/classes/logLevel</IRI>
-        <Literal>enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/logLevel</IRI>
-        <Literal>logLevel</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/functionality/classes/protects</IRI>
-        <Literal>protects</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/security/classes/Encryption</IRI>
-        <Literal>This represents an encryption.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/security/classes/Encryption</IRI>
-        <Literal>Encryption</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/security/classes/JwtAuthentication</IRI>
-        <Literal>Represents a JWT-based authentication, which extends the [TokenBasedAuth].</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/security/classes/JwtAuthentication</IRI>
-        <Literal>JwtAuthentication</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/security/classes/JwtBasedAuthentication</IRI>
-        <Literal>Represents a token-based authentication.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7540,271 +7775,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/value</IRI>
         <Literal xml:lang="english">value</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/application/classes/Agnostic</IRI>
-        <Literal>Represents an agnostic architecture, which is not tied to a specific operating system.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/application/classes/Agnostic</IRI>
-        <Literal>Agnostic</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/application/classes/Darwin</IRI>
-        <Literal>Represents a Darwin architecture, commonly found on macOS systems. macOS is a certified. [UNIX](https://www.opengroup.org/openbrand/register/apple.htm) and is (mostly) POSIX compatible.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/application/classes/Darwin</IRI>
-        <Literal>Darwin</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/application/classes/EncryptionOperation</IRI>
-        <Literal>EncryptionOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/application/classes/EqualityCheck</IRI>
-        <Literal>Represents an operation that checks whether two principals are equal.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/application/classes/EqualityCheck</IRI>
-        <Literal>EqualityCheck</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/application/classes/ExitBoundaryOperation</IRI>
-        <Literal>Represents an exit operation that is part of a [Boundary]. This operation is used to define the point at which data leaves the boundary.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/application/classes/ExitBoundaryOperation</IRI>
-        <Literal>ExitBoundaryOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/application/classes/OperatingSystemArchitecture</IRI>
-        <Literal>Represents an architecture of an operating system.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/application/classes/OperatingSystemArchitecture</IRI>
-        <Literal>OperatingSystemArchitecture</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/application/classes/POSIX</IRI>
-        <Literal>Represents a POSIX architecture, commonly found on Linux systems.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/application/classes/POSIX</IRI>
-        <Literal>POSIX</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/application/classes/Win32</IRI>
-        <Literal>Represents a Win32 architecture, commonly found on Windows systems.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/application/classes/Win32</IRI>
-        <Literal>Win32</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/document/classes/AndRule</IRI>
-        <Literal>Represents a rule that combines two other rules using a logical AND operation. This means that both rules must be satisfied for the combined rule to be satisfied.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/AndRule</IRI>
-        <Literal>AndRule</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/document/classes/Configuration</IRI>
-        <Literal>Represents the abstract concept of a &quot;configuration&quot;. This is a common pattern in many programming languages, where a data structure in code represents an aggregation of configuration values. For example, in Python, the [`configparser`](https://docs.python.org/3/library/configparser.html) module is used to read INI files, and the config values are represented as a dictionary-like object. Often, the configuration is loaded from multiple sources, such as INI files, environment variables, and command-line arguments.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/Configuration</IRI>
-        <Literal>Configuration</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/document/classes/ConfigurationGroup</IRI>
-        <Literal>Represents a group of configuration values within one [conf]. Depending on the type of configuration data structure, there might only be one group (e.g., a &quot;default&quot; one), or there might be several groups. For example, when loading a config from an INI file, each section would be mapped to a [ConfigurationGroup], and each key-value pair would be mapped to an [ConfigurationOption] within this group.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/ConfigurationGroup</IRI>
-        <Literal>ConfigurationGroup</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/document/classes/ConfigurationGroupSource</IRI>
-        <Literal>Represents a possible group source for a configuration group. For example, when loading an INI file with our INI file frontend, each section is presented as a [RecordDeclaration]. This record declaration would be the source of the configuration group.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/ConfigurationGroupSource</IRI>
-        <Literal>ConfigurationGroupSource</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/document/classes/ConfigurationOperation</IRI>
-        <Literal>A common abstract class for configuration operations, such as reading options or a whole file.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/ConfigurationOperation</IRI>
-        <Literal>ConfigurationOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/document/classes/ConfigurationOption</IRI>
-        <Literal>Represents a configuration option within one [group]. Usually there is one option for each entry in a configuration data structure.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/ConfigurationOption</IRI>
-        <Literal>ConfigurationOption</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/document/classes/ConfigurationOptionSource</IRI>
-        <Literal>Represents a possible option source for a configuration option. For example, when loading an INI file with our INI file frontend, each key-value pair is presented as a [FieldDeclaration]. This field declaration would be the source to the configuration option.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/ConfigurationOptionSource</IRI>
-        <Literal>ConfigurationOptionSource</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/document/classes/ConfigurationSource</IRI>
-        <Literal>Represents a possible source for a configuration. For example, when loading an INI file with our INI file frontend, the whole file would be represented as a [TranslationUnitDeclaration]. This translation unit declaration would be the source of the configuration.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/ConfigurationSource</IRI>
-        <Literal>ConfigurationSource</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/document/classes/Context</IRI>
-        <Literal>Represents a context in which a policy is applied. Typically, a context contains information about a user or some other form of identity (e.g. a [Principal]).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/Context</IRI>
-        <Literal>Context</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/CreateEncryptedDisk</IRI>
-        <Literal>CreateEncryptedDisk</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/CreateSecret</IRI>
-        <Literal>CreateSecret</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/CryptographicHash</IRI>
-        <Literal>CryptographicHash</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/File</IRI>
-        <Literal>File</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/document/classes/FileHandle</IRI>
-        <Literal>This class represents a file handle.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/FileHandle</IRI>
-        <Literal>FileHandle</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/document/classes/FileLikeObject</IRI>
-        <Literal>This is the base class for all file-like objects. It provides the common properties and methods that are shared by all file-like objects.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/FileLikeObject</IRI>
-        <Literal>FileLikeObject</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/document/classes/PolicyRule</IRI>
-        <Literal>Represents a rule that is part of a policy. This can be used to define conditions that must be met for the policy to be enforced.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/PolicyRule</IRI>
-        <Literal>PolicyRule</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/document/classes/Token</IRI>
-        <Literal>A Token used for TokenBasedAuthentication.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/document/classes/Token</IRI>
-        <Literal>Token</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/hardware/classes/Memory</IRI>
-        <Literal>A generic concept to describe memory operations with a program. This includes allocation and de-allocation of memory as well as copying memory regions.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/hardware/classes/Memory</IRI>
-        <Literal>Memory</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/hardware/classes/mode</IRI>
-        <Literal>Describes the mode of a certain class in the ontology.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/hardware/classes/mode</IRI>
-        <Literal>mode</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/resource/infrastructure/classes/Key</IRI>
-        <Literal>The node that represents the &quot;key&quot; of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/infrastructure/classes/Key</IRI>
-        <Literal>Key</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/infrastructure/classes/PasswordPolicy</IRI>
-        <Literal>PasswordPolicy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/resource/infrastructure/classes/Secret</IRI>
-        <Literal>Secret</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
