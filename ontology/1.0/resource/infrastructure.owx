@@ -1392,17 +1392,17 @@ name = metadata.name</Literal>
     </DataPropertyAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:Key</AbbreviatedIRI>
+        <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
         <Literal>The node that represents the "key" of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:Key</AbbreviatedIRI>
+        <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
         <Literal>Key</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:Secret</AbbreviatedIRI>
+        <AbbreviatedIRI>cl:Secret</AbbreviatedIRI>
         <Literal>Secret</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -2092,7 +2092,7 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:PasswordPolicy</AbbreviatedIRI>
+        <AbbreviatedIRI>cl:PasswordPolicy</AbbreviatedIRI>
         <Literal>PasswordPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
