@@ -6914,7 +6914,7 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/leftPrinciple</IRI>
+        <IRI>/classes/leftPrincipal</IRI>
         <Literal>leftPrincipal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
