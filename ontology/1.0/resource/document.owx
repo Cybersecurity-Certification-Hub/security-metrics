@@ -165,14 +165,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Policy"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Context"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Policy"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="core:PolicyRule"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -184,14 +184,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:MessageAuthenticationCode"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Input"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:MessageAuthenticationCode"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Key"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -242,7 +242,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:SymmetricCipher"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:InitializationVector"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -257,7 +257,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Configuration"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="core:ConfigurationGroup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -272,14 +272,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ConfigurationGroup"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Configuration"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:ConfigurationGroup"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="core:ConfigurationOption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -310,21 +310,21 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:ConfigurationGroup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:ConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Key"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:ConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Value"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -339,7 +339,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ConfigurationSource"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="core:ConfigurationGroupSource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -374,7 +374,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:KeyDerivationFunction"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Input"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>

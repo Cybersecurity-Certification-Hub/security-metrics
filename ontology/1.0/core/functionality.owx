@@ -537,7 +537,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Cipher"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Padding"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -570,7 +570,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:CipherSuite"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="core:Cipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -653,21 +653,21 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:HybridCipher"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:KeyDerivationFunction"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:HybridCipher"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:MessageAuthenticationCode"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:HybridCipher"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:SymmetricCipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -686,7 +686,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Authenticate"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Credential"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -770,7 +770,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ProctectedAsset"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="core:Policy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -792,14 +792,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ProvideConfiguration"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Configuration"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:ProvideConfiguration"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:ConfigurationSource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -810,14 +810,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ProvideConfigurationGroup"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:ConfigurationGroup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:ProvideConfigurationGroup"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:ConfigurationGroupSource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -828,7 +828,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:RegisterConfigurationGroup"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:ConfigurationGroup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -860,7 +860,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:RegisterConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:ConfigurationOption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -871,7 +871,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:RegisterHttpEndpoint"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:HttpEndpoint"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -887,7 +887,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ReadConfiguration"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:ConfigurationGroup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -898,7 +898,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ReadConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:ConfigurationOption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -906,14 +906,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ProvideConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:ConfigurationOption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:ProvideConfigurationOption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:ConfigurationOptionSource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -969,7 +969,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:LoadLibrary"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="core:EntryPoint"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -991,7 +991,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:InstallUpdate"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:AutomaticUpdates"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -999,14 +999,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:InputValidationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Input"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:InputValidationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Output"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1157,7 +1157,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:OperatingSystemArchitecture"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1217,7 +1217,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:DecryptionOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Secret"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1368,14 +1368,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpEndpoint"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:HttpRequestContext"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpEndpoint"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/offers"/>
+            <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="core:Authorization"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1403,7 +1403,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpClient"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Authenticity"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>

@@ -367,7 +367,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionOperation"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/algorithm"/>
+            <DataProperty abbreviatedIRI="prop:algorithm"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -383,7 +383,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionInUse"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/enabled"/>
+            <DataProperty abbreviatedIRI="prop:enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
