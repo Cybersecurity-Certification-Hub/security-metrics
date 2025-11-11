@@ -42,22 +42,22 @@
     </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/Memory</IRI>
+        <AbbreviatedIRI>core:Memory</AbbreviatedIRI>
         <Literal>A generic concept to describe memory operations with a program. This includes allocation and de-allocation of memory as well as copying memory regions.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/Memory</IRI>
+        <AbbreviatedIRI>core:Memory</AbbreviatedIRI>
         <Literal>Memory</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/mode</IRI>
+        <AbbreviatedIRI>core:mode</AbbreviatedIRI>
         <Literal>Describes the mode of a certain class in the ontology.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/mode</IRI>
+        <AbbreviatedIRI>core:mode</AbbreviatedIRI>
         <Literal>mode</Literal>
     </AnnotationAssertion>
 </Ontology>
