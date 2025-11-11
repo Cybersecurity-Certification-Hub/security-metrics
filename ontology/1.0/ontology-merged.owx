@@ -2777,10 +2777,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/HttpRequest"/>
-        <Class IRI="/classes/Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/HttpRequest"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/to"/>
             <Class IRI="/classes/HttpEndpoint"/>
