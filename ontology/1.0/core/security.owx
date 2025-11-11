@@ -1056,27 +1056,27 @@
     </SubObjectPropertyOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/Encryption</IRI>
+        <AbbreviatedIRI>core:Encryption</AbbreviatedIRI>
         <Literal>This represents an encryption.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/Encryption</IRI>
+        <AbbreviatedIRI>core:Encryption</AbbreviatedIRI>
         <Literal>Encryption</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/JwtAuthentication</IRI>
+        <AbbreviatedIRI>core:JwtAuthentication</AbbreviatedIRI>
         <Literal>Represents a JWT-based authentication, which extends the [TokenBasedAuth].</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/JwtAuthentication</IRI>
+        <AbbreviatedIRI>core:JwtAuthentication</AbbreviatedIRI>
         <Literal>JwtAuthentication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/JwtBasedAuthentication</IRI>
+        <AbbreviatedIRI>core:JwtBasedAuthentication</AbbreviatedIRI>
         <Literal>Represents a token-based authentication.</Literal>
     </AnnotationAssertion>
     
