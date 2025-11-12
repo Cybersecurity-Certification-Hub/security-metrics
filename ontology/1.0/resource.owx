@@ -15,5 +15,6 @@
     <Import>https://ontology.cybersecuritycertcluster.eu/resource/application</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/resource/infrastructure</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/resource/human_resources</Import>
+    <Import>https://ontology.cybersecuritycertcluster.eu/resource/hardware</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/data</Import>
 </Ontology>
