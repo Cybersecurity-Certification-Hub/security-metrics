@@ -775,6 +775,21 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="cl:Secret"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="cl:basedOn"/>
+            <Class abbreviatedIRI="cl:Cipher"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:Secret"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="cl:keySize"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
         <Class abbreviatedIRI="cl:MachineLearningService"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -1396,7 +1411,21 @@ ips += externalIP
 ips += loadBalancerIP
 name = metadata.name</Literal>
     </DataPropertyAssertion>
-    
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
+        <Literal>The node that represents the "key" of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
+        <Literal>Key</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:Secret</AbbreviatedIRI>
+        <Literal>Secret</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
@@ -2081,6 +2110,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>cl:resourceType</AbbreviatedIRI>
         <Literal>The resource type. It is an array, because a type can be derived from another.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:PasswordPolicy</AbbreviatedIRI>
+        <Literal>PasswordPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
