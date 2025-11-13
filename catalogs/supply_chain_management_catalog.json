@@ -1,0 +1,33 @@
+[
+  {
+    "id": "SupplyChainManagementCatalog",
+    "name": "Supply Chain Management, Transparency, and Accountability",
+    "description": "Controls addressing supply chain security and content trust requirements for container registries.",
+    "metadata": {
+      "color": "#3949AB"
+    },
+    "short_name": "STA",
+    "assurance_levels": [
+      "baseline"
+    ],
+    "all_in_scope": true,
+    "categories": [
+      {
+        "name": "Supply Chain Risk Management",
+        "description": "Apply supply chain risk management practices across the cloud service offering.",
+        "controls": [
+          {
+            "id": "STA-02",
+            "name": "SSRM Supply Chain",
+            "description": "Apply, document, implement, and manage the SSRM throughout the supply chain for the cloud service offering.",
+            "metrics": [
+              {
+                "id": "RegistryNotaryEnabled"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
