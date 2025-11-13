@@ -1061,6 +1061,27 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="cl:QPU"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="cl:T1CoherenceTime"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:QPU"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="cl:T2CoherenceTime"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:QPU"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="cl:UniversalGateSetEnabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="cl:VirtualNetwork"/>
         <Class abbreviatedIRI="cl:Networking"/>
     </SubClassOf>
@@ -2137,9 +2158,39 @@ name = metadata.name</Literal>
         <Literal>status</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:T1CoherenceTime</AbbreviatedIRI>
+        <Literal>Coherence times are a standard measure for the reliability of executing quantum circuits. T1 is the qubits&apos;s energy relaxation time (in seconds).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:T1CoherenceTime</AbbreviatedIRI>
+        <Literal>T1CoherenceTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:T2CoherenceTime</AbbreviatedIRI>
+        <Literal>Coherence times are a standard measure for the reliability of executing quantum circuits. T1 is the qubits&apos;s energy dephasing time (in seconds).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:T2CoherenceTime</AbbreviatedIRI>
+        <Literal>T2CoherenceTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:target</AbbreviatedIRI>
         <Literal>target</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:UniversalGateSetEnabled</AbbreviatedIRI>
+        <Literal>The physical operations shall include a finite set of gates capable of approximating any unitary operation on qubits. This is typically achieved through combinations of one-qubit gates and a two-qubit entangling gate, such as CNOT, enabling the execution of a broad range of quantum algorithms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:UniversalGateSetEnabled</AbbreviatedIRI>
+        <Literal>UniversalGateSetEnabled</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2390,6 +2441,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>k8s:Pod</AbbreviatedIRI>
         <Literal xml:lang="english">Kubernetes Pod</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:QPU</AbbreviatedIRI>
+        <Literal>QPU</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
