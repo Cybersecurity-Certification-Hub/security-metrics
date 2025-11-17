@@ -1098,6 +1098,9 @@
         <DataProperty IRI="/classes/zone"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/core/security#scanInterval"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/activated"/>
     </Declaration>
     <Declaration>
@@ -1608,6 +1611,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/contextIsChecked"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Authenticity"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/length"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3482,6 +3492,13 @@
     <SubClassOf>
         <Class IRI="/classes/MalwareProtection"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/core/security#scanInterval"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MalwareProtection"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/properties/enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
@@ -4933,6 +4950,10 @@ name = metadata.name</Literal>
         <ObjectProperty IRI="/classes/hasType"/>
         <Class IRI="/classes/ResourceType"/>
     </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/classes/length"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="/properties/algorithm"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -6913,6 +6934,11 @@ name = metadata.name</Literal>
         <Literal>leftPrincipal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/length</IRI>
+        <Literal>The length refers to the length of the given class, e.g.  password length</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/length</IRI>
         <Literal>length</Literal>
@@ -7130,7 +7156,7 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/rotationInterval</IRI>
-        <Literal>Maximum password rotation interval in months</Literal>
+        <Literal>rotationInterval is given in days</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7246,6 +7272,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/zone</IRI>
         <Literal>zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/core/security#scanInterval</IRI>
+        <Literal>The scan interval refers to the frequency of scans in days, e.g. antimalware scans</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/core/security#scanInterval</IRI>
+        <Literal>scanInterval</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
