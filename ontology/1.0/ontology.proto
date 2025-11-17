@@ -2053,7 +2053,9 @@ message JwtAuthentication {
 	bool context_is_checked = 3538;
 	bool enabled = 3085;
 	bool enforced = 13206;
-	// Maximum password rotation interval in months
+	// The length refers to the length of the given class, e.g.  password length
+	int32 length = 9933;
+	// rotationInterval is given in days
 	int32 rotation_interval = 3257;
 	optional string token_id = 5623;
 }
