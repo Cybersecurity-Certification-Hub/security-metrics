@@ -6929,14 +6929,14 @@ name = metadata.name</Literal>
         <Literal>lastActivity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/length</IRI>
-        <Literal>The length refers to the length of the given class, e.g.  password length</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/leftPrincipal</IRI>
         <Literal>leftPrincipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/length</IRI>
+        <Literal>The length refers to the length of the given class, e.g.  password length</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
