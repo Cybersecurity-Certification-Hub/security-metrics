@@ -1,0 +1,13 @@
+# ====== Metadata ======
+id: IncidentManagementOwnership
+description: TODO (Is this a security feature or just add it as resource?)
+implementationGuidelines:
+  AMOE: "Which team is in charge of handling security incidents? Keywords are ['Incident Management', 'CERT']"
+category: IncidentManagement
+version: "1.0"
+comments: "<Enter further description of the metric here.>"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[CERT]"
