@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: SecurityAlertsEnabled
+description: This rule assesses whether the logging capabilities offered by a [VirtualMachine] have [p1:securityAlertsEnabled] configured correctly.
+category: LoggingMonitoring
+version: "1.0"
+comments: Enabling alert generation on log sources ensures suspicious events in operating system, boot, and workload telemetry trigger timely notifications for response teams.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True
