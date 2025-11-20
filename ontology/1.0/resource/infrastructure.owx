@@ -117,6 +117,9 @@
         <Class abbreviatedIRI="cl:LoggingService"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="cl:SecurityInformationEventManagement"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="cl:MessagingHub"/>
     </Declaration>
     <Declaration>
@@ -770,6 +773,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="cl:Storage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:LoggingService"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:offers"/>
+            <Class abbreviatedIRI="cl:SecurityInformationEventManagement"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>

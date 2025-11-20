@@ -161,6 +161,9 @@
         <Class abbreviatedIRI="core:SecurityFeature"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:SecurityInformationEventManagement"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:Signature"/>
     </Declaration>
     <Declaration>
@@ -805,6 +808,28 @@
         </DataHasValue>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityInformationEventManagement"/>
+        <Class abbreviatedIRI="core:Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityInformationEventManagement"/>
+        <Class abbreviatedIRI="core:SecurityFeature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityInformationEventManagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:to"/>
+            <Class abbreviatedIRI="cl:LoggingService"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityInformationEventManagement"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:enabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:MalwareProtection"/>
         <Class abbreviatedIRI="core:Auditing"/>
     </SubClassOf>
@@ -1319,6 +1344,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:SecurityFeature</AbbreviatedIRI>
         <Literal xml:lang="english">SecurityFeature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:SecurityInformationEventManagement</AbbreviatedIRI>
+        <Literal>Aggregates and correlates security telemetry across connected sources to support security incident detection and response (SIEM), e.g., Azure Security Insights (https://learn.microsoft.com/en-us/rest/api/securityinsights/).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:SecurityInformationEventManagement</AbbreviatedIRI>
+        <Literal>SecurityInformationEventManagement</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

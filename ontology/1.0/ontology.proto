@@ -243,6 +243,7 @@ message Auditing {
 		OSLogging os_logging = 2926;
 		ResourceLogging resource_logging = 17563;
 		MalwareProtection malware_protection = 7265;
+		SecurityInformationEventManagement security_information_event_management = 15645;
 		UsageStatistics usage_statistics = 15242;
 	}
 }
@@ -2433,6 +2434,7 @@ message LoggingService {
 	repeated Logging loggings  = 5453;
 	repeated Redundancy redundancies  = 1550;
 	optional string parent_id = 258;
+	SecurityInformationEventManagement security_information_event_management = 4922;
 	optional string service_metadata_document_id = 16013;
 	repeated string storage_ids  = 7044;
 	TransportEncryption transport_encryption = 17323;
@@ -3676,6 +3678,7 @@ message SecurityFeature {
 		OSLogging os_logging = 2926;
 		ResourceLogging resource_logging = 17563;
 		MalwareProtection malware_protection = 7265;
+		SecurityInformationEventManagement security_information_event_management = 15645;
 		UsageStatistics usage_statistics = 15242;
 		CertificateBasedAuthentication certificate_based_authentication = 560;
 		JwtAuthentication jwt_authentication = 1956;
@@ -3707,7 +3710,18 @@ message SecurityFeature {
 		DocumentSignature document_signature = 7943;
 		ExplainableResults explainable_results = 6217;
 		RobustnessScore robustness_score = 12988;
+		SecurityInformationEventManagement security_information_event_management = 15645;
 	}
+}
+
+// SecurityInformationEventManagement is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Aggregates and correlates security telemetry across connected sources to support security incident detection and response (SIEM), e.g., Azure Security Insights (https://learn.microsoft.com/en-us/rest/api/securityinsights/).
+message SecurityInformationEventManagement {
+	option (resource_type_names) = "SecurityInformationEventManagement";
+	option (resource_type_names) = "SecurityFeature";
+
+	bool enabled = 14252;
+	repeated string logging_service_ids  = 3352;
 }
 
 // SecurityTraining is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
