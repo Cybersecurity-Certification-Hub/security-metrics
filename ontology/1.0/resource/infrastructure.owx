@@ -171,6 +171,15 @@
         <Class abbreviatedIRI="cl:StorageService"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="cl:T1CoherenceTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="cl:T2CoherenceTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="cl:UniversalGateSetEnabled"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="cl:VMImage"/>
     </Declaration>
     <Declaration>
