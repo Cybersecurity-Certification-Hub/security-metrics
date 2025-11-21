@@ -1,0 +1,18 @@
+# ====== Metadata ======
+id: ModelLeakageDetectionEnabled
+description: >
+  This rule evaluates whether an [AIModel] has [ModelLeakageDetection] configured
+  so that the final SHAPr leakage score for any training sample does not exceed
+  the allowed risk threshold [p1:maxAllowedLeakage].
+category: AISecurity
+version: "1.0"
+comments: >
+  We evaluate model privacy using SHAPr leakage metrics. The final SHAPr score
+  for a training sample ranges from 0 to 1, where higher values indicate higher
+  membership privacy risk. This rule is compliant only if all samples stay
+  below the configured maximum SHAPr leakage threshold.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 0.5
