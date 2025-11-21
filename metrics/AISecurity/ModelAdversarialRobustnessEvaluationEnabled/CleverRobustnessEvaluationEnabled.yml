@@ -1,0 +1,21 @@
+# ====== Metadata ======
+id: CleverRobustnessEvaluationEnabled
+description: >
+  This rule evaluates whether an [AIModel] has sufficient adversarial robustness
+  by ensuring that the CLEVER robustness score remains above the minimum
+  acceptable threshold [p1:minAllowedCleverScore].
+category: AdversarialRobustness
+version: "1.0"
+comments: >
+  CLEVER scores assess the robustness of a model against adversarial examples.
+  A higher CLEVER score generally indicates better robustness, as the smallest
+  hostile disturbance needs a larger Lp norm. The value range depends on the
+  radius size (0–5 by default, configurable in toolbox/compute_untargeted_clever()).
+  This rule is compliant only if the CLEVER score meets or exceeds the configured
+  minimum robustness threshold.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: 2.0
+
