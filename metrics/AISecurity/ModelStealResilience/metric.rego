@@ -1,9 +1,9 @@
-package cch.metrics.data_poisoning_detected
+package cch.metrics.model_steal_resilience
 
 import data.cch.compare
 import rego.v1
 
-import input.poisonedDataLevel as poisoning
+import input.modelStealResilience as resilience
 
 default applicable = false
 
@@ -11,9 +11,9 @@ default compliant = false
 
 applicable if {
 	input.type[_] == "MachineLearningModel"
-	poisoning
+	resilience
 }
 
 compliant if {
-	compare(data.operator, data.target_value, poisoning)
+	compare(data.operator, data.target_value, resilience)
 }

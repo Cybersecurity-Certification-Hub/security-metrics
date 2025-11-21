@@ -61,7 +61,21 @@
     <SubClassOf>
         <Class abbreviatedIRI="res:MachineLearningModel" />
         <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:evasionEfficacyLevel" />
+            <Datatype abbreviatedIRI="xsd:float" />
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:MachineLearningModel" />
+        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="res:explainability" />
+            <Datatype abbreviatedIRI="xsd:float" />
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:MachineLearningModel" />
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:modelStealResilience" />
             <Datatype abbreviatedIRI="xsd:float" />
         </DataSomeValuesFrom>
     </SubClassOf>

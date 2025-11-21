@@ -1,9 +1,9 @@
 # ====== Metadata ======
 id: EvasionEfficacy
-description: This rule assesses whether an [MachineLearningModel] has the compliant number of [p1:EvasionEfficacy].
+description: This rule assesses whether a [MachineLearningModel] has the compliant level of [p1:EvasionEfficacyLevel].
 category: AISecurity
 version: "1.0"
-comments: This metric assesses in which extent a model is vulnerable against an Evasion Attack. The lower the better
+comments: Evasion attacks manipulate input data to deceive AI models, leading to incorrect predictions or classifications. The lower the value, the better.
 # ====== Configuration ======
 p1: 
  operator: "<"

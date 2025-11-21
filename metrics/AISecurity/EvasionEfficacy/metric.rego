@@ -1,9 +1,9 @@
-package cch.metrics.data_poisoning_detected
+package cch.metrics.evasion_efficacy
 
 import data.cch.compare
 import rego.v1
 
-import input.poisonedDataLevel as poisoning
+import input.evasionEfficacyLevel as evasion
 
 default applicable = false
 
@@ -11,9 +11,9 @@ default compliant = false
 
 applicable if {
 	input.type[_] == "MachineLearningModel"
-	poisoning
+	evasion
 }
 
 compliant if {
-	compare(data.operator, data.target_value, poisoning)
+	compare(data.operator, data.target_value, evasion)
 }
