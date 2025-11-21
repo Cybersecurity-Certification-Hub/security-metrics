@@ -1,0 +1,22 @@
+# ====== Metadata ======
+id: DataPoisoningResilienceEnabled
+description: >
+  This rule evaluates whether an [AIModel] has [DataPoisoningResilience] configured
+  such that the attack success rate of the Hidden Trigger Backdoor Sleeper Agent
+  remains below the allowed risk threshold [p1:maxAllowedAttackSuccessRate].
+category: AISecurity
+version: "1.0"
+comments: >
+  Perform data poisoning attacks to evaluate model resilience against adversarial
+  examples. The Hidden Trigger Backdoor Attack Sleeper Agent is used for this.
+  The default class_source is 0 (source class) and class_target is 1 (target
+  class for misclassification). These values can be modified in
+  toolbox.py/class_source and toolbox.py/class_target. The attack success rate
+  ranges from 0 to 1, where higher values indicate weaker resilience against
+  data poisoning or backdoor attacks.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 0.1
+
