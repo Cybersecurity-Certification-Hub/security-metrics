@@ -1,9 +1,9 @@
 # ====== Metadata ======
 id: DataPoisoningDetected
-description: This rule assesses whether an [MachineLearningModel] has the compliant number of [p1:PoisonedData].
+description: This rule assesses whether the detected percentage of [p1:poisonedDataLevel] in the training set of a [MachineLearningModel] is compliant.
 category: AISecurity
 version: "1.0"
-comments: This metric assesses if poisoned data is included that influences the AI model.
+comments: An AI model may be trained on poisoned data which can lead to incorrect or biased model predictions. Poisoned data may, for example, be detected by checking for outliers in the data set or by identifying data points that have been intentionally mislabeled.
 # ====== Configuration ======
 p1: 
  operator: "<="
