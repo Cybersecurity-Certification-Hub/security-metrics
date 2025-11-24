@@ -1,0 +1,4 @@
+{
+    "operator": "isIn",
+    "target_value": "[services, IP addresses, databases, VM, application, service plan instances, database instances]"
+}
