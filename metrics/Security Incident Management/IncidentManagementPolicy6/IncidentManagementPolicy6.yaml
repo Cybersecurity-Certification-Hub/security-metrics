@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "47460882-06b3-4c31-9f4f-5dfdf2f87684"
 name: "IncidentManagementPolicy6"
-description: "This metric assesses the reporting timeframe for staff regarding potential security and privacy issues. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event], has [p1:reportInterval] set correctly. This metric assesses the reporting timeframe for staff regarding potential security and privacy issues. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "When must staff report potential security and privacy issues?"

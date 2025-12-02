@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "4b028a96-05f6-4786-9729-2bf9bf9c23d3"
 name: "LogDataRetentionTimeQ1"
-description: "This metric assesses the retention period of log data. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Data.Log], has [p1:retentionInterval] set correctly. This metric assesses the retention period of log data. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How long is log data stored?"

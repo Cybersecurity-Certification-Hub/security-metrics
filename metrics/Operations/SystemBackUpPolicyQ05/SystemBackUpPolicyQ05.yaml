@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "094bc5ff-8f94-495b-ae95-59ded51e1af5"
 name: "SystemBackUpPolicyQ05"
-description: "This metric assesses the backup frequency. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Data.Backup], has [p1:interval] set correctly. This metric assesses the backup frequency. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How often are backups made?"

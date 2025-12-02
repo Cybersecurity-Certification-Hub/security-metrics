@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "380307d4-cb39-4538-ba4b-d757fbbf5d97"
 name: "SystemHardeningPolicyQ3"
-description: "This metric assesses how often penetration tests are performed. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SystemComponent.HardeningRequirements.PenetrationTest], has [p1:interval] set correctly. This metric assesses how often penetration tests are performed. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "What is the penetration test frequency?"

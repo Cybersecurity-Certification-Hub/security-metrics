@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "0637a86e-1e5a-4498-bb5a-3b6c6d042d36"
 name: "MonitoringProcessTimeframeQ4"
-description: "This metric assesses the resolution timeframe for detected issues. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event], has [p1:resolutionInterval] set correctly. This metric assesses the resolution timeframe for detected issues. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "What is the timeframe for resolving detected issues?"

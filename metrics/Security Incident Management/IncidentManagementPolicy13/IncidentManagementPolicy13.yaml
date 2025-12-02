@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "57778126-a7ae-4021-9c61-ac1ec5c50c22"
 name: "IncidentManagementPolicy13"
-description: "This metric assesses the entity responsible for coordinating forensic investigations. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident], has [p1:forensicTeam] set correctly. This metric assesses the entity responsible for coordinating forensic investigations. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "Which entity coordinates the forensic investigation?"

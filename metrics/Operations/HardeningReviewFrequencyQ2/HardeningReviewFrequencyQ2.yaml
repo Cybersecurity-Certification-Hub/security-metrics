@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "6f92da23-50c6-4b1e-8fed-7417fd86f761"
 name: "HardeningReviewFrequencyQ2"
-description: "This metric assesses the frequency of hardening compliance reviews. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SystemComponent.HardeningRequirements], has [p1:reviewInterval] set correctly. This metric assesses the frequency of hardening compliance reviews. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How often are system components reviewed for compliance with hardening requirements?"

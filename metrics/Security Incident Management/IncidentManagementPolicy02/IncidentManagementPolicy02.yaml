@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "7f852bc8-ae5a-444f-9f49-9fbad901a8da"
 name: "IncidentManagementPolicy02"
-description: "This metric assesses the approach for reporting incidents to the CSP. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident], has [p1:reportApproach] set correctly. This metric assesses the approach for reporting incidents to the CSP. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "Which approach is used for reporting incidents to the CSP?"

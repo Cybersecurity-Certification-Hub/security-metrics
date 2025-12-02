@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "1f24bf2c-1e5d-4d04-a513-5f55d8e2b625"
 name: "LogDataRetentionTimeQ2"
-description: "This metric assesses the deletion timeframe for log data. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Data.Log], has [p1:retentionInterval] set correctly. This metric assesses the deletion timeframe for log data. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "When is log data deleted?"

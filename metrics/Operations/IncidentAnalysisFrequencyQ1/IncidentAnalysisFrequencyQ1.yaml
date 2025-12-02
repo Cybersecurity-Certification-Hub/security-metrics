@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "6ebe4d07-bd51-49be-bf8b-5ff62863befb"
 name: "IncidentAnalysisFrequencyQ1"
-description: "This metric assesses the frequency of analyzing vulnerability and incident procedures. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Procedure], has [p1:reviewInterval] set correctly. This metric assesses the frequency of analyzing vulnerability and incident procedures. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How often are procedures for vulnerabilities and incidents analyzed?"

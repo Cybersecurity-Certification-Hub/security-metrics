@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "8815a8c7-0493-4d0a-a0fa-d9611165cce7"
 name: "IncidentManagementPolicy5"
-description: "This metric assesses the responsible contact point for reporting issues. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident], has [p1:team] set correctly. This metric assesses the responsible contact point for reporting issues. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "To whom must staff report potential security and privacy issues?"

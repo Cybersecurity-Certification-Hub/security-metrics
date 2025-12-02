@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "26853fc8-0cd6-4f2e-b7a7-14d4addf1674"
 name: "LoggingMonitoringPolicyQ2"
-description: "This metric assesses the type of facility used for logging security events. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event], has [p1:facilityType] set correctly. This metric assesses the type of facility used for logging security events. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "In which type of facility are security event logged?"

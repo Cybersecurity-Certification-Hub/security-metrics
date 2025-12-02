@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "a41484e2-7a02-4d32-a66f-08d1df84875d"
 name: "CompliancePolicy02"
-description: "This metric assesses the mechanisms for periodic compliance monitoring. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Compliance], has [p1:methodology] set correctly. This metric assesses the mechanisms for periodic compliance monitoring. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "Which mechanisms are implemented to periodically monitor compliance requirements?"

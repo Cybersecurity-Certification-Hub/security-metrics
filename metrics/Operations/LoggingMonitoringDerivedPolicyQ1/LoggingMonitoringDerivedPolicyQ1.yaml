@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "e2e97250-5435-4218-a757-8a050356a82c"
 name: "LoggingMonitoringDerivedPolicyQ1"
-description: "This metric assesses whether derived data security events are stored. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event], has [p1:enabled] set correctly. This metric assesses whether derived data security events are stored. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "Are security events stored for derived data?"

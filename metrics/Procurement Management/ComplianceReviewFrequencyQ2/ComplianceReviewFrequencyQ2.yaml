@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "4fc63588-f711-4c94-b2cf-a9423664e0d9"
 name: "ComplianceReviewFrequencyQ2"
-description: "This metric assesses the recommended frequency for conducting reviews. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Audit], has [p1:reviewInterval] set correctly. This metric assesses the recommended frequency for conducting reviews. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How frequently should reviews be conducted?"

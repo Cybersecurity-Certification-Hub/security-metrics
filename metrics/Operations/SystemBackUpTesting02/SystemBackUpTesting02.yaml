@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "c636de5e-534b-4a33-9a14-fc3db2fa948e"
 name: "SystemBackUpTesting02"
-description: "This metric assesses how restore mistakes are handled. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Data.Backup.Restore], has [p1:restoreErrorResolution] set correctly. This metric assesses how restore mistakes are handled. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How are restore mistakes dealt with?"

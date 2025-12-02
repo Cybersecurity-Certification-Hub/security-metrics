@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "13f850d4-3bcc-4835-9fbe-1b4fa70f7358"
 name: "IncidentPolicyCheckQ1"
-description: "This metric assesses how vulnerabilities are managed by the responsible team. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Procedure], has [p1:vulnerabilityManagement] set correctly. This metric assesses how vulnerabilities are managed by the responsible team. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How are vulnerabilities managed by the corresponding team?"

@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "0dbed723-ff88-4b6a-817a-5645e9861d80"
 name: "IncidentManagementPolicy12"
-description: "This metric assesses the notification timing for users regarding incidents. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event], has [p1:userNotificationInterval] set correctly. This metric assesses the notification timing for users regarding incidents. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "When are users notified of relevant incidents?"

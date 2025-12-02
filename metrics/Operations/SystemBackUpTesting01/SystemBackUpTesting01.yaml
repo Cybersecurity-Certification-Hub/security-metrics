@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "bdf75597-97ff-499a-b139-88d7263d938a"
 name: "SystemBackUpTesting01"
-description: "This metric assesses the frequency of procedure checks. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Data.Backup.Procedure], has [p1:reviewInterval] set correctly. This metric assesses the frequency of procedure checks. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How often is the procedure checked?"

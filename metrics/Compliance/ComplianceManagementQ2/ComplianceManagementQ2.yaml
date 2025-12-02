@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "df639bbe-64df-406a-87ac-5935fb5a922b"
 name: "ComplianceManagementQ2"
-description: "This metric assesses the frequency of checks for compliance with requirements. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Audit], has [p1:interval] set correctly. This metric assesses the frequency of checks for compliance with requirements. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How often is it checked through procedures that all requirements are met?"

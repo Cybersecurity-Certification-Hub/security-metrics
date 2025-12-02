@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "cc77962e-d2fb-401a-8468-e8333babf765"
 name: "BackupMonitoringPolicyCheckQ4"
-description: "This metric assesses the frequency of backup transmissions. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Data.Backup], has [p1:transmissionInterval] set correctly. This metric assesses the frequency of backup transmissions. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How often is the transmission of backups done?"

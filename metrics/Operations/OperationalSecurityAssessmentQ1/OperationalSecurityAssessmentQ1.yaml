@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "f97a2fd9-0790-401b-8f05-21f9243c811e"
 name: "OperationalSecurityAssessmentQ1"
-description: "This metric assesses the implementation timeframe for documented safeguards. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event], has [p1:responseInterval] set correctly. This metric assesses the implementation timeframe for documented safeguards. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How quickly must safeguards be implemented after they are documented?"

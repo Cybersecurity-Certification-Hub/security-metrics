@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "0528790f-b7c6-4998-a444-ee2d04c27773"
 name: "BackupPolicyQ3"
-description: "This metric assesses the availability of backup services for cloud customers. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Data.Backup.CloudCustomers], has [p1:availability] set correctly. This metric assesses the availability of backup services for cloud customers. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "Are there backup services for cloud customers?"

@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "dbf71724-fd4d-4fdb-ad8a-6fea19eabaaf"
 name: "IncidentManagementPolicy03"
-description: "This metric assesses the entity responsible for maintaining cyberincident evidence. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Evidence], has [p1:team] set correctly. This metric assesses the entity responsible for maintaining cyberincident evidence. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "Which entity maintains the evidence related to cyberincidents?"
