@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: IncidentManagementOwnership
-description: This rule assesses whether a [Policy] has the expected [p1:SecurityIncident.Team] set correctly.
+description: This rule assesses whether a [Resource] that has the property [SecurityIncident] set to Java, also has the property [p1:Team] correctly configured.
 implementationGuidelines:
   AMOE: 
     question: "Which team is in charge of handling security incidents?"
