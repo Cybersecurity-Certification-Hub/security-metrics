@@ -13,7 +13,7 @@ applicable if {
 }
 
 compliant if {
-  document:SecurityIncident.Team in data.target_value
+  compare(data.operator, data.target_value, document:SecurityIncident.Team)
 }
 
 message := "The document has set the incident management team." if {
