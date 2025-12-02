@@ -5,7 +5,7 @@ description: "This metric assesses the encryption requirements for mobile and po
 implementationGuidelines:
   AMOE:
     question: "How must mobile and portable devices be encrypted? "
-    keywords: "[encryption mechanisms, mobile devices, portable devices]"
+    keywords: ["encryption mechanisms", "mobile devices", "portable devices"]
 category: "Cryptography and Key Management"
 version: "1.0"
 comments: "TBD"

@@ -5,7 +5,7 @@ description: "This metric assesses the retention period of log data. | Selector:
 implementationGuidelines:
   AMOE:
     question: "How long is log data stored?"
-    keywords: "[logging, retention]"
+    keywords: ["logging", "retention"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

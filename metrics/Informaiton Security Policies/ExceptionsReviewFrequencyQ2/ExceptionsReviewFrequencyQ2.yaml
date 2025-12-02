@@ -5,7 +5,7 @@ description: "This metric assesses the review frequency of exception lists for v
 implementationGuidelines:
   AMOE:
     question: "How frequently is the list of exceptions reviewed to ensure they are still valid?"
-    keywords: "[exceptions list, review frequency, validity]"
+    keywords: ["exceptions list", "review frequency", "validity"]
 category: "Informaiton Security Policies"
 version: "1.0"
 comments: "TBD"

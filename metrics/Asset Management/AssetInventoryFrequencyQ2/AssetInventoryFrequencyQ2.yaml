@@ -5,7 +5,7 @@ description: "This metric assesses the frequency of asset inventory updates. | S
 implementationGuidelines:
   AMOE:
     question: "How often is the asset inventory done?"
-    keywords: "[audit, frequency, inventory]"
+    keywords: ["audit", "frequency", "inventory"]
 category: "Asset Management"
 version: "1.0"
 comments: "TBD"

@@ -5,7 +5,7 @@ description: "This metric assesses how storage processes are monitored. | Select
 implementationGuidelines:
   AMOE:
     question: "How is the storage process monitored?"
-    keywords: "[backup, storage]"
+    keywords: ["backup", "storage"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

@@ -5,7 +5,7 @@ description: "This metric assesses the recommended frequency of process verifica
 implementationGuidelines:
   AMOE:
     question: "How frequently should the processes be verified?"
-    keywords: "[data collection, consolidation, storage, tools]"
+    keywords: ["data collection", "consolidation", "storage", "tools"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

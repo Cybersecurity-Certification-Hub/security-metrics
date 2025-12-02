@@ -5,7 +5,7 @@ description: "This metric assesses the functional events monitored by the SIEM. 
 implementationGuidelines:
   AMOE:
     question: "Which functional events are monitored by the SIEM?"
-    keywords: "[logging, monitoring, metrics, events, availability, performance]"
+    keywords: ["logging", "monitoring", "metrics", "events", "availability", "performance"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

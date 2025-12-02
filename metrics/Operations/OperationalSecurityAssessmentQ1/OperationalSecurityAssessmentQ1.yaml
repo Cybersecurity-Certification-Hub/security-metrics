@@ -5,7 +5,7 @@ description: "This metric assesses the implementation timeframe for documented s
 implementationGuidelines:
   AMOE:
     question: "How quickly must safeguards be implemented after they are documented?"
-    keywords: "[safeguards effectiveness, assessment frequency]"
+    keywords: ["safeguards effectiveness", "assessment frequency"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

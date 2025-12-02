@@ -5,7 +5,7 @@ description: "This metric assesses the encryption type in use. | Selector: Polic
 implementationGuidelines:
   AMOE:
     question: "What encryption type is used?"
-    keywords: "[encryptioncryptography, data at rest protection]"
+    keywords: ["encryptioncryptography", "data at rest protection"]
 category: "Cryptography and Key Management"
 version: "1.0"
 comments: "TBD"

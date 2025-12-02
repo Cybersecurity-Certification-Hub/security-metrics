@@ -5,7 +5,7 @@ description: "This metric assesses how often safeguard effectiveness is reviewed
 implementationGuidelines:
   AMOE:
     question: "How often is the effectiveness of safeguards reviewed?"
-    keywords: "[safeguards effectiveness, review frequency]"
+    keywords: ["safeguards effectiveness", "review frequency"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

@@ -5,7 +5,7 @@ description: "This metric assesses the required timeframe for recording asset st
 implementationGuidelines:
   AMOE:
     question: "Within what timeframe must changes in asset status be recorded in the inventory system?"
-    keywords: "[asset status, inventory]"
+    keywords: ["asset status", "inventory"]
 category: "Asset Management"
 version: "1.0"
 comments: "TBD"

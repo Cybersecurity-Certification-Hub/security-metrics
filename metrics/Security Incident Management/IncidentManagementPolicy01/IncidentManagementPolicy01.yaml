@@ -5,7 +5,7 @@ description: "This metric assesses the responsible team for handling security in
 implementationGuidelines:
   AMOE:
     question: "Which team is in charge of handling security incidents?"
-    keywords: "[Incident Management, CERT]"
+    keywords: ["Incident Management", "CERT"]
 category: "Security Incident Management"
 version: "1.0"
 comments: "TBD"

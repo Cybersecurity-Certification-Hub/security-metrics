@@ -5,7 +5,7 @@ description: "This metric assesses the subsystems included in the patch manageme
 implementationGuidelines:
   AMOE:
     question: "Which subsystems are covered by the patch management process?"
-    keywords: "[partial, full, every, none, patch management]"
+    keywords: ["partial", "full", "every", "none", "patch management"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

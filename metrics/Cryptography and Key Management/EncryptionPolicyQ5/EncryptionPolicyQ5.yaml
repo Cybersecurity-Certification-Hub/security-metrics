@@ -5,7 +5,7 @@ description: "This metric assesses the required AES standard. | Selector: Policy
 implementationGuidelines:
   AMOE:
     question: "What Advanced Encryption Algorithm (AES) standard should be used? "
-    keywords: "[AES, encryption mechanisms,mobile devices, portable devices]"
+    keywords: ["AES", "encryption mechanisms", "mobile devices", "portable devices"]
 category: "Cryptography and Key Management"
 version: "1.0"
 comments: "TBD"

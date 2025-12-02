@@ -5,7 +5,7 @@ description: "This metric assesses the implementation timeframe for corrective a
 implementationGuidelines:
   AMOE:
     question: "What is the timeframe for implementing corrective actions when exceptions are expired or reviews and approvals are outdated?"
-    keywords: "[timeframe, corrective actions, expired exceptions, outdated reviews, approvals]"
+    keywords: ["timeframe", "corrective actions", "expired exceptions", "outdated reviews", "approvals"]
 category: "Informaiton Security Policies"
 version: "1.0"
 comments: "TBD"

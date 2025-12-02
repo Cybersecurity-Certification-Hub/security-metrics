@@ -5,7 +5,7 @@ description: "This metric assesses the facility type used to store SIEM events. 
 implementationGuidelines:
   AMOE:
     question: "In which type of facility are SIEM events stored?"
-    keywords: "[logging, monitoring, SIEM, central, Security Information and Event Management]"
+    keywords: ["logging", "monitoring", "SIEM", "central", "Security Information and Event Management"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

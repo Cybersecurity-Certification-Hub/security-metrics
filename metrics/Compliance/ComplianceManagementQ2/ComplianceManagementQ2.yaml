@@ -5,7 +5,7 @@ description: "This metric assesses the frequency of checks for compliance with r
 implementationGuidelines:
   AMOE:
     question: "How often is it checked through procedures that all requirements are met?"
-    keywords: "[compliance checks, frequency, requirements verification]"
+    keywords: ["compliance checks", "frequency", "requirements verification"]
 category: "Compliance"
 version: "1.0"
 comments: "TBD"

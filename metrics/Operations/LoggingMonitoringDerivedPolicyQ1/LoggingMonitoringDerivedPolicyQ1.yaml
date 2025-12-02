@@ -5,7 +5,7 @@ description: "This metric assesses whether derived data security events are stor
 implementationGuidelines:
   AMOE:
     question: "Are security events stored for derived data?"
-    keywords: "[logging, monitoring, policy, derived data, customer data, PII, monitoring and logging]"
+    keywords: ["logging", "monitoring", "policy", "derived data", "customer data", "PII", "monitoring and logging"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

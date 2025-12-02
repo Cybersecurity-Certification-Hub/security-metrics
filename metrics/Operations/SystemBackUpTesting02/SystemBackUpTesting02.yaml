@@ -5,7 +5,7 @@ description: "This metric assesses how restore mistakes are handled. | Selector:
 implementationGuidelines:
   AMOE:
     question: "How are restore mistakes dealt with?"
-    keywords: "[backup, monitoring]"
+    keywords: ["backup", "monitoring"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

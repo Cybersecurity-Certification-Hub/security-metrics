@@ -5,7 +5,7 @@ description: "This metric assesses the type of facility used for logging securit
 implementationGuidelines:
   AMOE:
     question: "In which type of facility are security event logged?"
-    keywords: "[logging, monitoring, policy, monitoring and logging]"
+    keywords: ["logging", "monitoring", "policy", "monitoring and logging"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

@@ -5,7 +5,7 @@ description: "This metric assesses the review frequency of incident handling and
 implementationGuidelines:
   AMOE:
     question: "How often is the handling and responses to information security incidents reviewed?"
-    keywords: "[incident review, handling frequency, security incidents, response evaluation]"
+    keywords: ["incident review", "handling frequency", "security incidents", "response evaluation"]
 category: "Incident Management"
 version: "1.0"
 comments: "TBD"

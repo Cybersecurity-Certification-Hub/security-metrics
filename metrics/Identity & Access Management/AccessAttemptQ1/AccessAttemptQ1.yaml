@@ -5,7 +5,7 @@ description: "This metric assesses whether recent authentication attempts are tr
 implementationGuidelines:
   AMOE:
     question: "Are the authentication attempts that were logged in tracked and safed of the last hours?"
-    keywords: "[authentication attempts, logging, timestamp]"
+    keywords: ["authentication attempts", "logging", "timestamp"]
 category: "Identity & Access Management"
 version: "1.0"
 comments: "TBD"

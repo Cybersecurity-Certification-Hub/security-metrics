@@ -5,7 +5,7 @@ description: "This metric assesses the unsupported encryption mechanisms for dat
 implementationGuidelines:
   AMOE:
     question: "Which encryption mechanisms are not explicitly supported for data in transit?"
-    keywords: "[encryption, cryptography, data in transit,not supported, TLS - HPKP - HTTP Public Key Pinning]"
+    keywords: ["encryption", "cryptography", "data in transit", "not supported", "TLS - HPKP - HTTP Public Key Pinning"]
 category: "Cryptography and Key Management"
 version: "1.0"
 comments: "TBD"

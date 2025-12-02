@@ -5,7 +5,7 @@ description: "This metric assesses the validity period of wildcard digital certi
 implementationGuidelines:
   AMOE:
     question: "What is the validity period of wildcard digital certificates?"
-    keywords: "[digital certificates, validity period, duration, wildcard, user facing certificates]"
+    keywords: ["digital certificates", "validity period", "duration", "wildcard", "user facing certificates"]
 category: "Cryptography and Key Management"
 version: "1.0"
 comments: "TBD"

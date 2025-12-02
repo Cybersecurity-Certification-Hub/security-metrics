@@ -5,7 +5,7 @@ description: "This metric assesses the encryption key parameters covered by the 
 implementationGuidelines:
   AMOE:
     question: "Which encryption key parameters are in the scope of the management policy?"
-    keywords: "[encryption, key management, key lenght, standards]"
+    keywords: ["encryption", "key management", "key lenght", "standards"]
 category: "Cryptography and Key Management"
 version: "1.0"
 comments: "TBD"

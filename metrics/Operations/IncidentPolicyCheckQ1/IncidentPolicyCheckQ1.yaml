@@ -5,7 +5,7 @@ description: "This metric assesses how vulnerabilities are managed by the respon
 implementationGuidelines:
   AMOE:
     question: "How are vulnerabilities managed by the corresponding team?"
-    keywords: "[incident, vulnerability management, central, technical vulnerability management]"
+    keywords: ["incident", "vulnerability management", "central", "technical vulnerability management"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

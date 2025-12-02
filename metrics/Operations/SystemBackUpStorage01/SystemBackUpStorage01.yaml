@@ -5,7 +5,7 @@ description: "This metric assesses the storage location for backups. | Selector:
 implementationGuidelines:
   AMOE:
     question: "Where are backups stored?"
-    keywords: "[backup, storage]"
+    keywords: ["backup", "storage"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

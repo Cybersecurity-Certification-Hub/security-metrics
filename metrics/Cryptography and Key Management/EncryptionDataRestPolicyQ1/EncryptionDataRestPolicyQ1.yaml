@@ -5,7 +5,7 @@ description: "This metric assesses the defined up-front data encryption mechanis
 implementationGuidelines:
   AMOE:
     question: "Which up-front data encryption mechamism is defined?"
-    keywords: "[encryption, cryptography, data at rest, protection, PKI, data at rest protection]"
+    keywords: ["encryption", "cryptography", "data at rest", "protection", "PKI", "data at rest protection"]
 category: "Cryptography and Key Management"
 version: "1.0"
 comments: "TBD"

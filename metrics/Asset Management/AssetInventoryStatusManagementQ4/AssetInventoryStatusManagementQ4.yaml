@@ -5,7 +5,7 @@ description: "This metric assesses the current status of assets. | Selector: Pol
 implementationGuidelines:
   AMOE:
     question: "What status do the assets have?"
-    keywords: "[asset status, coverage, completeness, inventory]"
+    keywords: ["asset status", "coverage", "completeness", "inventory"]
 category: "Asset Management"
 version: "1.0"
 comments: "TBD"

@@ -5,7 +5,7 @@ description: "This metric assesses the testing frequency of the data restore pro
 implementationGuidelines:
   AMOE:
     question: "How frequently is the data restore process tested?"
-    keywords: "[data, restore]"
+    keywords: ["data", "restore"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

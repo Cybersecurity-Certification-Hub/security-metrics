@@ -5,7 +5,7 @@ description: "This metric assesses the approach for reporting incidents to the C
 implementationGuidelines:
   AMOE:
     question: "Which approach is used for reporting incidents to the CSP?"
-    keywords: "[Single Point of Contact, Single Point of Information (SPoI)]"
+    keywords: ["Single Point of Contact", "Single Point of Information (SPoI)"]
 category: "Security Incident Management"
 version: "1.0"
 comments: "TBD"

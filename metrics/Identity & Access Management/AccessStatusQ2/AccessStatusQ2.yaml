@@ -5,7 +5,7 @@ description: "This metric assesses the possible status values for authentication
 implementationGuidelines:
   AMOE:
     question: "What status can authentication attempts have?"
-    keywords: "[successful attempts, failed attempts, logging]"
+    keywords: ["successful attempts", "failed attempts", "logging"]
 category: "Identity & Access Management"
 version: "1.0"
 comments: "TBD"

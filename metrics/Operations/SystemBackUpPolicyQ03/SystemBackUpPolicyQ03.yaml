@@ -5,7 +5,7 @@ description: "This metric assesses who is authorized to restore backups. | Selec
 implementationGuidelines:
   AMOE:
     question: "Who is allowed to restore backups?"
-    keywords: "[backup, access, restore]"
+    keywords: ["backup", "access", "restore"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

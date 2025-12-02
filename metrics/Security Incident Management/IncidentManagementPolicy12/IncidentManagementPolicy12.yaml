@@ -5,7 +5,7 @@ description: "This metric assesses the notification timing for users regarding i
 implementationGuidelines:
   AMOE:
     question: "When are users notified of relevant incidents?"
-    keywords: "[customer, notifications, incident]"
+    keywords: ["customer", "notifications", "incident"]
 category: "Security Incident Management"
 version: "1.0"
 comments: "TBD"

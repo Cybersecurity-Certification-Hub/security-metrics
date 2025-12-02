@@ -5,7 +5,7 @@ description: "This metric assesses the required hash type. | Selector: PolicyDoc
 implementationGuidelines:
   AMOE:
     question: "What hash type is required?"
-    keywords: "[encryption mechanisms, hash]"
+    keywords: ["encryption mechanisms", "hash"]
 category: "Cryptography and Key Management"
 version: "1.0"
 comments: "TBD"

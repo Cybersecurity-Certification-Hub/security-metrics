@@ -5,7 +5,7 @@ description: "This metric assesses the frequency of backup transmissions. | Sele
 implementationGuidelines:
   AMOE:
     question: "How often is the transmission of backups done?"
-    keywords: "[backup, data, transmission]"
+    keywords: ["backup", "data", "transmission"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

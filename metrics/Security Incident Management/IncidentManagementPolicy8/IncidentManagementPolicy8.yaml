@@ -5,7 +5,7 @@ description: "This metric assesses the required testing frequency of the Inciden
 implementationGuidelines:
   AMOE:
     question: "How often must the Incident Management plan be tested?"
-    keywords: "[Incident Management, CERT]"
+    keywords: ["Incident Management", "CERT"]
 category: "Security Incident Management"
 version: "1.0"
 comments: "TBD"

@@ -5,7 +5,7 @@ description: "This metric assesses the frequency of analyzing vulnerability and 
 implementationGuidelines:
   AMOE:
     question: "How often are procedures for vulnerabilities and incidents analyzed?"
-    keywords: "[incident, vulnerability, frequency]"
+    keywords: ["incident", "vulnerability", "frequency"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

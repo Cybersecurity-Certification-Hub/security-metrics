@@ -5,7 +5,7 @@ description: "This metric assesses how sources of information are used to identi
 implementationGuidelines:
   AMOE:
     question: "How are sources of information considered for identifying incidents?"
-    keywords: "[incident identification, sources, security-relevant]"
+    keywords: ["incident identification", "sources", "security-relevant"]
 category: "Security Incident Management"
 version: "1.0"
 comments: "TBD"

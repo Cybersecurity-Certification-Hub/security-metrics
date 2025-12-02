@@ -5,7 +5,7 @@ description: "This metric assesses the reporting timeframe for staff regarding p
 implementationGuidelines:
   AMOE:
     question: "When must staff report potential security and privacy issues?"
-    keywords: "[Incident Management, Incident Management general information]"
+    keywords: ["Incident Management", "Incident Management general information"]
 category: "Security Incident Management"
 version: "1.0"
 comments: "TBD"

@@ -5,7 +5,7 @@ description: "This metric assesses the acceptable recovery time limit. | Selecto
 implementationGuidelines:
   AMOE:
     question: "What is the acceptable recovery time limit?"
-    keywords: "[Recovery time, acceptable limit]"
+    keywords: ["Recovery time", "acceptable limit"]
 category: "Procurement Management"
 version: "1.0"
 comments: "TBD"

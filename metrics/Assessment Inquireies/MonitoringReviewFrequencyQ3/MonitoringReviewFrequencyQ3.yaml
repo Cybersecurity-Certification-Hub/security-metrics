@@ -5,7 +5,7 @@ description: "This metric assesses the frequency of monitoring procedure reviews
 implementationGuidelines:
   AMOE:
     question: "How often are monitoring procedures reviewed to ensure compliance with legal and internal policies?"
-    keywords: "[monitoring review, effectiveness, compliance, frequency]"
+    keywords: ["monitoring review", "effectiveness", "compliance", "frequency"]
 category: "Assessment Inquireies"
 version: "1.0"
 comments: "TBD"

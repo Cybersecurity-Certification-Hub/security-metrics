@@ -5,7 +5,7 @@ description: "This metric assesses the mechanisms for periodic compliance monito
 implementationGuidelines:
   AMOE:
     question: "Which mechanisms are implemented to periodically monitor compliance requirements?"
-    keywords: "[audits, reviews, compliance]"
+    keywords: ["audits", "reviews", "compliance"]
 category: "Compliance"
 version: "1.0"
 comments: "TBD"

@@ -5,7 +5,7 @@ description: "This metric assesses the availability of backup services for cloud
 implementationGuidelines:
   AMOE:
     question: "Are there backup services for cloud customers?"
-    keywords: "[backup, customer, consumer, backup and restore process]"
+    keywords: ["backup", "customer", "consumer", "backup and restore process"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

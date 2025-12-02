@@ -5,7 +5,7 @@ description: "This metric assesses the entity responsible for coordinating foren
 implementationGuidelines:
   AMOE:
     question: "Which entity coordinates the forensic investigation?"
-    keywords: "[forensic, incident management]"
+    keywords: ["forensic", "incident management"]
 category: "Security Incident Management"
 version: "1.0"
 comments: "TBD"

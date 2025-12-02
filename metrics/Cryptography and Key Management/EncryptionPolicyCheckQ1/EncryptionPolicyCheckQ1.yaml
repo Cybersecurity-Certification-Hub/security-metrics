@@ -5,7 +5,7 @@ description: "This metric assesses the type of encryption used for passwords or 
 implementationGuidelines:
   AMOE:
     question: "Which type of encryption is used for passwords or keys?"
-    keywords: "[password, cryptography, data at rest protection]"
+    keywords: ["password", "cryptography", "data at rest protection"]
 category: "Cryptography and Key Management"
 version: "1.0"
 comments: "TBD"

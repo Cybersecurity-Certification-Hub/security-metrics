@@ -5,7 +5,7 @@ description: "This metric assesses the frequency of hardening compliance reviews
 implementationGuidelines:
   AMOE:
     question: "How often are system components reviewed for compliance with hardening requirements?"
-    keywords: "[review frequency, system components, compliance, hardening requirements]"
+    keywords: ["review frequency", "system components", "compliance", "hardening requirements"]
 category: "Operations"
 version: "1.0"
 comments: "TBD"

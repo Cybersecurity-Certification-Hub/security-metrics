@@ -5,7 +5,7 @@ description: "This metric assesses the endpoint protection mechanism for data in
 implementationGuidelines:
   AMOE:
     question: "Which endpoint protection mechanism is defined for data in transit?"
-    keywords: "[encryption, cryptography, data in transit, protection, PKI, payload, SSL, TLS, transport layer encryption, encrypted endpoints]"
+    keywords: ["encryption", "cryptography", "data in transit", "protection", "PKI", "payload", "SSL", "TLS", "transport layer encryption", "encrypted endpoints"]
 category: "Cryptography and Key Management"
 version: "1.0"
 comments: "TBD"

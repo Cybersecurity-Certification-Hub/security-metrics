@@ -5,7 +5,7 @@ description: "This metric assesses the reporting timeframe for detected flagged 
 implementationGuidelines:
   AMOE:
     question: "How quickly must flagged events be reported after detection?"
-    keywords: "[flagged events, review timeframe, detection]"
+    keywords: ["flagged events", "review timeframe", "detection"]
 category: "Identity & Access Management"
 version: "1.0"
 comments: "TBD"

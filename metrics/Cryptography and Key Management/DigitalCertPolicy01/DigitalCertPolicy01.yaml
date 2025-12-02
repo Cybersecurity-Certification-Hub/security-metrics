@@ -5,7 +5,7 @@ description: "This metric assesses the supported verifiable certificates for Cer
 implementationGuidelines:
   AMOE:
     question: "Which verifiable certificated are supported for Certificaiton Authorities?"
-    keywords: "[digital certificates, PKI, CA, x509, certificate authorities, publicly verifiable]"
+    keywords: ["digital certificates", "PKI", "CA", "x509", "certificate authorities", "publicly verifiable"]
 category: "Cryptography and Key Management"
 version: "1.0"
 comments: "TBD"

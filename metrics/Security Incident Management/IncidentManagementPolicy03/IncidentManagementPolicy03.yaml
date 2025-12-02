@@ -5,7 +5,7 @@ description: "This metric assesses the entity responsible for maintaining cyberi
 implementationGuidelines:
   AMOE:
     question: "Which entity maintains the evidence related to cyberincidents?"
-    keywords: "[CSP, customer, shared, evidence collection]"
+    keywords: ["CSP", "customer", "shared", "evidence collection"]
 category: "Security Incident Management"
 version: "1.0"
 comments: "TBD"

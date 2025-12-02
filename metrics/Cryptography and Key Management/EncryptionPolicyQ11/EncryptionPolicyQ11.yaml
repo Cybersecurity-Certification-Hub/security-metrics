@@ -5,7 +5,7 @@ description: "This metric assesses which web services must encrypt data in trans
 implementationGuidelines:
   AMOE:
     question: "What type of web services must encrypt data in transit? "
-    keywords: "[encryption mechanisms, web services , data in transit]"
+    keywords: ["encryption mechanisms", "web services", "data in transit"]
 category: "Cryptography and Key Management"
 version: "1.0"
 comments: "TBD"
