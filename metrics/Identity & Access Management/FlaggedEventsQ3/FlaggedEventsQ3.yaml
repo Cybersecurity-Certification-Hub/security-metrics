@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "9b4c450e-1b1b-4215-821a-fe877dcaa56c"
 name: "FlaggedEventsQ3"
-description: "This metric assesses the reporting timeframe for detected flagged events. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [AccessManagement.Events], has [p1:reportInterval] set correctly. This metric assesses the reporting timeframe for detected flagged events. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How quickly must flagged events be reported after detection?"

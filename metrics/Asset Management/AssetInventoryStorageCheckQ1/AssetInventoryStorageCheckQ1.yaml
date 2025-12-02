@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "70a7b588-c5bf-4038-8e2a-8b46211ffaa2"
 name: "AssetInventoryStorageCheckQ1"
-description: "This metric assesses the facility type used to store asset records. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [AssetInventory], has [p1:storage] set correctly. This metric assesses the facility type used to store asset records. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "In which type of facility are asset records stored?"

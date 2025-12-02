@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "3eb95c39-cb8d-49e6-af70-ffc406a47a9a"
 name: "EncryptionPolicyQ9"
-description: "This metric assesses the required hash type. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption.Password.SHA], has [p1:type] set correctly. This metric assesses the required hash type. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "What hash type is required?"
@@ -13,4 +13,4 @@ comments: "TBD"
 configuration:
   p1:
     operator: "isIn"
-    targetValue: "[SHA256,SHA-384, SHA-512,SHA-512/256]"
+    targetValue: "[SHA256, SHA-384, SHA-512, SHA-512/256]"

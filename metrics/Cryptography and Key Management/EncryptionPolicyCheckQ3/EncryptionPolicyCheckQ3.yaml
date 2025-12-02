@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "cd8e50ab-074a-41d6-a93d-b9ce882c3d44"
 name: "EncryptionPolicyCheckQ3"
-description: "This metric assesses the encryption type in use. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption], has [p1:type] set correctly. This metric assesses the encryption type in use. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "What encryption type is used?"

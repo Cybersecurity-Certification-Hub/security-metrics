@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "7bd89d65-02ad-480a-ad5f-06ba661d15b0"
 name: "AccessControlTypeQ1"
-description: "This metric assesses the type of access control implemented. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [AccessControl], has [p1:type] set correctly. This metric assesses the type of access control implemented. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "Which type of access control is used?"

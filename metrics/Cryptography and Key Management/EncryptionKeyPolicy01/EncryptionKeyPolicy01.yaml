@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "c9711b2f-65d4-442d-9798-a04912701f4a"
 name: "EncryptionKeyPolicy01"
-description: "This metric assesses the encryption key parameters covered by the management policy. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption], has [p1:parameterScope] set correctly. This metric assesses the encryption key parameters covered by the management policy. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "Which encryption key parameters are in the scope of the management policy?"

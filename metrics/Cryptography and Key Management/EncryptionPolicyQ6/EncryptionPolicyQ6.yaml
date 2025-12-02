@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "1536b2c0-08d9-4010-9853-9e3d20783bda"
 name: "EncryptionPolicyQ6"
-description: "This metric assesses the encryption requirements for mobile and portable devices. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption.PortableDevice], has [p1:type] set correctly. This metric assesses the encryption requirements for mobile and portable devices. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How must mobile and portable devices be encrypted? "

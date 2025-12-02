@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "213fd404-ac08-47f1-8724-8c53c82d7f9c"
 name: "TrainingCheckFrequencyQ1"
-description: "This metric assesses the frequency of monitoring training completion. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityTraining], has [p1:reviewInterval] set correctly. This metric assesses the frequency of monitoring training completion. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How often is the security training completion monitoring checked?"

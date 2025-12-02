@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "d39aa85f-3594-4661-835b-5c61ec774e79"
 name: "IncidentReviewQ1"
-description: "This metric assesses the review frequency of incident handling and responses. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [IncidentManagement], has [p1:reviewInterval] set correctly. This metric assesses the review frequency of incident handling and responses. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How often is the handling and responses to information security incidents reviewed?"

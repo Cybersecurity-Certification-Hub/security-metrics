@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "1d08ba6e-dfb6-4b63-9faf-59fc56286ad2"
 name: "AssetInventoryFrequencyQ2"
-description: "This metric assesses the frequency of asset inventory updates. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [AssetInventory], has [p1:inventoryInterval] set correctly. This metric assesses the frequency of asset inventory updates. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How often is the asset inventory done?"

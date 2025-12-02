@@ -1,10 +1,10 @@
 # ====== Metadata ======
 id: "959aecc4-ca9d-4cfa-b248-fa72aa0bc55c"
 name: "DigitalCertPolicy01"
-description: "This metric assesses the supported verifiable certificates for Certification Authorities. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [DigitalCertificate], has [p1:type] set correctly. This metric assesses the supported verifiable certificates for Certification Authorities. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
-    question: "Which verifiable certificated are supported for Certificaiton Authorities?"
+    question: "Which verifiable certificates are supported for Certification Authorities?"
     keywords: ["digital certificates", "PKI", "CA", "x509", "certificate authorities", "publicly verifiable"]
 category: "Cryptography and Key Management"
 version: "1.0"

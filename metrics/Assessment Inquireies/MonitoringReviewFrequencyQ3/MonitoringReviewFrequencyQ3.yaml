@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "d0f6a13b-e742-42ff-bf69-9ee077be3b42"
 name: "MonitoringReviewFrequencyQ3"
-description: "This metric assesses the frequency of monitoring procedure reviews for compliance. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [MonitoringProcedure], has [p1:reviewInterval] set correctly. This metric assesses the frequency of monitoring procedure reviews for compliance. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How often are monitoring procedures reviewed to ensure compliance with legal and internal policies?"
