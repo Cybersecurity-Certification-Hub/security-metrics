@@ -9,6 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
+    document
 }
 
 compliant if {
