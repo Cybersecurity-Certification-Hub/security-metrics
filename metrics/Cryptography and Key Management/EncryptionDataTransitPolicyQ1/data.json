@@ -1,4 +1,4 @@
 {
     "operator": "isIn",
-    "target_value": "[encrypted endpoints, none]"
+    "target_value": "[encrypted endpoints, none, SSL, TLS]"
 }
