@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "50c0d4d5-1780-473d-b7fd-dcd0a159fe60"
 name: "AssetInventoryDigitalQ6"
-description: "This rule assesses whether a [Resource] that offers the property [AssetInventory.Digital, has [p1:auditInterval] set correctly. This metric assesses the frequency of digital asset security audits. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [AssetInventory.Digital], has [p1:auditInterval] set correctly. This metric assesses the frequency of digital asset security audits. | Selector: PolicyDocument (Resource Type)"
 implementationGuidelines:
   AMOE:
     question: "How frequently are security audits done for digital assets?"
