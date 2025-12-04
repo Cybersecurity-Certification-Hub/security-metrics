@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: DataPoisoningResilienceEnabled
+id: DataPoisoningResilience
 description: >
   This rule evaluates whether an [AIModel] has [DataPoisoningResilience] configured
   such that the attack success rate of the Hidden Trigger Backdoor Sleeper Agent
