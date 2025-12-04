@@ -1,7 +1,7 @@
 # ====== Metadata ======
-id: LimeExplanationEnabled
+id: LimeExplanation
 description: >
-  This rule assesses whether an [AIModel] has [LIMEExplanation] [p1:enabled]
+  This rule assesses whether an [AIModel] has [LIMEExplanation] [p1:ability]
   correctly configured to provide local interpretable explanations.
 category: Explainability
 version: "1.0"
@@ -9,7 +9,7 @@ comments: >
   LIME creates local interpretable explanations using linear surrogate models.
   It works by perturbing the input and observing changes in the output, thereby
   approximating the model's decision boundaries around the instance. This rule
-  verifies that LIME explanation functionality is enabled.
+  verifies that if LIME explanation works. True means the model can be explained. 
 # ====== Configuration ======
 configuration:
   p1:
