@@ -1,7 +1,7 @@
 # ====== Metadata ======
-id: ModelLeakageDetectionEnabled
+id: ModelPrivacyLeakageDetection
 description: >
-  This rule evaluates whether an [AIModel] has [ModelLeakageDetection] configured
+  This rule evaluates whether an [AIModel] has [ModelPrivacyLeakageDetection] configured
   so that the final SHAPr leakage score for any training sample does not exceed
   the allowed risk threshold [p1:maxAllowedLeakage].
 category: AISecurity
