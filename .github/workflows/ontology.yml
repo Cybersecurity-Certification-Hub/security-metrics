@@ -1,6 +1,11 @@
 name: Merge Ontology and generate proto file
 
-on: [pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request: {}
+
 permissions:
   contents: write
   pull-requests: write
