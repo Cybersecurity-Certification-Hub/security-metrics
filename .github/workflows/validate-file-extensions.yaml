@@ -2,6 +2,8 @@ name: "Validate file extensions"
 
 on:
   push:
+    branches:
+      - main
   pull_request:
 
 jobs:
