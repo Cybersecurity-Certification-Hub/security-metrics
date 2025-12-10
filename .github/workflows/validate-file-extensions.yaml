@@ -1,4 +1,4 @@
-name: "Fail if .yml files are added"
+name: "Validate file extensions"
 
 on:
   push:
@@ -16,26 +16,47 @@ jobs:
       - name: Detect added files and fail on .yml
         shell: bash
         run: |
-          # Determine diff range depending on event
+          set -euo pipefail
+
+          echo "Determining diff range for event: ${{ github.event_name }}"
+
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            BASE_REF="origin/${{ github.event.pull_request.base.ref }}"
-            # ensure base ref is available
-            git fetch origin "${{ github.event.pull_request.base.ref }}":"${{ github.event.pull_request.base.ref }}" || true
-            DIFF_CMD=(git diff --name-only --diff-filter=A "${BASE_REF}...HEAD")
+            BASE_SHA="${{ github.event.pull_request.base.sha }}"
+            HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+
+            # Ensure SHAs are available locally
+            git fetch origin "$BASE_SHA" || true
+            git fetch origin "$HEAD_SHA" || true
+
+            DIFF_CMD=(git diff --name-only --diff-filter=A "$BASE_SHA" "$HEAD_SHA" --)
           else
-            DIFF_CMD=(git diff --name-only --diff-filter=A "${{ github.before }}" "${{ github.after }}")
+            BEFORE="${{ github.event.before }}"
+            AFTER="${{ github.sha }}"
+
+            # Handle initial push (BEFORE is all zeros)
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+              # treat all files in HEAD as "added"
+              DIFF_CMD=(git ls-tree -r --name-only "$AFTER")
+            else
+              DIFF_CMD=(git diff --name-only --diff-filter=A "$BEFORE" "$AFTER" --)
+            fi
           fi
 
-          # List added files
-          echo "Checking for newly added .yml files..."
-          ADDED_FILES=$("${DIFF_CMD[@]}")
-          echo "$ADDED_FILES"
+          echo "Running: ${DIFF_CMD[*]}"
+          ADDED_FILES="$("${DIFF_CMD[@]}" || true)"
 
-          # Grep for .yml (case-sensitive).
+          if [ -z "$ADDED_FILES" ]; then
+            echo "No added files detected."
+            exit 0
+          fi
+
+          echo "Added files:"
+          printf '%s\n' "$ADDED_FILES"
+
           YML_ADDED=$(printf "%s\n" "$ADDED_FILES" | grep -E '\.yml$' || true)
 
           if [ -n "$YML_ADDED" ]; then
-            echo "Error: .yml files were added (use .yaml instead):"
+            echo "::error file=.,title=.yml files detected::.yml files were added (use .yaml instead):"
             printf "%s\n" "$YML_ADDED"
             exit 1
           fi
