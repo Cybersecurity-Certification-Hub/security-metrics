@@ -1,0 +1,43 @@
+name: "Fail if .yml files are added"
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  prohibit-yml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect added files and fail on .yml
+        shell: bash
+        run: |
+          # Determine diff range depending on event
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE_REF="origin/${{ github.event.pull_request.base.ref }}"
+            # ensure base ref is available
+            git fetch origin "${{ github.event.pull_request.base.ref }}":"${{ github.event.pull_request.base.ref }}" || true
+            DIFF_CMD=(git diff --name-only --diff-filter=A "${BASE_REF}...HEAD")
+          else
+            DIFF_CMD=(git diff --name-only --diff-filter=A "${{ github.before }}" "${{ github.after }}")
+          fi
+
+          # List added files
+          echo "Checking for newly added .yml files..."
+          ADDED_FILES=$("${DIFF_CMD[@]}")
+          echo "$ADDED_FILES"
+
+          # Grep for .yml (case-sensitive).
+          YML_ADDED=$(printf "%s\n" "$ADDED_FILES" | grep -E '\.yml$' || true)
+
+          if [ -n "$YML_ADDED" ]; then
+            echo "Error: .yml files were added (use .yaml instead):"
+            printf "%s\n" "$YML_ADDED"
+            exit 1
+          fi
+
+          echo "No added .yml files detected."
