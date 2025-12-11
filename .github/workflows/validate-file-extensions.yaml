@@ -18,26 +18,9 @@ jobs:
       - name: Detect added files and fail on .yml
         shell: bash
         run: |
-          set -euo pipefail
+          # Get the list of added or modified files
+          ADDED_OR_MODIFIED_FILES=$(git diff --name-only origin/main HEAD || true)
 
-          # Determine the correct git SHAs to compare based on event type
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            # For PRs: compare base branch (target) with head branch (your changes)
-            ADDED_FILES=$(git diff --name-only --diff-filter=A ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
-          else
-            # For pushes: compare previous commit with current commit
-            BASE="${{ github.event.before }}"
-            # Handle initial push (then there is no "before" event/commit)
-            BASE="${BASE:0:1}" = "0" ? "4b825dc642cb6eb9a060e54bf8d69288fbee4904" : "$BASE"
-            ADDED_FILES=$(git diff --name-only --diff-filter=A "$BASE" ${{ github.sha }})
-          fi
-
-          # Find any newly added files with .yml extension
-          YML_FILES=$(echo "$ADDED_FILES" | grep '\.yml$' || true)
-
-          # Fail if .yml files were detected
-          if [ -n "$YML_FILES" ]; then
-            echo "::error title=.yml files detected::.yml files were added (use .yaml instead):"
-            echo "$YML_FILES"
-            exit 1
-          fi
+          # Check if any .yml files are present
+          printf "%s\n" "$ADDED_OR_MODIFIED_FILES" | grep -qiE '\.yml$' && \
+          { echo "::error .yml files detected! Please change .yml to .yaml files."; exit 1; }
