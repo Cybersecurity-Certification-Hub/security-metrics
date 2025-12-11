@@ -22,7 +22,7 @@ jobs:
           git fetch origin main:main || true
 
           # Get the list of added or modified files
-          ADDED_OR_MODIFIED_FILES=$(git diff --name-only origin/main HEAD || true)
+          ADDED_OR_MODIFIED_FILES=$(git diff --name-only --diff-filter=AM origin/main HEAD || true)
 
           # Check if any .yml files are present
           YML_FILES=$(printf "%s\n" "$ADDED_OR_MODIFIED_FILES" | grep -iE '\.yml$')
