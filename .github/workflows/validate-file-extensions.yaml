@@ -25,7 +25,7 @@ jobs:
           ADDED_OR_MODIFIED_FILES=$(git diff --name-only --diff-filter=AM origin/main HEAD || true)
 
           # Check if any .yml files are present
-          YML_FILES=$(printf "%s\n" "$ADDED_OR_MODIFIED_FILES" | grep -iE '\.yml$')
+          YML_FILES=$(printf "%s\n" "$ADDED_OR_MODIFIED_FILES" | grep -iE '\.yml$' || true)
           if [ -n "$YML_FILES" ]; then
             echo "::error .yml files detected! Please change .yml to .yaml files:"
             echo "$YML_FILES"
