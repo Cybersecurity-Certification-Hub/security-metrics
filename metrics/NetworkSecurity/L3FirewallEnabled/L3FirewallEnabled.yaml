@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: 44cc5226-bfe0-4394-ac20-
+id: 44cc5226-bfe0-4394-ac20-108edc410fb4
 name: L3FirewallEnabled
 description: This rule assesses whether an [NetworkInterface] that offers the property [l3Firewall], has [p1:enabled] configured correctly.
 category: NetworkSecurity
