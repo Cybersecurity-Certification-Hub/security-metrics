@@ -3176,7 +3176,13 @@ message QPU {
 
 	float one_qubit_error_rate = 3838;
 	float spam_error_rate = 2960;
+	// Coherence times are a standard measure for the reliability of executing quantum circuits. T1 is the qubits's energy relaxation time (in seconds).
+	float t1_coherence_time = 10446;
+	// Coherence times are a standard measure for the reliability of executing quantum circuits. T1 is the qubits's energy dephasing time (in seconds).
+	float t2_coherence_time = 16909;
 	float two_qubit_error_rate = 6385;
+	// The physical operations shall include a finite set of gates capable of approximating any unitary operation on qubits. This is typically achieved through combinations of one-qubit gates and a two-qubit entangling gate, such as CNOT, enabling the execution of a broad range of quantum algorithms.
+	bool universal_gate_set_enabled = 15025;
 	google.protobuf.Timestamp creation_time = 3446;
 	string description = 4376;
 	bool error_correction_enabled = 12983;

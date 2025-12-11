@@ -861,6 +861,15 @@
         <ObjectProperty IRI="/properties/to"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/T1CoherenceTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/T2CoherenceTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/UniversalGateSetEnabled"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/adv_robustness"/>
     </Declaration>
     <Declaration>
@@ -3903,8 +3912,29 @@
     <SubClassOf>
         <Class IRI="/classes/QPU"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/T1CoherenceTime"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/QPU"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/T2CoherenceTime"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/QPU"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/classes/TwoQubitErrorRate"/>
             <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/QPU"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/UniversalGateSetEnabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -6389,6 +6419,11 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/QPU</IRI>
+        <Literal>QPU</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/RBAC</IRI>
         <Literal xml:lang="english">RBAC</Literal>
     </AnnotationAssertion>
@@ -6573,6 +6608,26 @@ name = metadata.name</Literal>
         <Literal>SymmetricCipher</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/T1CoherenceTime</IRI>
+        <Literal>Coherence times are a standard measure for the reliability of executing quantum circuits. T1 is the qubits&apos;s energy relaxation time (in seconds).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/T1CoherenceTime</IRI>
+        <Literal>T1CoherenceTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/T2CoherenceTime</IRI>
+        <Literal>Coherence times are a standard measure for the reliability of executing quantum circuits. T1 is the qubits&apos;s energy dephasing time (in seconds).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/T2CoherenceTime</IRI>
+        <Literal>T2CoherenceTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Time</IRI>
         <Literal>Time</Literal>
@@ -6596,6 +6651,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/TransportEncryption</IRI>
         <Literal xml:lang="english">TransportEncryption</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/UniversalGateSetEnabled</IRI>
+        <Literal>The physical operations shall include a finite set of gates capable of approximating any unitary operation on qubits. This is typically achieved through combinations of one-qubit gates and a two-qubit entangling gate, such as CNOT, enabling the execution of a broad range of quantum algorithms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/UniversalGateSetEnabled</IRI>
+        <Literal>UniversalGateSetEnabled</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
