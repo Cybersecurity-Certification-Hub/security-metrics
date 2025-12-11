@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: SignedSignoff
+id: d476658c-9ca7-4fa2-9071-8505bd51fc8b
+name: SignedSignoff
 description: This rule assesses whether an [CodeRepository] has the property [p1:signedSignoff] set correctly.
 category: DevelopmentLifeCycle
 version: "1.0" 
