@@ -18,6 +18,9 @@ jobs:
       - name: Detect added files and fail on .yml
         shell: bash
         run: |
+          # Ensure origin/main is available
+          git fetch origin main:main || true
+
           # Get the list of added or modified files
           ADDED_OR_MODIFIED_FILES=$(git diff --name-only origin/main...HEAD || true)
 
