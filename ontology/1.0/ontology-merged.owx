@@ -927,6 +927,9 @@
         <DataProperty IRI="/classes/enforceMFA"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/evasionEfficacyLevel"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/expirationDate"/>
     </Declaration>
     <Declaration>
@@ -1002,6 +1005,9 @@
         <DataProperty IRI="/classes/mode"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/modelStealResilience"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/modus"/>
     </Declaration>
     <Declaration>
@@ -1026,10 +1032,10 @@
         <DataProperty IRI="/classes/overridePasswordPolicy"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/poison_level"/>
+        <DataProperty IRI="/classes/poisonedDatalevel"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/privacy_level"/>
+        <DataProperty IRI="/classes/privacyLevel"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/privileged"/>
@@ -1404,9 +1410,6 @@
         <ObjectProperty IRI="/classes/describes"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/privacyLevel"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/size"/>
     </Declaration>
     <Declaration>
@@ -1416,10 +1419,10 @@
         <DataProperty IRI="/classes/errorCorrectionEnabled"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/poisonLevel"/>
+        <DataProperty IRI="/classes/successfullyCompletedPercentage"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/successfullyCompletedPercentage"/>
+        <DataProperty IRI="/classes/poisonedDataLevel"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/type"/>
@@ -3416,6 +3419,13 @@
     <SubClassOf>
         <Class IRI="/classes/MachineLearningModel"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/evasionEfficacyLevel"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MachineLearningModel"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/classes/explainability"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
@@ -3423,7 +3433,14 @@
     <SubClassOf>
         <Class IRI="/classes/MachineLearningModel"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/poisonLevel"/>
+            <DataProperty IRI="/classes/modelStealResilience"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/poisonedDataLevel"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -3964,6 +3981,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/RateLimiting"/>
+        <Class IRI="/classes/AccessRestriction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RateLimiting"/>
         <Class IRI="/classes/Functionality"/>
     </SubClassOf>
     <SubClassOf>
@@ -3978,6 +3999,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/timeWindowSeconds"/>
             <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RateLimiting"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/enabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -6426,6 +6454,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/RBAC</IRI>
         <Literal xml:lang="english">RBAC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/RateLimiting</IRI>
+        <Literal>Rate limiting is used to control the frequency of incoming requests to prevent system overload</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

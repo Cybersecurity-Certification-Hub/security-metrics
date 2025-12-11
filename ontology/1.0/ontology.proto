@@ -52,6 +52,7 @@ message AccessRestriction {
 	oneof type {
 		L3Firewall l3_firewall = 9125;
 		WebApplicationFirewall web_application_firewall = 5789;
+		RateLimiting rate_limiting = 4546;
 	}
 }
 
@@ -293,6 +294,7 @@ message Authorization {
 		ABAC abac = 14694;
 		L3Firewall l3_firewall = 9125;
 		WebApplicationFirewall web_application_firewall = 5789;
+		RateLimiting rate_limiting = 4546;
 		RBAC rbac = 18783;
 	}
 }
@@ -2478,11 +2480,13 @@ message MachineLearningModel {
 	float adv_robustness = 14185;
 	google.protobuf.Timestamp creation_time = 18005;
 	string description = 5272;
+	float evasion_efficacy_level = 17752;
 	float explainability = 1384;
 	string id = 5520 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 1548;
+	float model_steal_resilience = 1827;
 	string name = 1575 [ (buf.validate.field).required = true ];
-	float poison_level = 836;
+	float poisoned_data_level = 13816;
 	float privacy_label = 8059;
 	float privacy_level = 1262;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
@@ -3216,10 +3220,12 @@ message RBAC {
 }
 
 // RateLimiting is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Rate limiting is used to control the frequency of incoming requests to prevent system overload
 message RateLimiting {
 	option (resource_type_names) = "RateLimiting";
 	option (resource_type_names) = "Functionality";
 
+	bool enabled = 13805;
 	int32 max_requests = 10375;
 	int32 time_window_seconds = 5064;
 }
@@ -3693,6 +3699,7 @@ message SecurityFeature {
 		ABAC abac = 14694;
 		L3Firewall l3_firewall = 9125;
 		WebApplicationFirewall web_application_firewall = 5789;
+		RateLimiting rate_limiting = 4546;
 		RBAC rbac = 18783;
 		Backup backup = 16413;
 		DDoSProtection d_do_s_protection = 16707;
