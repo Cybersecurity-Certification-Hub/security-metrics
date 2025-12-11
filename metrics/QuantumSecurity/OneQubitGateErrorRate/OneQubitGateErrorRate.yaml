@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: OneQubitGateErrorRate
+id: 16c8ec2b-325e-492f-b2c3-fd9ef48ebd90
+name: OneQubitGateErrorRate
 description: This rule assesses whether a [QPU] has a [OneQubitGateErrorRate] that is below a specified [p1:errorRate] threshold.
 category: QuantumSecurity
 version: "1.0" 

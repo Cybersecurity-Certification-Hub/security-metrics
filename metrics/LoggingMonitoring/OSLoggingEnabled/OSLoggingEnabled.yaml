@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: OSLoggingEnabled
+id: 8c124502-547f-42dc-9b16-1ae939a14128
+name: OSLoggingEnabled
 description: This rule assesses whether an [VirtualMachine] has its [OSLogging][p1:enabled] property set correctly.
 category: LoggingMonitoring
 version: "1.0" 

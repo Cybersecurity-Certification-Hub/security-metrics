@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: TransportEncryptionProtocolVersion
+id: 1c5b928f-90f7-47c6-9ba4-d06799c9e8af
+name: TransportEncryptionProtocolVersion
 description: This rule assesses whether a [Resource] has its [TransportEncryption] [p1:protocolVersion] correctly configured.
 category: TransportEncryption
 version: "1.0" 

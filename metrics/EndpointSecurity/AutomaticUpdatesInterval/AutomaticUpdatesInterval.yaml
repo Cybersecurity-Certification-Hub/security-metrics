@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: AutomaticUpdatesInterval
+id: 50118133-1b49-416c-a052-8bc9221241c2
+name: AutomaticUpdatesInterval
 description: This rule assesses whether a [VirtualMachine] that offers the property [AutomaticUpdates], has [p1:interval] configured correctly.
 category: EndpointSecurity
 version: "1.0" 

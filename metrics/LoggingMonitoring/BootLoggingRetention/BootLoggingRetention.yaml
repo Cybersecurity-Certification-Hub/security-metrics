@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: BootLoggingRetention
+id: eeb0ecc5-a72e-4d8f-a2e3-c641e6bfe7fd
+name: BootLoggingRetention
 description: This rule assesses whether an [VirtualMachine] has its [BootLogging][p1:retentionPeriod] property set correctly.
 category: LoggingMonitoring
 version: "1.0" 

@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: DocumentCSAFFilenameValid
+id: 3320c5ca-376b-4bdc-b4e6-0a03db2ec66e
+name: DocumentCSAFFilenameValid
 category: CSAF
 description: This rule assesses whether a [SecurityAdvisoryDocument] that offers the property [RemoteDocumentLocation] has a valid filename in the property [p1:path].
 version: "1.0" 

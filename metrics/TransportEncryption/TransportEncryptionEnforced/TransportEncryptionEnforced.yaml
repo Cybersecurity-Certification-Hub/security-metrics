@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: TransportEncryptionEnforced
+id: a8d42a80-4230-4c2e-8713-b5e4b15262de
+name: TransportEncryptionEnforced
 description: This rule assesses whether a [Resource] has [TransportEncryption] [p1:enforced] correctly configured.
 category: TransportEncryption
 version: "1.0" 

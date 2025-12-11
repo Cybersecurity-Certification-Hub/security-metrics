@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: AtRestEncryptionAlgorithm
+id: ed9f79fb-ff19-4626-8911-a3484a9b7639
+name: AtRestEncryptionAlgorithm
 description: This rule assesses whether a [Storage] has its [AtRestEncryption] [p1:algorithm] correctly configured.
 category: StorageEncryption
 version: "1.0"

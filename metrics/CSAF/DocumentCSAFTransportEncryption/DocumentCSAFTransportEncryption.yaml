@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: DocumentCSAFTransportEncryption
+id: 56ab82ed-e3f2-49e3-9acf-0b5c1fa744d1
+name: DocumentCSAFTransportEncryption
 description: This rule assesses whether a [SecurityAdvisoryDocument] that provides the property [RemoteDocumentLocation] is retrievable from a website which has the property [p1:enabled] and [p2:protocol] correctly configured. 
 category: CSAF
 version: "1.0" 

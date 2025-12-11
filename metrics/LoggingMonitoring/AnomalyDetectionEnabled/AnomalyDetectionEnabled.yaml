@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: AnomalyDetectionEnabled
+id: 58d9a281-0f05-4a49-a1ef-df5013cc901e
+name: AnomalyDetectionEnabled
 description: This rule assesses whether a [Resource] has its [AnomalyDetection] property [p1:enabled] correctly configured.
 category: LoggingMonitoring
 version: "1.0" 

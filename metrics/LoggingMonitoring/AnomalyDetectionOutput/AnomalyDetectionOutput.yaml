@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: AnomalyDetectionOutput
+id: 0772e639-06b8-4a37-913d-5ef0840a334e
+name: AnomalyDetectionOutput
 description: This rule assesses whether an [DatabaseService] has the [AnomalyDetection][p1:loggingService] property set correctly.
 category: LoggingMonitoring
 version: "1.0" 

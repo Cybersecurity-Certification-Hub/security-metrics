@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: AtRestEncryptionEnabled
+id: c7121da1-274e-4c6b-b2fe-47df992297a9
+name: AtRestEncryptionEnabled
 description: This rule assesses whether a [Storage] has [AtRestEncryption] [p1:enabled] correctly configured.
 category: StorageEncryption
 version: "1.0" 
