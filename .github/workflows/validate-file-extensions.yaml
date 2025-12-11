@@ -20,47 +20,24 @@ jobs:
         run: |
           set -euo pipefail
 
-          echo "Determining diff range for event: ${{ github.event_name }}"
-
+          # Determine the correct git SHAs to compare based on event type
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            BASE_SHA="${{ github.event.pull_request.base.sha }}"
-            HEAD_SHA="${{ github.event.pull_request.head.sha }}"
-
-            # Ensure SHAs are available locally
-            git fetch origin "$BASE_SHA" || true
-            git fetch origin "$HEAD_SHA" || true
-
-            DIFF_CMD=(git diff --name-only --diff-filter=A "$BASE_SHA" "$HEAD_SHA" --)
+            # For PRs: compare base branch (target) with head branch (your changes)
+            ADDED_FILES=$(git diff --name-only --diff-filter=A ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
           else
-            BEFORE="${{ github.event.before }}"
-            AFTER="${{ github.sha }}"
-
-            # Handle initial push (BEFORE is all zeros)
-            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
-              # treat all files in HEAD as "added"
-              DIFF_CMD=(git ls-tree -r --name-only "$AFTER")
-            else
-              DIFF_CMD=(git diff --name-only --diff-filter=A "$BEFORE" "$AFTER" --)
-            fi
+            # For pushes: compare previous commit with current commit
+            BASE="${{ github.event.before }}"
+            # Handle initial push (then there is no "before" event/commit)
+            BASE="${BASE:0:1}" = "0" ? "4b825dc642cb6eb9a060e54bf8d69288fbee4904" : "$BASE"
+            ADDED_FILES=$(git diff --name-only --diff-filter=A "$BASE" ${{ github.sha }})
           fi
 
-          echo "Running: ${DIFF_CMD[*]}"
-          ADDED_FILES="$("${DIFF_CMD[@]}" || true)"
+          # Find any newly added files with .yml extension
+          YML_FILES=$(echo "$ADDED_FILES" | grep '\.yml$' || true)
 
-          if [ -z "$ADDED_FILES" ]; then
-            echo "No added files detected."
-            exit 0
-          fi
-
-          echo "Added files:"
-          printf '%s\n' "$ADDED_FILES"
-
-          YML_ADDED=$(printf "%s\n" "$ADDED_FILES" | grep -E '\.yml$' || true)
-
-          if [ -n "$YML_ADDED" ]; then
-            echo "::error file=.,title=.yml files detected::.yml files were added (use .yaml instead):"
-            printf "%s\n" "$YML_ADDED"
+          # Fail if .yml files were detected
+          if [ -n "$YML_FILES" ]; then
+            echo "::error title=.yml files detected::.yml files were added (use .yaml instead):"
+            echo "$YML_FILES"
             exit 1
           fi
-
-          echo "No added .yml files detected."
