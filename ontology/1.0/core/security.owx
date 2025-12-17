@@ -140,6 +140,9 @@
         <Class abbreviatedIRI="core:PasswordBasedAuthentication"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:Provenance"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:RBAC"/>
     </Declaration>
     <Declaration>
@@ -320,7 +323,6 @@
         <Class abbreviatedIRI="core:AnomalyDetection"/>
         <Class abbreviatedIRI="core:Auditing"/>
     </SubClassOf>
-    
     <SubClassOf>
         <Class abbreviatedIRI="core:EqualityCheck"/>
         <Class abbreviatedIRI="core:PolicyOperation"/>
@@ -760,6 +762,10 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:LocalAttestation"/>
         <Class abbreviatedIRI="core:Attestation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Provenance"/>
+        <Class abbreviatedIRI="core:LocalAttestation"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:LocalRedundancy"/>

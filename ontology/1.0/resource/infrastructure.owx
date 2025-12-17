@@ -360,6 +360,13 @@
         <Class abbreviatedIRI="cl:CloudResource"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="cl:CICDService"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:offersMultiple"/>
+            <Class abbreviatedIRI="cl:Provenance"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="cl:Certificate"/>
         <Class abbreviatedIRI="cl:Credential"/>
     </SubClassOf>
@@ -1116,6 +1123,13 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:Workflow"/>
         <Class abbreviatedIRI="cl:CICDService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:Workflow"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
+            <Class abbreviatedIRI="cl:Job"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <ClassAssertion>
         <Class abbreviatedIRI="cl:CICDService"/>
