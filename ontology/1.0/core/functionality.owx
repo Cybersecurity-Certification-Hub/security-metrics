@@ -491,6 +491,24 @@
         <DataProperty abbreviatedIRI="prop:algorithm"/>
     </Declaration>
     <SubClassOf>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <Class abbreviatedIRI="core:PolicyOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:leftPrincipal"/>
+            <Class abbreviatedIRI="core:Principal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:rightPrincipal"/>
+            <Class abbreviatedIRI="core:Principal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:HttpRequestHandler"/>
         <Class abbreviatedIRI="core:Http"/>
     </SubClassOf>
@@ -1656,6 +1674,16 @@
         <DataProperty abbreviatedIRI="prop:enabled"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:EqualityCheck</AbbreviatedIRI>
+        <Literal>Represents an operation that checks whether two principals are equal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:EqualityCheck</AbbreviatedIRI>
+        <Literal>EqualityCheck</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Principal</AbbreviatedIRI>

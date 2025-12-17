@@ -312,11 +312,6 @@
         <Class abbreviatedIRI="core:AnomalyDetection"/>
         <Class abbreviatedIRI="core:Auditing"/>
     </SubClassOf>
-    
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <Class abbreviatedIRI="core:PolicyOperation"/>
-    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Error"/>
         <Class abbreviatedIRI="core:Functionality"/>
@@ -333,20 +328,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="core:ApplicationLog"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:leftPrincipal"/>
-            <Class abbreviatedIRI="core:Principal"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:rightPrincipal"/>
-            <Class abbreviatedIRI="core:Principal"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
