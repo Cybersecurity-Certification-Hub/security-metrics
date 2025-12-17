@@ -737,7 +737,6 @@
             <Class abbreviatedIRI="core:Storage"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    
     <SubClassOf>
         <Class abbreviatedIRI="core:L3Firewall"/>
         <DataSomeValuesFrom>
@@ -1305,6 +1304,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:PasswordBasedAuthentication</AbbreviatedIRI>
         <Literal xml:lang="en">PasswordBasedAuthentication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:Provenance</AbbreviatedIRI>
+        <Literal>Provenance ensures the traceability and integrity of data or artifacts by tracking their origin and lifecycle, particularly in CI/CD pipelines.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:Provenance</AbbreviatedIRI>
+        <Literal xml:lang="english">Provenance</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
