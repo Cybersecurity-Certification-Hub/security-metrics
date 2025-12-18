@@ -17,7 +17,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
 
     <Declaration>
-        <DataProperty abbreviatedIRI="res:adv_robustness"/>
+        <DataProperty abbreviatedIRI="res:adversarialRobustnessScore"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="res:basedOn"/>
@@ -101,7 +101,7 @@
         <DataProperty abbreviatedIRI="res:expirationDate"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="res:explainability"/>
+        <DataProperty abbreviatedIRI="res:explainabilityEnabled"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:file"/>
@@ -188,10 +188,13 @@
         <DataProperty abbreviatedIRI="res:programmingVersion"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="res:privacy_level"/>
+        <DataProperty abbreviatedIRI="res:membershipInferenceResilience"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="res:poison_level"/>
+        <DataProperty abbreviatedIRI="res:poisonedDataLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:poisoningResilienceLevel"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:protocol"/>

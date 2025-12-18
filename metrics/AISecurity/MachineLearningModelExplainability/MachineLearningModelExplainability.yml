@@ -1,10 +1,9 @@
-# Metadata
+# ====== Metadata ======
 id: MachineLearningModelExplainability
 description: This rule assesses whether a [MachineLearningModel] provides [p1:explainabilityEnabled].
 version: 1.0
 comments: Explainable AI is essential for understanding, debugging, and building trust in machine learning systems.
----
-# Configuration data
+# ====== Configuration ======
 p1:
   operator: ==
   targetValue: true

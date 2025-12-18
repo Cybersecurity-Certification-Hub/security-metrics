@@ -35,19 +35,22 @@
         <DataProperty abbreviatedIRI="core:size"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="core:privacyLevel"/>
+        <DataProperty abbreviatedIRI="core:membershipInferenceResilience"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="core:explainability"/>
+        <DataProperty abbreviatedIRI="core:explainabilityEnabled"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="core:adv_robustness"/>
+        <DataProperty abbreviatedIRI="core:adversarialRobustnessScore"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="core:poisonLevel"/>
+        <DataProperty abbreviatedIRI="core:poisonedDataLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:poisoningResilienceLevel"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:Vulnerability"/>
@@ -91,35 +94,42 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:MachineLearningModel"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:adv_robustness"/>
+            <DataProperty abbreviatedIRI="core:adversarialRobustnessScore"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:MachineLearningModel"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:explainability"/>
+            <DataProperty abbreviatedIRI="core:explainabilityEnabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:poisonedDataLevel"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:MachineLearningModel"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:poisonLevel"/>
+            <DataProperty abbreviatedIRI="core:poisoningResilienceLevel"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:MachineLearningModel"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:privacyLevel"/>
+            <DataProperty abbreviatedIRI="core:membershipInferenceResilience"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:MachineLearningModel"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:robustness"/>
+            <DataProperty abbreviatedIRI="core:adversarialRobustnessScore"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
