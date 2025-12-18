@@ -2477,7 +2477,6 @@ message MachineLearningModel {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	float adv_robustness = 14185;
 	google.protobuf.Timestamp creation_time = 18005;
 	string description = 5272;
 	float evasion_efficacy_level = 17752;
@@ -2487,11 +2486,8 @@ message MachineLearningModel {
 	float model_steal_resilience = 1827;
 	string name = 1575 [ (buf.validate.field).required = true ];
 	float poisoned_data_level = 13816;
-	float privacy_label = 8059;
-	float privacy_level = 1262;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 12454;
-	float robustness = 13582;
 	DataLocation data_location = 2998;
 	optional string parent_id = 15494;
 	repeated Vulnerability vulnerabilities  = 10821;
