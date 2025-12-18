@@ -1,0 +1,10 @@
+# Metadata
+id: MachineLearningModelPrivacy
+description: This rule assesses whether a [MachineLearningModel] has implemented privacy-preserving techniques that increase its resilience against membership inference attacks over the compliant level of [p1:membershipInferenceResilience].
+version: 1.0
+comments: Machine learning models should take privacy into account.
+---
+# Configuration data
+p1:
+  operator: <=
+  targetValue: 0.5

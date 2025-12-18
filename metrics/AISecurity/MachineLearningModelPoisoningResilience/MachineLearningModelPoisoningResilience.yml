@@ -1,0 +1,10 @@
+# Metadata
+id: MachineLearningModelPoisoningResilience
+description: This rule assesses whether a [MachineLearningModel] can defend against data poisoning attacks, indicated by its [p1:poisoningResilienceLevel].
+version: 1.0
+comments: Poisoning attacks aim to corrupt a model during training by injecting malicious samples. Models should have ability to face such attacks.
+---
+# Configuration data
+p1:
+  operator: <=
+  targetValue: 0.5
