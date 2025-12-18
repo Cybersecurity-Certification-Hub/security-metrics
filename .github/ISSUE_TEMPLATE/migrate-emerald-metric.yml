@@ -1,0 +1,20 @@
+name: Migrate EMERALD Metric
+description: Create issue for migrating a metric from EMERALD to this repository
+title: 'Migrate EMERALD metric ""'
+labels:
+  - migration
+  - EMERALD
+body:
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Which tool? 
+      multiple: false
+      options:
+        - Discovery
+        - Codyze
+        - eknows
+        - AMOE
+        - Other
+        - TBD
+      default: 5

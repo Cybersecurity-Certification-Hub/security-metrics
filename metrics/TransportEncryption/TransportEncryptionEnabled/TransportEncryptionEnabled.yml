@@ -1,11 +1,11 @@
-# Metadata
+# ====== Metadata ======
 id: TransportEncryptionEnabled
 description: This rule assesses whether a [Resource] has [TransportEncryption] [p1:enabled] correctly configured.
-version: 1.0 
+category: TransportEncryption
+version: "1.0" 
 comments: Transport encryption is a standard practice to keep sensitive data confidential when it is transmitted.
---- 
-# Configuration data
+# ====== Configuration ======
 configuration:
   p1:
-    operator: ==
+    operator: "=="
     targetValue: True
