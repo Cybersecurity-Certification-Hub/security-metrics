@@ -54,13 +54,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="res:MachineLearningModel" />
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:adv_robustness" />
-            <Datatype abbreviatedIRI="xsd:float" />
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
-        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="res:evasionEfficacyLevel" />
             <Datatype abbreviatedIRI="xsd:float" />
         </DataSomeValuesFrom>
@@ -83,27 +76,6 @@
         <Class abbreviatedIRI="res:MachineLearningModel" />
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="res:poisonedDataLevel" />
-            <Datatype abbreviatedIRI="xsd:float" />
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:privacyLabel" />
-            <Datatype abbreviatedIRI="xsd:float" />
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:privacyLevel" />
-            <Datatype abbreviatedIRI="xsd:float" />
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:robustness" />
             <Datatype abbreviatedIRI="xsd:float" />
         </DataSomeValuesFrom>
     </SubClassOf>
