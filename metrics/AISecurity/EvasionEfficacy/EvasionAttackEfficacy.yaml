@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: EvasionAttackEfficacy
-description: This rule assesses whether a [MachineLearningModel] has the compliant level of [p1:EvasionAttackEfficacy].
+description: This rule assesses whether a [MachineLearningModel] has the compliant level of [p1:evasionAttackEfficacy].
 category: AISecurity
 version: "1.0"
 comments: Evasion attacks manipulate input data to deceive AI models, leading to incorrect predictions or classifications. The perturbations will be iteratively increased to a limit of 50% and based on that, the EvasionAttackEfficacy will be provided. The lower the EvasionAttackEfficacy, the better. 
