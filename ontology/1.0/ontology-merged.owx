@@ -870,9 +870,6 @@
         <DataProperty IRI="/classes/UniversalGateSetEnabled"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/adv_robustness"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/apiHitsPerMonth"/>
     </Declaration>
     <Declaration>
@@ -1033,9 +1030,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/poisonedDatalevel"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/classes/privacyLevel"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/privileged"/>
@@ -1401,9 +1395,6 @@
         <DataProperty IRI="/classes/SpamErrorRate"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/privacyLabel"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes//mode"/>
     </Declaration>
     <Declaration>
@@ -1429,9 +1420,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Implementation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/classes/robustness"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/hasType"/>
@@ -3412,13 +3400,6 @@
     <SubClassOf>
         <Class IRI="/classes/MachineLearningModel"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/adv_robustness"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/MachineLearningModel"/>
-        <DataSomeValuesFrom>
             <DataProperty IRI="/classes/evasionEfficacyLevel"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
@@ -3441,27 +3422,6 @@
         <Class IRI="/classes/MachineLearningModel"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/poisonedDataLevel"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/MachineLearningModel"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/privacyLabel"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/MachineLearningModel"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/privacyLevel"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/MachineLearningModel"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/robustness"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
