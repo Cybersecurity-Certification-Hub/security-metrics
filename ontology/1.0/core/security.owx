@@ -6,25 +6,16 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://ontology.cybersecuritycertcluster.eu/core/security">
-    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/core/security#"/>
+    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/core/security"/>
+    <Prefix name="cl" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
-    <Prefix name="cl" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
-    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Declaration>
-        <Class abbreviatedIRI="core:DiskEncryption"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="core:Encryption"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="core:JwtAuthentication"/>
-    </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:ABAC"/>
     </Declaration>
@@ -71,6 +62,9 @@
         <Class abbreviatedIRI="core:CertificateBasedAuthentication"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:CipherSuite"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:Confidentiality"/>
     </Declaration>
     <Declaration>
@@ -83,7 +77,16 @@
         <Class abbreviatedIRI="core:DDosProtection"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:DiskEncryption"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Encryption"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:EncryptionInUse"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Error"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:ExplainableResults"/>
@@ -104,6 +107,9 @@
         <Class abbreviatedIRI="core:Integrity"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:JwtAuthentication"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
     </Declaration>
     <Declaration>
@@ -117,6 +123,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:Logging"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LoggingService"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:MalwareProtection"/>
@@ -143,6 +152,9 @@
         <Class abbreviatedIRI="core:RBAC"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:RateLimiting"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:Redundancy"/>
     </Declaration>
     <Declaration>
@@ -167,6 +179,9 @@
         <Class abbreviatedIRI="core:SingleSignOn"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:Storage"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:TransportEncryption"/>
     </Declaration>
     <Declaration>
@@ -182,19 +197,25 @@
         <ObjectProperty abbreviatedIRI="core:offersInterface"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:scope"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty abbreviatedIRI="core:usedBy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:has"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:offers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:scope"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:to"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:apiHitsPerMonth"/>
@@ -269,19 +290,19 @@
         <DataProperty abbreviatedIRI="prop:restrictedPorts"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="ind:AmazonWebServices"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ind:CircleCI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ind:GitHubActions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ind:TeamCity"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/CircleCI"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/GitHubActions"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/TeamCity"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
@@ -292,18 +313,93 @@
     <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionInUse"/>
-        <Class abbreviatedIRI="core:Confidentiality"/>
-    </SubClassOf>
-    <SubClassOf>
+    <Declaration>
+        <Class abbreviatedIRI="core:LocalEntryPoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LoadConfiguration"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:EncryptionOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:ObjectStorageRequest"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LoadSymbol"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="core:basedOn"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Secret"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="core:leftPrincipal"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Memory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="core:target"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:name"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="core:rightPrincipal"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Cipher"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:MemoryOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:BlockStorage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:message"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Main"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Principal"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LoadLibrary"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:CipherOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LibraryEntryPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Token"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:PolicyOperation"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:Operation"/>
-    </SubClassOf>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="core:ABAC"/>
         <Class abbreviatedIRI="core:Authorization"/>
@@ -320,72 +416,12 @@
         <Class abbreviatedIRI="core:AnomalyDetection"/>
         <Class abbreviatedIRI="core:Auditing"/>
     </SubClassOf>
-    
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <Class abbreviatedIRI="core:PolicyOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Error"/>
-        <Class abbreviatedIRI="core:Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Error"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:message"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:AnomalyDetection"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="core:ApplicationLog"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:leftPrincipal"/>
-            <Class abbreviatedIRI="core:Principal"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:rightPrincipal"/>
-            <Class abbreviatedIRI="core:Principal"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
-            <Class abbreviatedIRI="core:Encryption"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionOperation"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:algorithm"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="core:Secret"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionInUse"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:enabled"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:AnomalyDetection"/>
@@ -404,35 +440,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ApplicationLog"/>
         <Class abbreviatedIRI="core:Logging"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:DiskEncryption"/>
-        <Class abbreviatedIRI="core:AtRestEncryption"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:DiskEncryption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:target"/>
-            <Class abbreviatedIRI="core:BlockStorage"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Encryption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:basedOn"/>
-            <Class abbreviatedIRI="core:Cipher"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Encryption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="core:Secret"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Encryption"/>
-        <Class abbreviatedIRI="core:Confidentiality"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
@@ -587,7 +594,7 @@
         <Class abbreviatedIRI="core:CryptographicHash"/>
         <Class abbreviatedIRI="core:Integrity"/>
     </SubClassOf>
-        <SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:CryptographicHash"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -610,6 +617,35 @@
         <Class abbreviatedIRI="core:Availability"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:DiskEncryption"/>
+        <Class abbreviatedIRI="core:AtRestEncryption"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DiskEncryption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:target"/>
+            <Class abbreviatedIRI="core:BlockStorage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Encryption"/>
+        <Class abbreviatedIRI="core:Confidentiality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Encryption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:basedOn"/>
+            <Class abbreviatedIRI="core:Cipher"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Encryption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:Secret"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionInUse"/>
         <Class abbreviatedIRI="core:Confidentiality"/>
     </SubClassOf>
@@ -618,6 +654,64 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <Class abbreviatedIRI="core:CipherOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Encryption"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:Secret"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:algorithm"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <Class abbreviatedIRI="core:PolicyOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:leftPrincipal"/>
+            <Class abbreviatedIRI="core:Principal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:rightPrincipal"/>
+            <Class abbreviatedIRI="core:Principal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Error"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Error"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:message"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -644,15 +738,6 @@
         <Class abbreviatedIRI="core:Redundancy"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:JwtAuthentication"/>
-        <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
-        <Class abbreviatedIRI="core:Authenticity"/>
-    </SubClassOf>
-    
-    <SubClassOf>
         <Class abbreviatedIRI="core:Immutability"/>
         <Class abbreviatedIRI="core:Integrity"/>
     </SubClassOf>
@@ -668,8 +753,19 @@
         <Class abbreviatedIRI="core:SecurityFeature"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:JwtAuthentication"/>
+        <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
         <Class abbreviatedIRI="core:Authenticity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:Token"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
@@ -689,53 +785,6 @@
         <Class abbreviatedIRI="core:L3Firewall"/>
         <Class abbreviatedIRI="core:Firewall"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Main"/>
-        <Class abbreviatedIRI="core:LocalEntryPoint"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:MemoryOperation"/>
-        <Class abbreviatedIRI="core:Operation"/>
-    </SubClassOf>
-
-    <SubClassOf>
-        <Class abbreviatedIRI="core:LibraryEntryPoint"/>
-        <Class abbreviatedIRI="core:LocalEntryPoint"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:LoadConfiguration"/>
-        <Class abbreviatedIRI="core:ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:LoadLibrary"/>
-        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:LoadSymbol"/>
-        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Logging"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:name"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:MemoryOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
-            <Class abbreviatedIRI="core:Memory"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:ObjectStorageRequest"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
-            <Class abbreviatedIRI="core:Storage"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    
     <SubClassOf>
         <Class abbreviatedIRI="core:L3Firewall"/>
         <DataSomeValuesFrom>
@@ -758,6 +807,22 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:LibraryEntryPoint"/>
+        <Class abbreviatedIRI="core:LocalEntryPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LoadConfiguration"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LoadLibrary"/>
+        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LoadSymbol"/>
+        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:LocalAttestation"/>
         <Class abbreviatedIRI="core:Attestation"/>
     </SubClassOf>
@@ -773,7 +838,7 @@
         <Class abbreviatedIRI="core:Logging"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:to"/>
-            <Class abbreviatedIRI="cl:LoggingService"/>
+            <Class abbreviatedIRI="core:LoggingService"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -781,6 +846,13 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:monitoringEnabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Logging"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -803,6 +875,10 @@
             <DataProperty abbreviatedIRI="core:retentionPeriod"/>
             <Literal>xsd:java.time.Duration</Literal>
         </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Main"/>
+        <Class abbreviatedIRI="core:LocalEntryPoint"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:MalwareProtection"/>
@@ -841,17 +917,20 @@
         <Class abbreviatedIRI="core:AtRestEncryption"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:MemoryOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MemoryOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Memory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:MultiFactorAuthentiation"/>
         <Class abbreviatedIRI="core:Authenticity"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="core:Token"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    
     <SubClassOf>
         <Class abbreviatedIRI="core:MultiFactorAuthentiation"/>
         <ObjectSomeValuesFrom>
@@ -877,6 +956,13 @@
             <DataProperty abbreviatedIRI="prop:activated"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ObjectStorageRequest"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Storage"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:PasswordBasedAuthentication"/>
@@ -905,6 +991,17 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:mixedDuties"/>
             <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:RateLimiting"/>
+        <Class abbreviatedIRI="core:AccessRestriction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:RateLimiting"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:enabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -971,10 +1068,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:TransportEncryption"/>
-        <Class abbreviatedIRI="core:Encryption"/>
-        </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:SingleSignOn"/>
         <Class abbreviatedIRI="core:Authenticity"/>
     </SubClassOf>
@@ -984,6 +1077,10 @@
             <DataProperty abbreviatedIRI="prop:enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:TransportEncryption"/>
+        <Class abbreviatedIRI="core:Encryption"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:TransportEncryption"/>
@@ -1054,32 +1151,6 @@
         <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
         <ObjectProperty abbreviatedIRI="core:usedBy"/>
     </SubObjectPropertyOf>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:Encryption</AbbreviatedIRI>
-        <Literal>This represents an encryption.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:Encryption</AbbreviatedIRI>
-        <Literal>Encryption</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:JwtAuthentication</AbbreviatedIRI>
-        <Literal>Represents a JWT-based authentication, which extends the [TokenBasedAuth].</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:JwtAuthentication</AbbreviatedIRI>
-        <Literal>JwtAuthentication</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:JwtBasedAuthentication</AbbreviatedIRI>
-        <Literal>Represents a token-based authentication.</Literal>
-    </AnnotationAssertion>
-    
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
@@ -1206,6 +1277,16 @@
         <Literal xml:lang="en">DDoSProtection</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:Encryption</AbbreviatedIRI>
+        <Literal>This represents an encryption.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:Encryption</AbbreviatedIRI>
+        <Literal>Encryption</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:EncryptionInUse</AbbreviatedIRI>
         <Literal>EncryptionInUse</Literal>
@@ -1234,6 +1315,21 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:Integrity</AbbreviatedIRI>
         <Literal xml:lang="english">Integrity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:JwtAuthentication</AbbreviatedIRI>
+        <Literal>Represents a JWT-based authentication, which extends the [TokenBasedAuth].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:JwtAuthentication</AbbreviatedIRI>
+        <Literal>JwtAuthentication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:JwtBasedAuthentication</AbbreviatedIRI>
+        <Literal>Represents a token-based authentication.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1304,6 +1400,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:RBAC</AbbreviatedIRI>
         <Literal xml:lang="english">RBAC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:RateLimiting</AbbreviatedIRI>
+        <Literal>Rate limiting is used to control the frequency of incoming requests to prevent system overload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:RateLimiting</AbbreviatedIRI>
+        <Literal>RateLimiting</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1409,11 +1515,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:contextIsChecked</AbbreviatedIRI>
         <Literal>contextIsChecked</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
-        <Literal>rotationInterval</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1681,11 +1782,6 @@
         <Literal>reqBody</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ind:resourceId</AbbreviatedIRI>
-        <Literal>resourceId</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:resourceType</AbbreviatedIRI>
         <Literal>The resource type. It is an array, because a type can be derived from another.</Literal>
@@ -1707,6 +1803,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
+        <Literal>rotationInterval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:runtimeLanguage</AbbreviatedIRI>
         <Literal>runtimeLanguage</Literal>
     </AnnotationAssertion>
@@ -1719,11 +1820,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:schemaURL</AbbreviatedIRI>
         <Literal>schemaURL</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:scope</AbbreviatedIRI>
-        <Literal>scope</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1802,23 +1898,33 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices</IRI>
+        <AbbreviatedIRI>ind:AmazonWebServices</AbbreviatedIRI>
         <Literal xml:lang="english">Amazon Web Services</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/CircleCI</IRI>
+        <AbbreviatedIRI>ind:CircleCI</AbbreviatedIRI>
         <Literal xml:lang="english">CircleCI</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/GitHubActions</IRI>
+        <AbbreviatedIRI>ind:GitHubActions</AbbreviatedIRI>
         <Literal xml:lang="english">GitHub Actions</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/TeamCity</IRI>
+        <AbbreviatedIRI>ind:TeamCity</AbbreviatedIRI>
         <Literal xml:lang="english">TeamCity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ind:resourceId</AbbreviatedIRI>
+        <Literal>resourceId</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:scope</AbbreviatedIRI>
+        <Literal>scope</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
@@ -1829,4 +1935,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
