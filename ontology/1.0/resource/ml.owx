@@ -1,103 +1,131 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-    xml:base="https://ontology.cybersecuritycertcluster.eu/resource/ml"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:xml="http://www.w3.org/XML/1998/namespace"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/ml">
-    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu#" />
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#" />
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
-    <Prefix name="res" IRI="https://ontology.cybersecuritycertcluster.eu/classes/" />
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace" />
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#" />
-    <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/" />
-    <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/" />
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#" />
+     xml:base="https://ontology.cybersecuritycertcluster.eu/resource/ml"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/ml">
+    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/resource/ml"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="res" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+    <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
     <Declaration>
-        <Class abbreviatedIRI="res:MachineLearning" />
+        <Class abbreviatedIRI="core:MachineLearning"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="res:MachineLearningDataset" />
+        <Class abbreviatedIRI="core:MachineLearningDataset"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:robustness"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:size"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:privacyLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:explainability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:adv_robustness"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:poisonLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Vulnerability"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Data"/>
     </Declaration>
     <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearning"/>
-        <Class abbreviatedIRI="res:Data"/>
+        <Class abbreviatedIRI="core:MachineLearning"/>
+        <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningDataset" />
-        <Class abbreviatedIRI="res:MachineLearning" />
+        <Class abbreviatedIRI="core:MachineLearningDataset"/>
+        <Class abbreviatedIRI="core:MachineLearning"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningDataset" />
+        <Class abbreviatedIRI="core:MachineLearningDataset"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:type" />
-            <Datatype abbreviatedIRI="xsd:string" />
+            <DataProperty abbreviatedIRI="core:size"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningDataset" />
+        <Class abbreviatedIRI="core:MachineLearningDataset"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:size" />
-            <Datatype abbreviatedIRI="xsd:int" />
+            <DataProperty abbreviatedIRI="core:type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
-        <Class abbreviatedIRI="res:MachineLearning" />
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+        <Class abbreviatedIRI="core:MachineLearning"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:adv_robustness" />
-            <Datatype abbreviatedIRI="xsd:float" />
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:explainability" />
-            <Datatype abbreviatedIRI="xsd:float" />
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:poisonLevel" />
-            <Datatype abbreviatedIRI="xsd:float" />
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:privacyLabel" />
-            <Datatype abbreviatedIRI="xsd:float" />
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:privacyLevel" />
-            <Datatype abbreviatedIRI="xsd:float" />
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:robustness" />
-            <Datatype abbreviatedIRI="xsd:float" />
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel"/>
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="core:Vulnerability"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:adv_robustness"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:explainability"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:poisonLevel"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:privacyLevel"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:robustness"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
 </Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
