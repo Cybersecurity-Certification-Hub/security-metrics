@@ -16,7 +16,7 @@
     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <Class abbreviatedIRI="core:CertificationTarget"/>
+        <Class abbreviatedIRI="core:TargetOfEvaluation"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:Core"/>
@@ -40,7 +40,7 @@
         <ObjectProperty abbreviatedIRI="core:hasType"/>
     </Declaration>
     <SubClassOf>
-        <Class abbreviatedIRI="core:CertificationTarget"/>
+        <Class abbreviatedIRI="core:TargetOfEvaluation"/>
         <Class abbreviatedIRI="core:Core"/>
     </SubClassOf>
     <SubClassOf>
@@ -65,7 +65,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="core:belongsTo"/>
-        <Class abbreviatedIRI="core:CertificationTarget"/>
+        <Class abbreviatedIRI="core:TargetOfEvaluation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="core:extractedBy"/>
