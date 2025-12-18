@@ -21,9 +21,6 @@ jobs:
           run: |
             git config --global user.name "github-actions[bot]"
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        - name: Switch to branch
-          run: |
-            git checkout ${{ github.head_ref }}
         - name: Download ROBOT
           run: |
             wget https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar
