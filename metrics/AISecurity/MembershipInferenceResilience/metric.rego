@@ -1,4 +1,4 @@
-package cch.metrics.machine_learning_model_membership_inference_resilience
+package cch.metrics.membership_inference_resilience
 
 import data.cch.compare
 import rego.v1

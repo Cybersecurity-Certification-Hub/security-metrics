@@ -1,4 +1,4 @@
-package cch.metrics.machine_learning_model_poisoning_resilience
+package cch.metrics.poisoning_resilience
 
 import data.cch.compare
 import rego.v1

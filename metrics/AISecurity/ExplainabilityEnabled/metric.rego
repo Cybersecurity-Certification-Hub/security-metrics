@@ -1,4 +1,4 @@
-package cch.metrics.machine_learning_model_explainability
+package cch.metrics.explainability_enabled
 
 import data.cch.compare
 import rego.v1

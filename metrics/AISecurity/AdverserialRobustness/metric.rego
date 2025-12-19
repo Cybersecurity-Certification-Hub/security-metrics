@@ -1,4 +1,4 @@
-package cch.metrics.machine_learning_model_adversarial_robustness
+package cch.metrics.adversarial_robustness
 
 import data.cch.compare
 import rego.v1

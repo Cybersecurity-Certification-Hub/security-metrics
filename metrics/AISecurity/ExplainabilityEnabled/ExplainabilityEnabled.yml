@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: MachineLearningModelExplainability
+id: ExplainabilityEnabled
 description: This rule assesses whether a [MachineLearningModel] provides [p1:explainabilityEnabled].
 category: AISecurity
 version: "1.0"

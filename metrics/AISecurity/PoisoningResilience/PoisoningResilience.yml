@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: MachineLearningModelPoisoningResilience
+id: PoisoningResilience
 description: This rule assesses whether a [MachineLearningModel] can defend against data poisoning attacks, indicated by its [p1:poisoningResilienceLevel].
 category: AISecurity
 version: "1.0"

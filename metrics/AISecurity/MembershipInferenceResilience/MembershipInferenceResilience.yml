@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: MachineLearningModelPrivacy
+id: MembershipInferenceResilience
 description: This rule assesses whether a [MachineLearningModel] has implemented privacy-preserving techniques that increase its resilience against membership inference attacks over the compliant level of [p1:membershipInferenceResilience].
 category: AISecurity
 version: "1.0"
