@@ -51,7 +51,7 @@ jobs:
           uses: actions/upload-artifact@v4
           with:
             name: ontology-merged
-            path: ontology/1.0/merged/ontology-merged.owx 
+            path: ontology/1.0/ontology-merged.owx 
         - name: Commit and push changes
 
           if: github.event.pull_request.head.repo.full_name == github.repository
