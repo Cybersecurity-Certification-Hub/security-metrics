@@ -17,15 +17,10 @@ jobs:
         steps:
         - name: Checkout repository
           uses: actions/checkout@v4
-          with:
-            ref: ${{ github.head_ref }}
         - name: Set up Git user
           run: |
             git config --global user.name "github-actions[bot]"
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        - name: Switch to branch
-          run: |
-            git checkout ${{ github.head_ref }}
         - name: Download ROBOT
           run: |
             wget https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar
@@ -56,18 +51,13 @@ jobs:
           uses: actions/upload-artifact@v4
           with:
             name: ontology-merged
-            path: ontology/1.0/merged/ontology-merged.owx 
-        - name: Commit merged OWX file
+            path: ontology/1.0/ontology-merged.owx 
+        - name: Commit and push changes
+
+          if: github.event.pull_request.head.repo.full_name == github.repository
           run: |
-              git add ontology/1.0/ontology-merged.owx 
-              git commit -m "Add merged ontology file [skip ci]" || echo "No changes to commit"
-              git push
-          env:
-              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        - name: Commit ontology.proto file
-          run: |
-              git add ontology/1.0/ontology.proto
-              git commit -m "Add generated proto file [skip ci]" || echo "No changes to commit"
+              git add ontology/1.0/ontology-merged.owx ontology/1.0/ontology.proto
+              git commit -m "Add merged ontology and proto files [skip ci]" || echo "No changes to commit"
               git push
           env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
