@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: SecurityOperatorRoleAssigned
+description: This rule validates that a [RoleAssignment] responsible for cryptographic operations exposes the property [p1:securityOperatorRoleAssigned], ensuring at least one [Identity] actively manages key deployment, rotation, and incident response.
+category: CryptographyEncryptionKeyManagement
+version: "1.0"
+comments: Unassigned security operator duties stall key lifecycle management and delay incident remediation; the metric confirms that the role has at least one identity available to execute operational tasks.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
