@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: DocumentCSAFContentValid
-category: CSAF
 description: This rule assesses whether a [SecurityAdvisoryDocument] has no [schemaValidation] [p1:errors].
+category: CSAF
 version: "1.0" 
 comments: Document CSAF Content Valid checks if a Security Advisory Document is valid and no schema validation errors are available.
 # ====== Configuration ======
