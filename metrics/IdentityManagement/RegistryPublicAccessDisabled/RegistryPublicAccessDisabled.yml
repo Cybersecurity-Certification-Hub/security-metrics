@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: RegistryPublicAccessDisabled
+description: This rule checks that a [ContainerRegistry] exposes the property [p1:publicAccessDisabled], ensuring external anonymous pulls are blocked and the registry remains private.
+category: IdentityManagement
+version: "1.0"
+comments: Container registries should disable public access so identity controls apply; the ontology may need a [PublicAccessDisabled] (or equivalent) feature on [ContainerRegistry] mapped to `containerRegistry.publicAccessDisabled` reported by evidence collectors.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
