@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: TlsDhGroup
+id: TlsDHGroup
 description: This rule assesses whether a [Resource] has its [TransportEncryption] [p1:dhGroups] correctly configured.
 category: TransportEncryption
 version: "1.0"
@@ -7,5 +7,5 @@ comments: Using secure Diffie-Hellman groups (e.g., 2048 bits or higher) ensures
 # ====== Configuration ======
 configuration:
   p1:
-    operator: isIn
+    operator: "isIn"
     targetValue: ["2048", "3072", "4096"]

@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique, human-readable name"
+    },
+    "category": {
+      "type": "string",
+      "description": "Category of the metric",
+      "examples": [
+        "EndpointSecurity",
+        "IdentityManagement",
+        "NetworkSecurity",
+        "ApplicationSecurity"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "description": "Description using terms from the ontology."
+    },
+    "implementationGuidelines": {
+      "type": "object",
+      "properties": {
+        "AMOE": {
+          "type": "object",
+          "required": [
+            "question",
+            "keywords"
+          ],
+          "properties": {
+            "question": {
+              "type": "string"
+            },
+            "keywords": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "FSC": {
+          "type": "object",
+          "required": [
+            "details"
+          ],
+          "properties": {
+            "details": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "AppTelemetry": {
+          "type": "object",
+          "required": [
+            "details"
+          ],
+          "properties": {
+            "details": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": {
+        "description": "If you define an implementation guideline for an evidence collector not listed here, you have to embed it in an object. Consider adding it to the schema",
+        "type": "object"
+      }
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of the metric."
+    },
+    "comments": {
+      "type": "string",
+      "description": "Detailed explanation of the metric."
+    },
+    "configuration": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "operator": {
+            "type": "string",
+            "description": "Operator for the comparison",
+            "examples": [
+              "==",
+              "<=",
+              ">=",
+              "<",
+              ">",
+              "isIn",
+              "allIn"
+            ]
+          },
+          "targetValue": {
+            "type": [
+              "number",
+              "string",
+              "boolean",
+              "array"
+            ],
+            "description": "Target value for the operator",
+            "examples": [
+              "true",
+              "false",
+              "enabled",
+              "AES256",
+              200,
+              [
+                "AES256",
+                "RSA2048"
+              ]
+            ],
+            "items": {
+              "type": [
+                "string",
+                "boolean",
+                "integer",
+                "number"
+              ]
+            }
+          }
+        },
+        "required": [
+          "operator",
+          "targetValue"
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "category",
+    "description",
+    "version",
+    "comments",
+    "configuration"
+  ]
+}
