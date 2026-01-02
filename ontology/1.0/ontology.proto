@@ -556,6 +556,7 @@ message Infrastructure {
 		LoadBalancer load_balancer = 4201;
 		LoggingService logging_service = 14131;
 		MachineLearningService machine_learning_service = 16966;
+		ResourceInventoryService resource_inventory_service = 3821;
 		SecurityAdvisoryService security_advisory_service = 173;
 		DocumentDatabaseService document_database_service = 17950;
 		KeyValueDatabaseService key_value_database_service = 1004;
@@ -2740,6 +2741,7 @@ message NetworkService {
 		LoadBalancer load_balancer = 4201;
 		LoggingService logging_service = 14131;
 		MachineLearningService machine_learning_service = 16966;
+		ResourceInventoryService resource_inventory_service = 3821;
 		SecurityAdvisoryService security_advisory_service = 173;
 		DocumentDatabaseService document_database_service = 17950;
 		KeyValueDatabaseService key_value_database_service = 1004;
@@ -2761,6 +2763,7 @@ message Networking {
 		LoadBalancer load_balancer = 4201;
 		LoggingService logging_service = 14131;
 		MachineLearningService machine_learning_service = 16966;
+		ResourceInventoryService resource_inventory_service = 3821;
 		SecurityAdvisoryService security_advisory_service = 173;
 		DocumentDatabaseService document_database_service = 17950;
 		KeyValueDatabaseService key_value_database_service = 1004;
@@ -3431,6 +3434,7 @@ message Resource {
 		LoadBalancer load_balancer = 4201;
 		LoggingService logging_service = 14131;
 		MachineLearningService machine_learning_service = 16966;
+		ResourceInventoryService resource_inventory_service = 3821;
 		SecurityAdvisoryService security_advisory_service = 173;
 		DocumentDatabaseService document_database_service = 17950;
 		KeyValueDatabaseService key_value_database_service = 1004;
@@ -3501,6 +3505,38 @@ message ResourceGroup {
 	repeated Redundancy redundancies  = 1522;
 	optional string parent_id = 14157;
 	UsageStatistics usage_statistics = 2564;
+}
+
+// ResourceInventoryService is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// A resource inventory service that may automatically discover resources to enable their management.
+message ResourceInventoryService {
+	option (resource_type_names) = "ResourceInventoryService";
+	option (resource_type_names) = "NetworkService";
+	option (resource_type_names) = "Networking";
+	option (resource_type_names) = "Infrastructure";
+	option (resource_type_names) = "Resource";
+
+	bool automatic_discovery_enabled = 12229;
+	google.protobuf.Timestamp creation_time = 920;
+	string description = 12086;
+	bool enabled = 9833;
+	string id = 9382 [ (buf.validate.field).required = true ];
+	bool internet_accessible_endpoint = 14221;
+	repeated string ips = 3324;
+	map<string, string> labels = 10962;
+	string name = 4569 [ (buf.validate.field).required = true ];
+	repeated uint32 ports = 5032;
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 13845;
+	Authenticity authenticity = 9116;
+	repeated string compute_ids  = 16091;
+	GeoLocation geo_location = 853;
+	repeated Logging loggings  = 9823;
+	repeated Redundancy redundancies  = 8507;
+	optional string parent_id = 13496;
+	optional string service_metadata_document_id = 17502;
+	TransportEncryption transport_encryption = 16285;
+	UsageStatistics usage_statistics = 13273;
 }
 
 // ResourceLogging is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
