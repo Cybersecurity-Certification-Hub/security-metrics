@@ -2,9 +2,22 @@
 
 This repository contains the *CertGraph* ontology, which is described in OWL and stored as OWL/XML files.
 
-## Requirments
+## Requirements
 
 * Protégé to view and edit the ontology. Protégé can be downloaded from [here](https://protege.stanford.edu/).
+
+## Versioning
+Our ontology follows a clear versioning strategy to ensure transparency and ease of use for users. The versioning strategy is based on the following principles:
+
+* **Major Releases** Major releases are introduced when a breaking change occurs that makes the ontology incompatible with previous versions.
+  * When a major release is made, the ontology is copied into a new folder named after the version (e.g., v2, v3).
+  * Additionally, a Git tag is created for the new major release to provide a clear reference point for users.
+* **Regular Releases** Periodic releases are made within the current major version to capture the latest stable state of the ontology. These releases serve as fixed snapshots of ongoing development.
+* **No Minor Updates** Minor updates are not versioned separately. All updates are either part of regular releases within the current major version or introduced as part of the next major release if they include breaking changes.
+
+This strategy ensures that users can rely on stable, tagged releases while maintaining access to previous, incompatible versions through separate folders.
+
+We recommend reviewing the changelog before upgrading to a newer version to understand the changes introduced.
 
 ## Recommended workflow for viewing and developing the ontology
 
