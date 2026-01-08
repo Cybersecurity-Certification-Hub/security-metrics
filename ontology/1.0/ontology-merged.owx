@@ -657,6 +657,9 @@
         <Class IRI="/classes/ResourceGroup"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/ResourceInventoryService"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/ResourceLogging"/>
     </Declaration>
     <Declaration>
@@ -861,10 +864,19 @@
         <ObjectProperty IRI="/properties/to"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/OneQubitErrorRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/SpamErrorRate"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/T1CoherenceTime"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/T2CoherenceTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/TwoQubitErrorRate"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/UniversalGateSetEnabled"/>
@@ -925,6 +937,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/enforceMFA"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/errorCorrectionEnabled"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/expirationDate"/>
@@ -1389,12 +1404,6 @@
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/OneQubitErrorRate"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/classes/SpamErrorRate"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/privacyLabel"/>
     </Declaration>
     <Declaration>
@@ -1410,12 +1419,6 @@
         <DataProperty IRI="/classes/size"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/TwoQubitErrorRate"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/classes/errorCorrectionEnabled"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/poisonLevel"/>
     </Declaration>
     <Declaration>
@@ -1425,7 +1428,13 @@
         <DataProperty IRI="/classes/type"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/enabled"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="/classes/Implementation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/automaticDiscoveryEnabled"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/robustness"/>
@@ -4152,6 +4161,24 @@
         <Class IRI="/classes/CloudResource"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/ResourceInventoryService"/>
+        <Class IRI="/classes/NetworkService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ResourceInventoryService"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/automaticDiscoveryEnabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ResourceInventoryService"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/enabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/ResourceLogging"/>
         <Class IRI="/classes/Logging"/>
     </SubClassOf>
@@ -6511,6 +6538,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/ResourceGroup</IRI>
         <Literal>ResourceGroup</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ResourceInventoryService</IRI>
+        <Literal>A resource inventory service that may automatically discover resources to enable their management.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ResourceInventoryService</IRI>
+        <Literal>ResourceInventoryService</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
