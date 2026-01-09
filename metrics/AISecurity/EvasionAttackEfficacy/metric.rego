@@ -1,4 +1,4 @@
-package cch.metrics.evasion_efficacy
+package cch.metrics.evasion_attack_efficacy
 
 import data.cch.compare
 import rego.v1
