@@ -56,6 +56,10 @@ jobs:
         # Check if proto file is valid and can be compiled. 
         # Store the generated files in a temporary directory to avoid cluttering the repository.
           run: |
+            sudo apt-get update
+            sudo apt-get install -y protobuf-compiler
+            go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+            echo "$HOME/go/bin" >> $GITHUB_PATH
             mkdir -p "$RUNNER_TEMP/proto"
             protoc --proto_path=ontology/1.0/ ontology/1.0/ontology.proto --go_out="$RUNNER_TEMP/proto"
         - name: Upload Artifact ontology-merged.owx 
