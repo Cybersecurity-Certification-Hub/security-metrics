@@ -7,5 +7,5 @@ comments: Evasion attacks manipulate input data to deceive AI models, leading to
 # ====== Configuration ======
 configuration:
   p1: 
-  operator: "<"
-  targetValue: 33 
+    operator: "<"
+    targetValue: 33 
