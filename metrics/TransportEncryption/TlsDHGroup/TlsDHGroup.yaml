@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: TlsDHGroup
+id: 0d641dd8-eafa-4c47-822d-70d44ae0cfcd
+name: TlsDHGroup
 description: This rule assesses whether a [Resource] has its [TransportEncryption] [p1:dhGroups] correctly configured.
 category: TransportEncryption
 version: "1.0"

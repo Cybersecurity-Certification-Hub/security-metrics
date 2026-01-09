@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: SignedCommits
+id: 6920d9c5-587d-4e9f-876c-dcf1a69f7f75
+name: SignedCommits
 description: This rule assesses whether an [CodeRepository] has the property [p1:signedCommits] set correctly.
 category: DevelopmentLifeCycle
 version: "1.0" 
