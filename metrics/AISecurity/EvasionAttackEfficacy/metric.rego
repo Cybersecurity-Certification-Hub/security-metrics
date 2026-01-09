@@ -3,7 +3,7 @@ package cch.metrics.evasion_attack_efficacy
 import data.cch.compare
 import rego.v1
 
-import input.evasionAttackEfficacy as evasion
+import input.evasionEfficacyLevel as evasion
 
 default applicable = false
 
