@@ -52,6 +52,12 @@ jobs:
             --output-path=ontology/1.0/ontology.proto \
             --full-semantic-mode=false \
             --deterministic-field-numbers=true
+        - name: Validate proto file
+        # Check if proto file is valid and can be compiled. 
+        # Store the generated files in a temporary directory to avoid cluttering the repository.
+          run: |
+            mkdir -p "$RUNNER_TEMP/proto"
+            protoc --proto_path=ontology/1.0/ ontology/1.0/ontology.proto --go_out="$RUNNER_TEMP/proto"
         - name: Upload Artifact ontology-merged.owx 
           uses: actions/upload-artifact@v4
           with:
