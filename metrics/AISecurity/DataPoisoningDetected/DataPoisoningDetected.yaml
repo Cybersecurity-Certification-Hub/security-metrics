@@ -5,6 +5,7 @@ category: AISecurity
 version: "1.0"
 comments: An AI model may be trained on poisoned data which can lead to incorrect or biased model predictions. Poisoned data may, for example, be detected by checking for outliers in the data set or by identifying data points that have been intentionally mislabeled.
 # ====== Configuration ======
-p1: 
- operator: "<="
- targetValue: 5
+configuration:
+  p1: 
+    operator: "<="
+    targetValue: 5
