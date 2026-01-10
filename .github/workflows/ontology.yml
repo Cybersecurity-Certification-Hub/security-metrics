@@ -68,7 +68,7 @@ jobs:
             # Download buf/validate repository and include validate.proto
             git clone https://github.com/bufbuild/protovalidate.git
             mkdir -p "$RUNNER_TEMP/validate"
-            cp -r protovalidate/buf/validate/validate.proto "$RUNNER_TEMP/validate"
+            cp -r protovalidate/proto/protovalidate/buf/validate/validate.proto "$RUNNER_TEMP/validate"
             
             # Create temporary directory for generated files
             mkdir -p "$RUNNER_TEMP/proto"
