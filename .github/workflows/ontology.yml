@@ -74,7 +74,7 @@ jobs:
             mkdir -p "$RUNNER_TEMP/proto"
             
             # Validate and compile proto file
-            protoc --proto_path=. --proto_path="$RUNNER_TEMP/validate" ontology/1.0/ontology.proto --go_out="$RUNNER_TEMP/proto"
+            protoc --proto_path=. --proto_path="$RUNNER_TEMP/buf/validate" ontology/1.0/ontology.proto --go_out="$RUNNER_TEMP/proto"
         - name: Upload Artifact ontology-merged.owx 
           uses: actions/upload-artifact@v4
           with:
