@@ -69,7 +69,6 @@ jobs:
             git clone https://github.com/bufbuild/protovalidate.git
             mkdir -p "$RUNNER_TEMP/buf/validate"
             cp -r protovalidate/proto/protovalidate/buf/validate/validate.proto "$RUNNER_TEMP/buf/validate/"
-            ls -R "$RUNNER_TEMP/buf/validate"
             
             # Create temporary directory for generated files
             mkdir -p "$RUNNER_TEMP/proto"
