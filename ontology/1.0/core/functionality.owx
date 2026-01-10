@@ -491,6 +491,24 @@
         <DataProperty abbreviatedIRI="prop:algorithm"/>
     </Declaration>
     <SubClassOf>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <Class abbreviatedIRI="core:PolicyOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:leftPrincipal"/>
+            <Class abbreviatedIRI="core:Principal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:rightPrincipal"/>
+            <Class abbreviatedIRI="core:Principal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:HttpRequestHandler"/>
         <Class abbreviatedIRI="core:Http"/>
     </SubClassOf>
@@ -1231,6 +1249,14 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <Class abbreviatedIRI="core:CipherOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
         <Class abbreviatedIRI="core:CryptographicOperation"/>
     </SubClassOf>
     <SubClassOf>
@@ -1239,6 +1265,27 @@
             <DataProperty abbreviatedIRI="prop:algorithm"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:algorithm"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Encryption"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:Secret"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Error"/>
@@ -1629,6 +1676,16 @@
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:EqualityCheck</AbbreviatedIRI>
+        <Literal>Represents an operation that checks whether two principals are equal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:EqualityCheck</AbbreviatedIRI>
+        <Literal>EqualityCheck</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Principal</AbbreviatedIRI>
         <Literal>Represents a principal that is allowed to access a resource. This can for example be a (structure representing) a user or a group of users.</Literal>
     </AnnotationAssertion>
@@ -1830,7 +1887,6 @@
         <AbbreviatedIRI>core:MemoryOperation</AbbreviatedIRI>
         <Literal>MemoryOperation</Literal>
     </AnnotationAssertion>
-    
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:Main</AbbreviatedIRI>
@@ -2345,7 +2401,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:EncryptionOperation</AbbreviatedIRI>
-        <Literal>Encryption</Literal>
+        <Literal>EncryptionOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

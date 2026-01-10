@@ -297,14 +297,6 @@
         <Class abbreviatedIRI="core:Confidentiality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionOperation"/>
-        <Class abbreviatedIRI="core:CipherOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionOperation"/>
-        <Class abbreviatedIRI="core:Operation"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:ABAC"/>
         <Class abbreviatedIRI="core:Authorization"/>
     </SubClassOf>
@@ -319,11 +311,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:AnomalyDetection"/>
         <Class abbreviatedIRI="core:Auditing"/>
-    </SubClassOf>
-    
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <Class abbreviatedIRI="core:PolicyOperation"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Error"/>
@@ -343,43 +330,6 @@
             <Class abbreviatedIRI="core:ApplicationLog"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:leftPrincipal"/>
-            <Class abbreviatedIRI="core:Principal"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:rightPrincipal"/>
-            <Class abbreviatedIRI="core:Principal"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
-            <Class abbreviatedIRI="core:Encryption"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionOperation"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:algorithm"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="core:Secret"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionInUse"/>
         <DataSomeValuesFrom>

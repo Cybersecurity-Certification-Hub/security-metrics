@@ -5595,11 +5595,6 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/EncryptionOperation</IRI>
-        <Literal>Encryption</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/EncryptionOperation</IRI>
         <Literal>EncryptionOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
