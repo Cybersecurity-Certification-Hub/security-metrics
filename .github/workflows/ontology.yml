@@ -66,9 +66,9 @@ jobs:
             echo "$HOME/go/bin" >> $GITHUB_PATH
             
             # Download buf/validate repository and include validate.proto
-            git clone https://github.com/bufbuild/validate.git
+            git clone https://github.com/bufbuild/protovalidate.git
             mkdir -p "$RUNNER_TEMP/validate"
-            cp -r validate/buf "$RUNNER_TEMP/validate"
+            cp -r proto/protovalidate/buf/validate/validate.proto "$RUNNER_TEMP/validate"
             
             # Create temporary directory for generated files
             mkdir -p "$RUNNER_TEMP/proto"
