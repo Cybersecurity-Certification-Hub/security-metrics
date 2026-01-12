@@ -2,7 +2,7 @@
 id: ErrorCorrectionEnabled
 description: This rule assesses whether a [QPU] has [ErrorCorrectionEnabled] [p1:enabled] correctly configured.
 category: QuantumSecurity
-version: "1.0" 
+version: "v1" 
 comments: Quantum error correction enables reliable execution of quantum circuits.
 # ====== Configuration ======
 configuration:
