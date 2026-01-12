@@ -3,7 +3,7 @@ id: 8d5e6fe4-d600-4e5b-aba6-03035d59f329
 name: L3FirewallRestrictedPorts
 description: This rule assesses whether an [NetworkInterface] that offers the property [l3Firewall], has [p1:restrictedPorts] configured correctly.
 category: NetworkSecurity
-version: "1.0" 
+version: "v1" 
 comments: The L3 Firewall provides network-layer security by controlling traffic based on IP addresses and protocols. It helps protect resources by filtering incoming and outgoing traffic, ensuring that only authorized connections are allowed. This enhances the overall security posture of the networked environment.
 # ====== Configuration ======
 configuration:

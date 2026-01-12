@@ -3,7 +3,7 @@ id: c7121da1-274e-4c6b-b2fe-47df992297a9
 name: AtRestEncryptionEnabled
 description: This rule assesses whether a [Storage] has [AtRestEncryption] [p1:enabled] correctly configured.
 category: StorageEncryption
-version: "1.0" 
+version: "v1" 
 comments: At rest encryption is a standard practice to keep sensitive data confidential when it is stored permanently.
 # ====== Configuration ======
 configuration:

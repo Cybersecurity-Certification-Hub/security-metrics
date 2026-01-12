@@ -3,7 +3,7 @@ id: 14f72a16-4939-47a9-b4d7-3514ee2a8c44
 name: StrongCryptographicHash
 description: This rule assesses whether an [Application] that offers the property [Functionalities.CryptographicHash], has [p1:algorithm] set correctly.
 category: ApplicationSecurity
-version: "1.0" 
+version: "v1" 
 comments: Using strong cryptographic hashes (e.g., SHA-256 or better) ensures data integrity and security against collisions and pre-image attacks.
 # ====== Configuration ======
 configuration:

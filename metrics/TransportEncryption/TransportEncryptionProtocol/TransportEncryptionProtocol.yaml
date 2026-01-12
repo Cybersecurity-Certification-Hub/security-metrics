@@ -3,7 +3,7 @@ id: 85fb5768-61c4-41d7-b2a3-603bfc5726cd
 name: TransportEncryptionProtocol
 description: This rule assesses whether a [Resource] has its [TransportEncryption] [p1:protocol] correctly configured.
 category: TransportEncryption
-version: "1.0" 
+version: "v1" 
 comments: Using TLS (Transport Layer Security) ensures that data in transit is encrypted, providing confidentiality and integrity against eavesdropping and tampering.
 # ====== Configuration ======
 configuration:

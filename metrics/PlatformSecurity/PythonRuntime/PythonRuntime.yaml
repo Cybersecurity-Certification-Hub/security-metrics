@@ -3,7 +3,7 @@ id: 8075e45f-38d8-4c99-94d6-62eebd379e6b
 name: PythonRuntime
 description: This rule assesses whether a [Function] that has the property [runtimeLanguage] set to Python, also has the property [p1:runtimeVersion] correctly configured.
 category: PlatformSecurity
-version: "1.0" 
+version: "v1" 
 comments: This check ensures that the runtime language and version are properly set, mitigating potential security risks and ensuring application reliability.
 # ====== Configuration ======
 configuration:

@@ -3,7 +3,7 @@ id: 42873d13-7816-4bef-a875-d13e36ec9cf5
 name: IdentityInactiveDuration
 description: This rule assesses whether an [Identity]'s property [lastActivity] is below an allowed time [p1:window].
 category: IdentityManagement
-version: "1.0" 
+version: "v1" 
 comments: Users should be active regularly. If a user has not been active for a long time the account should be suspended since it could be forgotten and used later by an attacker.
 # ====== Configuration ======
 configuration:

@@ -3,7 +3,7 @@ id: fff4a65d-dc40-4196-a415-89163dd9b024
 name: SPAMErrorRate
 description: This rule assesses whether a [QPU] has a [SPAMErrorRate] that is below a specified [p1:errorRate] threshold.
 category: QuantumSecurity
-version: "1.0" 
+version: "v1" 
 comments: State preparation and measuremnet (SPAM) error rates are a standard measure for the reliability of readout of the results for a quantum circuit.
 # ====== Configuration ======
 configuration:

@@ -3,7 +3,7 @@ id: 84eaed86-759d-4419-9954-f3d3ea1f5200
 name: AutomaticUpdatesEnabled
 description: This rule assesses whether a [VirtualMachine] that offers the property [AutomaticUpdates], has [p1:enabled] configured correctly.
 category: EndpointSecurity
-version: "1.0" 
+version: "v1" 
 comments: Resources like virtual machines often offer a simple configuration that automatically installs updates, e.g. critical security updates.
 # ====== Configuration ======
 configuration:

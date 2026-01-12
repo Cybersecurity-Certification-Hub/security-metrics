@@ -3,7 +3,7 @@ id: ff45f41b-11dd-4419-9d65-19f91735c661
 name: JavaRuntime
 description: This rule assesses whether a [Function] that has the property [runtimeLanguage] set to Java, also has the property [p1:runtimeVersion] correctly configured.
 category: PlatformSecurity
-version: "1.0" 
+version: "v1" 
 comments: This check ensures that the runtime language and version are properly set, mitigating potential security risks and ensuring application reliability.
 # ====== Configuration ======
 configuration:

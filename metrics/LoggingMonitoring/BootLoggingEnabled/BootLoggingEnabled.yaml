@@ -3,7 +3,7 @@ id: bb41142b-ce8c-4c5c-9b42-360f015fd325
 name: BootLoggingEnabled
 description: This rule assesses whether an [VirtualMachine] has its [BootLogging][p1:enabled] property set correctly.
 category: LoggingMonitoring
-version: "1.0" 
+version: "v1" 
 comments: Enabling boot logging captures detailed information about the boot process, helping to identify issues and troubleshoot startup problems. It provides insights into system performance and stability, ensuring a reliable and efficient resource operation.
 # ====== Configuration ======
 configuration:

@@ -3,7 +3,7 @@ id: 3d2996d0-f41d-4283-b574-71aec7912cd2
 name: ActivityLoggingEnabled
 description: This rule assesses whether any [Resource] has the [ResourceLogging] property [p1:enabled] set correctly.
 category: LoggingMonitoring
-version: "1.0" 
+version: "v1" 
 comments: Activity logging records actions taken on resources, capturing details about create, update, and delete operations. It provides an audit trail that helps in monitoring usage, troubleshooting issues, and ensuring compliance with policies across various systems and platforms. 
 # ====== Configuration ======
 configuration:
