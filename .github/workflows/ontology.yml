@@ -32,41 +32,41 @@ jobs:
         # Delete core/evidence.owx from catalog file. We do not need the evidence object in the merged ontology, that would lead to an error in the proto file generation.
         - name: Delete evidence.owx from catalog file
           run: |
-            sed -i '/uri="core\/evidence\.owx"/d' ontology/1.0/catalog-v001.xml
+            sed -i '/uri="core\/evidence\.owx"/d' ontology/v1/catalog-v001.xml
         - name: Delete evidence.owx from core file
           run: |
-             sed -i '/<Import>https:\/\/ontology.cybersecuritycertcluster.eu\/core\/evidence<\/Import>/d' ontology/1.0/core.owx
+             sed -i '/<Import>https:\/\/ontology.cybersecuritycertcluster.eu\/core\/evidence<\/Import>/d' ontology/v1/core.owx
         - name: Merge owx files
           uses: docker://eclipse-temurin
           with:
             args: java -jar robot.jar -vvv merge 
-              --catalog ontology/1.0/catalog-v001.xml
-              --input ontology/1.0/ontology.owx 
-              --output ontology/1.0/ontology-merged.owx
+              --catalog ontology/v1/catalog-v001.xml
+              --input ontology/v1/ontology.owx 
+              --output ontology/v1/ontology-merged.owx
         - name: Generate proto file for ontology
           run: |
             go install github.com/oxisto/owl2proto/cmd/owl2proto@latest
             $HOME/go/bin/owl2proto generate-proto \
-            --root-resource-name=/classes/Resource ontology/1.0/ontology-merged.owx \
+            --root-resource-name=/classes/Resource ontology/v1/ontology-merged.owx \
             --header-file=ontology/csc_hub_header.proto \
-            --output-path=ontology/1.0/ontology.proto \
+            --output-path=ontology/v1/ontology.proto \
             --full-semantic-mode=false \
             --deterministic-field-numbers=true
         - name: Upload Artifact ontology-merged.owx 
           uses: actions/upload-artifact@v4
           with:
             name: ontology-merged
-            path: ontology/1.0/merged/ontology-merged.owx 
+            path: ontology/v1/merged/ontology-merged.owx 
         - name: Commit merged OWX file
           run: |
-              git add ontology/1.0/ontology-merged.owx 
+              git add ontology/v1/ontology-merged.owx 
               git commit -m "Add merged ontology file [skip ci]" || echo "No changes to commit"
               git push
           env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         - name: Commit ontology.proto file
           run: |
-              git add ontology/1.0/ontology.proto
+              git add ontology/v1/ontology.proto
               git commit -m "Add generated proto file [skip ci]" || echo "No changes to commit"
               git push
           env:
