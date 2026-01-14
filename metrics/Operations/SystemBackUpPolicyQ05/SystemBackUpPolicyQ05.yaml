@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["backup", "schedule"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses the backup frequency. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the backup frequency. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in days]"
 # ====== Configuration ======
 configuration:
   p1:

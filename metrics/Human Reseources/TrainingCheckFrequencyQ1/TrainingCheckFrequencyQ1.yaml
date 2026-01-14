@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["completion frequency", "security training", "verification"]
 category: "Human Reseources"
 version: "1.0"
-comments: "This metric assesses the frequency of monitoring training completion. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the frequency of monitoring training completion. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months]"
 # ====== Configuration ======
 configuration:
   p1:

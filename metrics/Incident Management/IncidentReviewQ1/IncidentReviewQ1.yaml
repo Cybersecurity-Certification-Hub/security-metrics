@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["incident review", "handling frequency", "security incidents", "response evaluation"]
 category: "Incident Management"
 version: "1.0"
-comments: "This metric assesses the review frequency of incident handling and responses. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the review frequency of incident handling and responses. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months]"
 # ====== Configuration ======
 configuration:
   p1:
