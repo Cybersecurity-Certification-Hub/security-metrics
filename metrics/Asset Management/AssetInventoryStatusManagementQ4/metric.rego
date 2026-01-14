@@ -9,7 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    document
+    "PolicyDocument" in document.type
 }
 
 compliant if {
