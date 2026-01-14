@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "9ff75498-e0b8-4ffc-b69d-bdaac9233a9d"
 name: "AssetInventoryStatusManagementQ4"
-description: "This rule assesses whether a [Resource] that offers the property [AssetInventory.AssetStatus], has [p1:statusOption] set correctly. This metric assesses the current status of assets. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [AssetInventory.AssetStatus], has [p1:statusOption] set correctly."
 implementationGuidelines:
   AMOE:
     question: "What status do the assets have?"
     keywords: ["asset status", "coverage", "completeness", "inventory"]
 category: "Asset Management"
 version: "1.0"
-comments: "TBD"
+comments: "This metric assesses the current status of assets. | Selector: PolicyDocument (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "84f6f1f0-5851-4b39-91f2-142f248c0a19"
 name: "IncidentManagementPolicy09"
-description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Procedure], has [p1:identificationProcess] set correctly. This metric assesses how sources of information are used to identify incidents. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Procedure], has [p1:identificationProcess] set correctly."
 implementationGuidelines:
   AMOE:
     question: "How are sources of information considered for identifying incidents?"
     keywords: ["incident identification", "sources", "security-relevant"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "TBD"
+comments: "This metric assesses how sources of information are used to identify incidents. | Selector: PolicyDocument (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

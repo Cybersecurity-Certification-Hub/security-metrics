@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "e6eff50d-2936-4734-9764-c80350383d91"
 name: "AssetInventoryAuditFrequencyQ5"
-description: "This rule assesses whether a [Resource] that offers the property [AssetInventory], has [p1:auditInterval] set correctly. This metric assesses the frequency of asset inventory audits. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [AssetInventory], has [p1:auditInterval] set correctly."
 implementationGuidelines:
   AMOE:
     question: "How often is the asset inventory audit done?"
     keywords: ["audit", "frequency", "inventory"]
 category: "Asset Management"
 version: "1.0"
-comments: "TBD"
+comments: "This metric assesses the frequency of asset inventory audits. | Selector: PolicyDocument (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

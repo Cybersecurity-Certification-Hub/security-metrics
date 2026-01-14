@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "8af5bf55-ed8e-47f8-b323-4ff2c18197e8"
 name: "OperationalSecurityReviewQ2"
-description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Procedure], has [p1:reviewInterval] set correctly. This metric assesses how often safeguard effectiveness is reviewed. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Procedure], has [p1:reviewInterval] set correctly."
 implementationGuidelines:
   AMOE:
     question: "How often is the effectiveness of safeguards reviewed?"
     keywords: ["safeguards effectiveness", "review frequency"]
 category: "Operations"
 version: "1.0"
-comments: "TBD"
+comments: "This metric assesses how often safeguard effectiveness is reviewed. | Selector: PolicyDocument (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

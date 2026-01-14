@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "7a1df4f2-e0c0-4999-912e-b2829a8172a5"
 name: "AccessAttemptQ1"
-description: "This rule assesses whether a [Resource] that offers the property [AccessManagement], has [p1:skipForNow - not relevant / requires updates] set correctly. This metric assesses whether recent authentication attempts are tracked and stored. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [AccessManagement], has [p1:skipForNow - not relevant / requires updates] set correctly."
 implementationGuidelines:
   AMOE:
     question: "Are the authentication attempts that were logged in tracked and safed of the last hours?"
     keywords: ["authentication attempts", "logging", "timestamp"]
 category: "Identity & Access Management"
 version: "1.0"
-comments: "TBD"
+comments: "This metric assesses whether recent authentication attempts are tracked and stored. | Selector: PolicyDocument (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

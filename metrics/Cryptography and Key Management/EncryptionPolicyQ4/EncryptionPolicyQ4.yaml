@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "5e26a8d5-8d0a-48fe-9eaf-88b5b2501897"
 name: "EncryptionPolicyQ4"
-description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption.AES], has [p1:keyLength] set correctly. This metric assesses the required minimum AES key length. | Selector: PolicyDocument (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption.AES], has [p1:keyLength] set correctly."
 implementationGuidelines:
   AMOE:
     question: "What minimum key length must the Advanced Encryption Algorithm (AES) standard have? "
     keywords: ["AES", "encryption mechanisms", "mobile devices", "portable devices"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "TBD"
+comments: "This metric assesses the required minimum AES key length. | Selector: PolicyDocument (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:
