@@ -3,6 +3,7 @@
     "documentLocation": {
         "remoteDocumentLocation": {
             "authenticity": {
+                "certificateBasedAuthentication": {}
                 "noAuthentication": {
                     "contextIsChecked": false
                 }
@@ -27,7 +28,7 @@
     "filetype": "JSON",
     "id": "some-id",
     "labels": {
-        "tlp": "WHITE"
+        "tlp": "RED"
     },
     "name": "Buffer overflow in Test Product",
     "raw": "",
