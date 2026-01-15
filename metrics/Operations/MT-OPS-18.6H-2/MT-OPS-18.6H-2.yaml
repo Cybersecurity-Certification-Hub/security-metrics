@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "ecdc44a0-5cb3-4484-93ca-4aac191caafe"
-name: "MT-OPS-18.6H-2"
+name: "PatchImplementationTime"
 description: "This rule assesses whether a [Resource] that offers the property [Operations.Patch], has [p1:timeForImplementation] set correctly."
 implementationGuidelines:
   FSC:

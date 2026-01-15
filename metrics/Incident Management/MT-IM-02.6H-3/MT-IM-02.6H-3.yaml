@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "50cb5fec-bd79-4108-af20-e67754cc6c83"
-name: "MT-IM-02.6H-3"
+name: "IncidentManagementEscalationRate"
 description: "This rule assesses whether a [Resource] that offers the property [IncidentManagement], has [p1:correctIncidentEscalationRate] set correctly."
 implementationGuidelines:
   FSC:

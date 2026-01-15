@@ -1,15 +1,15 @@
 # ====== Metadata ======
 id: "c9b6d8ad-bbc5-4355-af7a-e256b8698d4b"
-name: "MT-HR-04.3H-2"
-description: "Percentage of successfully completed annual security awareness and training program - Check whether the last completion of the security awareness and training program was less than a year ago for each employee. There is the possibility to build in different escalation steps for timeframes. (e.g. one month before training expires notification to employee, 1 week before training expires notification to manager of the employee etc.) | Selector: humanResources.training.securityTraining (Resource Type)"
+name: "CompletedSecurityTrainingsPercentage"
+description: "This rule assesses whether a [Resource] that offers the property [HumanReseources.SecurityTraining], has [p1:percentOfCompletedSecurityTrainings] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Employee List that have to complete annual security and awareness program", "- Date of last completion of the security awareness and training program for each employee"]
 category: "Human Reseources"
 version: "1.0"
-comments: "TBD"
+comments: "Percentage of successfully completed annual security awareness and training program - Check whether the last completion of the security awareness and training program was less than a year ago for each employee. There is the possibility to build in different escalation steps for timeframes. (e.g. one month before training expires notification to employee, 1 week before training expires notification to manager of the employee etc.) | Selector: humanResources.training.securityTraining (Resource Type) [TargetValue is measured in percent]"
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "TBD"
-    targetValue: "1"
+    operator: "=="
+    targetValue: "100"

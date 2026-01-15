@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "20105c79-6d4c-4a42-b1d3-2861182d2e6b"
-name: "MT-OIS-02.6H-1"
+name: "RFCConfictOfInterestRate"
 description: "This rule assesses whether a [Resource] that offers the property [OrganisationofInformationSecurity.RFC], has [p1:conflictOfInterestRate] set correctly."
 implementationGuidelines:
   FSC:

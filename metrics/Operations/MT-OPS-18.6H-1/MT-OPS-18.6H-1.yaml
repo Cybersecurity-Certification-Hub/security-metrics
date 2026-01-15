@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "4459a94d-bda0-4a84-a47d-0abdf208c14c"
-name: "MT-OPS-18.6H-1"
+name: "PatchApprovedBeforeImplementation"
 description: "This rule assesses whether a [Resource] that offers the property [Operations.Patch], has [p1:approvedBeforeImplementation] set correctly."
 implementationGuidelines:
   FSC:

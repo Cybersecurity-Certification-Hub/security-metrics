@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "6ba0c7e7-12b9-4b24-b710-dd8284572d08"
-name: "MT-CCM-04.1H-3"
+name: "ChangeApprovalByCSC"
 description: "This rule assesses whether a [Resource] that offers the property [ChangeAndConfigurationManagment.RFC], has [p1:changeApprovedByCSC] set correctly."
 implementationGuidelines:
   FSC:

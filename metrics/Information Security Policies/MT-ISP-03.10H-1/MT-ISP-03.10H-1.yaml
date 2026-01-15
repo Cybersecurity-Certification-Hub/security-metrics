@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "8c1f34ac-92e9-4310-8714-b9f0cf412aa4"
-name: "MT-ISP-03.10H-1"
+name: "InformationSecurityPoliciesExceptionsNotApproved"
 description: "This rule assesses whether a [Resource] that offers the property [InformationSecurityPolicies.Exceptions], has [p1:numberOfNotApprovedExceptions] set correctly."
 implementationGuidelines:
   FSC:

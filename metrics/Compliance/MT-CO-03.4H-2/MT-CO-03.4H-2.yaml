@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "cf1c1d03-059a-44c7-a681-14c215474922"
-name: "MT-CO-03.4H-2"
+name: "NumberOfUnresolvedAuditNonConformities"
 description: "This rule assesses whether a [Resource] that offers the property [Compliance.Audit], has [p1:unresolvedNonConformities] set correctly."
 implementationGuidelines:
   FSC:

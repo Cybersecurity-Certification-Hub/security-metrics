@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "da14a6ff-699f-4913-83f4-02a58c82d677"
-name: "MT-IM-02.6H-2"
+name: "IncidentManagementResolutionTime"
 description: "This rule assesses whether a [Resource] that offers the property [IncidentManagement], has [p1:timeUntilSolved] set correctly."
 implementationGuidelines:
   FSC:

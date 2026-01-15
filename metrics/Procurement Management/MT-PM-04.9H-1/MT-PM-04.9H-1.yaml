@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "88f207fe-6145-42af-985d-8f5e5014594f"
-name: "MT-PM-04.9H-1"
+name: "SupplierPerformanceScore"
 description: "This rule assesses whether a [Resource] that offers the property [ProcurementManagement], has [p1:supplierPerformanceScore] set correctly."
 implementationGuidelines:
   FSC:

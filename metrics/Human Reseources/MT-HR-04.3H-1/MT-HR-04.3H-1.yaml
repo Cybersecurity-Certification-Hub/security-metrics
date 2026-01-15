@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "ba9973d2-9ad3-4677-8b55-e3906fa17096"
-name: "MT-HR-04.3H-1"
-description: "This rule assesses whether a [Resource] that offers the property [HumanReseources.SecurityTraining], has [p1:numberOfUncompletedSecurityTraining] set correctly."
+name: "NumberOfUncompletedSecurityTrainings"
+description: "This rule assesses whether a [Resource] that offers the property [HumanReseources.SecurityTraining], has [p1:numberOfUncompletedSecurityTrainings] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Hiring dates of new employees", "- Information on security awareness and training program participation", "- Allowed timeframe to complete trainings"]

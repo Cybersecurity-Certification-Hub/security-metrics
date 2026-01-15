@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "a410f24b-6005-4a4d-b26e-882515510c44"
-name: "MT-CCM-05.4H-1"
+name: "ChangeApprovalByAuthorizedPersonnelBeforeDeployment"
 description: "This rule assesses whether a [Resource] that offers the property [ChangeAndConfigurationManagment.RFC], has [p1:changeApprovedByAuthorizedPersonnelBeforeDeployment] set correctly."
 implementationGuidelines:
   FSC:

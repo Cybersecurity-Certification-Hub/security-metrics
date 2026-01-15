@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "64376f59-132d-40e3-b1d0-e9f159a0b62b"
-name: "MT-OPS-05.3H-6"
+name: "AntiMalwareProtectionEnabled"
 description: "This rule assesses whether a [Resource] that offers the property [AntiMalware], has [p1:enabled] set correctly."
 implementationGuidelines:
   AppTelemetry:

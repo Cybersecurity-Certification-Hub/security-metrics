@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "8263b02e-a039-4950-b509-ba387de6a709"
-name: "MT-PM-04.8H-2"
+name: "SecurityIncidentResponseTime"
 description: "This rule assesses whether a [Resource] that offers the property [ProcurementManagement], has [p1:responseTime] set correctly."
 implementationGuidelines:
   FSC:

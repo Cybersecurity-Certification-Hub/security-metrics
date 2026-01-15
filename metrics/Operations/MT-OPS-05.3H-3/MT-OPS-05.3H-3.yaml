@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "2327f913-1b7c-4d37-b1c9-f5f61791a9da"
-name: "MT-OPS-05.3H-3"
+name: "AntiMalwareUpdateInterval"
 description: "This rule assesses whether a [Resource] that offers the property [AntiMalware], has [p1:updateInterval] set correctly."
 implementationGuidelines:
   AppTelemetry:

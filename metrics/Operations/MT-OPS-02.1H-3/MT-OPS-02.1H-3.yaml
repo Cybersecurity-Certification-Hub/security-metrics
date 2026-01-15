@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "9477dde6-2a17-4ddb-a8c9-ad1f5b122c0e"
-name: "MT-OPS-02.1H-3"
+name: "CloudAssetDeProvisioningTime"
 description: "This rule assesses whether a [Resource] that offers the property [Operations.CloudAsset], has [p1:deProvisioningTime] set correctly."
 implementationGuidelines:
   FSC:

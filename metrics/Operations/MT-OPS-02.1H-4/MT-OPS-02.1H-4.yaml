@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "9010e367-a0e9-43f4-b8ca-3247f111f85b"
-name: "MT-OPS-02.1H-4"
+name: "CloudAssetProvisioningIncidentRate"
 description: "This rule assesses whether a [Resource] that offers the property [Operations.CloudAsset], has [p1:provisioningIncidentRate] set correctly."
 implementationGuidelines:
   FSC:
