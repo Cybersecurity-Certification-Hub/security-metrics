@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- (security) incidents", "- Resolution times documented in (security) incident ticket"]
 category: "Incident Management"
 version: "1.0"
-comments: "Timely resolution of information security incidents - Check whether an incident was solved within the specified time period | Selector: TBD (Resource Type)"
+comments: "Timely resolution of information security incidents - Check whether an incident was solved within the specified time period | Selector: TBD (Resource Type) [TargetValue is measured in hours]"
 # ====== Configuration ======
 configuration:
   p1:

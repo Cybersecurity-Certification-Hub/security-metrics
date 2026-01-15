@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Number of access events by investigators per time period (e.g., weekly, monthly, etc.)", "- Number of monitored access events by CSP"]
 category: "Assessment Inquireies"
 version: "1.0"
-comments: "Percentage of investigator access events reviewed within a define time period - Check whether an access event (e.g., logs) are monitored | Selector: TBD (Resource Type)"
+comments: "Percentage of investigator access events reviewed within a define time period - Check whether an access event (e.g., logs) are monitored | Selector: TBD (Resource Type) [TargetValue is measured in percent]"
 # ====== Configuration ======
 configuration:
   p1:

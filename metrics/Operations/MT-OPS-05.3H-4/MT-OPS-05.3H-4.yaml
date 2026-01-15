@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Malware protection scanning results", "- Affected Cloud Asset "]
 category: "Operations"
 version: "1.0"
-comments: "Number of detected irregularities - Check Log Files of regular scans for irregularities and track them per affected Cloud Asset | Selector: TBD (Resource Type)"
+comments: "Number of detected irregularities - Check Log Files of regular scans for irregularities and track them per affected Cloud Asset | Selector: TBD (Resource Type) [TargetValue is measured in units]"
 # ====== Configuration ======
 configuration:
   p1:

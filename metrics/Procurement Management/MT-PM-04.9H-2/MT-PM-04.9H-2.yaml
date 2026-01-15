@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Date and time of identification of the third party violation ", "- Information on (internal) resolution time"]
 category: "Procurement Management"
 version: "1.0"
-comments: "Timely resolution of identified third party violations - Check whether identified violations/discrepancies from third parties are resolved in a timely manner | Selector: TBD (Resource Type)"
+comments: "Timely resolution of identified third party violations - Check whether identified violations/discrepancies from third parties are resolved in a timely manner | Selector: TBD (Resource Type) [TargetValue is measured in units]"
 # ====== Configuration ======
 configuration:
   p1:

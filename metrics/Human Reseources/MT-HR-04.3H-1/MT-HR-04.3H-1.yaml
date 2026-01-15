@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Hiring dates of new employees", "- Information on security awareness and training program participation", "- Allowed timeframe to complete trainings"]
 category: "Human Reseources"
 version: "1.0"
-comments: "Number of new employees that have not timely completed the security awareness and training program - Check whether new employee completed the security awareness and training program within a defined timeframe | Selector: TBD (Resource Type)"
+comments: "Number of new employees that have not timely completed the security awareness and training program - Check whether new employee completed the security awareness and training program within a defined timeframe | Selector: TBD (Resource Type) [TargetValue is measured in units]"
 # ====== Configuration ======
 configuration:
   p1:

@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- (security) incidents", "- Response times documented in (security) incident ticket"]
 category: "Incident Management"
 version: "1.0"
-comments: "Timely response to identified information security incidents - Check whether an incident was responded to within the specified time period | Selector: TBD (Resource Type)"
+comments: "Timely response to identified information security incidents - Check whether an incident was responded to within the specified time period | Selector: TBD (Resource Type) [TargetValue is measured in hours]"
 # ====== Configuration ======
 configuration:
   p1:
