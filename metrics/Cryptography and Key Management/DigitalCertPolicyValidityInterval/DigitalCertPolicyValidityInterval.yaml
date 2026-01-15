@@ -13,4 +13,4 @@ comments: "This metric assesses the validity period of wildcard digital certific
 configuration:
   p1:
     operator: "<="
-    targetValue: "3"
+    targetValue: 3

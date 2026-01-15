@@ -1,4 +1,4 @@
 {
     "operator": "<=",
-    "target_value": "50"
+    "target_value": 50
 }

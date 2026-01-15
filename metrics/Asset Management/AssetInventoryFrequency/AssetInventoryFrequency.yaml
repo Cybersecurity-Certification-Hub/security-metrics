@@ -13,4 +13,4 @@ comments: "This metric assesses the frequency of asset inventory updates. | Sele
 configuration:
   p1:
     operator: "<="
-    targetValue: "12"
+    targetValue: 12

@@ -13,4 +13,4 @@ comments: "This metric assesses whether recent authentication attempts are track
 configuration:
   p1:
     operator: ">="
-    targetValue: "24"
+    targetValue: 24

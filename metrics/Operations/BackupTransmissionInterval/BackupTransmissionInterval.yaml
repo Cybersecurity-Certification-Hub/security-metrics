@@ -13,4 +13,4 @@ comments: "This metric assesses the frequency of backup transmissions. | Selecto
 configuration:
   p1:
     operator: "<="
-    targetValue: "1"
+    targetValue: 1

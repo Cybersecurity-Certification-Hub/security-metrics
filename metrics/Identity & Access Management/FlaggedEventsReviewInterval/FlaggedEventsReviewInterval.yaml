@@ -13,4 +13,4 @@ comments: "This metric assesses the review timeframe for flagged events post-rep
 configuration:
   p1:
     operator: "<="
-    targetValue: "12"
+    targetValue: 12

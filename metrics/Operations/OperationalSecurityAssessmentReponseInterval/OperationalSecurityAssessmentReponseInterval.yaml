@@ -13,4 +13,4 @@ comments: "This metric assesses the implementation timeframe for documented safe
 configuration:
   p1:
     operator: "<="
-    targetValue: "12"
+    targetValue: 12

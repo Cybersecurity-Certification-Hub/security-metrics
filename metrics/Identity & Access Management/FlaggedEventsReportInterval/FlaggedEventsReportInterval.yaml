@@ -13,4 +13,4 @@ comments: "This metric assesses the reporting timeframe for detected flagged eve
 configuration:
   p1:
     operator: "<="
-    targetValue: "12"
+    targetValue: 12

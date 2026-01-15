@@ -13,4 +13,4 @@ comments: "This metric assesses the deletion timeframe for log data. | Selector:
 configuration:
   p1:
     operator: "<="
-    targetValue: "100"
+    targetValue: 100

@@ -13,4 +13,4 @@ comments: "This metric assesses the resolution timeframe for detected issues. | 
 configuration:
   p1:
     operator: "<="
-    targetValue: "12"
+    targetValue: 12

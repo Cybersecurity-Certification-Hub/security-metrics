@@ -13,4 +13,4 @@ comments: "This metric assesses the required timeframe for recording asset statu
 configuration:
   p1:
     operator: "<="
-    targetValue: "12"
+    targetValue: 12

@@ -13,4 +13,4 @@ comments: "This metric assesses the review frequency of exception lists for vali
 configuration:
   p1:
     operator: "<="
-    targetValue: "12"
+    targetValue: 12

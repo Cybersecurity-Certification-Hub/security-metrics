@@ -13,4 +13,4 @@ comments: "This metric assesses the backup frequency. | Selector: PolicyDocument
 configuration:
   p1:
     operator: "=="
-    targetValue: "1"
+    targetValue: 1

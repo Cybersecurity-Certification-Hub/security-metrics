@@ -13,4 +13,4 @@ comments: "This metric assesses the recommended frequency of process verificatio
 configuration:
   p1:
     operator: "<="
-    targetValue: "12"
+    targetValue: 12

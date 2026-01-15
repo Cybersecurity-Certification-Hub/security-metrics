@@ -13,4 +13,4 @@ comments: "This metric assesses the retention period of log data. | Selector: Po
 configuration:
   p1:
     operator: "<="
-    targetValue: "100"
+    targetValue: 100

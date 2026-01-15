@@ -13,4 +13,4 @@ comments: "This metric assesses the duration of account blocks after failed logi
 configuration:
   p1:
     operator: ">="
-    targetValue: "1"
+    targetValue: 1

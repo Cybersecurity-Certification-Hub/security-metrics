@@ -13,4 +13,4 @@ comments: "This metric assesses the testing frequency of the data restore proces
 configuration:
   p1:
     operator: "<="
-    targetValue: "100"
+    targetValue: 100

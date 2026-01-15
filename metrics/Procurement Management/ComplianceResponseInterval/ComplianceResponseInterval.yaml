@@ -13,4 +13,4 @@ comments: "This metric assesses the maximum incident response time allowed. | Se
 configuration:
   p1:
     operator: "<="
-    targetValue: "12"
+    targetValue: 12

@@ -13,4 +13,4 @@ comments: "This metric assesses the required testing frequency of the Incident M
 configuration:
   p1:
     operator: "<="
-    targetValue: "1"
+    targetValue: 1

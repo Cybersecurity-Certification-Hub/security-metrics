@@ -13,4 +13,4 @@ comments: "This metric assesses the required minimum certificate key length. | S
 configuration:
   p1:
     operator: ">="
-    targetValue: "2048"
+    targetValue: 2048

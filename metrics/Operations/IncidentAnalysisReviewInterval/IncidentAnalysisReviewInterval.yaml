@@ -13,4 +13,4 @@ comments: "This metric assesses the frequency of analyzing vulnerability and inc
 configuration:
   p1:
     operator: "<="
-    targetValue: "30"
+    targetValue: 30
