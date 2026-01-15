@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "4b028a96-05f6-4786-9729-2bf9bf9c23d3"
-name: "LogDataRetentionTimeQ1"
+name: "LogDataRetentionTime"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Log], has [p1:retentionInterval] set correctly."
 implementationGuidelines:
   AMOE:

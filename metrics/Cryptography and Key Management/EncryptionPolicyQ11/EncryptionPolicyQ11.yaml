@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "874096f5-6b13-4e3b-bcac-33c22789d9ab"
-name: "EncryptionPolicyQ11"
+name: "WebServicesRequiringInTransitEncryption"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption.WebService], has [p1:type] set correctly."
 implementationGuidelines:
   AMOE:

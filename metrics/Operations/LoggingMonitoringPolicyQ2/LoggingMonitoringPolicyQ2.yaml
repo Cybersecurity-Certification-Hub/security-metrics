@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "26853fc8-0cd6-4f2e-b7a7-14d4addf1674"
-name: "LoggingMonitoringPolicyQ2"
+name: "LoggingMonitoringFacilityType"
 description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event], has [p1:facilityType] set correctly."
 implementationGuidelines:
   AMOE:

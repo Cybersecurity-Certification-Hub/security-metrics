@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "76a94461-c17e-4820-89ec-8c1cd470ddba"
-name: "EventMonitoringPolicyCheckQ1"
+name: "EventMonitoringTypes"
 description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event.SIEM], has [p1:types] set correctly."
 implementationGuidelines:
   AMOE:

@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "7f48eb80-a394-4920-bccb-0855ba985e01"
-name: "EncryptionPolicyQ7"
+name: "TLSVersionPolicy"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption.TLS], has [p1:type] set correctly."
 implementationGuidelines:
   AMOE:

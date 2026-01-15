@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "cd8e50ab-074a-41d6-a93d-b9ce882c3d44"
-name: "EncryptionPolicyCheckQ3"
+name: "EncryptionType"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption], has [p1:type] set correctly."
 implementationGuidelines:
   AMOE:

@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "6f92da23-50c6-4b1e-8fed-7417fd86f761"
-name: "HardeningReviewFrequencyQ2"
+name: "HardeningReviewInterval"
 description: "This rule assesses whether a [Resource] that offers the property [SystemComponent.HardeningRequirements], has [p1:reviewInterval] set correctly."
 implementationGuidelines:
   AMOE:

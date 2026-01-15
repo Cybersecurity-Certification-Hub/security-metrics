@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "18e8e2dd-f7d9-4329-b990-229757dbcab7"
-name: "EncryptionPolicyQ8"
+name: "TLSKeyLength"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption.TLS], has [p1:keyLength] set correctly."
 implementationGuidelines:
   AMOE:

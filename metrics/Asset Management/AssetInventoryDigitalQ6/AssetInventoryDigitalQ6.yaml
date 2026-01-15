@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "50c0d4d5-1780-473d-b7fd-dcd0a159fe60"
-name: "AssetInventoryDigitalQ6"
+name: "AssetInventoryDigitalAuditFrequency"
 description: "This rule assesses whether a [Resource] that offers the property [AssetInventory.Digital], has [p1:auditInterval] set correctly."
 implementationGuidelines:
   AMOE:

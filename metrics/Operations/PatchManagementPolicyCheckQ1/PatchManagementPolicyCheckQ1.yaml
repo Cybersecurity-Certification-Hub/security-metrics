@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "539cb290-e895-471e-b12c-02784d2a30de"
-name: "PatchManagementPolicyCheckQ1"
+name: "PatchManagementPocedureSubSystems"
 description: "This rule assesses whether a [Resource] that offers the property [PatchManagement.Procedure], has [p1:subsystems] set correctly."
 implementationGuidelines:
   AMOE:

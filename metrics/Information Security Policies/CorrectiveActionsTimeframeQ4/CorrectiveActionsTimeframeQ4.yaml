@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "44970a0c-7db3-4c1f-8071-49b258bdee10"
-name: "CorrectiveActionsTimeframeQ4"
+name: "CorrectiveActionsReviewInterval"
 description: "This rule assesses whether a [Resource] that offers the property [InformationSecurityPolicy.Exceptions.CorrectiveAction], has [p1:reviewInterval] set correctly."
 implementationGuidelines:
   AMOE:

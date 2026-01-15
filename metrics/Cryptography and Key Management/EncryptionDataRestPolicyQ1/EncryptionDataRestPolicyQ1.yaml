@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "b960a7bc-e6b9-4ee1-99b0-45ecc5799523"
-name: "EncryptionDataRestPolicyQ1"
+name: "EncryptionDataRestPolicyMechanism"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption], has [p1:mechanism] set correctly."
 implementationGuidelines:
   AMOE:

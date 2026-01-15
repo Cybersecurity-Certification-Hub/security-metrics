@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "959aecc4-ca9d-4cfa-b248-fa72aa0bc55c"
-name: "DigitalCertPolicy01"
+name: "DigitalCertPolicySupportedTypes"
 description: "This rule assesses whether a [Resource] that offers the property [DigitalCertificate], has [p1:type] set correctly."
 implementationGuidelines:
   AMOE:

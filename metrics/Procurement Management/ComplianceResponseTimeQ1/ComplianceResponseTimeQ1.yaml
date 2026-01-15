@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "ada880de-be30-449b-b64e-9512d035c6fd"
-name: "ComplianceResponseTimeQ1"
+name: "ComplianceResponseInterval"
 description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event], has [p1:responseInterval] set correctly."
 implementationGuidelines:
   AMOE:

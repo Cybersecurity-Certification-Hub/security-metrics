@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "7ac64015-c0a0-4b78-af84-47c05e6c25f5"
-name: "SystemBackUpStorage01"
+name: "SystemBackUpStorageLocation"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Backup], has [p1:location] set correctly."
 implementationGuidelines:
   AMOE:

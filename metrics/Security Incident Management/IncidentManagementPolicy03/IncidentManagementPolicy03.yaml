@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "dbf71724-fd4d-4fdb-ad8a-6fea19eabaaf"
-name: "IncidentManagementPolicy03"
+name: "IncidentManagementEvidenceNaintainanceTeam"
 description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Evidence], has [p1:team] set correctly."
 implementationGuidelines:
   AMOE:

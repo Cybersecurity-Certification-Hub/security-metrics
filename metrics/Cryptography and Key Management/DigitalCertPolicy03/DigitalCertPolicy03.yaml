@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "42a5a738-3ce4-4b50-a32c-69758682eef8"
-name: "DigitalCertPolicy03"
+name: "DigitalCertPolicyValidityInterval"
 description: "This rule assesses whether a [Resource] that offers the property [DigitalCertificate], has [p1:validityInterval] set correctly."
 implementationGuidelines:
   AMOE:

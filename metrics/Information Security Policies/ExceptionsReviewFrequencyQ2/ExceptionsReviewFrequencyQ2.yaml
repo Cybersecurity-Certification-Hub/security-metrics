@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "f9dff7ab-d6b7-40e1-abf1-73d14ee70547"
-name: "ExceptionsReviewFrequencyQ2"
+name: "InformationSecurityPolicyExceptionsReviewFrequency"
 description: "This rule assesses whether a [Resource] that offers the property [InformationSecurityPolicy.Exceptions], has [p1:reviewInterval] set correctly."
 implementationGuidelines:
   AMOE:

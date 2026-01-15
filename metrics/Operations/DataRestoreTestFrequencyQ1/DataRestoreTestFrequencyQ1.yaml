@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "4657f70f-3a89-459e-aa4d-8a942e7daf12"
-name: "DataRestoreTestFrequencyQ1"
+name: "DataRestoreTestFrequency"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Backup.Restore], has [p1:testInterval] set correctly."
 implementationGuidelines:
   AMOE:

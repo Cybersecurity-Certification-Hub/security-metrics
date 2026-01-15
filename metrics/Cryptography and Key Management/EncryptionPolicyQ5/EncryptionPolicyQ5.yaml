@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "170a4ef8-1cc9-4e43-9849-bdb2245a0041"
-name: "EncryptionPolicyQ5"
+name: "AESStandardUsed"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption.AES], has [p1:type] set correctly."
 implementationGuidelines:
   AMOE:

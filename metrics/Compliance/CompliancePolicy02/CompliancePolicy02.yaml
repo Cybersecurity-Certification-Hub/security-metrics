@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "a41484e2-7a02-4d32-a66f-08d1df84875d"
-name: "CompliancePolicy02"
+name: "CompliancePolicyMethodology"
 description: "This rule assesses whether a [Resource] that offers the property [Compliance], has [p1:methodology] set correctly."
 implementationGuidelines:
   AMOE:

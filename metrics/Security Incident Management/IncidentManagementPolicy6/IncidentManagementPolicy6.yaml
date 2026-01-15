@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "47460882-06b3-4c31-9f4f-5dfdf2f87684"
-name: "IncidentManagementPolicy6"
+name: "IncidentManagementEventReportInterval"
 description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event], has [p1:reportInterval] set correctly."
 implementationGuidelines:
   AMOE:

@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "c636de5e-534b-4a33-9a14-fc3db2fa948e"
-name: "SystemBackUpTesting02"
+name: "SystemBackUpRestoreErrorResolution"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Backup.Restore], has [p1:restoreErrorResolution] set correctly."
 implementationGuidelines:
   AMOE:

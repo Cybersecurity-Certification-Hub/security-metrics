@@ -1,10 +1,10 @@
 # ====== Metadata ======
 id: "bdf75597-97ff-499a-b139-88d7263d938a"
-name: "SystemBackUpTesting01"
+name: "SystemBackUpTestingReviewInterval"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Backup.Procedure], has [p1:reviewInterval] set correctly."
 implementationGuidelines:
   AMOE:
-    question: "How often is the procedure checked?"
+    question: "How often is the system backup procedure checked?"
     keywords: ["backup", "restore procedure"]
 category: "Operations"
 version: "1.0"

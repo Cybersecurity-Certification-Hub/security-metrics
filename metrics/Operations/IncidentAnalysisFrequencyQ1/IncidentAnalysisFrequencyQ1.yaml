@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "6ebe4d07-bd51-49be-bf8b-5ff62863befb"
-name: "IncidentAnalysisFrequencyQ1"
+name: "IncidentAnalysisReviewInterval"
 description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Procedure], has [p1:reviewInterval] set correctly."
 implementationGuidelines:
   AMOE:

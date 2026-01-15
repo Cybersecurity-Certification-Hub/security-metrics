@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "0528790f-b7c6-4998-a444-ee2d04c27773"
-name: "BackupPolicyQ3"
+name: "BackupAvailabilityForCloudCustomers"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Backup.CloudCustomers], has [p1:availability] set correctly."
 implementationGuidelines:
   AMOE:

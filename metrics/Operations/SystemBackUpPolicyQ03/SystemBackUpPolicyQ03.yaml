@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "2a79f0a3-c737-4e5f-9049-a7c953d19fa3"
-name: "SystemBackUpPolicyQ03"
+name: "SystemBackUpRestorePermission"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Backup.Restore], has [p1:permission] set correctly."
 implementationGuidelines:
   AMOE:

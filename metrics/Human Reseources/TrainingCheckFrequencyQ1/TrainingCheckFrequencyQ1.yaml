@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "213fd404-ac08-47f1-8724-8c53c82d7f9c"
-name: "TrainingCheckFrequencyQ1"
+name: "SecurityTrainingCheckFrequency"
 description: "This rule assesses whether a [Resource] that offers the property [SecurityTraining], has [p1:reviewInterval] set correctly."
 implementationGuidelines:
   AMOE:

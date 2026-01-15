@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "f1f0d3df-200d-4206-be04-e2c48d056dec"
-name: "ComplianceRecoveryTimeQ2"
+name: "ComplianceRecoveryInterval"
 description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event], has [p1:recoveryInterval] set correctly."
 implementationGuidelines:
   AMOE:

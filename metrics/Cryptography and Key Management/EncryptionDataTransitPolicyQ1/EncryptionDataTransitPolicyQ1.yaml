@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "5ad85085-5fd1-494c-8eb6-b5420a6c70ce"
-name: "EncryptionDataTransitPolicyQ1"
+name: "EncryptionDataTransitPolicyEndpointProtectionMechanism"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption], has [p1:endpointProtectionMechanism] set correctly."
 implementationGuidelines:
   AMOE:

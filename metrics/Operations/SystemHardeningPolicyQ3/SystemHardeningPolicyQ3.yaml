@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "380307d4-cb39-4538-ba4b-d757fbbf5d97"
-name: "SystemHardeningPolicyQ3"
+name: "SystemHardeningPenetrationTestInterval"
 description: "This rule assesses whether a [Resource] that offers the property [SystemComponent.HardeningRequirements.PenetrationTest], has [p1:interval] set correctly."
 implementationGuidelines:
   AMOE:

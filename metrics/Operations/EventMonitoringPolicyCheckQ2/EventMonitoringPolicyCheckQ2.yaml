@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "c6d4105a-7e4d-4ae6-8900-0d021977ca3a"
-name: "EventMonitoringPolicyCheckQ2"
+name: "EventMonitoringFacilityType"
 description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event.SIEM], has [p1:facilityType] set correctly."
 implementationGuidelines:
   AMOE:

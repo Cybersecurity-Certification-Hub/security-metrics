@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "b8a2e8dc-1478-4b50-8619-e41bc8f35f81"
-name: "SystemBackUpStorage03"
+name: "SystemBackUpStorageProcessMonitoring"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Backup.Procedure], has [p1:monitoring] set correctly."
 implementationGuidelines:
   AMOE:

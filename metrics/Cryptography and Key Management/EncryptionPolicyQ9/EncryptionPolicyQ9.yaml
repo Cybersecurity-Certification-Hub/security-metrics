@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "3eb95c39-cb8d-49e6-af70-ffc406a47a9a"
-name: "EncryptionPolicyQ9"
+name: "PasswordHashType"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption.Password.SHA], has [p1:type] set correctly."
 implementationGuidelines:
   AMOE:

@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "7a1df4f2-e0c0-4999-912e-b2829a8172a5"
-name: "AccessAttemptQ1"
+name: "AccessAttempt"
 description: "This rule assesses whether a [Resource] that offers the property [AccessManagement], has [p1:skipForNow - not relevant / requires updates] set correctly."
 implementationGuidelines:
   AMOE:

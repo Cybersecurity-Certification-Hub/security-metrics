@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "ff622c09-ec4f-4618-9041-c61833ac04cc"
-name: "EncryptionDataTransitPolicyQ2"
+name: "EncryptionDataTransitPolicyEndpointProtectionMechanismUnsupported"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption], has [p1:endpointProtectionMechanismNotSupported] set correctly."
 implementationGuidelines:
   AMOE:

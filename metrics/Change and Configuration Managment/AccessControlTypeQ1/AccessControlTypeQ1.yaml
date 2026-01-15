@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "7bd89d65-02ad-480a-ad5f-06ba661d15b0"
-name: "AccessControlTypeQ1"
+name: "AccessControlType"
 description: "This rule assesses whether a [Resource] that offers the property [AccessControl], has [p1:type] set correctly."
 implementationGuidelines:
   AMOE:

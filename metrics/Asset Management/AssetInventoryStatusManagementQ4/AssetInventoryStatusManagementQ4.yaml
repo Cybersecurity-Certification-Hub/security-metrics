@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "9ff75498-e0b8-4ffc-b69d-bdaac9233a9d"
-name: "AssetInventoryStatusManagementQ4"
+name: "AssetInventoryStatusManagementOptions"
 description: "This rule assesses whether a [Resource] that offers the property [AssetInventory.AssetStatus], has [p1:statusOption] set correctly."
 implementationGuidelines:
   AMOE:

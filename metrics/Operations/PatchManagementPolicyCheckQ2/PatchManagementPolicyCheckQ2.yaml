@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "77205811-518d-4f8d-afc0-a50befde75bd"
-name: "PatchManagementPolicyCheckQ2"
+name: "PatchManagementProcedurePriority"
 description: "This rule assesses whether a [Resource] that offers the property [PatchManagement.Procedure], has [p1:vulnerabilityPriority] set correctly."
 implementationGuidelines:
   AMOE:

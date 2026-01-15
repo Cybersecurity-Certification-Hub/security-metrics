@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "e70bb32d-5313-44df-9668-df5669e764f6"
-name: "NetworkSecurityPolicy01"
+name: "NetworkSecurityPolicyMitigationScope"
 description: "This rule assesses whether a [Resource] that offers the property [NetworkSecurity], has [p1:mitigationScope] set correctly."
 implementationGuidelines:
   AMOE:

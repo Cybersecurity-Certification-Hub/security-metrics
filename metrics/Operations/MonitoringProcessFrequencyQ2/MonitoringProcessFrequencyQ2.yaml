@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "3272d68d-3a28-4d65-95c7-55f12292a2f0"
-name: "MonitoringProcessFrequencyQ2"
+name: "MonitoringProcessReviewInterval"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Log.Procedure], has [p1:reviewInterval] set correctly."
 implementationGuidelines:
   AMOE:

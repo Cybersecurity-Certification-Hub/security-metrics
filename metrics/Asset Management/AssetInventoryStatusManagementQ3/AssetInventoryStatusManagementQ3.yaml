@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "9740e1ae-6d64-4b7e-8c26-b9a51d98a192"
-name: "AssetInventoryStatusManagementQ3"
+name: "AssetInventoryStatusManagementUpdateInterval"
 description: "This rule assesses whether a [Resource] that offers the property [AssetInventory.AssetStatus], has [p1:updateInterval] set correctly."
 implementationGuidelines:
   AMOE:

@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "c9711b2f-65d4-442d-9798-a04912701f4a"
-name: "EncryptionKeyPolicy01"
+name: "EncryptionKeyPolicyParameterScope"
 description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption], has [p1:parameterScope] set correctly."
 implementationGuidelines:
   AMOE:
