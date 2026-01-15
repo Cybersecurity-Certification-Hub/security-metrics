@@ -1,0 +1,24 @@
+# ====== Metadata ======
+id: "bbac8fcb-d0be-43a7-b84d-7b47269bec71"
+name: "AssetManagementPolicy01"
+description: "Which topics are comprised by the defined asset management policy? | Selector: PolicyDocument (Resource Type) and/or TBD (security feature)"
+implementationGuidelines:
+  AMOE:
+    question: ""
+    keywords:
+      [
+        "asset management",
+        "inventory management",
+        "asset",
+        "inventory",
+        "ownership",
+        "decommissioning",
+      ]
+category: "AssetInventory"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[inventory, ownership, decommissioning, none]"

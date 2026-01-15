@@ -1,0 +1,26 @@
+# ====== Metadata ======
+id: "6d708d70-604b-4d86-a7ca-a71931068bb3"
+name: "AssetManagementPolicy02"
+description: "Which topics are defined for the secure management of physical assets? | Selector: PolicyDocument (Resource Type) and/or TBD (security feature)"
+implementationGuidelines:
+  AMOE:
+    question: ""
+    keywords:
+      [
+        "asset management",
+        "inventory management",
+        "asset",
+        "physical assets",
+        "disk",
+        "server",
+        "components",
+        "destruction",
+      ]
+category: "AssetInventory"
+version: "1.0"
+comments: "TBD"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[procurement, destruction, none]"

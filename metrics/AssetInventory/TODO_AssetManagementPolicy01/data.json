@@ -1,0 +1,4 @@
+{
+    "operator": "isIn",
+    "target_value": "[inventory, ownership, decommissioning, none]"
+}
