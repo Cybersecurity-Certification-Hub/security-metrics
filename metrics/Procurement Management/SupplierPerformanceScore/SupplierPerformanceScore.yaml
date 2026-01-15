@@ -12,4 +12,4 @@ comments: "Supplier Performance Score - Check and monitor overall performance of
 configuration:
   p1:
     operator: "=="
-    targetValue: "1"
+    targetValue: 1

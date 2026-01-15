@@ -12,4 +12,4 @@ comments: "Incident rate for Provisioning/De-Provisioning - Check whether incide
 configuration:
   p1:
     operator: "=="
-    targetValue: "0"
+    targetValue: 0

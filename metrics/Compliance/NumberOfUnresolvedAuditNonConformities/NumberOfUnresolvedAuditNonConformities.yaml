@@ -12,4 +12,4 @@ comments: "Unresolved non-conformities based on internal audits - Check whether 
 configuration:
   p1:
     operator: "=="
-    targetValue: "0"
+    targetValue: 0

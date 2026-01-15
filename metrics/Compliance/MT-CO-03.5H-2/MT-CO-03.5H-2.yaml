@@ -12,4 +12,4 @@ comments: "Vulnerability Scan Coverage - Check whether a defined scope is subjec
 configuration:
   p1:
     operator: "TBD"
-    targetValue: "1"
+    targetValue: 1

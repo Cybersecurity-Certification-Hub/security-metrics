@@ -12,4 +12,4 @@ comments: "Percentage of successfully completed annual security awareness and tr
 configuration:
   p1:
     operator: "=="
-    targetValue: "100"
+    targetValue: 100

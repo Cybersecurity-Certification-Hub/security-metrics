@@ -12,4 +12,4 @@ comments: "Percentage of system components configured according to predefined st
 configuration:
   p1:
     operator: ">="
-    targetValue: "1"
+    targetValue: 1

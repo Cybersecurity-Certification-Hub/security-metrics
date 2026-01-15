@@ -12,4 +12,4 @@ comments: "Appropriate third party response time to malfunctions and information
 configuration:
   p1:
     operator: "<="
-    targetValue: "24"
+    targetValue: 24

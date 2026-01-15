@@ -12,4 +12,4 @@ comments: "Number of backup errors - Check the number of backup errors (per Regi
 configuration:
   p1:
     operator: "TBD"
-    targetValue: "0"
+    targetValue: 0

@@ -12,4 +12,4 @@ comments: "Correct configuration of malware protection mechanisms rate - Check t
 configuration:
   p1:
     operator: "TBD"
-    targetValue: "1"
+    targetValue: 1

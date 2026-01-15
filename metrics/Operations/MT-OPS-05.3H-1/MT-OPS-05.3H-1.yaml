@@ -12,4 +12,4 @@ comments: "Malware protection coverage rate - Check that all necessary cloud ass
 configuration:
   p1:
     operator: "TBD"
-    targetValue: "1"
+    targetValue: 1

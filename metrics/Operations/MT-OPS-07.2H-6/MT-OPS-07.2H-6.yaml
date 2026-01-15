@@ -12,4 +12,4 @@ comments: "BackupRetentionSet - This metric is used to assess the configured bac
 configuration:
   p1:
     operator: "TBD"
-    targetValue: "35"
+    targetValue: 35

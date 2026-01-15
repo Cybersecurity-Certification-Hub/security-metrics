@@ -12,4 +12,4 @@ comments: "Timely resolution of information security incidents - Check whether a
 configuration:
   p1:
     operator: "<="
-    targetValue: "24"
+    targetValue: 24

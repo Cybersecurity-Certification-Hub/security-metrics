@@ -12,4 +12,4 @@ comments: "Suspicious number of authentication attempts from suspicious or black
 configuration:
   p1:
     operator: "TBD"
-    targetValue: "0"
+    targetValue: 0

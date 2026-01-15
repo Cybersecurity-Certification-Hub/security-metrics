@@ -12,4 +12,4 @@ comments: "Average Patch/Update Rollout Time - Check average time from available
 configuration:
   p1:
     operator: "<="
-    targetValue: "24"
+    targetValue: 24

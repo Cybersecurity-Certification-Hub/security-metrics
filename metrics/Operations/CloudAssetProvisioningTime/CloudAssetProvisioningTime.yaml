@@ -12,4 +12,4 @@ comments: "Provisioning time in hours - Ensure provisioning time meets SLA requi
 configuration:
   p1:
     operator: "<="
-    targetValue: "24"
+    targetValue: 24

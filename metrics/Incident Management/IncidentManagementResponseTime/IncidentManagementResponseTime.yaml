@@ -12,4 +12,4 @@ comments: "Timely response to identified information security incidents - Check 
 configuration:
   p1:
     operator: "<="
-    targetValue: "12"
+    targetValue: 12

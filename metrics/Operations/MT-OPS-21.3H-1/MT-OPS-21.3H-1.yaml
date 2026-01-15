@@ -12,4 +12,4 @@ comments: "Number of Deviations from established hardening baseline - Check whet
 configuration:
   p1:
     operator: "TBD"
-    targetValue: "0"
+    targetValue: 0

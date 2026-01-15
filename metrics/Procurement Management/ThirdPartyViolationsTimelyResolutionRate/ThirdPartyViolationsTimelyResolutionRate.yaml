@@ -12,4 +12,4 @@ comments: "Timely resolution of identified third party violations - Check whethe
 configuration:
   p1:
     operator: "=="
-    targetValue: "1"
+    targetValue: 1

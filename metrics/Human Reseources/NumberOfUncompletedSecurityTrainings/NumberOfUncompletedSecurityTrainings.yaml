@@ -12,4 +12,4 @@ comments: "Number of new employees that have not timely completed the security a
 configuration:
   p1:
     operator: "=="
-    targetValue: "0"
+    targetValue: 0

@@ -12,4 +12,4 @@ comments: "Number of conflicting tasks in the development, testing and release o
 configuration:
   p1:
     operator: "=="
-    targetValue: "0"
+    targetValue: 0

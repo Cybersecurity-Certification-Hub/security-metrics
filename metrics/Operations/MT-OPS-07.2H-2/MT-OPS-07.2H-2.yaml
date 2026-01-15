@@ -12,4 +12,4 @@ comments: "Percentage of completed data backups - Check whether all required Clo
 configuration:
   p1:
     operator: "TBD"
-    targetValue: "1"
+    targetValue: 1

@@ -12,4 +12,4 @@ comments: "Time required to respond to detected malware and irregularities - Dat
 configuration:
   p1:
     operator: "<="
-    targetValue: "0"
+    targetValue: 0

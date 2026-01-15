@@ -12,4 +12,4 @@ comments: "Number of exceptions to (information security) policies and procedure
 configuration:
   p1:
     operator: "=="
-    targetValue: "0"
+    targetValue: 0

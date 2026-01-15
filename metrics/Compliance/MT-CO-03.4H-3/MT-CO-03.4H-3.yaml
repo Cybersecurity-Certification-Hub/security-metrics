@@ -12,4 +12,4 @@ comments: "Time to comply with audit recommendations - Check whether audit recom
 configuration:
   p1:
     operator: "TBD"
-    targetValue: "0"
+    targetValue: 0

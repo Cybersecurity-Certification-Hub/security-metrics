@@ -12,4 +12,4 @@ comments: "Percentage of investigator access events reviewed within a define tim
 configuration:
   p1:
     operator: ">="
-    targetValue: "90"
+    targetValue: 90

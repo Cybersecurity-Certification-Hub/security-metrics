@@ -12,4 +12,4 @@ comments: "Authentication attempts at suspicious times - Check whether there are
 configuration:
   p1:
     operator: "TBD"
-    targetValue: "0"
+    targetValue: 0

@@ -12,4 +12,4 @@ comments: "Incident escalation rate - Check whether escalation is in line with d
 configuration:
   p1:
     operator: "=="
-    targetValue: "1"
+    targetValue: 1

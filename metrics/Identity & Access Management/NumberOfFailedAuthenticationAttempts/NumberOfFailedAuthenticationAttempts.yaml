@@ -12,4 +12,4 @@ comments: "Multiple failed authentication attempts - Check whether the number of
 configuration:
   p1:
     operator: "=="
-    targetValue: "0"
+    targetValue: 0

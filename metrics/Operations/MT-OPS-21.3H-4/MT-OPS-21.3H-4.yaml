@@ -12,4 +12,4 @@ comments: "Remediation Time for Non-compliance cases - Check time needed to reme
 configuration:
   p1:
     operator: "TBD"
-    targetValue: "0"
+    targetValue: 0
