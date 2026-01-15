@@ -1,0 +1,33 @@
+name: "Validate file extensions"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  prohibit-yml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect added files and fail on .yml
+        shell: bash
+        run: |
+          # Ensure origin/main is available
+          git fetch origin main:main || true
+
+          # Get the list of added or modified files
+          ADDED_OR_MODIFIED_FILES=$(git diff --name-only --diff-filter=AM origin/main HEAD || true)
+
+          # Check if any .yml files are present
+          YML_FILES=$(printf "%s\n" "$ADDED_OR_MODIFIED_FILES" | grep -iE '\.yml$' || true)
+          if [ -n "$YML_FILES" ]; then
+            echo "::error .yml files detected! Please change .yml to .yaml files:"
+            echo "$YML_FILES"
+            exit 1
+          fi
