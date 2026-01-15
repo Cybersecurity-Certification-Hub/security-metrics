@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "da14a6ff-699f-4913-83f4-02a58c82d677"
 name: "MT-IM-02.6H-2"
-description: "This rule assesses whether a [Resource] that offers the property [IncidentManagement], has [p1:] set correctly."
+description: "This rule assesses whether a [Resource] that offers the property [IncidentManagement], has [p1:timeUntilSolved] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- (security) incidents", "- Resolution times documented in (security) incident ticket"]
@@ -11,5 +11,5 @@ comments: "Timely resolution of information security incidents - Check whether a
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "TBD"
-    targetValue: "0"
+    operator: "<="
+    targetValue: "24"

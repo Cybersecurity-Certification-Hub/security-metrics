@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "83b2f732-ff2b-4e38-909a-2f2701a018dc"
 name: "MT-CCM-04.1H-2"
-description: "This rule assesses whether a [Resource] that offers the property [ChangeandConfigurationManagment], has [p1:] set correctly."
+description: "This rule assesses whether a [Resource] that offers the property [ChangeAndConfigurationManagment.RFC], has [p1:changeApprovedByAuthorizedPersonnel] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Information from Change ticket", "- List of names and roles of authorised change approvers"]
@@ -11,5 +11,5 @@ comments: "Change approval by authorised internal personnel - Check whether ther
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "TBD"
-    targetValue: "WAHR"
+    operator: "=="
+    targetValue: "true"

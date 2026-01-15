@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "4459a94d-bda0-4a84-a47d-0abdf208c14c"
 name: "MT-OPS-18.6H-1"
-description: "This rule assesses whether a [Resource] that offers the property [Operations], has [p1:] set correctly."
+description: "This rule assesses whether a [Resource] that offers the property [Operations.Patch], has [p1:approvedBeforeImplementation] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Information on to be applied patches/updates", "- Information on approval status from ticket"]
@@ -11,5 +11,5 @@ comments: "CSCs initial approval for patches and updates - Check whether updates
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "TBD"
+    operator: "=="
     targetValue: "true"

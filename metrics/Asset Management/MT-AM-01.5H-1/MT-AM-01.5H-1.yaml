@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "c29b446c-eed6-4ccb-b39f-1d42c63405a2"
 name: "MT-AM-01.5H-1"
-description: "This rule assesses whether a [Resource] that offers the property [AssetManagement], has [p1:] set correctly."
+description: "This rule assesses whether a [Resource] that offers the property [AssetManagement.Inventory.Entry], has [p1:allRequiredInformationRecorded] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Asset Inventory/CMDB", "- Attributes per asset"]
@@ -11,5 +11,5 @@ comments: "Completeness of asset inventory entries - Check whether all required 
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "TBD"
-    targetValue: "1"
+    operator: "=="
+    targetValue: "true"

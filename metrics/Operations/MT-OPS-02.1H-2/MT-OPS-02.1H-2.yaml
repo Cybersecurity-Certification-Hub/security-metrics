@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "e966da30-5f42-488a-9ac0-8daa52fbda04"
 name: "MT-OPS-02.1H-2"
-description: "This rule assesses whether a [Resource] that offers the property [Operations], has [p1:] set correctly."
+description: "This rule assesses whether a [Resource] that offers the property [Operations.CloudAsset], has [p1:provisioningTime] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- SLA Requirements", "- Information for provisioning (e.g., from Ticket)", "- Cloud Asset Status (e.g., active/inactive)"]
@@ -11,5 +11,5 @@ comments: "Provisioning time in hours - Ensure provisioning time meets SLA requi
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "TBD"
-    targetValue: "TBD"
+    operator: "<="
+    targetValue: "24"

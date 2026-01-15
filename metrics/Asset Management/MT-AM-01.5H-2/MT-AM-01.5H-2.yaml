@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "1a799312-6dc5-45b6-93d2-e0b278bed325"
 name: "MT-AM-01.5H-2"
-description: "This rule assesses whether a [Resource] that offers the property [AssetManagement], has [p1:] set correctly."
+description: "This rule assesses whether a [Resource] that offers the property [AssetManagement.Inventory], has [p1:completedReviewPercentage] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Asset Inventory/CMDB", "- Date of last review and update of Asset Inventory entry "]

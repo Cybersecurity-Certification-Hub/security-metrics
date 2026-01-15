@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "d8f28ac7-eee9-41b6-b898-cc7d7d91c6f0"
 name: "MT-CCM-04.1H-1"
-description: "This rule assesses whether a [Resource] that offers the property [ChangeandConfigurationManagment], has [p1:] set correctly."
+description: "This rule assesses whether a [Resource] that offers the property [ChangeAndConfigurationManagment.RFC], has [p1:approvedBeforeImplementation] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Date and time of change approval and deployment", "- Information from Change ticket"]
@@ -11,5 +11,5 @@ comments: "Change approval before deployment to production - Check whether there
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "TBD"
-    targetValue: "WAHR"
+    operator: "=="
+    targetValue: "true"

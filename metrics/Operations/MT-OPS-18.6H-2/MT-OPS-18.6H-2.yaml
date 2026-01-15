@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "ecdc44a0-5cb3-4484-93ca-4aac191caafe"
 name: "MT-OPS-18.6H-2"
-description: "This rule assesses whether a [Resource] that offers the property [Operations], has [p1:] set correctly."
+description: "This rule assesses whether a [Resource] that offers the property [Operations.Patch], has [p1:timeForImplementation] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Information on patch/update availability", "- Information on rollout-time after CSC approval"]
@@ -11,5 +11,5 @@ comments: "Average Patch/Update Rollout Time - Check average time from available
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "TBD"
-    targetValue: "0"
+    operator: "<="
+    targetValue: "24"

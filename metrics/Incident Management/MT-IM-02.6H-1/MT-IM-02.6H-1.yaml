@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "e2b2b547-57bb-4dc3-9e73-516138cd5674"
 name: "MT-IM-02.6H-1"
-description: "This rule assesses whether a [Resource] that offers the property [IncidentManagement], has [p1:] set correctly."
+description: "This rule assesses whether a [Resource] that offers the property [IncidentManagement], has [p1:responseTime] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- (security) incidents", "- Response times documented in (security) incident ticket"]
@@ -11,5 +11,5 @@ comments: "Timely response to identified information security incidents - Check 
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "TBD"
-    targetValue: "0"
+    operator: "<="
+    targetValue: "12"

@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "b3dac1ca-7618-4380-b928-1a7ddb6c4ae6"
 name: "MT-PM-04.9H-2"
-description: "This rule assesses whether a [Resource] that offers the property [ProcurementManagement], has [p1:] set correctly."
+description: "This rule assesses whether a [Resource] that offers the property [ProcurementManagement.ThirdPartyViolations], has [p1:timelyResolutionRate] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Date and time of identification of the third party violation ", "- Information on (internal) resolution time"]
@@ -11,5 +11,5 @@ comments: "Timely resolution of identified third party violations - Check whethe
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "TBD"
-    targetValue: "0"
+    operator: "=="
+    targetValue: "1"

@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "9010e367-a0e9-43f4-b8ca-3247f111f85b"
 name: "MT-OPS-02.1H-4"
-description: "This rule assesses whether a [Resource] that offers the property [Operations], has [p1:] set correctly."
+description: "This rule assesses whether a [Resource] that offers the property [Operations.CloudAsset], has [p1:provisioningIncidentRate] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Information for provisioning (e.g., from Ticket)", "- Cloud Asset Status (e.g., active/inactive)", "- Event/Incident information after change of asset status"]
@@ -11,5 +11,5 @@ comments: "Incident rate for Provisioning/De-Provisioning - Check whether incide
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "TBD"
+    operator: "=="
     targetValue: "0"
