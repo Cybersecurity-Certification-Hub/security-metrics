@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: WebApplicationFirewallEnabled
+id: 977e1eb2-ebe8-4fac-8def-da47f62ea8eb
+name: WebApplicationFirewallEnabled
 description: This rule assesses whether an [LoadBalancer] that offers the property [webApplicationFirewall], has [p1:enabled] configured correctly.
 category: NetworkSecurity
 version: "v1" 

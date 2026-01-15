@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: ApprovedCommitAuthorEnforced
+id: 4fbcbf09-35c3-4d7b-b9a9-97c7ba36f0de
+name: ApprovedCommitAuthorEnforced
 description: This rule assesses whether a [CodeRepository] has its [p1:approvedCommitAuthorEnforced] property set correctly.
 category: DevelopmentLifeCycle
 version: "v1" 

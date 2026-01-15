@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: CodeNotebookVulnerabilitiesDetected
+id: 738bef66-cc24-46b3-bcec-e290e64d3569
+name: CodeNotebookVulnerabilitiesDetected
 description: This rule assesses whether an [CodeNotebook] has the compliant number of [p1:Vulnerability].
 category: AISecurity
 version: "v1"
