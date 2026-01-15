@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Information from Change ticket", "- List of names and roles of authorised change approvers"]
 category: "Change and Configuration Managment"
 version: "1.0"
-comments: "Change approval by authorised internal personnel - Check whether there was a change approval by authorised personnel | Selector: TBD (Resource Type)"
+comments: "Change approval by authorised internal personnel - Check whether there was a change approval by authorised personnel | Selector: TBD (Resource Type) [Previous name: MT-CCM-04.1H-2]"
 # ====== Configuration ======
 configuration:
   p1:

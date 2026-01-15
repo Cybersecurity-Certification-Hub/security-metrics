@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Asset Inventory/CMDB", "- Attributes per asset"]
 category: "Asset Management"
 version: "1.0"
-comments: "Completeness of asset inventory entries - Check whether all required information, such as lifecycle status and associated risk, is recorded for each asset in the inventory | Selector: TBD (Resource Type)"
+comments: "Completeness of asset inventory entries - Check whether all required information, such as lifecycle status and associated risk, is recorded for each asset in the inventory | Selector: TBD (Resource Type) [Previous name: MT-AM-01.5H-1]"
 # ====== Configuration ======
 configuration:
   p1:

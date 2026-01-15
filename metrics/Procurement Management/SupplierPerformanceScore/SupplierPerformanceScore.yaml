@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- List of applicable suppliers", "- Defined metric (e.g., number of exceptions, risks etc. per supplier)"]
 category: "Procurement Management"
 version: "1.0"
-comments: "Supplier Performance Score - Check and monitor overall performance of suppliers according to defined metrics | Selector: TBD (Resource Type) [TargetValue is measured in units]"
+comments: "Supplier Performance Score - Check and monitor overall performance of suppliers according to defined metrics | Selector: TBD (Resource Type) [TargetValue is measured in units] [Previous name: MT-PM-04.9H-1]"
 # ====== Configuration ======
 configuration:
   p1:

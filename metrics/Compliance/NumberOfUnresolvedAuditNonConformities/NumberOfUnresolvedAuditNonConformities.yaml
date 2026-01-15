@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Information on Internal Audit findings and the corresponding status"]
 category: "Compliance"
 version: "1.0"
-comments: "Unresolved non-conformities based on internal audits - Check whether identified non-conformities were communicated and followed-up | Selector: TBD (Resource Type) [TargetValue is measured in units]"
+comments: "Unresolved non-conformities based on internal audits - Check whether identified non-conformities were communicated and followed-up | Selector: TBD (Resource Type) [TargetValue is measured in units] [Previous name: MT-CO-03.4H-2]"
 # ====== Configuration ======
 configuration:
   p1:

@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Information on incidents that are upgraded to security incidents"]
 category: "Incident Management"
 version: "1.0"
-comments: "Incident escalation rate - Check whether escalation is in line with defined attributes for (security) incidents | Selector: TBD (Resource Type) [TargetValue is measured in units]"
+comments: "Incident escalation rate - Check whether escalation is in line with defined attributes for (security) incidents | Selector: TBD (Resource Type) [TargetValue is measured in units] [Previous name: MT-IM-02.6H-3]"
 # ====== Configuration ======
 configuration:
   p1:

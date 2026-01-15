@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Date of initial approval", "- Info on whether there are exceptions to existing policies"]
 category: "Information Security Policies"
 version: "1.0"
-comments: "Number of new exceptions to the information security policies and procedures that are not approved - Check whether initial approval was given for the new exception | Selector: TBD (Resource Type) [TargetValue is measured in units]"
+comments: "Number of new exceptions to the information security policies and procedures that are not approved - Check whether initial approval was given for the new exception | Selector: TBD (Resource Type) [TargetValue is measured in units] [Previous name: MT-ISP-03.10H-1]"
 # ====== Configuration ======
 configuration:
   p1:

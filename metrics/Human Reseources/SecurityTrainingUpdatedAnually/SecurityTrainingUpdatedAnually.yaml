@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Security awareness training content", "- (Date of) changes to training contents / evidence of review of training content"]
 category: "Human Reseources"
 version: "1.0"
-comments: "Review of security awareness training contents - Check whether training content has been updated at least annually | Selector: humanResources.training.securityTraining (Resource Type)"
+comments: "Review of security awareness training contents - Check whether training content has been updated at least annually | Selector: humanResources.training.securityTraining (Resource Type) [Previous name: MT-HR-04.3H-3]"
 # ====== Configuration ======
 configuration:
   p1:
