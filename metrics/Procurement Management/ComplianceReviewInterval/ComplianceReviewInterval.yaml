@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["reviews", "frequency", "schedule"]
 category: "Procurement Management"
 version: "1.0"
-comments: "This metric assesses the recommended frequency for conducting reviews. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months]"
+comments: "This metric assesses the recommended frequency for conducting reviews. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months] [Previous name: ComplianceReviewFrequencyQ2]"
 # ====== Configuration ======
 configuration:
   p1:

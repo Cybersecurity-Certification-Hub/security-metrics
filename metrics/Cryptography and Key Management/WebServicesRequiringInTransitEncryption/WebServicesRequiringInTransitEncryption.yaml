@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["encryption mechanisms", "web services", "data in transit"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses which web services must encrypt data in transit. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses which web services must encrypt data in transit. | Selector: PolicyDocument (Resource Type) [Previous name: EncryptionPolicyQ11]"
 # ====== Configuration ======
 configuration:
   p1:

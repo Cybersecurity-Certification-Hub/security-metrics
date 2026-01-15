@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["logging", "monitoring", "policy", "derived data", "customer data", "PII", "monitoring and logging"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses whether derived data security events are stored. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses whether derived data security events are stored. | Selector: PolicyDocument (Resource Type) [Previous name: LoggingMonitoringDerivedPolicyQ1]"
 # ====== Configuration ======
 configuration:
   p1:

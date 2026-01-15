@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["Recovery time", "acceptable limit"]
 category: "Procurement Management"
 version: "1.0"
-comments: "This metric assesses the acceptable recovery time limit. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in hours]"
+comments: "This metric assesses the acceptable recovery time limit. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in hours] [Previous name: ComplianceRecoveryTimeQ2]"
 # ====== Configuration ======
 configuration:
   p1:

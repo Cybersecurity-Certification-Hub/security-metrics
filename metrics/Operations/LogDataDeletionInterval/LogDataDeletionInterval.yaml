@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["logging", "deletion"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses the deletion timeframe for log data. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in days]"
+comments: "This metric assesses the deletion timeframe for log data. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in days] [Previous name: LogDataRetentionTimeQ2]"
 # ====== Configuration ======
 configuration:
   p1:

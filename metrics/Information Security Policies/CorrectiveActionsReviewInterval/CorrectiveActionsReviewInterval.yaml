@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["timeframe", "corrective actions", "expired exceptions", "outdated reviews", "approvals"]
 category: "Information Security Policies"
 version: "1.0"
-comments: "This metric assesses the implementation timeframe for corrective actions. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months]"
+comments: "This metric assesses the implementation timeframe for corrective actions. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months] [Previous name: CorrectiveActionsTimeframeQ4]"
 # ====== Configuration ======
 configuration:
   p1:

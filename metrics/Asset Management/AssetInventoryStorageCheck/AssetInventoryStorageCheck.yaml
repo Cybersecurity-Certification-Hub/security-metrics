@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["asset records", "facility type", "storage"]
 category: "Asset Management"
 version: "1.0"
-comments: "This metric assesses the facility type used to store asset records. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the facility type used to store asset records. | Selector: PolicyDocument (Resource Type) [Previous name: AssetInventoryStorageCheckQ1]"
 # ====== Configuration ======
 configuration:
   p1:

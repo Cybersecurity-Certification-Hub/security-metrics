@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["asset status", "coverage", "completeness", "inventory"]
 category: "Asset Management"
 version: "1.0"
-comments: "This metric assesses the current status of assets. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the current status of assets. | Selector: PolicyDocument (Resource Type) [Previous name: AssetInventoryStatusManagementQ4]"
 # ====== Configuration ======
 configuration:
   p1:

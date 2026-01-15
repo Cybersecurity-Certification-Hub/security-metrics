@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["Single Point of Contact", "Single Point of Information (SPoI)"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the approach for reporting incidents to the CSP. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the approach for reporting incidents to the CSP. | Selector: PolicyDocument (Resource Type) [Previous name: IncidentManagementPolicy02]"
 # ====== Configuration ======
 configuration:
   p1:

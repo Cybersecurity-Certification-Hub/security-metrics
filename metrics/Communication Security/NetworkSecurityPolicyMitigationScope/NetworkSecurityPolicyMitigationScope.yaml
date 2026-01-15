@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["network security", "DoS", "DDoS", "proxy", "IDS", "Denial of service protection"]
 category: "Communication Security"
 version: "1.0"
-comments: "This metric assesses the network-level attacks addressed by implemented mechanisms. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the network-level attacks addressed by implemented mechanisms. | Selector: PolicyDocument (Resource Type) [Previous name: NetworkSecurityPolicy01]"
 # ====== Configuration ======
 configuration:
   p1:

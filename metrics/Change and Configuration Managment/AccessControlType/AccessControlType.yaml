@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["access control", "security model", "permissions", "RBAC", "DAC", "MAC"]
 category: "Change and Configuration Managment"
 version: "1.0"
-comments: "This metric assesses the type of access control implemented. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the type of access control implemented. | Selector: PolicyDocument (Resource Type) [Previous name: AccessControlTypeQ1]"
 # ====== Configuration ======
 configuration:
   p1:

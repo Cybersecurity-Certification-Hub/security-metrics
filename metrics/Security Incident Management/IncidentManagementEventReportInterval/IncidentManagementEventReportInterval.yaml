@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["Incident Management", "Incident Management general information"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the reporting timeframe for staff regarding potential security and privacy issues. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the reporting timeframe for staff regarding potential security and privacy issues. | Selector: PolicyDocument (Resource Type) [Previous name: IncidentManagementPolicy6]"
 # ====== Configuration ======
 configuration:
   p1:

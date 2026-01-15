@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["backup", "storage"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses how storage processes are monitored. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses how storage processes are monitored. | Selector: PolicyDocument (Resource Type) [Previous name: SystemBackUpStorage03]"
 # ====== Configuration ======
 configuration:
   p1:

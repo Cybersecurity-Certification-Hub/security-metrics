@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["encryption mechanisms", "certificate"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the required minimum certificate key length. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in bits]"
+comments: "This metric assesses the required minimum certificate key length. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in bits] [Previous name: EncryptionPolicyQ8]"
 # ====== Configuration ======
 configuration:
   p1:

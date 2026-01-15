@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["successful attempts", "failed attempts", "logging"]
 category: "Identity & Access Management"
 version: "1.0"
-comments: "This metric assesses the possible status values for authentication attempts. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the possible status values for authentication attempts. | Selector: PolicyDocument (Resource Type) [Previous name: AccessStatusQ2]"
 # ====== Configuration ======
 configuration:
   p1:

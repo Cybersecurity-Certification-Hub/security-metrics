@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["audit", "frequency", "inventory"]
 category: "Asset Management"
 version: "1.0"
-comments: "This metric assesses the frequency of asset inventory updates. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months]"
+comments: "This metric assesses the frequency of asset inventory updates. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months] [Previous name: AssetInventoryFrequencyQ2]"
 # ====== Configuration ======
 configuration:
   p1:

@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["asset status", "inventory"]
 category: "Asset Management"
 version: "1.0"
-comments: "This metric assesses the required timeframe for recording asset status changes. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months]"
+comments: "This metric assesses the required timeframe for recording asset status changes. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months] [Previous name: AssetInventoryStatusManagementQ3]"
 # ====== Configuration ======
 configuration:
   p1:

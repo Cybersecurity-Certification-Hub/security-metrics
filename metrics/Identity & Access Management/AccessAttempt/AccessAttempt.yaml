@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["authentication attempts", "logging", "timestamp"]
 category: "Identity & Access Management"
 version: "1.0"
-comments: "This metric assesses whether recent authentication attempts are tracked and stored. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in hours]"
+comments: "This metric assesses whether recent authentication attempts are tracked and stored. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in hours] [Previous name: AccessAttemptQ1]"
 # ====== Configuration ======
 configuration:
   p1:

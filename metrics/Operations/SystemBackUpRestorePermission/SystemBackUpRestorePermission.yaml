@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["backup", "access", "restore"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses who is authorized to restore backups. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses who is authorized to restore backups. | Selector: PolicyDocument (Resource Type) [Previous name: SystemBackUpPolicyQ03]"
 # ====== Configuration ======
 configuration:
   p1:

@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["CSP", "customer", "shared", "evidence collection"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the entity responsible for maintaining cyberincident evidence. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the entity responsible for maintaining cyberincident evidence. | Selector: PolicyDocument (Resource Type) [Previous name: IncidentManagementPolicy03]"
 # ====== Configuration ======
 configuration:
   p1:

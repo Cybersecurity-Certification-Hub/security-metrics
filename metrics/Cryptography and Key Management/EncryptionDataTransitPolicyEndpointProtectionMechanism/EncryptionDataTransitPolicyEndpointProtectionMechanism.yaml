@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["encryption", "cryptography", "data in transit", "protection", "PKI", "payload", "SSL", "TLS", "transport layer encryption", "encrypted endpoints"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the endpoint protection mechanism for data in transit. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the endpoint protection mechanism for data in transit. | Selector: PolicyDocument (Resource Type) [Previous name: EncryptionDataTransitPolicyQ1]"
 # ====== Configuration ======
 configuration:
   p1:

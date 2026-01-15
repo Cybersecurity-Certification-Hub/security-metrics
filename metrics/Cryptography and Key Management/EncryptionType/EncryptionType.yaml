@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["encryptioncryptography", "data at rest protection"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the encryption type in use. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the encryption type in use. | Selector: PolicyDocument (Resource Type) [Previous name: EncryptionPolicyCheckQ3]"
 # ====== Configuration ======
 configuration:
   p1:

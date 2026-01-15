@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["encryption", "key management", "key lenght", "standards"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the encryption key parameters covered by the management policy. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the encryption key parameters covered by the management policy. | Selector: PolicyDocument (Resource Type) [Previous name: EncryptionKeyPolicy01]"
 # ====== Configuration ======
 configuration:
   p1:

@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["AES", "encryption mechanisms", "mobile devices", "portable devices"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the required AES standard. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses the required AES standard. | Selector: PolicyDocument (Resource Type) [Previous name: EncryptionPolicyQ5]"
 # ====== Configuration ======
 configuration:
   p1:

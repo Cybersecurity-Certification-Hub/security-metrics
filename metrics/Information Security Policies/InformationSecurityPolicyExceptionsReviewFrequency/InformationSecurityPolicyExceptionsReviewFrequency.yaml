@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["exceptions list", "review frequency", "validity"]
 category: "Information Security Policies"
 version: "1.0"
-comments: "This metric assesses the review frequency of exception lists for validity. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months]"
+comments: "This metric assesses the review frequency of exception lists for validity. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months] [Previous name: ExceptionsReviewFrequencyQ2]"
 # ====== Configuration ======
 configuration:
   p1:

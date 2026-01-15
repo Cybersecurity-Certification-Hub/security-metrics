@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["incident identification", "sources", "security-relevant"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses how sources of information are used to identify incidents. | Selector: PolicyDocument (Resource Type)"
+comments: "This metric assesses how sources of information are used to identify incidents. | Selector: PolicyDocument (Resource Type) [Previous name: IncidentManagementPolicy09]"
 # ====== Configuration ======
 configuration:
   p1:
