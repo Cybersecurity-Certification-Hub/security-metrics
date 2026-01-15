@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "546a1733-e585-48b3-a66b-2532b073b90c"
 name: "MT-OPS-18.6H-3"
-description: "Update Coverage - Check whether all applicable Cloud Assets have successfully applied the available patch/update | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Operations], has [p1:] set correctly."
 implementationGuidelines:
   TBD:
     details: ["- Information on Cloud Assets (CMDB) that are applicable for the respective patching/update", "- information on successful implementation of patch/update"]
 category: "Operations"
 version: "1.0"
-comments: "TBD"
+comments: "Update Coverage - Check whether all applicable Cloud Assets have successfully applied the available patch/update | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

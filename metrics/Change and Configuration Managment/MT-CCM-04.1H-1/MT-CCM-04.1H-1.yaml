@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "d8f28ac7-eee9-41b6-b898-cc7d7d91c6f0"
 name: "MT-CCM-04.1H-1"
-description: "Change approval before deployment to production - Check whether there was a change approval before deployment to production | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [ChangeandConfigurationManagment], has [p1:] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Date and time of change approval and deployment", "- Information from Change ticket"]
 category: "Change and Configuration Managment"
 version: "1.0"
-comments: "TBD"
+comments: "Change approval before deployment to production - Check whether there was a change approval before deployment to production | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

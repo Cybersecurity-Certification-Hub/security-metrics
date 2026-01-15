@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "24c14779-6d2c-409c-b53a-d6dd0b43d7f3"
 name: "MT-CO-03.5H-1"
-description: "Number of due vulnerabilities based on severity - Check whether vulnerabilities are treated/monitored within a defined timeframe | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Compliance], has [p1:] set correctly."
 implementationGuidelines:
   TBD:
     details: ["- number of identified vulnerabilities ", "- severity of vulnerabilities", "- information on managing vulnerability (e.g., fixing, accepting risk, etc.) including time needed"]
 category: "Compliance"
 version: "1.0"
-comments: "TBD"
+comments: "Number of due vulnerabilities based on severity - Check whether vulnerabilities are treated/monitored within a defined timeframe | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

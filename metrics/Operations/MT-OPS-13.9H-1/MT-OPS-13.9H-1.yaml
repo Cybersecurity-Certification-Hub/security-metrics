@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "2bd45501-57ea-4291-b55e-0ab94a10218b"
 name: "MT-OPS-13.9H-1"
-description: "Frequency of aggregation of logging and monitoring data - Check that log data is aggregated in real-time or at specified intervals | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Operations], has [p1:] set correctly."
 implementationGuidelines:
   TBD:
     details: ["- Date and time of last log data aggregation (per Cloud Asset)"]
 category: "Operations"
 version: "1.0"
-comments: "TBD"
+comments: "Frequency of aggregation of logging and monitoring data - Check that log data is aggregated in real-time or at specified intervals | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

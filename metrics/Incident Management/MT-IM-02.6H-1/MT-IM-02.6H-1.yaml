@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "e2b2b547-57bb-4dc3-9e73-516138cd5674"
 name: "MT-IM-02.6H-1"
-description: "Timely response to identified information security incidents - Check whether an incident was responded to within the specified time period | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [IncidentManagement], has [p1:] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- (security) incidents", "- Response times documented in (security) incident ticket"]
 category: "Incident Management"
 version: "1.0"
-comments: "TBD"
+comments: "Timely response to identified information security incidents - Check whether an incident was responded to within the specified time period | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

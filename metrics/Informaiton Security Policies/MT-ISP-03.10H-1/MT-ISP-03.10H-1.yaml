@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "8c1f34ac-92e9-4310-8714-b9f0cf412aa4"
 name: "MT-ISP-03.10H-1"
-description: "Number of new exceptions to the information security policies and procedures that are not approved - Check whether initial approval was given for the new exception | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [InformaitonSecurityPolicies], has [p1:] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Date of initial approval", "- Info on whether there are exceptions to existing policies"]
 category: "Informaiton Security Policies"
 version: "1.0"
-comments: "TBD"
+comments: "Number of new exceptions to the information security policies and procedures that are not approved - Check whether initial approval was given for the new exception | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

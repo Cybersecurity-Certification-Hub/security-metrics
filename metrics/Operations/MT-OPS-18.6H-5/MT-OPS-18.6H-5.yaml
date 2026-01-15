@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "75414a1f-78c9-4412-a6fa-43d1bc91c3ba"
 name: "MT-OPS-18.6H-5"
-description: "AutomaticUpdatesInterval - This metric is used to assess the update interval of automatic updates for the cloud service/asset | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Operations], has [p1:] set correctly."
 implementationGuidelines:
   TBD:
     details: ["Cloud service/asset and respective update configuration"]
 category: "Operations"
 version: "1.0"
-comments: "TBD"
+comments: "AutomaticUpdatesInterval - This metric is used to assess the update interval of automatic updates for the cloud service/asset | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

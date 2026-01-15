@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "ba9973d2-9ad3-4677-8b55-e3906fa17096"
 name: "MT-HR-04.3H-1"
-description: "Number of new employees that have not timely completed the security awareness and training program - Check whether new employee completed the security awareness and training program within a defined timeframe | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [HumanReseources], has [p1:] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Hiring dates of new employees", "- Information on security awareness and training program participation", "- Allowed timeframe to complete trainings"]
 category: "Human Reseources"
 version: "1.0"
-comments: "TBD"
+comments: "Number of new employees that have not timely completed the security awareness and training program - Check whether new employee completed the security awareness and training program within a defined timeframe | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

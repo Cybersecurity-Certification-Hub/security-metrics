@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "50cb5fec-bd79-4108-af20-e67754cc6c83"
 name: "MT-IM-02.6H-3"
-description: "Incident escalation rate - Check whether escalation is in line with defined attributes for (security) incidents | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [IncidentManagement], has [p1:] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Information on incidents that are upgraded to security incidents"]
 category: "Incident Management"
 version: "1.0"
-comments: "TBD"
+comments: "Incident escalation rate - Check whether escalation is in line with defined attributes for (security) incidents | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

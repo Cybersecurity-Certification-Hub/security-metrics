@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "10470209-bf02-4941-b8a0-fe7b76b6a0b7"
 name: "MT-CO-03.5H-2"
-description: "Vulnerability Scan Coverage - Check whether a defined scope is subject to vulnerability scanning | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Compliance], has [p1:] set correctly."
 implementationGuidelines:
   TBD:
     details: ["- Information on scope of applications/services etc. that are subject to vulnerability scanning", "- Information on what is actually part of vulnerability scanning"]
 category: "Compliance"
 version: "1.0"
-comments: "TBD"
+comments: "Vulnerability Scan Coverage - Check whether a defined scope is subject to vulnerability scanning | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

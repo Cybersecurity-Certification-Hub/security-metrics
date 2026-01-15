@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "da14a6ff-699f-4913-83f4-02a58c82d677"
 name: "MT-IM-02.6H-2"
-description: "Timely resolution of information security incidents - Check whether an incident was solved within the specified time period | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [IncidentManagement], has [p1:] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- (security) incidents", "- Resolution times documented in (security) incident ticket"]
 category: "Incident Management"
 version: "1.0"
-comments: "TBD"
+comments: "Timely resolution of information security incidents - Check whether an incident was solved within the specified time period | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

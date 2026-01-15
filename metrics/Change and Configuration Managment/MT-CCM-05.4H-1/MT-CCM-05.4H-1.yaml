@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "a410f24b-6005-4a4d-b26e-882515510c44"
 name: "MT-CCM-05.4H-1"
-description: "Change deployment by authorised personnel - Check whether there was a change approval by authorised personnel before deployment | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [ChangeandConfigurationManagment], has [p1:] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Information from Change ticket", "- List of names and roles of authorised change approvers"]
 category: "Change and Configuration Managment"
 version: "1.0"
-comments: "TBD"
+comments: "Change deployment by authorised personnel - Check whether there was a change approval by authorised personnel before deployment | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

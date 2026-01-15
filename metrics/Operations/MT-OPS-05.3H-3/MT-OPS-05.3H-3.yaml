@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "2327f913-1b7c-4d37-b1c9-f5f61791a9da"
 name: "MT-OPS-05.3H-3"
-description: "Frequency of updates of malware protection mechanisms - Check whether the malware protection programs are updated at least daily | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Operations], has [p1:] set correctly."
 implementationGuidelines:
   AppTelemetry:
     details: [" Malware protection configuration (centrally) or configuration per asset"]
 category: "Operations"
 version: "1.0"
-comments: "TBD"
+comments: "Frequency of updates of malware protection mechanisms - Check whether the malware protection programs are updated at least daily | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

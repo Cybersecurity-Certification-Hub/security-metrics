@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "7e184319-bc66-49db-972e-0534791437cf"
 name: "MT-OPS-07.2H-2"
-description: "Percentage of completed data backups - Check whether all required Cloud Assets have completed backups | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Operations], has [p1:] set correctly."
 implementationGuidelines:
   TBD:
     details: ["- Overview of Cloud Assets for which backups have to be performed", "- Backup Status for the respective assets "]
 category: "Operations"
 version: "1.0"
-comments: "TBD"
+comments: "Percentage of completed data backups - Check whether all required Cloud Assets have completed backups | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

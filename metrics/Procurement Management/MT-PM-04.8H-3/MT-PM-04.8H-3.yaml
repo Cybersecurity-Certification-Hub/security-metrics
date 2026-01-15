@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "3be54092-6add-4f64-9eba-097f3c90f37e"
 name: "MT-PM-04.8H-3"
-description: "Appropriate recovery time of third party systems - Check whether the recovery time for affected system components is appropriate | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [ProcurementManagement], has [p1:] set correctly."
 implementationGuidelines:
   TBD:
     details: ["- Date and time of error detection and recovery by third party", "- Affected system component", "- Applicable SLAs, thresholds, etc."]
 category: "Procurement Management"
 version: "1.0"
-comments: "TBD"
+comments: "Appropriate recovery time of third party systems - Check whether the recovery time for affected system components is appropriate | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

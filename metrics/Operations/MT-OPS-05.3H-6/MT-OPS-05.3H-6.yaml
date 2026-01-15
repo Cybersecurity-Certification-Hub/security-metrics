@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "64376f59-132d-40e3-b1d0-e9f159a0b62b"
 name: "MT-OPS-05.3H-6"
-description: "MalwareProtectionEnabled - This metric is used to assess if the antimalware solution is enabled on the respective resource | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Operations], has [p1:] set correctly."
 implementationGuidelines:
   AppTelemetry:
     details: ["- Cloud Asset", "- Antivirus-Configuration"]
 category: "Operations"
 version: "1.0"
-comments: "TBD"
+comments: "MalwareProtectionEnabled - This metric is used to assess if the antimalware solution is enabled on the respective resource | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

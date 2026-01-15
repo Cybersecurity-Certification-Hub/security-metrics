@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "91e5303b-4922-4da5-b317-449306f3b391"
 name: "MT-OPS-02.1H-1"
-description: "Percentage of cloud resources that are actively used and percentage of idle resources - Monitoring of utilization and capacity of (critical) resources | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Operations], has [p1:] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Overview of cloud resources", "- Utilization of cloud resources"]
 category: "Operations"
 version: "1.0"
-comments: "TBD"
+comments: "Percentage of cloud resources that are actively used and percentage of idle resources - Monitoring of utilization and capacity of (critical) resources | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

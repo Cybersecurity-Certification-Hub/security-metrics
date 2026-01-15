@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "8263b02e-a039-4950-b509-ba387de6a709"
 name: "MT-PM-04.8H-2"
-description: "Appropriate third party response time to malfunctions and information security incidents - Check whether availability/performance of applicable system components complies with SLAs, thresholds, etc. | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [ProcurementManagement], has [p1:] set correctly."
 implementationGuidelines:
   FSC:
     details: ["- Third party system performance and availability insights (per system component)", "- Applicable SLAs, thresholds, etc."]
 category: "Procurement Management"
 version: "1.0"
-comments: "TBD"
+comments: "Appropriate third party response time to malfunctions and information security incidents - Check whether availability/performance of applicable system components complies with SLAs, thresholds, etc. | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "2ba66d80-b7c2-4ba3-a042-692d2c907cc7"
 name: "MT-OPS-07.2H-1"
-description: "Frequency of data backups - Check whether backups are executed on a frequency according to defined requirements in a backup policy | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Operations], has [p1:] set correctly."
 implementationGuidelines:
   TBD:
     details: ["- Date and time of last data backup (per Cloud Customer/ Cloud Asset, etc.)", "- Information from Backup-Policy on extent and frequency of backups"]
 category: "Operations"
 version: "1.0"
-comments: "TBD"
+comments: "Frequency of data backups - Check whether backups are executed on a frequency according to defined requirements in a backup policy | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

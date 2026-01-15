@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "6d5319be-ec61-42b3-9e0c-c22f61b530fa"
 name: "MT-OPS-13.9H-2"
-description: "Percentage of log data retained in accordance with defined data retention - Date and time of deletion of logging and monitoring data | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Operations], has [p1:] set correctly."
 implementationGuidelines:
   TBD:
     details: ["- Information on Cloud Asset and logs to be deleted", "- Information on retention time based on backup policy"]
 category: "Operations"
 version: "1.0"
-comments: "TBD"
+comments: "Percentage of log data retained in accordance with defined data retention - Date and time of deletion of logging and monitoring data | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

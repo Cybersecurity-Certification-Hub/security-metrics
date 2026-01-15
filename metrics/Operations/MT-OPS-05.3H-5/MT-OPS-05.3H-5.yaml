@@ -1,13 +1,13 @@
 # ====== Metadata ======
 id: "3115925b-f51b-496c-a007-ce1435506606"
 name: "MT-OPS-05.3H-5"
-description: "Time required to respond to detected malware and irregularities - Date and time of irregularity detection and response | Selector: TBD (Resource Type)"
+description: "This rule assesses whether a [Resource] that offers the property [Operations], has [p1:] set correctly."
 implementationGuidelines:
   TBD:
     details: ["- Date and time of irregularity detection", "- Date and time of response to finding"]
 category: "Operations"
 version: "1.0"
-comments: "TBD"
+comments: "Time required to respond to detected malware and irregularities - Date and time of irregularity detection and response | Selector: TBD (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:
