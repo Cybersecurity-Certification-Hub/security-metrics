@@ -1,0 +1,4 @@
+{
+    "operator": "isIn",
+    "target_value": "[TLS - HPKP, HPKP, HTTP Public Key Pinning]"
+}
