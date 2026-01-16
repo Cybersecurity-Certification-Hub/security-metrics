@@ -1,4 +1,4 @@
 {
-    "operator": "TBD",
-    "target_value": "WAHR"
+    "operator": "==",
+    "target_value": "true"
 }

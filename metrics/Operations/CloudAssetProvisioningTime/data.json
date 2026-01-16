@@ -1,4 +1,4 @@
 {
-    "operator": "TBD",
-    "target_value": "TBD"
+    "operator": "<=",
+    "target_value": "24"
 }

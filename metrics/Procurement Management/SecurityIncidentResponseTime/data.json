@@ -1,4 +1,4 @@
 {
-    "operator": "==",
-    "target_value": "True"
+    "operator": "<=",
+    "target_value": "24"
 }
