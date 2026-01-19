@@ -66,7 +66,7 @@ jobs:
             protoc --version
             
             # Install Go plugin for Protobuf
-            go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+            #go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
             echo "$HOME/go/bin" >> $GITHUB_PATH
             
             # Download buf/validate repository to include validate.proto
@@ -78,7 +78,8 @@ jobs:
             mkdir -p "$RUNNER_TEMP/proto"
             
             # Validate and compile proto file
-            protoc --proto_path=. --proto_path="$RUNNER_TEMP" ontology/1.0/ontology.proto --go_out="$RUNNER_TEMP/proto"
+            #protoc --proto_path=. --proto_path="$RUNNER_TEMP" ontology/1.0/ontology.proto --go_out="$RUNNER_TEMP/proto"
+            buf generate --path ontology/v1/ontology.proto --output "$RUNNER_TEMP/proto" 
         - name: Upload Artifact ontology-merged.owx 
           uses: actions/upload-artifact@v4
           with:
