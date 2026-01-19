@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: MachineLearningModelVulnerabilitiesDetected
+description: This rule assesses whether an [MachineLearningModel] has the compliant number of [p1:Vulnerability].
+category: AISecurity
+version: "v1"
+comments: This metric assess if vulnerabilities are included in an AI model e.g. pickle magic numbers detected in the AI model what can lead to serialization attacks.
+# ====== Configuration ======
+configuration:
+  p1: 
+    operator: "=="
+    targetValue: 0
