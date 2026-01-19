@@ -59,16 +59,7 @@ jobs:
         - name: Validate proto file
         # Check if proto file is valid and can be compiled. 
         # Store the generated files in a temporary directory to avoid cluttering the repository.
-          run: |
-            # Install protobuf compiler
-            # sudo apt-get update
-            # sudo apt-get install -y protobuf-compiler
-            protoc --version
-            
-            # Install Go plugin for Protobuf
-            #go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
-            echo "$HOME/go/bin" >> $GITHUB_PATH
-            
+          run: |         
             # Download buf/validate repository to include validate.proto
             git clone https://github.com/bufbuild/protovalidate.git
             mkdir -p "$RUNNER_TEMP/buf/validate"
@@ -77,8 +68,7 @@ jobs:
             # Create temporary directory for generated files
             mkdir -p "$RUNNER_TEMP/proto"
             
-            # Validate and compile proto file
-            #protoc --proto_path=. --proto_path="$RUNNER_TEMP" ontology/1.0/ontology.proto --go_out="$RUNNER_TEMP/proto"
+            # Compile and validate proto file
             buf generate --path ontology/v1/ontology.proto --output "$RUNNER_TEMP/proto" 
         - name: Upload Artifact ontology-merged.owx 
           uses: actions/upload-artifact@v4
