@@ -154,7 +154,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:LogOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Logging"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -299,7 +299,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ConfigurationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Configuration"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
