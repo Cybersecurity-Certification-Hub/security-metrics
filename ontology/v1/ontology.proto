@@ -1072,7 +1072,6 @@ message DatabaseConnect {
 	CodeRegion code_region = 5983;
 	repeated string database_service_ids  = 5749;
 	optional string database_storage_id = 3674;
-	optional string database_storage_id = 3674;
 }
 
 // DatabaseOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1095,7 +1094,6 @@ message DatabaseQuery {
 	bool modify = 7601;
 	CodeRegion code_region = 8496;
 	repeated string database_service_ids  = 14358;
-	optional string database_storage_id = 17880;
 	optional string database_storage_id = 17880;
 }
 
