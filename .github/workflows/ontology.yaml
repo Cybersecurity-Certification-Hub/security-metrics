@@ -57,19 +57,8 @@ jobs:
             --full-semantic-mode=false \
             --deterministic-field-numbers=true
         - name: Validate proto file
-        # Check if proto file is valid and can be compiled. 
-        # Store the generated files in a temporary directory to avoid cluttering the repository.
-          run: |         
-            # Download buf/validate repository to include validate.proto
-            # git clone https://github.com/bufbuild/protovalidate.git
-            # mkdir -p "$RUNNER_TEMP/buf/validate"
-            # cp -r protovalidate/proto/protovalidate/buf/validate/validate.proto "$RUNNER_TEMP/buf/validate/"
-            
-            # Create temporary directory for generated files
-            mkdir -p "$RUNNER_TEMP/proto"
-            
-            # Compile and validate proto file
-            buf generate --path ontology/v1/ontology.proto --output "$RUNNER_TEMP/proto" --template '{"version":"v1","plugins":[{"name":"go","out":"$RUNNER_TEMP/proto","opt":["paths=source_relative"]}]}'
+          run: |       
+            buf lint --path ontology/v1/ontology.proto --error-format github-actions
         - name: Upload Artifact ontology-merged.owx 
           uses: actions/upload-artifact@v4
           with:
