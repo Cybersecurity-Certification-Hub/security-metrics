@@ -2065,13 +2065,6 @@
         <AbbreviatedIRI>core:FileOperation</AbbreviatedIRI>
         <Literal>FileOperation</Literal>
     </AnnotationAssertion>
-    
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:DiskEncryptionOperation</AbbreviatedIRI>
-        <Literal>DiskEncryptionOperation</Literal>
-    </AnnotationAssertion>
-    
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:DeAllocate</AbbreviatedIRI>
