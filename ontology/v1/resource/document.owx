@@ -64,9 +64,6 @@
         <Class abbreviatedIRI="core:ConfigurationGroupSource"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:ConfigurationOperation"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:ConfigurationOption"/>
     </Declaration>
     <Declaration>
@@ -291,18 +288,6 @@
         <Class abbreviatedIRI="core:Context"/>
         <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
-    
-    <SubClassOf>
-        <Class abbreviatedIRI="core:ConfigurationOperation"/>
-        <Class abbreviatedIRI="core:Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:ConfigurationOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
-            <Class abbreviatedIRI="core:Configuration"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:ConfigurationOption"/>
         <Class abbreviatedIRI="core:Data"/>
@@ -481,16 +466,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:ConfigurationGroupSource</AbbreviatedIRI>
         <Literal>ConfigurationGroupSource</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:ConfigurationOperation</AbbreviatedIRI>
-        <Literal>A common abstract class for configuration operations, such as reading options or a whole file.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:ConfigurationOperation</AbbreviatedIRI>
-        <Literal>ConfigurationOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

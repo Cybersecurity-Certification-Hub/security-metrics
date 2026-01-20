@@ -804,13 +804,17 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:LoadConfiguration"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
+        </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:ProvideConfiguration"/>
         <Class abbreviatedIRI="core:ConfigurationOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:ProvideConfiguration"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Configuration"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1171,7 +1175,10 @@
             <Class abbreviatedIRI="core:OperatingSystemArchitecture"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
+        </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:CryptographicOperation"/>
         <Class abbreviatedIRI="core:Operation"/>

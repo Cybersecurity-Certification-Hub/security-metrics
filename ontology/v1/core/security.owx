@@ -653,10 +653,6 @@
         <Class abbreviatedIRI="core:LocalEntryPoint"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:LoadConfiguration"/>
-        <Class abbreviatedIRI="core:ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:LoadLibrary"/>
         <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
     </SubClassOf>
