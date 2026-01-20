@@ -1446,17 +1446,9 @@
             <Class abbreviatedIRI="core:File"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    
     <SubClassOf>
         <Class abbreviatedIRI="core:LogOutput"/>
         <Class abbreviatedIRI="core:Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:LogOutput"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="core:Logging"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:LogOutput"/>
