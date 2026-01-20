@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- SLA Requirements", "- Information for provisioning (e.g., from Ticket)", "- Cloud Asset Status (e.g., active/inactive)"]
 category: "Operations"
 version: "1.0"
-comments: "Provisioning time in hours - Ensure provisioning time meets SLA requirements (e.g., within 24 hours) | Selector: TBD (Resource Type) [TargetValue is measured in hours] [Previous name: MT-OPS-02.1H-2]"
+comments: "Provisioning time in hours - Ensure provisioning time meets SLA requirements (e.g., within 24 hours) | Selector: FSC (Resource Type) [TargetValue is measured in hours] [Previous name: MT-OPS-02.1H-2]"
 # ====== Configuration ======
 configuration:
   p1:

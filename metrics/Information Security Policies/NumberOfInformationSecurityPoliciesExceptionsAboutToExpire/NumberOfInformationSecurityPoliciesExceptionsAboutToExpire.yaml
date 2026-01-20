@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Date of initial approval/ Date of last review ", "- time limitation of the exceptions"]
 category: "Information Security Policies"
 version: "1.0"
-comments: "Number of exceptions to (information security) policies and procedures that are about to expire - Check whether approved exceptions are about to expire in order to trigger the review and approval process of the defined exceptions | Selector: TBD (Resource Type) [TargetValue is measured in units] [Previous name: MT-ISP-03.10H-2]"
+comments: "Number of exceptions to (information security) policies and procedures that are about to expire - Check whether approved exceptions are about to expire in order to trigger the review and approval process of the defined exceptions | Selector: FSC (Resource Type) [TargetValue is measured in units] [Previous name: MT-ISP-03.10H-2]"
 # ====== Configuration ======
 configuration:
   p1:

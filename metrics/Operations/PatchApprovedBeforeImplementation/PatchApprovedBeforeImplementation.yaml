@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Information on to be applied patches/updates", "- Information on approval status from ticket"]
 category: "Operations"
 version: "1.0"
-comments: "CSCs initial approval for patches and updates - Check whether updates/patches were initially approved before rollout | Selector: TBD (Resource Type) [Previous name: MT-OPS-18.6H-1]"
+comments: "CSCs initial approval for patches and updates - Check whether updates/patches were initially approved before rollout | Selector: FSC (Resource Type) [Previous name: MT-OPS-18.6H-1]"
 # ====== Configuration ======
 configuration:
   p1:

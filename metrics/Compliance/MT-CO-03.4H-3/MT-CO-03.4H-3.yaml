@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Information on (internal) audit findings/recommendations", "- Information from e.g., ticket for audit finding/recommendation"]
 category: "Compliance"
 version: "1.0"
-comments: "Time to comply with audit recommendations - Check whether audit recommendations were complied with in a defined timeframe | Selector: TBD (Resource Type)"
+comments: "Time to comply with audit recommendations - Check whether audit recommendations were complied with in a defined timeframe | Selector: FSC (Resource Type)"
 # ====== Configuration ======
 configuration:
   p1:

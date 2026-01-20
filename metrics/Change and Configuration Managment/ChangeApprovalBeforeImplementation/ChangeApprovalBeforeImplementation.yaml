@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Date and time of change approval and deployment", "- Information from Change ticket"]
 category: "Change and Configuration Managment"
 version: "1.0"
-comments: "Change approval before deployment to production - Check whether there was a change approval before deployment to production | Selector: TBD (Resource Type) [Previous name: MT-CCM-04.1H-1]"
+comments: "Change approval before deployment to production - Check whether there was a change approval before deployment to production | Selector: FSC (Resource Type) [Previous name: MT-CCM-04.1H-1]"
 # ====== Configuration ======
 configuration:
   p1:

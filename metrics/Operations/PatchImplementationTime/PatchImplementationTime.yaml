@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Information on patch/update availability", "- Information on rollout-time after CSC approval"]
 category: "Operations"
 version: "1.0"
-comments: "Average Patch/Update Rollout Time - Check average time from available patches/updates to approval/implementation | Selector: TBD (Resource Type) [TargetValue is measured in hours] [Previous name: MT-OPS-18.6H-2]"
+comments: "Average Patch/Update Rollout Time - Check average time from available patches/updates to approval/implementation | Selector: FSC (Resource Type) [TargetValue is measured in hours] [Previous name: MT-OPS-18.6H-2]"
 # ====== Configuration ======
 configuration:
   p1:

@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Information for provisioning (e.g., from Ticket)", "- Cloud Asset Status (e.g., active/inactive)", "- Event/Incident information after change of asset status"]
 category: "Operations"
 version: "1.0"
-comments: "Incident rate for Provisioning/De-Provisioning - Check whether incidents occurred related to (De-)Provisioning of Cloud Assets | Selector: TBD (Resource Type) [TargetValue is measured in units] [Previous name: MT-OPS-02.1H-4]"
+comments: "Incident rate for Provisioning/De-Provisioning - Check whether incidents occurred related to (De-)Provisioning of Cloud Assets | Selector: FSC (Resource Type) [TargetValue is measured in units] [Previous name: MT-OPS-02.1H-4]"
 # ====== Configuration ======
 configuration:
   p1:
