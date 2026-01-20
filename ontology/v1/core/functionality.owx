@@ -1241,15 +1241,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionOperation"/>
-        <Class abbreviatedIRI="core:CipherOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionOperation"/>
         <Class abbreviatedIRI="core:Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionOperation"/>
-        <Class abbreviatedIRI="core:CryptographicOperation"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionOperation"/>
