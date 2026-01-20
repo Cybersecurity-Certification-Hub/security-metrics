@@ -1887,21 +1887,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:Key</AbbreviatedIRI>
-        <Literal>The node that represents the &quot;key&quot; of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:Key</AbbreviatedIRI>
-        <Literal>Key</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:Key</AbbreviatedIRI>
-        <Literal>SelectorKey</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:LogWrite</AbbreviatedIRI>
         <Literal>A log write operation e.g. `loggint.warn(&quot;...&quot;)`.</Literal>
     </AnnotationAssertion>
@@ -2204,16 +2189,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
        <AbbreviatedIRI>core:InstallUpdate</AbbreviatedIRI>
         <Literal>InstallUpdateOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-       <AbbreviatedIRI>core:Key</AbbreviatedIRI>
-        <Literal>A key used for encryption algorithms.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-       <AbbreviatedIRI>core:Key</AbbreviatedIRI>
-        <Literal>Key</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

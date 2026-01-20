@@ -362,11 +362,6 @@
         <Class abbreviatedIRI="core:Time"/>
         <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
-    
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Key"/>
-        <Class abbreviatedIRI="core:Data"/>
-    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:Document"/>
         <Class abbreviatedIRI="res:Data"/>

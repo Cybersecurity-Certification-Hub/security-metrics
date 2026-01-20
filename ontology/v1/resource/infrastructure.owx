@@ -1422,8 +1422,18 @@ name = metadata.name</Literal>
     </DataPropertyAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+       <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
+        <Literal>A key used for encryption algorithms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
         <Literal>The node that represents the "key" of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
+        <Literal>The node that represents the &quot;key&quot; of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
