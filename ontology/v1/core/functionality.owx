@@ -995,14 +995,6 @@
             <Class abbreviatedIRI="core:EntryPoint"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    
-    <SubClassOf>
-        <Class abbreviatedIRI="core:InputValidationOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
-            <Class abbreviatedIRI="core:Input"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:InstallUpdate"/>
         <ObjectSomeValuesFrom>
@@ -1013,14 +1005,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:InputValidationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Input"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:InputValidationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Output"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
