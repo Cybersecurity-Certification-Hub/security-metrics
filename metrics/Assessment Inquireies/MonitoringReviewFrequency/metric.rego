@@ -1,4 +1,4 @@
-package cch.metrics.monitoring_review_frequency_q3
+package cch.metrics.monitoring_review_frequency
 
 import data.cch.compare
 import rego.v1
