@@ -331,7 +331,7 @@
         <DataProperty abbreviatedIRI="core:description"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="core:keyExchange"/>
+        <ObjectProperty abbreviatedIRI="core:uses"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="core:protects"/>
@@ -664,7 +664,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:HybridCipher"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:keyExchange"/>
+            <ObjectProperty abbreviatedIRI="core:uses"/>
             <Class abbreviatedIRI="core:AsymmetricCipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2225,8 +2225,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-       <AbbreviatedIRI>core:keyExchange</AbbreviatedIRI>
-        <Literal>keyExchange</Literal>
+       <AbbreviatedIRI>core:uses</AbbreviatedIRI>
+        <Literal>uses</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
