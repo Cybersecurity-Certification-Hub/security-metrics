@@ -2262,11 +2262,6 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:validatedBy</AbbreviatedIRI>
-        <Literal>validatedBy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:zone</AbbreviatedIRI>
         <Literal>zone</Literal>
     </AnnotationAssertion>

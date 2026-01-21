@@ -2904,11 +2904,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:validatedBy</AbbreviatedIRI>
-        <Literal>validatedBy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:zone</AbbreviatedIRI>
         <Literal>zone</Literal>
     </AnnotationAssertion>

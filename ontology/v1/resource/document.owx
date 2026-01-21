@@ -368,7 +368,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Document"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="cl:validatedBy"/>
+            <ObjectProperty abbreviatedIRI="prop:validatedBy"/>
             <Class abbreviatedIRI="core:SchemaValidation"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
