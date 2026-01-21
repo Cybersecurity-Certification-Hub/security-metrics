@@ -489,7 +489,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:Credential"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="cl:usedByMultiple"/>
+            <ObjectProperty abbreviatedIRI="prop:usedByMultiple"/>
             <Class abbreviatedIRI="cl:CloudResource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1531,11 +1531,6 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">ContainerRegistry</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-        <AbbreviatedIRI>cl:Credential</AbbreviatedIRI>
-        <Literal>usedByMultiple: In which resources the credential is being used</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:Credential</AbbreviatedIRI>
         <Literal>Credential</Literal>
@@ -2249,11 +2244,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:usedBy</AbbreviatedIRI>
         <Literal>usedBy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:usedByMultiple</AbbreviatedIRI>
-        <Literal>usedByMultiple</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

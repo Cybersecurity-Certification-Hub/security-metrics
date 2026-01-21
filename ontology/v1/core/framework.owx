@@ -35,9 +35,6 @@
         <Class abbreviatedIRI="core:Logger"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -142,10 +139,6 @@
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="prop:usedBy"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
-        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
     </SubObjectPropertyOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -596,11 +589,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:target</AbbreviatedIRI>
         <Literal>target</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:usedByMultiple</AbbreviatedIRI>
-        <Literal>usedByMultiple</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

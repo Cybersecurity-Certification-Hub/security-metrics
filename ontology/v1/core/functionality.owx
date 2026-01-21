@@ -422,9 +422,6 @@
         <DataProperty abbreviatedIRI="core:format"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="core:message"/>
     </Declaration>
     <Declaration>
@@ -1566,10 +1563,6 @@
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="prop:usedBy"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
-        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -2891,11 +2884,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:target</AbbreviatedIRI>
         <Literal>target</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:usedByMultiple</AbbreviatedIRI>
-        <Literal>usedByMultiple</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
