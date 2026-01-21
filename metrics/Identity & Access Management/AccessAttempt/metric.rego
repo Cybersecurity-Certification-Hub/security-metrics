@@ -13,5 +13,5 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document:AccessManagement.skipForNow)
+    compare(data.operator, data.target_value, document:AccessManagement.authLogRetentionHours)
 }

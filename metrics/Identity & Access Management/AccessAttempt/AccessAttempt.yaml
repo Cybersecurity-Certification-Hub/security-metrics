@@ -1,10 +1,10 @@
 # ====== Metadata ======
 id: "7a1df4f2-e0c0-4999-912e-b2829a8172a5"
 name: "AccessAttempt"
-description: "This rule assesses whether a [Resource] that offers the property [AccessManagement], has [p1:skipForNow - not relevant / requires updates] set correctly."
+description: "This rule assesses whether a [Resource] that offers the property [AccessManagement], has [p1:authLogRetentionHours] set correctly."
 implementationGuidelines:
   AMOE:
-    question: "Are the authentication attempts that were logged in tracked and safed of the last hours?"
+    question: "How many hours do authentication attempts have to be logged, tracked and stored?"
     keywords: ["authentication attempts", "logging", "timestamp"]
 category: "Identity & Access Management"
 version: "1.0"
