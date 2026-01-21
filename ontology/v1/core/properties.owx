@@ -41,9 +41,6 @@
         <ObjectProperty abbreviatedIRI="res:scope"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="res:target"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty abbreviatedIRI="res:usedBy"/>
     </Declaration>
     <Declaration>

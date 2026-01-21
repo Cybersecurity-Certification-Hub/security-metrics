@@ -473,9 +473,6 @@
         <DataProperty abbreviatedIRI="prop:enabled"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="prop:labels"/>
     </Declaration>
     <Declaration>
@@ -943,7 +940,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:LocalEntryPoint"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:target"/>
+            <ObjectProperty abbreviatedIRI="prop:usedBy"/>
             <Class abbreviatedIRI="core:OperatingSystemArchitecture"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1567,12 +1564,12 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
+        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
+        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -2894,11 +2891,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:target</AbbreviatedIRI>
         <Literal>target</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:usedBy</AbbreviatedIRI>
-        <Literal>usedBy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

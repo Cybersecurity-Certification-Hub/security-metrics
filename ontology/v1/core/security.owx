@@ -185,9 +185,6 @@
         <ObjectProperty abbreviatedIRI="prop:scope"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
     </Declaration>
     <Declaration>
@@ -362,7 +359,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:DiskEncryption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:target"/>
+            <ObjectProperty abbreviatedIRI="prop:usedBy"/>
             <Class abbreviatedIRI="core:BlockStorage"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -993,12 +990,12 @@
         <Class abbreviatedIRI="core:Redundancy"/>
     </SubClassOf>
     <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
+        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
+        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
     </SubObjectPropertyOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1720,11 +1717,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:target</AbbreviatedIRI>
         <Literal>target</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:usedBy</AbbreviatedIRI>
-        <Literal>usedBy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
