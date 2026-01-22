@@ -325,6 +325,20 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:leftPrincipal"/>
+            <Class abbreviatedIRI="core:Principal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:rightPrincipal"/>
+            <Class abbreviatedIRI="core:Principal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionInUse"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:enabled"/>
