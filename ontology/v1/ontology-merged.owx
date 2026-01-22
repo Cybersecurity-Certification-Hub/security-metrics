@@ -147,9 +147,6 @@
         <Class IRI="/classes/ConfigurationGroupSource"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/ConfigurationOperation"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/classes/ConfigurationOption"/>
     </Declaration>
     <Declaration>
@@ -774,9 +771,6 @@
         <ObjectProperty IRI="/classes/bootLog"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/classes/keyExchange"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/classes/leftPrincipal"/>
     </Declaration>
     <Declaration>
@@ -804,13 +798,13 @@
         <ObjectProperty IRI="/classes/scope"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/classes/target"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/classes/usedBy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/usedByMultiple"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/classes/uses"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/validatedBy"/>
@@ -1404,10 +1398,19 @@
         <ObjectProperty IRI="/classes/describes"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/properties/usedByMultiple"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/properties/usedBy"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/privacyLevel"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/size"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ConfigurationOperation"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/TwoQubitErrorRate"/>
@@ -1435,6 +1438,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/annualUpdateCompleted"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/properties/validatedBy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Specification"/>
@@ -2125,7 +2131,7 @@
     <SubClassOf>
         <Class IRI="/classes/Credential"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/usedByMultiple"/>
+            <ObjectProperty IRI="/properties/usedByMultiple"/>
             <Class IRI="/classes/CloudResource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2329,7 +2335,7 @@
     <SubClassOf>
         <Class IRI="/classes/DiskEncryption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/target"/>
+            <ObjectProperty IRI="/properties/usedBy"/>
             <Class IRI="/classes/BlockStorage"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2351,13 +2357,6 @@
     <SubClassOf>
         <Class IRI="/classes/Document"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/validatedBy"/>
-            <Class IRI="/classes/SchemaValidation"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Document"/>
-        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/CryptographicHash"/>
         </ObjectSomeValuesFrom>
@@ -2374,6 +2373,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/Signature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Document"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/validatedBy"/>
+            <Class IRI="/classes/SchemaValidation"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2430,14 +2436,6 @@
             <DataProperty IRI="/properties/enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/EncryptionOperation"/>
-        <Class IRI="/classes/CipherOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/EncryptionOperation"/>
-        <Class IRI="/classes/CryptographicOperation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/EncryptionOperation"/>
@@ -2860,7 +2858,7 @@
     <SubClassOf>
         <Class IRI="/classes/HybridCipher"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/keyExchange"/>
+            <ObjectProperty IRI="/classes/uses"/>
             <Class IRI="/classes/AsymmetricCipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2993,14 +2991,7 @@
     <SubClassOf>
         <Class IRI="/classes/InputValidationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Input"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/InputValidationOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty IRI="/classes/operatesOn"/>
             <Class IRI="/classes/Output"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3012,13 +3003,6 @@
         <Class IRI="/classes/InstallUpdate"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/classes/operatesOn"/>
-            <Class IRI="/classes/AutomaticUpdates"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/InstallUpdate"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/AutomaticUpdates"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3070,10 +3054,6 @@
     <SubClassOf>
         <Class IRI="/classes/Key"/>
         <Class IRI="/classes/Credential"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Key"/>
-        <Class IRI="/classes/Data"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Key"/>
@@ -3235,7 +3215,7 @@
     <SubClassOf>
         <Class IRI="/classes/LocalEntryPoint"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/target"/>
+            <ObjectProperty IRI="/properties/usedBy"/>
             <Class IRI="/classes/OperatingSystemArchitecture"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3270,13 +3250,6 @@
         <Class IRI="/classes/LogOutput"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/classes/operatesOn"/>
-            <Class IRI="/classes/Logging"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/LogOutput"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/Logging"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3833,13 +3806,6 @@
     <SubClassOf>
         <Class IRI="/classes/ProvideConfiguration"/>
         <Class IRI="/classes/ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/ProvideConfiguration"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Configuration"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ProvideConfiguration"/>
@@ -4944,6 +4910,10 @@ name = metadata.name</Literal>
         <ObjectProperty IRI="/properties/hasMultiple"/>
         <ObjectProperty IRI="/properties/has"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/properties/usedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/classes/hasType"/>
         <Class IRI="/classes/Resource"/>
@@ -5347,16 +5317,6 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/ConfigurationOperation</IRI>
-        <Literal>A common abstract class for configuration operations, such as reading options or a whole file.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/ConfigurationOperation</IRI>
-        <Literal>ConfigurationOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/ConfigurationOption</IRI>
         <Literal>Represents a configuration option within one [group]. Usually there is one option for each entry in a configuration data structure.</Literal>
     </AnnotationAssertion>
@@ -5424,11 +5384,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/CreateSecret</IRI>
         <Literal>CreateSecret</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-        <IRI>/classes/Credential</IRI>
-        <Literal>usedByMultiple: In which resources the credential is being used</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5529,11 +5484,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/DeviceProvisioningService</IRI>
         <Literal xml:lang="english">DeviceProvisioningService</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/DiskEncryptionOperation</IRI>
-        <Literal>DiskEncryptionOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5741,11 +5691,6 @@ name = metadata.name</Literal>
         <Literal>GetSecret</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/HashOperation</IRI>
-        <Literal>CryptographicHash</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/Http</IRI>
         <Literal>Abstract class for all HTTP related functionalities.</Literal>
@@ -5949,11 +5894,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Key</IRI>
         <Literal>Key</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/Key</IRI>
-        <Literal>SelectorKey</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6937,11 +6877,6 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/keyExchange</IRI>
-        <Literal>keyExchange</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/keyExchangeAlgorithm</IRI>
         <Literal>keyExchangeAlgorithm</Literal>
     </AnnotationAssertion>
@@ -7284,6 +7219,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/usedByMultiple</IRI>
         <Literal>usedByMultiple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/uses</IRI>
+        <Literal>uses</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
