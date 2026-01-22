@@ -1231,6 +1231,14 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <Class abbreviatedIRI="core:CipherOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
         <Class abbreviatedIRI="core:CryptographicOperation"/>
     </SubClassOf>
     <SubClassOf>
@@ -1239,6 +1247,27 @@
             <DataProperty abbreviatedIRI="prop:algorithm"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:algorithm"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <Class abbreviatedIRI="core:Encryption"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:Secret"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Error"/>
@@ -1830,7 +1859,6 @@
         <AbbreviatedIRI>core:MemoryOperation</AbbreviatedIRI>
         <Literal>MemoryOperation</Literal>
     </AnnotationAssertion>
-    
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:Main</AbbreviatedIRI>
@@ -2345,7 +2373,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:EncryptionOperation</AbbreviatedIRI>
-        <Literal>Encryption</Literal>
+        <Literal>EncryptionOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

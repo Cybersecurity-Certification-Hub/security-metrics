@@ -27,11 +27,10 @@ jobs:
         with:
           fetch-depth: 0  # Full history needed for diff
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-
       - name: Install validator
         run: pip install "check-jsonschema[yaml]"
       - name: Get changed YAML files
