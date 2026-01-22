@@ -2340,11 +2340,6 @@
         <Literal xml:lang="english">Functionality</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:HashOperation</AbbreviatedIRI>
-        <Literal>CryptographicHash</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:HttpEndpoint</AbbreviatedIRI>
         <Literal>An HTTP endpoint can set the &quot;proxyTarget&quot; property, in case that is routed through a (reverse) proxy, e.g. a load balancer.</Literal>

@@ -514,11 +514,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:CryptographicHash</AbbreviatedIRI>
-        <Literal>CryptographicHash</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:File</AbbreviatedIRI>
         <Literal>File</Literal>
     </AnnotationAssertion>

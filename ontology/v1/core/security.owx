@@ -1133,6 +1133,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:CryptographicHash</AbbreviatedIRI>
+        <Literal>CryptographicHash</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:CustomerKeyEncryption</AbbreviatedIRI>
         <Literal xml:lang="english">CustomerKeyEncryption</Literal>
     </AnnotationAssertion>
