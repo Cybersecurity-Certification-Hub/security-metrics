@@ -194,11 +194,6 @@
         <Literal>Darwin</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:EncryptionOperation</AbbreviatedIRI>
-        <Literal>EncryptionOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:EqualityCheck</AbbreviatedIRI>
         <Literal>Represents an operation that checks whether two principals are equal.</Literal>
