@@ -60,7 +60,7 @@ jobs:
           run: |       
             mkdir -p buf/validate
             curl -L \
-              https://raw.githubusercontent.com/bufbuild/protovalidate/main/proto/buf/validate/validate.proto \
+              https://github.com/bufbuild/protovalidate/blob/main/proto/protovalidate/buf/validate/validate.proto \
               -o buf/validate/validate.proto
             buf lint --path ontology/v1/ontology.proto --error-format github-actions
         - name: Upload Artifact ontology-merged.owx 
