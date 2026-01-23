@@ -1,6 +1,6 @@
 package cch.metrics.document_csaf_content_valid
 
-import data.compare
+import data.cch.compare
 import rego.v1
 import input as document
 
