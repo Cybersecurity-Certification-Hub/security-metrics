@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["AES", "encryption mechanisms", "mobile devices", "portable devices"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the required AES standard."
+comments: "This metric assesses the required AES standard. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

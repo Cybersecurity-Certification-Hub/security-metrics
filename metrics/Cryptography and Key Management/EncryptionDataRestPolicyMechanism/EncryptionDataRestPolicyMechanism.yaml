@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["encryption", "cryptography", "data at rest", "protection", "PKI", "data at rest protection"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the defined up-front data encryption mechanism."
+comments: "This metric assesses the defined up-front data encryption mechanism. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

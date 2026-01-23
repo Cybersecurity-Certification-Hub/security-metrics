@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["encryption mechanisms", "protocols", "default domains and their TLS-profiles"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the accepted TLS version."
+comments: "This metric assesses the accepted TLS version. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

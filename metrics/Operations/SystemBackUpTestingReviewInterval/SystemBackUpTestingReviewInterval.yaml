@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["backup", "restore procedure"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses the frequency of procedure checks."
+comments: "This metric assesses the frequency of procedure checks. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

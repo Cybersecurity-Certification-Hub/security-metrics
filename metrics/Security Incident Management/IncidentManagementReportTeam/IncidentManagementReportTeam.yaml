@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["Incident Management", "Incident Management general information"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the responsible contact point for reporting issues."
+comments: "This metric assesses the responsible contact point for reporting issues. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

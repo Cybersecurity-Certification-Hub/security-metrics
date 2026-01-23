@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["access control", "security model", "permissions", "RBAC", "DAC", "MAC"]
 category: "Change and Configuration Managment"
 version: "1.0"
-comments: "This metric assesses the type of access control implemented."
+comments: "This metric assesses the type of access control implemented. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

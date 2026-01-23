@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["CSP", "customer", "shared", "evidence collection"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the entity responsible for maintaining cyberincident evidence."
+comments: "This metric assesses the entity responsible for maintaining cyberincident evidence. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["incident identification", "sources", "security-relevant"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses how sources of information are used to identify incidents."
+comments: "This metric assesses how sources of information are used to identify incidents. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

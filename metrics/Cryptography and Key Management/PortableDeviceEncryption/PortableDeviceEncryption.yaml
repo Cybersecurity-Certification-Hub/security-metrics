@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["encryption mechanisms", "mobile devices", "portable devices"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the encryption requirements for mobile and portable devices."
+comments: "This metric assesses the encryption requirements for mobile and portable devices. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["Incident Management", "CERT"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the responsible team for handling security incidents."
+comments: "This metric assesses the responsible team for handling security incidents. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

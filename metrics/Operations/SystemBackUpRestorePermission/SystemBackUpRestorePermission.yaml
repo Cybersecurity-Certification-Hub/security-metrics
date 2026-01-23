@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["backup", "access", "restore"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses who is authorized to restore backups."
+comments: "This metric assesses who is authorized to restore backups. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

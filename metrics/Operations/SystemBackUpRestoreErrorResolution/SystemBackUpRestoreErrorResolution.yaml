@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["backup", "monitoring"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses how restore mistakes are handled."
+comments: "This metric assesses how restore mistakes are handled. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

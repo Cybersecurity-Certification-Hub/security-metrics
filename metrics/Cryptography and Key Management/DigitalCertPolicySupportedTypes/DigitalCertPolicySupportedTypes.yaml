@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["digital certificates", "PKI", "CA", "x509", "certificate authorities", "publicly verifiable"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the supported verifiable certificates for Certification Authorities."
+comments: "This metric assesses the supported verifiable certificates for Certification Authorities. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

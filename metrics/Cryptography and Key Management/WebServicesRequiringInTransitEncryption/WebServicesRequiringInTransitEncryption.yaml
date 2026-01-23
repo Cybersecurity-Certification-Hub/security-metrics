@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["encryption mechanisms", "web services", "data in transit"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses which web services must encrypt data in transit."
+comments: "This metric assesses which web services must encrypt data in transit. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

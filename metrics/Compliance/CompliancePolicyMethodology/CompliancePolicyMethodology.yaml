@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["audits", "reviews", "compliance"]
 category: "Compliance"
 version: "1.0"
-comments: "This metric assesses the mechanisms for periodic compliance monitoring."
+comments: "This metric assesses the mechanisms for periodic compliance monitoring. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

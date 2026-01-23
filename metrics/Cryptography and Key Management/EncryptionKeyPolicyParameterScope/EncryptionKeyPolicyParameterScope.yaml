@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["encryption", "key management", "key lenght", "standards"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the encryption key parameters covered by the management policy."
+comments: "This metric assesses the encryption key parameters covered by the management policy. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["forensic", "incident management"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the entity responsible for coordinating forensic investigations."
+comments: "This metric assesses the entity responsible for coordinating forensic investigations. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

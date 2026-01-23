@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["logging", "monitoring", "policy", "derived data", "customer data", "PII", "monitoring and logging"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses whether derived data security events are stored."
+comments: "This metric assesses whether derived data security events are stored. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

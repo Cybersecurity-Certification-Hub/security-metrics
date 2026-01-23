@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["AES", "encryption mechanisms", "mobile devices", "portable devices"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the required minimum AES key length."
+comments: "This metric assesses the required minimum AES key length. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["Incident Management", "Incident Management general information"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the reporting timeframe for staff regarding potential security and privacy issues."
+comments: "This metric assesses the reporting timeframe for staff regarding potential security and privacy issues. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

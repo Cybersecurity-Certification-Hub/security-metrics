@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["customer", "notifications", "incident"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the notification timing for users regarding incidents."
+comments: "This metric assesses the notification timing for users regarding incidents. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

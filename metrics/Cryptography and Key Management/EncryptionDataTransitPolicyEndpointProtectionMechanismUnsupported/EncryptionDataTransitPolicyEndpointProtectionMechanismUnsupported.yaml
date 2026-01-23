@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["encryption", "cryptography", "data in transit", "not supported", "TLS - HPKP - HTTP Public Key Pinning"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the unsupported encryption mechanisms for data in transit."
+comments: "This metric assesses the unsupported encryption mechanisms for data in transit. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

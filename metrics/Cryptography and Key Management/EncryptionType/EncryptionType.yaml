@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["encryptioncryptography", "data at rest protection"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the encryption type in use."
+comments: "This metric assesses the encryption type in use. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:

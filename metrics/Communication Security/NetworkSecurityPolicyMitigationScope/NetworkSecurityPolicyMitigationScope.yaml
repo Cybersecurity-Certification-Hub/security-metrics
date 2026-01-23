@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["network security", "DoS", "DDoS", "proxy", "IDS", "Denial of service protection"]
 category: "Communication Security"
 version: "1.0"
-comments: "This metric assesses the network-level attacks addressed by implemented mechanisms."
+comments: "This metric assesses the network-level attacks addressed by implemented mechanisms. Measured as string."
 # ====== Configuration ======
 configuration:
   p1:
