@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["incident review", "handling frequency", "security incidents", "response evaluation"]
 category: "Incident Management"
 version: "1.0"
-comments: "This metric assesses the review frequency of incident handling and responses. [TargetValue is measured in months]"
+comments: "This metric assesses the review frequency of incident handling and responses. Measured in months."
 # ====== Configuration ======
 configuration:
   p1:

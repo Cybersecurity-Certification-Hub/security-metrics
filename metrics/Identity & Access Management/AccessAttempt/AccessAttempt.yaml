@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["authentication attempts", "logging", "timestamp"]
 category: "Identity & Access Management"
 version: "1.0"
-comments: "This metric assesses whether recent authentication attempts are tracked and stored. [TargetValue is measured in hours]"
+comments: "This metric assesses whether recent authentication attempts are tracked and stored. Measured in hours."
 # ====== Configuration ======
 configuration:
   p1:

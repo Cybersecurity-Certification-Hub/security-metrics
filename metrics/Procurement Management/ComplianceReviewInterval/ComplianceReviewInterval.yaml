@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["reviews", "frequency", "schedule"]
 category: "Procurement Management"
 version: "1.0"
-comments: "This metric assesses the recommended frequency for conducting reviews. [TargetValue is measured in months]"
+comments: "This metric assesses the recommended frequency for conducting reviews. Measured in months."
 # ====== Configuration ======
 configuration:
   p1:

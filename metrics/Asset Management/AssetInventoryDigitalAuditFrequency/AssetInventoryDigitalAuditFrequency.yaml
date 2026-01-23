@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["data backup", "firewalls", "frequency", "compliance"]
 category: "Asset Management"
 version: "1.0"
-comments: "This metric assesses the frequency of digital asset security audits. [TargetValue is measured in months]"
+comments: "This metric assesses the frequency of digital asset security audits. Measured in months."
 # ====== Configuration ======
 configuration:
   p1:

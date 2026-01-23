@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["encryption mechanisms", "certificate"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the required minimum certificate key length. [TargetValue is measured in bits]"
+comments: "This metric assesses the required minimum certificate key length. Measured in bits."
 # ====== Configuration ======
 configuration:
   p1:

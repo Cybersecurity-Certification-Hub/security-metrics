@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["audit", "frequency", "inventory"]
 category: "Asset Management"
 version: "1.0"
-comments: "This metric assesses the frequency of asset inventory updates. [TargetValue is measured in months]"
+comments: "This metric assesses the frequency of asset inventory updates. Measured in months."
 # ====== Configuration ======
 configuration:
   p1:

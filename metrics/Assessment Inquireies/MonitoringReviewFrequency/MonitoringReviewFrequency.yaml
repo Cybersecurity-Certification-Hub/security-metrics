@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["monitoring review", "effectiveness", "compliance", "frequency"]
 category: "Assessment Inquireies"
 version: "1.0"
-comments: "This metric assesses the frequency of monitoring procedure reviews for compliance. [TargetValue is measured in months]"
+comments: "This metric assesses the frequency of monitoring procedure reviews for compliance. Measured in months."
 # ====== Configuration ======
 configuration:
   p1:
