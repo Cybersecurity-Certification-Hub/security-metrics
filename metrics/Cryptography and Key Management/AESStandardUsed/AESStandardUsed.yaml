@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "170a4ef8-1cc9-4e43-9849-bdb2245a0041"
 name: "AESStandardUsed"
-description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption.AES], has [p1:type] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Encryption.AES], has [p1:type] set correctly."
 implementationGuidelines:
   AMOE:
     question: "What Advanced Encryption Algorithm (AES) standard should be used? "
     keywords: ["AES", "encryption mechanisms", "mobile devices", "portable devices"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the required AES standard. | Selector: PolicyDocument (Resource Type) [Previous name: EncryptionPolicyQ5]"
+comments: "This metric assesses the required AES standard. [Previous name: EncryptionPolicyQ5]"
 # ====== Configuration ======
 configuration:
   p1:

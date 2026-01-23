@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "2a79f0a3-c737-4e5f-9049-a7c953d19fa3"
 name: "SystemBackUpRestorePermission"
-description: "This rule assesses whether a [Resource] that offers the property [Data.Backup.Restore], has [p1:permission] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Backup.Restore], has [p1:permission] set correctly."
 implementationGuidelines:
   AMOE:
     question: "Who is allowed to restore backups?"
     keywords: ["backup", "access", "restore"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses who is authorized to restore backups. | Selector: PolicyDocument (Resource Type) [Previous name: SystemBackUpPolicyQ03]"
+comments: "This metric assesses who is authorized to restore backups. [Previous name: SystemBackUpPolicyQ03]"
 # ====== Configuration ======
 configuration:
   p1:

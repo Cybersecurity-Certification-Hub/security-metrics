@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "b960a7bc-e6b9-4ee1-99b0-45ecc5799523"
 name: "EncryptionDataRestPolicyMechanism"
-description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption], has [p1:mechanism] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Encryption], has [p1:mechanism] set correctly."
 implementationGuidelines:
   AMOE:
     question: "Which up-front data encryption mechamism is defined?"
     keywords: ["encryption", "cryptography", "data at rest", "protection", "PKI", "data at rest protection"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the defined up-front data encryption mechanism. | Selector: PolicyDocument (Resource Type) [Previous name: EncryptionDataRestPolicyQ1]"
+comments: "This metric assesses the defined up-front data encryption mechanism. [Previous name: EncryptionDataRestPolicyQ1]"
 # ====== Configuration ======
 configuration:
   p1:

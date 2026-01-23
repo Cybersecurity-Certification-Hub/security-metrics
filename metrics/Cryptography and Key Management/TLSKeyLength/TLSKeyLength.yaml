@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "18e8e2dd-f7d9-4329-b990-229757dbcab7"
 name: "TLSKeyLength"
-description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption.TLS], has [p1:keyLength] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Encryption.TLS], has [p1:keyLength] set correctly."
 implementationGuidelines:
   AMOE:
     question: "What minimum certificate key length is required?"
     keywords: ["encryption mechanisms", "certificate"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the required minimum certificate key length. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in bits] [Previous name: EncryptionPolicyQ8]"
+comments: "This metric assesses the required minimum certificate key length. [TargetValue is measured in bits] [Previous name: EncryptionPolicyQ8]"
 # ====== Configuration ======
 configuration:
   p1:

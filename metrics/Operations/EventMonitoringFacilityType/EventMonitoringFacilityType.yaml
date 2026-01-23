@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "c6d4105a-7e4d-4ae6-8900-0d021977ca3a"
 name: "EventMonitoringFacilityType"
-description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event.SIEM], has [p1:facilityType] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityIncident.Event.SIEM], has [p1:facilityType] set correctly."
 implementationGuidelines:
   AMOE:
     question: "In which type of facility are SIEM events stored?"
     keywords: ["logging", "monitoring", "SIEM", "central", "Security Information and Event Management"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses the facility type used to store SIEM events. | Selector: PolicyDocument (Resource Type) [Previous name: EventMonitoringPolicyCheckQ2]"
+comments: "This metric assesses the facility type used to store SIEM events. [Previous name: EventMonitoringPolicyCheckQ2]"
 # ====== Configuration ======
 configuration:
   p1:

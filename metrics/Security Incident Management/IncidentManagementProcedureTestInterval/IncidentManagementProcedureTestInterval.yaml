@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "251518a2-5fce-480f-9307-7f9fb9d92d7a"
 name: "IncidentManagementProcedureTestInterval"
-description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Procedure], has [p1:testInterval] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityIncident.Procedure], has [p1:testInterval] set correctly."
 implementationGuidelines:
   AMOE:
     question: "How often must the Incident Management plan be tested?"
     keywords: ["Incident Management", "CERT"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the required testing frequency of the Incident Management plan. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months] [Previous name: IncidentManagementPolicy8]"
+comments: "This metric assesses the required testing frequency of the Incident Management plan. [TargetValue is measured in months] [Previous name: IncidentManagementPolicy8]"
 # ====== Configuration ======
 configuration:
   p1:

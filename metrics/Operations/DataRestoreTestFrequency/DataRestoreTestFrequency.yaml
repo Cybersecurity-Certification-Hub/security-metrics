@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "4657f70f-3a89-459e-aa4d-8a942e7daf12"
 name: "DataRestoreTestFrequency"
-description: "This rule assesses whether a [Resource] that offers the property [Data.Backup.Restore], has [p1:testInterval] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Backup.Restore], has [p1:testInterval] set correctly."
 implementationGuidelines:
   AMOE:
     question: "How frequently is the data restore process tested?"
     keywords: ["data", "restore"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses the testing frequency of the data restore process. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in days] [Previous name: DataRestoreTestFrequencyQ1]"
+comments: "This metric assesses the testing frequency of the data restore process. [TargetValue is measured in days] [Previous name: DataRestoreTestFrequencyQ1]"
 # ====== Configuration ======
 configuration:
   p1:

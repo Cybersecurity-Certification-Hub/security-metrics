@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "7f852bc8-ae5a-444f-9f49-9fbad901a8da"
 name: "IncidentManagementReportApproach"
-description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident], has [p1:reportApproach] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityIncident], has [p1:reportApproach] set correctly."
 implementationGuidelines:
   AMOE:
     question: "Which approach is used for reporting incidents to the CSP?"
     keywords: ["Single Point of Contact", "Single Point of Information (SPoI)"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the approach for reporting incidents to the CSP. | Selector: PolicyDocument (Resource Type) [Previous name: IncidentManagementPolicy02]"
+comments: "This metric assesses the approach for reporting incidents to the CSP. [Previous name: IncidentManagementPolicy02]"
 # ====== Configuration ======
 configuration:
   p1:

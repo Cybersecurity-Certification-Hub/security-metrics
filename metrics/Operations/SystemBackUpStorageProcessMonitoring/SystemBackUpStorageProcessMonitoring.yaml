@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "b8a2e8dc-1478-4b50-8619-e41bc8f35f81"
 name: "SystemBackUpStorageProcessMonitoring"
-description: "This rule assesses whether a [Resource] that offers the property [Data.Backup.Procedure], has [p1:monitoring] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Backup.Procedure], has [p1:monitoring] set correctly."
 implementationGuidelines:
   AMOE:
     question: "How is the storage process monitored?"
     keywords: ["backup", "storage"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses how storage processes are monitored. | Selector: PolicyDocument (Resource Type) [Previous name: SystemBackUpStorage03]"
+comments: "This metric assesses how storage processes are monitored. [Previous name: SystemBackUpStorage03]"
 # ====== Configuration ======
 configuration:
   p1:

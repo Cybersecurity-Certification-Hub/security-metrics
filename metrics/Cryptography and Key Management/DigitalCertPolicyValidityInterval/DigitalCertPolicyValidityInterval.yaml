@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "42a5a738-3ce4-4b50-a32c-69758682eef8"
 name: "DigitalCertPolicyValidityInterval"
-description: "This rule assesses whether a [Resource] that offers the property [DigitalCertificate], has [p1:validityInterval] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [DigitalCertificate], has [p1:validityInterval] set correctly."
 implementationGuidelines:
   AMOE:
     question: "What is the validity period of wildcard digital certificates?"
     keywords: ["digital certificates", "validity period", "duration", "wildcard", "user facing certificates"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the validity period of wildcard digital certificates. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months] [Previous name: DigitalCertPolicy03]"
+comments: "This metric assesses the validity period of wildcard digital certificates. [TargetValue is measured in months] [Previous name: DigitalCertPolicy03]"
 # ====== Configuration ======
 configuration:
   p1:

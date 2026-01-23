@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "f1f0d3df-200d-4206-be04-e2c48d056dec"
 name: "ComplianceRecoveryInterval"
-description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event], has [p1:recoveryInterval] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityIncident.Event], has [p1:recoveryInterval] set correctly."
 implementationGuidelines:
   AMOE:
     question: "What is the acceptable recovery time limit?"
     keywords: ["Recovery time", "acceptable limit"]
 category: "Procurement Management"
 version: "1.0"
-comments: "This metric assesses the acceptable recovery time limit. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in hours] [Previous name: ComplianceRecoveryTimeQ2]"
+comments: "This metric assesses the acceptable recovery time limit. [TargetValue is measured in hours] [Previous name: ComplianceRecoveryTimeQ2]"
 # ====== Configuration ======
 configuration:
   p1:

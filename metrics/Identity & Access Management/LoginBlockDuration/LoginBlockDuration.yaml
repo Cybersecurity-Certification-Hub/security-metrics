@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "fef699d0-9aa1-49fb-9cf3-b1bf7549a803"
 name: "LoginBlockDuration"
-description: "This rule assesses whether a [Resource] that offers the property [AccessManagement.Account], has [p1:failedLogins] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [AccessManagement.Account], has [p1:failedLogins] set correctly."
 implementationGuidelines:
   AMOE:
     question: "How long is an account blocked after failed logins?"
     keywords: ["login", "block", "lock", "management", "password", "authenfication", "access"]
 category: "Identity & Access Management"
 version: "1.0"
-comments: "This metric assesses the duration of account blocks after failed login attempts. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in hours] [Previous name: PasswordLoginBlockDurationQ1]"
+comments: "This metric assesses the duration of account blocks after failed login attempts. [TargetValue is measured in hours] [Previous name: PasswordLoginBlockDurationQ1]"
 # ====== Configuration ======
 configuration:
   p1:

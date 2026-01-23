@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "ada880de-be30-449b-b64e-9512d035c6fd"
 name: "ComplianceResponseInterval"
-description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event], has [p1:responseInterval] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityIncident.Event], has [p1:responseInterval] set correctly."
 implementationGuidelines:
   AMOE:
     question: "What is the maximum allowed response time for incidents?"
     keywords: ["Response time", "incident", "maximum limit"]
 category: "Procurement Management"
 version: "1.0"
-comments: "This metric assesses the maximum incident response time allowed. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in hours] [Previous name: ComplianceResponseTimeQ1]"
+comments: "This metric assesses the maximum incident response time allowed. [TargetValue is measured in hours] [Previous name: ComplianceResponseTimeQ1]"
 # ====== Configuration ======
 configuration:
   p1:

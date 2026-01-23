@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "2777696f-6e1a-4c6f-af82-fdb0bdc57bd6"
 name: "AuthenticationAttemptsStatusOptions"
-description: "This rule assesses whether a [Resource] that offers the property [AccessManagement.AuthenticationAttempts], has [p1:statusOptions] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [AccessManagement.AuthenticationAttempts], has [p1:statusOptions] set correctly."
 implementationGuidelines:
   AMOE:
     question: "What status can authentication attempts have?"
     keywords: ["successful attempts", "failed attempts", "logging"]
 category: "Identity & Access Management"
 version: "1.0"
-comments: "This metric assesses the possible status values for authentication attempts. | Selector: PolicyDocument (Resource Type) [Previous name: AccessStatusQ2]"
+comments: "This metric assesses the possible status values for authentication attempts. [Previous name: AccessStatusQ2]"
 # ====== Configuration ======
 configuration:
   p1:

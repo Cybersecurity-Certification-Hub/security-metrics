@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "dbf71724-fd4d-4fdb-ad8a-6fea19eabaaf"
 name: "IncidentManagementEvidenceNaintainanceTeam"
-description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Evidence], has [p1:team] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityIncident.Evidence], has [p1:team] set correctly."
 implementationGuidelines:
   AMOE:
     question: "Which entity maintains the evidence related to cyberincidents?"
     keywords: ["CSP", "customer", "shared", "evidence collection"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the entity responsible for maintaining cyberincident evidence. | Selector: PolicyDocument (Resource Type) [Previous name: IncidentManagementPolicy03]"
+comments: "This metric assesses the entity responsible for maintaining cyberincident evidence. [Previous name: IncidentManagementPolicy03]"
 # ====== Configuration ======
 configuration:
   p1:

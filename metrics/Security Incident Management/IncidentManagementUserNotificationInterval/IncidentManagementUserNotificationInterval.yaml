@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "0dbed723-ff88-4b6a-817a-5645e9861d80"
 name: "IncidentManagementUserNotificationInterval"
-description: "This rule assesses whether a [Resource] that offers the property [SecurityIncident.Event], has [p1:userNotificationInterval] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityIncident.Event], has [p1:userNotificationInterval] set correctly."
 implementationGuidelines:
   AMOE:
     question: "When are users notified of relevant incidents?"
     keywords: ["customer", "notifications", "incident"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the notification timing for users regarding incidents. | Selector: PolicyDocument (Resource Type) [Previous name: IncidentManagementPolicy12]"
+comments: "This metric assesses the notification timing for users regarding incidents. [Previous name: IncidentManagementPolicy12]"
 # ====== Configuration ======
 configuration:
   p1:

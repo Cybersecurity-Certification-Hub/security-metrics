@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "9740e1ae-6d64-4b7e-8c26-b9a51d98a192"
 name: "AssetInventoryStatusManagementUpdateInterval"
-description: "This rule assesses whether a [Resource] that offers the property [AssetInventory.AssetStatus], has [p1:updateInterval] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [AssetInventory.AssetStatus], has [p1:updateInterval] set correctly."
 implementationGuidelines:
   AMOE:
     question: "Within what timeframe must changes in asset status be recorded in the inventory system?"
     keywords: ["asset status", "inventory"]
 category: "Asset Management"
 version: "1.0"
-comments: "This metric assesses the required timeframe for recording asset status changes. | Selector: PolicyDocument (Resource Type) [TargetValue is measured in months] [Previous name: AssetInventoryStatusManagementQ3]"
+comments: "This metric assesses the required timeframe for recording asset status changes. [TargetValue is measured in months] [Previous name: AssetInventoryStatusManagementQ3]"
 # ====== Configuration ======
 configuration:
   p1:

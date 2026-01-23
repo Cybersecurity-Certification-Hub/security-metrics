@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "874096f5-6b13-4e3b-bcac-33c22789d9ab"
 name: "WebServicesRequiringInTransitEncryption"
-description: "This rule assesses whether a [Resource] that offers the property [Data.Encryption.WebService], has [p1:type] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Encryption.WebService], has [p1:type] set correctly."
 implementationGuidelines:
   AMOE:
     question: "What type of web services must encrypt data in transit? "
     keywords: ["encryption mechanisms", "web services", "data in transit"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses which web services must encrypt data in transit. | Selector: PolicyDocument (Resource Type) [Previous name: EncryptionPolicyQ11]"
+comments: "This metric assesses which web services must encrypt data in transit. [Previous name: EncryptionPolicyQ11]"
 # ====== Configuration ======
 configuration:
   p1:
