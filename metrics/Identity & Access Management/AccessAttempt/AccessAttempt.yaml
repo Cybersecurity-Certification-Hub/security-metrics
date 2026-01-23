@@ -4,11 +4,12 @@ name: "AccessAttempt"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [AccessManagement], has [p1:authLogRetentionHours] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: AccessAttemptQ1
     question: "How many hours do authentication attempts have to be logged, tracked and stored?"
     keywords: ["authentication attempts", "logging", "timestamp"]
 category: "Identity & Access Management"
 version: "1.0"
-comments: "This metric assesses whether recent authentication attempts are tracked and stored. [TargetValue is measured in hours] [Previous name: AccessAttemptQ1]"
+comments: "This metric assesses whether recent authentication attempts are tracked and stored. [TargetValue is measured in hours]"
 # ====== Configuration ======
 configuration:
   p1:

@@ -4,11 +4,12 @@ name: "AssetInventoryStatusManagementOptions"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [AssetInventory.AssetStatus], has [p1:statusOption] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: AssetInventoryStatusManagementQ4
     question: "What status do the assets have?"
     keywords: ["asset status", "coverage", "completeness", "inventory"]
 category: "Asset Management"
 version: "1.0"
-comments: "This metric assesses the current status of assets. [Previous name: AssetInventoryStatusManagementQ4]"
+comments: "This metric assesses the current status of assets."
 # ====== Configuration ======
 configuration:
   p1:

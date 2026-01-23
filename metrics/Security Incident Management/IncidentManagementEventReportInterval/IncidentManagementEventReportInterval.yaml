@@ -4,11 +4,12 @@ name: "IncidentManagementEventReportInterval"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityIncident.Event], has [p1:reportInterval] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: IncidentManagementPolicy6
     question: "When must staff report potential security and privacy issues?"
     keywords: ["Incident Management", "Incident Management general information"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the reporting timeframe for staff regarding potential security and privacy issues. [Previous name: IncidentManagementPolicy6]"
+comments: "This metric assesses the reporting timeframe for staff regarding potential security and privacy issues."
 # ====== Configuration ======
 configuration:
   p1:

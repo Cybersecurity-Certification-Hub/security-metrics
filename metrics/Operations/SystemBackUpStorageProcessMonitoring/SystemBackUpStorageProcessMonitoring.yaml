@@ -4,11 +4,12 @@ name: "SystemBackUpStorageProcessMonitoring"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Backup.Procedure], has [p1:monitoring] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: SystemBackUpStorage03
     question: "How is the storage process monitored?"
     keywords: ["backup", "storage"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses how storage processes are monitored. [Previous name: SystemBackUpStorage03]"
+comments: "This metric assesses how storage processes are monitored."
 # ====== Configuration ======
 configuration:
   p1:

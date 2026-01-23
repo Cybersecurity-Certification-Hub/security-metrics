@@ -4,11 +4,12 @@ name: "AllowedLoginAttempts"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [AccessManagement.Password], has [p1:allowedLoginAttepts] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: PasswordLoginAttemptsQ1
     question: "How many consecutive login attempts are allowed?"
     keywords: ["password"]
 category: "Identity & Access Management"
 version: "1.0"
-comments: "This metric assesses the allowed number of consecutive login attempts. [TargetValue is measured in units] [Previous name: PasswordLoginAttemptsQ1]"
+comments: "This metric assesses the allowed number of consecutive login attempts. [TargetValue is measured in units]"
 # ====== Configuration ======
 configuration:
   p1:

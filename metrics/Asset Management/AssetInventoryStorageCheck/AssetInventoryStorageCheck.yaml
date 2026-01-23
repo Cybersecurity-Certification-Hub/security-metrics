@@ -4,11 +4,12 @@ name: "AssetInventoryStorageCheck"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [AssetInventory], has [p1:storage] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: AssetInventoryStorageCheckQ1
     question: "In which type of facility are asset records stored?"
     keywords: ["asset records", "facility type", "storage"]
 category: "Asset Management"
 version: "1.0"
-comments: "This metric assesses the facility type used to store asset records. [Previous name: AssetInventoryStorageCheckQ1]"
+comments: "This metric assesses the facility type used to store asset records."
 # ====== Configuration ======
 configuration:
   p1:

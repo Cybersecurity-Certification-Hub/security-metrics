@@ -4,11 +4,12 @@ name: "EncryptionDataTransitPolicyEndpointProtectionMechanism"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Encryption], has [p1:endpointProtectionMechanism] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: EncryptionDataTransitPolicyQ1
     question: "Which endpoint protection mechanism is defined for data in transit?"
     keywords: ["encryption", "cryptography", "data in transit", "protection", "PKI", "payload", "SSL", "TLS", "transport layer encryption", "encrypted endpoints"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the endpoint protection mechanism for data in transit. [Previous name: EncryptionDataTransitPolicyQ1]"
+comments: "This metric assesses the endpoint protection mechanism for data in transit."
 # ====== Configuration ======
 configuration:
   p1:

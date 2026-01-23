@@ -4,11 +4,12 @@ name: "DataRestoreTestFrequency"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Backup.Restore], has [p1:testInterval] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: DataRestoreTestFrequencyQ1
     question: "How frequently is the data restore process tested?"
     keywords: ["data", "restore"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses the testing frequency of the data restore process. [TargetValue is measured in days] [Previous name: DataRestoreTestFrequencyQ1]"
+comments: "This metric assesses the testing frequency of the data restore process. [TargetValue is measured in days]"
 # ====== Configuration ======
 configuration:
   p1:

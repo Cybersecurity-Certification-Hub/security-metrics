@@ -4,11 +4,12 @@ name: "WebServicesRequiringInTransitEncryption"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Encryption.WebService], has [p1:type] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: EncryptionPolicyQ11
     question: "What type of web services must encrypt data in transit? "
     keywords: ["encryption mechanisms", "web services", "data in transit"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses which web services must encrypt data in transit. [Previous name: EncryptionPolicyQ11]"
+comments: "This metric assesses which web services must encrypt data in transit."
 # ====== Configuration ======
 configuration:
   p1:

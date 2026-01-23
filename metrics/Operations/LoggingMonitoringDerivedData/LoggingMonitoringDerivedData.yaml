@@ -4,11 +4,12 @@ name: "LoggingMonitoringDerivedData"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityIncident.Event], has [p1:enabled] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: LoggingMonitoringDerivedPolicyQ1
     question: "Are security events stored for derived data?"
     keywords: ["logging", "monitoring", "policy", "derived data", "customer data", "PII", "monitoring and logging"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses whether derived data security events are stored. [Previous name: LoggingMonitoringDerivedPolicyQ1]"
+comments: "This metric assesses whether derived data security events are stored."
 # ====== Configuration ======
 configuration:
   p1:

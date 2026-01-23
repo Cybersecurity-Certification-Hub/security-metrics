@@ -4,11 +4,12 @@ name: "AssetInventoryAuditFrequency"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [AssetInventory], has [p1:auditInterval] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: AssetInventoryAuditFrequencyQ5
     question: "How often is the asset inventory audit done?"
     keywords: ["audit", "frequency", "inventory"]
 category: "Asset Management"
 version: "1.0"
-comments: "This metric assesses the frequency of asset inventory audits. [TargetValue is measured in months] [Previous name: AssetInventoryAuditFrequencyQ5]"
+comments: "This metric assesses the frequency of asset inventory audits. [TargetValue is measured in months]"
 # ====== Configuration ======
 configuration:
   p1:

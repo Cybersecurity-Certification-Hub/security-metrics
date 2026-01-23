@@ -4,11 +4,12 @@ name: "PortableDeviceEncryption"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Encryption.PortableDevice], has [p1:type] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: EncryptionPolicyQ6
     question: "How must mobile and portable devices be encrypted? "
     keywords: ["encryption mechanisms", "mobile devices", "portable devices"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the encryption requirements for mobile and portable devices. [Previous name: EncryptionPolicyQ6]"
+comments: "This metric assesses the encryption requirements for mobile and portable devices."
 # ====== Configuration ======
 configuration:
   p1:

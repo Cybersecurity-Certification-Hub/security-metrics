@@ -4,11 +4,12 @@ name: "ComplianceManagementAuditInterval"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [Audit], has [p1:interval] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: ComplianceManagementQ2
     question: "How often are procedures checked and that all requirements are met?"
     keywords: ["compliance checks", "frequency", "requirements verification"]
 category: "Compliance"
 version: "1.0"
-comments: "This metric assesses the frequency of checks for compliance with requirements. [TargetValue is measured in months] [Previous name: ComplianceManagementQ2]"
+comments: "This metric assesses the frequency of checks for compliance with requirements. [TargetValue is measured in months]"
 # ====== Configuration ======
 configuration:
   p1:

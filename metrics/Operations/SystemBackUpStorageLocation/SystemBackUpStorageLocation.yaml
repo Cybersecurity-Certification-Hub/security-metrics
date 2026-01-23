@@ -4,11 +4,12 @@ name: "SystemBackUpStorageLocation"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Backup], has [p1:location] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: SystemBackUpStorage01
     question: "Where are backups stored?"
     keywords: ["backup", "storage"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses the storage location for backups. [Previous name: SystemBackUpStorage01]"
+comments: "This metric assesses the storage location for backups."
 # ====== Configuration ======
 configuration:
   p1:

@@ -4,11 +4,12 @@ name: "DigitalCertPolicyValidityInterval"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [DigitalCertificate], has [p1:validityInterval] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: DigitalCertPolicy03
     question: "What is the validity period of wildcard digital certificates?"
     keywords: ["digital certificates", "validity period", "duration", "wildcard", "user facing certificates"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the validity period of wildcard digital certificates. [TargetValue is measured in months] [Previous name: DigitalCertPolicy03]"
+comments: "This metric assesses the validity period of wildcard digital certificates. [TargetValue is measured in months]"
 # ====== Configuration ======
 configuration:
   p1:

@@ -4,11 +4,12 @@ name: "SystemBackUpRestorePermission"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Backup.Restore], has [p1:permission] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: SystemBackUpPolicyQ03
     question: "Who is allowed to restore backups?"
     keywords: ["backup", "access", "restore"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses who is authorized to restore backups. [Previous name: SystemBackUpPolicyQ03]"
+comments: "This metric assesses who is authorized to restore backups."
 # ====== Configuration ======
 configuration:
   p1:

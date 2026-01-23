@@ -4,11 +4,12 @@ name: "MonitoringReviewFrequency"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [MonitoringProcedure], has [p1:reviewInterval] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: MonitoringReviewFrequencyQ3
     question: "How often are monitoring procedures reviewed to ensure compliance with legal and internal policies?"
     keywords: ["monitoring review", "effectiveness", "compliance", "frequency"]
 category: "Assessment Inquireies"
 version: "1.0"
-comments: "This metric assesses the frequency of monitoring procedure reviews for compliance. [TargetValue is measured in months] [Previous name: MonitoringReviewFrequencyQ3]"
+comments: "This metric assesses the frequency of monitoring procedure reviews for compliance. [TargetValue is measured in months]"
 # ====== Configuration ======
 configuration:
   p1:

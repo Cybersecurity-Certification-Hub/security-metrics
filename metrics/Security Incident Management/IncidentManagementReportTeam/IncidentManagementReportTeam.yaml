@@ -4,11 +4,12 @@ name: "IncidentManagementReportTeam"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityIncident], has [p1:team] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: IncidentManagementPolicy5
     question: "To whom must staff report potential security and privacy issues?"
     keywords: ["Incident Management", "Incident Management general information"]
 category: "Security Incident Management"
 version: "1.0"
-comments: "This metric assesses the responsible contact point for reporting issues. [Previous name: IncidentManagementPolicy5]"
+comments: "This metric assesses the responsible contact point for reporting issues."
 # ====== Configuration ======
 configuration:
   p1:

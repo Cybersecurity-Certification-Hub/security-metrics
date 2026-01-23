@@ -4,11 +4,12 @@ name: "PatchManagementProcedurePriority"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [PatchManagement.Procedure], has [p1:vulnerabilityPriority] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: PatchManagementPolicyCheckQ2
     question: "Which vulnerabilities are prioritized for systems that cannot be patched?"
     keywords: ["none", "critical", "all", "no-patch-approach"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses the prioritization criteria for unpatched system vulnerabilities. [Previous name: PatchManagementPolicyCheckQ2]"
+comments: "This metric assesses the prioritization criteria for unpatched system vulnerabilities."
 # ====== Configuration ======
 configuration:
   p1:

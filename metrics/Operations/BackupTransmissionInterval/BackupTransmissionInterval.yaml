@@ -4,11 +4,12 @@ name: "BackupTransmissionInterval"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Backup], has [p1:transmissionInterval] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: BackupMonitoringPolicyCheckQ4
     question: "How often is the transmission of backups done?"
     keywords: ["backup", "data", "transmission"]
 category: "Operations"
 version: "1.0"
-comments: "This metric assesses the frequency of backup transmissions. [TargetValue is measured in days] [Previous name: BackupMonitoringPolicyCheckQ4]"
+comments: "This metric assesses the frequency of backup transmissions. [TargetValue is measured in days]"
 # ====== Configuration ======
 configuration:
   p1:

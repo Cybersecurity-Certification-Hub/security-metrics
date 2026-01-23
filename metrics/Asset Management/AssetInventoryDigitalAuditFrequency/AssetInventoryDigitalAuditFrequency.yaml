@@ -4,11 +4,12 @@ name: "AssetInventoryDigitalAuditFrequency"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [AssetInventory.Digital], has [p1:auditInterval] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: AssetInventoryDigitalQ6
     question: "How frequently are security audits done for digital assets?"
     keywords: ["data backup", "firewalls", "frequency", "compliance"]
 category: "Asset Management"
 version: "1.0"
-comments: "This metric assesses the frequency of digital asset security audits. [TargetValue is measured in months] [Previous name: AssetInventoryDigitalQ6]"
+comments: "This metric assesses the frequency of digital asset security audits. [TargetValue is measured in months]"
 # ====== Configuration ======
 configuration:
   p1:

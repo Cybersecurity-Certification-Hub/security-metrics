@@ -4,11 +4,12 @@ name: "TLSVersionPolicy"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Encryption.TLS], has [p1:type] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: EncryptionPolicyQ7
     question: "What TLS version is accepted?"
     keywords: ["encryption mechanisms", "protocols", "default domains and their TLS-profiles"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the accepted TLS version. [Previous name: EncryptionPolicyQ7]"
+comments: "This metric assesses the accepted TLS version."
 # ====== Configuration ======
 configuration:
   p1:

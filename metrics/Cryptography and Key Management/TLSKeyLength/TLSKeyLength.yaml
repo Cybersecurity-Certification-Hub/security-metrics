@@ -4,11 +4,12 @@ name: "TLSKeyLength"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Encryption.TLS], has [p1:keyLength] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: EncryptionPolicyQ8
     question: "What minimum certificate key length is required?"
     keywords: ["encryption mechanisms", "certificate"]
 category: "Cryptography and Key Management"
 version: "1.0"
-comments: "This metric assesses the required minimum certificate key length. [TargetValue is measured in bits] [Previous name: EncryptionPolicyQ8]"
+comments: "This metric assesses the required minimum certificate key length. [TargetValue is measured in bits]"
 # ====== Configuration ======
 configuration:
   p1:

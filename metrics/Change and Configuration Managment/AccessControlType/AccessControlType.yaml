@@ -4,11 +4,12 @@ name: "AccessControlType"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [AccessControl], has [p1:type] set correctly."
 implementationGuidelines:
   AMOE:
+    previous_name: AccessControlTypeQ1
     question: "Which type of access control is used?"
     keywords: ["access control", "security model", "permissions", "RBAC", "DAC", "MAC"]
 category: "Change and Configuration Managment"
 version: "1.0"
-comments: "This metric assesses the type of access control implemented. [Previous name: AccessControlTypeQ1]"
+comments: "This metric assesses the type of access control implemented."
 # ====== Configuration ======
 configuration:
   p1:
