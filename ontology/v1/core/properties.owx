@@ -409,11 +409,6 @@
     <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
-
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="prop:usedByMultiple"/>
         <ObjectProperty abbreviatedIRI="prop:usedBy"/>

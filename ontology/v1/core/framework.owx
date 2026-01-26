@@ -77,9 +77,6 @@
         <Class abbreviatedIRI="core:Application"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:has"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:HttpEndpoint"/>
     </Declaration>
     <Declaration>
@@ -136,10 +133,6 @@
         <Class abbreviatedIRI="core:Framework"/>
         <NamedIndividual abbreviatedIRI="library:SpringBoot"/>
     </ClassAssertion>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>

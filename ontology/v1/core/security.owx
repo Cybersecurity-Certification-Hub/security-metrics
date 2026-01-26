@@ -1000,10 +1000,6 @@
         <Class abbreviatedIRI="core:ZoneRedundancy"/>
         <Class abbreviatedIRI="core:Redundancy"/>
     </SubClassOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Encryption</AbbreviatedIRI>

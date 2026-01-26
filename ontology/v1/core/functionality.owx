@@ -428,9 +428,6 @@
         <DataProperty abbreviatedIRI="prop:serves"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:has"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="core:keyExchangeAlgorithm"/>
     </Declaration>
     <Declaration>
@@ -1560,14 +1557,6 @@
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
-        <ObjectProperty abbreviatedIRI="prop:has"/>
-    </SubObjectPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="prop:algorithm"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>

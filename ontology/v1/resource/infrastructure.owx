@@ -2242,11 +2242,6 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:usedBy</AbbreviatedIRI>
-        <Literal>usedBy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:usesSalt</AbbreviatedIRI>
         <Literal>usesSalt</Literal>
     </AnnotationAssertion>
