@@ -2,10 +2,10 @@
 id: NoKnownVulnerabilities
 description: This rule assesses whether a [Resource] has the expected value of [p1:vulnerability].
 category: ApplicationSecurity
-version: "1.0" 
+version: "v1" 
 comments: Checking for known vulnerabilities ensures that resources are secure and do not contain any recognized security risks. 
 # ====== Configuration ======
 configuration:
   p1:
-    operator: ==
+    operator: "=="
     targetValue: 0

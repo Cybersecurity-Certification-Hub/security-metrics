@@ -3,7 +3,10 @@
     "dataLocation": {
       "remoteDataLocation": {
         "authenticity": {
-          "certificateBasedAuthentication": {}
+          "certificateBasedAuthentication": {},
+          "noAuthentication": {
+                    "contextIsChecked": false
+                }
         },
         "path": "https://127.0.0.1:62479/.well-known/csaf/white/2020/some-id.json",
         "transportEncryption": {

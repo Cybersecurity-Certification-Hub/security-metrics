@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: ApprovedCommitAuthorEnforced
+description: This rule assesses whether a [CodeRepository] has its [p1:approvedCommitAuthorEnforced] property set correctly.
+category: DevelopmentLifeCycle
+version: "v1" 
+comments: Enforce approved commit author verifies that code modifications are made by authorized developers whose changes have been validated. This practice enhances accountability and traceability, ensuring that only qualified contributors influence the codebase.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True
