@@ -41,13 +41,13 @@
         <ObjectProperty abbreviatedIRI="res:scope"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="res:usedBy"/>
+        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="res:usedByMultiple"/>
+        <ObjectProperty abbreviatedIRI="prop:usedByMultiple"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="res:validatedBy"/>
+        <ObjectProperty abbreviatedIRI="prop:validatedBy"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:apiHitsPerMonth"/>
@@ -411,12 +411,12 @@
     </Declaration>
 
     <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="res:usedBy"/>
+        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="res:usedByMultiple"/>
-        <ObjectProperty abbreviatedIRI="res:usedBy"/>
+        <ObjectProperty abbreviatedIRI="prop:usedByMultiple"/>
+        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -894,12 +894,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:usedBy</AbbreviatedIRI>
+        <AbbreviatedIRI>prop:usedBy</AbbreviatedIRI>
         <Literal>usedBy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:usedByMultiple</AbbreviatedIRI>
+        <AbbreviatedIRI>prop:usedByMultiple</AbbreviatedIRI>
         <Literal>usedByMultiple</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -909,7 +909,7 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:validatedBy</AbbreviatedIRI>
+        <AbbreviatedIRI>prop:validatedBy</AbbreviatedIRI>
         <Literal>validatedBy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
