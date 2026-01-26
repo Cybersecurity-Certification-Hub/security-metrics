@@ -4894,10 +4894,6 @@ name = metadata.name</Literal>
         <ObjectProperty IRI="/properties/has"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="/properties/usedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="/properties/usedByMultiple"/>
         <ObjectProperty IRI="/properties/usedBy"/>
     </SubObjectPropertyOf>
@@ -7196,11 +7192,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/timeWindowSeconds</IRI>
         <Literal>timeWindowSeconds</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/usedBy</IRI>
-        <Literal>usedBy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
