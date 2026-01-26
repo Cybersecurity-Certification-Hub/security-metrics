@@ -121,7 +121,7 @@ message Allocate {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 11008;
-	Memory linked_concept = 10376;
+	optional string memory_id = 10921;
 }
 
 // AndRule is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -255,7 +255,7 @@ message Authenticate {
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	Authenticity linked_concept = 3724;
+	Authenticity authenticity = 536;
 	CodeRegion code_region = 5745;
 	optional string credential_id = 6982;
 }
@@ -305,7 +305,7 @@ message AuthorizeJwt {
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	Authenticity linked_concept = 15960;
+	Authenticity authenticity = 444;
 	CodeRegion code_region = 2623;
 }
 
@@ -402,7 +402,7 @@ message BlockStorageOperation {
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	BlockStorage linked_concept = 10648;
+	optional string block_storage_id = 13477;
 	CodeRegion code_region = 2756;
 }
 
@@ -486,7 +486,7 @@ message CheckAccess {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 9029;
-	ProtectedAsset linked_concept = 14637;
+	ProtectedAsset protected_asset = 4640;
 }
 
 // Cipher is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -506,7 +506,6 @@ message CipherOperation {
 
 	oneof type {
 		Decryption decryption = 13899;
-		EncryptionOperation encryption_operation = 3659;
 	}
 }
 
@@ -540,7 +539,7 @@ message Infrastructure {
 		ContainerOrchestration container_orchestration = 3211;
 		ContainerRegistry container_registry = 8326;
 		Certificate certificate = 8542;
-		SelectorKey selector_key = 8030;
+		Key key = 5122;
 		Secret secret = 16127;
 		Identity identity = 14693;
 		RoleAssignment role_assignment = 2361;
@@ -729,7 +728,6 @@ message ConfigurationGroupSource {
 }
 
 // ConfigurationOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-// A common abstract class for configuration operations, such as reading options or a whole file.
 message ConfigurationOperation {
 
 	oneof type {
@@ -760,8 +758,8 @@ message ConfigurationOption {
 	string raw = 8644;
 	optional string configuration_group_id = 6079;
 	DataLocation data_location = 17197;
+	optional string key_id = 12044;
 	optional string parent_id = 6223;
-	optional string selector_key_id = 13888;
 	optional string value_id = 2572;
 }
 
@@ -935,7 +933,7 @@ message CreateEncryptedDisk {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 3010;
-	DiskEncryption linked_concept = 13187;
+	DiskEncryption disk_encryption = 15083;
 }
 
 // CreateSecret is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -946,7 +944,7 @@ message CreateSecret {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 9369;
-	Secret linked_concept = 9021;
+	optional string secret_id = 7663;
 }
 
 // Credential is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -954,7 +952,7 @@ message Credential {
 
 	oneof type {
 		Certificate certificate = 8542;
-		SelectorKey selector_key = 8030;
+		Key key = 5122;
 		Secret secret = 16127;
 	}
 }
@@ -973,8 +971,7 @@ message CryptographicHash {
 message CryptographicOperation {
 
 	oneof type {
-		EncryptionOperation encryption_operation = 3659;
-		CryptographicHash cryptographic_hash = 7725;
+		HashOperation hash_operation = 11598;
 	}
 }
 
@@ -1041,7 +1038,6 @@ message Data {
 		ServiceMetadataDocument service_metadata_document = 272;
 		File file = 9522;
 		FileHandle file_handle = 16939;
-		SelectorKey selector_key = 8030;
 		MachineLearningDataset machine_learning_dataset = 2040;
 		MachineLearningModel machine_learning_model = 15393;
 		Policy policy = 495;
@@ -1071,8 +1067,7 @@ message DatabaseConnect {
 	repeated string calls = 12922;
 	CodeRegion code_region = 805;
 	repeated string database_service_ids  = 7502;
-	DatabaseStorage linked_concept = 18437;
-	optional string database_storage_id = 8596;
+	optional string database_storage_id = 1233;
 }
 
 // DatabaseOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1095,8 +1090,7 @@ message DatabaseQuery {
 	bool modify = 7601;
 	CodeRegion code_region = 5643;
 	repeated string database_service_ids  = 10199;
-	DatabaseStorage linked_concept = 3228;
-	optional string database_storage_id = 726;
+	optional string database_storage_id = 15992;
 }
 
 // DatabaseService is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1148,7 +1142,7 @@ message DeAllocate {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 10932;
-	Memory linked_concept = 12749;
+	optional string memory_id = 17476;
 }
 
 // Decryption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1159,7 +1153,7 @@ message Decryption {
 	option (resource_type_names) = "Functionality";
 
 	string algorithm = 7747;
-	Cipher linked_concept = 18279;
+	Cipher cipher = 10213;
 	CodeRegion code_region = 7584;
 	optional string secret_id = 2937;
 }
@@ -1197,7 +1191,7 @@ message DiskEncryption {
 	string algorithm = 2867;
 	bool enabled = 9285;
 	string key_url = 6086;
-	BlockStorage target = 17123;
+	BlockStorage used_by = 14240;
 	Cipher based_on = 6881;
 	optional string secret_id = 10114;
 }
@@ -1308,7 +1302,7 @@ message EncryptionOperation {
 
 	string algorithm = 15092;
 	CodeRegion code_region = 14814;
-	Encryption linked_concept = 18249;
+	Encryption encryption = 9123;
 	optional string secret_id = 7662;
 }
 
@@ -1332,7 +1326,7 @@ message EqualityCheck {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 8863;
-	Policy linked_concept = 12938;
+	optional string policy_id = 927;
 	Principal left_principal = 15267;
 	Principal right_principal = 9410;
 }
@@ -1352,7 +1346,7 @@ message ExitBoundaryOperation {
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	Boundary linked_concept = 3216;
+	Boundary boundary = 7768;
 	CodeRegion code_region = 3532;
 }
 
@@ -1418,7 +1412,7 @@ message FileOperation {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 18400;
-	File linked_concept = 7556;
+	optional string file_id = 3605;
 }
 
 // FileStorage is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1591,7 +1585,6 @@ message Functionality {
 		ValidateJwt validate_jwt = 7164;
 		BlockStorageOperation block_storage_operation = 14855;
 		Decryption decryption = 13899;
-		EncryptionOperation encryption_operation = 3659;
 		LoadConfiguration load_configuration = 9258;
 		ProvideConfiguration provide_configuration = 902;
 		ProvideConfigurationGroup provide_configuration_group = 12223;
@@ -1600,8 +1593,7 @@ message Functionality {
 		ReadConfigurationOption read_configuration_option = 15245;
 		RegisterConfigurationGroup register_configuration_group = 10178;
 		RegisterConfigurationOption register_configuration_option = 13175;
-		EncryptionOperation encryption_operation = 3659;
-		CryptographicHash cryptographic_hash = 7725;
+		HashOperation hash_operation = 11598;
 		DatabaseConnect database_connect = 10798;
 		DatabaseQuery database_query = 7698;
 		CreateEncryptedDisk create_encrypted_disk = 2290;
@@ -1704,7 +1696,7 @@ message GetCurrentTimeOperation {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 5045;
-	Time linked_concept = 14060;
+	Time time = 146;
 }
 
 // GetSecret is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1716,7 +1708,7 @@ message GetSecret {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 15770;
-	Secret linked_concept = 11250;
+	optional string secret_id = 8422;
 }
 
 // Hardware is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1727,17 +1719,17 @@ message Hardware {
 	}
 }
 
-// CryptographicHash is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message CryptographicHash {
-	option (resource_type_names) = "CryptographicHash";
+// HashOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message HashOperation {
+	option (resource_type_names) = "HashOperation";
 	option (resource_type_names) = "CryptographicOperation";
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	string algorithm = 9887;
-	bool uses_salt = 8538;
-	CodeRegion code_region = 15881;
-	Confidentiality linked_concept = 11087;
+	string algorithm = 16160;
+	bool uses_salt = 14753;
+	CodeRegion code_region = 10758;
+	Confidentiality confidentiality = 805;
 }
 
 // Http is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1806,7 +1798,7 @@ message HttpEndpointOperation {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 8403;
-	Http linked_concept = 18618;
+	Http http = 4994;
 }
 
 // HttpRequest is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1819,7 +1811,7 @@ message HttpRequest {
 	string call = 16831;
 	string req_body = 5634;
 	CodeRegion code_region = 681;
-	HttpClient linked_concept = 15097;
+	HttpClient http_client = 16750;
 	repeated HttpEndpoint http_endpoints  = 1360;
 }
 
@@ -1881,7 +1873,7 @@ message HybridCipher {
 	string cipher_name = 4930;
 	// Key size refers to the length of a key used in an enryption.
 	int32 key_size = 5462;
-	AsymmetricCipher key_exchange = 10476;
+	AsymmetricCipher uses = 11248;
 	KeyDerivationFunction key_derivation_function = 16735;
 	MessageAuthenticationCode message_authentication_code = 14986;
 	Padding padding = 18342;
@@ -1968,9 +1960,8 @@ message InputValidationOperation {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 12844;
-	Input linked_concept = 10363;
-	Input input = 18958;
-	Output output = 15204;
+	Input input = 458;
+	Output output = 1757;
 }
 
 // InstallUpdateOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1979,8 +1970,7 @@ message InstallUpdateOperation {
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	AutomaticUpdates linked_concept = 8561;
-	AutomaticUpdates automatic_updates = 12530;
+	AutomaticUpdates automatic_updates = 7281;
 	CodeRegion code_region = 13679;
 }
 
@@ -2014,7 +2004,7 @@ message IssueJwt {
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	Authenticity linked_concept = 1120;
+	Authenticity authenticity = 5692;
 	CodeRegion code_region = 9610;
 }
 
@@ -2065,26 +2055,36 @@ message TokenBasedAuthentication {
 	}
 }
 
-// SelectorKey is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Key is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 // A key used for encryption algorithms.
 // The node that represents the "key" of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.
-message SelectorKey {
-	option (resource_type_names) = "SelectorKey";
-	option (resource_type_names) = "Data";
+message Key {
+	option (resource_type_names) = "Key";
+	option (resource_type_names) = "Credential";
+	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	string algorithm = 5297;
-	google.protobuf.Timestamp creation_time = 1023;
-	string description = 521;
-	string id = 18231 [ (buf.validate.field).required = true ];
+	string algorithm = 1413;
+	google.protobuf.Timestamp creation_time = 4922;
+	string description = 17406;
+	bool enabled = 12499;
+	google.protobuf.Timestamp expiration_date = 15098;
+	string id = 15294 [ (buf.validate.field).required = true ];
+	bool internet_accessible_endpoint = 434;
+	bool is_managed = 16202;
 	// Key size refers to the length of a key used in an enryption.
-	int32 key_size = 11651;
-	map<string, string> labels = 223;
-	string name = 14505 [ (buf.validate.field).required = true ];
+	int32 key_size = 16391;
+	map<string, string> labels = 4273;
+	string name = 18961 [ (buf.validate.field).required = true ];
+	google.protobuf.Timestamp not_before_date = 235;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 15639;
-	DataLocation data_location = 2145;
-	optional string parent_id = 4081;
+	string raw = 11846;
+	GeoLocation geo_location = 215;
+	Infrastructure used_by_multiple = 5694;
+	repeated Logging loggings  = 13175;
+	repeated Redundancy redundancies  = 7868;
+	optional string parent_id = 95;
+	UsageStatistics usage_statistics = 7188;
 }
 
 // KeyDerivationFunction is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2197,7 +2197,7 @@ message LibraryEntryPoint {
 	option (resource_type_names) = "EntryPoint";
 	option (resource_type_names) = "Functionality";
 
-	OperatingSystemArchitecture target = 16870;
+	OperatingSystemArchitecture used_by = 16083;
 }
 
 // LoadBalancer is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2243,7 +2243,7 @@ message LoadConfiguration {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 11396;
-	Configuration linked_concept = 7398;
+	optional string configuration_id = 10076;
 }
 
 // LoadLibrary is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2257,7 +2257,7 @@ message LoadLibrary {
 
 	CodeRegion code_region = 15903;
 	repeated EntryPoint entry_points  = 1641;
-	Memory linked_concept = 18932;
+	optional string memory_id = 1740;
 	optional string operating_system_architecture_id = 4592;
 }
 
@@ -2271,7 +2271,7 @@ message LoadSymbol {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 11982;
-	Memory linked_concept = 2750;
+	optional string memory_id = 17766;
 	optional string operating_system_architecture_id = 13808;
 }
 
@@ -2348,7 +2348,7 @@ message LogGet {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 945;
-	Logging linked_concept = 12274;
+	Logging logging = 12274;
 }
 
 // LogOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -2370,8 +2370,7 @@ message LogOutput {
 	string call = 6341;
 	string value = 16550;
 	CodeRegion code_region = 3291;
-	Logging linked_concept = 223;
-	Logging logging = 11229;
+	Logging logging = 1240;
 }
 
 // LogWrite is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2385,7 +2384,7 @@ message LogWrite {
 	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
 	string log_level = 11587;
 	CodeRegion code_region = 3510;
-	Logging linked_concept = 10830;
+	Logging logging = 15543;
 }
 
 // Logger is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2532,7 +2531,7 @@ message Main {
 	option (resource_type_names) = "EntryPoint";
 	option (resource_type_names) = "Functionality";
 
-	OperatingSystemArchitecture target = 7220;
+	OperatingSystemArchitecture used_by = 18908;
 }
 
 // MalwareProtection is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2600,7 +2599,7 @@ message MessageAuthenticationCode {
 
 	string type = 16668;
 	Input input = 14423;
-	optional string selector_key_id = 15532;
+	optional string key_id = 3220;
 }
 
 // MessagingHub is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2848,7 +2847,7 @@ message ObjectStorageRequest {
 	string source = 178;
 	CodeRegion code_region = 11189;
 	repeated string object_storage_ids  = 17017;
-	Storage linked_concept = 6333;
+	optional string storage_id = 7565;
 }
 
 // ObjectStorageService is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2907,7 +2906,6 @@ message Operation {
 		ValidateJwt validate_jwt = 7164;
 		BlockStorageOperation block_storage_operation = 14855;
 		Decryption decryption = 13899;
-		EncryptionOperation encryption_operation = 3659;
 		LoadConfiguration load_configuration = 9258;
 		ProvideConfiguration provide_configuration = 902;
 		ProvideConfigurationGroup provide_configuration_group = 12223;
@@ -2916,8 +2914,7 @@ message Operation {
 		ReadConfigurationOption read_configuration_option = 15245;
 		RegisterConfigurationGroup register_configuration_group = 10178;
 		RegisterConfigurationOption register_configuration_option = 13175;
-		EncryptionOperation encryption_operation = 3659;
-		CryptographicHash cryptographic_hash = 7725;
+		HashOperation hash_operation = 11598;
 		DatabaseConnect database_connect = 10798;
 		DatabaseQuery database_query = 7698;
 		CreateEncryptedDisk create_encrypted_disk = 2290;
@@ -3135,8 +3132,7 @@ message ProvideConfiguration {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 6654;
-	optional string configuration_id = 18326;
-	Configuration linked_concept = 17205;
+	optional string configuration_id = 9286;
 	optional string configuration_source_id = 11294;
 }
 
@@ -3148,7 +3144,7 @@ message ProvideConfigurationGroup {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 1380;
-	Configuration linked_concept = 7577;
+	optional string configuration_id = 11374;
 	optional string configuration_group_id = 14075;
 	optional string configuration_group_source_id = 11513;
 }
@@ -3162,7 +3158,7 @@ message ProvideConfigurationOption {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 7186;
-	Configuration linked_concept = 357;
+	optional string configuration_id = 18296;
 	optional string configuration_option_id = 10671;
 	optional string configuration_option_source_id = 15601;
 }
@@ -3233,7 +3229,7 @@ message ReadConfigurationGroup {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 14967;
-	Configuration linked_concept = 16433;
+	optional string configuration_id = 4865;
 	optional string configuration_group_id = 9364;
 }
 
@@ -3246,7 +3242,7 @@ message ReadConfigurationOption {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 15892;
-	Configuration linked_concept = 7666;
+	optional string configuration_id = 11945;
 	optional string configuration_option_id = 17432;
 }
 
@@ -3269,7 +3265,7 @@ message RegisterConfigurationGroup {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 15411;
-	Configuration linked_concept = 17451;
+	optional string configuration_id = 7462;
 	optional string configuration_group_id = 15672;
 }
 
@@ -3282,7 +3278,7 @@ message RegisterConfigurationOption {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 11406;
-	Configuration linked_concept = 7876;
+	optional string configuration_id = 10637;
 	optional string configuration_option_id = 12873;
 }
 
@@ -3295,7 +3291,7 @@ message RegisterHttpEndpoint {
 
 	CodeRegion code_region = 18646;
 	HttpEndpoint http_endpoint = 14831;
-	HttpRequestHandler linked_concept = 4007;
+	HttpRequestHandler http_request_handler = 15118;
 }
 
 // RelationalDatabaseService is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3415,7 +3411,7 @@ message Resource {
 		ContainerOrchestration container_orchestration = 3211;
 		ContainerRegistry container_registry = 8326;
 		Certificate certificate = 8542;
-		SelectorKey selector_key = 8030;
+		Key key = 5122;
 		Secret secret = 16127;
 		Identity identity = 14693;
 		RoleAssignment role_assignment = 2361;
@@ -3461,7 +3457,6 @@ message Resource {
 		ServiceMetadataDocument service_metadata_document = 272;
 		File file = 9522;
 		FileHandle file_handle = 16939;
-		SelectorKey selector_key = 8030;
 		MachineLearningDataset machine_learning_dataset = 2040;
 		MachineLearningModel machine_learning_model = 15393;
 		Policy policy = 495;
@@ -3661,11 +3656,11 @@ message SecurityAdvisoryService {
 	Authenticity authenticity = 16717;
 	repeated string compute_ids  = 18065;
 	GeoLocation geo_location = 11088;
+	repeated string key_ids  = 7181;
 	repeated Logging loggings  = 28;
 	repeated Redundancy redundancies  = 14683;
 	optional string parent_id = 11251;
 	repeated SecurityAdvisoryFeed security_advisory_feeds  = 4972;
-	repeated string selector_key_ids  = 5451;
 	optional string service_metadata_document_id = 3851;
 	TransportEncryption transport_encryption = 17775;
 	UsageStatistics usage_statistics = 14285;
@@ -3920,7 +3915,7 @@ message UnlockEncryptedDisk {
 	option (resource_type_names) = "Functionality";
 
 	CodeRegion code_region = 13452;
-	DiskEncryption linked_concept = 5833;
+	DiskEncryption disk_encryption = 1963;
 }
 
 // UsageStatistics is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3963,7 +3958,7 @@ message ValidateJwt {
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	Authenticity linked_concept = 1721;
+	Authenticity authenticity = 11768;
 	CodeRegion code_region = 15087;
 }
 

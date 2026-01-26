@@ -64,9 +64,6 @@
         <Class abbreviatedIRI="core:ConfigurationGroupSource"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:ConfigurationOperation"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:ConfigurationOption"/>
     </Declaration>
     <Declaration>
@@ -154,7 +151,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:LogOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Logging"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -291,18 +288,6 @@
         <Class abbreviatedIRI="core:Context"/>
         <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
-    
-    <SubClassOf>
-        <Class abbreviatedIRI="core:ConfigurationOperation"/>
-        <Class abbreviatedIRI="core:Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:ConfigurationOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
-            <Class abbreviatedIRI="core:Configuration"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:ConfigurationOption"/>
         <Class abbreviatedIRI="core:Data"/>
@@ -362,11 +347,6 @@
         <Class abbreviatedIRI="core:Time"/>
         <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
-    
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Key"/>
-        <Class abbreviatedIRI="core:Data"/>
-    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:Document"/>
         <Class abbreviatedIRI="res:Data"/>
@@ -388,7 +368,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Document"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="cl:validatedBy"/>
+            <ObjectProperty abbreviatedIRI="prop:validatedBy"/>
             <Class abbreviatedIRI="core:SchemaValidation"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -489,16 +469,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:ConfigurationOperation</AbbreviatedIRI>
-        <Literal>A common abstract class for configuration operations, such as reading options or a whole file.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:ConfigurationOperation</AbbreviatedIRI>
-        <Literal>ConfigurationOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:ConfigurationOption</AbbreviatedIRI>
         <Literal>Represents a configuration option within one [group]. Usually there is one option for each entry in a configuration data structure.</Literal>
     </AnnotationAssertion>
@@ -541,11 +511,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:CreateSecret</AbbreviatedIRI>
         <Literal>CreateSecret</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:CryptographicHash</AbbreviatedIRI>
-        <Literal>CryptographicHash</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

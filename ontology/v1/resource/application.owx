@@ -209,11 +209,6 @@
         <Literal>POSIX</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:EqualityCheck</AbbreviatedIRI>
-        <Literal>EqualityCheck</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:ExitBoundaryOperation</AbbreviatedIRI>
         <Literal>Represents an exit operation that is part of a [Boundary]. This operation is used to define the point at which data leaves the boundary.</Literal>

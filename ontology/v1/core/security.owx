@@ -185,12 +185,6 @@
         <ObjectProperty abbreviatedIRI="prop:scope"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
     </Declaration>
     <Declaration>
@@ -312,11 +306,6 @@
         <Class abbreviatedIRI="core:AnomalyDetection"/>
         <Class abbreviatedIRI="core:Auditing"/>
     </SubClassOf>
-    
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <Class abbreviatedIRI="core:PolicyOperation"/>
-    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Error"/>
         <Class abbreviatedIRI="core:Functionality"/>
@@ -381,7 +370,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:DiskEncryption"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:target"/>
+            <ObjectProperty abbreviatedIRI="prop:usedBy"/>
             <Class abbreviatedIRI="core:BlockStorage"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -672,10 +661,6 @@
         <Class abbreviatedIRI="core:LocalEntryPoint"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:LoadConfiguration"/>
-        <Class abbreviatedIRI="core:ConfigurationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:LoadLibrary"/>
         <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
     </SubClassOf>
@@ -693,14 +678,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:MemoryOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Memory"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:ObjectStorageRequest"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Storage"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1015,14 +1000,6 @@
         <Class abbreviatedIRI="core:ZoneRedundancy"/>
         <Class abbreviatedIRI="core:Redundancy"/>
     </SubClassOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
-    </SubObjectPropertyOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Encryption</AbbreviatedIRI>
@@ -1163,6 +1140,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:Confidentiality</AbbreviatedIRI>
         <Literal xml:lang="english">Confidentiality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:CryptographicHash</AbbreviatedIRI>
+        <Literal>CryptographicHash</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1746,23 +1728,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:usedBy</AbbreviatedIRI>
-        <Literal>usedBy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:usedByMultiple</AbbreviatedIRI>
-        <Literal>usedByMultiple</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:usesSalt</AbbreviatedIRI>
         <Literal>usesSalt</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:validatedBy</AbbreviatedIRI>
-        <Literal>validatedBy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
