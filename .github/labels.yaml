@@ -1,0 +1,19 @@
+# Add 'catalogs' label to any changes in catalogs directory
+catalogs:
+    - changed-files:
+      - any-glob-to-any-file: 
+        - 'catalogs/**/*'
+
+# Add 'metrics' label to any changes in metrics directory
+metrics:
+    - changed-files:
+      - any-glob-to-any-file: 
+        -  'metrics/**/*'
+
+# Add 'ontology' label to any changes in ontology directory
+ontology:
+    - changed-files:
+      - any-glob-to-any-file: 
+        - 'ontology/*/ontology-merged.owx'
+        - 'ontology/*/ontology.proto'
+
