@@ -798,16 +798,7 @@
         <ObjectProperty IRI="/classes/scope"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/classes/usedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/classes/usedByMultiple"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/classes/uses"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/classes/validatedBy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/properties/backend"/>
@@ -853,6 +844,15 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/properties/to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/properties/usedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/properties/usedByMultiple"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/properties/validatedBy"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/T1CoherenceTime"/>
@@ -1398,12 +1398,6 @@
         <ObjectProperty IRI="/classes/describes"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/properties/usedByMultiple"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/properties/usedBy"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/privacyLevel"/>
     </Declaration>
     <Declaration>
@@ -1438,9 +1432,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/annualUpdateCompleted"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/properties/validatedBy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Specification"/>
@@ -4899,20 +4890,16 @@ ips += loadBalancerIP
 name = metadata.name</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="/classes/usedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="/classes/usedByMultiple"/>
-        <ObjectProperty IRI="/classes/usedBy"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="/properties/hasMultiple"/>
         <ObjectProperty IRI="/properties/has"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/properties/usedBy"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/properties/usedByMultiple"/>
+        <ObjectProperty IRI="/properties/usedBy"/>
     </SubObjectPropertyOf>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/classes/hasType"/>
@@ -7217,11 +7204,6 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/usedByMultiple</IRI>
-        <Literal>usedByMultiple</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/uses</IRI>
         <Literal>uses</Literal>
     </AnnotationAssertion>
@@ -7229,11 +7211,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/usesSalt</IRI>
         <Literal>usesSalt</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/validatedBy</IRI>
-        <Literal>validatedBy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7754,6 +7731,21 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/url</IRI>
         <Literal xml:lang="english">url</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/usedBy</IRI>
+        <Literal>usedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/usedByMultiple</IRI>
+        <Literal>usedByMultiple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/validatedBy</IRI>
+        <Literal>validatedBy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
