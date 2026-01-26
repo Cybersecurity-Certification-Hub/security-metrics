@@ -11,7 +11,7 @@
             "substantial",
             "high"
         ],
-        "all_in_scope": false,
+        "all_in_scope": true,
         "categories": [
             {
                 "name": "Cryptography",
