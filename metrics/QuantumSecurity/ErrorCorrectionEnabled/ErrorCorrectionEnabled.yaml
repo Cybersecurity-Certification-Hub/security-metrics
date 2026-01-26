@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: ErrorCorrectionEnabled
+id: 206623ac-d906-4862-a359-b77d5dc89148
+name: ErrorCorrectionEnabled
 description: This rule assesses whether a [QPU] has [ErrorCorrectionEnabled] [p1:enabled] correctly configured.
 category: QuantumSecurity
 version: "v1" 

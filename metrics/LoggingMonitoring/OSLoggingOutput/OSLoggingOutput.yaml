@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: OSLoggingOutput
+id: 432bfcdf-42f1-4c39-8ec9-b02a96dbbdc8
+name: OSLoggingOutput
 description: This rule assesses whether an [VirtualMachine] has the [OSLogging][p1:loggingService] property set correctly.
 category: LoggingMonitoring
 version: "v1" 

@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: ActivityLoggingEnabled
+id: 3d2996d0-f41d-4283-b574-71aec7912cd2
+name: ActivityLoggingEnabled
 description: This rule assesses whether any [Resource] has the [ResourceLogging] property [p1:enabled] set correctly.
 category: LoggingMonitoring
 version: "v1" 
