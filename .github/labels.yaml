@@ -16,4 +16,3 @@ ontology:
       - any-glob-to-any-file: 
         - 'ontology/*/ontology-merged.owx'
         - 'ontology/*/ontology.proto'
-

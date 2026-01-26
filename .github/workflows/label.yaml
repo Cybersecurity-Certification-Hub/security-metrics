@@ -9,11 +9,11 @@ permissions:
   pull-requests: write
 
 jobs:
-  triage:
+  labeler:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/labeler@v5
 
         with:
-          configuration-path: .github/labeler.yml
+          configuration-path: .github/labels.yaml
