@@ -2,7 +2,7 @@
 id: "<Enter ID here in CamelCase>"
 description: "<Enter a description based on the Ontology terms here.>"
 category: "<Enter the category here in CamelCase.>"
-version: "1.0"
+version: "v1"
 comments: "<Enter further description of the metric here.>"
 # ====== Configuration ======
 configuration:

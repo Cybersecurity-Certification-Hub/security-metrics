@@ -1,0 +1,1165 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://ontology.cybersecuritycertcluster.eu/core/properties"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://ontology.cybersecuritycertcluster.eu/core/properties">
+    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/resource/infrastructure#"/>
+    <Prefix name="res" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
+    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:adv_robustness"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="res:basedOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="res:bootLog"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="res:measures"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="res:offersInterface"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="res:offersMultiple"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="res:output"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="res:scope"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:usedByMultiple"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:validatedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:apiHitsPerMonth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:authenticationMechanism"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:broadAssignments"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:calls"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:code"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:contextIsChecked"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:creation_time"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:cve"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:cwe"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:daysSinceActive"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:disablePasswordPolicy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:endColumn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:endLine"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:enforceMFA"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:expirationDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:explainability"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:file"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:filename"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:filetype"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:format"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:geo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:internetAccessibleEndpoint"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:interval"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:isActive"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:isManaged"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:keyExchangeAlgorithm"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:keySize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:lastActivity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:length"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:local"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:loginDefenderEnabled"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:macAlgorithm"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:message"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:mixedDuties"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:monitoringEnabled"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:mutual"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:notBeforeDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:numberOfThreatsFound"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:numberOfUsages"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:overridePasswordPolicy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:privileged"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:programmingVersion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:privacy_level"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:poison_level"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:protocol"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:protocolVersion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:publicAccess"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:publicApiAccess"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:raw"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:reqBody"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:resourceType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:retentionPeriod"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:runtimeLanguage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:runtimeVersion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:schemaURL"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:securityAlertsEnabled"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:securityOnly"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:serviceID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:sessionCipher"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:startColumn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:startLine"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:usesSalt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:zone"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:activated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:algorithm"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:apiListFunction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:argument"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:call"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:enabled"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:enforced"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:field"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:from"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:handler"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:impact"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:inbound"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:ips"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:keyManagement"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:keyManager"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:keyUrl"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:labels"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:local"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:managementUrl"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:method"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:modify"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:path"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:policy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:ports"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:programmingLanguage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:propertyMapping"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:public"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:region"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:remote"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:restrictedPorts"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:serves"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:size"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:source"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:tlsVersion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:translationUnits"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:url"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:backend"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:collectionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:deployedOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:implements"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:offers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:parent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:proxyTarget"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:resourceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:runsOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:serviceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:storage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:to"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="ind:resourceId"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="prop:usedByMultiple"/>
+        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
+        <ObjectProperty abbreviatedIRI="prop:has"/>
+    </SubObjectPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:algorithm"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:apiListFunction"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:call"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:field"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:handler"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:keyUrl"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:labels"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:method"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:path"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:programmingLanguage"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:propertyMapping"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:serves"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:source"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:translationUnits"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:url"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="prop:enabled"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:apiHitsPerMonth</AbbreviatedIRI>
+        <Literal>apiHitsPerMonth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:authenticationMechanism</AbbreviatedIRI>
+        <Literal>for example: RSA, ECDSA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:authenticationMechanism</AbbreviatedIRI>
+        <Literal>authenticationMechanism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:basedOn</AbbreviatedIRI>
+        <Literal>basedOn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:bootLog</AbbreviatedIRI>
+        <Literal>bootLog</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:broadAssignments</AbbreviatedIRI>
+        <Literal>see Privacy Smells: Detecting Privacy Problems in Cloud Architectures (2020)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:broadAssignments</AbbreviatedIRI>
+        <Literal>broadAssignments</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:calls</AbbreviatedIRI>
+        <Literal>calls</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:code</AbbreviatedIRI>
+        <Literal>code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:contextIsChecked</AbbreviatedIRI>
+        <Literal>contextIsChecked</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:creation_time</AbbreviatedIRI>
+        <Literal>creationTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:cve</AbbreviatedIRI>
+        <Literal>cve</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:cwe</AbbreviatedIRI>
+        <Literal>cwe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:daysSinceActive</AbbreviatedIRI>
+        <Literal>durationSinceActive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:description</AbbreviatedIRI>
+        <Literal>description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:disablePasswordPolicy</AbbreviatedIRI>
+        <Literal>disablePasswordPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:endColumn</AbbreviatedIRI>
+        <Literal>endColumn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:endLine</AbbreviatedIRI>
+        <Literal>endLine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:enforceMFA</AbbreviatedIRI>
+        <Literal>enforceMFA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:expirationDate</AbbreviatedIRI>
+        <Literal>expirationDate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:file</AbbreviatedIRI>
+        <Literal>file</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:filename</AbbreviatedIRI>
+        <Literal>filename</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:filetype</AbbreviatedIRI>
+        <Literal>filetype</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:format</AbbreviatedIRI>
+        <Literal>format</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:geo</AbbreviatedIRI>
+        <Literal>geo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:id</AbbreviatedIRI>
+        <Literal>id</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:internetAccessibleEndpoint</AbbreviatedIRI>
+        <Literal>internetAccessibleEndpoint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:interval</AbbreviatedIRI>
+        <Literal>The interval refers to the update interval in days.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:interval</AbbreviatedIRI>
+        <Literal>interval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:isActive</AbbreviatedIRI>
+        <Literal>isActive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:isManaged</AbbreviatedIRI>
+        <Literal>isManaged</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:keyExchangeAlgorithm</AbbreviatedIRI>
+        <Literal>keyExchangeAlgorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:keySize</AbbreviatedIRI>
+        <Literal>keySize</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:lastActivity</AbbreviatedIRI>
+        <Literal>lastActivity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:length</AbbreviatedIRI>
+        <Literal>length</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:local</AbbreviatedIRI>
+        <Literal>local</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:loginDefenderEnabled</AbbreviatedIRI>
+        <Literal>loginDefenderEnabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:macAlgorithm</AbbreviatedIRI>
+        <Literal>naming schema: SHA-256</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:macAlgorithm</AbbreviatedIRI>
+        <Literal>macAlgorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:measures</AbbreviatedIRI>
+        <Literal>measures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:message</AbbreviatedIRI>
+        <Literal>message</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:mixedDuties</AbbreviatedIRI>
+        <Literal>see Privacy Smells: Detecting Privacy Problems in Cloud Architectures (2020)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:mixedDuties</AbbreviatedIRI>
+        <Literal>mixedDuties</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:monitoringEnabled</AbbreviatedIRI>
+        <Literal>monitoringLogDataEnabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:mutual</AbbreviatedIRI>
+        <Literal>mutual</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:name</AbbreviatedIRI>
+        <Literal>name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:notBeforeDate</AbbreviatedIRI>
+        <Literal>notBeforeDate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:numberOfThreatsFound</AbbreviatedIRI>
+        <Literal>numberOfThreatsFound</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:numberOfUsages</AbbreviatedIRI>
+        <Literal>numberOfUsages</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:offersInterface</AbbreviatedIRI>
+        <Literal>offersInterface</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:offersMultiple</AbbreviatedIRI>
+        <Literal>If a property is a security feature.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:offersMultiple</AbbreviatedIRI>
+        <Literal>offersMultiple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:output</AbbreviatedIRI>
+        <Literal>output</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:overridePasswordPolicy</AbbreviatedIRI>
+        <Literal>overridePasswordPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:privileged</AbbreviatedIRI>
+        <Literal>privileged</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:programmingVersion</AbbreviatedIRI>
+        <Literal>programmingVersion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:protocol</AbbreviatedIRI>
+        <Literal>protocol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:protocolVersion</AbbreviatedIRI>
+        <Literal>protocolVersion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:publicAccess</AbbreviatedIRI>
+        <Literal>publicAccess</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:publicApiAccess</AbbreviatedIRI>
+        <Literal>publicApiAccess</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:raw</AbbreviatedIRI>
+        <Literal>The raw field contains the raw information that is used to fill in the fields of the ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:raw</AbbreviatedIRI>
+        <Literal>raw</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:reqBody</AbbreviatedIRI>
+        <Literal>reqBody</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ind:resourceId</AbbreviatedIRI>
+        <Literal>resourceId</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:resourceType</AbbreviatedIRI>
+        <Literal>The resource type. It is an array, because a type can be derived from another.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:resourceType</AbbreviatedIRI>
+        <Literal>resourceType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:retentionPeriod</AbbreviatedIRI>
+        <Literal>retentionPeriod</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:runtimeLanguage</AbbreviatedIRI>
+        <Literal>runtimeLanguage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:runtimeVersion</AbbreviatedIRI>
+        <Literal>runtimeVersion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:schemaURL</AbbreviatedIRI>
+        <Literal>schemaURL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:scope</AbbreviatedIRI>
+        <Literal>scope</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:securityAlertsEnabled</AbbreviatedIRI>
+        <Literal>securityAlertsEnabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:securityOnly</AbbreviatedIRI>
+        <Literal>securityOnly</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:serviceID</AbbreviatedIRI>
+        <Literal>ServiceID contains the ID of the cloud service to which this resource belongs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:serviceID</AbbreviatedIRI>
+        <Literal>serviceID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:sessionCipher</AbbreviatedIRI>
+        <Literal>naming schema: AES-128-GCM</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:sessionCipher</AbbreviatedIRI>
+        <Literal>sessionCipher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:startColumn</AbbreviatedIRI>
+        <Literal>startColumn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:startLine</AbbreviatedIRI>
+        <Literal>startLine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:status</AbbreviatedIRI>
+        <Literal>status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:target</AbbreviatedIRI>
+        <Literal>target</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:usedBy</AbbreviatedIRI>
+        <Literal>usedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:usedByMultiple</AbbreviatedIRI>
+        <Literal>usedByMultiple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:usesSalt</AbbreviatedIRI>
+        <Literal>usesSalt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:validatedBy</AbbreviatedIRI>
+        <Literal>validatedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:zone</AbbreviatedIRI>
+        <Literal>zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:activated</AbbreviatedIRI>
+        <Literal xml:lang="english">activated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:algorithm</AbbreviatedIRI>
+        <Literal xml:lang="english">algorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:apiListFunction</AbbreviatedIRI>
+        <Literal xml:lang="english">apiListFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:argument</AbbreviatedIRI>
+        <Literal xml:lang="english">argument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:backend</AbbreviatedIRI>
+        <Literal xml:lang="english">backend</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:call</AbbreviatedIRI>
+        <Literal xml:lang="english">call</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:collectionOf</AbbreviatedIRI>
+        <Literal xml:lang="english">collectionOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:deployedOn</AbbreviatedIRI>
+        <Literal xml:lang="english">deployedOn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:enabled</AbbreviatedIRI>
+        <Literal xml:lang="english">enabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:enforced</AbbreviatedIRI>
+        <Literal xml:lang="english">enforced</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:field</AbbreviatedIRI>
+        <Literal xml:lang="english">field</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:from</AbbreviatedIRI>
+        <Literal xml:lang="english">from</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:handler</AbbreviatedIRI>
+        <Literal xml:lang="english">handler</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:has</AbbreviatedIRI>
+        <Literal xml:lang="english">has</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:hasMultiple</AbbreviatedIRI>
+        <Literal xml:lang="english">hasMultiple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:impact</AbbreviatedIRI>
+        <Literal xml:lang="english">impact</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:implements</AbbreviatedIRI>
+        <Literal xml:lang="english">implements</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:inbound</AbbreviatedIRI>
+        <Literal xml:lang="english">inbound</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:ips</AbbreviatedIRI>
+        <Literal xml:lang="english">ips</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:keyManagement</AbbreviatedIRI>
+        <Literal xml:lang="english">keymanagement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:keyManager</AbbreviatedIRI>
+        <Literal xml:lang="english">keyManager</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:keyUrl</AbbreviatedIRI>
+        <Literal xml:lang="english">keyUrl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:labels</AbbreviatedIRI>
+        <Literal>labels</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:managementUrl</AbbreviatedIRI>
+        <Literal xml:lang="english">managementUrl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:method</AbbreviatedIRI>
+        <Literal xml:lang="english">method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:modify</AbbreviatedIRI>
+        <Literal>modify</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:offers</AbbreviatedIRI>
+        <Literal>If a property is a security feature.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:offers</AbbreviatedIRI>
+        <Literal xml:lang="english">offers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:parent</AbbreviatedIRI>
+        <Literal xml:lang="english">parent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:path</AbbreviatedIRI>
+        <Literal xml:lang="english">path</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:policy</AbbreviatedIRI>
+        <Literal xml:lang="english">policy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:ports</AbbreviatedIRI>
+        <Literal xml:lang="english">ports</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:programmingLanguage</AbbreviatedIRI>
+        <Literal xml:lang="english">programmingLanguage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:propertyMapping</AbbreviatedIRI>
+        <Literal xml:lang="english">propertyMapping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:proxyTarget</AbbreviatedIRI>
+        <Literal xml:lang="english">proxyTarget</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:public</AbbreviatedIRI>
+        <Literal xml:lang="english">public</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:region</AbbreviatedIRI>
+        <Literal xml:lang="english">region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:resourceOf</AbbreviatedIRI>
+        <Literal xml:lang="english">resourceOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:restrictedPorts</AbbreviatedIRI>
+        <Literal xml:lang="english">restrictedPorts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:runsOn</AbbreviatedIRI>
+        <Literal xml:lang="english">runsOn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:serves</AbbreviatedIRI>
+        <Literal xml:lang="english">serves</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:serviceOf</AbbreviatedIRI>
+        <Literal xml:lang="english">serviceOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:source</AbbreviatedIRI>
+        <Literal xml:lang="english">source</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:storage</AbbreviatedIRI>
+        <Literal>storage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:tlsVersion</AbbreviatedIRI>
+        <Literal xml:lang="english">tlsVersion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:to</AbbreviatedIRI>
+        <Literal xml:lang="english">to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:translationUnits</AbbreviatedIRI>
+        <Literal xml:lang="english">translationUnits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:url</AbbreviatedIRI>
+        <Literal xml:lang="english">url</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:value</AbbreviatedIRI>
+        <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/resourceId</IRI>
+        <Literal>string</Literal>
+    </AnnotationAssertion>
+</Ontology>
