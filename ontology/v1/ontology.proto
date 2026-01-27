@@ -2487,7 +2487,6 @@ message MachineLearningModel {
 	float poisoned_data_level = 13816;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 12454;
-	float robustness = 13582;
 	DataLocation data_location = 1022;
 	optional string parent_id = 17150;
 	repeated Vulnerability vulnerabilities  = 9542;
