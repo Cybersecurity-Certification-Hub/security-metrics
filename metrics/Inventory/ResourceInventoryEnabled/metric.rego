@@ -7,10 +7,10 @@ default applicable = false
 
 default compliant = false
 
-enabled := input.resourceInventory.enabled
+enabled := input.resourceInventoryService.enabled
 
 applicable if {
-	input.type[_] == "ResourceInventory"
+	input.type[_] == "ResourceInventoryService"
 }
 
 compliant if {
