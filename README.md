@@ -4,10 +4,13 @@ This repository collects security metrics that can be used for continuous certif
 The repository is structured as follows.
 - api: this folder is still preliminary. The idea is to define the metric data format in a programmatic way, e.g., using a protobuf file
 - catalogs: the catalogs folder holds files for different certification catalogs, benchmarks, etc. These files encode the requirements of the catalogs and map them to metrics. This way, continuous certification tools that apply the metrics can map assess the degree of compliance of a given catalog later.
-- metrics: this folder holds the actual metrics. It is structured into domains first and each domain contains a number of metric folders. One of these metric folders in turn holds the following information.
-  - metric.yml: This file describes the metric data, e.g., a description and its target value (see the structure explanation below)
+- metrics: this folder holds the actual metrics. It is structured into domains first and each domain contains a number of metric folders. Each of these metric folders holds the following information.
+  - metric.yaml: This file describes the metric data, e.g., a description and its target value (see the structure explanation below)
   - metric.rego: This file encodes the metric data as a [Rego](https://www.openpolicyagent.org/docs/latest/policy-language/) file that can automatically be evaluated using the [OPA](https://www.openpolicyagent.org) engine.
-- ontology: This folder holds the ontology that underpins the metric descriptions, possibly in different versions. The ontology describes which resources a system can consist of, which security features they may offer, and much more (see below). The metric descriptions are based on the ontology terms. 
+  - data.json: This file contains the comparison operator and the target value for the rego file.
+- ontology: This folder holds the ontology that underpins the metric descriptions, possibly in different versions. The ontology describes which resources a system can consist of, which security features they may offer, and much more (see below). The metric descriptions are based on the ontology terms.
+- resources: This folder contains sample files with structured resource information, based on the ontology, in JSON format. These files can be evaluated by OPA using the provided metrics.
+- templates: This folder contains a metric template which can be used for creating new metrics. 
 
 # The metric data structure
 A metric is described by metadata and configuration properties. While the metadata is static, the configuration properties may be modified when the metric is used, since they are dependent on the system context.

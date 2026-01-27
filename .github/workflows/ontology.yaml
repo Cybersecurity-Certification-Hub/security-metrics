@@ -1,0 +1,92 @@
+name: Merge Ontology and generate proto file
+
+on:
+  push:
+    branches:
+      - main
+  pull_request: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+    ontology:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
+          with:
+            ref: ${{ github.head_ref }}
+        - name: Install buf
+          uses: bufbuild/buf-setup-action@v1.50.0
+          with:
+            github_token: ${{ github.token }}
+        - name: Set up Git user
+          run: |
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        - name: Download ROBOT
+          run: |
+            wget https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar
+        # Delete core/evidence.owx from catalog file. We do not need the evidence object in the merged ontology, that would lead to an error in the proto file generation.
+        - name: Delete evidence.owx from catalog file
+          run: |
+            sed -i '/uri="core\/evidence\.owx"/d' ontology/v1/catalog-v001.xml
+        - name: Delete evidence.owx from core file
+          run: |
+             sed -i '/<Import>https:\/\/ontology.cybersecuritycertcluster.eu\/core\/evidence<\/Import>/d' ontology/v1/core.owx
+        - name: Merge owx files
+          uses: docker://eclipse-temurin
+          with:
+            args: java -jar robot.jar -vvv merge 
+              --catalog ontology/v1/catalog-v001.xml
+              --input ontology/v1/ontology.owx 
+              --output ontology/v1/ontology-merged.owx
+        - name: Generate proto file for ontology
+          run: |
+            go install github.com/oxisto/owl2proto/cmd/owl2proto@latest
+            $HOME/go/bin/owl2proto generate-proto \
+            --root-resource-name=/classes/Resource ontology/v1/ontology-merged.owx \
+            --header-file=ontology/csc_hub_header.proto \
+            --output-path=ontology/v1/ontology.proto \
+            --full-semantic-mode=false \
+            --deterministic-field-numbers=true
+        - name: Validate proto file
+          run: |       
+            mkdir -p buf/validate
+            curl -L \
+              https://raw.githubusercontent.com/bufbuild/protovalidate/refs/heads/main/proto/protovalidate/buf/validate/validate.proto \
+              -o buf/validate/validate.proto
+            buf lint --path ontology/v1/ontology.proto --error-format github-actions --config '{"version":"v1","lint":{"use":["DEFAULT"],"except":["PACKAGE_DIRECTORY_MATCH"]}}'
+        - name: Upload Artifact ontology-merged.owx 
+          uses: actions/upload-artifact@v4
+          with:
+            name: ontology-merged
+<<<<<<< HEAD:.github/workflows/ontology.yml
+            path: ontology/1.0/ontology-merged.owx 
+        - name: Commit and push changes
+
+          if: github.event.pull_request.head.repo.full_name == github.repository
+          run: |
+              git add ontology/1.0/ontology-merged.owx ontology/1.0/ontology.proto
+              git commit -m "Add merged ontology and proto files [skip ci]" || echo "No changes to commit"
+=======
+            path: ontology/v1/ontology-merged.owx 
+        - name: Commit merged OWX file
+          run: |
+              git add ontology/v1/ontology-merged.owx 
+              git commit -m "Add merged ontology file [skip ci]" || echo "No changes to commit"
+              git push
+          env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        - name: Commit ontology.proto file
+          run: |
+              git add ontology/v1/ontology.proto
+              git commit -m "Add generated proto file [skip ci]" || echo "No changes to commit"
+>>>>>>> upstream/main:.github/workflows/ontology.yaml
+              git push
+          env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
