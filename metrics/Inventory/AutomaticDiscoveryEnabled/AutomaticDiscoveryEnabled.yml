@@ -1,9 +1,0 @@
---- # Metadata
-- id: ResourceInventoryEnabled
-- description: This rule evaluates whether an [AssetInventory] is [p1:enabled]
-- version: "1.0"
-- comments: An asset inventory is a tool to manage resources and their lifecycles which is essential for maintaining security and compliance.
---- # Configuration data
-- p1:
-  - operator: ==
-  - targetValue: True
