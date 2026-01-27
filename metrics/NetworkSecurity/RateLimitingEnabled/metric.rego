@@ -3,7 +3,7 @@ package cch.metrics.rate_limiting_enabled
 import data.cch.compare
 import rego.v1
 
-import input.rate_limiting as rl
+import input.accessRestriction.rateLimiting as rl
 
 default applicable = false
 
