@@ -2,7 +2,7 @@
 id: ExplainabilityEnabled
 description: This rule assesses whether a [MachineLearningModel] provides [p1:explainabilityEnabled].
 category: AISecurity
-version: "1.0"
+version: "v1"
 comments: Explainable AI is essential for understanding, debugging, and building trust in machine learning systems.
 # ====== Configuration ======
 configuration:

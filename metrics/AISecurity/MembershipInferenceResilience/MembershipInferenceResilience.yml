@@ -2,7 +2,7 @@
 id: MembershipInferenceResilience
 description: This rule assesses whether a [MachineLearningModel] has implemented privacy-preserving techniques that increase its resilience against membership inference attacks over the compliant level of [p1:membershipInferenceResilience].
 category: AISecurity
-version: "1.0"
+version: "v1"
 comments: Machine learning models should take privacy into account.
 # ====== Configuration ======
 configuration:
