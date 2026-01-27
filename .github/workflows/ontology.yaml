@@ -64,7 +64,7 @@ jobs:
             curl -L \
               https://raw.githubusercontent.com/bufbuild/protovalidate/refs/heads/main/proto/protovalidate/buf/validate/validate.proto \
               -o buf/validate/validate.proto
-            buf lint --path ontology/v1/ontology.proto --error-format github-actions --config '{"version":"v1","lint":{"use":["DEFAULT"],"except":["PACKAGE_DIRECTORY_MATCH"]}}'
+            buf lint --path ontology/v1/ontology.proto --error-format github-actions --config '{"version":"v1","lint":{"use":["STANDARD"],"except":["PACKAGE_DIRECTORY_MATCH"]}}'
         
         # STEPS FOR PUSHING CHANGES BACK TO THE REPO
         - name: Commit merged OWX file
