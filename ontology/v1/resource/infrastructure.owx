@@ -6,22 +6,25 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/infrastructure">
-    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/resource/infrastructure"/>
+    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/resource/infrastructure#"/>
     <Prefix name="cl" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
     <Prefix name="aws" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/aws/"/>
-    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="k8s" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/k8s/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
+    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="azure" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/azure/"/>
     <Prefix name="docker" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/docker/"/>
     <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
     <Declaration>
         <Class abbreviatedIRI="cl:Account"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cl:Resource"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cl:BlockStorage"/>
@@ -114,10 +117,10 @@
         <Class abbreviatedIRI="cl:LoggingService"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cl:MachineLearningService"/>
+        <Class abbreviatedIRI="cl:MessagingHub"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cl:MessagingHub"/>
+        <Class abbreviatedIRI="cl:MachineLearningService"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cl:MultiModalDatabaseService"/>
@@ -144,19 +147,16 @@
         <Class abbreviatedIRI="cl:PasswordPolicy"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cl:QPU"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="cl:RelationalDatabaseService"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:Resource"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cl:ResourceGroup"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cl:RoleAssignment"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cl:QPU"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cl:Secret"/>
@@ -169,6 +169,15 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cl:StorageService"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="cl:T1CoherenceTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="cl:T2CoherenceTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="cl:UniversalGateSetEnabled"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cl:VMImage"/>
@@ -186,31 +195,19 @@
         <Class abbreviatedIRI="cl:Workflow"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cl:ResourceInventoryService"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:T1CoherenceTime"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:T2CoherenceTime"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:UniversalGateSetEnabled"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="ind:AmazonWebServices"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="ind:CircleCI"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="ind:GitHubActions"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="ind:TeamCity"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/CircleCI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/GitHubActions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/TeamCity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="aws:Account"/>
@@ -350,195 +347,6 @@
     <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="prop:activated"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:Authorization"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:parent"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:serviceOf"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:AtRestEncryption"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:expirationDate"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:RemoteAttestation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="cl:offersMultiple"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:OneQubitErrorRate"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:runtimeLanguage"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:UsageStatistics"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="prop:url"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="prop:ports"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:ServiceMetadataDocument"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:lastActivity"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:TwoQubitErrorRate"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:Immutability"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:resourceOf"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:errorCorrectionEnabled"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="prop:propertyMapping"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="cl:basedOn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="cl:usedByMultiple"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:ResourceLogging"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:collectionOf"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:SpamErrorRate"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:SecurityAdvisoryFeed"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:has"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:OSLog"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:Application"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:Redundancy"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="prop:ips"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:ActivityLog"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:GeoLocation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:runtimeVersion"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:MachineLearning"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:enforceMFA"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:Cipher"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="prop:enabled"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:notBeforeDate"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:BootLog"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:disablePasswordPolicy"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="prop:algorithm"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:TransportEncryption"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:Authenticity"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="prop:managementUrl"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:offers"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:AccessRestriction"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:AnomalyDetection"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="prop:apiListFunction"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:Backup"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:loginDefenderEnabled"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:publicAccess"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:MalwareProtection"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:Logging"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:keySize"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="cl:offersInterface"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:EncryptionInUse"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:AutomaticUpdates"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:isManaged"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:internetAccessibleEndpoint"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cl:privileged"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:HttpEndpoint"/>
-    </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="cl:Account"/>
         <Class abbreviatedIRI="cl:CloudResource"/>
@@ -561,9 +369,23 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:CloudResource"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="cl:internetAccessibleEndpoint"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CloudResource"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="cl:offersMultiple"/>
             <Class abbreviatedIRI="cl:Redundancy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CloudResource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:offers"/>
+            <Class abbreviatedIRI="cl:GeoLocation"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -577,22 +399,8 @@
         <Class abbreviatedIRI="cl:CloudResource"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="cl:GeoLocation"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:CloudResource"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="cl:UsageStatistics"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:CloudResource"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="cl:internetAccessibleEndpoint"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:CodeRepository"/>
@@ -976,6 +784,21 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="cl:Secret"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="cl:basedOn"/>
+            <Class abbreviatedIRI="cl:Cipher"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:Secret"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="cl:keySize"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
         <Class abbreviatedIRI="cl:MachineLearningService"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -1026,15 +849,15 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:NetworkService"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="cl:ServiceMetadataDocument"/>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
+            <Class abbreviatedIRI="cl:Compute"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:NetworkService"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
-            <Class abbreviatedIRI="cl:Compute"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:ServiceMetadataDocument"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1089,59 +912,6 @@
         <Class abbreviatedIRI="cl:CloudResource"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="cl:QPU"/>
-        <Class abbreviatedIRI="cl:Compute"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:QPU"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="cl:OneQubitErrorRate"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:QPU"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="cl:SpamErrorRate"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:QPU"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="cl:T1CoherenceTime"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:QPU"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="cl:T2CoherenceTime"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:QPU"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="cl:TwoQubitErrorRate"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:QPU"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="cl:UniversalGateSetEnabled"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:QPU"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="cl:errorCorrectionEnabled"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="cl:RelationalDatabaseService"/>
         <Class abbreviatedIRI="cl:DatabaseService"/>
     </SubClassOf>
@@ -1156,20 +926,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:Secret"/>
         <Class abbreviatedIRI="cl:Credential"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:Secret"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="cl:basedOn"/>
-            <Class abbreviatedIRI="cl:Cipher"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:Secret"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="cl:keySize"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:SecurityAdvisoryService"/>
@@ -1297,6 +1053,59 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="cl:QPU"/>
+        <Class abbreviatedIRI="cl:Compute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:QPU"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="cl:errorCorrectionEnabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:QPU" />
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="cl:OneQubitErrorRate" />
+            <Datatype abbreviatedIRI="xsd:float" />
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:QPU" />
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="cl:TwoQubitErrorRate" />
+            <Datatype abbreviatedIRI="xsd:float" />
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:QPU" />
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="cl:SpamErrorRate" />
+            <Datatype abbreviatedIRI="xsd:float" />
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:QPU"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="cl:T1CoherenceTime"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:QPU"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="cl:T2CoherenceTime"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:QPU"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="cl:UniversalGateSetEnabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="cl:VirtualNetwork"/>
         <Class abbreviatedIRI="cl:Networking"/>
     </SubClassOf>
@@ -1308,27 +1117,9 @@
         <Class abbreviatedIRI="cl:Workflow"/>
         <Class abbreviatedIRI="cl:CICDService"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:ResourceInventoryService"/>
-        <Class abbreviatedIRI="cl:NetworkService"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:ResourceInventoryService"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="cl:enabled"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:ResourceInventoryService"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="cl:automaticDiscoveryEnabled"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
     <ClassAssertion>
         <Class abbreviatedIRI="cl:CICDService"/>
-        <NamedIndividual abbreviatedIRI="ind:GitHubActions"/>
+        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/GitHubActions"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="cl:Account"/>
@@ -1474,12 +1265,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="prop:serviceOf"/>
         <NamedIndividual abbreviatedIRI="aws:DynamoDB"/>
-        <NamedIndividual abbreviatedIRI="ind:AmazonWebServices"/>
+        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="prop:serviceOf"/>
         <NamedIndividual abbreviatedIRI="aws:EC2"/>
-        <NamedIndividual abbreviatedIRI="ind:AmazonWebServices"/>
+        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="prop:resourceOf"/>
@@ -1509,7 +1300,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="prop:serviceOf"/>
         <NamedIndividual abbreviatedIRI="aws:IAM"/>
-        <NamedIndividual abbreviatedIRI="ind:AmazonWebServices"/>
+        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="prop:resourceOf"/>
@@ -1519,17 +1310,17 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="prop:serviceOf"/>
         <NamedIndividual abbreviatedIRI="aws:Lambda"/>
-        <NamedIndividual abbreviatedIRI="ind:AmazonWebServices"/>
+        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="prop:serviceOf"/>
         <NamedIndividual abbreviatedIRI="aws:RDS"/>
-        <NamedIndividual abbreviatedIRI="ind:AmazonWebServices"/>
+        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="prop:parent"/>
         <NamedIndividual abbreviatedIRI="aws:S3"/>
-        <NamedIndividual abbreviatedIRI="ind:AmazonWebServices"/>
+        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="prop:resourceOf"/>
@@ -1631,13 +1422,18 @@ name = metadata.name</Literal>
     </DataPropertyAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
+       <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
         <Literal>A key used for encryption algorithms.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
         <Literal>The node that represents the "key" of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
+        <Literal>The node that represents the &quot;key&quot; of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1673,6 +1469,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:Account</AbbreviatedIRI>
         <Literal xml:lang="english">Account</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:Resource</AbbreviatedIRI>
+        <Literal>Resource</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1825,16 +1626,6 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">Job</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
-        <Literal>The node that represents the &quot;key&quot; of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
-        <Literal>Key</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:KeyValueDatabaseService</AbbreviatedIRI>
         <Literal>KeyValueDatabaseService</Literal>
@@ -1941,18 +1732,8 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:QPU</AbbreviatedIRI>
-        <Literal>QPU</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:RelationalDatabaseService</AbbreviatedIRI>
         <Literal>RelationalDatabaseService</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:Resource</AbbreviatedIRI>
-        <Literal>Resource</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1963,11 +1744,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:RoleAssignment</AbbreviatedIRI>
         <Literal xml:lang="english">RoleAssignment</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:Secret</AbbreviatedIRI>
-        <Literal>Secret</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1993,36 +1769,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:StorageService</AbbreviatedIRI>
         <Literal>StorageService</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>cl:T1CoherenceTime</AbbreviatedIRI>
-        <Literal>Coherence times are a standard measure for the reliability of executing quantum circuits. T1 is the qubits&apos;s energy relaxation time (in seconds).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:T1CoherenceTime</AbbreviatedIRI>
-        <Literal>T1CoherenceTime</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>cl:T2CoherenceTime</AbbreviatedIRI>
-        <Literal>Coherence times are a standard measure for the reliability of executing quantum circuits. T1 is the qubits&apos;s energy dephasing time (in seconds).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:T2CoherenceTime</AbbreviatedIRI>
-        <Literal>T2CoherenceTime</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>cl:UniversalGateSetEnabled</AbbreviatedIRI>
-        <Literal>The physical operations shall include a finite set of gates capable of approximating any unitary operation on qubits. This is typically achieved through combinations of one-qubit gates and a two-qubit entangling gate, such as CNOT, enabling the execution of a broad range of quantum algorithms.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:UniversalGateSetEnabled</AbbreviatedIRI>
-        <Literal>UniversalGateSetEnabled</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2370,9 +2116,19 @@ name = metadata.name</Literal>
         <Literal>reqBody</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ind:resourceId</AbbreviatedIRI>
+        <Literal>resourceId</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>cl:resourceType</AbbreviatedIRI>
         <Literal>The resource type. It is an array, because a type can be derived from another.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:PasswordPolicy</AbbreviatedIRI>
+        <Literal>PasswordPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2398,6 +2154,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:schemaURL</AbbreviatedIRI>
         <Literal>schemaURL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:scope</AbbreviatedIRI>
+        <Literal>scope</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2445,9 +2206,39 @@ name = metadata.name</Literal>
         <Literal>status</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:T1CoherenceTime</AbbreviatedIRI>
+        <Literal>Coherence times are a standard measure for the reliability of executing quantum circuits. T1 is the qubits&apos;s energy relaxation time (in seconds).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:T1CoherenceTime</AbbreviatedIRI>
+        <Literal>T1CoherenceTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:T2CoherenceTime</AbbreviatedIRI>
+        <Literal>Coherence times are a standard measure for the reliability of executing quantum circuits. T1 is the qubits&apos;s energy dephasing time (in seconds).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:T2CoherenceTime</AbbreviatedIRI>
+        <Literal>T2CoherenceTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:target</AbbreviatedIRI>
         <Literal>target</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:UniversalGateSetEnabled</AbbreviatedIRI>
+        <Literal>The physical operations shall include a finite set of gates capable of approximating any unitary operation on qubits. This is typically achieved through combinations of one-qubit gates and a two-qubit entangling gate, such as CNOT, enabling the execution of a broad range of quantum algorithms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:UniversalGateSetEnabled</AbbreviatedIRI>
+        <Literal>UniversalGateSetEnabled</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2461,28 +2252,23 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ind:AmazonWebServices</AbbreviatedIRI>
+        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices</IRI>
         <Literal xml:lang="english">Amazon Web Services</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ind:CircleCI</AbbreviatedIRI>
+        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/CircleCI</IRI>
         <Literal xml:lang="english">CircleCI</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ind:GitHubActions</AbbreviatedIRI>
+        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/GitHubActions</IRI>
         <Literal xml:lang="english">GitHub Actions</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ind:TeamCity</AbbreviatedIRI>
+        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/TeamCity</IRI>
         <Literal xml:lang="english">TeamCity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ind:resourceId</AbbreviatedIRI>
-        <Literal>resourceId</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2691,6 +2477,11 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:QPU</AbbreviatedIRI>
+        <Literal>QPU</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>k8s:Service</AbbreviatedIRI>
         <Literal xml:lang="english">Kubernetes Service</Literal>
     </AnnotationAssertion>
@@ -2699,21 +2490,7 @@ name = metadata.name</Literal>
         <AbbreviatedIRI>k8s:Volume</AbbreviatedIRI>
         <Literal xml:lang="english">Kubernetes Volume</Literal>
     </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:scope</AbbreviatedIRI>
-        <Literal>scope</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>cl:ResourceInventoryService</AbbreviatedIRI>
-        <Literal>A resource inventory service that may automatically discover resources to enable their management.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:ResourceInventoryService</AbbreviatedIRI>
-        <Literal>ResourceInventoryService</Literal>
-    </AnnotationAssertion>
+    
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
         <IRI>wptmp:entity#contextIsChecked</IRI>
@@ -2723,4 +2500,4 @@ name = metadata.name</Literal>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
