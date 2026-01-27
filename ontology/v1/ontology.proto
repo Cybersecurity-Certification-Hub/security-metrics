@@ -3902,6 +3902,8 @@ message TransportEncryption {
 	bool enforced = 9699;
 	string protocol = 6987;
 	float protocol_version = 11009;
+	// tlsSignatureAlgorithm: e.g., rsa_pss_rsae_sha256/384/512, ecdsa_secp256r1_sha256, ed25519
+	string tls_signature_algorithm = 14996;
 	Cipher based_on = 17349;
 	repeated CipherSuite cipher_suites  = 5672;
 	optional string secret_id = 9451;
