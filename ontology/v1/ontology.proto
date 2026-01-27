@@ -3523,15 +3523,15 @@ message ResourceInventoryService {
 	repeated uint32 ports = 5032;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 13845;
-	Authenticity authenticity = 9116;
-	repeated string compute_ids  = 16091;
-	GeoLocation geo_location = 853;
-	repeated Logging loggings  = 9823;
-	repeated Redundancy redundancies  = 8507;
-	optional string parent_id = 13496;
-	optional string service_metadata_document_id = 17502;
-	TransportEncryption transport_encryption = 16285;
-	UsageStatistics usage_statistics = 13273;
+	Authenticity authenticity = 8309;
+	repeated string compute_ids  = 5467;
+	GeoLocation geo_location = 16565;
+	repeated Logging loggings  = 6688;
+	repeated Redundancy redundancies  = 14267;
+	optional string parent_id = 860;
+	optional string service_metadata_document_id = 14719;
+	TransportEncryption transport_encryption = 11296;
+	UsageStatistics usage_statistics = 10584;
 }
 
 // ResourceLogging is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
