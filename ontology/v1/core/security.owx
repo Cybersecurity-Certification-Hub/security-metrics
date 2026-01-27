@@ -302,20 +302,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:leftPrincipal"/>
-            <Class abbreviatedIRI="core:Principal"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:rightPrincipal"/>
-            <Class abbreviatedIRI="core:Principal"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionInUse"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:enabled"/>
@@ -554,10 +540,6 @@
             <DataProperty abbreviatedIRI="prop:enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <Class abbreviatedIRI="core:PolicyOperation"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:ExplainableResults"/>
