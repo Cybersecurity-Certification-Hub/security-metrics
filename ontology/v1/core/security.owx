@@ -6,15 +6,15 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://ontology.cybersecuritycertcluster.eu/core/security">
-    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/core/security"/>
-    <Prefix name="cl" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
-    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
+    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/core/security#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+    <Prefix name="cl" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
+    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
         <Class abbreviatedIRI="core:ABAC"/>
@@ -125,9 +125,6 @@
         <Class abbreviatedIRI="core:Logging"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:LoggingService"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:MalwareProtection"/>
     </Declaration>
     <Declaration>
@@ -150,9 +147,6 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:RBAC"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="core:RateLimiting"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:Redundancy"/>
@@ -179,9 +173,6 @@
         <Class abbreviatedIRI="core:SingleSignOn"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:Storage"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:TransportEncryption"/>
     </Declaration>
     <Declaration>
@@ -204,12 +195,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:offers"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:scope"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:to"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:apiHitsPerMonth"/>
