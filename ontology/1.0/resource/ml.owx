@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://ontology.cybersecuritycertcluster.eu/resource/ml"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/ml">
-    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/resource/ml"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="res" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
-    <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    xml:base="https://ontology.cybersecuritycertcluster.eu/resource/ml"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/ml">
+    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu#" />
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#" />
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
+    <Prefix name="res" IRI="https://ontology.cybersecuritycertcluster.eu/classes/" />
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace" />
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#" />
+    <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/" />
+    <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/" />
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#" />
     <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
     <Declaration>
         <Class abbreviatedIRI="core:MachineLearning"/>
@@ -41,9 +41,6 @@
         <DataProperty abbreviatedIRI="core:explainabilityEnabled"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="core:adversarialRobustnessScore"/>
     </Declaration>
     <Declaration>
@@ -51,9 +48,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:poisoningResilienceLevel"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="core:Vulnerability"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:Data"/>

@@ -8,6 +8,7 @@ default compliant = false
 
 
 applicable if {
+    input.type[_] == "MachineLearningModel"
     input.poisoningResilienceLevel
 }
 

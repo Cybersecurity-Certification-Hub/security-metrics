@@ -15,10 +15,6 @@
     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
     <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-
-    <Declaration>
-        <DataProperty abbreviatedIRI="res:adversarialRobustnessScore"/>
-    </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="res:basedOn"/>
     </Declaration>
@@ -99,9 +95,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:expirationDate"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="res:explainabilityEnabled"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:file"/>
@@ -189,12 +182,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:membershipInferenceResilience"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="res:poisonedDataLevel"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="res:poisoningResilienceLevel"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:protocol"/>
