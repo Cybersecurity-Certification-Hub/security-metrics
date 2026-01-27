@@ -116,6 +116,9 @@
         <Class abbreviatedIRI="core:LocalRedundancy"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:Logging"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:MalwareProtection"/>
     </Declaration>
     <Declaration>

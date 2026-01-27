@@ -2,7 +2,7 @@
 id: DataPoisoningDetected
 description: This rule assesses whether the detected percentage of [p1:poisonedDataLevel] in the training set of a [MachineLearningModel] is compliant.
 category: AISecurity
-version: "1.0"
+version: "v1"
 comments: An AI model may be trained on poisoned data which can lead to incorrect or biased model predictions. Poisoned data may, for example, be detected by checking for outliers in the data set or by identifying data points that have been intentionally mislabeled.
 # ====== Configuration ======
 configuration:

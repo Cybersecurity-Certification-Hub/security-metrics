@@ -2,7 +2,7 @@
 id: StolenModelAccuracy
 description: This rule assesses to what extent a [MachineLearningModel] provides[p1:modelStealResilience].
 category: AISecurity
-version: "1.0"
+version: "v1"
 comments: This metric assesses in which extent a model can be extracted and used to create a shadow model. It is measured by comparing the accuracy of the stolen model to the original model. The lower the value, the better.
 # ====== Configuration ======
 configuration:
