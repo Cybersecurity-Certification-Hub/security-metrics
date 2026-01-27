@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: TransportEncryptionSignatureAlgorithm
+description: This rule assesses whether a [Resource] has its [TransportEncryption] [p1:tlsSignatureAlgorithm] correctly configured.
+category: TransportEncryption
+version: "v1"
+comments: Using secure TLS signature algorithms (e.g., ECDSA or RSA and SHA-256 or SHA-512) ensures the authenticity and integrity of the communication, protecting against forgery and tampering.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: ["rsa_pss_rsae_sha256", "rsa_pss_rsae_sha384", "rsa_pss_rsae_sha512", "ecdsa_secp256r1_sha256", "ed25519"]
