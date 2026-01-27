@@ -153,6 +153,9 @@
         <Class abbreviatedIRI="cl:ResourceGroup"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="cl:ResourceInventoryService"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="cl:RoleAssignment"/>
     </Declaration>
     <Declaration>
@@ -612,6 +615,24 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:GenericNetworkService"/>
         <Class abbreviatedIRI="cl:NetworkService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:ResourceInventoryService"/>
+        <Class abbreviatedIRI="cl:NetworkService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:ResourceInventoryService"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:enabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:ResourceInventoryService"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:automaticDiscoveryEnabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:Identifiable"/>
