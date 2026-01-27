@@ -609,9 +609,6 @@
         <Class IRI="/classes/RBAC"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/RateLimiting"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/classes/ReadConfiguration"/>
     </Declaration>
     <Declaration>
@@ -1414,6 +1411,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Implementation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/RateLimiting"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/modelStealResilience"/>
@@ -3892,10 +3892,6 @@
     <SubClassOf>
         <Class IRI="/classes/RateLimiting"/>
         <Class IRI="/classes/AccessRestriction"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/RateLimiting"/>
-        <Class IRI="/classes/Functionality"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/RateLimiting"/>
