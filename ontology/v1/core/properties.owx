@@ -92,9 +92,6 @@
         <DataProperty abbreviatedIRI="res:enforceMFA"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="res:evasionEfficacyLevel"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="res:expirationDate"/>
     </Declaration>
     <Declaration>
@@ -158,9 +155,6 @@
         <DataProperty abbreviatedIRI="res:mixedDuties"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="res:modelStealResilience"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="res:monitoringEnabled"/>
     </Declaration>
     <Declaration>
@@ -186,9 +180,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:programmingVersion"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="res:poisonedDatalevel"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:protocol"/>
