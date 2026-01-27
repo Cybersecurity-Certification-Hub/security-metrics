@@ -1203,6 +1203,9 @@
         <DataProperty IRI="/properties/source"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/tlsSignatureAlgorithm"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/tlsVersion"/>
     </Declaration>
     <Declaration>
@@ -4426,6 +4429,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/enforced"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TransportEncryption"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/tlsSignatureAlgorithm"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -7702,6 +7712,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/storage</IRI>
         <Literal>storage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/tlsSignatureAlgorithm</IRI>
+        <Literal>tlsSignatureAlgorithm: e.g., rsa_pss_rsae_sha256/384/512, ecdsa_secp256r1_sha256, ed25519</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/tlsSignatureAlgorithm</IRI>
+        <Literal>tlsSignatureAlgorithm</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

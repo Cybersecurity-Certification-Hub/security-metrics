@@ -263,6 +263,9 @@
         <DataProperty abbreviatedIRI="prop:restrictedPorts"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:tlsSignatureAlgorithm"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -972,6 +975,13 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:enforced"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:TransportEncryption"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:tlsSignatureAlgorithm"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1725,6 +1735,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:target</AbbreviatedIRI>
         <Literal>target</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:tlsSignatureAlgorithm</AbbreviatedIRI>
+        <Literal>tlsSignatureAlgorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:tlsSignatureAlgorithm</AbbreviatedIRI>
+        <Literal>tlsSignatureAlgorithm: e.g., rsa_pss_rsae_sha256/384/512, ecdsa_secp256r1_sha256, ed25519</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
