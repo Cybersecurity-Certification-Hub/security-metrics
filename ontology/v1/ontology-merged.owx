@@ -654,6 +654,9 @@
         <Class IRI="/classes/ResourceGroup"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/ResourceInventoryService"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/ResourceLogging"/>
     </Declaration>
     <Declaration>
@@ -1414,6 +1417,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/errorCorrectionEnabled"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/automaticDiscoveryEnabled"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/poisonLevel"/>
@@ -4103,6 +4109,24 @@
     <SubClassOf>
         <Class IRI="/classes/ResourceGroup"/>
         <Class IRI="/classes/CloudResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ResourceInventoryService"/>
+        <Class IRI="/classes/NetworkService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ResourceInventoryService"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/automaticDiscoveryEnabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ResourceInventoryService"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/enabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ResourceLogging"/>
