@@ -17,9 +17,6 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
 
     <Declaration>
-        <DataProperty abbreviatedIRI="res:adv_robustness"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty abbreviatedIRI="res:basedOn"/>
     </Declaration>
     <Declaration>
@@ -183,12 +180,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:programmingVersion"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="res:privacy_level"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="res:poison_level"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:protocol"/>
