@@ -67,7 +67,7 @@ jobs:
           uses: actions/upload-artifact@v4
           with:
             name: ontology-merged
-            path: ontology/v1/merged/ontology-merged.owx 
+            path: ontology/v1/ontology-merged.owx 
         - name: Commit merged OWX file
           run: |
               git add ontology/v1/ontology-merged.owx 

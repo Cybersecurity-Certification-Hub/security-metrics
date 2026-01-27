@@ -215,24 +215,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:RateLimiting"/>
-        <Class abbreviatedIRI="core:Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:RateLimiting"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:maxRequests"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:RateLimiting"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:timeWindowSeconds"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:SymmetricCipher"/>
         <Class abbreviatedIRI="core:Cipher"/>
     </SubClassOf>

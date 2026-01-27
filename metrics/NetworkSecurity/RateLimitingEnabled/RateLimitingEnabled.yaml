@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: RateLimitingEnabled
+description: This rule assesses whether a [NetworkInterface] has its [RateLimiting] set to [p1:enabled].
+category: NetworkSecurity
+version: "v1" 
+comments: The Web Application Filter protects web applications by limiting the number of requests a user or system can send in a certain time period.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

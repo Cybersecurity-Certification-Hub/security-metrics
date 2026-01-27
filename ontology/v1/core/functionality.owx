@@ -205,9 +205,6 @@
         <Class abbreviatedIRI="core:Padding"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:RateLimiting"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:SymmetricCipher"/>
     </Declaration>
     <Declaration>
@@ -2161,11 +2158,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
        <AbbreviatedIRI>core:Padding</AbbreviatedIRI>
         <Literal>Padding</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-       <AbbreviatedIRI>core:RateLimiting</AbbreviatedIRI>
-        <Literal>RateLimiting</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
