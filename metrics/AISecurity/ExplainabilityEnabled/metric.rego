@@ -8,9 +8,9 @@ default compliant = false
 
 applicable if {
     input.type[_] == "MachineLearningModel"
-    input.explanabilityEnabled
+    input.explainabilityEnabled
 }
 
 compliant if {
-	compare(data.operator, data.target_value, input.explanabilityEnabled)
+	compare(data.operator, data.target_value, input.explainabilityEnabled)
 }

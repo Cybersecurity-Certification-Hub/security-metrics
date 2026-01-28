@@ -49,9 +49,6 @@
     <Declaration>
         <DataProperty abbreviatedIRI="core:poisoningResilienceLevel"/>
     </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="core:Data"/>
-    </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="core:MachineLearning"/>
         <Class abbreviatedIRI="core:Data"/>
