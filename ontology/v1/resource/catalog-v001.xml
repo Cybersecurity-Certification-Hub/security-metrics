@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1767343274459" name="https://ontology.cybersecuritycertcluster.eu/resource/application" uri="application.owx"/>
-        <uri id="Automatically generated entry, Timestamp=1767343274459" name="https://ontology.cybersecuritycertcluster.eu/resource/document" uri="document.owx"/>
-        <uri id="Automatically generated entry, Timestamp=1767343274459" name="https://ontology.cybersecuritycertcluster.eu/resource/hardware" uri="hardware.owx"/>
-        <uri id="Automatically generated entry, Timestamp=1767343274459" name="https://ontology.cybersecuritycertcluster.eu/resource/human_resources" uri="human_resources.owx"/>
-        <uri id="Automatically generated entry, Timestamp=1767343274459" name="https://ontology.cybersecuritycertcluster.eu/resource/infrastructure" uri="infrastructure.owx"/>
-        <uri id="Automatically generated entry, Timestamp=1767343274459" name="https://ontology.cybersecuritycertcluster.eu/resource/ml" uri="ml.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1766055063881" name="https://ontology.cybersecuritycertcluster.eu/resource/application" uri="application.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1766055063881" name="https://ontology.cybersecuritycertcluster.eu/resource/document" uri="document.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1766055063881" name="https://ontology.cybersecuritycertcluster.eu/resource/hardware" uri="hardware.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1766055063881" name="https://ontology.cybersecuritycertcluster.eu/resource/human_resources" uri="human_resources.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1766055063881" name="https://ontology.cybersecuritycertcluster.eu/resource/infrastructure" uri="infrastructure.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1766055063881" name="https://ontology.cybersecuritycertcluster.eu/resource/ml" uri="ml.owx"/>
     </group>
 </catalog>

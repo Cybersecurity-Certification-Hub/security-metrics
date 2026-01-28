@@ -6,25 +6,16 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://ontology.cybersecuritycertcluster.eu/core/security">
-    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/core/security#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
-    <Prefix name="cl" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
-    <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
-    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Declaration>
-        <Class abbreviatedIRI="core:DiskEncryption"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="core:Encryption"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="core:JwtAuthentication"/>
-    </Declaration>
+     <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/core/security#"/>
+     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+     <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+     <Prefix name="cl" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
+     <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
+     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
         <Class abbreviatedIRI="core:ABAC"/>
     </Declaration>
@@ -83,6 +74,12 @@
         <Class abbreviatedIRI="core:DDosProtection"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:DiskEncryption"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Encryption"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:EncryptionInUse"/>
     </Declaration>
     <Declaration>
@@ -102,6 +99,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:Integrity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:JwtAuthentication"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
@@ -180,9 +180,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="core:offersInterface"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:scope"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -269,18 +266,6 @@
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/CircleCI"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/GitHubActions"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://ontology.cybersecuritycertcluster.eu/individuals/TeamCity"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
     </Declaration>
     <Declaration>
@@ -310,35 +295,10 @@
         <Class abbreviatedIRI="core:Auditing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:Error"/>
-        <Class abbreviatedIRI="core:Functionality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Error"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:message"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:AnomalyDetection"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="core:ApplicationLog"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:leftPrincipal"/>
-            <Class abbreviatedIRI="core:Principal"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EqualityCheck"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:rightPrincipal"/>
-            <Class abbreviatedIRI="core:Principal"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -548,7 +508,7 @@
         <Class abbreviatedIRI="core:CryptographicHash"/>
         <Class abbreviatedIRI="core:Integrity"/>
     </SubClassOf>
-        <SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:CryptographicHash"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -605,15 +565,6 @@
         <Class abbreviatedIRI="core:Redundancy"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:JwtAuthentication"/>
-        <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
-        <Class abbreviatedIRI="core:Authenticity"/>
-    </SubClassOf>
-    
-    <SubClassOf>
         <Class abbreviatedIRI="core:Immutability"/>
         <Class abbreviatedIRI="core:Integrity"/>
     </SubClassOf>
@@ -629,8 +580,19 @@
         <Class abbreviatedIRI="core:SecurityFeature"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:JwtAuthentication"/>
+        <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
         <Class abbreviatedIRI="core:Authenticity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:Token"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
@@ -658,7 +620,6 @@
         <Class abbreviatedIRI="core:MemoryOperation"/>
         <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
-
     <SubClassOf>
         <Class abbreviatedIRI="core:LibraryEntryPoint"/>
         <Class abbreviatedIRI="core:LocalEntryPoint"/>
@@ -730,7 +691,7 @@
         <Class abbreviatedIRI="core:Logging"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:to"/>
-            <Class abbreviatedIRI="cl:LoggingService"/>
+            <Class abbreviatedIRI="core:LoggingService"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -802,14 +763,6 @@
         <Class abbreviatedIRI="core:Authenticity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="core:Token"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    
-    <SubClassOf>
         <Class abbreviatedIRI="core:MultiFactorAuthentiation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -864,6 +817,32 @@
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:RateLimiting"/>
+        <Class abbreviatedIRI="core:AccessRestriction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:RateLimiting"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:enabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:RateLimiting"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:maxRequests"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:RateLimiting"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:timeWindowSeconds"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    
     <SubClassOf>
         <Class abbreviatedIRI="core:Redundancy"/>
         <Class abbreviatedIRI="core:Availability"/>
@@ -928,10 +907,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:TransportEncryption"/>
-        <Class abbreviatedIRI="core:Encryption"/>
-        </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:SingleSignOn"/>
         <Class abbreviatedIRI="core:Authenticity"/>
     </SubClassOf>
@@ -941,6 +916,10 @@
             <DataProperty abbreviatedIRI="prop:enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:TransportEncryption"/>
+        <Class abbreviatedIRI="core:Encryption"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:TransportEncryption"/>
@@ -1010,32 +989,6 @@
         <Class abbreviatedIRI="core:ZoneRedundancy"/>
         <Class abbreviatedIRI="core:Redundancy"/>
     </SubClassOf>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:Encryption</AbbreviatedIRI>
-        <Literal>This represents an encryption.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:Encryption</AbbreviatedIRI>
-        <Literal>Encryption</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:JwtAuthentication</AbbreviatedIRI>
-        <Literal>Represents a JWT-based authentication, which extends the [TokenBasedAuth].</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:JwtAuthentication</AbbreviatedIRI>
-        <Literal>JwtAuthentication</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:JwtBasedAuthentication</AbbreviatedIRI>
-        <Literal>Represents a token-based authentication.</Literal>
-    </AnnotationAssertion>
-    
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
@@ -1167,6 +1120,16 @@
         <Literal xml:lang="en">DDoSProtection</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:Encryption</AbbreviatedIRI>
+        <Literal>This represents an encryption.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:Encryption</AbbreviatedIRI>
+        <Literal>Encryption</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:EncryptionInUse</AbbreviatedIRI>
         <Literal>EncryptionInUse</Literal>
@@ -1195,6 +1158,21 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:Integrity</AbbreviatedIRI>
         <Literal xml:lang="english">Integrity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:JwtAuthentication</AbbreviatedIRI>
+        <Literal>Represents a JWT-based authentication, which extends the [TokenBasedAuth].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:JwtAuthentication</AbbreviatedIRI>
+        <Literal>JwtAuthentication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:JwtBasedAuthentication</AbbreviatedIRI>
+        <Literal>Represents a token-based authentication.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1265,6 +1243,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:RBAC</AbbreviatedIRI>
         <Literal xml:lang="english">RBAC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:RateLimiting</AbbreviatedIRI>
+        <Literal>Rate limiting is used to control the frequency of incoming requests to prevent system overload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:RateLimiting</AbbreviatedIRI>
+        <Literal>RateLimiting</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1370,11 +1358,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:contextIsChecked</AbbreviatedIRI>
         <Literal>contextIsChecked</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
-        <Literal>rotationInterval</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1642,11 +1625,6 @@
         <Literal>reqBody</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ind:resourceId</AbbreviatedIRI>
-        <Literal>resourceId</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:resourceType</AbbreviatedIRI>
         <Literal>The resource type. It is an array, because a type can be derived from another.</Literal>
@@ -1668,6 +1646,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
+        <Literal>rotationInterval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:runtimeLanguage</AbbreviatedIRI>
         <Literal>runtimeLanguage</Literal>
     </AnnotationAssertion>
@@ -1680,11 +1663,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:schemaURL</AbbreviatedIRI>
         <Literal>schemaURL</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:scope</AbbreviatedIRI>
-        <Literal>scope</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1757,32 +1735,9 @@
         <Literal>zone</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices</IRI>
-        <Literal xml:lang="english">Amazon Web Services</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/CircleCI</IRI>
-        <Literal xml:lang="english">CircleCI</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/GitHubActions</IRI>
-        <Literal xml:lang="english">GitHub Actions</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/TeamCity</IRI>
-        <Literal xml:lang="english">TeamCity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
         <IRI>wptmp:entity#contextIsChecked</IRI>
         <Literal>Check additional information, e.g. which device is used or the time of the login</Literal>
     </AnnotationAssertion>
 </Ontology>
-
-
-
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
