@@ -14,5 +14,6 @@ metrics:
 ontology:
     - changed-files:
       - any-glob-to-any-file: 
-        - 'ontology/*/ontology-merged.owx'
-        - 'ontology/*/ontology.proto'
+        - 'ontology/**/*'
+        - '!ontology/*/ontology-merged.owx'
+        - '!ontology/*/ontology.proto'
