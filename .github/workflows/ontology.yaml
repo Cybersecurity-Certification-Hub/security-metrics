@@ -2,6 +2,9 @@ name: Merge Ontology and generate proto file
 
 on:
   pull_request:
+    paths:
+      - 'ontology/**'
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: write
