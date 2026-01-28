@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: MembershipInferenceResilience
+description: This rule assesses whether a [MachineLearningModel] has implemented privacy-preserving techniques that increase its resilience against membership inference attacks over the compliant level of [p1:membershipInferenceResilience].
+category: AISecurity
+version: "v1"
+comments: Machine learning models should incorporate explicit privacy-preserving techniques (such as noise injection) to reduce the risk of membership inference attacks and protect whether individual data points were included in the training set.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: <=
+    targetValue: 0.5
