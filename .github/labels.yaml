@@ -13,6 +13,7 @@ metrics:
 # Add 'ontology' label to any changes in ontology directory
 ontology:
     - changed-files:
-      - any-glob-to-any-file: 
-        - 'ontology/*/ontology-merged.owx'
-        - 'ontology/*/ontology.proto'
+      - any-glob-to-any-file:
+        - 'ontology/**/*' 
+        - '!ontology/*/ontology-merged.owx'
+        - '!ontology/*/ontology.proto'
