@@ -15,7 +15,6 @@
     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
     <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-
     <Declaration>
         <ObjectProperty abbreviatedIRI="res:basedOn"/>
     </Declaration>
@@ -93,9 +92,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:expirationDate"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="res:explainability"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:file"/>

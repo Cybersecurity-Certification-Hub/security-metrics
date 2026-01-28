@@ -4,12 +4,13 @@ on:
   push:
     branches:
       - main
-  pull_request: {}
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
-  pull-requests: write
-
+  
 jobs:
     ontology:
         runs-on: ubuntu-latest
@@ -18,7 +19,9 @@ jobs:
         - name: Checkout repository
           uses: actions/checkout@v4
           with:
-            ref: ${{ github.head_ref }}
+            # Use head_ref for PRs to get the fork's code, or ref_name for pushes to main
+            repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+            ref: ${{ github.event.pull_request.head.ref || github.ref }}
         - name: Install buf
           uses: bufbuild/buf-setup-action@v1.50.0
           with:
@@ -27,19 +30,16 @@ jobs:
           run: |
             git config --global user.name "github-actions[bot]"
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        - name: Switch to branch
-          run: |
-            git checkout ${{ github.head_ref }}
         - name: Download ROBOT
           run: |
             wget https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar
-        # Delete core/evidence.owx from catalog file. We do not need the evidence object in the merged ontology, that would lead to an error in the proto file generation.
-        - name: Delete evidence.owx from catalog file
+        
+        - name: Clean up catalog and core files
           run: |
+            # Remove core/evidence.owx from catalog file. We do not need the evidence object in the merged ontology, that would lead to an error in the proto file generation.
             sed -i '/uri="core\/evidence\.owx"/d' ontology/v1/catalog-v001.xml
-        - name: Delete evidence.owx from core file
-          run: |
-             sed -i '/<Import>https:\/\/ontology.cybersecuritycertcluster.eu\/core\/evidence<\/Import>/d' ontology/v1/core.owx
+            # Remove the import statement for evidence from core.owx
+            sed -i '/<Import>https:\/\/ontology.cybersecuritycertcluster.eu\/core\/evidence<\/Import>/d' ontology/v1/core.owx
         - name: Merge owx files
           uses: docker://eclipse-temurin
           with:
@@ -62,24 +62,19 @@ jobs:
             curl -L \
               https://raw.githubusercontent.com/bufbuild/protovalidate/refs/heads/main/proto/protovalidate/buf/validate/validate.proto \
               -o buf/validate/validate.proto
-            buf lint --path ontology/v1/ontology.proto --error-format github-actions --config '{"version":"v1","lint":{"use":["DEFAULT"],"except":["PACKAGE_DIRECTORY_MATCH"]}}'
-        - name: Upload Artifact ontology-merged.owx 
-          uses: actions/upload-artifact@v4
-          with:
-            name: ontology-merged
-            path: ontology/v1/ontology-merged.owx 
+            buf lint --path ontology/v1/ontology.proto --error-format github-actions --config '{"version":"v1","lint":{"use":["STANDARD"],"except":["PACKAGE_DIRECTORY_MATCH"]}}'
+        
+        # STEPS FOR PUSHING CHANGES BACK TO THE REPO
         - name: Commit merged OWX file
+          if: github.event_name == 'push' && github.ref == 'refs/heads/main'
           run: |
               git add ontology/v1/ontology-merged.owx 
               git commit -m "Add merged ontology file [skip ci]" || echo "No changes to commit"
               git push
-          env:
-              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         - name: Commit ontology.proto file
+          if: github.event_name == 'push' && github.ref == 'refs/heads/main'
           run: |
               git add ontology/v1/ontology.proto
               git commit -m "Add generated proto file [skip ci]" || echo "No changes to commit"
               git push
-          env:
-              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
