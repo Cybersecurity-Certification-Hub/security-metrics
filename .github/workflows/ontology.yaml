@@ -63,5 +63,5 @@ jobs:
               git fetch
               git checkout ${{ github.head_ref }}
               git add ontology/v1/ontology-merged.owx ontology/v1/ontology.proto
-              git commit -m "Auto-update merged ontology and proto file[skip ci]" || echo "No changes to commit"
+              git commit -m "Auto-update merged ontology and proto files [skip ci]" || echo "No changes to commit"
               git push
