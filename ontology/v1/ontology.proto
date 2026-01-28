@@ -52,6 +52,7 @@ message AccessRestriction {
 	oneof type {
 		L3Firewall l3_firewall = 9125;
 		WebApplicationFirewall web_application_firewall = 5789;
+		RateLimiting rate_limiting = 5106;
 	}
 }
 
@@ -293,6 +294,7 @@ message Authorization {
 		ABAC abac = 14694;
 		L3Firewall l3_firewall = 9125;
 		WebApplicationFirewall web_application_firewall = 5789;
+		RateLimiting rate_limiting = 5106;
 		RBAC rbac = 18783;
 	}
 }
@@ -1623,7 +1625,6 @@ message Functionality {
 		Padding padding = 9245;
 		Principal principal = 16173;
 		ProtectedAsset protected_asset = 10697;
-		RateLimiting rate_limiting = 4546;
 		SchemaValidation schema_validation = 16331;
 		SecurityAdvisoryFeed security_advisory_feed = 13903;
 		Time time = 16225;
@@ -2474,19 +2475,17 @@ message MachineLearningModel {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	float adv_robustness = 14185;
 	google.protobuf.Timestamp creation_time = 18005;
 	string description = 5272;
+	float evasion_efficacy_level = 17752;
 	float explainability = 1384;
 	string id = 5520 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 1548;
+	float model_steal_resilience = 1827;
 	string name = 1575 [ (buf.validate.field).required = true ];
-	float poison_level = 836;
-	float privacy_label = 8059;
-	float privacy_level = 1262;
+	float poisoned_data_level = 13816;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 12454;
-	float robustness = 13582;
 	DataLocation data_location = 1022;
 	optional string parent_id = 17150;
 	repeated Vulnerability vulnerabilities  = 9542;
@@ -3212,12 +3211,16 @@ message RBAC {
 }
 
 // RateLimiting is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Rate limiting is used to control the frequency of incoming requests to prevent system overload
 message RateLimiting {
 	option (resource_type_names) = "RateLimiting";
-	option (resource_type_names) = "Functionality";
+	option (resource_type_names) = "AccessRestriction";
+	option (resource_type_names) = "Authorization";
+	option (resource_type_names) = "SecurityFeature";
 
-	int32 max_requests = 10375;
-	int32 time_window_seconds = 5064;
+	bool enabled = 11910;
+	int32 max_requests = 8962;
+	int32 time_window_seconds = 6657;
 }
 
 // ReadConfigurationGroup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3688,6 +3691,7 @@ message SecurityFeature {
 		ABAC abac = 14694;
 		L3Firewall l3_firewall = 9125;
 		WebApplicationFirewall web_application_firewall = 5789;
+		RateLimiting rate_limiting = 5106;
 		RBAC rbac = 18783;
 		Backup backup = 16413;
 		DDoSProtection d_do_s_protection = 16707;
