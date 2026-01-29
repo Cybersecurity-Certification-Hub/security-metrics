@@ -292,9 +292,6 @@
     <Declaration>
         <Class abbreviatedIRI="core:Error"/>
     </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="core:CipherSuite"/>
-    </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionInUse"/>
         <Class abbreviatedIRI="core:Confidentiality"/>
