@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="duplicate:https://ontology.cybersecuritycertcluster.eu" uri="ontology.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="duplicate:https://ontology.cybersecuritycertcluster.eu" uri="ontology-merged.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/core" uri="core.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/core/evidence" uri="core/evidence.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/core/framework" uri="core/framework.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/core/functionality" uri="core/functionality.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/core/properties" uri="core/properties.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/core/resource" uri="core/resource.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/core/security" uri="core/security.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/data" uri="data.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/resource" uri="resource.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/resource/application" uri="resource/application.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/resource/document" uri="resource/document.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/resource/hardware" uri="resource/hardware.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/resource/human_resources" uri="resource/human_resources.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/resource/infrastructure" uri="resource/infrastructure.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1769511741676" name="https://ontology.cybersecuritycertcluster.eu/resource/ml" uri="resource/ml.owx"/>
+    </group>
+</catalog>
