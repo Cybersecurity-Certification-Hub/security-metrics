@@ -858,6 +858,9 @@
         <DataProperty IRI="/classes/UniversalGateSetEnabled"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/adversarialRobustnessScore"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/apiHitsPerMonth"/>
     </Declaration>
     <Declaration>
@@ -915,7 +918,7 @@
         <DataProperty IRI="/classes/expirationDate"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/explainability"/>
+        <DataProperty IRI="/classes/explainabilityEnabled"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/file"/>
@@ -978,6 +981,9 @@
         <DataProperty IRI="/classes/maxRequests"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/membershipInferenceResilience"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/message"/>
     </Declaration>
     <Declaration>
@@ -1011,6 +1017,12 @@
         <DataProperty IRI="/classes/overridePasswordPolicy"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/poisonedDataLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/poisoningResilienceLevel"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/privileged"/>
     </Declaration>
     <Declaration>
@@ -1041,6 +1053,9 @@
         <DataProperty IRI="/classes/retentionPeriod"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/robustness"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/rotationInterval"/>
     </Declaration>
     <Declaration>
@@ -1068,6 +1083,9 @@
         <DataProperty IRI="/classes/sessionCipher"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/size"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/startColumn"/>
     </Declaration>
     <Declaration>
@@ -1078,6 +1096,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/timeWindowSeconds"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/type"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/usesSalt"/>
@@ -1383,9 +1404,6 @@
         <ObjectProperty IRI="/classes/describes"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/size"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/properties/scope"/>
     </Declaration>
     <Declaration>
@@ -1404,10 +1422,7 @@
         <DataProperty IRI="/classes/successfullyCompletedPercentage"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/poisonedDataLevel"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/classes/type"/>
+        <DataProperty IRI="/classes/explainability"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Implementation"/>
@@ -3357,6 +3372,13 @@
     <SubClassOf>
         <Class IRI="/classes/MachineLearningModel"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/adversarialRobustnessScore"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MachineLearningModel"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/classes/evasionEfficacyLevel"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
@@ -3371,6 +3393,20 @@
     <SubClassOf>
         <Class IRI="/classes/MachineLearningModel"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/explainabilityEnabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/membershipInferenceResilience"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MachineLearningModel"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/classes/modelStealResilience"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
@@ -3379,6 +3415,13 @@
         <Class IRI="/classes/MachineLearningModel"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/poisonedDataLevel"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/poisoningResilienceLevel"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>

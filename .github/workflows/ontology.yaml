@@ -1,12 +1,10 @@
 name: Merge Ontology and generate proto file
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
-    branches:
-      - main
+    paths:
+      - 'ontology/**'
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: write
@@ -18,10 +16,6 @@ jobs:
         steps:
         - name: Checkout repository
           uses: actions/checkout@v4
-          with:
-            # Use head_ref for PRs to get the fork's code, or ref_name for pushes to main
-            repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
-            ref: ${{ github.event.pull_request.head.ref || github.ref }}
         - name: Install buf
           uses: bufbuild/buf-setup-action@v1.50.0
           with:
@@ -64,17 +58,13 @@ jobs:
               -o buf/validate/validate.proto
             buf lint --path ontology/v1/ontology.proto --error-format github-actions --config '{"version":"v1","lint":{"use":["STANDARD"],"except":["PACKAGE_DIRECTORY_MATCH"]}}'
         
-        # STEPS FOR PUSHING CHANGES BACK TO THE REPO
+        # Commit and push to the PR branch
         - name: Commit merged OWX file
-          if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+          env:
+            github_token: ${{ github.token }}
           run: |
-              git add ontology/v1/ontology-merged.owx 
-              git commit -m "Add merged ontology file [skip ci]" || echo "No changes to commit"
+              git fetch
+              git checkout ${{ github.head_ref }}
+              git add ontology/v1/ontology-merged.owx ontology/v1/ontology.proto
+              git commit -m "Auto-update merged ontology and proto files [skip ci]" || echo "No changes to commit"
               git push
-        - name: Commit ontology.proto file
-          if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-          run: |
-              git add ontology/v1/ontology.proto
-              git commit -m "Add generated proto file [skip ci]" || echo "No changes to commit"
-              git push
-        
