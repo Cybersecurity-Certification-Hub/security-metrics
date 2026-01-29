@@ -188,9 +188,6 @@
         <ObjectProperty abbreviatedIRI="prop:offers"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:scope"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="core:apiHitsPerMonth"/>
     </Declaration>
     <Declaration>
