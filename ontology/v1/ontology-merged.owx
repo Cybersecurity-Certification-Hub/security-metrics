@@ -831,6 +831,9 @@
         <ObjectProperty IRI="/properties/runsOn"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/properties/scope"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/properties/serviceOf"/>
     </Declaration>
     <Declaration>
@@ -1065,6 +1068,9 @@
         <DataProperty IRI="/classes/runtimeVersion"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/scanInterval"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/schemaURL"/>
     </Declaration>
     <Declaration>
@@ -1105,9 +1111,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/zone"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/core/security#scanInterval"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/activated"/>
@@ -1405,9 +1408,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/describes"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/properties/scope"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
@@ -3478,7 +3478,7 @@
     <SubClassOf>
         <Class IRI="/classes/MalwareProtection"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/core/security#scanInterval"/>
+            <DataProperty IRI="/classes/scanInterval"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -4960,10 +4960,6 @@ name = metadata.name</Literal>
         <ObjectProperty IRI="/classes/hasType"/>
         <Class IRI="/classes/ResourceType"/>
     </ObjectPropertyRange>
-    <SubDataPropertyOf>
-        <DataProperty IRI="/classes/length"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="/properties/algorithm"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -7272,16 +7268,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/zone</IRI>
         <Literal>zone</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/core/security#scanInterval</IRI>
-        <Literal>The scan interval refers to the frequency of scans in days, e.g. antimalware scans</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/core/security#scanInterval</IRI>
-        <Literal>scanInterval</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
