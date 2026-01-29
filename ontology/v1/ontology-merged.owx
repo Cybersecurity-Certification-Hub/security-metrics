@@ -609,9 +609,6 @@
         <Class IRI="/classes/RBAC"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/RateLimiting"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/classes/ReadConfiguration"/>
     </Declaration>
     <Declaration>
@@ -834,9 +831,6 @@
         <ObjectProperty IRI="/properties/runsOn"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/properties/scope"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/properties/serviceOf"/>
     </Declaration>
     <Declaration>
@@ -864,7 +858,7 @@
         <DataProperty IRI="/classes/UniversalGateSetEnabled"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/adv_robustness"/>
+        <DataProperty IRI="/classes/adversarialRobustnessScore"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/apiHitsPerMonth"/>
@@ -924,7 +918,7 @@
         <DataProperty IRI="/classes/expirationDate"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/explainability"/>
+        <DataProperty IRI="/classes/explainabilityEnabled"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/file"/>
@@ -987,6 +981,9 @@
         <DataProperty IRI="/classes/maxRequests"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/membershipInferenceResilience"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/message"/>
     </Declaration>
     <Declaration>
@@ -1020,10 +1017,10 @@
         <DataProperty IRI="/classes/overridePasswordPolicy"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/poison_level"/>
+        <DataProperty IRI="/classes/poisonedDataLevel"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/privacy_level"/>
+        <DataProperty IRI="/classes/poisoningResilienceLevel"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/privileged"/>
@@ -1056,6 +1053,9 @@
         <DataProperty IRI="/classes/retentionPeriod"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/robustness"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/rotationInterval"/>
     </Declaration>
     <Declaration>
@@ -1083,6 +1083,9 @@
         <DataProperty IRI="/classes/sessionCipher"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/size"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/startColumn"/>
     </Declaration>
     <Declaration>
@@ -1093,6 +1096,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/timeWindowSeconds"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/type"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/usesSalt"/>
@@ -1201,6 +1207,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/source"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/tlsSignatureAlgorithm"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/tlsVersion"/>
@@ -1389,19 +1398,13 @@
         <DataProperty IRI="/classes/SpamErrorRate"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/privacyLabel"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes//mode"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/describes"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/privacyLevel"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/classes/size"/>
+        <ObjectProperty IRI="/properties/scope"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
@@ -1413,19 +1416,22 @@
         <DataProperty IRI="/classes/errorCorrectionEnabled"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/poisonLevel"/>
+        <DataProperty IRI="/classes/evasionEfficacyLevel"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/successfullyCompletedPercentage"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/type"/>
+        <DataProperty IRI="/classes/explainability"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Implementation"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/robustness"/>
+        <Class IRI="/classes/RateLimiting"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/modelStealResilience"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/hasType"/>
@@ -3366,7 +3372,14 @@
     <SubClassOf>
         <Class IRI="/classes/MachineLearningModel"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/adv_robustness"/>
+            <DataProperty IRI="/classes/adversarialRobustnessScore"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/evasionEfficacyLevel"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -3380,28 +3393,35 @@
     <SubClassOf>
         <Class IRI="/classes/MachineLearningModel"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/poisonLevel"/>
+            <DataProperty IRI="/classes/explainabilityEnabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/membershipInferenceResilience"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/MachineLearningModel"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/privacyLabel"/>
+            <DataProperty IRI="/classes/modelStealResilience"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/MachineLearningModel"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/privacyLevel"/>
+            <DataProperty IRI="/classes/poisonedDataLevel"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/MachineLearningModel"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/robustness"/>
+            <DataProperty IRI="/classes/poisoningResilienceLevel"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -3914,7 +3934,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/RateLimiting"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class IRI="/classes/AccessRestriction"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/RateLimiting"/>
@@ -3928,6 +3948,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/timeWindowSeconds"/>
             <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RateLimiting"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/enabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4426,6 +4453,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/enforced"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TransportEncryption"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/tlsSignatureAlgorithm"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -6339,6 +6373,11 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">RBAC</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/RateLimiting</IRI>
+        <Literal>Rate limiting is used to control the frequency of incoming requests to prevent system overload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/RateLimiting</IRI>
         <Literal>RateLimiting</Literal>
@@ -7702,6 +7741,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/storage</IRI>
         <Literal>storage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/tlsSignatureAlgorithm</IRI>
+        <Literal>tlsSignatureAlgorithm: e.g., rsa_pss_rsae_sha256/384/512, ecdsa_secp256r1_sha256, ed25519</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/tlsSignatureAlgorithm</IRI>
+        <Literal>tlsSignatureAlgorithm</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
