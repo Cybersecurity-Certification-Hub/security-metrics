@@ -424,7 +424,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Authenticity"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:length"/>
+            <DataProperty abbreviatedIRI="prop:length"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
