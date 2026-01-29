@@ -831,9 +831,6 @@
         <ObjectProperty IRI="/properties/runsOn"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/properties/scope"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/properties/serviceOf"/>
     </Declaration>
     <Declaration>
@@ -1408,6 +1405,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/describes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/properties/scope"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
