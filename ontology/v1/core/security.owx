@@ -242,7 +242,7 @@
         <DataProperty abbreviatedIRI="core:status"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="core:scanInterval"/>
+        <DataProperty abbreviatedIRI="core:scanInterval"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:activated"/>
@@ -777,7 +777,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:MalwareProtection"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="core:scanInterval"/>
+            <DataProperty abbreviatedIRI="core:scanInterval"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
