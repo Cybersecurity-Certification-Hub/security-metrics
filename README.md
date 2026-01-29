@@ -25,6 +25,18 @@ Configuration data
 - operator: the operator can be one of the basic mathematical operators, like ==, >=, <
 - targetValue: the target value is what the metric actually measures, for example it could specify 'true' as a the target value for the AtRestEncryptionEnabled metric
 
+
+## Runtime version automation
+
+The runtime version metrics (PHP, Python, Java) are updated automatically via a scheduled workflow.
+
+- Script: [scripts/update_runtime_versions.py](scripts/update_runtime_versions.py)
+- Workflow: [.github/workflows/update-runtime-versions.yaml](.github/workflows/update-runtime-versions.yaml)
+
+The updater pulls data from the https://endoflife.date v1 product API and selects the
+minimum version that is still supported, matching the metric’s \`>=\`
+comparison. It logs the supported and security-only versions for traceability.
+
 # Ontology
 The ontology has been developed to harmonize evidence gathering and assessment across certifications, cloud vendors, and resource types. It was initially developed limited to cloud systems, but is being extended for other environments and technologies. 
 It includes several taxonomies, including a taxonomy of cloud resources and a taxonomy of security properties. As an example, the cloud resource taxonomy includes computing resources which in turn can be virtual machines, containers or functions. This taxonomy classifies cloud resources across all major cloud providers and architectures, like Microsoft Azure, Amazon Web Services, Google Cloud Platform, and OpenStack. 
