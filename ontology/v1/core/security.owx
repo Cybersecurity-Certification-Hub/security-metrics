@@ -1509,16 +1509,6 @@
         <Literal>lastActivity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:length</AbbreviatedIRI>
-        <Literal>The length refers to the length of the given class, e.g.  password length</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:length</AbbreviatedIRI>
-        <Literal>length</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:local</AbbreviatedIRI>
         <Literal>local</Literal>
