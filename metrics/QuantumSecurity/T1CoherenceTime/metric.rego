@@ -1,4 +1,4 @@
-package cch.metrics.t1_coherence_time
+package cch.metrics.t_1_coherence_time
 
 import data.cch.compare
 import rego.v1

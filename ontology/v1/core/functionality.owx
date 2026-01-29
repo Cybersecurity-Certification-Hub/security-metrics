@@ -205,9 +205,6 @@
         <Class abbreviatedIRI="core:Padding"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:RateLimiting"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:SymmetricCipher"/>
     </Declaration>
     <Declaration>
@@ -331,7 +328,7 @@
         <DataProperty abbreviatedIRI="core:description"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="core:keyExchange"/>
+        <ObjectProperty abbreviatedIRI="core:uses"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="core:protects"/>
@@ -343,7 +340,7 @@
         <ObjectProperty abbreviatedIRI="core:rightPrincipal"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+        <ObjectProperty abbreviatedIRI="core:operatesOn"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:proxyTarget"/>
@@ -422,16 +419,10 @@
         <DataProperty abbreviatedIRI="core:format"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="core:message"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:serves"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:has"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:keyExchangeAlgorithm"/>
@@ -473,9 +464,6 @@
         <DataProperty abbreviatedIRI="prop:enabled"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="prop:labels"/>
     </Declaration>
     <Declaration>
@@ -490,6 +478,24 @@
     <Declaration>
         <DataProperty abbreviatedIRI="prop:algorithm"/>
     </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <Class abbreviatedIRI="core:PolicyOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:leftPrincipal"/>
+            <Class abbreviatedIRI="core:Principal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EqualityCheck"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:rightPrincipal"/>
+            <Class abbreviatedIRI="core:Principal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpRequestHandler"/>
         <Class abbreviatedIRI="core:Http"/>
@@ -548,7 +554,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ExitBoundaryOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Boundary"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -585,14 +591,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:CryptographicOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Confidentiality"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:DatabaseOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:DatabaseStorage"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -615,7 +621,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:CipherOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Cipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -635,7 +641,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:GetCurrentTimeOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Time"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -646,7 +652,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:HybridCipher"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:keyExchange"/>
+            <ObjectProperty abbreviatedIRI="core:uses"/>
             <Class abbreviatedIRI="core:AsymmetricCipher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -701,7 +707,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:BlockStorageOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:BlockStorage"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -721,7 +727,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:AuthenticationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Authenticity"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -744,7 +750,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpEndpointOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Http"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -781,18 +787,22 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ProtectedAssetOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:ProctectedAsset"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LoadConfiguration"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
+        </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:ProvideConfiguration"/>
         <Class abbreviatedIRI="core:ConfigurationOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:ProvideConfiguration"/>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Configuration"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -852,7 +862,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:SecretOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Secret"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -921,14 +931,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:LocalEntryPoint"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:target"/>
+            <ObjectProperty abbreviatedIRI="prop:usedBy"/>
             <Class abbreviatedIRI="core:OperatingSystemArchitecture"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:LogOutput"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Logging"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -950,7 +960,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:PolicyOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Policy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -958,7 +968,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpRequestHandlerOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:HttpRequestHandler"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -973,40 +983,24 @@
             <Class abbreviatedIRI="core:EntryPoint"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    
-    <SubClassOf>
-        <Class abbreviatedIRI="core:InputValidationOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
-            <Class abbreviatedIRI="core:Input"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:InstallUpdate"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:AutomaticUpdates"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:InstallUpdate"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="core:AutomaticUpdates"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    
-    <SubClassOf>
         <Class abbreviatedIRI="core:InputValidationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Input"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:InputValidationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Output"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1142,7 +1136,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:DiskEncryptionOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:DiskEncryption"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1161,7 +1155,10 @@
             <Class abbreviatedIRI="core:OperatingSystemArchitecture"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ConfigurationOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
+        </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:CryptographicOperation"/>
         <Class abbreviatedIRI="core:Operation"/>
@@ -1173,13 +1170,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:DatabaseOperation"/>
         <Class abbreviatedIRI="core:Operation"/>
-    </SubClassOf>
-     <SubClassOf>
-        <Class abbreviatedIRI="core:DatabaseOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:storage"/>
-            <Class abbreviatedIRI="core:DatabaseStorage"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:DatabaseOperation"/>
@@ -1231,7 +1221,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionOperation"/>
-        <Class abbreviatedIRI="core:CryptographicOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionOperation"/>
@@ -1239,6 +1229,27 @@
             <DataProperty abbreviatedIRI="prop:algorithm"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:algorithm"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
+            <Class abbreviatedIRI="core:Encryption"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EncryptionOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:Secret"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Error"/>
@@ -1379,7 +1390,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpClientOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:HttpClient"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1410,21 +1421,13 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:FileOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:linkedConcept"/>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:File"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    
     <SubClassOf>
         <Class abbreviatedIRI="core:LogOutput"/>
         <Class abbreviatedIRI="core:Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:LogOutput"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="core:Logging"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:LogOutput"/>
@@ -1551,18 +1554,6 @@
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
-        <ObjectProperty abbreviatedIRI="prop:has"/>
-    </SubObjectPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="prop:algorithm"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -1627,6 +1618,16 @@
         <DataProperty abbreviatedIRI="prop:enabled"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:EqualityCheck</AbbreviatedIRI>
+        <Literal>Represents an operation that checks whether two principals are equal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:EqualityCheck</AbbreviatedIRI>
+        <Literal>EqualityCheck</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Principal</AbbreviatedIRI>
@@ -1712,7 +1713,7 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:linkedConcept</AbbreviatedIRI>
+        <AbbreviatedIRI>core:operatesOn</AbbreviatedIRI>
         <Literal>Link to a concept of the CPG</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -1772,8 +1773,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:linkedConcept</AbbreviatedIRI>
-        <Literal>linkedConcept</Literal>
+        <AbbreviatedIRI>core:operatesOn</AbbreviatedIRI>
+        <Literal>operatesOn</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1830,26 +1831,10 @@
         <AbbreviatedIRI>core:MemoryOperation</AbbreviatedIRI>
         <Literal>MemoryOperation</Literal>
     </AnnotationAssertion>
-    
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:Main</AbbreviatedIRI>
         <Literal>Main</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:Key</AbbreviatedIRI>
-        <Literal>The node that represents the &quot;key&quot; of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:Key</AbbreviatedIRI>
-        <Literal>Key</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:Key</AbbreviatedIRI>
-        <Literal>SelectorKey</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2031,13 +2016,6 @@
         <AbbreviatedIRI>core:FileOperation</AbbreviatedIRI>
         <Literal>FileOperation</Literal>
     </AnnotationAssertion>
-    
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:DiskEncryptionOperation</AbbreviatedIRI>
-        <Literal>DiskEncryptionOperation</Literal>
-    </AnnotationAssertion>
-    
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:DeAllocate</AbbreviatedIRI>
@@ -2157,16 +2135,6 @@
         <Literal>InstallUpdateOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-       <AbbreviatedIRI>core:Key</AbbreviatedIRI>
-        <Literal>A key used for encryption algorithms.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-       <AbbreviatedIRI>core:Key</AbbreviatedIRI>
-        <Literal>Key</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
        <AbbreviatedIRI>core:KeyDerivationFunction</AbbreviatedIRI>
         <Literal>KeyDerivationFunction</Literal>
@@ -2190,11 +2158,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
        <AbbreviatedIRI>core:Padding</AbbreviatedIRI>
         <Literal>Padding</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-       <AbbreviatedIRI>core:RateLimiting</AbbreviatedIRI>
-        <Literal>RateLimiting</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2233,8 +2196,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-       <AbbreviatedIRI>core:keyExchange</AbbreviatedIRI>
-        <Literal>keyExchange</Literal>
+       <AbbreviatedIRI>core:uses</AbbreviatedIRI>
+        <Literal>uses</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2345,7 +2308,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:EncryptionOperation</AbbreviatedIRI>
-        <Literal>Encryption</Literal>
+        <Literal>EncryptionOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2356,11 +2319,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:Functionality</AbbreviatedIRI>
         <Literal xml:lang="english">Functionality</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:HashOperation</AbbreviatedIRI>
-        <Literal>CryptographicHash</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2905,23 +2863,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:usedBy</AbbreviatedIRI>
-        <Literal>usedBy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:usedByMultiple</AbbreviatedIRI>
-        <Literal>usedByMultiple</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:usesSalt</AbbreviatedIRI>
         <Literal>usesSalt</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:validatedBy</AbbreviatedIRI>
-        <Literal>validatedBy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
