@@ -188,6 +188,9 @@
         <ObjectProperty abbreviatedIRI="prop:offers"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:scope"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="core:apiHitsPerMonth"/>
     </Declaration>
     <Declaration>
@@ -204,6 +207,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:interval"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:length"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:mixedDuties"/>
@@ -234,6 +240,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:scanInterval"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:activated"/>
@@ -273,6 +282,24 @@
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Storage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:has"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LoggingService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:to"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Error"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:CipherSuite"/>
     </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionInUse"/>
@@ -404,6 +431,13 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:contextIsChecked"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Authenticity"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:length"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -737,6 +771,13 @@
         <Class abbreviatedIRI="core:MalwareProtection"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:numberOfThreatsFound"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MalwareProtection"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:scanInterval"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1480,6 +1521,11 @@
         <Literal>lastActivity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:length</AbbreviatedIRI>
+        <Literal>The length refers to the length of the given class, e.g.  password length</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:length</AbbreviatedIRI>
         <Literal>length</Literal>
@@ -1642,7 +1688,17 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
-        <Literal>Maximum password rotation interval in months</Literal>
+        <Literal>rotationInterval is given in days</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
+        <Literal>rotationInterval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
+        <Literal>rotationInterval</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
