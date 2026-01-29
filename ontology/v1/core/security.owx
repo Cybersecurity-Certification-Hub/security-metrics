@@ -236,6 +236,9 @@
         <DataProperty abbreviatedIRI="core:status"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="core:scanInterval"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:activated"/>
     </Declaration>
     <Declaration>
@@ -273,6 +276,18 @@
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Storage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:has"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LoggingService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:to"/>
     </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionInUse"/>
@@ -404,6 +419,13 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:contextIsChecked"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Authenticity"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:length"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -737,6 +759,13 @@
         <Class abbreviatedIRI="core:MalwareProtection"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:numberOfThreatsFound"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MalwareProtection"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:scanInterval"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1481,11 +1510,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:length</AbbreviatedIRI>
-        <Literal>length</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:local</AbbreviatedIRI>
         <Literal>local</Literal>
     </AnnotationAssertion>
@@ -1642,7 +1666,17 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
-        <Literal>Maximum password rotation interval in months</Literal>
+        <Literal>rotationInterval is given in days</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
+        <Literal>rotationInterval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:rotationInterval</AbbreviatedIRI>
+        <Literal>rotationInterval</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
