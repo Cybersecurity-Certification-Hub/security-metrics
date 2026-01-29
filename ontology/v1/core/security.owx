@@ -289,9 +289,6 @@
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:to"/>
     </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="core:Error"/>
-    </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionInUse"/>
         <Class abbreviatedIRI="core:Confidentiality"/>
