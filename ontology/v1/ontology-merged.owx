@@ -1398,6 +1398,9 @@
         <DataProperty IRI="/classes/OneQubitErrorRate"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/length"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/SpamErrorRate"/>
     </Declaration>
     <Declaration>
@@ -1628,14 +1631,14 @@
     <SubClassOf>
         <Class IRI="/classes/Authenticity"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/length"/>
+            <DataProperty IRI="/classes/rotationInterval"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Authenticity"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/rotationInterval"/>
+            <DataProperty IRI="/properties/length"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -6942,7 +6945,7 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/length</IRI>
-        <Literal>The length refers to the length of the given class, e.g.  password length</Literal>
+        <Literal>The length refers to the length of the given class, e.g. password length</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

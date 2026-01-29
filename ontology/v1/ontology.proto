@@ -475,7 +475,6 @@ message CertificateBasedAuthentication {
 
 	bool context_is_checked = 14958;
 	bool enabled = 11983;
-	// The length refers to the length of the given class, e.g.  password length
 	int32 length = 974;
 	// rotationInterval is given in days
 	int32 rotation_interval = 9404;
@@ -2044,7 +2043,6 @@ message JwtAuthentication {
 	bool context_is_checked = 3538;
 	bool enabled = 3085;
 	bool enforced = 13206;
-	// The length refers to the length of the given class, e.g.  password length
 	int32 length = 9933;
 	// rotationInterval is given in days
 	int32 rotation_interval = 3257;
@@ -2648,7 +2646,6 @@ message MultiFactorAuthentiation {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool context_is_checked = 17335;
-	// The length refers to the length of the given class, e.g.  password length
 	int32 length = 2084;
 	// rotationInterval is given in days
 	int32 rotation_interval = 11722;
@@ -2789,7 +2786,6 @@ message NoAuthentication {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool context_is_checked = 12023;
-	// The length refers to the length of the given class, e.g.  password length
 	int32 length = 968;
 	// rotationInterval is given in days
 	int32 rotation_interval = 11214;
@@ -2818,7 +2814,6 @@ message OTPBasedAuthentication {
 
 	bool activated = 7456;
 	bool context_is_checked = 18913;
-	// The length refers to the length of the given class, e.g.  password length
 	int32 length = 6810;
 	// rotationInterval is given in days
 	int32 rotation_interval = 12621;
@@ -3024,7 +3019,6 @@ message PasswordBasedAuthentication {
 
 	bool activated = 11798;
 	bool context_is_checked = 1362;
-	// The length refers to the length of the given class, e.g.  password length
 	int32 length = 17797;
 	// rotationInterval is given in days
 	int32 rotation_interval = 9048;
@@ -3792,7 +3786,6 @@ message SingleSignOn {
 
 	bool context_is_checked = 14488;
 	bool enabled = 10569;
-	// The length refers to the length of the given class, e.g.  password length
 	int32 length = 7846;
 	// rotationInterval is given in days
 	int32 rotation_interval = 9185;
