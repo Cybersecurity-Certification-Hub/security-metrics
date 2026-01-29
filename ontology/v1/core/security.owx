@@ -206,9 +206,6 @@
         <DataProperty abbreviatedIRI="core:interval"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="core:length"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="core:mixedDuties"/>
     </Declaration>
     <Declaration>
