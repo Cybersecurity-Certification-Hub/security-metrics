@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: StolenModelAccuracy
+id: ModelStealResilience
 description: This rule assesses to what extent a [MachineLearningModel] provides [p1:modelStealResilience].
 category: AISecurity
 version: "v1"
