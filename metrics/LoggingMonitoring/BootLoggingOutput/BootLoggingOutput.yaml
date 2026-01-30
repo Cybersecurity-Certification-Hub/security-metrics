@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: BootLoggingOutput
+id: 2ba4df85-11f7-41f8-a761-ae7c5d91c758
+name: BootLoggingOutput
 description: This rule assesses whether an [VirtualMachine] has the [BootLogging][p1:loggingService] property set correctly.
 category: LoggingMonitoring
 version: "v1" 

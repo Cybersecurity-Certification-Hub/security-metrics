@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: NoKnownVulnerabilities
+id: 92b4404d-0f00-4e9c-9d1c-52cb970d975b
+name: NoKnownVulnerabilities
 description: This rule assesses whether a [Resource] has the expected value of [p1:vulnerability].
 category: ApplicationSecurity
 version: "v1" 
