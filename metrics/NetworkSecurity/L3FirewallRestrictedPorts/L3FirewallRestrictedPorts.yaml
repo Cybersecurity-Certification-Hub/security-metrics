@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: L3FirewallRestrictedPorts
+id: 8d5e6fe4-d600-4e5b-aba6-03035d59f329
+name: L3FirewallRestrictedPorts
 description: This rule assesses whether an [NetworkInterface] that offers the property [l3Firewall], has [p1:restrictedPorts] configured correctly.
 category: NetworkSecurity
 version: "v1" 

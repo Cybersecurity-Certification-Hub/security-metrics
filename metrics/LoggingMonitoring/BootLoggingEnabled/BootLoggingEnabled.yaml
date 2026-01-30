@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: BootLoggingEnabled
+id: bb41142b-ce8c-4c5c-9b42-360f015fd325
+name: BootLoggingEnabled
 description: This rule assesses whether an [VirtualMachine] has its [BootLogging][p1:enabled] property set correctly.
 category: LoggingMonitoring
 version: "v1" 

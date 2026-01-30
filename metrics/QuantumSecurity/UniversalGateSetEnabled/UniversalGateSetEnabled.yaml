@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: UniversalGateSetEnabled
+id: d238e5a9-3ead-46e2-bf7c-2089d4882159
+name: UniversalGateSetEnabled
 description: This rule assesses whether a [QPU] has [p1:UniversalGateSetEnabled] correctly configured.
 category: QuantumSecurity
 version: "v1" 
