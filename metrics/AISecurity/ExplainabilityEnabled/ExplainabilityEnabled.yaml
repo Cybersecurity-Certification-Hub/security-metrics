@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: ExplainabilityEnabled
+id: b22bba3e-ba7e-4a3a-b738-6155a6c7469e
+name: ExplainabilityEnabled
 description: This rule assesses whether a [MachineLearningModel] provides [p1:explainabilityEnabled].
 category: AISecurity
 version: "v1"
