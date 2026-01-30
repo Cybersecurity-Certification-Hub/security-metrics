@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: SPAMErrorRate
+id: fff4a65d-dc40-4196-a415-89163dd9b024
+name: SPAMErrorRate
 description: This rule assesses whether a [QPU] has a [SPAMErrorRate] that is below a specified [p1:errorRate] threshold.
 category: QuantumSecurity
 version: "v1" 

@@ -2476,15 +2476,19 @@ message MachineLearningModel {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
+	float adversarial_robustness_score = 11136;
 	google.protobuf.Timestamp creation_time = 18005;
 	string description = 5272;
 	float evasion_efficacy_level = 17752;
 	float explainability = 1384;
+	bool explainability_enabled = 14424;
 	string id = 5520 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 1548;
+	float membership_inference_resilience = 4244;
 	float model_steal_resilience = 1827;
 	string name = 1575 [ (buf.validate.field).required = true ];
 	float poisoned_data_level = 13816;
+	float poisoning_resilience_level = 16395;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 12454;
 	DataLocation data_location = 1022;

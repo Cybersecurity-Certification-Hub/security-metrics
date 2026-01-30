@@ -1,0 +1,27 @@
+name: Check duplicate UUIDs in metrics folder
+
+on:
+  pull_request:
+    branches: [ main ]
+    # Only trigger when files in the metrics folder change
+    paths:
+      - 'metrics/**/*.yaml'
+
+jobs:
+  validate-uuids:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install PyYAML
+
+      - name: Scan for Duplicate IDs
+        run: python scripts/check_duplicate_uuids.py
+          
