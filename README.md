@@ -16,7 +16,7 @@ The repository is structured as follows.
 A metric is described by metadata and configuration properties. While the metadata is static, the configuration properties may be modified when the metric is used, since they are dependent on the system context.
 
 Metadata
-- uuid: a UUID for the metric
+- id: a UUID for the metric
 - name: a human-readable name for the metric
 - description: a description of the metric. The description usually refers to a resource type it applies to, like a block storage, and a security property that should be fulfilled for that resource, like at-rest-encryption. It then refers to the configuration data. The metric description MUST use the ontology terms when referring to resource types and security properties and put them in brackets, e.g., [BlockStorage]. Also the reference to the configuration data must be referred to in brackets, e.g. [p1:AtRestEncryption].
 - version: the version identifies the version of the metric as it may be changed over time
