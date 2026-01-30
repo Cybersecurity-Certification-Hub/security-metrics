@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: "<Enter ID here in CamelCase>"
+id: "666b0bc9-860d-426d-8e39-2c0f64b5bac7" # example UUID, replace with a new one
+name: "<Enter the name of the metric here.>"
 description: "<Enter a description based on the Ontology terms here.>"
 category: "<Enter the category here in CamelCase.>"
 version: "v1"

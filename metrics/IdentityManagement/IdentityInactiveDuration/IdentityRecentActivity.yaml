@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: IdentityInactiveDuration
+id: 42873d13-7816-4bef-a875-d13e36ec9cf5
+name: IdentityInactiveDuration
 description: This rule assesses whether an [Identity]'s property [lastActivity] is below an allowed time [p1:window].
 category: IdentityManagement
 version: "v1" 
