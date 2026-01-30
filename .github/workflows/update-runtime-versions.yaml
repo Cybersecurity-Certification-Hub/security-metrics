@@ -1,0 +1,36 @@
+name: Update runtime versions
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-runtime-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Update runtime metric values
+        run: python scripts/update_runtime_versions.py
+
+      - name: Commit and push changes
+        run: |
+          if git status --porcelain | grep -q '.'; then
+            git add metrics/PlatformSecurity/PHPRuntime/PHPRuntime.yaml \
+              metrics/PlatformSecurity/PythonRuntime/PythonRuntime.yaml \
+              metrics/PlatformSecurity/JavaRuntime/JavaRuntime.yaml
+            git commit -m "chore: update runtime metric versions"
+            git push
+          else
+            echo "No changes to commit."
+          fi

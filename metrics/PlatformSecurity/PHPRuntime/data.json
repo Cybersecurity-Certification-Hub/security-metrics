@@ -1,4 +1,4 @@
 {
-    "operator" : ">=",
-    "target_value" : 21
+    "operator": ">=",
+    "target_value": 8.4
 }
