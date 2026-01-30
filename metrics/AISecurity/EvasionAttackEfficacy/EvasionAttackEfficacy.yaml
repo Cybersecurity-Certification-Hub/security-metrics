@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: EvasionAttackEfficacy
+id: 62af69a7-8113-49a1-b98a-715b6ec0e6e6
+name: EvasionAttackEfficacy
 description: This rule assesses whether a [MachineLearningModel] has the compliant level of [p1:evasionEfficacyLevel].
 category: AISecurity
 version: "v1"

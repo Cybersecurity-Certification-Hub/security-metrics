@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: RateLimitingEnabled
+id: c555ea5e-be2e-4d8d-b362-da88a5b819f3
+name: RateLimitingEnabled
 description: This rule assesses whether a [NetworkInterface] has its [RateLimiting] set to [p1:enabled].
 category: NetworkSecurity
 version: "v1" 

@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: TwoQubitGateErrorRate
+id: c9218c85-ab48-4b06-9c3a-e810c172a5cf
+name: TwoQubitGateErrorRate
 description: This rule assesses whether a [QPU] has a [TwoQubitGateErrorRate] that is below a specified [p1:errorRate] threshold.
 category: QuantumSecurity
 version: "v1" 
