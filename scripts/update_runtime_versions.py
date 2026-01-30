@@ -131,6 +131,41 @@ def update_target_value(path: Path, value: str) -> bool:
     return True
 
 
+def parse_operator_from_yaml(path: Path) -> str:
+    """Parse the operator for p1 from a metric YAML file."""
+    content = path.read_text(encoding="utf-8")
+    m = re.search(r"p1:\s*\n\s*operator:\s*([\"']?)([^\"'\n]+)\1", content, flags=re.MULTILINE)
+    if m:
+        return m.group(2).strip()
+    m2 = re.search(r"operator:\s*([\"']?)([^\"'\n]+)\1", content)
+    if m2:
+        return m2.group(2).strip()
+    raise RuntimeError(f"Unable to find operator in {path}.")
+
+
+def coerce_value(value: str):
+    """Coerce a version string to int/float when sensible, otherwise leave as string."""
+    if re.fullmatch(r"\d+", value):
+        return int(value)
+    if re.fullmatch(r"\d+\.\d+$", value):
+        return float(value)
+    return value
+
+
+def update_data_json(path: Path, operator: str, target_value) -> bool:
+    """Create or update a metric's data.json with the given operator and target_value."""
+    desired = {"operator": operator, "target_value": target_value}
+    if path.exists():
+        try:
+            current = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            current = {}
+        if current.get("operator") == desired["operator"] and current.get("target_value") == desired["target_value"]:
+            return False
+    path.write_text(json.dumps(desired, indent=4) + "\n", encoding="utf-8")
+    return True
+
+
 def main() -> int:
     """Run the updater and print a summary of changes."""
     changes = []
@@ -148,7 +183,18 @@ def main() -> int:
             f"(cutoff={config.get('cutoff_key', 'eolFrom')})"
         )
 
-        if update_target_value(config["metric"], version):
+        metric_path = config["metric"]
+        updated_yaml = update_target_value(metric_path, version)
+
+        # Also update the metric's data.json with operator and target_value when present
+        data_path = metric_path.parent / "data.json"
+        try:
+            operator = parse_operator_from_yaml(metric_path)
+        except RuntimeError:
+            operator = ">="
+        updated_json = update_data_json(data_path, operator, coerce_value(version))
+
+        if updated_yaml or updated_json:
             changes.append(f"{language} -> {version}")
 
     if changes:
