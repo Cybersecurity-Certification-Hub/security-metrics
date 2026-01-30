@@ -50,7 +50,7 @@ jobs:
                           if isinstance(data, dict) and "id" in data:
                               val = str(data["id"]).strip().lower()
                               if val in ids:
-                                  duplicates.append(f"Conflict: ID \"{val}\" found in {filename} and {ids[val]}")
+                                  duplicates.append(f"Conflict for ID \"{val}\" found in \n-{filename} and \n-{ids[val]}")
                               else:
                                   ids[val] = filename
               except Exception as e:
