@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: TlsCipherSuite
+id: f05099b4-1d9c-43c8-acd0-6a06ce060478
+name: TlsCipherSuite
 description: This rule assesses whether a [Resource] has its [TransportEncryption] [p1:cipherSuite] correctly configured.
 category: TransportEncryption
 version: "v1"

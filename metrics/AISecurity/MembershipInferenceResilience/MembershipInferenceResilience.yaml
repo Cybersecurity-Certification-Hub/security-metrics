@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: MembershipInferenceResilience
+id: febb8eae-2dd0-4e08-9428-2f1c00616f86
+name: MembershipInferenceResilience
 description: This rule assesses whether a [MachineLearningModel] has implemented privacy-preserving techniques that increase its resilience against membership inference attacks over the compliant level of [p1:membershipInferenceResilience].
 category: AISecurity
 version: "v1"

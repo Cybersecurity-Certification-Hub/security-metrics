@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: DataPoisoningDetected
+id: 9d835190-6d28-4871-bbb9-8d5bd21be8c4
+name: DataPoisoningDetected
 description: This rule assesses whether the detected percentage of [p1:poisonedDataLevel] in the training set of a [MachineLearningModel] is compliant.
 category: AISecurity
 version: "v1"
