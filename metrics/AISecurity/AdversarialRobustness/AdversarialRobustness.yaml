@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: AdverserialRobustness
+id: AdversarialRobustness
 description: This rule assesses whether a [MachineLearningModel] exhibits a compliant level of the [p1:adversarialRobustnessScore] evaluated via the CleverScore or SPADEScore.
 category: AISecurity
 version: "v1"
