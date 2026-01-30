@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: CodeSignoff
+id: 6d3a98a6-b5b9-4f62-904f-be421ec69f36
+name: CodeSignoff
 description: This rule assesses whether an [CodeRepository] has the property [p1:codeSignoff] set correctly.
 category: DevelopmentLifeCycle
 version: "v1" 
