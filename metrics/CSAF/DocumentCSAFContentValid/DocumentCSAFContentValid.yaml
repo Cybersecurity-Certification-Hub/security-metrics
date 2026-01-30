@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: DocumentCSAFContentValid
+id: ba26e062-eea7-4d47-a181-3a5dbe723ed3
+name: DocumentCSAFContentValid
 description: This rule assesses whether a [SecurityAdvisoryDocument] has no [schemaValidation] [p1:errors].
 category: CSAF
 version: "v1" 
