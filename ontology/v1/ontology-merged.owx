@@ -1422,7 +1422,6 @@
         <DataProperty IRI="/properties/automaticDiscoveryEnabled"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/poisonLevel"/>
         <DataProperty IRI="/classes/evasionEfficacyLevel"/>
     </Declaration>
     <Declaration>
