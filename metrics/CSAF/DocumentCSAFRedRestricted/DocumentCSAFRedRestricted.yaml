@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: DocumentCSAFRedRestricted
+id: 44359147-A651-4714-9883-E86AA07563D1
+name: DocumentCSAFRedRestricted
 category: CSAF
 description: This rule assesses whether a [SecurityAdvisoryDocument] that provides the property [RemoteDocumentLocation] is access protected by ensuring that the [noAuthentication] property is not utilized.
 version: "v1" 
