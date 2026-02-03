@@ -32,6 +32,9 @@
         <Class abbreviatedIRI="core:ApplicationLog"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
     </Declaration>
     <Declaration>
@@ -325,6 +328,10 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ApplicationLog"/>
         <Class abbreviatedIRI="core:Logging"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <Class abbreviatedIRI="core:Auditing"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:DiskEncryption"/>
