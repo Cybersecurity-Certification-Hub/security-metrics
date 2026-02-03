@@ -13,7 +13,7 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document.AssetInventory.Digital.auditInterval)
+    compare(data.operator, data.target_value, document.assetInventory.digital.auditInterval)
 }
 
 message := "Digital asset security audits are performed frequently enough." if {

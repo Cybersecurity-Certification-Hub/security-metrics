@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "1d08ba6e-dfb6-4b63-9faf-59fc56286ad2"
 name: "AssetInventoryFrequency"
-description: "This rule assesses whether a [PolicyDocument] that offers the property [AssetInventory], has [p1:inventoryInterval] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [assetInventory], has [p1:inventoryInterval] set correctly."
 implementationGuidelines:
   AMOE:
     previous_name: AssetInventoryFrequencyQ2

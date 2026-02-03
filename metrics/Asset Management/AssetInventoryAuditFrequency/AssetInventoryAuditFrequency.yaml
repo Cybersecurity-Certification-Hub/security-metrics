@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "e6eff50d-2936-4734-9764-c80350383d91"
 name: "AssetInventoryAuditFrequency"
-description: "This rule assesses whether a [PolicyDocument] that offers the property [AssetInventory], has [p1:auditInterval] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [assetInventory], has [p1:auditInterval] set correctly."
 implementationGuidelines:
   AMOE:
     previous_name: AssetInventoryAuditFrequencyQ5

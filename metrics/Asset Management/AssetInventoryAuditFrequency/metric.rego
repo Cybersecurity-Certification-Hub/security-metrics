@@ -12,7 +12,7 @@ applicable if {
 }
 
 compliant if {
-  compare(data.operator, data.target_value, document.AssetInventory.auditInterval)
+  compare(data.operator, data.target_value, document.assetInventory.auditInterval)
 }
 
 message := "Asset inventory audits are performed frequently enough." if {

@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "70a7b588-c5bf-4038-8e2a-8b46211ffaa2"
 name: "AssetInventoryStorageCheck"
-description: "This rule assesses whether a [PolicyDocument] that offers the property [AssetInventory], has [p1:storage] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [assetInventory], has [p1:storage] set correctly."
 implementationGuidelines:
   AMOE:
     previous_name: AssetInventoryStorageCheckQ1

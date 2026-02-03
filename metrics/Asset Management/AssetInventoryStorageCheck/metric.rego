@@ -13,7 +13,7 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document.AssetInventory.storage)
+    compare(data.operator, data.target_value, document.assetInventory.storage)
 }
 
 message := "Asset records are stored in an appropriate facility type." if {
