@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "70a7b588-c5bf-4038-8e2a-8b46211ffaa2"
+name: "AssetInventoryStorageCheck"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [AssetInventory], has [p1:storage] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: AssetInventoryStorageCheckQ1
+    question: "In which type of facility are asset records stored?"
+    keywords: ["asset records", "facility type", "storage"]
+category: "AssetManagement"
+version: "1.0"
+comments: "This metric assesses the facility type used to store asset records. Measured as string."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[centrally, decentralized, distributed, central]"
