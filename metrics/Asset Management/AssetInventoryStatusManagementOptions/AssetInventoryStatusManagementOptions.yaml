@@ -13,5 +13,5 @@ comments: "This metric assesses the current status of assets. Measured as string
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
+    operator: "isIn"
     targetValue: "[active, inactive, under repair, disposed, donated, lost]"

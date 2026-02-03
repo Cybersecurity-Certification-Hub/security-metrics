@@ -1,4 +1,4 @@
 {
-    "operator": "==",
+    "operator": "isIn",
     "target_value": "[active, inactive, under repair, disposed, donated, lost]"
 }

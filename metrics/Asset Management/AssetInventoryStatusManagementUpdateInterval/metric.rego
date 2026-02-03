@@ -13,5 +13,11 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document:AssetInventory.AssetStatus.updateInterval)
+    compare(data.operator, data.target_value, document.AssetInventory.AssetStatus.updateInterval)
+}
+
+message := "Asset status changes are recorded within the required timeframe." if {
+  compliant
+} else := "Asset status changes are not recorded within the required timeframe. Update interval should be within the specified period." if {
+  not compliant
 }

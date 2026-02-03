@@ -13,5 +13,11 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document:AssetInventory.AssetStatus.statusOption)
+    compare(data.operator, data.target_value, document.AssetInventory.AssetStatus.statusOption)
+}
+
+message := "Asset status options are properly defined." if {
+  compliant
+} else := "Asset status options are not properly defined. Status options should match the specified values." if {
+  not compliant
 }

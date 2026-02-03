@@ -13,5 +13,11 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document:AssetInventory.inventoryInterval)
+    compare(data.operator, data.target_value, document.AssetInventory.inventoryInterval)
+}
+
+message := "Asset inventory is updated frequently enough." if {
+  compliant
+} else := "Asset inventory is not updated frequently enough. Inventory update frequency should be within the specified interval." if {
+  not compliant
 }
