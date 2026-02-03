@@ -1,4 +1,4 @@
-package cch.metrics.asset_inventory_storage_check_q1
+package cch.metrics.asset_inventory_storage_facility
 
 import data.cch.compare
 import rego.v1
@@ -13,7 +13,7 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document.assetInventory.storage)
+    compare(data.operator, data.target_value, document.assetInventory.storageFacility)
 }
 
 message := "Asset records are stored in an appropriate facility type." if {

@@ -1,4 +1,4 @@
-package cch.metrics.asset_inventory_status_management_q4
+package cch.metrics.asset_inventory_status_options
 
 import data.cch.compare
 import rego.v1

@@ -1,4 +1,4 @@
-package cch.metrics.asset_inventory_status_management_q3
+package cch.metrics.asset_inventory_status_change_update_duration
 
 import data.cch.compare
 import rego.v1
@@ -13,7 +13,7 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document.assetInventory.assetStatus.updateInterval)
+    compare(data.operator, data.target_value, document.assetInventory.assetStatus.updateDuration)
 }
 
 message := "Asset status changes are recorded within the required timeframe." if {

@@ -1,4 +1,4 @@
-package cch.metrics.asset_inventory_audit_frequency_q5
+package cch.metrics.asset_inventory_audit_frequency
 
 import data.cch.compare
 import rego.v1

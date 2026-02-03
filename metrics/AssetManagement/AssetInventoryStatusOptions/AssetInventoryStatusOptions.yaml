@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "9ff75498-e0b8-4ffc-b69d-bdaac9233a9d"
-name: "AssetInventoryStatusManagementOptions"
-description: "This rule assesses whether a [PolicyDocument] that offers the property [assetInventory], has [p1:statusOption] set correctly."
+name: "AssetInventoryStatusOptions"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [assetInventory.assetStatus], has [p1:statusOption] set correctly."
 implementationGuidelines:
   AMOE:
     previous_name: AssetInventoryStatusManagementQ4
