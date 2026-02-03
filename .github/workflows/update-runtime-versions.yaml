@@ -27,8 +27,11 @@ jobs:
         run: |
           if git status --porcelain | grep -q '.'; then
             git add metrics/PlatformSecurity/PHPRuntime/PHPRuntime.yaml \
+              metrics/PlatformSecurity/PHPRuntime/data.json \
               metrics/PlatformSecurity/PythonRuntime/PythonRuntime.yaml \
-              metrics/PlatformSecurity/JavaRuntime/JavaRuntime.yaml
+              metrics/PlatformSecurity/PythonRuntime/data.json \
+              metrics/PlatformSecurity/JavaRuntime/JavaRuntime.yaml \
+              metrics/PlatformSecurity/JavaRuntime/data.json
             git commit -m "chore: update runtime metric versions"
             git push
           else
