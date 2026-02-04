@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: "no-uuid"
+id: "d0f6a13b-e742-42ff-bf69-9ee077be3b42"
 name: "MonitoringReviewFrequency"
 description: "This rule assesses whether a [PolicyDocument] that offers the property [MonitoringProcedure], has [p1:reviewInterval] set correctly."
 implementationGuidelines:
