@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "e70bb32d-5313-44df-9668-df5669e764f6"
 name: "NetworkThreatCoverage"
-description: "This rule assesses whether a [PolicyDocument] that offers the property [NetworkSecurity], has [p1:mitigationScope] set correctly."
+description: "This rule assesses whether a [PolicyDocument] that offers the property [NetworkProtection], has [p1:coveredAttackTypes] set correctly."
 implementationGuidelines:
   AMOE:
     previous_name: NetworkSecurityPolicy01

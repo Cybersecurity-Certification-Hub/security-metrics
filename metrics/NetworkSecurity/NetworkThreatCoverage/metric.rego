@@ -13,5 +13,5 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document.networkSecurity.mitigationScope)
+    compare(data.operator, data.target_value, document.networkProtection.coveredAttackTypes)
 }
