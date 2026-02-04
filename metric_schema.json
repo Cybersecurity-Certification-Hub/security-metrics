@@ -4,7 +4,12 @@
   "properties": {
     "id": {
       "type": "string",
-      "description": "Unique, human-readable name"
+      "format": "uuid",
+      "description": "Unique identifier (UUID)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the metric"
     },
     "category": {
       "type": "string",
@@ -136,6 +141,7 @@
   },
   "required": [
     "id",
+    "name",
     "category",
     "description",
     "version",
