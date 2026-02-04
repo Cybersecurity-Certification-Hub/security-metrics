@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "a41484e2-7a02-4d32-a66f-08d1df84875d"
+name: "ComplianceMethodology"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Compliance], has [p1:methodology] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: CompliancePolicy02
+    question: "Which mechanisms are implemented to periodically monitor compliance requirements?"
+    keywords: ["audits", "reviews", "compliance"]
+category: "Compliance"
+version: "1.0"
+comments: "This metric assesses the mechanisms for periodic compliance monitoring. Measured as string."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: [audits]
