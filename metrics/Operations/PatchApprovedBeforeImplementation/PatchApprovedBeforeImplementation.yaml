@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "4459a94d-bda0-4a84-a47d-0abdf208c14c"
+name: "PatchApprovedBeforeImplementation"
+description: "This rule assesses whether a [Resource] that offers the property [Operations.Patch], has [p1:approvedBeforeImplementation] set correctly."
+implementationGuidelines:
+  FSC:
+    details: ["- Information on to be applied patches/updates", "- Information on approval status from ticket"]
+category: "Operations"
+version: "1.0"
+comments: "CSCs initial approval for patches and updates - Check whether updates/patches were initially approved before rollout | Selector: FSC (Resource Type) [Previous name: MT-OPS-18.6H-1]"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "true"

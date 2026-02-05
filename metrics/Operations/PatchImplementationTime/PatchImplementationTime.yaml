@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "ecdc44a0-5cb3-4484-93ca-4aac191caafe"
+name: "PatchImplementationTime"
+description: "This rule assesses whether a [Resource] that offers the property [Operations.Patch], has [p1:timeForImplementation] set correctly."
+implementationGuidelines:
+  FSC:
+    details: ["- Information on patch/update availability", "- Information on rollout-time after CSC approval"]
+category: "Operations"
+version: "1.0"
+comments: "Average Patch/Update Rollout Time - Check average time from available patches/updates to approval/implementation | Selector: FSC (Resource Type) [TargetValue is measured in hours] [Previous name: MT-OPS-18.6H-2]"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 24

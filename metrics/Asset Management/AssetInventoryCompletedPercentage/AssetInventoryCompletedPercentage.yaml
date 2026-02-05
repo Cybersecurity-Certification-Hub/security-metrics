@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "1a799312-6dc5-45b6-93d2-e0b278bed325"
+name: "AssetInventoryCompletedPercentage"
+description: "This rule assesses whether a [Resource] that offers the property [AssetManagement.Inventory], has [p1:completedReviewPercentage] set correctly."
+implementationGuidelines:
+  FSC:
+    details: ["- Asset Inventory/CMDB", "- Date of last review and update of Asset Inventory entry "]
+category: "Asset Management"
+version: "1.0"
+comments: "Percentage of completed reviews and updates of asset inventory entries - Check whether the last review of an inventory entry was within the specified timeframe | Selector: FSC (Resource Type) [TargetValue is measured in units]  [Previous name: MT-AM-01.5H-2]"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: 90
