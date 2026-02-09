@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "50c0d4d5-1780-473d-b7fd-dcd0a159fe60"
+name: "AssetInventoryDigitalAuditFrequency"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [assetInventory.digital], has [p1:auditInterval] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: AssetInventoryDigitalQ6
+    question: "How frequently are security audits done for digital assets?"
+    keywords: ["data backup", "firewalls", "frequency", "compliance"]
+category: "AssetManagement"
+version: "1.0"
+comments: "This metric assesses the frequency of digital asset security audits. Measured in months."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 12

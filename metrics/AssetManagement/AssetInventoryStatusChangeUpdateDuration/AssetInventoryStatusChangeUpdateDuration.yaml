@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "9740e1ae-6d64-4b7e-8c26-b9a51d98a192"
+name: "AssetInventoryStatusChangeUpdateDuration"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [assetInventory.assetStatus], has [p1:updateDuration] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: AssetInventoryStatusManagementQ3
+    question: "Within what timeframe must changes in asset status be recorded in the inventory system?"
+    keywords: ["asset status", "inventory"]
+category: "AssetManagement"
+version: "1.0"
+comments: "This metric assesses the required timeframe for recording asset status changes. Measured in months."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 12
