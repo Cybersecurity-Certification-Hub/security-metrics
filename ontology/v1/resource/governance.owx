@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://ontology.cybersecuritycertcluster.eu/resource/human_resources"
+     xml:base="https://ontology.cybersecuritycertcluster.eu/resource/governance"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/human_resources">
+     ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/governance">
     <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -20,7 +20,7 @@
         <Class abbreviatedIRI="res:AwarenessTraining"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="res:HumanResources"/>
+        <Class abbreviatedIRI="res:Governance"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="res:SecurityTraining"/>
@@ -33,7 +33,7 @@
         <Class abbreviatedIRI="res:Training"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:HumanResources"/>
+        <Class abbreviatedIRI="res:Governance"/>
         <Class abbreviatedIRI="core:Resource"/>
     </SubClassOf>
     <SubClassOf>
@@ -42,7 +42,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:Training"/>
-        <Class abbreviatedIRI="res:HumanResources"/>
+        <Class abbreviatedIRI="res:Governance"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:Training"/>
