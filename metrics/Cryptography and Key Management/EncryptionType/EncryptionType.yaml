@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "cd8e50ab-074a-41d6-a93d-b9ce882c3d44"
+name: "EncryptionType"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Encryption], has [p1:type] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: EncryptionPolicyCheckQ3
+    question: "What encryption type is used?"
+    keywords: ["encryptioncryptography", "data at rest protection"]
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "This metric assesses the encryption type in use. Measured as string."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[TLS, SSL]"

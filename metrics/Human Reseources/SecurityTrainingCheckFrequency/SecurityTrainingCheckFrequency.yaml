@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "213fd404-ac08-47f1-8724-8c53c82d7f9c"
+name: "SecurityTrainingCheckFrequency"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityTraining], has [p1:reviewInterval] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: TrainingCheckFrequencyQ1
+    question: "How often is the security training completion monitoring checked?"
+    keywords: ["completion frequency", "security training", "verification"]
+category: "Human Reseources"
+version: "1.0"
+comments: "This metric assesses the frequency of monitoring training completion. Measured in months."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 12

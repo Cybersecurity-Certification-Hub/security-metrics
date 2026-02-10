@@ -1,0 +1,4 @@
+{
+    "operator": "isIn",
+    "target_value": "[key lengths, cipher suites, CRL checks, none]"
+}

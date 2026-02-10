@@ -1,0 +1,4 @@
+{
+    "operator": "isIn",
+    "target_value": "[storage of sensitive or confidential information,transaction of sensitive or confidential information,user logons]"
+}
