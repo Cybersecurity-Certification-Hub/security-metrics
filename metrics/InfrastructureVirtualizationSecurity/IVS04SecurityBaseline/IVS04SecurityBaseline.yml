@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: IVS04SecurityBaseline
+description: This rule assesses whether a [VirtualMachine] satisfies the IVS-04 hardening baseline by enabling required logging, update, anti-malware, UEFI protection, and host encryption safeguards.
+category: InfrastructureVirtualizationSecurity
+version: "1.0"
+comments: The IVS-04 control mandates that host and guest operating systems and their control planes follow hardening best practices. This includes enforcing logging, automated patching, malware protection, Secure Boot, virtual TPM, and encryption for caches, temporary disks, and storage traffic.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True
