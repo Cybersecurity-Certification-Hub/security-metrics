@@ -160,6 +160,9 @@
         <DataProperty abbreviatedIRI="res:interval"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:intervalMonths"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:isActive"/>
     </Declaration>
     <Declaration>
@@ -278,9 +281,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:zone"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#reviewIntervalMonths"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:activated"/>
@@ -408,7 +408,7 @@
         <ObjectProperty abbreviatedIRI="prop:usedBy"/>
     </SubObjectPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#reviewIntervalMonths"/>
+        <DataProperty IRI="intervalMonths"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -619,6 +619,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:interval</AbbreviatedIRI>
         <Literal>interval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:intervalMonths</AbbreviatedIRI>
+        <Literal>The interval refers to the update interval in months.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:intervalMonths</AbbreviatedIRI>
+        <Literal>intervalMonths</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
