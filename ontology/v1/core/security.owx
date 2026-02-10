@@ -179,12 +179,6 @@
         <Class abbreviatedIRI="core:ZoneRedundancy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Governance"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MonitoringProcedure"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty abbreviatedIRI="core:offersInterface"/>
     </Declaration>
     <Declaration>
@@ -1065,14 +1059,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ZoneRedundancy"/>
         <Class abbreviatedIRI="core:Redundancy"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Governance"/>
-        <Class abbreviatedIRI="core:Auditing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MonitoringProcedure"/>
-        <Class IRI="#Governance"/>
     </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

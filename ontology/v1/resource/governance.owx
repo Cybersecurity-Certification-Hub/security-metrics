@@ -26,6 +26,9 @@
         <Class abbreviatedIRI="res:SecurityTraining"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="res:Monitoring"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="res:Training"/>
     </Declaration>
     <SubClassOf>
@@ -41,8 +44,19 @@
         <Class abbreviatedIRI="res:Training"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="res:Monitoring"/>
+        <Class abbreviatedIRI="res:Governance"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="res:Training"/>
         <Class abbreviatedIRI="res:Governance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Monitoring"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:intervalMonths"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:Training"/>
@@ -58,4 +72,9 @@
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>="res:intervalMonths"</AbbreviatedIRI>
+        <Literal>intervalMonths: Review frequency of monitoring procedures</Literal>
+    </AnnotationAssertion>
 </Ontology>
