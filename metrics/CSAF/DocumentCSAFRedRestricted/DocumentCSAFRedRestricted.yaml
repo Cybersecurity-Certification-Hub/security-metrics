@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: 44359147-A651-4714-9883-E86AA07563D1
+name: DocumentCSAFRedRestricted
+category: CSAF
+description: This rule assesses whether a [SecurityAdvisoryDocument] that provides the property [RemoteDocumentLocation] is access protected by ensuring that the [noAuthentication] property is not utilized.
+version: "v1" 
+comments: A SecurityAdvisoryDocument labeled as "AMBER" or "RED" must be protected by access controls. The Rego policy verifies that the noAuthentication property is not set; it performs this check directly in the policy and does not rely on configuration properties. The specification can be found at https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#715-requirement-5-tlpamber-and-tlpred. 
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: == 
+    targetValue: false
