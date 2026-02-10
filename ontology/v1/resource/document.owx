@@ -391,6 +391,13 @@
         <Class abbreviatedIRI="res:Document"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:Governance"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="cl:SecurityAdvisoryDocument"/>
         <Class abbreviatedIRI="res:Document"/>
     </SubClassOf>
