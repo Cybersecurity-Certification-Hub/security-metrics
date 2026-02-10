@@ -74,7 +74,7 @@
     </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>="res:intervalMonths"</AbbreviatedIRI>
+        <AbbreviatedIRI>res:Monitoring</AbbreviatedIRI>
         <Literal>intervalMonths: Review frequency of monitoring procedures</Literal>
     </AnnotationAssertion>
 </Ontology>
