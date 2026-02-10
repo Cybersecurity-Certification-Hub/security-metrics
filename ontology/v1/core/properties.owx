@@ -623,7 +623,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>res:intervalMonths</AbbreviatedIRI>
-        <Literal>The interval refers to the update interval in months.</Literal>
+        <Literal>The interval refers to the interval in months.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

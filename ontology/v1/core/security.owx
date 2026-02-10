@@ -1811,11 +1811,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#MonitoringProcedure</IRI>
-        <Literal>should have a property &quot;reviewIntervalMonths&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>prop:tlsSignatureAlgorithm</AbbreviatedIRI>
         <Literal>tlsSignatureAlgorithm: e.g., rsa_pss_rsae_sha256/384/512, ecdsa_secp256r1_sha256, ed25519</Literal>
     </AnnotationAssertion>
