@@ -321,6 +321,9 @@
         <Class IRI="/classes/GetSecret"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Governance"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Hardware"/>
     </Declaration>
     <Declaration>
@@ -358,9 +361,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/HttpServer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/classes/HumanResources"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/HybridCipher"/>
@@ -513,6 +513,9 @@
         <Class IRI="/classes/Module"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Monitoring"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/MultiFactorAuthentiation"/>
     </Declaration>
     <Declaration>
@@ -607,6 +610,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/RBAC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/RateLimiting"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ReadConfiguration"/>
@@ -831,6 +837,9 @@
         <ObjectProperty IRI="/properties/runsOn"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/properties/scope"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/properties/serviceOf"/>
     </Declaration>
     <Declaration>
@@ -943,6 +952,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/interval"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/intervalMonths"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/isActive"/>
@@ -1404,9 +1416,6 @@
         <ObjectProperty IRI="/classes/describes"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/properties/scope"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
     </Declaration>
     <Declaration>
@@ -1428,7 +1437,7 @@
         <NamedIndividual IRI="/classes/Implementation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/RateLimiting"/>
+        <DataProperty IRI="/core/propertiesintervalMonths"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/modelStealResilience"/>
@@ -2632,6 +2641,10 @@
         <Class IRI="/classes/SecretOperation"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Governance"/>
+        <Class IRI="/classes/Resource"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/Hardware"/>
         <Class IRI="/classes/Resource"/>
     </SubClassOf>
@@ -2843,10 +2856,6 @@
             <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/HttpRequestHandler"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/HumanResources"/>
-        <Class IRI="/classes/Resource"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/HybridCipher"/>
@@ -3539,6 +3548,17 @@
         <Class IRI="/classes/SoftwareResource"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Monitoring"/>
+        <Class IRI="/classes/Governance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Monitoring"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/intervalMonths"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/MultiFactorAuthentiation"/>
         <Class IRI="/classes/Authenticity"/>
     </SubClassOf>
@@ -3765,6 +3785,13 @@
     <SubClassOf>
         <Class IRI="/classes/PolicyDocument"/>
         <Class IRI="/classes/Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/Governance"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/PolicyOperation"/>
@@ -4400,7 +4427,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Training"/>
-        <Class IRI="/classes/HumanResources"/>
+        <Class IRI="/classes/Governance"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Training"/>
@@ -4943,6 +4970,10 @@ name = metadata.name</Literal>
         <ObjectProperty IRI="/classes/hasType"/>
         <Class IRI="/classes/ResourceType"/>
     </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/core/propertiesintervalMonths"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="/properties/algorithm"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -6133,6 +6164,11 @@ name = metadata.name</Literal>
         <Literal>CodeModule</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Monitoring</IRI>
+        <Literal>intervalMonths: Review frequency of monitoring procedures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/MultiFactorAuthentiation</IRI>
         <Literal>MultiFactorAuthentiation</Literal>
@@ -6886,6 +6922,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/interval</IRI>
         <Literal>interval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/intervalMonths</IRI>
+        <Literal>The interval refers to the interval in months.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/intervalMonths</IRI>
+        <Literal>intervalMonths</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
