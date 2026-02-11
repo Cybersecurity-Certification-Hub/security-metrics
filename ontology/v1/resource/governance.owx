@@ -22,6 +22,11 @@
     <Declaration>
         <Class abbreviatedIRI="res:Governance"/>
     </Declaration>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <AbbreviatedIRI>core:Governance</AbbreviatedIRI>
+        <Literal>This ontology defines Governance as a cybersecurity resource type focused on organizational security management practices.</Literal>
+    </AnnotationAssertion>
     <Declaration>
         <Class abbreviatedIRI="res:SecurityTraining"/>
     </Declaration>
