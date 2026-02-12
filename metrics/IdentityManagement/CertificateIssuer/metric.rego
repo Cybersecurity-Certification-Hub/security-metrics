@@ -1,4 +1,4 @@
-package cch.metrics.CertificateIssuer
+package cch.metrics.certificateIssuer
 
 import data.cch.compare
 import rego.v1
