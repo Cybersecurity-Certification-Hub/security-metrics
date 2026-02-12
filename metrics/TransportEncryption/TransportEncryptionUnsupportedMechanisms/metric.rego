@@ -13,5 +13,6 @@ applicable if {
 }
 
 compliant if {
+    # TODO: Add ontology term
     compare(data.operator, data.target_value, document.transportEncryption.unsupportedMechanisms)
 }
