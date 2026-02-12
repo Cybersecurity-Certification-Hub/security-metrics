@@ -1,7 +1,12 @@
 # ====== Metadata ======
 id: 85fb5768-61c4-41d7-b2a3-603bfc5726cd
 name: TransportEncryptionProtocol
-description: This rule assesses whether a [Resource] has its [TransportEncryption] [p1:protocol] correctly configured.
+description: This rule assesses whether a [Resource] or a [PolicyDocument] has its [TransportEncryption] [p1:protocol] correctly configured.
+implementationGuidelines:
+  AMOE:
+    previous_name: EncryptionDataTransitPolicyQ1
+    question: "Which endpoint protection mechanism is defined for data in transit?"
+    keywords: ["encryption", "cryptography", "data in transit", "protection", "PKI", "payload", "SSL", "TLS", "transport layer encryption", "encrypted endpoints"]
 category: TransportEncryption
 version: "v1" 
 comments: Using TLS (Transport Layer Security) ensures that data in transit is encrypted, providing confidentiality and integrity against eavesdropping and tampering.
