@@ -5739,6 +5739,11 @@ name = metadata.name</Literal>
         <Literal>GetSecret</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>/classes/Governance</IRI>
+        <Literal>This ontology defines Governance as a cybersecurity resource type focused on organizational security management practices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/Http</IRI>
         <Literal>Abstract class for all HTTP related functionalities.</Literal>
