@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "959aecc4-ca9d-4cfa-b248-fa72aa0bc55c"
+name: "CertificateIssuer"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [DigitalCertificate], has [p1:type] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: DigitalCertPolicy01
+    question: "Which verifiable certificates are supported for Certification Authorities?"
+    keywords: ["digital certificates", "PKI", "CA", "x509", "certificate authorities", "publicly verifiable"]
+category: "IdentityManagement"
+version: "v1"
+comments: "This metric assesses the supported verifiable certificates for Certification Authorities. Measured as string."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[publicly verifiable certificates]"
