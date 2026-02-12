@@ -341,19 +341,19 @@ message Availability {
 message AwarenessTraining {
 	option (resource_type_names) = "AwarenessTraining";
 	option (resource_type_names) = "Training";
-	option (resource_type_names) = "HumanResources";
+	option (resource_type_names) = "Governance";
 	option (resource_type_names) = "Resource";
 
-	bool annual_update_completed = 15890;
-	google.protobuf.Timestamp creation_time = 15810;
-	string description = 345;
-	string id = 6931 [ (buf.validate.field).required = true ];
-	map<string, string> labels = 4947;
-	string name = 18874 [ (buf.validate.field).required = true ];
+	bool annual_update_completed = 5546;
+	google.protobuf.Timestamp creation_time = 6371;
+	string description = 1978;
+	string id = 10258 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 7290;
+	string name = 8381 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 8066;
-	bool successfully_completed_percentage = 3826;
-	optional string parent_id = 8185;
+	string raw = 3963;
+	bool successfully_completed_percentage = 832;
+	optional string parent_id = 17698;
 }
 
 // Backup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1712,6 +1712,16 @@ message GetSecret {
 	optional string secret_id = 8422;
 }
 
+// Governance is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+message Governance {
+
+	oneof type {
+		Monitoring monitoring = 1840;
+		AwarenessTraining awareness_training = 18321;
+		SecurityTraining security_training = 16425;
+	}
+}
+
 // Hardware is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Hardware {
 
@@ -1851,15 +1861,6 @@ message HttpServer {
 	option (resource_type_names) = "Core";
 
 	HttpRequestHandler http_request_handler = 16943;
-}
-
-// HumanResources is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message HumanResources {
-
-	oneof type {
-		AwarenessTraining awareness_training = 13539;
-		SecurityTraining security_training = 5053;
-	}
 }
 
 // HybridCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2636,6 +2637,25 @@ message CodeModule {
 	}
 }
 
+// Monitoring is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// intervalMonths: Review frequency of monitoring procedures
+message Monitoring {
+	option (resource_type_names) = "Monitoring";
+	option (resource_type_names) = "Governance";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 7089;
+	string description = 16669;
+	string id = 12598 [ (buf.validate.field).required = true ];
+	// The interval refers to the interval in months.
+	int32 interval_months = 926;
+	map<string, string> labels = 2275;
+	string name = 4082 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 17965;
+	optional string parent_id = 15184;
+}
+
 // MultiFactorAuthentiation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message MultiFactorAuthentiation {
 	option (resource_type_names) = "MultiFactorAuthentiation";
@@ -3076,6 +3096,7 @@ message PolicyDocument {
 	repeated CryptographicHash cryptographic_hashs  = 12896;
 	DataLocation data_location = 11474;
 	repeated DocumentSignature document_signatures  = 7191;
+	optional string governance_id = 18871;
 	optional string parent_id = 18208;
 	SchemaValidation validated_by = 5620;
 	repeated SecurityFeature security_features  = 13896;
@@ -3470,9 +3491,10 @@ message Resource {
 		AndRule and_rule = 1114;
 		Token token = 5266;
 		Value value = 652;
+		Monitoring monitoring = 1840;
+		AwarenessTraining awareness_training = 18321;
+		SecurityTraining security_training = 16425;
 		Memory memory = 967;
-		AwarenessTraining awareness_training = 13539;
-		SecurityTraining security_training = 5053;
 		Application application = 18554;
 		Library library = 14265;
 		Package package = 5217;
@@ -3723,19 +3745,19 @@ message SecurityFeature {
 message SecurityTraining {
 	option (resource_type_names) = "SecurityTraining";
 	option (resource_type_names) = "Training";
-	option (resource_type_names) = "HumanResources";
+	option (resource_type_names) = "Governance";
 	option (resource_type_names) = "Resource";
 
-	bool annual_update_completed = 10234;
-	google.protobuf.Timestamp creation_time = 6650;
-	string description = 9993;
-	string id = 16985 [ (buf.validate.field).required = true ];
-	map<string, string> labels = 2918;
-	string name = 12019 [ (buf.validate.field).required = true ];
+	bool annual_update_completed = 12324;
+	google.protobuf.Timestamp creation_time = 2973;
+	string description = 16969;
+	string id = 16887 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 15328;
+	string name = 2030 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 8671;
-	bool successfully_completed_percentage = 12251;
-	optional string parent_id = 10370;
+	string raw = 11220;
+	bool successfully_completed_percentage = 11821;
+	optional string parent_id = 10643;
 }
 
 // ServiceMetadataDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3893,8 +3915,8 @@ message Token {
 message Training {
 
 	oneof type {
-		AwarenessTraining awareness_training = 13539;
-		SecurityTraining security_training = 5053;
+		AwarenessTraining awareness_training = 18321;
+		SecurityTraining security_training = 16425;
 	}
 }
 

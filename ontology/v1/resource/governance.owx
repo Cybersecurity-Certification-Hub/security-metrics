@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://ontology.cybersecuritycertcluster.eu/resource/human_resources"
+     xml:base="https://ontology.cybersecuritycertcluster.eu/resource/governance"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/human_resources">
+     ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/governance">
     <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -20,10 +20,18 @@
         <Class abbreviatedIRI="res:AwarenessTraining"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="res:HumanResources"/>
+        <Class abbreviatedIRI="res:Governance"/>
     </Declaration>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <AbbreviatedIRI>core:Governance</AbbreviatedIRI>
+        <Literal>This ontology defines Governance as a cybersecurity resource type focused on organizational security management practices.</Literal>
+    </AnnotationAssertion>
     <Declaration>
         <Class abbreviatedIRI="res:SecurityTraining"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="res:Monitoring"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="res:Training"/>
@@ -33,7 +41,7 @@
         <Class abbreviatedIRI="res:Training"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:HumanResources"/>
+        <Class abbreviatedIRI="res:Governance"/>
         <Class abbreviatedIRI="core:Resource"/>
     </SubClassOf>
     <SubClassOf>
@@ -41,8 +49,19 @@
         <Class abbreviatedIRI="res:Training"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="res:Monitoring"/>
+        <Class abbreviatedIRI="res:Governance"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="res:Training"/>
-        <Class abbreviatedIRI="res:HumanResources"/>
+        <Class abbreviatedIRI="res:Governance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Monitoring"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:intervalMonths"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:Training"/>
@@ -58,4 +77,9 @@
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:Monitoring</AbbreviatedIRI>
+        <Literal>intervalMonths: Review frequency of monitoring procedures</Literal>
+    </AnnotationAssertion>
 </Ontology>
