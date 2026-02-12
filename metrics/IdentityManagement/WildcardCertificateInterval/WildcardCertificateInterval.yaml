@@ -1,0 +1,20 @@
+# ====== Metadata ======
+id: "42a5a738-3ce4-4b50-a32c-69758682eef8"
+name: "WildcardCertificateInterval"
+description: "This rule assesses whether a [PolicyDocument] has the [CertificateBasedAuthentication] property [p1:isWildcard] and [p2:intervalMonths] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: DigitalCertPolicy03
+    question: "What is the validity period of wildcard digital certificates?"
+    keywords: ["digital certificates", "validity period", "duration", "wildcard", "user facing certificates"]
+category: "IdentityManagement"
+version: "v1"
+comments: "This metric assesses the validity period of wildcard digital certificates. Measured in months."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
+  p2:
+    operator: "<="
+    targetValue: 3
