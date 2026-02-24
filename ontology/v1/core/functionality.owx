@@ -1000,7 +1000,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:InputValidationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
+            <ObjectProperty abbreviatedIRI="core:has"/>
             <Class abbreviatedIRI="core:Output"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
