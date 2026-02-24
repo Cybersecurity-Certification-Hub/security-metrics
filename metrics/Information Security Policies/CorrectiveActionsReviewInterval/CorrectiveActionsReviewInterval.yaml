@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "44970a0c-7db3-4c1f-8071-49b258bdee10"
+name: "CorrectiveActionsReviewInterval"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [InformationSecurityPolicy.Exceptions.CorrectiveAction], has [p1:reviewInterval] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: CorrectiveActionsTimeframeQ4
+    question: "What is the timeframe for implementing corrective actions when exceptions are expired or reviews and approvals are outdated?"
+    keywords: ["timeframe", "corrective actions", "expired exceptions", "outdated reviews", "approvals"]
+category: "Information Security Policies"
+version: "1.0"
+comments: "This metric assesses the implementation timeframe for corrective actions. Measured in months."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 12
