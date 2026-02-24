@@ -1434,6 +1434,9 @@
         <DataProperty IRI="/classes/modelStealResilience"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/classes/has"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/classes/hasType"/>
     </Declaration>
     <Declaration>
@@ -2981,15 +2984,15 @@
     <SubClassOf>
         <Class IRI="/classes/InputValidationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/operatesOn"/>
-            <Class IRI="/classes/Input"/>
+            <ObjectProperty IRI="/classes/has"/>
+            <Class IRI="/classes/Output"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/InputValidationOperation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/classes/operatesOn"/>
-            <Class IRI="/classes/Output"/>
+            <Class IRI="/classes/Input"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>

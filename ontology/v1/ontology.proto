@@ -1962,7 +1962,7 @@ message InputValidationOperation {
 
 	CodeRegion code_region = 12844;
 	Input input = 458;
-	Output output = 1757;
+	Output output = 15204;
 }
 
 // InstallUpdateOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
