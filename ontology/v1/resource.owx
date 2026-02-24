@@ -14,7 +14,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>https://ontology.cybersecuritycertcluster.eu/data</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/resource/application</Import>
-    <Import>https://ontology.cybersecuritycertcluster.eu/resource/human_resources</Import>
+    <Import>https://ontology.cybersecuritycertcluster.eu/resource/governance</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/resource/hardware</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/resource/infrastructure</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/data</Import>

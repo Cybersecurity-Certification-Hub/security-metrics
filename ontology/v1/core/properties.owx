@@ -7,13 +7,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://ontology.cybersecuritycertcluster.eu/core/properties">
     <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/resource/infrastructure#"/>
-    <Prefix name="res" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="res" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
-    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
         <ObjectProperty abbreviatedIRI="res:basedOn"/>
@@ -35,6 +35,48 @@
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="res:scope"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:backend"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:collectionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:deployedOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:implements"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:offers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:parent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:proxyTarget"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:resourceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:runsOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:serviceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:storage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:to"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:usedBy"/>
@@ -116,6 +158,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:interval"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:intervalMonths"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:isActive"/>
@@ -352,58 +397,20 @@
         <DataProperty abbreviatedIRI="prop:value"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:backend"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:collectionOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:deployedOn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:has"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:implements"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:offers"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:parent"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:proxyTarget"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:resourceOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:runsOn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:serviceOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:storage"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:to"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
+        <ObjectProperty abbreviatedIRI="prop:has"/>
+    </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="prop:usedByMultiple"/>
         <ObjectProperty abbreviatedIRI="prop:usedBy"/>
     </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
-        <ObjectProperty abbreviatedIRI="prop:has"/>
-    </SubObjectPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="intervalMonths"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="prop:algorithm"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -468,7 +475,6 @@
         <DataProperty abbreviatedIRI="prop:enabled"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
-
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:apiHitsPerMonth</AbbreviatedIRI>
@@ -613,6 +619,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:interval</AbbreviatedIRI>
         <Literal>interval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:intervalMonths</AbbreviatedIRI>
+        <Literal>The interval refers to the interval in months.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:intervalMonths</AbbreviatedIRI>
+        <Literal>intervalMonths</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -785,11 +801,6 @@
         <Literal>reqBody</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ind:resourceId</AbbreviatedIRI>
-        <Literal>resourceId</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>res:resourceType</AbbreviatedIRI>
         <Literal>The resource type. It is an array, because a type can be derived from another.</Literal>
@@ -876,28 +887,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:usedBy</AbbreviatedIRI>
-        <Literal>usedBy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:usedByMultiple</AbbreviatedIRI>
-        <Literal>usedByMultiple</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:usesSalt</AbbreviatedIRI>
         <Literal>usesSalt</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:validatedBy</AbbreviatedIRI>
-        <Literal>validatedBy</Literal>
+        <AbbreviatedIRI>res:zone</AbbreviatedIRI>
+        <Literal>zone</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:zone</AbbreviatedIRI>
-        <Literal>zone</Literal>
+        <AbbreviatedIRI>ind:resourceId</AbbreviatedIRI>
+        <Literal>resourceId</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <AbbreviatedIRI>ind:resourceId</AbbreviatedIRI>
+        <Literal>string</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1141,12 +1147,27 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:usedBy</AbbreviatedIRI>
+        <Literal>usedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:usedByMultiple</AbbreviatedIRI>
+        <Literal>usedByMultiple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:validatedBy</AbbreviatedIRI>
+        <Literal>validatedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:value</AbbreviatedIRI>
         <Literal xml:lang="english">value</Literal>
     </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/resourceId</IRI>
-        <Literal>string</Literal>
-    </AnnotationAssertion>
 </Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
