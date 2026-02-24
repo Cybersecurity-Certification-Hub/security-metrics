@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "20105c79-6d4c-4a42-b1d3-2861182d2e6b"
+name: "RFCConfictOfInterestRate"
+description: "This rule assesses whether a [Resource] that offers the property [OrganisationofInformationSecurity.RFC], has [p1:conflictOfInterestRate] set correctly."
+implementationGuidelines:
+  FSC:
+    details: ["Names of developers, testers and approvers of a change"]
+category: "Organisation of Information Security"
+version: "1.0"
+comments: "Number of conflicting tasks in the development, testing and release of changes performed by one employee - Check whether conflicting tasks in the development, testing and release of changes were performed by the same employee Note: Can also be enforced by configuration to ensure separate employees are involved in development/ testing and approval of changes. | Selector: FSC (Resource Type) [TargetValue is measured in units] [Previous name: MT-OIS-02.6H-1]"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: 0
