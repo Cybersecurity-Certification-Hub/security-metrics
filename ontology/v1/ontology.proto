@@ -199,6 +199,14 @@ message ApplicationLogging {
 	repeated string logging_service_ids  = 3884;
 }
 
+// AssetInventory is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message AssetInventory {
+	option (resource_type_names) = "AssetInventory";
+	option (resource_type_names) = "Auditing";
+	option (resource_type_names) = "SecurityFeature";
+
+}
+
 // AsymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message AsymmetricCipher {
 	option (resource_type_names) = "AsymmetricCipher";
@@ -238,6 +246,7 @@ message Auditing {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
+		AssetInventory asset_inventory = 12832;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
 		BootLogging boot_logging = 18439;
@@ -3678,6 +3687,7 @@ message SecurityFeature {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
+		AssetInventory asset_inventory = 12832;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
 		BootLogging boot_logging = 18439;
