@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: df639bbe-64df-406a-87ac-5935fb5a922b
+name: ComplianceAuditInterval
+description: This rule assesses whether a [PolicyDocument] that offers the property [Compliance], has [p1:interval] set correctly.
+implementationGuidelines:
+  AMOE:
+    previous_name: ComplianceManagementQ2
+    question: "How often are procedures checked and that all requirements are met?"
+    keywords: ["compliance checks", "frequency", "requirements verification"]
+category: Compliance
+version: "v1"
+comments: "This metric assesses the frequency of checks for compliance with requirements. Measured in months."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 12
