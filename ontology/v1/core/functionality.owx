@@ -2622,11 +2622,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:length</AbbreviatedIRI>
-        <Literal>length</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:local</AbbreviatedIRI>
         <Literal>local</Literal>
     </AnnotationAssertion>
