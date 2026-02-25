@@ -8,6 +8,7 @@ default applicable = false
 
 default compliant = false
 
+# Evidence containing `atRestEncryption` is applicable, e.g. a storage and a policy document
 applicable if {
 	enc
 }
