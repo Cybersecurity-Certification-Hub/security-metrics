@@ -43,7 +43,7 @@ jobs:
               --output ontology/v1/ontology-merged.owx
         - name: Generate proto file for ontology
           run: |
-            go install github.com/oxisto/owl2proto/cmd/owl2proto@4def1aa
+            go install github.com/oxisto/owl2proto/cmd/owl2proto@latest
             $HOME/go/bin/owl2proto generate-proto \
             --root-resource-name=/classes/Resource ontology/v1/ontology-merged.owx \
             --header-file=ontology/csc_hub_header.proto \
