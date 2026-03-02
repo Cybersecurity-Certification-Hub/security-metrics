@@ -295,6 +295,12 @@
         <DataProperty abbreviatedIRI="prop:argument"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:cpgNode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:listCpgNodes"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:enabled"/>
     </Declaration>
     <Declaration>
@@ -420,11 +426,19 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:calls"/>
+        <DataProperty abbreviatedIRI="prop:call"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="prop:call"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty abbreviatedIRI="prop:calls"/>
+        <DataProperty abbreviatedIRI="prop:listCpgNodes"/>
+        <DataProperty abbreviatedIRI="prop:cpgNode"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:cpgNode"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
