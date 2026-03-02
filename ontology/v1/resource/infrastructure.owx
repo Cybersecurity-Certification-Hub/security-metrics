@@ -548,6 +548,20 @@
         <Class abbreviatedIRI="cl:Storage"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="cl:DatabaseStorage"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:ttl"/>
+            <Datatype abbreviatedIRI="xsd:long"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:DatabaseStorage"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:ttl"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="cl:DeviceProvisioningService"/>
         <Class abbreviatedIRI="cl:IoT"/>
     </SubClassOf>

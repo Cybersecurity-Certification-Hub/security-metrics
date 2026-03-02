@@ -295,6 +295,9 @@
         <DataProperty abbreviatedIRI="prop:argument"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:arguments"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:cpgNode"/>
     </Declaration>
     <Declaration>
@@ -332,6 +335,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:keyUrl"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:parameters"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:labels"/>
@@ -379,6 +385,9 @@
         <DataProperty abbreviatedIRI="prop:serves"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:ttl"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:size"/>
     </Declaration>
     <Declaration>
@@ -395,6 +404,12 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:url"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:inputSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:input"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:value"/>
@@ -547,6 +562,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>prop:cpgNode</AbbreviatedIRI>
         <Literal>cpgNode is a new data property name, before it was called xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:ttl</AbbreviatedIRI>
+        <Literal>ttl</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -965,6 +985,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:arguments</AbbreviatedIRI>
+        <Literal xml:lang="english">arguments</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:backend</AbbreviatedIRI>
         <Literal xml:lang="english">backend</Literal>
     </AnnotationAssertion>
@@ -1050,6 +1075,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:inputSize</AbbreviatedIRI>
+        <Literal xml:lang="english">inputSize</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:input</AbbreviatedIRI>
+        <Literal xml:lang="english">input</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:labels</AbbreviatedIRI>
         <Literal>labels</Literal>
     </AnnotationAssertion>
@@ -1097,6 +1132,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:ports</AbbreviatedIRI>
         <Literal xml:lang="english">ports</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:parameters</AbbreviatedIRI>
+        <Literal xml:lang="english">parameters</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
