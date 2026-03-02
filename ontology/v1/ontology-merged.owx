@@ -3293,6 +3293,13 @@
     <SubClassOf>
         <Class IRI="/classes/Logging"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/logLevel"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Logging"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/classes/monitoringEnabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
@@ -4944,6 +4951,10 @@ name = metadata.name</Literal>
         <Class IRI="/classes/ResourceType"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
+        <DataProperty IRI="/classes/logLevel"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="/properties/algorithm"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
@@ -6051,6 +6062,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Logger</IRI>
         <Literal xml:lang="english">Logger</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Logging</IRI>
+        <Literal>enum:logLevel=DEBUG,INFO,WARN,ERROR</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
