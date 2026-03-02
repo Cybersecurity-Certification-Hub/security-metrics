@@ -620,7 +620,7 @@
         <Class abbreviatedIRI="core:DeAllocate"/>
         <Class abbreviatedIRI="core:MemoryOperation"/>
     </SubClassOf>
-    
+
     <SubClassOf>
         <Class abbreviatedIRI="core:Cipher"/>
         <DataSomeValuesFrom>
@@ -2266,7 +2266,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
-        <Literal xml:lang="english">xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
+        <Literal>xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
