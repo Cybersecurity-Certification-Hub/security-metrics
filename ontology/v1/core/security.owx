@@ -640,6 +640,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:Logging"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:logLevel"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:MemoryOperation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="core:operatesOn"/>
@@ -1198,6 +1205,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:Logging</AbbreviatedIRI>
         <Literal xml:lang="english">Logging</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:Logging</AbbreviatedIRI>
+        <Literal>enum:logLevel=DEBUG,INFO,WARN,ERROR</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
