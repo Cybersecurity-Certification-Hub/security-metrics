@@ -392,9 +392,6 @@
         <DataProperty abbreviatedIRI="prop:modify"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:call"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="prop:method"/>
     </Declaration>
     <Declaration>
@@ -432,9 +429,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:translationUnits"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="core:calls"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -593,13 +587,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="core:operatesOn"/>
             <Class abbreviatedIRI="core:Confidentiality"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:DatabaseOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
-            <Class abbreviatedIRI="core:DatabaseStorage"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1195,7 +1182,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:DatabaseOperation"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:calls"/>
+            <DataProperty abbreviatedIRI="prop:calls"/>
             <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1574,10 +1561,6 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="prop:apiListFunction"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty abbreviatedIRI="prop:call"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -2245,11 +2228,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:call</AbbreviatedIRI>
-        <Literal>call</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:rightPrincipal</AbbreviatedIRI>
         <Literal>rightPrincipal</Literal>
     </AnnotationAssertion>
@@ -2477,11 +2455,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:broadAssignments</AbbreviatedIRI>
         <Literal>broadAssignments</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:calls</AbbreviatedIRI>
-        <Literal>calls</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

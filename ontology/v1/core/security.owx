@@ -1358,11 +1358,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:calls</AbbreviatedIRI>
-        <Literal>calls</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:code</AbbreviatedIRI>
         <Literal>code</Literal>
     </AnnotationAssertion>
