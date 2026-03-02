@@ -50,10 +50,6 @@ jobs:
             --output-path=ontology/v1/ontology.proto \
             --full-semantic-mode=false \
             --deterministic-field-numbers=true
-            echo "generated proto file"
-            echo "--- START OF GENERATED FILE ---"
-            cat ontology/v1/ontology.proto
-            echo "--- END OF GENERATED FILE ---"
         - name: Validate proto file
           run: |       
             mkdir -p buf/validate
