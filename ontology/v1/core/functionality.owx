@@ -603,6 +603,20 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:DatabaseOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
+            <Class abbreviatedIRI="core:DatabaseStorage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DatabaseOperation"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:call"/>
+            <Datatype abbreviatedIRI="xsd:de.fraunhofer.aisec.cpg.graph.Node"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:DeAllocate"/>
         <Class abbreviatedIRI="core:MemoryOperation"/>
     </SubClassOf>
@@ -2229,7 +2243,11 @@
        <AbbreviatedIRI>core:timeWindowSeconds</AbbreviatedIRI>
         <Literal>timeWindowSeconds</Literal>
     </AnnotationAssertion>
-    
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:call</AbbreviatedIRI>
+        <Literal>call</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:rightPrincipal</AbbreviatedIRI>
