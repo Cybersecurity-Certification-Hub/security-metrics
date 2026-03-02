@@ -540,6 +540,21 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:cpgNode</AbbreviatedIRI>
+        <Literal>cpgNode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:cpgNode</AbbreviatedIRI>
+        <Literal>cpgNode is a new data property name, before it was called xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:listCpgNodes</AbbreviatedIRI>
+        <Literal>listCpgNodes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:code</AbbreviatedIRI>
         <Literal>code</Literal>
     </AnnotationAssertion>

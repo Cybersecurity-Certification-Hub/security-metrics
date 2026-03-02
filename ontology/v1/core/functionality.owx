@@ -304,9 +304,6 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:de.fraunhofer.aisec.cpg.graph.Node"/>
-    </Declaration>
-    <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <Declaration>
@@ -600,7 +597,7 @@
         <Class abbreviatedIRI="core:DatabaseOperation"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:call"/>
-            <Datatype abbreviatedIRI="xsd:de.fraunhofer.aisec.cpg.graph.Node"/>
+            <Datatype abbreviatedIRI="prop:cpgNode"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2240,11 +2237,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:HttpClientOperation</AbbreviatedIRI>
         <Literal>HttpClientOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
-        <Literal>xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
