@@ -7679,6 +7679,11 @@ name = metadata.name</Literal>
         <Literal>labels</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/listCpgNodes</IRI>
+        <Literal>listCpgNodes is the plural property corresponding to cpgNode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/listCpgNodes</IRI>
         <Literal>listCpgNodes</Literal>
