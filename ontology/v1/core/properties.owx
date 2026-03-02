@@ -554,6 +554,11 @@
         <Literal>listCpgNodes</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:listCpgNodes</AbbreviatedIRI>
+        <Literal>listCpgNodes is the plural property corresponding to cpgNode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:code</AbbreviatedIRI>
         <Literal>code</Literal>
