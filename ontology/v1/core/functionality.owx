@@ -1394,7 +1394,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpRequest"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:arguments"/>
+            <DataProperty abbreviatedIRI="prop:arguments"/>
             <Datatype abbreviatedIRI="dt:listCpgNodes"/>
         </DataSomeValuesFrom>
     </SubClassOf>
