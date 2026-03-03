@@ -342,9 +342,6 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:de.fraunhofer.aisec.cpg.graph.Node"/>
-    </Declaration>
-    <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <SubClassOf>
@@ -549,6 +546,20 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:DatabaseStorage"/>
         <Class abbreviatedIRI="cl:Storage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:DatabaseStorage"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:ttl"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:DatabaseStorage"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:ttl"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:DeviceProvisioningService"/>
@@ -1447,11 +1458,6 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
-        <Literal xml:lang="english">xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:listString</AbbreviatedIRI>
         <Literal>listString</Literal>
     </AnnotationAssertion>
@@ -1834,11 +1840,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:broadAssignments</AbbreviatedIRI>
         <Literal>broadAssignments</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:calls</AbbreviatedIRI>
-        <Literal>calls</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
