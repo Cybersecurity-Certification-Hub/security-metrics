@@ -471,10 +471,10 @@
         <DataProperty abbreviatedIRI="prop:algorithm"/>
     </Declaration>
     <Declaration>
-        <DataType abbreviatedIRI=":listCpgNodes"/>
+        <DataType abbreviatedIRI="dt:listCpgNodes"/>
     </Declaration>
     <Declaration>
-        <DataType abbreviatedIRI=":cpgNode"/>
+        <DataType abbreviatedIRI="dt:cpgNode"/>
     </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="core:EqualityCheck"/>
