@@ -167,6 +167,9 @@
         <Class abbreviatedIRI="core:SingleSignOn"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:RateLimiting"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:TransportEncryption"/>
     </Declaration>
     <Declaration>
