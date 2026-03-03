@@ -298,12 +298,6 @@
         <DataProperty abbreviatedIRI="prop:arguments"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:cpgNode"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="prop:listCpgNodes"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="prop:enabled"/>
     </Declaration>
     <Declaration>
@@ -449,14 +443,6 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty abbreviatedIRI="prop:listCpgNodes"/>
-        <DataProperty abbreviatedIRI="prop:cpgNode"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty abbreviatedIRI="prop:cpgNode"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="prop:field"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
@@ -555,28 +541,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:cpgNode</AbbreviatedIRI>
-        <Literal>cpgNode</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>prop:cpgNode</AbbreviatedIRI>
-        <Literal>cpgNode is a new data property name, before it was called xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:ttl</AbbreviatedIRI>
         <Literal>ttl</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:listCpgNodes</AbbreviatedIRI>
-        <Literal>listCpgNodes</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>prop:listCpgNodes</AbbreviatedIRI>
-        <Literal>listCpgNodes is the plural property corresponding to cpgNode</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
