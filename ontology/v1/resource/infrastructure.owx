@@ -551,7 +551,7 @@
         <Class abbreviatedIRI="cl:DatabaseStorage"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:ttl"/>
-            <Datatype abbreviatedIRI="xsd:long"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
