@@ -470,12 +470,12 @@
     <Declaration>
         <DataProperty abbreviatedIRI="prop:algorithm"/>
     </Declaration>
-    <Declaration>
+    <!-- <Declaration>
         <DataType abbreviatedIRI="dt:listCpgNodes"/>
     </Declaration>
     <Declaration>
         <DataType abbreviatedIRI="dt:cpgNode"/>
-    </Declaration>
+    </Declaration> -->
     <SubClassOf>
         <Class abbreviatedIRI="core:EqualityCheck"/>
         <Class abbreviatedIRI="core:PolicyOperation"/>
@@ -1462,10 +1462,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpClient"/>
-        <DataSomeValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="core:uses"/>
             <Class abbreviatedIRI="core:TransportEncryption"/>
-        </DataSomeValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpClient"/>
@@ -1767,11 +1767,11 @@
         <AbbreviatedIRI>core:Policy</AbbreviatedIRI>
         <Literal>Policy</Literal>
     </AnnotationAssertion>
-    <AnnotationAssertion>
+    <!-- <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:operatesOn</AbbreviatedIRI>
         <Literal>Link to a concept of the CPG</Literal>
-    </AnnotationAssertion>
+    </AnnotationAssertion> -->
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:RegisterConfigurationGroup</AbbreviatedIRI>
@@ -2861,7 +2861,7 @@
         <AbbreviatedIRI>prop:scope</AbbreviatedIRI>
         <Literal>scope</Literal>
     </AnnotationAssertion>
-    <AnnotationAssertion>
+    <!-- <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>dt:cpgNode</AbbreviatedIRI>
         <Literal>cpgNode</Literal>
@@ -2870,7 +2870,7 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>dt:listCpgNodes</AbbreviatedIRI>
         <Literal>listCpgNodes</Literal>
-    </AnnotationAssertion>
+    </AnnotationAssertion> -->
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:securityAlertsEnabled</AbbreviatedIRI>
