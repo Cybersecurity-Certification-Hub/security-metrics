@@ -469,6 +469,12 @@
     <Declaration>
         <DataProperty abbreviatedIRI="prop:algorithm"/>
     </Declaration>
+    <Declaration>
+        <DataType abbreviatedIRI="listCpgNodes"/>
+    </Declaration>
+    <Declaration>
+        <DataType abbreviatedIRI="cpgNode"/>
+    </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="core:EqualityCheck"/>
         <Class abbreviatedIRI="core:PolicyOperation"/>
@@ -597,7 +603,7 @@
         <Class abbreviatedIRI="core:DatabaseOperation"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:call"/>
-            <Datatype abbreviatedIRI="prop:cpgNode"/>
+            <Datatype abbreviatedIRI="cpgNode"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1198,14 +1204,14 @@
         <Class abbreviatedIRI="core:DatabaseQuery"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:call"/>
-            <Datatype abbreviatedIRI="prop:cpgNode"/>
+            <Datatype abbreviatedIRI="cpgNode"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:DatabaseQuery"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:parameters"/>
-            <Datatype abbreviatedIRI="prop:listCpgNodes"/>
+            <Datatype abbreviatedIRI="listCpgNodes"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1339,7 +1345,7 @@
         <Class abbreviatedIRI="core:HttpEndpoint"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:input"/>
-            <Datatype abbreviatedIRI="prop:listCpgNodes"/>
+            <Datatype abbreviatedIRI="listCpgNodes"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1388,7 +1394,7 @@
         <Class abbreviatedIRI="core:HttpRequest"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:arguments"/>
-            <Datatype abbreviatedIRI="core:listCpgNodes"/>
+            <Datatype abbreviatedIRI="listCpgNodes"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2853,6 +2859,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:scope</AbbreviatedIRI>
         <Literal>scope</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cpgNode</AbbreviatedIRI>
+        <Literal>cpgNode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>listCpgNodes</AbbreviatedIRI>
+        <Literal>listCpgNodes</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
