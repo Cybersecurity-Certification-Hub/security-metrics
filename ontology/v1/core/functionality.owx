@@ -1401,7 +1401,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpRequest"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:method"/>
+            <DataProperty abbreviatedIRI="prop:method"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
