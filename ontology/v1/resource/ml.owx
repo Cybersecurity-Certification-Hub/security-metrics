@@ -17,44 +17,68 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#" />
     <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
     <Declaration>
-        <Class abbreviatedIRI="res:MachineLearning" />
+        <Class abbreviatedIRI="core:MachineLearning"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="res:MachineLearningDataset" />
+        <Class abbreviatedIRI="core:MachineLearningDataset"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:robustness"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:size"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:membershipInferenceResilience"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:explainabilityEnabled"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:adversarialRobustnessScore"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:poisonedDataLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:poisoningResilienceLevel"/>
     </Declaration>
     <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearning"/>
-        <Class abbreviatedIRI="res:Data"/>
+        <Class abbreviatedIRI="core:MachineLearning"/>
+        <Class abbreviatedIRI="core:Data"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningDataset" />
-        <Class abbreviatedIRI="res:MachineLearning" />
+        <Class abbreviatedIRI="core:MachineLearningDataset"/>
+        <Class abbreviatedIRI="core:MachineLearning"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningDataset" />
+        <Class abbreviatedIRI="core:MachineLearningDataset"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:type" />
-            <Datatype abbreviatedIRI="xsd:string" />
+            <DataProperty abbreviatedIRI="core:size"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningDataset" />
+        <Class abbreviatedIRI="core:MachineLearningDataset"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:size" />
-            <Datatype abbreviatedIRI="xsd:int" />
+            <DataProperty abbreviatedIRI="core:type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
-        <Class abbreviatedIRI="res:MachineLearning" />
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+        <Class abbreviatedIRI="core:MachineLearning"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:MachineLearningModel" />
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:adv_robustness" />
+            <DataProperty abbreviatedIRI="res:evasionEfficacyLevel" />
             <Datatype abbreviatedIRI="xsd:float" />
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -68,28 +92,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="res:MachineLearningModel" />
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:poisonLevel" />
+            <DataProperty abbreviatedIRI="res:modelStealResilience" />
             <Datatype abbreviatedIRI="xsd:float" />
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:MachineLearningModel" />
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:privacyLabel" />
-            <Datatype abbreviatedIRI="xsd:float" />
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:privacyLevel" />
-            <Datatype abbreviatedIRI="xsd:float" />
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="res:MachineLearningModel" />
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="res:robustness" />
+            <DataProperty abbreviatedIRI="res:poisonedDataLevel" />
             <Datatype abbreviatedIRI="xsd:float" />
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -100,4 +110,51 @@
             <Class abbreviatedIRI="core:Vulnerability"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:adversarialRobustnessScore"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:explainabilityEnabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:poisonedDataLevel"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:poisoningResilienceLevel"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:membershipInferenceResilience"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MachineLearningModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:adversarialRobustnessScore"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
 </Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

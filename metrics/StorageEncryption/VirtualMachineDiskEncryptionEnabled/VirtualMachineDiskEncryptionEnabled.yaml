@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: VirtualMachineDiskEncryptionEnabled
+id: 0fcc0863-e4ed-4f90-81bd-ec7bf1ded409
+name: VirtualMachineDiskEncryptionEnabled
 description: This rule assesses whether a [VirtualMachine] with a non-empty [BlockStorage] that includes the property [atRestEncryption.customerKeyEncryption], has [p1:enabled] set correctly.
 category: StorageEncryption
 version: "v1" 

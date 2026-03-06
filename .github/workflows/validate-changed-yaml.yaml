@@ -27,11 +27,10 @@ jobs:
         with:
           fetch-depth: 0  # Full history needed for diff
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-
       - name: Install validator
         run: pip install "check-jsonschema[yaml]"
       - name: Get changed YAML files
@@ -57,15 +56,26 @@ jobs:
         if: ${{ steps.diff.outputs.files != '' }}
         run: |
           missing=0
+          missing_list=""
           for f in ${{ steps.diff.outputs.files }}; do
-            dir=$(dirname "$f")
-            for companion in data.json metric.rego; do
-              if [ ! -f "$dir/$companion" ]; then
-                echo "::error file=$f::Missing $companion in $dir"
-                missing=1
-              fi
-            done
+          dir=$(dirname "$f")
+          for companion in data.json metric.rego; do
+            if [ ! -f "$dir/$companion" ]; then
+              echo "::error file=$f::Missing $companion in $dir"
+              missing=1
+              missing_list="${missing_list}\n${dir}/${companion} (required by ${f})"
+            fi
           done
+            done
+
+          if [ "$missing" -ne 0 ]; then
+          echo "Missing companion files:"
+          # print each missing file on its own line
+          echo -e "$missing_list"
+            else
+          echo "All companion files are present."
+            fi
+
           exit $missing
 
       - name: Validate against schema

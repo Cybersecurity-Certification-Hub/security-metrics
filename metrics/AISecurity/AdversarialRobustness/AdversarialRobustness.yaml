@@ -1,0 +1,13 @@
+# ====== Metadata ======
+id: 92469698-362f-49b4-a8bb-2be5375fa7b7
+name: AdversarialRobustness
+description: This rule assesses whether a [MachineLearningModel] exhibits a compliant level of the [p1:adversarialRobustnessScore] evaluated via the CleverScore or SPADEScore.
+category: AISecurity
+version: "v1"
+comments: A robust machine learning model should be tested under adversarial conditions, using the CLEVER score or SPADES score. 
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: 0.5
+

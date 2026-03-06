@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: T1CoherenceTime
+id: 415e4272-684e-4c2e-ab11-9b4ef281f197
+name: T1CoherenceTime
 description: This rule assesses whether a [QPU] has a [p1:T1CoherenceTime] that is above a specified threshold.
 category: QuantumSecurity
 version: "v1" 

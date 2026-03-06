@@ -1,0 +1,21 @@
+name: "Pull Request Labeler"
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  labeler:
+    # Only run this job if the pull request comes from the same repository (not a fork)
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/labeler@v5
+
+        with:
+          configuration-path: .github/labels.yaml

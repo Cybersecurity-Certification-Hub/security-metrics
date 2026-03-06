@@ -35,12 +35,6 @@
         <Class abbreviatedIRI="core:Logger"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -81,9 +75,6 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:Application"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:has"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:HttpEndpoint"/>
@@ -142,14 +133,6 @@
         <Class abbreviatedIRI="core:Framework"/>
         <NamedIndividual abbreviatedIRI="library:SpringBoot"/>
     </ClassAssertion>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="core:usedByMultiple"/>
-        <ObjectProperty abbreviatedIRI="core:usedBy"/>
-    </SubObjectPropertyOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
@@ -602,23 +585,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:usedBy</AbbreviatedIRI>
-        <Literal>usedBy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:usedByMultiple</AbbreviatedIRI>
-        <Literal>usedByMultiple</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:usesSalt</AbbreviatedIRI>
         <Literal>usesSalt</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:validatedBy</AbbreviatedIRI>
-        <Literal>validatedBy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

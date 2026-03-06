@@ -489,7 +489,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:Credential"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="cl:usedByMultiple"/>
+            <ObjectProperty abbreviatedIRI="prop:usedByMultiple"/>
             <Class abbreviatedIRI="cl:CloudResource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1422,8 +1422,18 @@ name = metadata.name</Literal>
     </DataPropertyAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+       <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
+        <Literal>A key used for encryption algorithms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
         <Literal>The node that represents the "key" of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:Key</AbbreviatedIRI>
+        <Literal>The node that represents the &quot;key&quot; of this option. For example, in an INI file, this would be the [FieldDeclaration] node that represents the key.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1519,11 +1529,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:ContainerRegistry</AbbreviatedIRI>
         <Literal xml:lang="english">ContainerRegistry</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-        <AbbreviatedIRI>cl:Credential</AbbreviatedIRI>
-        <Literal>usedByMultiple: In which resources the credential is being used</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2237,23 +2242,8 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:usedBy</AbbreviatedIRI>
-        <Literal>usedBy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:usedByMultiple</AbbreviatedIRI>
-        <Literal>usedByMultiple</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:usesSalt</AbbreviatedIRI>
         <Literal>usesSalt</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:validatedBy</AbbreviatedIRI>
-        <Literal>validatedBy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
