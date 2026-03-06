@@ -617,6 +617,15 @@ message CodeRepository {
 	UsageStatistics usage_statistics = 3480;
 }
 
+// Commit is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Commit {
+	option (resource_type_names) = "Commit";
+	option (resource_type_names) = "Functionality";
+
+	optional string code_id = 14625;
+	CryptographicHash cryptographic_hash = 2891;
+}
+
 // Component is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Component {
 
@@ -1567,6 +1576,7 @@ message Functionality {
 		SymmetricCipher symmetric_cipher = 8917;
 		CipherSuite cipher_suite = 11132;
 		CodeRegion code_region = 9184;
+		Commit commit = 13764;
 		LocalDataLocation local_data_location = 12313;
 		RemoteDataLocation remote_data_location = 13541;
 		DynamicLoading dynamic_loading = 2731;
