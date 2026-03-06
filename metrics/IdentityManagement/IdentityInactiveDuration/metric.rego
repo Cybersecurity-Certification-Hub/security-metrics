@@ -17,7 +17,10 @@ compliant if {
 	ts := time.parse_rfc3339_ns(identity.lastActivity)
 	now := time.now_ns()
 
-	#window := ((((90 * 24) * 3600) * 1000) * 1000) * 1000
+	# The variable `window` calculates a time duration in nanoseconds.
+	# It is based on a configurable `data.target_value` representing days,
+	# which is converted to hours, then seconds, milliseconds, microseconds, and finally nanoseconds.
+	# window := ((((90 * 24) * 3600) * 1000) * 1000) * 1000
 	window := ((((data.target_value * 24) * 3600) * 1000) * 1000) * 1000
 
 	#now - ts <= window
