@@ -393,7 +393,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:PolicyDocument"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <ObjectProperty abbreviatedIRI="prop:offersInterface"/>
             <Class abbreviatedIRI="core:Governance"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
