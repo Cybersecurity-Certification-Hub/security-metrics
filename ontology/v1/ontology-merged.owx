@@ -1413,6 +1413,9 @@
         <DataProperty IRI="/classes//mode"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/properties/offersInterface"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/classes/describes"/>
     </Declaration>
     <Declaration>
@@ -3789,7 +3792,7 @@
     <SubClassOf>
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty IRI="/properties/offersInterface"/>
             <Class IRI="/classes/Governance"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
