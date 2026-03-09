@@ -3320,13 +3320,6 @@
     <SubClassOf>
         <Class IRI="/classes/Logging"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/name"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Logging"/>
-        <DataSomeValuesFrom>
             <DataProperty IRI="/classes/securityAlertsEnabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
@@ -4585,13 +4578,6 @@
         <Class IRI="/classes/Vulnerability"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/description"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Vulnerability"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/name"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>

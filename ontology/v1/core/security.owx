@@ -635,13 +635,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Logging"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:name"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Logging"/>
-        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:logLevel"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>

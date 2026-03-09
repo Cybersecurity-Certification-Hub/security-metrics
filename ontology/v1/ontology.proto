@@ -89,7 +89,6 @@ message ActivityLogging {
 	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
 	string log_level = 11221;
 	bool monitoring_log_data_enabled = 13626;
-	string name = 10561 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 10788;
 	bool security_alerts_enabled = 17680;
 	repeated string logging_service_ids  = 16760;
@@ -197,7 +196,6 @@ message ApplicationLogging {
 	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
 	string log_level = 14273;
 	bool monitoring_log_data_enabled = 4205;
-	string name = 4460 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 6319;
 	bool security_alerts_enabled = 17870;
 	repeated string logging_service_ids  = 3884;
@@ -423,7 +421,6 @@ message BootLogging {
 	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
 	string log_level = 7946;
 	bool monitoring_log_data_enabled = 9135;
-	string name = 12593 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 2338;
 	bool security_alerts_enabled = 3133;
 	repeated string logging_service_ids  = 17105;
@@ -2804,7 +2801,6 @@ message OSLogging {
 	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
 	string log_level = 10256;
 	bool monitoring_log_data_enabled = 12434;
-	string name = 1176 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 11358;
 	bool security_alerts_enabled = 7453;
 	repeated string logging_service_ids  = 14966;
@@ -3525,7 +3521,6 @@ message ResourceLogging {
 	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
 	string log_level = 5969;
 	bool monitoring_log_data_enabled = 6804;
-	string name = 2313 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 6776;
 	bool security_alerts_enabled = 6099;
 	repeated string logging_service_ids  = 3295;
@@ -4089,7 +4084,6 @@ message Vulnerability {
 	string cve = 205;
 	repeated string cwe = 18325;
 	string description = 10690;
-	string name = 13528 [ (buf.validate.field).required = true ];
 	string url = 11925;
 }
 
