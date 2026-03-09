@@ -2934,26 +2934,26 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices</IRI>
-        <Literal xml:lang="english">Amazon Web Services</Literal>
+        <Literal xml:lang="en">Amazon Web Services</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/CircleCI</IRI>
-        <Literal xml:lang="english">CircleCI</Literal>
+        <Literal xml:lang="en">CircleCI</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/GitHubActions</IRI>
-        <Literal xml:lang="english">GitHub Actions</Literal>
+        <Literal xml:lang="en">GitHub Actions</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/TeamCity</IRI>
-        <Literal xml:lang="english">TeamCity</Literal>
+        <Literal xml:lang="en">TeamCity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-        <IRI>wptmp:entity#contextIsChecked</IRI>
+        <IRI>https://ontology.cybersecuritycertcluster.eu/core/functionality#contextIsChecked</IRI>
         <Literal>Check additional information, e.g. which device is used or the time of the login</Literal>
     </AnnotationAssertion>
 </Ontology>
