@@ -633,13 +633,6 @@
         <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:Logging"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:name"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:MemoryOperation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="core:operatesOn"/>
