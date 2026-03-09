@@ -1126,6 +1126,7 @@ message DatabaseStorage {
 	string name = 1264 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 11538;
+	double ttl = 6277;
 	ActivityLogging activity_logging = 14738;
 	AtRestEncryption at_rest_encryption = 16710;
 	repeated Backup backups  = 6649;
@@ -1733,7 +1734,7 @@ message HashOperation {
 	string algorithm = 16160;
 	bool uses_salt = 14753;
 	CodeRegion code_region = 10758;
-	Confidentiality confidentiality = 805;
+	SecurityFeature security_feature = 10332;
 }
 
 // Http is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1756,6 +1757,7 @@ message HttpClient {
 
 	bool is_tls = 2674;
 	Authenticity authenticity = 14857;
+	TransportEncryption uses = 18191;
 }
 
 // HttpClientLibrary is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1785,12 +1787,14 @@ message HttpEndpoint {
 	option (resource_type_names) = "Functionality";
 
 	string handler = 8702;
+	int32 input_size = 13504;
 	string method = 1347;
 	string path = 11504;
 	string url = 16076;
 	Authenticity authenticity = 3805;
 	Authorization authorization = 2327;
 	HttpRequestContext http_request_context = 4988;
+	RateLimiting rate_limiting = 7825;
 	TransportEncryption transport_encryption = 13575;
 }
 
@@ -1806,6 +1810,7 @@ message HttpEndpointOperation {
 }
 
 // HttpRequest is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// enum:method=GET,POST,PUT,HEAD,PATCH,OPTIONS,CONNECT,TRACE,DELETE,UNKNOWN
 message HttpRequest {
 	option (resource_type_names) = "HttpRequest";
 	option (resource_type_names) = "HttpClientOperation";
@@ -1813,6 +1818,7 @@ message HttpRequest {
 	option (resource_type_names) = "Functionality";
 
 	string call = 16831;
+	string method = 17392;
 	string req_body = 5634;
 	CodeRegion code_region = 681;
 	HttpClient http_client = 16750;
