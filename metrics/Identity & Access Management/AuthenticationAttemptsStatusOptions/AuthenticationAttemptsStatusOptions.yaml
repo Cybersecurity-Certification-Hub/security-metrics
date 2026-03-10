@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "2777696f-6e1a-4c6f-af82-fdb0bdc57bd6"
+name: "AuthenticationAttemptsStatusOptions"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [AccessManagement.AuthenticationAttempts], has [p1:statusOptions] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: AccessStatusQ2
+    question: "What status can authentication attempts have?"
+    keywords: ["successful attempts", "failed attempts", "logging"]
+category: "Identity & Access Management"
+version: "1.0"
+comments: "This metric assesses the possible status values for authentication attempts. Measured as string."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[failed, successful, cancelled]"

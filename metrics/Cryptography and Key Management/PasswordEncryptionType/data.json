@@ -1,0 +1,4 @@
+{
+    "operator": "isIn",
+    "target_value": "[MD5, SHA256]"
+}

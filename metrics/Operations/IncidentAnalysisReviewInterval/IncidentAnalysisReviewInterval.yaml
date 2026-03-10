@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "6ebe4d07-bd51-49be-bf8b-5ff62863befb"
+name: "IncidentAnalysisReviewInterval"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityIncident.Procedure], has [p1:reviewInterval] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: IncidentAnalysisFrequencyQ1
+    question: "How often are procedures for vulnerabilities and incidents analyzed?"
+    keywords: ["incident", "vulnerability", "frequency"]
+category: "Operations"
+version: "1.0"
+comments: "This metric assesses the frequency of analyzing vulnerability and incident procedures. Measured in days."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 30
