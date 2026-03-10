@@ -19,6 +19,9 @@
         <Class abbreviatedIRI="core:Allocate"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:Commit"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:Principal"/>
     </Declaration>
     <Declaration>
@@ -763,6 +766,10 @@
         <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:Commit"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:ProctectedAsset"/>
         <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
@@ -822,6 +829,20 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:ConfigurationGroup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Commit"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:CryptographicHash"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Commit"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:SoftwareResource"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
