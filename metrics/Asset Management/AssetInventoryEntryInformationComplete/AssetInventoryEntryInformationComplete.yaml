@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "c29b446c-eed6-4ccb-b39f-1d42c63405a2"
+name: "AssetInventoryEntryInformationComplete"
+description: "This rule assesses whether a [Resource] that offers the property [AssetManagement.Inventory.Entry], has [p1:allRequiredInformationRecorded] set correctly."
+implementationGuidelines:
+  FSC:
+    details: ["- Asset Inventory/CMDB", "- Attributes per asset"]
+category: "Asset Management"
+version: "1.0"
+comments: "Completeness of asset inventory entries - Check whether all required information, such as lifecycle status and associated risk, is recorded for each asset in the inventory | Selector: FSC (Resource Type) [Previous name: MT-AM-01.5H-1]"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "true"

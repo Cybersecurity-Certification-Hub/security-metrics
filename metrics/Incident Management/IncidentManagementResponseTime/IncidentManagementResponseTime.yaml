@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "e2b2b547-57bb-4dc3-9e73-516138cd5674"
+name: "IncidentManagementResponseTime"
+description: "This rule assesses whether a [Resource] that offers the property [IncidentManagement], has [p1:responseTime] set correctly."
+implementationGuidelines:
+  FSC:
+    details: ["- (security) incidents", "- Response times documented in (security) incident ticket"]
+category: "Incident Management"
+version: "1.0"
+comments: "Timely response to identified information security incidents - Check whether an incident was responded to within the specified time period | Selector: FSC (Resource Type) [TargetValue is measured in hours] [Previous name: MT-IM-02.6H-1]"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 12
