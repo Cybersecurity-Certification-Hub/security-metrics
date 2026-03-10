@@ -126,6 +126,9 @@
         <Class IRI="/classes/CodeRepository"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/CodeSignoff"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Component"/>
     </Declaration>
     <Declaration>
@@ -1929,6 +1932,24 @@
     <SubClassOf>
         <Class IRI="/classes/CodeRepository"/>
         <Class IRI="/classes/CloudResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CodeRepository"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/CodeSignoff"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CodeSignoff"/>
+        <Class IRI="/classes/Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CodeSignoff"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/enforced"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Component"/>

@@ -65,6 +65,9 @@
         <Class abbreviatedIRI="core:Confidentiality"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:CodeSignoff"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:CryptographicHash"/>
     </Declaration>
     <Declaration>
@@ -295,6 +298,10 @@
         <Class abbreviatedIRI="core:Auditing"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:CodeSignoff"/>
+        <Class abbreviatedIRI="core:Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:AnomalyDetection"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
@@ -520,6 +527,13 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:algorithm"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CodeSignoff"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:enforced"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
