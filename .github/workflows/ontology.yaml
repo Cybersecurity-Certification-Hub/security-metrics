@@ -50,6 +50,11 @@ jobs:
             --output-path=ontology/v1/ontology.proto \
             --full-semantic-mode=false \
             --deterministic-field-numbers=true
+        - name: Upload generated proto as artifact
+          uses: actions/upload-artifact@v4
+          with:
+            name: ontology-proto
+            path: ontology/v1/ontology.proto
         - name: Validate proto file
           run: |       
             mkdir -p buf/validate
