@@ -87,6 +87,7 @@ message ActivityLogging {
 
 	bool enabled = 18133;
 	bool monitoring_log_data_enabled = 13626;
+	string name = 10561 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 10788;
 	bool security_alerts_enabled = 17680;
 	repeated string logging_service_ids  = 16760;
@@ -192,6 +193,7 @@ message ApplicationLogging {
 
 	bool enabled = 13571;
 	bool monitoring_log_data_enabled = 4205;
+	string name = 4460 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 6319;
 	bool security_alerts_enabled = 17870;
 	repeated string logging_service_ids  = 3884;
@@ -415,6 +417,7 @@ message BootLogging {
 
 	bool enabled = 17321;
 	bool monitoring_log_data_enabled = 9135;
+	string name = 12593 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 2338;
 	bool security_alerts_enabled = 3133;
 	repeated string logging_service_ids  = 17105;
@@ -2812,6 +2815,7 @@ message OSLogging {
 
 	bool enabled = 207;
 	bool monitoring_log_data_enabled = 12434;
+	string name = 1176 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 11358;
 	bool security_alerts_enabled = 7453;
 	repeated string logging_service_ids  = 14966;
@@ -3532,6 +3536,7 @@ message ResourceLogging {
 
 	bool enabled = 1509;
 	bool monitoring_log_data_enabled = 6804;
+	string name = 2313 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 6776;
 	bool security_alerts_enabled = 6099;
 	repeated string logging_service_ids  = 3295;
