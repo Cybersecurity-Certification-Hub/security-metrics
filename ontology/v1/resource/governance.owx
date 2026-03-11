@@ -22,11 +22,6 @@
     <Declaration>
         <Class abbreviatedIRI="res:Governance"/>
     </Declaration>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-        <AbbreviatedIRI>core:Governance</AbbreviatedIRI>
-        <Literal>This ontology defines Governance as a cybersecurity resource type focused on organizational security management practices.</Literal>
-    </AnnotationAssertion>
     <Declaration>
         <Class abbreviatedIRI="res:SecurityTraining"/>
     </Declaration>
@@ -77,6 +72,11 @@
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:Governance</AbbreviatedIRI>
+        <Literal>This ontology defines Governance as a cybersecurity resource type focused on organizational security management practices.</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>res:Monitoring</AbbreviatedIRI>
