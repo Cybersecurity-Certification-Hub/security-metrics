@@ -1437,6 +1437,9 @@
         <DataProperty IRI="/classes/explainability"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="/classes/Implementation"/>
     </Declaration>
     <Declaration>
@@ -5735,7 +5738,7 @@ name = metadata.name</Literal>
         <Literal>GetSecret</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <AnnotationProperty IRI="rdfs:comment"/>
         <IRI>/classes/Governance</IRI>
         <Literal>This ontology defines Governance as a cybersecurity resource type focused on organizational security management practices.</Literal>
     </AnnotationAssertion>
