@@ -1443,6 +1443,9 @@
         <DataProperty IRI="/classes/explainability"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="/classes/Implementation"/>
     </Declaration>
     <Declaration>
@@ -6882,6 +6885,11 @@ name = metadata.name</Literal>
         <Literal>contextIsChecked</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="rdfs:comment"/>
+        <IRI>/classes/contextIsChecked</IRI>
+        <Literal>Check additional information, e.g. which device is used or the time of the login</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/creation_time</IRI>
         <Literal>creationTime</Literal>
@@ -7332,14 +7340,9 @@ name = metadata.name</Literal>
         <Literal>zone</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-        <IRI>/core/functionality#contextIsChecked</IRI>
-        <Literal>Check additional information, e.g. which device is used or the time of the login</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/individuals/AmazonWebServices</IRI>
-        <Literal xml:lang="en">Amazon Web Services</Literal>
+        <Literal>Amazon Web Services</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7349,7 +7352,7 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/individuals/CircleCI</IRI>
-        <Literal xml:lang="en">CircleCI</Literal>
+        <Literal>CircleCI</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7359,7 +7362,7 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/individuals/GitHubActions</IRI>
-        <Literal xml:lang="en">GitHub Actions</Literal>
+        <Literal>GitHub Actions</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7369,7 +7372,7 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/individuals/TeamCity</IRI>
-        <Literal xml:lang="en">TeamCity</Literal>
+        <Literal>TeamCity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
