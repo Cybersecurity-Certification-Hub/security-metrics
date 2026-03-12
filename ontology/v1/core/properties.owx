@@ -571,6 +571,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:scope</AbbreviatedIRI>
+        <Literal>scope</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:daysSinceActive</AbbreviatedIRI>
         <Literal>durationSinceActive</Literal>
     </AnnotationAssertion>

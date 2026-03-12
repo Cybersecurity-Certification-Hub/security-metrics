@@ -2849,11 +2849,6 @@
         <AbbreviatedIRI>core:schemaURL</AbbreviatedIRI>
         <Literal>schemaURL</Literal>
     </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:scope</AbbreviatedIRI>
-        <Literal>scope</Literal>
-    </AnnotationAssertion>
     <!-- <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>dt:cpgNode</AbbreviatedIRI>
@@ -2927,22 +2922,22 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices</IRI>
-        <Literal xml:lang="en">Amazon Web Services</Literal>
+        <Literal>Amazon Web Services</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/CircleCI</IRI>
-        <Literal xml:lang="en">CircleCI</Literal>
+        <Literal>CircleCI</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/GitHubActions</IRI>
-        <Literal xml:lang="en">GitHub Actions</Literal>
+        <Literal>GitHub Actions</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/TeamCity</IRI>
-        <Literal xml:lang="en">TeamCity</Literal>
+        <Literal>TeamCity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
