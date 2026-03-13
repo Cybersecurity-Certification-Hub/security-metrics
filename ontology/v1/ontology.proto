@@ -4090,7 +4090,7 @@ message Vulnerability {
 	string cve = 205;
 	repeated string cwe = 18325;
 	string description = 10690;
-	// exploitable: Indicates whether a vulnerability is known to be exploitable
+	// exploitable: Indicates whether a vulnerability is exploitable for the given target of evaluation (TOE)
 	bool exploitable = 15966;
 	string url = 11925;
 }
