@@ -7566,7 +7566,7 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/properties/exploitable</IRI>
-        <Literal>exploitable: Indicates whether a vulnerability is known to be exploitable</Literal>
+        <Literal>exploitable: Indicates whether a vulnerability is exploitable for the given target of evaluation (TOE)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
