@@ -313,6 +313,9 @@
         <DataProperty abbreviatedIRI="prop:criticality"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:exploitable"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:source"/>
     </Declaration>
     <Declaration>
@@ -1522,6 +1525,13 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Vulnerability"/>
         <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:exploitable"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Vulnerability"/>
+        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:cve"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
@@ -2492,6 +2502,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>prop:criticality</AbbreviatedIRI>
         <Literal>criticality: Contains the criticality of a vulnerability, e.g., low, medium, high, critical</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:exploitable</AbbreviatedIRI>
+        <Literal>exploitable: Indicates whether a vulnerability is known to be exploitable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:exploitable</AbbreviatedIRI>
+        <Literal>exploitable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
