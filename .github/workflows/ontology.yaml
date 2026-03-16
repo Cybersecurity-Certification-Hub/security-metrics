@@ -37,10 +37,15 @@ jobs:
         - name: Merge owx files
           uses: docker://eclipse-temurin
           with:
-            args: java -jar robot.jar -vvv merge 
+            args: java -jar robot.jar --verbose merge 
               --catalog ontology/v1/catalog-v001.xml
               --input ontology/v1/ontology.owx 
               --output ontology/v1/ontology-merged.owx
+        - name: Upload merged ontology
+          uses: actions/upload-artifact@v4
+          with:
+            name: ontology-merged
+            path: ontology/v1/ontology-merged.owx
         - name: Generate proto file for ontology
           run: |
             go install github.com/oxisto/owl2proto/cmd/owl2proto@latest
@@ -50,6 +55,11 @@ jobs:
             --output-path=ontology/v1/ontology.proto \
             --full-semantic-mode=false \
             --deterministic-field-numbers=true
+        - name: Upload proto file
+          uses: actions/upload-artifact@v4
+          with:
+            name: proto-file
+            path: ontology/v1/ontology.proto
         - name: Validate proto file
           run: |       
             mkdir -p buf/validate
