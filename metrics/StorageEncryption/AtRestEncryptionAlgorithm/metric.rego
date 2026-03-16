@@ -1,6 +1,7 @@
 package cch.metrics.at_rest_encryption_algorithm
 
 import data.cch.compare
+import rego.v1
 
 import input.atRestEncryption as enc
 
