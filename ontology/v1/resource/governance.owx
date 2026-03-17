@@ -26,7 +26,7 @@
         <Class abbreviatedIRI="res:SecurityTraining"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="res:Monitoring"/>
+        <Class abbreviatedIRI="res:MonitoringProcedure"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="res:Training"/>
@@ -44,7 +44,7 @@
         <Class abbreviatedIRI="res:Training"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:Monitoring"/>
+        <Class abbreviatedIRI="res:MonitoringProcedure"/>
         <Class abbreviatedIRI="res:Governance"/>
     </SubClassOf>
     <SubClassOf>
@@ -52,7 +52,7 @@
         <Class abbreviatedIRI="res:Governance"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="res:Monitoring"/>
+        <Class abbreviatedIRI="res:MonitoringProcedure"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="res:intervalMonths"/>
             <Datatype abbreviatedIRI="xsd:int"/>
@@ -75,11 +75,11 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Governance</AbbreviatedIRI>
-        <Literal>This ontology defines Governance as a cybersecurity resource type focused on organizational security management practices.</Literal>
+        <Literal>Governance represents organizational security management artifacts (e.g., procedures and trainings) that are often evidenced via documents.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>res:Monitoring</AbbreviatedIRI>
-        <Literal>intervalMonths: Review frequency of monitoring procedures</Literal>
+        <AbbreviatedIRI>res:MonitoringProcedure</AbbreviatedIRI>
+        <Literal>intervalMonths: Review frequency (in months) for reviewing monitoring procedures</Literal>
     </AnnotationAssertion>
 </Ontology>
