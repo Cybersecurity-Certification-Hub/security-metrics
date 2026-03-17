@@ -15,6 +15,7 @@
     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
     <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="dt" IRI="https://ontology.cybersecuritycertcluster.eu/datatypes/"/>
     <Declaration>
         <Class abbreviatedIRI="core:Allocate"/>
     </Declaration>
@@ -304,9 +305,6 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:de.fraunhofer.aisec.cpg.graph.Node"/>
-    </Declaration>
-    <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <Declaration>
@@ -392,9 +390,6 @@
         <DataProperty abbreviatedIRI="prop:modify"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:call"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="prop:method"/>
     </Declaration>
     <Declaration>
@@ -432,9 +427,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:translationUnits"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="core:calls"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -478,6 +470,12 @@
     <Declaration>
         <DataProperty abbreviatedIRI="prop:algorithm"/>
     </Declaration>
+    <!-- <Declaration>
+        <DataType abbreviatedIRI="dt:listCpgNodes"/>
+    </Declaration>
+    <Declaration>
+        <DataType abbreviatedIRI="dt:cpgNode"/>
+    </Declaration> -->
     <SubClassOf>
         <Class abbreviatedIRI="core:EqualityCheck"/>
         <Class abbreviatedIRI="core:PolicyOperation"/>
@@ -592,7 +590,7 @@
         <Class abbreviatedIRI="core:CryptographicOperation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="core:operatesOn"/>
-            <Class abbreviatedIRI="core:Confidentiality"/>
+            <Class abbreviatedIRI="core:SecurityFeature"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -603,10 +601,17 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:DatabaseOperation"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:call"/>
+            <Datatype abbreviatedIRI="dt:cpgNode"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:DeAllocate"/>
         <Class abbreviatedIRI="core:MemoryOperation"/>
     </SubClassOf>
-    
+
     <SubClassOf>
         <Class abbreviatedIRI="core:Cipher"/>
         <DataSomeValuesFrom>
@@ -1000,7 +1005,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:InputValidationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Output"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1181,7 +1186,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:DatabaseOperation"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:calls"/>
+            <DataProperty abbreviatedIRI="prop:calls"/>
             <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1194,6 +1199,20 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:modify"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DatabaseQuery"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:call"/>
+            <Datatype abbreviatedIRI="dt:cpgNode"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DatabaseQuery"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:parameters"/>
+            <Datatype abbreviatedIRI="dt:listCpgNodes"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1326,6 +1345,27 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpEndpoint"/>
         <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:input"/>
+            <Datatype abbreviatedIRI="dt:listCpgNodes"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpEndpoint"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:inputSize"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpEndpoint"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:RateLimiting"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpEndpoint"/>
+        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:path"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
@@ -1348,6 +1388,20 @@
         <Class abbreviatedIRI="core:HttpRequest"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:reqBody"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpRequest"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:arguments"/>
+            <Datatype abbreviatedIRI="dt:listCpgNodes"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpRequest"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:method"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1406,7 +1460,13 @@
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
-    
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpClient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:uses"/>
+            <Class abbreviatedIRI="core:TransportEncryption"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpClient"/>
         <ObjectSomeValuesFrom>
@@ -1556,10 +1616,6 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty abbreviatedIRI="prop:call"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="prop:field"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
@@ -1704,11 +1760,11 @@
         <AbbreviatedIRI>core:Policy</AbbreviatedIRI>
         <Literal>Policy</Literal>
     </AnnotationAssertion>
-    <AnnotationAssertion>
+    <!-- <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:operatesOn</AbbreviatedIRI>
         <Literal>Link to a concept of the CPG</Literal>
-    </AnnotationAssertion>
+    </AnnotationAssertion> -->
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:RegisterConfigurationGroup</AbbreviatedIRI>
@@ -2222,7 +2278,6 @@
        <AbbreviatedIRI>core:timeWindowSeconds</AbbreviatedIRI>
         <Literal>timeWindowSeconds</Literal>
     </AnnotationAssertion>
-    
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:rightPrincipal</AbbreviatedIRI>
@@ -2237,11 +2292,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:HttpClientOperation</AbbreviatedIRI>
         <Literal>HttpClientOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
-        <Literal xml:lang="english">xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2410,6 +2460,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:HttpRequest</AbbreviatedIRI>
+        <Literal>enum:method=GET,POST,PUT,HEAD,PATCH,OPTIONS,CONNECT,TRACE,DELETE,UNKNOWN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Vulnerability</AbbreviatedIRI>
         <Literal>cwe: Common Weakness Enumeration</Literal>
     </AnnotationAssertion>
@@ -2452,11 +2507,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:broadAssignments</AbbreviatedIRI>
         <Literal>broadAssignments</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:calls</AbbreviatedIRI>
-        <Literal>calls</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2799,11 +2849,16 @@
         <AbbreviatedIRI>core:schemaURL</AbbreviatedIRI>
         <Literal>schemaURL</Literal>
     </AnnotationAssertion>
+    <!-- <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dt:cpgNode</AbbreviatedIRI>
+        <Literal>cpgNode</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:scope</AbbreviatedIRI>
-        <Literal>scope</Literal>
-    </AnnotationAssertion>
+        <AbbreviatedIRI>dt:listCpgNodes</AbbreviatedIRI>
+        <Literal>listCpgNodes</Literal>
+    </AnnotationAssertion> -->
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:securityAlertsEnabled</AbbreviatedIRI>
@@ -2867,27 +2922,27 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices</IRI>
-        <Literal xml:lang="english">Amazon Web Services</Literal>
+        <Literal>Amazon Web Services</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/CircleCI</IRI>
-        <Literal xml:lang="english">CircleCI</Literal>
+        <Literal>CircleCI</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/GitHubActions</IRI>
-        <Literal xml:lang="english">GitHub Actions</Literal>
+        <Literal>GitHub Actions</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/TeamCity</IRI>
-        <Literal xml:lang="english">TeamCity</Literal>
+        <Literal>TeamCity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-        <IRI>wptmp:entity#contextIsChecked</IRI>
-        <Literal>Check additional information, e.g. which device is used or the time of the login</Literal>
-    </AnnotationAssertion>
+    <AnnotationProperty IRI="rdfs:comment"/>
+    <AbbreviatedIRI>core:contextIsChecked</AbbreviatedIRI>
+    <Literal>Check additional information, e.g. which device is used or the time of the login</Literal>
+</AnnotationAssertion>
 </Ontology>
 <!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->

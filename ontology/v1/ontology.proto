@@ -86,6 +86,8 @@ message ActivityLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 18133;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 11221;
 	bool monitoring_log_data_enabled = 13626;
 	string name = 10561 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 10788;
@@ -192,6 +194,8 @@ message ApplicationLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 13571;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 14273;
 	bool monitoring_log_data_enabled = 4205;
 	string name = 4460 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 6319;
@@ -416,6 +420,8 @@ message BootLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 17321;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 7946;
 	bool monitoring_log_data_enabled = 9135;
 	string name = 12593 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 2338;
@@ -1123,6 +1129,7 @@ message DatabaseStorage {
 	string name = 1264 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 11538;
+	double ttl = 6277;
 	ActivityLogging activity_logging = 14738;
 	AtRestEncryption at_rest_encryption = 16710;
 	repeated Backup backups  = 6649;
@@ -1740,7 +1747,7 @@ message HashOperation {
 	string algorithm = 16160;
 	bool uses_salt = 14753;
 	CodeRegion code_region = 10758;
-	Confidentiality confidentiality = 805;
+	SecurityFeature security_feature = 10332;
 }
 
 // Http is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1763,6 +1770,7 @@ message HttpClient {
 
 	bool is_tls = 2674;
 	Authenticity authenticity = 14857;
+	TransportEncryption uses = 18191;
 }
 
 // HttpClientLibrary is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1792,12 +1800,14 @@ message HttpEndpoint {
 	option (resource_type_names) = "Functionality";
 
 	string handler = 8702;
+	int32 input_size = 13504;
 	string method = 1347;
 	string path = 11504;
 	string url = 16076;
 	Authenticity authenticity = 3805;
 	Authorization authorization = 2327;
 	HttpRequestContext http_request_context = 4988;
+	RateLimiting rate_limiting = 7825;
 	TransportEncryption transport_encryption = 13575;
 }
 
@@ -1813,6 +1823,7 @@ message HttpEndpointOperation {
 }
 
 // HttpRequest is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// enum:method=GET,POST,PUT,HEAD,PATCH,OPTIONS,CONNECT,TRACE,DELETE,UNKNOWN
 message HttpRequest {
 	option (resource_type_names) = "HttpRequest";
 	option (resource_type_names) = "HttpClientOperation";
@@ -1820,6 +1831,7 @@ message HttpRequest {
 	option (resource_type_names) = "Functionality";
 
 	string call = 16831;
+	string method = 17392;
 	string req_body = 5634;
 	CodeRegion code_region = 681;
 	HttpClient http_client = 16750;
@@ -1963,7 +1975,7 @@ message InputValidationOperation {
 
 	CodeRegion code_region = 12844;
 	Input input = 458;
-	Output output = 1757;
+	Output output = 15204;
 }
 
 // InstallUpdateOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2398,6 +2410,7 @@ message Logger {
 }
 
 // Logging is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+// enum:logLevel=DEBUG,INFO,WARN,ERROR
 message Logging {
 
 	oneof type {
@@ -2814,6 +2827,8 @@ message OSLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 207;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 10256;
 	bool monitoring_log_data_enabled = 12434;
 	string name = 1176 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 11358;
@@ -3535,6 +3550,8 @@ message ResourceLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 1509;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 5969;
 	bool monitoring_log_data_enabled = 6804;
 	string name = 2313 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 6776;
