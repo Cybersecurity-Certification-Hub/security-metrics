@@ -9,8 +9,6 @@ default compliant := false
 
 applicable if {
 	"PolicyDocument" in document.type
-	document.governance.monitoringProcedure
-	document.governance.monitoringProcedure.intervalMonths
 }
 
 compliant if {
