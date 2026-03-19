@@ -1137,9 +1137,6 @@
         <DataProperty IRI="/properties/enforced"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/properties/exploitable"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/properties/field"/>
     </Declaration>
     <Declaration>
@@ -4672,13 +4669,6 @@
     <SubClassOf>
         <Class IRI="/classes/Vulnerability"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/exploitable"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Vulnerability"/>
-        <DataSomeValuesFrom>
             <DataProperty IRI="/properties/url"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
@@ -7698,16 +7688,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/enforced</IRI>
         <Literal xml:lang="english">enforced</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/properties/exploitable</IRI>
-        <Literal>exploitable: Indicates whether a vulnerability is exploitable for the given target of evaluation (TOE)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/properties/exploitable</IRI>
-        <Literal>exploitable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
