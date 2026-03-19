@@ -1,0 +1,14 @@
+# ====== Metadata ======
+id: b792af37-8154-425b-90c7-73c53c137132
+name: NetworkEndpointAuthenticationRequired
+description: >
+  This rule assesses whether a [NetworkService] has [Authenticity] with
+  [p1:noAuthentication] set to false.
+category: NetworkSecurity
+version: "v1"
+comments: Basic access control requires network endpoints to avoid [NoAuthentication].
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: False

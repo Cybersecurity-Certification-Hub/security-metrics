@@ -1,0 +1,4 @@
+{
+    "operator": "allIn",
+    "target_value": ["Argon2id", "bcrypt", "scrypt"]
+}
