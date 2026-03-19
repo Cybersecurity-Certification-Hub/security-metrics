@@ -321,6 +321,9 @@
         <Class IRI="/classes/GetSecret"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Governance"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Hardware"/>
     </Declaration>
     <Declaration>
@@ -358,9 +361,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/HttpServer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/classes/HumanResources"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/HybridCipher"/>
@@ -511,6 +511,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Module"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/MonitoringProcedure"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/MultiFactorAuthentiation"/>
@@ -943,6 +946,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/interval"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/intervalMonths"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/isActive"/>
@@ -1420,6 +1426,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes//mode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/properties/offersInterface"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/describes"/>
@@ -2684,6 +2693,10 @@
         <Class IRI="/classes/SecretOperation"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Governance"/>
+        <Class IRI="/classes/Resource"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/Hardware"/>
         <Class IRI="/classes/Resource"/>
     </SubClassOf>
@@ -2937,10 +2950,6 @@
             <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/HttpRequestHandler"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/HumanResources"/>
-        <Class IRI="/classes/Resource"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/HybridCipher"/>
@@ -3633,6 +3642,17 @@
         <Class IRI="/classes/SoftwareResource"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/MonitoringProcedure"/>
+        <Class IRI="/classes/Governance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/MonitoringProcedure"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/intervalMonths"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/MultiFactorAuthentiation"/>
         <Class IRI="/classes/Authenticity"/>
     </SubClassOf>
@@ -3859,6 +3879,13 @@
     <SubClassOf>
         <Class IRI="/classes/PolicyDocument"/>
         <Class IRI="/classes/Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/offersInterface"/>
+            <Class IRI="/classes/Governance"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/PolicyOperation"/>
@@ -4494,7 +4521,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Training"/>
-        <Class IRI="/classes/HumanResources"/>
+        <Class IRI="/classes/Governance"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Training"/>
@@ -5805,6 +5832,11 @@ name = metadata.name</Literal>
         <Literal>GetSecret</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="rdfs:comment"/>
+        <IRI>/classes/Governance</IRI>
+        <Literal>Governance represents organizational security management artifacts (e.g., procedures and trainings) that are often evidenced via documents.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/Http</IRI>
         <Literal>Abstract class for all HTTP related functionalities.</Literal>
@@ -6238,6 +6270,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Module</IRI>
         <Literal>CodeModule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/MonitoringProcedure</IRI>
+        <Literal>intervalMonths: Review frequency (in months) for reviewing monitoring procedures</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6993,6 +7030,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/interval</IRI>
         <Literal>interval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/intervalMonths</IRI>
+        <Literal>The interval refers to the interval in months.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/intervalMonths</IRI>
+        <Literal>intervalMonths</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
