@@ -43,6 +43,9 @@
         <ObjectProperty abbreviatedIRI="prop:collectionOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:contactPerson"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="prop:deployedOn"/>
     </Declaration>
     <Declaration>
@@ -119,6 +122,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:daysSinceActive"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:emailAddress"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:description"/>
@@ -319,6 +325,9 @@
         <DataProperty abbreviatedIRI="prop:impact"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:jobTitle"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:inbound"/>
     </Declaration>
     <Declaration>
@@ -335,6 +344,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:parameters"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:phoneNumber"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:labels"/>
@@ -391,6 +403,9 @@
         <DataProperty abbreviatedIRI="prop:source"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:supportEnds"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:tlsVersion"/>
     </Declaration>
     <Declaration>
@@ -422,6 +437,10 @@
         <ObjectProperty abbreviatedIRI="prop:has"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="prop:contactPerson"/>
+        <ObjectProperty abbreviatedIRI="prop:has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="prop:usedByMultiple"/>
         <ObjectProperty abbreviatedIRI="prop:usedBy"/>
     </SubObjectPropertyOf>
@@ -450,7 +469,15 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:emailAddress"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="prop:handler"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:jobTitle"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -470,6 +497,10 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:phoneNumber"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="prop:programmingLanguage"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
@@ -483,6 +514,10 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="prop:source"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="prop:supportEnds"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -984,8 +1019,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:contactPerson</AbbreviatedIRI>
+        <Literal xml:lang="english">contactPerson</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:deployedOn</AbbreviatedIRI>
         <Literal xml:lang="english">deployedOn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:emailAddress</AbbreviatedIRI>
+        <Literal xml:lang="english">emailAddress</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1041,6 +1086,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:ips</AbbreviatedIRI>
         <Literal xml:lang="english">ips</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:jobTitle</AbbreviatedIRI>
+        <Literal xml:lang="english">jobTitle</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1124,6 +1174,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:phoneNumber</AbbreviatedIRI>
+        <Literal xml:lang="english">phoneNumber</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:programmingLanguage</AbbreviatedIRI>
         <Literal xml:lang="english">programmingLanguage</Literal>
     </AnnotationAssertion>
@@ -1176,6 +1231,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:source</AbbreviatedIRI>
         <Literal xml:lang="english">source</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:supportEnds</AbbreviatedIRI>
+        <Literal xml:lang="english">supportEnds</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

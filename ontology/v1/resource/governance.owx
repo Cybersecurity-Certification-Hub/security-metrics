@@ -31,6 +31,9 @@
     <Declaration>
         <Class abbreviatedIRI="res:Training"/>
     </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="res:ContactPerson"/>
+    </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="res:AwarenessTraining"/>
         <Class abbreviatedIRI="res:Training"/>
@@ -49,6 +52,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:Training"/>
+        <Class abbreviatedIRI="res:Governance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:ContactPerson"/>
         <Class abbreviatedIRI="res:Governance"/>
     </SubClassOf>
     <SubClassOf>
@@ -72,6 +79,27 @@
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:ContactPerson"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:emailAddress"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:ContactPerson"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:phoneNumber"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:ContactPerson"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:jobTitle"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty IRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Governance</AbbreviatedIRI>
@@ -81,5 +109,10 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>res:MonitoringProcedure</AbbreviatedIRI>
         <Literal>intervalMonths: Review frequency (in months) for reviewing monitoring procedures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:ContactPerson</AbbreviatedIRI>
+        <Literal>ContactPerson</Literal>
     </AnnotationAssertion>
 </Ontology>
