@@ -86,6 +86,8 @@ message ActivityLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 18133;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 11221;
 	bool monitoring_log_data_enabled = 13626;
 	google.protobuf.Duration retention_period = 10788;
 	bool security_alerts_enabled = 17680;
@@ -191,6 +193,8 @@ message ApplicationLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 13571;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 14273;
 	bool monitoring_log_data_enabled = 4205;
 	google.protobuf.Duration retention_period = 6319;
 	bool security_alerts_enabled = 17870;
@@ -339,19 +343,19 @@ message Availability {
 message AwarenessTraining {
 	option (resource_type_names) = "AwarenessTraining";
 	option (resource_type_names) = "Training";
-	option (resource_type_names) = "HumanResources";
+	option (resource_type_names) = "Governance";
 	option (resource_type_names) = "Resource";
 
-	bool annual_update_completed = 15890;
-	google.protobuf.Timestamp creation_time = 15810;
-	string description = 345;
-	string id = 6931 [ (buf.validate.field).required = true ];
-	map<string, string> labels = 4947;
-	string name = 18874 [ (buf.validate.field).required = true ];
+	bool annual_update_completed = 5546;
+	google.protobuf.Timestamp creation_time = 6371;
+	string description = 1978;
+	string id = 10258 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 7290;
+	string name = 8381 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 8066;
-	bool successfully_completed_percentage = 3826;
-	optional string parent_id = 8185;
+	string raw = 3963;
+	bool successfully_completed_percentage = 832;
+	optional string parent_id = 17698;
 }
 
 // Backup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -414,6 +418,8 @@ message BootLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 17321;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 7946;
 	bool monitoring_log_data_enabled = 9135;
 	google.protobuf.Duration retention_period = 2338;
 	bool security_alerts_enabled = 3133;
@@ -1120,6 +1126,7 @@ message DatabaseStorage {
 	string name = 1264 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 11538;
+	double ttl = 6277;
 	ActivityLogging activity_logging = 14738;
 	AtRestEncryption at_rest_encryption = 16710;
 	repeated Backup backups  = 6649;
@@ -1709,6 +1716,16 @@ message GetSecret {
 	optional string secret_id = 8422;
 }
 
+// Governance is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+message Governance {
+
+	oneof type {
+		MonitoringProcedure monitoring_procedure = 4844;
+		AwarenessTraining awareness_training = 18321;
+		SecurityTraining security_training = 16425;
+	}
+}
+
 // Hardware is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Hardware {
 
@@ -1727,7 +1744,7 @@ message HashOperation {
 	string algorithm = 16160;
 	bool uses_salt = 14753;
 	CodeRegion code_region = 10758;
-	Confidentiality confidentiality = 805;
+	SecurityFeature security_feature = 10332;
 }
 
 // Http is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1750,6 +1767,7 @@ message HttpClient {
 
 	bool is_tls = 2674;
 	Authenticity authenticity = 14857;
+	TransportEncryption uses = 18191;
 }
 
 // HttpClientLibrary is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1779,12 +1797,14 @@ message HttpEndpoint {
 	option (resource_type_names) = "Functionality";
 
 	string handler = 8702;
+	int32 input_size = 13504;
 	string method = 1347;
 	string path = 11504;
 	string url = 16076;
 	Authenticity authenticity = 3805;
 	Authorization authorization = 2327;
 	HttpRequestContext http_request_context = 4988;
+	RateLimiting rate_limiting = 7825;
 	TransportEncryption transport_encryption = 13575;
 }
 
@@ -1800,6 +1820,7 @@ message HttpEndpointOperation {
 }
 
 // HttpRequest is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// enum:method=GET,POST,PUT,HEAD,PATCH,OPTIONS,CONNECT,TRACE,DELETE,UNKNOWN
 message HttpRequest {
 	option (resource_type_names) = "HttpRequest";
 	option (resource_type_names) = "HttpClientOperation";
@@ -1807,6 +1828,7 @@ message HttpRequest {
 	option (resource_type_names) = "Functionality";
 
 	string call = 16831;
+	string method = 17392;
 	string req_body = 5634;
 	CodeRegion code_region = 681;
 	HttpClient http_client = 16750;
@@ -1848,15 +1870,6 @@ message HttpServer {
 	option (resource_type_names) = "Core";
 
 	HttpRequestHandler http_request_handler = 16943;
-}
-
-// HumanResources is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message HumanResources {
-
-	oneof type {
-		AwarenessTraining awareness_training = 13539;
-		SecurityTraining security_training = 5053;
-	}
 }
 
 // HybridCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1959,7 +1972,7 @@ message InputValidationOperation {
 
 	CodeRegion code_region = 12844;
 	Input input = 458;
-	Output output = 1757;
+	Output output = 15204;
 }
 
 // InstallUpdateOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2394,6 +2407,7 @@ message Logger {
 }
 
 // Logging is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+// enum:logLevel=DEBUG,INFO,WARN,ERROR
 message Logging {
 
 	oneof type {
@@ -2633,6 +2647,25 @@ message CodeModule {
 	}
 }
 
+// MonitoringProcedure is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// intervalMonths: Review frequency (in months) for reviewing monitoring procedures
+message MonitoringProcedure {
+	option (resource_type_names) = "MonitoringProcedure";
+	option (resource_type_names) = "Governance";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 13504;
+	string description = 17881;
+	string id = 11072 [ (buf.validate.field).required = true ];
+	// The interval refers to the interval in months.
+	int32 interval_months = 5083;
+	map<string, string> labels = 9724;
+	string name = 6599 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 5928;
+	optional string parent_id = 18171;
+}
+
 // MultiFactorAuthentiation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message MultiFactorAuthentiation {
 	option (resource_type_names) = "MultiFactorAuthentiation";
@@ -2791,6 +2824,8 @@ message OSLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 207;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 10256;
 	bool monitoring_log_data_enabled = 12434;
 	google.protobuf.Duration retention_period = 11358;
 	bool security_alerts_enabled = 7453;
@@ -3072,6 +3107,7 @@ message PolicyDocument {
 	repeated CryptographicHash cryptographic_hashs  = 12896;
 	DataLocation data_location = 11474;
 	repeated DocumentSignature document_signatures  = 7191;
+	optional string governance_id = 15049;
 	optional string parent_id = 18208;
 	SchemaValidation validated_by = 5620;
 	repeated SecurityFeature security_features  = 13896;
@@ -3466,9 +3502,10 @@ message Resource {
 		AndRule and_rule = 1114;
 		Token token = 5266;
 		Value value = 652;
+		MonitoringProcedure monitoring_procedure = 4844;
+		AwarenessTraining awareness_training = 18321;
+		SecurityTraining security_training = 16425;
 		Memory memory = 967;
-		AwarenessTraining awareness_training = 13539;
-		SecurityTraining security_training = 5053;
 		Application application = 18554;
 		Library library = 14265;
 		Package package = 5217;
@@ -3509,6 +3546,8 @@ message ResourceLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 1509;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 5969;
 	bool monitoring_log_data_enabled = 6804;
 	google.protobuf.Duration retention_period = 6776;
 	bool security_alerts_enabled = 6099;
@@ -3718,19 +3757,19 @@ message SecurityFeature {
 message SecurityTraining {
 	option (resource_type_names) = "SecurityTraining";
 	option (resource_type_names) = "Training";
-	option (resource_type_names) = "HumanResources";
+	option (resource_type_names) = "Governance";
 	option (resource_type_names) = "Resource";
 
-	bool annual_update_completed = 10234;
-	google.protobuf.Timestamp creation_time = 6650;
-	string description = 9993;
-	string id = 16985 [ (buf.validate.field).required = true ];
-	map<string, string> labels = 2918;
-	string name = 12019 [ (buf.validate.field).required = true ];
+	bool annual_update_completed = 12324;
+	google.protobuf.Timestamp creation_time = 2973;
+	string description = 16969;
+	string id = 16887 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 15328;
+	string name = 2030 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 8671;
-	bool successfully_completed_percentage = 12251;
-	optional string parent_id = 10370;
+	string raw = 11220;
+	bool successfully_completed_percentage = 11821;
+	optional string parent_id = 10643;
 }
 
 // ServiceMetadataDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3888,8 +3927,8 @@ message Token {
 message Training {
 
 	oneof type {
-		AwarenessTraining awareness_training = 13539;
-		SecurityTraining security_training = 5053;
+		AwarenessTraining awareness_training = 18321;
+		SecurityTraining security_training = 16425;
 	}
 }
 
@@ -4073,6 +4112,8 @@ message Vulnerability {
 	string cve = 205;
 	repeated string cwe = 18325;
 	string description = 10690;
+	// exploitable: Indicates whether a vulnerability is exploitable for the given target of evaluation (TOE)
+	bool exploitable = 15966;
 	string url = 11925;
 }
 
