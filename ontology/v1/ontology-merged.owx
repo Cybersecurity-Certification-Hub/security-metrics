@@ -837,9 +837,6 @@
         <ObjectProperty IRI="/properties/collectionOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/properties/contactPerson"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/properties/deployedOn"/>
     </Declaration>
     <Declaration>
@@ -4020,7 +4017,7 @@
     <SubClassOf>
         <Class IRI="/classes/Product"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/contactPerson"/>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/ContactPerson"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -5219,10 +5216,6 @@ ips += externalIP
 ips += loadBalancerIP
 name = metadata.name</Literal>
     </DataPropertyAssertion>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="/properties/contactPerson"/>
-        <ObjectProperty IRI="/properties/has"/>
-    </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/properties/hasMultiple"/>
         <ObjectProperty IRI="/properties/has"/>
@@ -7974,7 +7967,7 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/contactPerson</IRI>
-        <Literal xml:lang="english">contactPerson</Literal>
+        <Literal>contactPerson</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8212,9 +8205,14 @@ name = metadata.name</Literal>
         <Literal>storage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/supportEnds</IRI>
+        <Literal>Support ends date for a certain resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/supportEnds</IRI>
-        <Literal xml:lang="english">supportEnds</Literal>
+        <Literal>supportEnds</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
