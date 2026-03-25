@@ -90,7 +90,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="res:Product" />
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:contactPerson" />
+            <ObjectProperty abbreviatedIRI="prop:has" />
             <Class abbreviatedIRI="core:ContactPerson" />
         </ObjectSomeValuesFrom>
     </SubClassOf>

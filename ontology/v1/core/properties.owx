@@ -43,9 +43,6 @@
         <ObjectProperty abbreviatedIRI="prop:collectionOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:contactPerson"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty abbreviatedIRI="prop:deployedOn"/>
     </Declaration>
     <Declaration>
@@ -434,10 +431,6 @@
     </Declaration>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
-        <ObjectProperty abbreviatedIRI="prop:has"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="prop:contactPerson"/>
         <ObjectProperty abbreviatedIRI="prop:has"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -1020,7 +1013,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:contactPerson</AbbreviatedIRI>
-        <Literal xml:lang="english">contactPerson</Literal>
+        <Literal>contactPerson</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1235,7 +1228,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:supportEnds</AbbreviatedIRI>
-        <Literal xml:lang="english">supportEnds</Literal>
+        <Literal>supportEnds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:supportEnds</AbbreviatedIRI>
+        <Literal>Support ends date for a certain resource.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
