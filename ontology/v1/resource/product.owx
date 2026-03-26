@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+    xml:base="https://ontology.cybersecuritycertcluster.eu/resource/product"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/product">
+    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/resource/product#" />
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#" />
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
+    <Prefix name="res" IRI="https://ontology.cybersecuritycertcluster.eu/classes/" />
+    <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/" />
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace" />
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#" />
+    <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/" />
+    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/" />
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#" />
+    <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
+    <Declaration>
+        <Class abbreviatedIRI="res:Product"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Product" />
+        <Class abbreviatedIRI="core:Resource" />
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Product" />
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:programmingVersion" />
+            <Datatype abbreviatedIRI="xsd:string" />
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Product" />
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:type" />
+            <Datatype abbreviatedIRI="xsd:string" />
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Product" />
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:purpose" />
+            <Datatype abbreviatedIRI="xsd:string" />
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Product" />
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:contextOfUse" />
+            <Datatype abbreviatedIRI="xsd:string" />
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Product" />
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:supportEnds" />
+            <Datatype abbreviatedIRI="xsd:dateTime" />
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Product" />
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple" />
+            <Class abbreviatedIRI="core:SoftwareResource" />
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Product" />
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple" />
+            <Class abbreviatedIRI="core:Governance" />
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Product" />
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple" />
+            <Class abbreviatedIRI="core:Hardware" />
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Product" />
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple" />
+            <Class abbreviatedIRI="core:CloudResource" />
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Product" />
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has" />
+            <Class abbreviatedIRI="core:ContactPerson" />
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label" />
+        <AbbreviatedIRI>res:Product</AbbreviatedIRI>
+        <Literal>Product</Literal>
+    </AnnotationAssertion>
+</Ontology>
