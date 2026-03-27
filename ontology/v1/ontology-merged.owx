@@ -42,6 +42,9 @@
         <Class IRI="/classes/ApplicationLog"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/AssetInventory"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/AsymmetricCipher"/>
     </Declaration>
     <Declaration>
@@ -1622,6 +1625,10 @@
     <SubClassOf>
         <Class IRI="/classes/ApplicationLog"/>
         <Class IRI="/classes/Logging"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <Class IRI="/classes/Auditing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/AsymmetricCipher"/>
