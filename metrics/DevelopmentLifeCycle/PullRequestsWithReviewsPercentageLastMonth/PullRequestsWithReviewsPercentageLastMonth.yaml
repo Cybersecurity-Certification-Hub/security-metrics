@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: 6d4bece9-a59d-35ce-aeba-a6e1092a3e23
+name: PullRequestsWithReviewsPercentageLastMonth
+description: This rule verifies that the [CodeRepository]'s [p1:pullRequestsWithReviewsPercentageLastMonth] exceeds the minimum acceptable threshold for merged pull requests with code reviews in the last 30 days (0.0-1.0 scale).
+category: DevelopmentLifeCycle
+version: "v1"
+comments: The [p1:pullRequestsWithReviewsPercentageLastMonth] property tracks the fraction of merged pull requests that include at least one code review over the last 30 days. Code reviews ensure changes are assessed by peers before merging, improving code quality and reducing the risk of introducing defects. Rule enforces high review rates for a consistent and accountable development process.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: 0.8

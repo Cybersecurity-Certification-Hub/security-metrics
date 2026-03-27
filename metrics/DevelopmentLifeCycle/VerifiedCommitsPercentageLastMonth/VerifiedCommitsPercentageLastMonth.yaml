@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: f341ff46-5913-3903-a69b-da29e00bb69f
+name: VerifiedCommitsPercentageLastMonth
+description: This rule verifies that the [CodeRepository]'s [p1:verifiedCommitsPercentageLastMonth] exceeds the minimum acceptable threshold for verified commits in the last 30 days (0.0-1.0 scale).
+category: DevelopmentLifeCycle
+version: "v1"
+comments: The [p1:verifiedCommitsPercentageLastMonth] property tracks the fraction of commits successfully validated through cryptographic signature verification over the last 30 days. Verified commits confirm that signatures match trusted public keys, ensuring author authenticity and code integrity. Rule enforces high verification rates for a secure and trustworthy repository history.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: 0.8

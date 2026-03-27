@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: 4b6d4e5c-ddc6-35d2-85dd-cfa93be9fb15
+name: CodeSignoffPercentageLastMonth
+description: This rule verifies that the [CodeRepository]'s [p1:codeSignoffPercentageLastMonth] exceeds the minimum acceptable threshold for commits in the last 30 days with "Signed-off-by" lines (0.0-1.0 scale).
+category: DevelopmentLifeCycle
+version: "v1"
+comments: Measures percentage of commits in the last 30 days with "Signed-off-by" lines for review traceability. Rule enforces high signoff compliance across repositories.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: 0.8

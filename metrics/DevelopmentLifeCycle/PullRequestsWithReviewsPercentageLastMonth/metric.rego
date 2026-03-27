@@ -1,4 +1,4 @@
-package cch.metrics.signed_commits
+package cch.metrics.pull_requests_with_reviews_percentage_last_month
 
 import data.cch.compare
 import rego.v1
@@ -14,5 +14,5 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, repo.signedCommits)
+	compare(data.operator, data.target_value, repo.pullRequestsWithReviewsPercentageLastMonth)
 }

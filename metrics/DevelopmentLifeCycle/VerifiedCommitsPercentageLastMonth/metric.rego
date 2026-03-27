@@ -1,4 +1,4 @@
-package cch.metrics.code_signoff
+package cch.metrics.verified_commits_percentage_last_month
 
 import data.cch.compare
 import rego.v1
@@ -14,5 +14,5 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, repo.codeSignoff)
+	compare(data.operator, data.target_value, repo.verifiedCommitsPercentageLastMonth)
 }
