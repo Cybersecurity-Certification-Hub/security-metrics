@@ -1114,6 +1114,16 @@
         <Literal xml:lang="english">CertificateBasedAuthentication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:CodeSignoff</AbbreviatedIRI>
+        <Literal>Signoffs enable users to affirm that a commit complies with the rules and licensing governing a repository</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:CodeSignoff</AbbreviatedIRI>
+        <Literal>CodeSignoff</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:Confidentiality</AbbreviatedIRI>
         <Literal xml:lang="english">Confidentiality</Literal>
