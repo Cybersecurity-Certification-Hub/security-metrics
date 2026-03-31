@@ -86,8 +86,9 @@ message ActivityLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 18133;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 11221;
 	bool monitoring_log_data_enabled = 13626;
-	string name = 10561 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 10788;
 	bool security_alerts_enabled = 17680;
 	repeated string logging_service_ids  = 16760;
@@ -192,8 +193,9 @@ message ApplicationLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 13571;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 14273;
 	bool monitoring_log_data_enabled = 4205;
-	string name = 4460 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 6319;
 	bool security_alerts_enabled = 17870;
 	repeated string logging_service_ids  = 3884;
@@ -342,19 +344,19 @@ message Availability {
 message AwarenessTraining {
 	option (resource_type_names) = "AwarenessTraining";
 	option (resource_type_names) = "Training";
-	option (resource_type_names) = "HumanResources";
+	option (resource_type_names) = "Governance";
 	option (resource_type_names) = "Resource";
 
-	bool annual_update_completed = 15890;
-	google.protobuf.Timestamp creation_time = 15810;
-	string description = 345;
-	string id = 6931 [ (buf.validate.field).required = true ];
-	map<string, string> labels = 4947;
-	string name = 18874 [ (buf.validate.field).required = true ];
+	bool annual_update_completed = 5546;
+	google.protobuf.Timestamp creation_time = 6371;
+	string description = 1978;
+	string id = 10258 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 7290;
+	string name = 8381 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 8066;
-	bool successfully_completed_percentage = 3826;
-	optional string parent_id = 8185;
+	string raw = 3963;
+	bool successfully_completed_percentage = 832;
+	optional string parent_id = 17698;
 }
 
 // Backup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -417,8 +419,9 @@ message BootLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 17321;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 7946;
 	bool monitoring_log_data_enabled = 9135;
-	string name = 12593 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 2338;
 	bool security_alerts_enabled = 3133;
 	repeated string logging_service_ids  = 17105;
@@ -813,6 +816,25 @@ message ConfigurationSource {
 	optional string parent_id = 12170;
 }
 
+// ContactPerson is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ContactPerson {
+	option (resource_type_names) = "ContactPerson";
+	option (resource_type_names) = "Governance";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 15387;
+	string description = 16050;
+	string email_address = 8616;
+	string id = 10681 [ (buf.validate.field).required = true ];
+	string job_title = 8334;
+	map<string, string> labels = 11792;
+	string name = 8652 [ (buf.validate.field).required = true ];
+	string phone_number = 10029;
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 11703;
+	optional string parent_id = 11554;
+}
+
 // Container is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message Container {
 	option (resource_type_names) = "Container";
@@ -926,6 +948,26 @@ message Context {
 	optional string parent_id = 5287;
 }
 
+// CoordinatedVulnerabilityDisclosurePolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message CoordinatedVulnerabilityDisclosurePolicy {
+	option (resource_type_names) = "CoordinatedVulnerabilityDisclosurePolicy";
+	option (resource_type_names) = "Policy";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 16538;
+	string description = 7702;
+	string id = 4638 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 13066;
+	string name = 17333 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 2293;
+	optional string context_id = 13420;
+	DataLocation data_location = 7041;
+	repeated string policy_rule_ids  = 17592;
+	optional string parent_id = 1517;
+}
+
 // Core is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Core {
 
@@ -1003,6 +1045,29 @@ message CustomerKeyEncryption {
 	optional string secret_id = 4394;
 }
 
+// CyberSecurityRiskAssessmentDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message CyberSecurityRiskAssessmentDocument {
+	option (resource_type_names) = "CyberSecurityRiskAssessmentDocument";
+	option (resource_type_names) = "Document";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 12137;
+	string description = 7939;
+	string filetype = 4377;
+	string id = 1847 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 17859;
+	string name = 4291 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 14695;
+	repeated CryptographicHash cryptographic_hashs  = 8879;
+	DataLocation data_location = 10511;
+	repeated DocumentSignature document_signatures  = 6497;
+	optional string parent_id = 2895;
+	SchemaValidation validated_by = 12304;
+	repeated SecurityFeature security_features  = 14049;
+}
+
 // DDoSProtection is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message DDoSProtection {
 	option (resource_type_names) = "DDoSProtection";
@@ -1044,16 +1109,22 @@ message Data {
 		ConfigurationSource configuration_source = 292;
 		Context context = 1041;
 		ConfigurationDocument configuration_document = 1193;
+		CyberSecurityRiskAssessmentDocument cyber_security_risk_assessment_document = 2061;
+		DistributionOfUpdatesDocument distribution_of_updates_document = 8845;
+		EUDeclarationOfConformity eu_declaration_of_conformity = 6294;
 		ReportDocument report_document = 10529;
 		LogDocument log_document = 10598;
 		PolicyDocument policy_document = 14953;
+		ProductionAndMonitoringProcessDocument production_and_monitoring_process_document = 1126;
+		SBOMDocument sbom_document = 1010;
 		SecurityAdvisoryDocument security_advisory_document = 14717;
 		ServiceMetadataDocument service_metadata_document = 272;
+		UserInformationAndIntructionDocument user_information_and_intruction_document = 2957;
 		File file = 9522;
 		FileHandle file_handle = 16939;
 		MachineLearningDataset machine_learning_dataset = 2040;
 		MachineLearningModel machine_learning_model = 15393;
-		Policy policy = 495;
+		CoordinatedVulnerabilityDisclosurePolicy coordinated_vulnerability_disclosure_policy = 18002;
 		AndRule and_rule = 1114;
 		Token token = 5266;
 		Value value = 652;
@@ -1134,6 +1205,7 @@ message DatabaseStorage {
 	string name = 1264 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 11538;
+	double ttl = 6277;
 	ActivityLogging activity_logging = 14738;
 	AtRestEncryption at_rest_encryption = 16710;
 	repeated Backup backups  = 6649;
@@ -1218,17 +1290,46 @@ message DiskEncryptionOperation {
 	}
 }
 
+// DistributionOfUpdatesDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message DistributionOfUpdatesDocument {
+	option (resource_type_names) = "DistributionOfUpdatesDocument";
+	option (resource_type_names) = "Document";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 2668;
+	string description = 8362;
+	string filetype = 6744;
+	string id = 3219 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 11149;
+	string name = 9560 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 3530;
+	repeated CryptographicHash cryptographic_hashs  = 10781;
+	DataLocation data_location = 18419;
+	repeated DocumentSignature document_signatures  = 12279;
+	optional string parent_id = 17550;
+	SchemaValidation validated_by = 18560;
+	repeated SecurityFeature security_features  = 14004;
+}
+
 // Document is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 // DataLocation: Describes the location as local or remote location
 message Document {
 
 	oneof type {
 		ConfigurationDocument configuration_document = 1193;
+		CyberSecurityRiskAssessmentDocument cyber_security_risk_assessment_document = 2061;
+		DistributionOfUpdatesDocument distribution_of_updates_document = 8845;
+		EUDeclarationOfConformity eu_declaration_of_conformity = 6294;
 		ReportDocument report_document = 10529;
 		LogDocument log_document = 10598;
 		PolicyDocument policy_document = 14953;
+		ProductionAndMonitoringProcessDocument production_and_monitoring_process_document = 1126;
+		SBOMDocument sbom_document = 1010;
 		SecurityAdvisoryDocument security_advisory_document = 14717;
 		ServiceMetadataDocument service_metadata_document = 272;
+		UserInformationAndIntructionDocument user_information_and_intruction_document = 2957;
 	}
 }
 
@@ -1284,6 +1385,29 @@ message DynamicLoadingOperation {
 		LoadLibrary load_library = 408;
 		LoadSymbol load_symbol = 15259;
 	}
+}
+
+// EUDeclarationOfConformity is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message EUDeclarationOfConformity {
+	option (resource_type_names) = "EUDeclarationOfConformity";
+	option (resource_type_names) = "Document";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 4057;
+	string description = 6464;
+	string filetype = 1936;
+	string id = 6567 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 17602;
+	string name = 10440 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 3395;
+	repeated CryptographicHash cryptographic_hashs  = 16462;
+	DataLocation data_location = 5046;
+	repeated DocumentSignature document_signatures  = 18195;
+	optional string parent_id = 10071;
+	SchemaValidation validated_by = 10088;
+	repeated SecurityFeature security_features  = 9763;
 }
 
 // Encryption is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1723,6 +1847,17 @@ message GetSecret {
 	optional string secret_id = 8422;
 }
 
+// Governance is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+message Governance {
+
+	oneof type {
+		ContactPerson contact_person = 7415;
+		MonitoringProcedure monitoring_procedure = 4844;
+		AwarenessTraining awareness_training = 18321;
+		SecurityTraining security_training = 16425;
+	}
+}
+
 // Hardware is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Hardware {
 
@@ -1741,7 +1876,7 @@ message HashOperation {
 	string algorithm = 16160;
 	bool uses_salt = 14753;
 	CodeRegion code_region = 10758;
-	Confidentiality confidentiality = 805;
+	SecurityFeature security_feature = 10332;
 }
 
 // Http is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1764,6 +1899,7 @@ message HttpClient {
 
 	bool is_tls = 2674;
 	Authenticity authenticity = 14857;
+	TransportEncryption uses = 18191;
 }
 
 // HttpClientLibrary is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1793,12 +1929,14 @@ message HttpEndpoint {
 	option (resource_type_names) = "Functionality";
 
 	string handler = 8702;
+	int32 input_size = 13504;
 	string method = 1347;
 	string path = 11504;
 	string url = 16076;
 	Authenticity authenticity = 3805;
 	Authorization authorization = 2327;
 	HttpRequestContext http_request_context = 4988;
+	RateLimiting rate_limiting = 7825;
 	TransportEncryption transport_encryption = 13575;
 }
 
@@ -1814,6 +1952,7 @@ message HttpEndpointOperation {
 }
 
 // HttpRequest is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// enum:method=GET,POST,PUT,HEAD,PATCH,OPTIONS,CONNECT,TRACE,DELETE,UNKNOWN
 message HttpRequest {
 	option (resource_type_names) = "HttpRequest";
 	option (resource_type_names) = "HttpClientOperation";
@@ -1821,6 +1960,7 @@ message HttpRequest {
 	option (resource_type_names) = "Functionality";
 
 	string call = 16831;
+	string method = 17392;
 	string req_body = 5634;
 	CodeRegion code_region = 681;
 	HttpClient http_client = 16750;
@@ -1862,15 +2002,6 @@ message HttpServer {
 	option (resource_type_names) = "Core";
 
 	HttpRequestHandler http_request_handler = 16943;
-}
-
-// HumanResources is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
-message HumanResources {
-
-	oneof type {
-		AwarenessTraining awareness_training = 13539;
-		SecurityTraining security_training = 5053;
-	}
 }
 
 // HybridCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1973,7 +2104,7 @@ message InputValidationOperation {
 
 	CodeRegion code_region = 12844;
 	Input input = 458;
-	Output output = 1757;
+	Output output = 15204;
 }
 
 // InstallUpdateOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2408,6 +2539,7 @@ message Logger {
 }
 
 // Logging is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+// enum:logLevel=DEBUG,INFO,WARN,ERROR
 message Logging {
 
 	oneof type {
@@ -2647,6 +2779,25 @@ message CodeModule {
 	}
 }
 
+// MonitoringProcedure is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// intervalMonths: Review frequency (in months) for reviewing monitoring procedures
+message MonitoringProcedure {
+	option (resource_type_names) = "MonitoringProcedure";
+	option (resource_type_names) = "Governance";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 13504;
+	string description = 17881;
+	string id = 11072 [ (buf.validate.field).required = true ];
+	// The interval refers to the interval in months.
+	int32 interval_months = 5083;
+	map<string, string> labels = 9724;
+	string name = 6599 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 5928;
+	optional string parent_id = 18171;
+}
+
 // MultiFactorAuthentiation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message MultiFactorAuthentiation {
 	option (resource_type_names) = "MultiFactorAuthentiation";
@@ -2805,8 +2956,9 @@ message OSLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 207;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 10256;
 	bool monitoring_log_data_enabled = 12434;
-	string name = 1176 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 11358;
 	bool security_alerts_enabled = 7453;
 	repeated string logging_service_ids  = 14966;
@@ -3049,24 +3201,13 @@ message PasswordPolicy {
 	UsageStatistics usage_statistics = 863;
 }
 
-// Policy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Policy is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 // Represents a policy that can be applied to a resource or a set of resources. Policies can contain rules and operations that define how access to the resource is controlled.
 message Policy {
-	option (resource_type_names) = "Policy";
-	option (resource_type_names) = "Data";
-	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 10963;
-	string description = 15865;
-	string id = 7188 [ (buf.validate.field).required = true ];
-	map<string, string> labels = 13678;
-	string name = 16222 [ (buf.validate.field).required = true ];
-	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 16476;
-	optional string context_id = 13815;
-	DataLocation data_location = 2625;
-	repeated string policy_rule_ids  = 6893;
-	optional string parent_id = 18610;
+	oneof type {
+		CoordinatedVulnerabilityDisclosurePolicy coordinated_vulnerability_disclosure_policy = 18002;
+	}
 }
 
 // PolicyDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3087,6 +3228,7 @@ message PolicyDocument {
 	repeated CryptographicHash cryptographic_hashs  = 12896;
 	DataLocation data_location = 11474;
 	repeated DocumentSignature document_signatures  = 7191;
+	optional string governance_id = 15049;
 	optional string parent_id = 18208;
 	SchemaValidation validated_by = 5620;
 	repeated SecurityFeature security_features  = 13896;
@@ -3126,6 +3268,56 @@ message ProtectedAsset {
 
 	repeated string policy_ids  = 13769;
 	Resource protects = 16075;
+}
+
+// Product is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Product {
+	option (resource_type_names) = "Product";
+	option (resource_type_names) = "Resource";
+
+	string context_of_use = 18080;
+	google.protobuf.Timestamp creation_time = 17898;
+	string description = 9219;
+	string id = 4962 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 13974;
+	string name = 1083 [ (buf.validate.field).required = true ];
+	string programming_version = 17597;
+	string purpose = 8719;
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 16261;
+	// Support ends date for a certain resource.
+	google.protobuf.Timestamp support_ends = 14253;
+	string type = 6467;
+	repeated string code_ids  = 10540;
+	optional string contact_person_id = 8641;
+	repeated string data_ids  = 11462;
+	repeated string governance_ids  = 16685;
+	repeated string hardware_ids  = 7586;
+	repeated string infrastructure_ids  = 2977;
+	optional string parent_id = 715;
+}
+
+// ProductionAndMonitoringProcessDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ProductionAndMonitoringProcessDocument {
+	option (resource_type_names) = "ProductionAndMonitoringProcessDocument";
+	option (resource_type_names) = "Document";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 673;
+	string description = 16985;
+	string filetype = 15732;
+	string id = 3038 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 11986;
+	string name = 10714 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 12529;
+	repeated CryptographicHash cryptographic_hashs  = 11667;
+	DataLocation data_location = 3635;
+	repeated DocumentSignature document_signatures  = 13921;
+	optional string parent_id = 8794;
+	SchemaValidation validated_by = 12634;
+	repeated SecurityFeature security_features  = 3125;
 }
 
 // ProtectedAssetOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -3468,22 +3660,31 @@ message Resource {
 		ConfigurationSource configuration_source = 292;
 		Context context = 1041;
 		ConfigurationDocument configuration_document = 1193;
+		CyberSecurityRiskAssessmentDocument cyber_security_risk_assessment_document = 2061;
+		DistributionOfUpdatesDocument distribution_of_updates_document = 8845;
+		EUDeclarationOfConformity eu_declaration_of_conformity = 6294;
 		ReportDocument report_document = 10529;
 		LogDocument log_document = 10598;
 		PolicyDocument policy_document = 14953;
+		ProductionAndMonitoringProcessDocument production_and_monitoring_process_document = 1126;
+		SBOMDocument sbom_document = 1010;
 		SecurityAdvisoryDocument security_advisory_document = 14717;
 		ServiceMetadataDocument service_metadata_document = 272;
+		UserInformationAndIntructionDocument user_information_and_intruction_document = 2957;
 		File file = 9522;
 		FileHandle file_handle = 16939;
 		MachineLearningDataset machine_learning_dataset = 2040;
 		MachineLearningModel machine_learning_model = 15393;
-		Policy policy = 495;
+		CoordinatedVulnerabilityDisclosurePolicy coordinated_vulnerability_disclosure_policy = 18002;
 		AndRule and_rule = 1114;
 		Token token = 5266;
 		Value value = 652;
+		ContactPerson contact_person = 7415;
+		MonitoringProcedure monitoring_procedure = 4844;
+		AwarenessTraining awareness_training = 18321;
+		SecurityTraining security_training = 16425;
 		Memory memory = 967;
-		AwarenessTraining awareness_training = 13539;
-		SecurityTraining security_training = 5053;
+		Product product = 7503;
 		Application application = 18554;
 		Library library = 14265;
 		Package package = 5217;
@@ -3524,8 +3725,9 @@ message ResourceLogging {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 1509;
+	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
+	string log_level = 5969;
 	bool monitoring_log_data_enabled = 6804;
-	string name = 2313 [ (buf.validate.field).required = true ];
 	google.protobuf.Duration retention_period = 6776;
 	bool security_alerts_enabled = 6099;
 	repeated string logging_service_ids  = 3295;
@@ -3569,6 +3771,29 @@ message RoleAssignment {
 	repeated Redundancy redundancies  = 18916;
 	optional string parent_id = 8394;
 	UsageStatistics usage_statistics = 18400;
+}
+
+// SBOMDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message SBOMDocument {
+	option (resource_type_names) = "SBOMDocument";
+	option (resource_type_names) = "Document";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 18871;
+	string description = 12620;
+	string filetype = 11066;
+	string id = 12226 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 9737;
+	string name = 3717 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 16176;
+	repeated CryptographicHash cryptographic_hashs  = 1611;
+	DataLocation data_location = 2559;
+	repeated DocumentSignature document_signatures  = 2453;
+	optional string parent_id = 12294;
+	SchemaValidation validated_by = 17308;
+	repeated SecurityFeature security_features  = 4541;
 }
 
 // SchemaValidation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3735,19 +3960,19 @@ message SecurityFeature {
 message SecurityTraining {
 	option (resource_type_names) = "SecurityTraining";
 	option (resource_type_names) = "Training";
-	option (resource_type_names) = "HumanResources";
+	option (resource_type_names) = "Governance";
 	option (resource_type_names) = "Resource";
 
-	bool annual_update_completed = 10234;
-	google.protobuf.Timestamp creation_time = 6650;
-	string description = 9993;
-	string id = 16985 [ (buf.validate.field).required = true ];
-	map<string, string> labels = 2918;
-	string name = 12019 [ (buf.validate.field).required = true ];
+	bool annual_update_completed = 12324;
+	google.protobuf.Timestamp creation_time = 2973;
+	string description = 16969;
+	string id = 16887 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 15328;
+	string name = 2030 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 8671;
-	bool successfully_completed_percentage = 12251;
-	optional string parent_id = 10370;
+	string raw = 11220;
+	bool successfully_completed_percentage = 11821;
+	optional string parent_id = 10643;
 }
 
 // ServiceMetadataDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3905,8 +4130,8 @@ message Token {
 message Training {
 
 	oneof type {
-		AwarenessTraining awareness_training = 13539;
-		SecurityTraining security_training = 5053;
+		AwarenessTraining awareness_training = 18321;
+		SecurityTraining security_training = 16425;
 	}
 }
 
@@ -3947,6 +4172,29 @@ message UsageStatistics {
 	option (resource_type_names) = "SecurityFeature";
 
 	int32 api_hits_per_month = 7625;
+}
+
+// UserInformationAndIntructionDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message UserInformationAndIntructionDocument {
+	option (resource_type_names) = "UserInformationAndIntructionDocument";
+	option (resource_type_names) = "Document";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 4472;
+	string description = 8002;
+	string filetype = 9176;
+	string id = 7706 [ (buf.validate.field).required = true ];
+	map<string, string> labels = 4894;
+	string name = 13104 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 13906;
+	repeated CryptographicHash cryptographic_hashs  = 5030;
+	DataLocation data_location = 10061;
+	repeated DocumentSignature document_signatures  = 8364;
+	optional string parent_id = 1569;
+	SchemaValidation validated_by = 13833;
+	repeated SecurityFeature security_features  = 12653;
 }
 
 // VMImage is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4090,7 +4338,8 @@ message Vulnerability {
 	string cve = 205;
 	repeated string cwe = 18325;
 	string description = 10690;
-	string name = 13528 [ (buf.validate.field).required = true ];
+	// exploitable: Indicates whether a vulnerability is exploitable for the given target of evaluation (TOE)
+	bool exploitable = 15966;
 	string url = 11925;
 }
 

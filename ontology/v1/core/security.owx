@@ -170,6 +170,9 @@
         <Class abbreviatedIRI="core:SingleSignOn"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:RateLimiting"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:TransportEncryption"/>
     </Declaration>
     <Declaration>
@@ -270,9 +273,6 @@
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-    </Declaration>
-    <Declaration>
-        <Datatype abbreviatedIRI="xsd:de.fraunhofer.aisec.cpg.graph.Node"/>
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
@@ -649,7 +649,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Logging"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:name"/>
+            <DataProperty abbreviatedIRI="core:logLevel"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1005,11 +1005,6 @@
     </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
-        <Literal xml:lang="english">xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:listString</AbbreviatedIRI>
         <Literal>listString</Literal>
     </AnnotationAssertion>
@@ -1215,6 +1210,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:Logging</AbbreviatedIRI>
+        <Literal>enum:logLevel=DEBUG,INFO,WARN,ERROR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:MalwareProtection</AbbreviatedIRI>
         <Literal>analyzes the activity within a Compute resource</Literal>
     </AnnotationAssertion>
@@ -1357,11 +1357,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:broadAssignments</AbbreviatedIRI>
         <Literal>broadAssignments</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:calls</AbbreviatedIRI>
-        <Literal>calls</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
