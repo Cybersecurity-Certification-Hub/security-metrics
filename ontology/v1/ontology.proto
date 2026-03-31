@@ -3279,6 +3279,7 @@ message Product {
 	string type = 6467;
 	repeated string code_ids  = 10540;
 	optional string contact_person_id = 8641;
+	repeated string data_ids  = 11462;
 	repeated string governance_ids  = 16685;
 	repeated string hardware_ids  = 7586;
 	repeated string infrastructure_ids  = 2977;
