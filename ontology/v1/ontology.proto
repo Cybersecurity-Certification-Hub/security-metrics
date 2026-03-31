@@ -623,6 +623,7 @@ message CodeRepository {
 }
 
 // CodeSignoff is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Signoffs enable users to affirm that a commit complies with the rules and licensing governing a repository
 message CodeSignoff {
 	option (resource_type_names) = "CodeSignoff";
 	option (resource_type_names) = "Auditing";

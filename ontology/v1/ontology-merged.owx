@@ -5628,6 +5628,16 @@ name = metadata.name</Literal>
         <Literal>CodeRepository</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/CodeSignoff</IRI>
+        <Literal>Signoffs enable users to affirm that a commit complies with the rules and licensing governing a repository</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/CodeSignoff</IRI>
+        <Literal>CodeSignoff</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Component</IRI>
         <Literal>Component</Literal>
