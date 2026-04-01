@@ -126,6 +126,9 @@
         <Class IRI="/classes/CodeRepository"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/CodeSignoff"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Component"/>
     </Declaration>
     <Declaration>
@@ -2007,6 +2010,24 @@
     <SubClassOf>
         <Class IRI="/classes/CodeRepository"/>
         <Class IRI="/classes/CloudResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CodeRepository"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/CodeSignoff"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CodeSignoff"/>
+        <Class IRI="/classes/Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CodeSignoff"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/enforced"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Component"/>
@@ -4032,6 +4053,13 @@
         <Class IRI="/classes/Product"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
+            <Class IRI="/classes/Data"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Product"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/Governance"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -5598,6 +5626,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/CodeRepository</IRI>
         <Literal>CodeRepository</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/CodeSignoff</IRI>
+        <Literal>Signoffs enable users to affirm that a commit complies with the rules and licensing governing a repository</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/CodeSignoff</IRI>
+        <Literal>CodeSignoff</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

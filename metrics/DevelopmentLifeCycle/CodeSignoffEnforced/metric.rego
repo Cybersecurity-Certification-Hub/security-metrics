@@ -9,10 +9,10 @@ default applicable = false
 default compliant = false
 
 applicable if {
-	# we are only interested in code repositories
-	repo
+	# we are only interested in code repositories with the codeSignoff property
+	repo.codeSignoff
 }
 
 compliant if {
-	compare(data.operator, data.target_value, repo.codeSignoffEnforced)
+	compare(data.operator, data.target_value, repo.codeSignoff.enforced)
 }

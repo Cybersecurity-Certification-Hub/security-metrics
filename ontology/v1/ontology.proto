@@ -240,6 +240,7 @@ message Auditing {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
+		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
 		BootLogging boot_logging = 18439;
@@ -613,11 +614,22 @@ message CodeRepository {
 	string name = 12766 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 15664;
+	CodeSignoff code_signoff = 1837;
 	GeoLocation geo_location = 111;
 	repeated Logging loggings  = 133;
 	repeated Redundancy redundancies  = 11273;
 	optional string parent_id = 5357;
 	UsageStatistics usage_statistics = 3480;
+}
+
+// CodeSignoff is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Signoffs enable users to affirm that a commit complies with the rules and licensing governing a repository
+message CodeSignoff {
+	option (resource_type_names) = "CodeSignoff";
+	option (resource_type_names) = "Auditing";
+	option (resource_type_names) = "SecurityFeature";
+
+	bool enforced = 18628;
 }
 
 // Component is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -3279,6 +3291,7 @@ message Product {
 	string type = 6467;
 	repeated string code_ids  = 10540;
 	optional string contact_person_id = 8641;
+	repeated string data_ids  = 11462;
 	repeated string governance_ids  = 16685;
 	repeated string hardware_ids  = 7586;
 	repeated string infrastructure_ids  = 2977;
@@ -3902,6 +3915,7 @@ message SecurityFeature {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
+		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
 		BootLogging boot_logging = 18439;
