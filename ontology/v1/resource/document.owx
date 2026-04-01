@@ -91,6 +91,27 @@
         <Class abbreviatedIRI="cl:ServiceMetadataDocument"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:UserInformationAndIntructionDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:ProductionAndMonitoringProcessDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:CyberSecurityRiskAssessmentDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:DistributionOfUpdatesDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:SBOMDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:EUDeclarationOfConformity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:CoordinatedVulnerabilityDisclosurePolicy"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -410,6 +431,34 @@
         <Class abbreviatedIRI="res:Document"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:UserInformationAndIntructionDocument"/>
+        <Class abbreviatedIRI="core:Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ProductionAndMonitoringProcessDocument"/>
+        <Class abbreviatedIRI="core:Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CyberSecurityRiskAssessmentDocument"/>
+        <Class abbreviatedIRI="core:Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DistributionOfUpdatesDocument"/>
+        <Class abbreviatedIRI="core:Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SBOMDocument"/>
+        <Class abbreviatedIRI="core:Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:EUDeclarationOfConformity"/>
+        <Class abbreviatedIRI="core:Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CoordinatedVulnerabilityDisclosurePolicy"/>
+        <Class abbreviatedIRI="core:Policy"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="res:Data"/>
         <Class abbreviatedIRI="res:Resource"/>
     </SubClassOf>
@@ -593,6 +642,41 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:ServiceMetadataDocument</AbbreviatedIRI>
         <Literal>ServiceMetadataDocument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:UserInformationAndIntructionDocument</AbbreviatedIRI>
+        <Literal>UserInformationAndIntructionDocument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:ProductionAndMonitoringProcessDocument</AbbreviatedIRI>
+        <Literal>ProductionAndMonitoringProcessDocument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:CyberSecurityRiskAssessmentDocument</AbbreviatedIRI>
+        <Literal>CyberSecurityRiskAssessmentDocument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:DistributionOfUpdatesDocument</AbbreviatedIRI>
+        <Literal>DistributionOfUpdatesDocument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:SBOMDocument</AbbreviatedIRI>
+        <Literal>SBOMDocument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:EUDeclarationOfConformity</AbbreviatedIRI>
+        <Literal>EUDeclarationOfConformity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:CoordinatedVulnerabilityDisclosurePolicy</AbbreviatedIRI>
+        <Literal>CoordinatedVulnerabilityDisclosurePolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>

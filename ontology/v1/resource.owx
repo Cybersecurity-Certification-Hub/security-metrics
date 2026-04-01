@@ -17,6 +17,7 @@
     <Import>https://ontology.cybersecuritycertcluster.eu/resource/governance</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/resource/hardware</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/resource/infrastructure</Import>
+    <Import>https://ontology.cybersecuritycertcluster.eu/resource/product</Import>
     <Import>https://ontology.cybersecuritycertcluster.eu/data</Import>
 </Ontology>
 
