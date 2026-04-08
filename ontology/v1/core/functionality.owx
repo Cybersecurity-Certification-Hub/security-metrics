@@ -212,6 +212,9 @@
         <Class abbreviatedIRI="core:Time"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:MonitoringProcedure"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:CipherSuite"/>
     </Declaration>
     <Declaration>
@@ -1287,6 +1290,10 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Functionality"/>
         <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MonitoringProcedure"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:HashOperation"/>
