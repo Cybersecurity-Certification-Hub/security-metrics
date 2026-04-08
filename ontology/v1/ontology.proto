@@ -1717,6 +1717,7 @@ message Functionality {
 		Input input = 2243;
 		KeyDerivationFunction key_derivation_function = 2001;
 		MessageAuthenticationCode message_authentication_code = 8921;
+		MonitoringProcedure monitoring_procedure = 11320;
 		Authenticate authenticate = 1798;
 		AuthorizeJwt authorize_jwt = 1893;
 		IssueJwt issue_jwt = 157;
@@ -1853,7 +1854,6 @@ message Governance {
 
 	oneof type {
 		ContactPerson contact_person = 7415;
-		MonitoringProcedure monitoring_procedure = 4844;
 		AwarenessTraining awareness_training = 18321;
 		SecurityTraining security_training = 16425;
 	}
@@ -2784,19 +2784,10 @@ message CodeModule {
 // intervalMonths: Review frequency (in months) for reviewing monitoring procedures
 message MonitoringProcedure {
 	option (resource_type_names) = "MonitoringProcedure";
-	option (resource_type_names) = "Governance";
-	option (resource_type_names) = "Resource";
+	option (resource_type_names) = "Functionality";
 
-	google.protobuf.Timestamp creation_time = 13504;
-	string description = 17881;
-	string id = 11072 [ (buf.validate.field).required = true ];
 	// The interval refers to the interval in months.
-	int32 interval_months = 5083;
-	map<string, string> labels = 9724;
-	string name = 6599 [ (buf.validate.field).required = true ];
-	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 5928;
-	optional string parent_id = 18171;
+	int32 interval_months = 6177;
 }
 
 // MultiFactorAuthentiation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3229,7 +3220,7 @@ message PolicyDocument {
 	repeated CryptographicHash cryptographic_hashs  = 12896;
 	DataLocation data_location = 11474;
 	repeated DocumentSignature document_signatures  = 7191;
-	optional string governance_id = 15049;
+	MonitoringProcedure monitoring_procedure = 11357;
 	optional string parent_id = 18208;
 	SchemaValidation validated_by = 5620;
 	repeated SecurityFeature security_features  = 13896;
@@ -3681,7 +3672,6 @@ message Resource {
 		Token token = 5266;
 		Value value = 652;
 		ContactPerson contact_person = 7415;
-		MonitoringProcedure monitoring_procedure = 4844;
 		AwarenessTraining awareness_training = 18321;
 		SecurityTraining security_training = 16425;
 		Memory memory = 967;
