@@ -12,7 +12,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.governance.monitoringProcedure.intervalMonths)
+	compare(data.operator, data.target_value, document.monitoringProcedure.intervalMonths)
 }
 
 message := "Monitoring procedures are reviewed frequently enough to ensure compliance." if {
