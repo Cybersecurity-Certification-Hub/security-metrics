@@ -3209,7 +3209,7 @@ message PolicyDocument {
 	repeated CryptographicHash cryptographic_hashs  = 12896;
 	DataLocation data_location = 11474;
 	repeated DocumentSignature document_signatures  = 7191;
-	repeated Governance governances  = 4759;
+	Governance governance = 18871;
 	optional string parent_id = 18208;
 	SchemaValidation validated_by = 5620;
 	repeated SecurityFeature security_features  = 13896;
