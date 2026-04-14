@@ -1470,6 +1470,9 @@
         <DataProperty IRI="/classes//mode"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/properties/offersInterface"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/classes/describes"/>
     </Declaration>
     <Declaration>
@@ -2798,7 +2801,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Governance"/>
-        <Class IRI="/classes/Resource"/>
+        <Class IRI="/classes/Functionality"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Hardware"/>
@@ -3747,7 +3750,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/MonitoringProcedure"/>
-        <Class IRI="/classes/Functionality"/>
+        <Class IRI="/classes/Governance"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/MonitoringProcedure"/>
@@ -3987,8 +3990,8 @@
     <SubClassOf>
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/MonitoringProcedure"/>
+            <ObjectProperty IRI="/properties/offersInterface"/>
+            <Class IRI="/classes/Governance"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -6082,7 +6085,7 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty IRI="rdfs:comment"/>
         <IRI>/classes/Governance</IRI>
-        <Literal>Governance represents organizational security management artifacts (e.g., trainings and responsible contacts) that are often evidenced via documents.</Literal>
+        <Literal>Governance represents organizational security management artifacts (e.g., procedures and trainings) that are often evidenced via documents.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
