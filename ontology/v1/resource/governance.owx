@@ -47,6 +47,10 @@
         <Class abbreviatedIRI="res:Training"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="res:MonitoringProcedure"/>
+        <Class abbreviatedIRI="res:Governance"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="res:Training"/>
         <Class abbreviatedIRI="res:Governance"/>
     </SubClassOf>
@@ -99,7 +103,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Governance</AbbreviatedIRI>
-        <Literal>Governance represents organizational security management artifacts (e.g., trainings and responsible contacts) that are often evidenced via documents.</Literal>
+        <Literal>Governance represents organizational security management artifacts (e.g., procedures and trainings) that are often evidenced via documents.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
