@@ -12,5 +12,5 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document.ZYX)
+    compare(data.operator, data.target_value, document.SeperationOfDutiesPolicy.isDefined)
 }
