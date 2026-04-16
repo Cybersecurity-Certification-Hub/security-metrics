@@ -1,0 +1,20 @@
+# ====== Metadata ======
+id: "dddd9af3-baef-4424-bad0-0bd824222c1f"
+name: "DataConfidentialitySDNPolicyPresence"
+description: "This rule assesses whether a [PolicyDocument] includes [DataConfidentialitySDNPolicy] with [p1:isDefined] set correctly."
+
+implementationGuidelines:
+  AMOE:
+    question: "Data Confidentiality in SDN"
+    is_headline_based: true
+    keywords: []
+
+category: "Software Defined Networking"
+version: "v1"
+comments: "This metric assesses if Data Confidentiality in SDN is described. Measured in boolean."
+
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue:  true

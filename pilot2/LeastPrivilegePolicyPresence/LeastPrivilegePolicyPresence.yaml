@@ -1,0 +1,20 @@
+# ====== Metadata ======
+id: "13b3c5a6-1aca-483a-8eb3-73866fce754f"
+name: "LeastPrivilegePolicyPresence"
+description: "This rule assesses whether a [PolicyDocument] includes [LeastPrivilegePolicy] with [p1:isDefined] set correctly."
+
+implementationGuidelines:
+  AMOE:
+    question: "Least Privilege"
+    is_headline_based: Yes
+    keywords: []
+
+category: "Roles and Rights Concept"
+version: "v1"
+comments: "This metric assesses if least privilege is described. Measured in boolean."
+
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue:  true
