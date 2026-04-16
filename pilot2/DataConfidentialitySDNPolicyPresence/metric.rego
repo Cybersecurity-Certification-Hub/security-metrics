@@ -1,4 +1,4 @@
-package cch.metrics.dataconfidentialitysdnpolicypresence
+package cch.metrics.data_confidentiality_sdn_policy_presence
 
 import data.cch.compare
 import rego.v1

@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "c0f27fa6-8006-4f53-a0b0-75ea75a98f1a"
-name: "SeperationOfDutiesPolicyPresence"
-description: "This rule assesses whether a [PolicyDocument] includes [SeperationOfDutiesPolicy] with [p1:isDefined] set correctly."
+name: "SeparationOfDutiesPolicyPresence"
+description: "This rule assesses whether a [PolicyDocument] includes [SeparationOfDutiesPolicy] with [p1:isDefined] set correctly."
 
 implementationGuidelines:
   AMOE:

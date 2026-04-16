@@ -1,4 +1,4 @@
-package cch.metrics.leastprivilegepolicypresence
+package cch.metrics.least_privilege_policy_presence
 
 import data.cch.compare
 import rego.v1

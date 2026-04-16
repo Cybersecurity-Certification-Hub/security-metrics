@@ -1,4 +1,4 @@
-package cch.metrics.seperationofdutiespolicypresence
+package cch.metrics.separation_of_duties_policy_presence
 
 import data.cch.compare
 import rego.v1
@@ -12,5 +12,5 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document.SeperationOfDutiesPolicy.isDefined)
+    compare(data.operator, data.target_value, document.SeparationOfDutiesPolicy.isDefined)
 }

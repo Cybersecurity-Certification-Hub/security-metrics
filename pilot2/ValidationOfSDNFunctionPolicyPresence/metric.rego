@@ -1,4 +1,4 @@
-package cch.metrics.validationofsdnfunctionpolicypresence
+package cch.metrics.validation_of_sdn_function_policy_presence
 
 import data.cch.compare
 import rego.v1

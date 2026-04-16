@@ -1,4 +1,4 @@
-package cch.metrics.needtoknowpolicypresence
+package cch.metrics.need_to_know_policy_presence
 
 import data.cch.compare
 import rego.v1
