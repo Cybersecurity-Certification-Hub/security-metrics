@@ -3987,7 +3987,7 @@
     <SubClassOf>
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/Governance"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
