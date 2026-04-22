@@ -27,7 +27,7 @@
                                 "description": "At rest encryption must be enabled on all storage resources.",
                                 "metrics": [
                                     {
-                                        "id": "AtRestEncryptionEnabled"
+                                        "id": "c7121da1-274e-4c6b-b2fe-47df992297a9"
                                     }
                                 ],
                                 "assurance_level": "substantial"
@@ -37,7 +37,7 @@
                                 "description": "At rest encryption must use state of the art encryption algorithms.",
                                 "metrics": [
                                     {
-                                        "id": "AtRestEncryptionAlgorithm"
+                                        "id": "ed9f79fb-ff19-4626-8911-a3484a9b7639"
                                     }
                                 ],
                                 "assurance_level": "substantial"
