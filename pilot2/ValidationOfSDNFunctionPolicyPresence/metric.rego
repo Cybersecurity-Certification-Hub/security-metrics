@@ -8,9 +8,16 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    "PolicyDocument" in document.type
+	document.ValidationOfSDNFunctionPolicy
+	"PolicyDocument" in document.type
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document.ValidationOfSDNFunctionPolicy.isDefined)
+	compare(data.operator, data.target_value, document.ValidationOfSDNFunctionPolicy.isDefined)
+}
+
+message := "The policy document defines a validation and testing policy for SDN functions." if {
+	compliant
+} else := "The policy document does not define a validation and testing policy for SDN functions." if {
+	not compliant
 }

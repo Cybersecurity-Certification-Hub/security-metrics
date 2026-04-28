@@ -17,4 +17,4 @@ comments: "This metric assesses if Data Confidentiality in SDN is described. Mea
 configuration:
   p1:
     operator: "=="
-    targetValue:  true
+    targetValue: true

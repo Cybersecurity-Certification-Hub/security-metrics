@@ -8,9 +8,16 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    "PolicyDocument" in document.type
+	document.SeparationOfDutiesPolicy
+	"PolicyDocument" in document.type
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document.SeparationOfDutiesPolicy.isDefined)
+	compare(data.operator, data.target_value, document.SeparationOfDutiesPolicy.isDefined)
+}
+
+message := "The policy document defines a separation of duties policy." if {
+	compliant
+} else := "The policy document does not define a separation of duties policy." if {
+	not compliant
 }

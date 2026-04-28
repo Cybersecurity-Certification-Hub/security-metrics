@@ -8,9 +8,16 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    "PolicyDocument" in document.type
+	document.LeastPrivilegePolicy
+	"PolicyDocument" in document.type
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document.LeastPrivilegePolicy.isDefined)
+	compare(data.operator, data.target_value, document.LeastPrivilegePolicy.isDefined)
+}
+
+message := "The policy document defines a least privilege policy." if {
+	compliant
+} else := "The policy document does not define a least privilege policy." if {
+	not compliant
 }

@@ -6,15 +6,15 @@ description: "This rule assesses whether a [PolicyDocument] includes [NeedToKnow
 implementationGuidelines:
   AMOE:
     question: "Need to know"
-    is_headline_based:  true
-    keywords:  ["roles", "rights", "concept", "permissions"]
+    is_headline_based: true
+    keywords: ["roles", "rights", "concept", "permissions"]
 
 category: "Roles and Rights Concept"
 version: "v1"
-comments: "This metric assesses """need-to-know"" is described". Measured in ZZ."
+comments: "This metric assesses if need-to-know is described. Measured in boolean."
 
 # ====== Configuration ======
 configuration:
   p1:
     operator: "=="
-    targetValue:  true
+    targetValue: true

@@ -6,7 +6,7 @@ description: "This rule assesses whether a [PolicyDocument] includes [Validation
 implementationGuidelines:
   AMOE:
     question: "Validation & Testing of SDN Functions"
-    is_headline_based: True
+    is_headline_based: true
     keywords: []
 
 category: "Software Defined Networking"
@@ -17,4 +17,4 @@ comments: "This metric assesses if Validation & Testing of SDN Functions is desc
 configuration:
   p1:
     operator: "=="
-    targetValue:  true
+    targetValue: true

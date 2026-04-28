@@ -6,7 +6,7 @@ description: "This rule assesses whether a [PolicyDocument] includes [Separation
 implementationGuidelines:
   AMOE:
     question: "Segregation of Duties"
-    is_headline_based:  true
+    is_headline_based: true
     keywords: ["roles", "rights", "concept", "permissions"]
 
 category: "Roles and Rights Concept"
@@ -17,4 +17,4 @@ comments: "This metric assesses if separation of duties is described. Measured i
 configuration:
   p1:
     operator: "=="
-    targetValue:  true
+    targetValue: true

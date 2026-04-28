@@ -130,6 +130,9 @@
         <DataProperty abbreviatedIRI="res:disablePasswordPolicy"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:isDefined"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:endColumn"/>
     </Declaration>
     <Declaration>
@@ -619,6 +622,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:disablePasswordPolicy</AbbreviatedIRI>
         <Literal>disablePasswordPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:isDefined</AbbreviatedIRI>
+        <Literal>isDefined</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

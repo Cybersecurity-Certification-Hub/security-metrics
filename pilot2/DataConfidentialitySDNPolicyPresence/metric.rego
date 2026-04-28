@@ -8,9 +8,16 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    "PolicyDocument" in document.type
+	document.DataConfidentialitySDNPolicy
+	"PolicyDocument" in document.type
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document.DataConfidentialitySDNPolicy.isDefined)
+	compare(data.operator, data.target_value, document.DataConfidentialitySDNPolicy.isDefined)
+}
+
+message := "The policy document defines a data confidentiality policy for SDN." if {
+	compliant
+} else := "The policy document does not define a data confidentiality policy for SDN." if {
+	not compliant
 }
