@@ -68,13 +68,14 @@ jobs:
               -o buf/validate/validate.proto
             buf lint --path ontology/v1/ontology.proto --error-format github-actions --config '{"version":"v1","lint":{"use":["STANDARD"],"except":["PACKAGE_DIRECTORY_MATCH"]}}'
         
-        # Commit and push to the PR branch
+        # Commit and push to the PR branch (skipped for fork PRs — GITHUB_TOKEN is read-only in that context)
         - name: Commit merged OWX file
+          if: github.event.pull_request.head.repo.full_name == github.repository
           env:
             github_token: ${{ github.token }}
           run: |
-              git fetch origin pull/${{ github.event.pull_request.number }}/head:${{ github.head_ref }}
+              git fetch
               git checkout ${{ github.head_ref }}
               git add ontology/v1/ontology-merged.owx ontology/v1/ontology.proto
               git commit -m "Auto-update merged ontology and proto files [skip ci]" || echo "No changes to commit"
-              git push origin HEAD:refs/pull/${{ github.event.pull_request.number }}/head
+              git push
