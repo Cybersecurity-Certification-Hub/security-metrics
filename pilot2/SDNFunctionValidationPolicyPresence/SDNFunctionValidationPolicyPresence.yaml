@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "5cd49d36-9786-4e11-87f2-59a95c55469f"
-name: "ValidationOfSDNFunctionPolicyPresence"
-description: "This rule assesses whether a [PolicyDocument] includes [ValidationOfSDNFunctionPolicy] with [p1:isDefined] set correctly."
+name: "SDNFunctionValidationPolicyPresence"
+description: "This rule assesses whether a [PolicyDocument] includes [SDNFunctionValidationPolicy] with [p1:isDefined] set correctly."
 
 implementationGuidelines:
   AMOE:

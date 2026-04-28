@@ -97,7 +97,7 @@
         <Class abbreviatedIRI="cl:SeparationOfDutiesPolicy"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cl:ValidationOfSDNFunctionPolicy"/>
+        <Class abbreviatedIRI="cl:SDNFunctionValidationPolicy"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cl:SecurityAdvisoryDocument"/>
@@ -475,11 +475,11 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="cl:ValidationOfSDNFunctionPolicy"/>
+        <Class abbreviatedIRI="cl:SDNFunctionValidationPolicy"/>
         <Class abbreviatedIRI="core:Policy"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="cl:ValidationOfSDNFunctionPolicy"/>
+        <Class abbreviatedIRI="cl:SDNFunctionValidationPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:isDefined"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
@@ -795,12 +795,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>cl:ValidationOfSDNFunctionPolicy</AbbreviatedIRI>
+        <AbbreviatedIRI>cl:SDNFunctionValidationPolicy</AbbreviatedIRI>
         <Literal>Represents a policy section within a [PolicyDocument] describing validation and testing requirements for SDN functions. isDefined: whether this policy section is present and defined.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:ValidationOfSDNFunctionPolicy</AbbreviatedIRI>
-        <Literal>ValidationOfSDNFunctionPolicy</Literal>
+        <AbbreviatedIRI>cl:SDNFunctionValidationPolicy</AbbreviatedIRI>
+        <Literal>SDNFunctionValidationPolicy</Literal>
     </AnnotationAssertion>
 </Ontology>
