@@ -27,6 +27,9 @@
         <Class abbreviatedIRI="cl:Resource"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="cl:AssetManagement"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="cl:BlockStorage"/>
     </Declaration>
     <Declaration>
@@ -193,6 +196,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cl:Workflow"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="cl:completedReviewPercentage"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
@@ -409,6 +415,17 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:CodeRepository"/>
         <Class abbreviatedIRI="cl:CloudResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:AssetManagement"/>
+        <Class abbreviatedIRI="cl:CloudResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:AssetManagement"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="cl:completedReviewPercentage"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:Compute"/>
@@ -1805,6 +1822,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:Workspace</AbbreviatedIRI>
         <Literal>MLWorkspace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:AssetManagement</AbbreviatedIRI>
+        <Literal>AssetManagement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cl:completedReviewPercentage</AbbreviatedIRI>
+        <Literal>completedReviewPercentage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
