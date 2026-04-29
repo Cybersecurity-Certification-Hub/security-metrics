@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: d476658c-9ca7-4fa2-9071-8505bd51fc8b
+name: VerifiedCommitsPercentage
+description: This rule verifies that the [CodeRepository]'s [p1:verifiedCommitsPercentage] exceeds the minimum acceptable threshold for verified commits (0.0-1.0 scale).
+category: DevelopmentLifeCycle
+version: "v1"
+comments: The [p1:verifiedCommitsPercentage] property measures the fraction of commits successfully validated through cryptographic signature verification. Verified commits confirm that signatures match trusted public keys, ensuring author authenticity and code integrity. Rule enforces high verification rates for a secure and trustworthy repository history.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: 0.8

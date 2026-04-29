@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: 6920d9c5-587d-4e9f-876c-dcf1a69f7f75
-name: SignedCommits
-description: This rule assesses whether an [CodeRepository] has the property [p1:signedCommits] set correctly.
+name: SignedCommitsEnforced
+description: This rule assesses whether an [CodeRepository] has the property [p1:signedCommitsEnforced] set correctly.
 category: DevelopmentLifeCycle
 version: "v1" 
 comments: Signed commits are a mechanism that ensures the authenticity and integrity of code changes by attaching a cryptographic signature to each commit. This signature verifies that the commit was made by a trusted developer and has not been altered since its creation. By using signed commits, teams can enhance security and maintain a reliable history of code contributions.

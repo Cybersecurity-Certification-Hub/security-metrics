@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: fd58e2ef-2f82-3f72-bc42-52b51420feff
+name: CodeSignoffPercentage
+description: This rule verifies that the [CodeRepository]'s [p1:codeSignoffPercentage] exceeds the minimum acceptable threshold for commits with "Signed-off-by" lines (0.0-1.0 scale).
+category: DevelopmentLifeCycle
+version: "v1" 
+comments: Measures percentage of commits with "Signed-off-by" lines for review traceability. Rule enforces high signoff compliance across repositories.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: 0.8

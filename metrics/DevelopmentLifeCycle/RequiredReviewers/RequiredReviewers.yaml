@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: 5c659903-3185-3b07-9bb6-39dcd32ffa71
+name: RequiredReviewers
+description: This rule verifies that the [CodeRepository]'s [p1:requiredReviewers] meets the minimum acceptable threshold for the number of reviewers required to merge a pull request.
+category: DevelopmentLifeCycle
+version: "v1"
+comments: The [p1:requiredReviewers] property reflects the minimum number of reviewers that must approve a pull request before it can be merged. Requiring multiple reviewers enforces a structured review process, reducing the risk of defects and ensuring shared accountability for code changes. Rule ensures repositories maintain an adequate reviewer requirement aligned with development standards.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: 2
