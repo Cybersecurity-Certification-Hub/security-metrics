@@ -129,6 +129,9 @@
         <Class IRI="/classes/CodeSignoff"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Commit"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Component"/>
     </Declaration>
     <Declaration>
@@ -2025,6 +2028,24 @@
             <DataProperty IRI="/properties/enforced"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Commit"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Commit"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/CryptographicHash"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Commit"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/SoftwareResource"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Component"/>
