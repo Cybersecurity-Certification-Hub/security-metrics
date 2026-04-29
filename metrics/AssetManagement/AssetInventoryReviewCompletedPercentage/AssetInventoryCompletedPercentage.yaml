@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Asset Inventory/CMDB", "- Date of last review and update of Asset Inventory entry "]
 category: "AssetManagement"
 version: "v1"
-comments: "Percentage of completed reviews and updates of asset inventory entries - Check whether the last review of an inventory entry was within the specified timeframe | Selector: FSC (Resource Type) [Previous name: MT-AM-01.5H-2]"
+comments: "Percentage of completed reviews and updates of asset inventory entries - Check whether the last review of an inventory entry was within the specified timeframe | [Previous name: MT-AM-01.5H-2]"
 # ====== Configuration ======
 configuration:
   p1:
