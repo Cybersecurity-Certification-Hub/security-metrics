@@ -1,0 +1,20 @@
+# ====== Metadata ======
+id: "c0f27fa6-8006-4f53-a0b0-75ea75a98f1a"
+name: "SeparationOfDutiesPolicyPresence"
+description: "This rule assesses whether a [PolicyDocument] includes [SeparationOfDutiesPolicy] with [p1:isDefined] set correctly."
+
+implementationGuidelines:
+  AMOE:
+    question: "Segregation of Duties"
+    is_headline_based: true
+    keywords: ["roles", "rights", "concept", "permissions"]
+
+category: "Roles and Rights Concept"
+version: "v1"
+comments: "This metric assesses if separation of duties is described. Measured in boolean."
+
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
