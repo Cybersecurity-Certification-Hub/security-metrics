@@ -1,0 +1,20 @@
+# ====== Metadata ======
+id: "ff622c09-ec4f-4618-9041-c61833ac04cc"
+name: "TransportEncryptionUnsupportedMechanisms"
+description: "This rule assesses whether a [PolicyDocument] has the [TransportEncryption] property [p1:unsupportedMechanisms] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: EncryptionDataTransitPolicyQ2
+    question: "Which encryption mechanisms are not explicitly supported for data in transit?"
+    keywords: ["encryption", "cryptography", "data in transit", "not supported", "TLS - HPKP - HTTP Public Key Pinning"]
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "This metric captures which encryption-related mechanisms for data in transit (e.g. HTTP Public Key Pinning) are explicitly declared as not supported by the policy. These are typically deprecated or discouraged mechanisms."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue:
+      - "TLS - HPKP"
+      - "HPKP"
+      - "HTTP Public Key Pinning"
