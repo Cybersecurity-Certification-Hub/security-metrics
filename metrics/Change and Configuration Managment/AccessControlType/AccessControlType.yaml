@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "7bd89d65-02ad-480a-ad5f-06ba661d15b0"
+name: "AccessControlType"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [AccessControl], has [p1:type] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: AccessControlTypeQ1
+    question: "Which type of access control is used?"
+    keywords: ["access control", "security model", "permissions", "RBAC", "DAC", "MAC"]
+category: "Change and Configuration Managment"
+version: "1.0"
+comments: "This metric assesses the type of access control implemented. Measured as string."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[RBAC, DAC, MAC]"
