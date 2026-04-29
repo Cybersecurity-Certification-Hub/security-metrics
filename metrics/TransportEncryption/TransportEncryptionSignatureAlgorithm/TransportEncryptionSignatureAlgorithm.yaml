@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: TransportEncryptionSignatureAlgorithm
+id: 62fc5729-400f-4835-b5d6-0cd3d3d36ad4
+name: TransportEncryptionSignatureAlgorithm
 description: This rule assesses whether a [Resource] has its [TransportEncryption] [p1:tlsSignatureAlgorithm] correctly configured.
 category: TransportEncryption
 version: "v1"

@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: AdminMFAEnabled
+id: 2601ddd9-d98b-467d-ad5b-ebe1e333f566
+name: AdminMFAEnabled
 description: This rule assesses whether an [Identity] that has the property [p1:privileged] set respectively, also has the property [enforceMFA] [p2:enabled] correctly configured.
 category: IdentityManagement
 version: "v1" 

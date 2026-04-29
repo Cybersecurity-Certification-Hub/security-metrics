@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://ontology.cybersecuritycertcluster.eu/resource/governance"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://ontology.cybersecuritycertcluster.eu/resource/governance">
+    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="res" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+    <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://ontology.cybersecuritycertcluster.eu/core</Import>
+    <Declaration>
+        <Class abbreviatedIRI="res:AwarenessTraining"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="res:Governance"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="res:SecurityTraining"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="res:MonitoringProcedure"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="res:Training"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="res:ContactPerson"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:AwarenessTraining"/>
+        <Class abbreviatedIRI="res:Training"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Governance"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:SecurityTraining"/>
+        <Class abbreviatedIRI="res:Training"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:MonitoringProcedure"/>
+        <Class abbreviatedIRI="res:Governance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Training"/>
+        <Class abbreviatedIRI="res:Governance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:ContactPerson"/>
+        <Class abbreviatedIRI="res:Governance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:MonitoringProcedure"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:intervalMonths"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Training"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:annualUpdateCompleted"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Training"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:successfullyCompletedPercentage"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:ContactPerson"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:emailAddress"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:ContactPerson"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:phoneNumber"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:ContactPerson"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:jobTitle"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:Governance</AbbreviatedIRI>
+        <Literal>Governance represents organizational security management artifacts (e.g., procedures and trainings) that are often evidenced via documents.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:MonitoringProcedure</AbbreviatedIRI>
+        <Literal>intervalMonths: Review frequency (in months) for reviewing monitoring procedures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:ContactPerson</AbbreviatedIRI>
+        <Literal>ContactPerson</Literal>
+    </AnnotationAssertion>
+</Ontology>

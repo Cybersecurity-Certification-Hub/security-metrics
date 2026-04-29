@@ -16,7 +16,8 @@ The repository is structured as follows.
 A metric is described by metadata and configuration properties. While the metadata is static, the configuration properties may be modified when the metric is used, since they are dependent on the system context.
 
 Metadata
-- id: a human-readable name that is also used as an id; it must therefore be unique
+- id: a UUID for the metric
+- name: a human-readable name for the metric
 - description: a description of the metric. The description usually refers to a resource type it applies to, like a block storage, and a security property that should be fulfilled for that resource, like at-rest-encryption. It then refers to the configuration data. The metric description MUST use the ontology terms when referring to resource types and security properties and put them in brackets, e.g., [BlockStorage]. Also the reference to the configuration data must be referred to in brackets, e.g. [p1:AtRestEncryption].
 - version: the version identifies the version of the metric as it may be changed over time
 - comments: comments allow to add reasoning to the metric, explaining why it is necessary, in which contexts it may be useful, and the comments can be used to describe an example scenario for its application
@@ -24,6 +25,18 @@ Configuration data
 - interval: the interval may be used by evidence collection tools to set the interval in which evidence for this metric is collected. It should be specified as an integer which refers to hours, e.g. 24 hours.
 - operator: the operator can be one of the basic mathematical operators, like ==, >=, <
 - targetValue: the target value is what the metric actually measures, for example it could specify 'true' as a the target value for the AtRestEncryptionEnabled metric
+
+
+## Runtime version automation
+
+The runtime version metrics (PHP, Python, Java) are updated automatically via a scheduled workflow.
+
+- Script: [scripts/update_runtime_versions.py](scripts/update_runtime_versions.py)
+- Workflow: [.github/workflows/update-runtime-versions.yaml](.github/workflows/update-runtime-versions.yaml)
+
+The updater pulls data from the https://endoflife.date v1 product API and selects the
+minimum version that is still supported, matching the metric’s \`>=\`
+comparison. It logs the supported and security-only versions for traceability.
 
 # Ontology
 The ontology has been developed to harmonize evidence gathering and assessment across certifications, cloud vendors, and resource types. It was initially developed limited to cloud systems, but is being extended for other environments and technologies. 

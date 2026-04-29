@@ -1,5 +1,6 @@
 # ====== Metadata ======
-id: ObjectStoragePublicAccessDisabled
+id: 56a0bbd1-4916-46b2-8b2f-a42ac3812826
+name: ObjectStoragePublicAccessDisabled
 description: This rule assesses whether an [ObjectStorage]'s property [p1:publicAccess] is correctly set.
 category: IdentityManagement
 version: "v1" 
