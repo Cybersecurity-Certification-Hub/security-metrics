@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: EncryptionAtHostEnabled
+description: This rule assesses whether a [VirtualMachine] that exposes a [SecurityProfile] with [EncryptionAtHost] has [p1:enabled] configured correctly.
+category: InfrastructureVirtualizationSecurity
+version: "1.0"
+comments: Enabling host-level encryption guarantees that data written to and read from the hypervisor is protected, providing a foundational safeguard for cache and disk encryption features.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True
