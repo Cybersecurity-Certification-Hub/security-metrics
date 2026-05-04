@@ -345,18 +345,10 @@ message AwarenessTraining {
 	option (resource_type_names) = "AwarenessTraining";
 	option (resource_type_names) = "Training";
 	option (resource_type_names) = "Governance";
-	option (resource_type_names) = "Resource";
+	option (resource_type_names) = "Functionality";
 
-	bool annual_update_completed = 5546;
-	google.protobuf.Timestamp creation_time = 6371;
-	string description = 1978;
-	string id = 10258 [ (buf.validate.field).required = true ];
-	map<string, string> labels = 7290;
-	string name = 8381 [ (buf.validate.field).required = true ];
-	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 3963;
-	bool successfully_completed_percentage = 832;
-	optional string parent_id = 17698;
+	bool annual_update_completed = 4205;
+	bool successfully_completed_percentage = 9380;
 }
 
 // Backup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -821,19 +813,11 @@ message ConfigurationSource {
 message ContactPerson {
 	option (resource_type_names) = "ContactPerson";
 	option (resource_type_names) = "Governance";
-	option (resource_type_names) = "Resource";
+	option (resource_type_names) = "Functionality";
 
-	google.protobuf.Timestamp creation_time = 15387;
-	string description = 16050;
-	string email_address = 8616;
-	string id = 10681 [ (buf.validate.field).required = true ];
-	string job_title = 8334;
-	map<string, string> labels = 11792;
-	string name = 8652 [ (buf.validate.field).required = true ];
-	string phone_number = 10029;
-	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 11703;
-	optional string parent_id = 11554;
+	string email_address = 15629;
+	string job_title = 6896;
+	string phone_number = 13203;
 }
 
 // Container is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1710,6 +1694,10 @@ message Functionality {
 		Main main = 1117;
 		HttpEndpoint http_endpoint = 8995;
 		Error error = 6544;
+		ContactPerson contact_person = 1620;
+		MonitoringProcedure monitoring_procedure = 9388;
+		AwarenessTraining awareness_training = 8227;
+		SecurityTraining security_training = 8543;
 		HttpClient http_client = 18121;
 		HttpRequestContext http_request_context = 4279;
 		HttpRequestHandler http_request_handler = 147;
@@ -1852,10 +1840,10 @@ message GetSecret {
 message Governance {
 
 	oneof type {
-		ContactPerson contact_person = 7415;
-		MonitoringProcedure monitoring_procedure = 4844;
-		AwarenessTraining awareness_training = 18321;
-		SecurityTraining security_training = 16425;
+		ContactPerson contact_person = 1620;
+		MonitoringProcedure monitoring_procedure = 9388;
+		AwarenessTraining awareness_training = 8227;
+		SecurityTraining security_training = 8543;
 	}
 }
 
@@ -2785,18 +2773,10 @@ message CodeModule {
 message MonitoringProcedure {
 	option (resource_type_names) = "MonitoringProcedure";
 	option (resource_type_names) = "Governance";
-	option (resource_type_names) = "Resource";
+	option (resource_type_names) = "Functionality";
 
-	google.protobuf.Timestamp creation_time = 13504;
-	string description = 17881;
-	string id = 11072 [ (buf.validate.field).required = true ];
 	// The interval refers to the interval in months.
-	int32 interval_months = 5083;
-	map<string, string> labels = 9724;
-	string name = 6599 [ (buf.validate.field).required = true ];
-	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 5928;
-	optional string parent_id = 18171;
+	int32 interval_months = 13218;
 }
 
 // MultiFactorAuthentiation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3229,7 +3209,7 @@ message PolicyDocument {
 	repeated CryptographicHash cryptographic_hashs  = 12896;
 	DataLocation data_location = 11474;
 	repeated DocumentSignature document_signatures  = 7191;
-	optional string governance_id = 15049;
+	repeated Governance governances  = 4759;
 	optional string parent_id = 18208;
 	SchemaValidation validated_by = 5620;
 	repeated SecurityFeature security_features  = 13896;
@@ -3290,9 +3270,9 @@ message Product {
 	google.protobuf.Timestamp support_ends = 14253;
 	string type = 6467;
 	repeated string code_ids  = 10540;
-	optional string contact_person_id = 8641;
+	ContactPerson contact_person = 8641;
 	repeated string data_ids  = 11462;
-	repeated string governance_ids  = 16685;
+	repeated Governance governances  = 16685;
 	repeated string hardware_ids  = 7586;
 	repeated string infrastructure_ids  = 2977;
 	optional string parent_id = 715;
@@ -3680,10 +3660,6 @@ message Resource {
 		AndRule and_rule = 1114;
 		Token token = 5266;
 		Value value = 652;
-		ContactPerson contact_person = 7415;
-		MonitoringProcedure monitoring_procedure = 4844;
-		AwarenessTraining awareness_training = 18321;
-		SecurityTraining security_training = 16425;
 		Memory memory = 967;
 		Product product = 7503;
 		Application application = 18554;
@@ -3962,18 +3938,10 @@ message SecurityTraining {
 	option (resource_type_names) = "SecurityTraining";
 	option (resource_type_names) = "Training";
 	option (resource_type_names) = "Governance";
-	option (resource_type_names) = "Resource";
+	option (resource_type_names) = "Functionality";
 
-	bool annual_update_completed = 12324;
-	google.protobuf.Timestamp creation_time = 2973;
-	string description = 16969;
-	string id = 16887 [ (buf.validate.field).required = true ];
-	map<string, string> labels = 15328;
-	string name = 2030 [ (buf.validate.field).required = true ];
-	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 11220;
-	bool successfully_completed_percentage = 11821;
-	optional string parent_id = 10643;
+	bool annual_update_completed = 10890;
+	bool successfully_completed_percentage = 18938;
 }
 
 // ServiceMetadataDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4131,8 +4099,8 @@ message Token {
 message Training {
 
 	oneof type {
-		AwarenessTraining awareness_training = 18321;
-		SecurityTraining security_training = 16425;
+		AwarenessTraining awareness_training = 8227;
+		SecurityTraining security_training = 8543;
 	}
 }
 

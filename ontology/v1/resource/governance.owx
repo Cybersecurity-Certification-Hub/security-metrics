@@ -40,7 +40,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:Governance"/>
-        <Class abbreviatedIRI="core:Resource"/>
+        <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:SecurityTraining"/>
