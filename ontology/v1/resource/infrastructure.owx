@@ -403,6 +403,13 @@
         <Class abbreviatedIRI="cl:CloudResource"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
+            <Class abbreviatedIRI="cl:AuthenticationStatistics"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CloudResource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="cl:UsageStatistics"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -632,7 +639,7 @@
         <Class abbreviatedIRI="cl:Identifiable"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="cl:Authenticity"/>
+            <Class abbreviatedIRI="cl:AuthenticationStatistics"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -854,7 +861,7 @@
         <Class abbreviatedIRI="cl:NetworkService"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="cl:offersInterface"/>
-            <Class abbreviatedIRI="cl:Authenticity"/>
+            <Class abbreviatedIRI="cl:AuthenticationStatistics"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>

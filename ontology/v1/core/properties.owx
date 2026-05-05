@@ -16,6 +16,9 @@
     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
+        <Class abbreviatedIRI="res:AuthenticationStatistics"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="res:basedOn"/>
     </Declaration>
     <Declaration>
@@ -86,6 +89,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:validatedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:failedAuthenticationAttempts"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:apiHitsPerMonth"/>

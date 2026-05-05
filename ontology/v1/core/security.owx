@@ -44,6 +44,9 @@
         <Class abbreviatedIRI="core:Authenticity"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:AuthenticationStatistics"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:Authorization"/>
     </Declaration>
     <Declaration>
@@ -403,8 +406,26 @@
         <Class abbreviatedIRI="core:SecurityFeature"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:AuthenticationStatistics"/>
+        <Class abbreviatedIRI="core:Authenticity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AuthenticationStatistics"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:failedAuthenticationAttempts"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:Authenticity"/>
         <Class abbreviatedIRI="core:SecurityFeature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Authenticity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:AuthenticationStatistics"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Authenticity"/>
@@ -1067,6 +1088,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:Authenticity</AbbreviatedIRI>
         <Literal xml:lang="english">Authenticity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:AuthenticationStatistics</AbbreviatedIRI>
+        <Literal xml:lang="english">AuthenticationStatistics</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "cd3036df-a2e9-4c55-9a73-766d4874b343"
 name: "NumberOfFailedAuthenticationAttempts"
-description: "This rule assesses whether a [Resource] that offers the property [IdentityAccessManagement.AuthenticationAttempt], has [p1:numberOfFailedAttempts] set correctly."
+description: "This rule assesses whether a [Resource] that offers the property [AuthenticationStatistics], has [p1:failedAuthenticationAttempts] set correctly."
 implementationGuidelines:
   AppTelemetry:
     details: ["Number of failed authentication attempts (per Cloud Asset)"]

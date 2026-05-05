@@ -9,9 +9,9 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	true
+	document.authenticationStatistics
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document.IdentityAccessManagement.AuthenticationAttempt.numberOfFailedAttempts)
+    compare(data.operator, data.target_value, document.authenticationStatistics.failedAuthenticationAttempts)
 }
