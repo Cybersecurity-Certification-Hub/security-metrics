@@ -13,5 +13,5 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, am.Inventory.entry.allRequiredInformationRecorded)
+    compare(data.operator, data.target_value, am.inventory.entry.allRequiredInformationRecorded)
 }
