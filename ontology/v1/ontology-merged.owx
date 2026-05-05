@@ -42,6 +42,9 @@
         <Class IRI="/classes/ApplicationLog"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/AssetManagement"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/AsymmetricCipher"/>
     </Declaration>
     <Declaration>
@@ -918,6 +921,9 @@
         <DataProperty IRI="/classes/code"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/completedReviewPercentage"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/contextIsChecked"/>
     </Declaration>
     <Declaration>
@@ -1622,6 +1628,17 @@
     <SubClassOf>
         <Class IRI="/classes/ApplicationLog"/>
         <Class IRI="/classes/Logging"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetManagement"/>
+        <Class IRI="/classes/CloudResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetManagement"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/completedReviewPercentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/AsymmetricCipher"/>
@@ -5441,6 +5458,11 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/AssetManagement</IRI>
+        <Literal>AssetManagement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/AsymmetricCipher</IRI>
         <Literal>AsymmetricCipher</Literal>
     </AnnotationAssertion>
@@ -7198,6 +7220,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/code</IRI>
         <Literal>code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/completedReviewPercentage</IRI>
+        <Literal>completedReviewPercentage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
