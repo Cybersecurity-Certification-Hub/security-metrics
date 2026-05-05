@@ -341,6 +341,13 @@
         <Class abbreviatedIRI="core:Auditing"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:auditInterval"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:DiskEncryption"/>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
     </SubClassOf>
