@@ -54,7 +54,10 @@
           ],
           "properties": {
             "details": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           "additionalProperties": false
