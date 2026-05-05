@@ -1044,16 +1044,6 @@
         <Literal>AnomalyDetection</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:MalwareProtection</AbbreviatedIRI>
-        <Literal>analyzes the activity within a Compute resource</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:MalwareProtection</AbbreviatedIRI>
-        <Literal>MalwareProtection</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:ApplicationLog</AbbreviatedIRI>
         <Literal>ApplicationLogging</Literal>
@@ -1232,6 +1222,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Logging</AbbreviatedIRI>
         <Literal>enum:logLevel=DEBUG,INFO,WARN,ERROR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:MalwareProtection</AbbreviatedIRI>
+        <Literal>analyzes the activity within a Compute resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:MalwareProtection</AbbreviatedIRI>
+        <Literal>MalwareProtection</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
