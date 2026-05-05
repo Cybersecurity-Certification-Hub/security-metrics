@@ -71,6 +71,7 @@ message Account {
 	string name = 18836 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 14088;
+	AssetManagement asset_management = 7807;
 	GeoLocation geo_location = 402;
 	repeated Logging loggings  = 11094;
 	repeated Redundancy redundancies  = 2929;
@@ -201,26 +202,27 @@ message ApplicationLogging {
 	repeated string logging_service_ids  = 3884;
 }
 
+// AssetInventory is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Class representing the inventory of assets.
+message AssetInventory {
+	option (resource_type_names) = "AssetInventory";
+	option (resource_type_names) = "Auditing";
+	option (resource_type_names) = "SecurityFeature";
+
+	// Indicates whether all required information for an asset inventory entry has been recorded.
+	bool all_required_information_recorded = 5806;
+}
+
 // AssetManagement is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Class representing the asset management security feature.
 message AssetManagement {
 	option (resource_type_names) = "AssetManagement";
-	option (resource_type_names) = "Infrastructure";
-	option (resource_type_names) = "Resource";
+	option (resource_type_names) = "Auditing";
+	option (resource_type_names) = "SecurityFeature";
 
-	float completed_review_percentage = 5507;
-	google.protobuf.Timestamp creation_time = 14856;
-	string description = 4941;
-	string id = 11175 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 5159;
-	map<string, string> labels = 1915;
-	string name = 6732 [ (buf.validate.field).required = true ];
-	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 11583;
-	GeoLocation geo_location = 2151;
-	repeated Logging loggings  = 16668;
-	repeated Redundancy redundancies  = 3666;
-	optional string parent_id = 6185;
-	UsageStatistics usage_statistics = 17003;
+	// Percentage of completed reviews and updates of asset inventory entries.
+	float completed_review_percentage = 5910;
+	AssetInventory asset_inventory = 1582;
 }
 
 // AsymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -262,6 +264,8 @@ message Auditing {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
+		AssetInventory asset_inventory = 12832;
+		AssetManagement asset_management = 4701;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
@@ -549,7 +553,6 @@ message Infrastructure {
 
 	oneof type {
 		Account account = 11456;
-		AssetManagement asset_management = 13514;
 		Job job = 3999;
 		Workflow workflow = 8746;
 		CodeRepository code_repository = 3431;
@@ -3615,7 +3618,6 @@ message Resource {
 
 	oneof type {
 		Account account = 11456;
-		AssetManagement asset_management = 13514;
 		Job job = 3999;
 		Workflow workflow = 8746;
 		CodeRepository code_repository = 3431;
@@ -3915,6 +3917,8 @@ message SecurityFeature {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
+		AssetInventory asset_inventory = 12832;
+		AssetManagement asset_management = 4701;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
