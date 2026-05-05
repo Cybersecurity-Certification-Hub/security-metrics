@@ -102,6 +102,9 @@
         <Class IRI="/classes/CertificateBasedAuthentication"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/ChangeAndConfigurationManagement"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/CheckAccess"/>
     </Declaration>
     <Declaration>
@@ -675,6 +678,9 @@
         <Class IRI="/classes/ReportDocument"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/RequestForChange"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Resource"/>
     </Declaration>
     <Declaration>
@@ -1150,6 +1156,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/apiListFunction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/approvedBeforeImplementation"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/argument"/>
@@ -1830,6 +1839,17 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/ChangeAndConfigurationManagement"/>
+        <Class IRI="/classes/Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ChangeAndConfigurationManagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/RequestForChange"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/CheckAccess"/>
         <Class IRI="/classes/ProtectedAssetOperation"/>
     </SubClassOf>
@@ -1931,6 +1951,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/Logging"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CloudResource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/offers"/>
+            <Class IRI="/classes/ChangeAndConfigurationManagement"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4338,10 +4365,6 @@
         <Class IRI="/classes/DatabaseService"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/Reliability"/>
-        <Class IRI="/classes/SecurityFeature"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/classes/RemoteAttestation"/>
         <Class IRI="/classes/Attestation"/>
     </SubClassOf>
@@ -4384,6 +4407,17 @@
     <SubClassOf>
         <Class IRI="/classes/ReportDocument"/>
         <Class IRI="/classes/GenericDocument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RequestForChange"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RequestForChange"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/approvedBeforeImplementation"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Resource"/>

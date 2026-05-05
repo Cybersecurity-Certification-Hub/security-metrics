@@ -71,6 +71,7 @@ message Account {
 	string name = 18836 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 14088;
+	ChangeAndConfigurationManagement change_and_configuration_management = 15247;
 	GeoLocation geo_location = 402;
 	repeated Logging loggings  = 11094;
 	repeated Redundancy redundancies  = 2929;
@@ -240,6 +241,7 @@ message Auditing {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
+		ChangeAndConfigurationManagement change_and_configuration_management = 10648;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
@@ -384,6 +386,7 @@ message BlockStorage {
 	ActivityLogging activity_logging = 16146;
 	AtRestEncryption at_rest_encryption = 12598;
 	repeated Backup backups  = 2815;
+	ChangeAndConfigurationManagement change_and_configuration_management = 2612;
 	GeoLocation geo_location = 3908;
 	Immutability immutability = 2967;
 	repeated Logging loggings  = 7973;
@@ -455,6 +458,7 @@ message Certificate {
 	google.protobuf.Timestamp not_before_date = 11770;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 7199;
+	ChangeAndConfigurationManagement change_and_configuration_management = 18842;
 	GeoLocation geo_location = 4443;
 	Infrastructure used_by_multiple = 13381;
 	repeated Logging loggings  = 3178;
@@ -473,6 +477,15 @@ message CertificateBasedAuthentication {
 	bool enabled = 11983;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 9404;
+}
+
+// ChangeAndConfigurationManagement is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ChangeAndConfigurationManagement {
+	option (resource_type_names) = "ChangeAndConfigurationManagement";
+	option (resource_type_names) = "Auditing";
+	option (resource_type_names) = "SecurityFeature";
+
+	RequestForChange request_for_change = 2532;
 }
 
 // CheckAccess is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -606,6 +619,7 @@ message CodeRepository {
 	string name = 12766 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 15664;
+	ChangeAndConfigurationManagement change_and_configuration_management = 14112;
 	CodeSignoff code_signoff = 1837;
 	GeoLocation geo_location = 111;
 	repeated Logging loggings  = 133;
@@ -835,6 +849,7 @@ message Container {
 	string name = 736 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 18367;
+	ChangeAndConfigurationManagement change_and_configuration_management = 14843;
 	EncryptionInUse encryption_in_use = 295;
 	GeoLocation geo_location = 5503;
 	optional string image_id = 11948;
@@ -863,6 +878,7 @@ message ContainerImage {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10543;
 	optional string application_id = 758;
+	ChangeAndConfigurationManagement change_and_configuration_management = 131;
 	GeoLocation geo_location = 117;
 	repeated Logging loggings  = 12269;
 	repeated Redundancy redundancies  = 16536;
@@ -885,6 +901,7 @@ message ContainerOrchestration {
 	string name = 18187 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 17471;
+	ChangeAndConfigurationManagement change_and_configuration_management = 11810;
 	repeated string container_ids  = 1059;
 	GeoLocation geo_location = 8832;
 	repeated Logging loggings  = 2512;
@@ -908,6 +925,7 @@ message ContainerRegistry {
 	string name = 1523 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5030;
+	ChangeAndConfigurationManagement change_and_configuration_management = 17593;
 	GeoLocation geo_location = 5019;
 	repeated Logging loggings  = 685;
 	repeated Redundancy redundancies  = 12740;
@@ -1194,6 +1212,7 @@ message DatabaseStorage {
 	ActivityLogging activity_logging = 14738;
 	AtRestEncryption at_rest_encryption = 16710;
 	repeated Backup backups  = 6649;
+	ChangeAndConfigurationManagement change_and_configuration_management = 17883;
 	GeoLocation geo_location = 17276;
 	Immutability immutability = 16030;
 	repeated Logging loggings  = 5231;
@@ -1243,6 +1262,7 @@ message DeviceProvisioningService {
 	string name = 9731 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 14841;
+	ChangeAndConfigurationManagement change_and_configuration_management = 12400;
 	GeoLocation geo_location = 3548;
 	repeated Logging loggings  = 3832;
 	repeated Redundancy redundancies  = 4325;
@@ -1341,6 +1361,7 @@ message DocumentDatabaseService {
 	ActivityLogging activity_logging = 6357;
 	repeated AnomalyDetection anomaly_detections  = 3091;
 	Authenticity authenticity = 1700;
+	ChangeAndConfigurationManagement change_and_configuration_management = 1388;
 	repeated string compute_ids  = 15914;
 	GeoLocation geo_location = 8772;
 	HttpEndpoint http_endpoint = 8315;
@@ -1476,7 +1497,6 @@ message ExitBoundaryOperation {
 message ExplainableResults {
 	option (resource_type_names) = "ExplainableResults";
 	option (resource_type_names) = "Reliability";
-	option (resource_type_names) = "SecurityFeature";
 
 }
 
@@ -1556,6 +1576,7 @@ message FileStorage {
 	ActivityLogging activity_logging = 108;
 	AtRestEncryption at_rest_encryption = 12115;
 	repeated Backup backups  = 4043;
+	ChangeAndConfigurationManagement change_and_configuration_management = 15600;
 	GeoLocation geo_location = 10014;
 	Immutability immutability = 1506;
 	repeated Logging loggings  = 9165;
@@ -1587,6 +1608,7 @@ message FileStorageService {
 	string raw = 13948;
 	ActivityLogging activity_logging = 16844;
 	Authenticity authenticity = 515;
+	ChangeAndConfigurationManagement change_and_configuration_management = 14631;
 	repeated string compute_ids  = 11010;
 	GeoLocation geo_location = 14794;
 	HttpEndpoint http_endpoint = 16772;
@@ -1636,6 +1658,7 @@ message Function {
 	string raw = 1531;
 	string runtime_language = 7048;
 	string runtime_version = 16017;
+	ChangeAndConfigurationManagement change_and_configuration_management = 5624;
 	EncryptionInUse encryption_in_use = 9821;
 	GeoLocation geo_location = 5466;
 	repeated Logging loggings  = 2200;
@@ -1666,6 +1689,7 @@ message FunctionService {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 4925;
 	Authenticity authenticity = 11275;
+	ChangeAndConfigurationManagement change_and_configuration_management = 13498;
 	repeated string compute_ids  = 10103;
 	repeated string function_ids  = 2977;
 	GeoLocation geo_location = 17812;
@@ -1749,6 +1773,7 @@ message Functionality {
 		Padding padding = 9245;
 		Principal principal = 16173;
 		ProtectedAsset protected_asset = 10697;
+		RequestForChange request_for_change = 5340;
 		SchemaValidation schema_validation = 16331;
 		SecurityAdvisoryFeed security_advisory_feed = 13903;
 		Time time = 16225;
@@ -1785,6 +1810,7 @@ message GenericNetworkService {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10844;
 	Authenticity authenticity = 18424;
+	ChangeAndConfigurationManagement change_and_configuration_management = 5247;
 	repeated string compute_ids  = 17384;
 	GeoLocation geo_location = 1874;
 	repeated Logging loggings  = 1801;
@@ -2044,6 +2070,7 @@ message Identity {
 	string raw = 16151;
 	Authenticity authenticity = 11686;
 	Authorization authorization = 16314;
+	ChangeAndConfigurationManagement change_and_configuration_management = 2350;
 	GeoLocation geo_location = 8606;
 	repeated Logging loggings  = 11698;
 	repeated Redundancy redundancies  = 16086;
@@ -2155,6 +2182,7 @@ message Job {
 	string name = 18498 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5776;
+	ChangeAndConfigurationManagement change_and_configuration_management = 16689;
 	GeoLocation geo_location = 9162;
 	repeated Logging loggings  = 13308;
 	repeated Redundancy redundancies  = 10691;
@@ -2211,6 +2239,7 @@ message Key {
 	google.protobuf.Timestamp not_before_date = 235;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 11846;
+	ChangeAndConfigurationManagement change_and_configuration_management = 1160;
 	GeoLocation geo_location = 215;
 	Infrastructure used_by_multiple = 5694;
 	repeated Logging loggings  = 13175;
@@ -2251,6 +2280,7 @@ message KeyValueDatabaseService {
 	ActivityLogging activity_logging = 4083;
 	repeated AnomalyDetection anomaly_detections  = 121;
 	Authenticity authenticity = 4800;
+	ChangeAndConfigurationManagement change_and_configuration_management = 17178;
 	repeated string compute_ids  = 13039;
 	GeoLocation geo_location = 13241;
 	HttpEndpoint http_endpoint = 11793;
@@ -2278,6 +2308,7 @@ message KeyVault {
 	string name = 5705 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 16199;
+	ChangeAndConfigurationManagement change_and_configuration_management = 10925;
 	repeated string credential_ids  = 16714;
 	GeoLocation geo_location = 7862;
 	repeated Logging loggings  = 1262;
@@ -2354,6 +2385,7 @@ message LoadBalancer {
 	string url = 2355;
 	AccessRestriction access_restriction = 11292;
 	Authenticity authenticity = 4102;
+	ChangeAndConfigurationManagement change_and_configuration_management = 2521;
 	repeated string compute_ids  = 16161;
 	GeoLocation geo_location = 10722;
 	repeated HttpEndpoint http_endpoints  = 10771;
@@ -2560,6 +2592,7 @@ message LoggingService {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 3703;
 	Authenticity authenticity = 17309;
+	ChangeAndConfigurationManagement change_and_configuration_management = 18500;
 	repeated string compute_ids  = 18796;
 	GeoLocation geo_location = 4817;
 	repeated Logging loggings  = 2206;
@@ -2646,6 +2679,7 @@ message MachineLearningService {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5983;
 	Authenticity authenticity = 8549;
+	ChangeAndConfigurationManagement change_and_configuration_management = 10857;
 	repeated string compute_ids  = 16877;
 	GeoLocation geo_location = 4584;
 	repeated Logging loggings  = 12431;
@@ -2752,6 +2786,7 @@ message MessagingHub {
 	string name = 4131 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 6465;
+	ChangeAndConfigurationManagement change_and_configuration_management = 14489;
 	GeoLocation geo_location = 392;
 	repeated Logging loggings  = 13600;
 	repeated Redundancy redundancies  = 771;
@@ -2815,6 +2850,7 @@ message MultiModalDatabaseService {
 	ActivityLogging activity_logging = 9310;
 	repeated AnomalyDetection anomaly_detections  = 9066;
 	Authenticity authenticity = 16292;
+	ChangeAndConfigurationManagement change_and_configuration_management = 17553;
 	repeated string compute_ids  = 913;
 	GeoLocation geo_location = 17721;
 	HttpEndpoint http_endpoint = 6447;
@@ -2844,6 +2880,7 @@ message NetworkInterface {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5176;
 	AccessRestriction access_restriction = 17872;
+	ChangeAndConfigurationManagement change_and_configuration_management = 18504;
 	GeoLocation geo_location = 10038;
 	repeated Logging loggings  = 8003;
 	optional string network_service_id = 14403;
@@ -2867,6 +2904,7 @@ message NetworkSecurityGroup {
 	string name = 11440 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 11170;
+	ChangeAndConfigurationManagement change_and_configuration_management = 3435;
 	GeoLocation geo_location = 11423;
 	repeated Logging loggings  = 393;
 	repeated Redundancy redundancies  = 14376;
@@ -2976,6 +3014,7 @@ message ObjectStorage {
 	ActivityLogging activity_logging = 11889;
 	AtRestEncryption at_rest_encryption = 6489;
 	repeated Backup backups  = 4514;
+	ChangeAndConfigurationManagement change_and_configuration_management = 14763;
 	GeoLocation geo_location = 8943;
 	Immutability immutability = 4592;
 	repeated Logging loggings  = 11121;
@@ -3019,6 +3058,7 @@ message ObjectStorageService {
 	string raw = 16651;
 	ActivityLogging activity_logging = 16914;
 	Authenticity authenticity = 8513;
+	ChangeAndConfigurationManagement change_and_configuration_management = 12496;
 	repeated string compute_ids  = 15695;
 	GeoLocation geo_location = 9923;
 	HttpEndpoint http_endpoint = 11411;
@@ -3175,6 +3215,7 @@ message PasswordPolicy {
 	string name = 8966 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10264;
+	ChangeAndConfigurationManagement change_and_configuration_management = 13076;
 	GeoLocation geo_location = 8344;
 	repeated Logging loggings  = 6081;
 	repeated Redundancy redundancies  = 4959;
@@ -3375,6 +3416,7 @@ message QPU {
 	string name = 1538 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 8462;
+	ChangeAndConfigurationManagement change_and_configuration_management = 11080;
 	EncryptionInUse encryption_in_use = 7289;
 	GeoLocation geo_location = 16264;
 	repeated Logging loggings  = 14768;
@@ -3508,6 +3550,7 @@ message RelationalDatabaseService {
 	ActivityLogging activity_logging = 17935;
 	repeated AnomalyDetection anomaly_detections  = 18542;
 	Authenticity authenticity = 8756;
+	ChangeAndConfigurationManagement change_and_configuration_management = 2183;
 	repeated string compute_ids  = 5357;
 	GeoLocation geo_location = 13809;
 	HttpEndpoint http_endpoint = 3492;
@@ -3525,8 +3568,8 @@ message RelationalDatabaseService {
 message Reliability {
 
 	oneof type {
-		ExplainableResults explainable_results = 6217;
-		RobustnessScore robustness_score = 12988;
+		ExplainableResults explainable_results = 11881;
+		RobustnessScore robustness_score = 5812;
 	}
 }
 
@@ -3585,6 +3628,14 @@ message ReportDocument {
 	optional string parent_id = 16048;
 	SchemaValidation validated_by = 9750;
 	repeated SecurityFeature security_features  = 10419;
+}
+
+// RequestForChange is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message RequestForChange {
+	option (resource_type_names) = "RequestForChange";
+	option (resource_type_names) = "Functionality";
+
+	bool approved_before_implementation = 13396;
 }
 
 // Resource is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -3687,6 +3738,7 @@ message ResourceGroup {
 	string name = 18950 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 16903;
+	ChangeAndConfigurationManagement change_and_configuration_management = 33;
 	GeoLocation geo_location = 10139;
 	repeated Logging loggings  = 17486;
 	repeated Redundancy redundancies  = 11277;
@@ -3721,7 +3773,6 @@ message ResourceType {
 message RobustnessScore {
 	option (resource_type_names) = "RobustnessScore";
 	option (resource_type_names) = "Reliability";
-	option (resource_type_names) = "SecurityFeature";
 
 }
 
@@ -3743,6 +3794,7 @@ message RoleAssignment {
 	string raw = 10862;
 	Authenticity authenticity = 13687;
 	Authorization authorization = 18501;
+	ChangeAndConfigurationManagement change_and_configuration_management = 1801;
 	GeoLocation geo_location = 10092;
 	repeated Logging loggings  = 18727;
 	repeated Redundancy redundancies  = 18916;
@@ -3804,6 +3856,7 @@ message Secret {
 	google.protobuf.Timestamp not_before_date = 13335;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5998;
+	ChangeAndConfigurationManagement change_and_configuration_management = 5103;
 	Cipher based_on = 7866;
 	GeoLocation geo_location = 4152;
 	Infrastructure used_by_multiple = 3559;
@@ -3874,6 +3927,7 @@ message SecurityAdvisoryService {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10467;
 	Authenticity authenticity = 16717;
+	ChangeAndConfigurationManagement change_and_configuration_management = 8210;
 	repeated string compute_ids  = 18065;
 	GeoLocation geo_location = 11088;
 	repeated string key_ids  = 7181;
@@ -3891,6 +3945,7 @@ message SecurityFeature {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
+		ChangeAndConfigurationManagement change_and_configuration_management = 10648;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
@@ -3928,8 +3983,6 @@ message SecurityFeature {
 		CryptographicHash cryptographic_hash = 18167;
 		Immutability immutability = 2008;
 		DocumentSignature document_signature = 7943;
-		ExplainableResults explainable_results = 6217;
-		RobustnessScore robustness_score = 12988;
 	}
 }
 
@@ -4182,6 +4235,7 @@ message VMImage {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 3459;
 	optional string application_id = 5181;
+	ChangeAndConfigurationManagement change_and_configuration_management = 5658;
 	GeoLocation geo_location = 18401;
 	repeated Logging loggings  = 14669;
 	repeated Redundancy redundancies  = 1511;
@@ -4238,6 +4292,7 @@ message VirtualMachine {
 	AutomaticUpdates automatic_updates = 14565;
 	repeated string block_storage_ids  = 17882;
 	BootLogging boot_logging = 10025;
+	ChangeAndConfigurationManagement change_and_configuration_management = 10072;
 	EncryptionInUse encryption_in_use = 1520;
 	GeoLocation geo_location = 14863;
 	repeated Logging loggings  = 1737;
@@ -4266,6 +4321,7 @@ message VirtualNetwork {
 	string name = 818 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 14216;
+	ChangeAndConfigurationManagement change_and_configuration_management = 3467;
 	GeoLocation geo_location = 3004;
 	repeated Logging loggings  = 18851;
 	repeated Redundancy redundancies  = 9275;
@@ -4288,6 +4344,7 @@ message VirtualSubNetwork {
 	string name = 1563 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 15165;
+	ChangeAndConfigurationManagement change_and_configuration_management = 4550;
 	GeoLocation geo_location = 518;
 	repeated Logging loggings  = 9326;
 	repeated Redundancy redundancies  = 16897;
@@ -4360,6 +4417,7 @@ message Workflow {
 	string name = 12414 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 9416;
+	ChangeAndConfigurationManagement change_and_configuration_management = 10988;
 	GeoLocation geo_location = 18272;
 	repeated Logging loggings  = 4437;
 	repeated Redundancy redundancies  = 7788;
