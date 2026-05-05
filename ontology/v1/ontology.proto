@@ -207,6 +207,7 @@ message AssetInventory {
 	option (resource_type_names) = "Auditing";
 	option (resource_type_names) = "SecurityFeature";
 
+	string audit_interval = 15088;
 }
 
 // AsymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
