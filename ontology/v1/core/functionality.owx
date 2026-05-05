@@ -17,6 +17,9 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="dt" IRI="https://ontology.cybersecuritycertcluster.eu/datatypes/"/>
     <Declaration>
+        <Class abbreviatedIRI="core:RequestForChange"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:Allocate"/>
     </Declaration>
     <Declaration>
@@ -504,6 +507,17 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Http"/>
         <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:RequestForChange"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:RequestForChange"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:approvedBeforeImplementation"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpClient"/>

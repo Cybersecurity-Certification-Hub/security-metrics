@@ -56,6 +56,9 @@
         <Class abbreviatedIRI="core:Backup"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:ChangeAndConfigurationManagement"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:BootLog"/>
     </Declaration>
     <Declaration>
@@ -155,6 +158,9 @@
         <Class abbreviatedIRI="core:RemoteAttestation"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:RequestForChange"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:ResourceLogging"/>
     </Declaration>
     <Declaration>
@@ -191,10 +197,16 @@
         <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:has"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="prop:offers"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:apiHitsPerMonth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:approvedBeforeImplementation"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:broadAssignments"/>
@@ -292,6 +304,17 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ActivityLog"/>
         <Class abbreviatedIRI="core:Logging"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ChangeAndConfigurationManagement"/>
+        <Class abbreviatedIRI="core:Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ChangeAndConfigurationManagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:RequestForChange"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:AnomalyDetection"/>
@@ -867,10 +890,6 @@
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="core:GeoLocation"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Reliability"/>
-        <Class abbreviatedIRI="core:SecurityFeature"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:RemoteAttestation"/>

@@ -36,6 +36,9 @@
         <Class abbreviatedIRI="cl:Certificate"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="cl:ChangeAndConfigurationManagement"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="cl:CloudResource"/>
     </Declaration>
     <Declaration>
@@ -376,6 +379,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="cl:offersMultiple"/>
             <Class abbreviatedIRI="cl:Redundancy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CloudResource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:offers"/>
+            <Class abbreviatedIRI="cl:ChangeAndConfigurationManagement"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
