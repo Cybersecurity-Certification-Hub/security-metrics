@@ -13,7 +13,7 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document.assetInventory.assetStatus.statusOption)
+    compare(data.operator, data.target_value, document.assetInventory.assetStatus.status)
 }
 
 message := "Asset status options are properly defined." if {

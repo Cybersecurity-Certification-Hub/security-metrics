@@ -248,9 +248,6 @@
         <DataProperty abbreviatedIRI="core:securityOnly"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="core:status"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="prop:activated"/>
     </Declaration>
     <Declaration>
@@ -356,6 +353,13 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:AssetStatus"/>
         <Class abbreviatedIRI="core:AssetInventory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetStatus"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:status"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:AssetStatus"/>
@@ -921,7 +925,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:RemoteAttestation"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:status"/>
+            <DataProperty abbreviatedIRI="prop:status"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1082,6 +1086,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:ApplicationLog</AbbreviatedIRI>
         <Literal>ApplicationLogging</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
+        <Literal>Status contains the status of the asset (e.g., active, inactive).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1757,11 +1766,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:startLine</AbbreviatedIRI>
         <Literal>startLine</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:status</AbbreviatedIRI>
-        <Literal>status</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

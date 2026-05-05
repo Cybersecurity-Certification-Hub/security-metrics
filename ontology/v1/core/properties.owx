@@ -280,7 +280,7 @@
         <DataProperty abbreviatedIRI="res:startLine"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="res:status"/>
+        <DataProperty abbreviatedIRI="prop:status"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop″:updateDuration"/>
@@ -958,7 +958,7 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:status</AbbreviatedIRI>
+        <AbbreviatedIRI>prop:status</AbbreviatedIRI>
         <Literal>status</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
