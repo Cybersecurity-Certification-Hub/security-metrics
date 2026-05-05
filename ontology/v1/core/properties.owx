@@ -310,6 +310,9 @@
         <DataProperty abbreviatedIRI="prop:auditInterval"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:updateInterval"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:enabled"/>
     </Declaration>
     <Declaration>
