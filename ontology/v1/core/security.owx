@@ -35,6 +35,9 @@
         <Class abbreviatedIRI="core:AssetInventory"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:AssetStatus"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
     </Declaration>
     <Declaration>
@@ -347,6 +350,17 @@
         <Class abbreviatedIRI="core:AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:auditInterval"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetStatus"/>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetStatus"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:updateDuration"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
