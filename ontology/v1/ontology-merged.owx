@@ -243,6 +243,9 @@
         <Class IRI="/classes/DeviceProvisioningService"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Digital"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/DiskEncryption"/>
     </Declaration>
     <Declaration>
@@ -2498,6 +2501,10 @@
     <SubClassOf>
         <Class IRI="/classes/DeviceProvisioningService"/>
         <Class IRI="/classes/IoT"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Digital"/>
+        <Class IRI="/classes/AssetInventory"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/DiskEncryption"/>
