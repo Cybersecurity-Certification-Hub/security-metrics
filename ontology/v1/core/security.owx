@@ -32,6 +32,12 @@
         <Class abbreviatedIRI="core:ApplicationLog"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:AssetManagement"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
     </Declaration>
     <Declaration>
@@ -194,6 +200,12 @@
         <ObjectProperty abbreviatedIRI="prop:offers"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="core:allRequiredInformationRecorded"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:completedReviewPercentage"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="core:apiHitsPerMonth"/>
     </Declaration>
     <Declaration>
@@ -296,6 +308,35 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:AnomalyDetection"/>
         <Class abbreviatedIRI="core:Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetManagement"/>
+        <Class abbreviatedIRI="core:Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetManagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:AssetInventory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetManagement"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:completedReviewPercentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <Class abbreviatedIRI="core:Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:allRequiredInformationRecorded"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:CodeSignoff"/>
@@ -1334,6 +1375,16 @@
         <Literal>ZoneRedundancy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:allRequiredInformationRecorded</AbbreviatedIRI>
+        <Literal>Indicates whether all required information for an asset inventory entry has been recorded.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:allRequiredInformationRecorded</AbbreviatedIRI>
+        <Literal>allRequiredInformationRecorded</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:apiHitsPerMonth</AbbreviatedIRI>
         <Literal>apiHitsPerMonth</Literal>
@@ -1747,6 +1798,36 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:usesSalt</AbbreviatedIRI>
         <Literal>usesSalt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AssetManagement</AbbreviatedIRI>
+        <Literal>Class representing the asset management security feature.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:AssetManagement</AbbreviatedIRI>
+        <Literal>AssetManagement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:completedReviewPercentage</AbbreviatedIRI>
+        <Literal>Percentage of completed reviews and updates of asset inventory entries.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:completedReviewPercentage</AbbreviatedIRI>
+        <Literal>completedReviewPercentage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
+        <Literal>Class representing the inventory of assets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
+        <Literal>AssetInventory</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
