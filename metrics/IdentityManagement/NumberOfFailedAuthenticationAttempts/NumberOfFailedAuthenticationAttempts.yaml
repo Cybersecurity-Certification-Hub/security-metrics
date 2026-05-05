@@ -5,7 +5,7 @@ description: "This rule assesses whether a [Resource] that offers the property [
 implementationGuidelines:
   AppTelemetry:
     details: ["Number of failed authentication attempts (per Cloud Asset)"]
-category: "Identity & Access Management"
+category: "IdentityManagement"
 version: "1.0"
 comments: "Multiple failed authentication attempts - Check whether the number of failed authentication attempts (per Cloud Asset) exceeds a defined threshold | Selector: app.telemetry (Resource Type) [TargetValue is measured in units] [Previous name: MT-IAM-03.7H-1]"
 # ====== Configuration ======

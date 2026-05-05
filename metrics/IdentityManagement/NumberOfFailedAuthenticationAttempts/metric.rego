@@ -1,4 +1,4 @@
-package cch.metrics.mt-iam-03.7h-1
+package cch.metrics.number_of_failed_authentication_attempts
 
 import data.cch.compare
 import rego.v1
@@ -9,6 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
+	true
 }
 
 compliant if {
