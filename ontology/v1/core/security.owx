@@ -272,6 +272,9 @@
         <DataProperty abbreviatedIRI="prop:restrictedPorts"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:storageFacility"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:tlsSignatureAlgorithm"/>
     </Declaration>
     <Declaration>
@@ -347,6 +350,13 @@
         <Class abbreviatedIRI="core:AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:auditInterval"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:storageFacility"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1091,6 +1101,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
         <Literal>Status contains the status of the asset (e.g., active, inactive).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
+        <Literal>StorageFacility contains the storage facility type of the asset (e.g., central, decentralized).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
