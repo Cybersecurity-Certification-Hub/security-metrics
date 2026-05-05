@@ -424,7 +424,7 @@
         <Class abbreviatedIRI="cl:AssetManagement"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="cl:completedReviewPercentage"/>
-            <Datatype abbreviatedIRI="xsd:decimal"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
