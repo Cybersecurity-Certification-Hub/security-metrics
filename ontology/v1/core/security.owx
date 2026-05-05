@@ -80,6 +80,9 @@
         <Class abbreviatedIRI="core:DDosProtection"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:Digital"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:DiskEncryption"/>
     </Declaration>
     <Declaration>
@@ -346,6 +349,10 @@
             <DataProperty abbreviatedIRI="prop:auditInterval"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Digital"/>
+        <Class abbreviatedIRI="core:AssetInventory"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:DiskEncryption"/>
