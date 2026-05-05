@@ -742,10 +742,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:MalwareProtection"/>
-        <Class abbreviatedIRI="core:Integrity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:MalwareProtection"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="core:ApplicationLog"/>
@@ -1050,7 +1046,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:MalwareProtection</AbbreviatedIRI>
-        <Literal>assesses if the malware protection solution is enabled on the respective resource</Literal>
+        <Literal>analyzes the activity within a Compute resource</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
