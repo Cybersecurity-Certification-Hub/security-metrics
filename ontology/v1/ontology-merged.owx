@@ -1161,6 +1161,9 @@
         <DataProperty IRI="/properties/arguments"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/auditInterval"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/call"/>
     </Declaration>
     <Declaration>
@@ -1629,6 +1632,13 @@
     <SubClassOf>
         <Class IRI="/classes/AssetInventory"/>
         <Class IRI="/classes/Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/auditInterval"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/AsymmetricCipher"/>
