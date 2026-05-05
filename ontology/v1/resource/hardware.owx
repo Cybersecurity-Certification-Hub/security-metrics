@@ -60,4 +60,9 @@
         <AbbreviatedIRI>core:mode</AbbreviatedIRI>
         <Literal>mode</Literal>
     </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:Hardware</AbbreviatedIRI>
+        <Literal>Hardware</Literal>
+    </AnnotationAssertion>
 </Ontology>

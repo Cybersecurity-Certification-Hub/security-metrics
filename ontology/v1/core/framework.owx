@@ -65,9 +65,6 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:de.fraunhofer.aisec.cpg.graph.Node"/>
-    </Declaration>
-    <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <Declaration>
@@ -133,11 +130,6 @@
         <Class abbreviatedIRI="core:Framework"/>
         <NamedIndividual abbreviatedIRI="library:SpringBoot"/>
     </ClassAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
-        <Literal xml:lang="english">xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
-    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:listString</AbbreviatedIRI>
@@ -212,11 +204,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:broadAssignments</AbbreviatedIRI>
         <Literal>broadAssignments</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:calls</AbbreviatedIRI>
-        <Literal>calls</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

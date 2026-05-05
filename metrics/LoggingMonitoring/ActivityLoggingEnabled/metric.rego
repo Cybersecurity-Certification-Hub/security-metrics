@@ -7,7 +7,7 @@ default applicable = false
 
 default compliant = false
 
-enabled := input.resourceLogging.enabled
+enabled := input.activityLogging.enabled
 
 applicable if {
 	enabled != null
