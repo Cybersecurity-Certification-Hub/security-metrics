@@ -26,9 +26,6 @@
         <Class abbreviatedIRI="core:ActivityLog"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:MalwareProtection"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:AnomalyDetection"/>
     </Declaration>
     <Declaration>
@@ -391,24 +388,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:MalwareProtection"/>
-        <Class abbreviatedIRI="core:Integrity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:MalwareProtection"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="core:ApplicationLog"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:MalwareProtection"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:enabled"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:Attestation"/>
         <Class abbreviatedIRI="core:Integrity"/>
     </SubClassOf>
@@ -760,6 +739,10 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:MalwareProtection"/>
         <Class abbreviatedIRI="core:Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MalwareProtection"/>
+        <Class abbreviatedIRI="core:Integrity"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:MalwareProtection"/>
@@ -1253,16 +1236,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Logging</AbbreviatedIRI>
         <Literal>enum:logLevel=DEBUG,INFO,WARN,ERROR</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>core:MalwareProtection</AbbreviatedIRI>
-        <Literal>analyzes the activity within a Compute resource</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:MalwareProtection</AbbreviatedIRI>
-        <Literal>MalwareProtection</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
