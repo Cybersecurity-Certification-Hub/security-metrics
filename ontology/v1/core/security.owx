@@ -26,6 +26,9 @@
         <Class abbreviatedIRI="core:ActivityLog"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:MalwareProtection"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:AnomalyDetection"/>
     </Declaration>
     <Declaration>
@@ -385,6 +388,24 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:keyUrl"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MalwareProtection"/>
+        <Class abbreviatedIRI="core:Integrity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MalwareProtection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:ApplicationLog"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MalwareProtection"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:enabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1042,6 +1063,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:AnomalyDetection</AbbreviatedIRI>
         <Literal>AnomalyDetection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:MalwareProtection</AbbreviatedIRI>
+        <Literal>assesses if the malware protection solution is enabled on the respective resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:MalwareProtection</AbbreviatedIRI>
+        <Literal>MalwareProtection</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

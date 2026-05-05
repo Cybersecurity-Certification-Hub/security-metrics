@@ -24,6 +24,9 @@
         <Class abbreviatedIRI="cl:Account"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="cl:MalwareProtection"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="cl:Resource"/>
     </Declaration>
     <Declaration>
@@ -397,6 +400,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="cl:CodeSignoff"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CloudResource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:offers"/>
+            <Class abbreviatedIRI="cl:MalwareProtection"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
