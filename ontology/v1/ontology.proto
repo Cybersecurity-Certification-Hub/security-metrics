@@ -201,13 +201,12 @@ message ApplicationLogging {
 	repeated string logging_service_ids  = 3884;
 }
 
-// AssetInventory is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// AssetInventory is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message AssetInventory {
-	option (resource_type_names) = "AssetInventory";
-	option (resource_type_names) = "Auditing";
-	option (resource_type_names) = "SecurityFeature";
 
-	string audit_interval = 15088;
+	oneof type {
+		Digital digital = 1946;
+	}
 }
 
 // AsymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -249,7 +248,7 @@ message Auditing {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
-		AssetInventory asset_inventory = 12832;
+		Digital digital = 1946;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
@@ -1258,6 +1257,16 @@ message DeviceProvisioningService {
 	repeated Redundancy redundancies  = 4325;
 	optional string parent_id = 7483;
 	UsageStatistics usage_statistics = 15375;
+}
+
+// Digital is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message Digital {
+	option (resource_type_names) = "Digital";
+	option (resource_type_names) = "AssetInventory";
+	option (resource_type_names) = "Auditing";
+	option (resource_type_names) = "SecurityFeature";
+
+	string audit_interval = 14140;
 }
 
 // DiskEncryption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3901,7 +3910,7 @@ message SecurityFeature {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
-		AssetInventory asset_inventory = 12832;
+		Digital digital = 1946;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
