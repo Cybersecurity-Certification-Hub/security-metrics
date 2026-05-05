@@ -639,13 +639,6 @@
         <Class abbreviatedIRI="cl:Identifiable"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="cl:AuthenticationStatistics"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:Identifiable"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="cl:Authorization"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -856,13 +849,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:NetworkService"/>
         <Class abbreviatedIRI="cl:Networking"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:NetworkService"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="cl:offersInterface"/>
-            <Class abbreviatedIRI="cl:AuthenticationStatistics"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:NetworkService"/>
