@@ -2,18 +2,18 @@ package cch.metrics.asset_inventory_audit_frequency
 
 import data.cch.compare
 import rego.v1
-import input.assetInventory as as
+import input.assetInventory as ai
 
 default applicable := false
 default compliant := false
 
 applicable if {
-    "PolicyDocument" in as.type
+    "PolicyDocument" in ai.type
     as.type != "digital"
 }
 
 compliant if {
-  compare(data.operator, data.target_value, as.auditInterval)
+  compare(data.operator, data.target_value, ai.auditInterval)
 }
 
 message := "Asset inventory audits are performed frequently enough." if {
