@@ -35,9 +35,6 @@
         <Class abbreviatedIRI="core:AssetInventory"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:AssetStatus"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
     </Declaration>
     <Declaration>
@@ -81,9 +78,6 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:DDosProtection"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="core:Digital"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:DiskEncryption"/>
@@ -349,7 +343,28 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:AssetInventory"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:auditInterval"/>
+            <DataProperty abbreviatedIRI="prop:updateDuration"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:status"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:updateDuration"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:type"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -366,28 +381,6 @@
             <DataProperty abbreviatedIRI="prop:updateInterval"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:AssetStatus"/>
-        <Class abbreviatedIRI="core:AssetInventory"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:AssetStatus"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:status"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:AssetStatus"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:updateDuration"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Digital"/>
-        <Class abbreviatedIRI="core:AssetInventory"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:DiskEncryption"/>
@@ -1108,6 +1101,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
         <Literal>Status contains the status of the asset (e.g., active, inactive).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
+        <Literal>Type: contains the type of the asset, e.g., digital</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
