@@ -3,7 +3,7 @@ package cch.metrics.asset_inventory_entry_information_complete
 import data.cch.compare
 import rego.v1
 
-import input.assetManagement as am
+import input.assetInventory as am
 
 default applicable := false
 
@@ -14,5 +14,5 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, am.assetInventory.allRequiredInformationRecorded)
+    compare(data.operator, data.target_value, am.allRequiredInformationRecorded)
 }
