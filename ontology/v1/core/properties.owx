@@ -283,7 +283,7 @@
         <DataProperty abbreviatedIRI="prop:status"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop″:updateDuration"/>
+        <DataProperty abbreviatedIRI="prop:updateDuration"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:usesSalt"/>
