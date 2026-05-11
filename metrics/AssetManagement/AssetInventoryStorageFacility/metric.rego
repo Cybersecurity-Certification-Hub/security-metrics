@@ -2,18 +2,18 @@ package cch.metrics.asset_inventory_storage_facility
 
 import data.cch.compare
 import rego.v1
-import input as document
+import input.assetInventory as ai
 
 default applicable := false
 
 default compliant := false
 
 applicable if {
-    "PolicyDocument" in document.type
+    "PolicyDocument" in ai.type
 }
 
 compliant if {
-    compare(data.operator, data.target_value, document.assetInventory.storageFacility)
+    compare(data.operator, data.target_value, ai.storageFacility)
 }
 
 message := "Asset records are stored in an appropriate facility type." if {
