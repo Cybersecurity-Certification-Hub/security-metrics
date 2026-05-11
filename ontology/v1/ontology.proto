@@ -201,12 +201,25 @@ message ApplicationLogging {
 	repeated string logging_service_ids  = 3884;
 }
 
-// AssetInventory is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
+// AssetInventory is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// AuditInterval contains the frequency of asset inventory audits in month.
+// Status contains the status of the asset (e.g., active, inactive).
+// StorageFacility contains the storage facility type of the asset (e.g., central, decentralized).
+// Type: contains the type of the asset, e.g., digital
+// UpdateInterval contains the frequency of asset inventory updates in month.
 message AssetInventory {
+	option (resource_type_names) = "AssetInventory";
+	option (resource_type_names) = "Auditing";
+	option (resource_type_names) = "SecurityFeature";
 
-	oneof type {
-		Digital digital = 1946;
-	}
+	// The time needed for an audit.
+	int32 audit_interval = 15088;
+	string status = 11933;
+	string storage_facility = 2637;
+	string type = 11720;
+	// The time needed for an update.
+	int32 update_duration = 5698;
+	string update_interval = 4178;
 }
 
 // AsymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -248,7 +261,7 @@ message Auditing {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
-		Digital digital = 1946;
+		AssetInventory asset_inventory = 12832;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
@@ -1257,16 +1270,6 @@ message DeviceProvisioningService {
 	repeated Redundancy redundancies  = 4325;
 	optional string parent_id = 7483;
 	UsageStatistics usage_statistics = 15375;
-}
-
-// Digital is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message Digital {
-	option (resource_type_names) = "Digital";
-	option (resource_type_names) = "AssetInventory";
-	option (resource_type_names) = "Auditing";
-	option (resource_type_names) = "SecurityFeature";
-
-	string audit_interval = 14140;
 }
 
 // DiskEncryption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3910,7 +3913,7 @@ message SecurityFeature {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
-		Digital digital = 1946;
+		AssetInventory asset_inventory = 12832;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
