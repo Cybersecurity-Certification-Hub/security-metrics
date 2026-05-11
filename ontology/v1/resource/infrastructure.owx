@@ -352,7 +352,7 @@
         <Class abbreviatedIRI="cl:Account"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="cl:AssetManagement"/>
+            <Class abbreviatedIRI="cl:AssetInventory"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
