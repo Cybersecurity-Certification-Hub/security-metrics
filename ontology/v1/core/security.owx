@@ -343,21 +343,21 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:AssetInventory"/>
         <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:auditInterval"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:updateDuration"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:status"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:AssetInventory"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:updateDuration"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
