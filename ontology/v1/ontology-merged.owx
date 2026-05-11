@@ -45,9 +45,6 @@
         <Class IRI="/classes/AssetInventory"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/AssetManagement"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/classes/AsymmetricCipher"/>
     </Declaration>
     <Declaration>
@@ -1555,7 +1552,7 @@
         <Class IRI="/classes/Account"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/offers"/>
-            <Class IRI="/classes/AssetManagement"/>
+            <Class IRI="/classes/AssetInventory"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1654,18 +1651,7 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/AssetManagement"/>
-        <Class IRI="/classes/Auditing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/AssetManagement"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/AssetInventory"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/AssetManagement"/>
+        <Class IRI="/classes/AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/completedReviewPercentage"/>
             <Datatype abbreviatedIRI="xsd:float"/>
@@ -5496,16 +5482,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/AssetInventory</IRI>
         <Literal>AssetInventory</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/AssetManagement</IRI>
-        <Literal>Class representing the asset management security feature.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/AssetManagement</IRI>
-        <Literal>AssetManagement</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
