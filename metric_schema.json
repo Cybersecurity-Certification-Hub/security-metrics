@@ -54,7 +54,10 @@
           ],
           "properties": {
             "details": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           "additionalProperties": false
@@ -66,6 +69,12 @@
           ],
           "properties": {
             "details": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "previous_name": {
               "type": "string"
             }
           },
