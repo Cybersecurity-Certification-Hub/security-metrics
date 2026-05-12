@@ -403,13 +403,6 @@
         <Class abbreviatedIRI="cl:CloudResource"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="cl:AuthenticationStatistics"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:CloudResource"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="cl:MalwareProtection"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
