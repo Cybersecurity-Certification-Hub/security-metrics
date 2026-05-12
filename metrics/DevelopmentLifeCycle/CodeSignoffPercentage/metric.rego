@@ -10,9 +10,9 @@ default compliant = false
 
 applicable if {
 	# we are only interested in code repositories
-	repo
+	repo.codeSignOff
 }
 
 compliant if {
-	compare(data.operator, data.target_value, repo.codeSignoffPercentage)
+	compare(data.operator, data.target_value, repo.codeSignoff.percentage)
 }
