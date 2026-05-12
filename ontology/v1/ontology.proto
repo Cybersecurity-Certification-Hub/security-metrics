@@ -72,6 +72,7 @@ message Account {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 14088;
 	AuthenticationStatistics authentication_statistics = 14789;
+	AssetInventory asset_inventory = 14263;
 	GeoLocation geo_location = 402;
 	repeated Logging loggings  = 11094;
 	MalwareProtection malware_protection = 8981;
@@ -203,6 +204,19 @@ message ApplicationLogging {
 	repeated string logging_service_ids  = 3884;
 }
 
+// AssetInventory is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Class representing the inventory of assets.
+message AssetInventory {
+	option (resource_type_names) = "AssetInventory";
+	option (resource_type_names) = "Auditing";
+	option (resource_type_names) = "SecurityFeature";
+
+	// Indicates whether all required information for an asset inventory entry has been recorded.
+	bool all_required_information_recorded = 5806;
+	// Percentage of completed reviews and updates of asset inventory entries.
+	float completed_review_percentage = 15931;
+}
+
 // AsymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message AsymmetricCipher {
 	option (resource_type_names) = "AsymmetricCipher";
@@ -242,6 +256,7 @@ message Auditing {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
+		AssetInventory asset_inventory = 12832;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
@@ -3967,6 +3982,7 @@ message SecurityFeature {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
+		AssetInventory asset_inventory = 12832;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
