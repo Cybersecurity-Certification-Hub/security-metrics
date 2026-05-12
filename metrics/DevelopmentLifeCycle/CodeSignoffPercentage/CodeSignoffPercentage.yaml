@@ -4,7 +4,7 @@ name: CodeSignoffPercentage
 description: This rule assesses whether a [CodeRepository]´s [CodeSignoff] [p1:percentage] exceeds the minimum acceptable threshold for commits with "Signed-off-by" lines.
 category: DevelopmentLifeCycle
 version: "v1" 
-comments: Measures percentage of commits with "Signed-off-by" lines for review traceability. It enforces high signoff compliance across repositories.
+comments: Measures percentage of commits with "Signed-off-by" lines for review traceability. The metric enforces high signoff compliance across repositories.
 # ====== Configuration ======
 configuration:
   p1:
