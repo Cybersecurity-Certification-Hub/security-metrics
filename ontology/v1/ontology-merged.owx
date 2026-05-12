@@ -42,6 +42,9 @@
         <Class IRI="/classes/ApplicationLog"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/AssetInventory"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/AsymmetricCipher"/>
     </Declaration>
     <Declaration>
@@ -897,6 +900,9 @@
         <DataProperty IRI="/classes/adversarialRobustnessScore"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/allRequiredInformationRecorded"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/apiHitsPerMonth"/>
     </Declaration>
     <Declaration>
@@ -916,6 +922,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/code"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/completedReviewPercentage"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/contextIsChecked"/>
@@ -1540,6 +1549,13 @@
         <Class IRI="/classes/CloudResource"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Account"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/offers"/>
+            <Class IRI="/classes/AssetInventory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/ActivityLog"/>
         <Class IRI="/classes/Logging"/>
     </SubClassOf>
@@ -1622,6 +1638,24 @@
     <SubClassOf>
         <Class IRI="/classes/ApplicationLog"/>
         <Class IRI="/classes/Logging"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <Class IRI="/classes/Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/allRequiredInformationRecorded"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/completedReviewPercentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/AsymmetricCipher"/>
@@ -1938,6 +1972,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/GeoLocation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CloudResource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/offers"/>
+            <Class IRI="/classes/MalwareProtection"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2436,13 +2477,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/HttpEndpoint"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DatabaseService"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/offers"/>
-            <Class IRI="/classes/MalwareProtection"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4843,13 +4877,6 @@
         <Class IRI="/classes/VirtualMachine"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/offers"/>
-            <Class IRI="/classes/MalwareProtection"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/VirtualMachine"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/OSLog"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -5438,6 +5465,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/ApplicationLog</IRI>
         <Literal>ApplicationLogging</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AssetInventory</IRI>
+        <Literal>Class representing the inventory of assets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/AssetInventory</IRI>
+        <Literal>AssetInventory</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7130,6 +7167,16 @@ name = metadata.name</Literal>
         <Literal>ZoneRedundancy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/allRequiredInformationRecorded</IRI>
+        <Literal>Indicates whether all required information for an asset inventory entry has been recorded.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/allRequiredInformationRecorded</IRI>
+        <Literal>allRequiredInformationRecorded</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/apiHitsPerMonth</IRI>
         <Literal>apiHitsPerMonth</Literal>
@@ -7198,6 +7245,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/code</IRI>
         <Literal>code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/completedReviewPercentage</IRI>
+        <Literal>Percentage of completed reviews and updates of asset inventory entries.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/completedReviewPercentage</IRI>
+        <Literal>completedReviewPercentage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
