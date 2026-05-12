@@ -1975,6 +1975,13 @@
         <Class IRI="/classes/CloudResource"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/offers"/>
+            <Class IRI="/classes/MalwareProtection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CloudResource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/UsageStatistics"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2467,13 +2474,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/HttpEndpoint"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DatabaseService"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/offers"/>
-            <Class IRI="/classes/MalwareProtection"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4854,13 +4854,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/BootLog"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/VirtualMachine"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/offers"/>
-            <Class IRI="/classes/MalwareProtection"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
