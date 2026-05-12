@@ -1658,6 +1658,20 @@
     <SubClassOf>
         <Class IRI="/classes/AssetInventory"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/allRequiredInformationRecorded"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/completedReviewPercentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/properties/auditInterval"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
@@ -5514,6 +5528,11 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/AssetInventory</IRI>
+        <Literal>Class representing the inventory of assets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AssetInventory</IRI>
         <Literal>Status contains the status of the asset (e.g., active, inactive).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -5530,6 +5549,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/AssetInventory</IRI>
         <Literal>UpdateInterval contains the frequency of asset inventory updates in month.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/AssetInventory</IRI>
+        <Literal>AssetInventory</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
