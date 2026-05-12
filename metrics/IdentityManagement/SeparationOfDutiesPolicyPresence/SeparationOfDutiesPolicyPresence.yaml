@@ -9,7 +9,7 @@ implementationGuidelines:
     is_headline_based: true
     keywords: ["roles", "rights", "concept", "permissions"]
 
-category: "Roles and Rights Concept"
+category: "IdentityManagement"
 version: "v1"
 comments: "This metric assesses if separation of duties is described. Measured in boolean."
 

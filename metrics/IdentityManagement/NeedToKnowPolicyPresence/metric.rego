@@ -8,12 +8,12 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	document.NeedToKnowPolicy
+	document.needToKnowPolicy
 	"PolicyDocument" in document.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.NeedToKnowPolicy.isDefined)
+	compare(data.operator, data.target_value, document.needToKnowPolicy.isDefined)
 }
 
 message := "The policy document defines a need-to-know policy." if {
