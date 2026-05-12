@@ -13,4 +13,4 @@ comments: "Check whether the number of failed authentication attempts (per Cloud
 configuration:
   p1:
     operator: "<="
-    targetValue: 0
+    targetValue: 3
