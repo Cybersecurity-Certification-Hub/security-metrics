@@ -63,9 +63,6 @@
         <Class IRI="/classes/AuthenticationOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/AuthenticationStatistics"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/classes/Authenticity"/>
     </Declaration>
     <Declaration>
@@ -1730,32 +1727,21 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/AuthenticationStatistics"/>
-        <Class IRI="/classes/Authenticity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/AuthenticationStatistics"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/failedAuthenticationAttempts"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/classes/Authenticity"/>
         <Class IRI="/classes/SecurityFeature"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Authenticity"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/AuthenticationStatistics"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Authenticity"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/contextIsChecked"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Authenticity"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/failedAuthenticationAttempts"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1989,13 +1975,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/Logging"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/CloudResource"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/offers"/>
-            <Class IRI="/classes/AuthenticationStatistics"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -5532,11 +5511,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/AuthenticationOperation</IRI>
         <Literal>AuthenticationOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/AuthenticationStatistics</IRI>
-        <Literal xml:lang="english">AuthenticationStatistics</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
