@@ -4,7 +4,7 @@ name: "NumberOfFailedAuthenticationAttempts"
 description: "This rule assesses whether a [Resource] that offers the property [AuthenticationStatistics], has a maximum number of [p1:failedAuthenticationAttempts]."
 implementationGuidelines:
   AppTelemetry:
-    previousName: "MT-IAM-03.7H-1"
+    previous_name: "MT-IAM-03.7H-1"
     details: ["Number of failed authentication attempts (per Cloud Asset)"]
 category: "IdentityManagement"
 version: "1.0"
