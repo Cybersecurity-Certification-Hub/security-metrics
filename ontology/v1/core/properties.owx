@@ -280,7 +280,10 @@
         <DataProperty abbreviatedIRI="res:startLine"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="res:status"/>
+        <DataProperty abbreviatedIRI="prop:status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:updateDuration"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:usesSalt"/>
@@ -302,6 +305,12 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:arguments"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:auditInterval"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:updateInterval"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:enabled"/>
@@ -529,6 +538,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:apiHitsPerMonth</AbbreviatedIRI>
         <Literal>apiHitsPerMonth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:auditInterval</AbbreviatedIRI>
+        <Literal>The time needed for an audit.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -947,13 +961,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:status</AbbreviatedIRI>
+        <AbbreviatedIRI>prop:status</AbbreviatedIRI>
         <Literal>status</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:target</AbbreviatedIRI>
         <Literal>target</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:updateDuration</AbbreviatedIRI>
+        <Literal>The time needed for an update.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

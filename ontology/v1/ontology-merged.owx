@@ -1137,9 +1137,6 @@
         <DataProperty IRI="/classes/startLine"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/status"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/timeWindowSeconds"/>
     </Declaration>
     <Declaration>
@@ -1165,6 +1162,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/arguments"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/auditInterval"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/call"/>
@@ -1281,6 +1281,12 @@
         <DataProperty IRI="/properties/source"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/storageFacility"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/supportEnds"/>
     </Declaration>
     <Declaration>
@@ -1297,6 +1303,12 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/updateDuration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/updateInterval"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/url"/>
@@ -1655,6 +1667,48 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/completedReviewPercentage"/>
             <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/auditInterval"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/status"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/storageFacility"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/updateDuration"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/updateInterval"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4389,7 +4443,7 @@
     <SubClassOf>
         <Class IRI="/classes/RemoteAttestation"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/status"/>
+            <DataProperty IRI="/properties/status"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -5469,7 +5523,32 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/AssetInventory</IRI>
+        <Literal>AuditInterval contains the frequency of asset inventory audits in month.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AssetInventory</IRI>
         <Literal>Class representing the inventory of assets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AssetInventory</IRI>
+        <Literal>Status contains the status of the asset (e.g., active, inactive).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AssetInventory</IRI>
+        <Literal>StorageFacility contains the storage facility type of the asset (e.g., central, decentralized).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AssetInventory</IRI>
+        <Literal>Type: contains the type of the asset, e.g., digital</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AssetInventory</IRI>
+        <Literal>UpdateInterval contains the frequency of asset inventory updates in month.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8037,6 +8116,11 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">arguments</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/auditInterval</IRI>
+        <Literal>The time needed for an audit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/backend</IRI>
         <Literal xml:lang="english">backend</Literal>
@@ -8293,6 +8377,11 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/status</IRI>
+        <Literal>status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/storage</IRI>
         <Literal>storage</Literal>
     </AnnotationAssertion>
@@ -8335,6 +8424,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/ttl</IRI>
         <Literal>ttl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/updateDuration</IRI>
+        <Literal>The time needed for an update.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
