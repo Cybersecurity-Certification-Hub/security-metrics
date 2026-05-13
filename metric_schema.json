@@ -69,6 +69,12 @@
           ],
           "properties": {
             "details": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "previous_name": {
               "type": "string"
             }
           },

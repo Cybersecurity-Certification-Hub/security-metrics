@@ -42,6 +42,9 @@
         <Class IRI="/classes/ApplicationLog"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/AssetInventory"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/AsymmetricCipher"/>
     </Declaration>
     <Declaration>
@@ -903,6 +906,9 @@
         <DataProperty IRI="/classes/adversarialRobustnessScore"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/allRequiredInformationRecorded"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/apiHitsPerMonth"/>
     </Declaration>
     <Declaration>
@@ -922,6 +928,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/code"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/completedReviewPercentage"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/contextIsChecked"/>
@@ -958,6 +967,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/explainabilityEnabled"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/failedAuthenticationAttempts"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/file"/>
@@ -1134,9 +1146,6 @@
         <DataProperty IRI="/classes/startLine"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/status"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/timeWindowSeconds"/>
     </Declaration>
     <Declaration>
@@ -1165,6 +1174,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/arguments"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/auditInterval"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/call"/>
@@ -1281,6 +1293,12 @@
         <DataProperty IRI="/properties/source"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/storageFacility"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/supportEnds"/>
     </Declaration>
     <Declaration>
@@ -1297,6 +1315,12 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/updateDuration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/updateInterval"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/url"/>
@@ -1549,6 +1573,13 @@
         <Class IRI="/classes/CloudResource"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Account"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/offers"/>
+            <Class IRI="/classes/AssetInventory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/ActivityLog"/>
         <Class IRI="/classes/Logging"/>
     </SubClassOf>
@@ -1633,6 +1664,66 @@
         <Class IRI="/classes/Logging"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <Class IRI="/classes/Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/allRequiredInformationRecorded"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/completedReviewPercentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/auditInterval"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/status"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/storageFacility"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/updateDuration"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/updateInterval"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/AsymmetricCipher"/>
         <Class IRI="/classes/Cipher"/>
     </SubClassOf>
@@ -1707,6 +1798,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/contextIsChecked"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Authenticity"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/failedAuthenticationAttempts"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1965,6 +2063,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/GeoLocation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CloudResource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/offers"/>
+            <Class IRI="/classes/MalwareProtection"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2463,13 +2568,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/HttpEndpoint"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DatabaseService"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/offers"/>
-            <Class IRI="/classes/MalwareProtection"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3117,13 +3215,6 @@
     <SubClassOf>
         <Class IRI="/classes/Identifiable"/>
         <Class IRI="/classes/CloudResource"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Identifiable"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/offers"/>
-            <Class IRI="/classes/Authenticity"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Identifiable"/>
@@ -3827,13 +3918,6 @@
     <SubClassOf>
         <Class IRI="/classes/NetworkService"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/classes/offersInterface"/>
-            <Class IRI="/classes/Authenticity"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/NetworkService"/>
-        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/ServiceMetadataDocument"/>
         </ObjectSomeValuesFrom>
@@ -4378,7 +4462,7 @@
     <SubClassOf>
         <Class IRI="/classes/RemoteAttestation"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/status"/>
+            <DataProperty IRI="/properties/status"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -4871,13 +4955,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/BootLog"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/VirtualMachine"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/offers"/>
-            <Class IRI="/classes/MalwareProtection"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -5472,6 +5549,41 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/ApplicationLog</IRI>
         <Literal>ApplicationLogging</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AssetInventory</IRI>
+        <Literal>AuditInterval contains the frequency of asset inventory audits in month.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AssetInventory</IRI>
+        <Literal>Class representing the inventory of assets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AssetInventory</IRI>
+        <Literal>Status contains the status of the asset (e.g., active, inactive).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AssetInventory</IRI>
+        <Literal>StorageFacility contains the storage facility type of the asset (e.g., central, decentralized).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AssetInventory</IRI>
+        <Literal>Type: contains the type of the asset, e.g., digital</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AssetInventory</IRI>
+        <Literal>UpdateInterval contains the frequency of asset inventory updates in month.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/AssetInventory</IRI>
+        <Literal>AssetInventory</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7164,6 +7276,16 @@ name = metadata.name</Literal>
         <Literal>ZoneRedundancy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/allRequiredInformationRecorded</IRI>
+        <Literal>Indicates whether all required information for an asset inventory entry has been recorded.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/allRequiredInformationRecorded</IRI>
+        <Literal>allRequiredInformationRecorded</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/apiHitsPerMonth</IRI>
         <Literal>apiHitsPerMonth</Literal>
@@ -7232,6 +7354,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/code</IRI>
         <Literal>code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/completedReviewPercentage</IRI>
+        <Literal>Percentage of completed reviews and updates of asset inventory entries.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/completedReviewPercentage</IRI>
+        <Literal>completedReviewPercentage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8014,6 +8146,11 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">arguments</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/auditInterval</IRI>
+        <Literal>The time needed for an audit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/backend</IRI>
         <Literal xml:lang="english">backend</Literal>
@@ -8270,6 +8407,11 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/status</IRI>
+        <Literal>status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/storage</IRI>
         <Literal>storage</Literal>
     </AnnotationAssertion>
@@ -8312,6 +8454,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/ttl</IRI>
         <Literal>ttl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/updateDuration</IRI>
+        <Literal>The time needed for an update.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
