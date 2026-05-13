@@ -226,7 +226,7 @@ message AssetInventory {
 	string type = 11720;
 	// The time needed for an update.
 	int32 update_duration = 5698;
-	string update_interval = 4178;
+	int32 update_interval = 4178;
 }
 
 // AsymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
