@@ -391,7 +391,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:CloudResource"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:offers"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="cl:ChangeAndConfigurationManagement"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
