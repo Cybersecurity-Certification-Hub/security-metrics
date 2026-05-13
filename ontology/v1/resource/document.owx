@@ -112,9 +112,6 @@
         <Class abbreviatedIRI="core:CoordinatedVulnerabilityDisclosurePolicy"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:ChangeAndConfigurationManagement"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:Governance"/>
     </Declaration>
     <Declaration>
@@ -419,13 +416,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="core:Governance"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:PolicyDocument"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="core:ChangeAndConfigurationManagement"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
