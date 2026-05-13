@@ -72,8 +72,10 @@ message Account {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 14088;
 	ChangeAndConfigurationManagement change_and_configuration_management = 15247;
+	AssetInventory asset_inventory = 14263;
 	GeoLocation geo_location = 402;
 	repeated Logging loggings  = 11094;
+	MalwareProtection malware_protection = 8981;
 	repeated Redundancy redundancies  = 2929;
 	optional string parent_id = 1286;
 	UsageStatistics usage_statistics = 4034;
@@ -202,6 +204,32 @@ message ApplicationLogging {
 	repeated string logging_service_ids  = 3884;
 }
 
+// AssetInventory is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// AuditInterval contains the frequency of asset inventory audits in month.
+// Class representing the inventory of assets.
+// Status contains the status of the asset (e.g., active, inactive).
+// StorageFacility contains the storage facility type of the asset (e.g., central, decentralized).
+// Type: contains the type of the asset, e.g., digital
+// UpdateInterval contains the frequency of asset inventory updates in month.
+message AssetInventory {
+	option (resource_type_names) = "AssetInventory";
+	option (resource_type_names) = "Auditing";
+	option (resource_type_names) = "SecurityFeature";
+
+	// Indicates whether all required information for an asset inventory entry has been recorded.
+	bool all_required_information_recorded = 5806;
+	// The time needed for an audit.
+	int32 audit_interval = 15088;
+	// Percentage of completed reviews and updates of asset inventory entries.
+	float completed_review_percentage = 15931;
+	string status = 11933;
+	string storage_facility = 2637;
+	string type = 11720;
+	// The time needed for an update.
+	int32 update_duration = 5698;
+	int32 update_interval = 4178;
+}
+
 // AsymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message AsymmetricCipher {
 	option (resource_type_names) = "AsymmetricCipher";
@@ -242,6 +270,7 @@ message Auditing {
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
 		ChangeAndConfigurationManagement change_and_configuration_management = 10648;
+		AssetInventory asset_inventory = 12832;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
@@ -390,6 +419,7 @@ message BlockStorage {
 	GeoLocation geo_location = 3908;
 	Immutability immutability = 2967;
 	repeated Logging loggings  = 7973;
+	MalwareProtection malware_protection = 14705;
 	repeated Redundancy redundancies  = 16302;
 	optional string parent_id = 15420;
 	ResourceLogging resource_logging = 4514;
@@ -462,6 +492,7 @@ message Certificate {
 	GeoLocation geo_location = 4443;
 	Infrastructure used_by_multiple = 13381;
 	repeated Logging loggings  = 3178;
+	MalwareProtection malware_protection = 13721;
 	repeated Redundancy redundancies  = 15810;
 	optional string parent_id = 9548;
 	UsageStatistics usage_statistics = 3679;
@@ -475,6 +506,7 @@ message CertificateBasedAuthentication {
 
 	bool context_is_checked = 14958;
 	bool enabled = 11983;
+	int32 failed_authentication_attempts = 2906;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 9404;
 }
@@ -623,6 +655,7 @@ message CodeRepository {
 	CodeSignoff code_signoff = 1837;
 	GeoLocation geo_location = 111;
 	repeated Logging loggings  = 133;
+	MalwareProtection malware_protection = 2071;
 	repeated Redundancy redundancies  = 11273;
 	optional string parent_id = 5357;
 	UsageStatistics usage_statistics = 3480;
@@ -854,6 +887,7 @@ message Container {
 	GeoLocation geo_location = 5503;
 	optional string image_id = 11948;
 	repeated Logging loggings  = 4933;
+	MalwareProtection malware_protection = 10187;
 	repeated string network_interface_ids  = 5591;
 	repeated Redundancy redundancies  = 9300;
 	RemoteAttestation remote_attestation = 4110;
@@ -881,6 +915,7 @@ message ContainerImage {
 	ChangeAndConfigurationManagement change_and_configuration_management = 131;
 	GeoLocation geo_location = 117;
 	repeated Logging loggings  = 12269;
+	MalwareProtection malware_protection = 11095;
 	repeated Redundancy redundancies  = 16536;
 	optional string parent_id = 462;
 	UsageStatistics usage_statistics = 349;
@@ -905,6 +940,7 @@ message ContainerOrchestration {
 	repeated string container_ids  = 1059;
 	GeoLocation geo_location = 8832;
 	repeated Logging loggings  = 2512;
+	MalwareProtection malware_protection = 201;
 	repeated Redundancy redundancies  = 5269;
 	optional string parent_id = 139;
 	ResourceLogging resource_logging = 1847;
@@ -928,6 +964,7 @@ message ContainerRegistry {
 	ChangeAndConfigurationManagement change_and_configuration_management = 17593;
 	GeoLocation geo_location = 5019;
 	repeated Logging loggings  = 685;
+	MalwareProtection malware_protection = 18536;
 	repeated Redundancy redundancies  = 12740;
 	optional string parent_id = 14247;
 	UsageStatistics usage_statistics = 13554;
@@ -1216,6 +1253,7 @@ message DatabaseStorage {
 	GeoLocation geo_location = 17276;
 	Immutability immutability = 16030;
 	repeated Logging loggings  = 5231;
+	MalwareProtection malware_protection = 1289;
 	repeated Redundancy redundancies  = 5699;
 	optional string parent_id = 1057;
 	ResourceLogging resource_logging = 7886;
@@ -1265,6 +1303,7 @@ message DeviceProvisioningService {
 	ChangeAndConfigurationManagement change_and_configuration_management = 12400;
 	GeoLocation geo_location = 3548;
 	repeated Logging loggings  = 3832;
+	MalwareProtection malware_protection = 13981;
 	repeated Redundancy redundancies  = 4325;
 	optional string parent_id = 7483;
 	UsageStatistics usage_statistics = 15375;
@@ -1580,6 +1619,7 @@ message FileStorage {
 	GeoLocation geo_location = 10014;
 	Immutability immutability = 1506;
 	repeated Logging loggings  = 9165;
+	MalwareProtection malware_protection = 16292;
 	repeated Redundancy redundancies  = 1252;
 	optional string parent_id = 13904;
 	ResourceLogging resource_logging = 12122;
@@ -1613,6 +1653,7 @@ message FileStorageService {
 	GeoLocation geo_location = 14794;
 	HttpEndpoint http_endpoint = 16772;
 	repeated Logging loggings  = 6801;
+	MalwareProtection malware_protection = 7182;
 	repeated Redundancy redundancies  = 14092;
 	optional string parent_id = 8578;
 	optional string service_metadata_document_id = 5580;
@@ -1662,6 +1703,7 @@ message Function {
 	EncryptionInUse encryption_in_use = 9821;
 	GeoLocation geo_location = 5466;
 	repeated Logging loggings  = 2200;
+	MalwareProtection malware_protection = 17601;
 	repeated string network_interface_ids  = 8092;
 	repeated Redundancy redundancies  = 13881;
 	RemoteAttestation remote_attestation = 153;
@@ -1694,6 +1736,7 @@ message FunctionService {
 	repeated string function_ids  = 2977;
 	GeoLocation geo_location = 17812;
 	repeated Logging loggings  = 10958;
+	MalwareProtection malware_protection = 3901;
 	repeated Redundancy redundancies  = 1327;
 	optional string parent_id = 2810;
 	optional string service_metadata_document_id = 1408;
@@ -1814,6 +1857,7 @@ message GenericNetworkService {
 	repeated string compute_ids  = 17384;
 	GeoLocation geo_location = 1874;
 	repeated Logging loggings  = 1801;
+	MalwareProtection malware_protection = 12461;
 	repeated Redundancy redundancies  = 13999;
 	optional string parent_id = 14004;
 	optional string service_metadata_document_id = 9192;
@@ -2068,11 +2112,11 @@ message Identity {
 	bool privileged = 2301;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 16151;
-	Authenticity authenticity = 11686;
 	Authorization authorization = 16314;
 	ChangeAndConfigurationManagement change_and_configuration_management = 2350;
 	GeoLocation geo_location = 8606;
 	repeated Logging loggings  = 11698;
+	MalwareProtection malware_protection = 1541;
 	repeated Redundancy redundancies  = 16086;
 	optional string parent_id = 13088;
 	UsageStatistics usage_statistics = 7855;
@@ -2185,6 +2229,7 @@ message Job {
 	ChangeAndConfigurationManagement change_and_configuration_management = 16689;
 	GeoLocation geo_location = 9162;
 	repeated Logging loggings  = 13308;
+	MalwareProtection malware_protection = 649;
 	repeated Redundancy redundancies  = 10691;
 	optional string parent_id = 161;
 	UsageStatistics usage_statistics = 6673;
@@ -2201,6 +2246,7 @@ message JwtAuthentication {
 	bool context_is_checked = 3538;
 	bool enabled = 3085;
 	bool enforced = 13206;
+	int32 failed_authentication_attempts = 16139;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 3257;
 	optional string token_id = 17648;
@@ -2243,6 +2289,7 @@ message Key {
 	GeoLocation geo_location = 215;
 	Infrastructure used_by_multiple = 5694;
 	repeated Logging loggings  = 13175;
+	MalwareProtection malware_protection = 1845;
 	repeated Redundancy redundancies  = 7868;
 	optional string parent_id = 95;
 	UsageStatistics usage_statistics = 7188;
@@ -2312,6 +2359,7 @@ message KeyVault {
 	repeated string credential_ids  = 16714;
 	GeoLocation geo_location = 7862;
 	repeated Logging loggings  = 1262;
+	MalwareProtection malware_protection = 14918;
 	repeated Redundancy redundancies  = 11552;
 	optional string parent_id = 7075;
 	UsageStatistics usage_statistics = 13634;
@@ -2390,6 +2438,7 @@ message LoadBalancer {
 	GeoLocation geo_location = 10722;
 	repeated HttpEndpoint http_endpoints  = 10771;
 	repeated Logging loggings  = 2461;
+	MalwareProtection malware_protection = 12749;
 	repeated string network_service_ids  = 1926;
 	repeated Redundancy redundancies  = 14687;
 	optional string parent_id = 9758;
@@ -2596,6 +2645,7 @@ message LoggingService {
 	repeated string compute_ids  = 18796;
 	GeoLocation geo_location = 4817;
 	repeated Logging loggings  = 2206;
+	MalwareProtection malware_protection = 2951;
 	repeated Redundancy redundancies  = 4732;
 	optional string parent_id = 5257;
 	optional string service_metadata_document_id = 10739;
@@ -2684,6 +2734,7 @@ message MachineLearningService {
 	GeoLocation geo_location = 4584;
 	repeated Logging loggings  = 12431;
 	repeated string machine_learning_ids  = 3782;
+	MalwareProtection malware_protection = 3121;
 	repeated Redundancy redundancies  = 15904;
 	optional string parent_id = 14660;
 	optional string service_metadata_document_id = 11927;
@@ -2789,6 +2840,7 @@ message MessagingHub {
 	ChangeAndConfigurationManagement change_and_configuration_management = 14489;
 	GeoLocation geo_location = 392;
 	repeated Logging loggings  = 13600;
+	MalwareProtection malware_protection = 5650;
 	repeated Redundancy redundancies  = 771;
 	optional string parent_id = 5514;
 	UsageStatistics usage_statistics = 8646;
@@ -2821,6 +2873,7 @@ message MultiFactorAuthentiation {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool context_is_checked = 17335;
+	int32 failed_authentication_attempts = 15562;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 11722;
 	repeated Authenticity authenticities  = 14430;
@@ -2883,6 +2936,7 @@ message NetworkInterface {
 	ChangeAndConfigurationManagement change_and_configuration_management = 18504;
 	GeoLocation geo_location = 10038;
 	repeated Logging loggings  = 8003;
+	MalwareProtection malware_protection = 9038;
 	optional string network_service_id = 14403;
 	repeated Redundancy redundancies  = 3740;
 	optional string parent_id = 8306;
@@ -2907,6 +2961,7 @@ message NetworkSecurityGroup {
 	ChangeAndConfigurationManagement change_and_configuration_management = 3435;
 	GeoLocation geo_location = 11423;
 	repeated Logging loggings  = 393;
+	MalwareProtection malware_protection = 8872;
 	repeated Redundancy redundancies  = 14376;
 	optional string parent_id = 15293;
 	UsageStatistics usage_statistics = 9388;
@@ -2963,6 +3018,7 @@ message NoAuthentication {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool context_is_checked = 12023;
+	int32 failed_authentication_attempts = 4797;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 11214;
 }
@@ -2991,6 +3047,7 @@ message OTPBasedAuthentication {
 
 	bool activated = 7456;
 	bool context_is_checked = 18913;
+	int32 failed_authentication_attempts = 11364;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 12621;
 }
@@ -3018,6 +3075,7 @@ message ObjectStorage {
 	GeoLocation geo_location = 8943;
 	Immutability immutability = 4592;
 	repeated Logging loggings  = 11121;
+	MalwareProtection malware_protection = 14679;
 	repeated Redundancy redundancies  = 13679;
 	optional string parent_id = 16072;
 	ResourceLogging resource_logging = 5368;
@@ -3063,6 +3121,7 @@ message ObjectStorageService {
 	GeoLocation geo_location = 9923;
 	HttpEndpoint http_endpoint = 11411;
 	repeated Logging loggings  = 12719;
+	MalwareProtection malware_protection = 2705;
 	repeated Redundancy redundancies  = 18648;
 	optional string parent_id = 11624;
 	optional string service_metadata_document_id = 1823;
@@ -3197,6 +3256,7 @@ message PasswordBasedAuthentication {
 
 	bool activated = 11798;
 	bool context_is_checked = 1362;
+	int32 failed_authentication_attempts = 14390;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 9048;
 }
@@ -3218,6 +3278,7 @@ message PasswordPolicy {
 	ChangeAndConfigurationManagement change_and_configuration_management = 13076;
 	GeoLocation geo_location = 8344;
 	repeated Logging loggings  = 6081;
+	MalwareProtection malware_protection = 15271;
 	repeated Redundancy redundancies  = 4959;
 	optional string parent_id = 12653;
 	UsageStatistics usage_statistics = 863;
@@ -3420,6 +3481,7 @@ message QPU {
 	EncryptionInUse encryption_in_use = 7289;
 	GeoLocation geo_location = 16264;
 	repeated Logging loggings  = 14768;
+	MalwareProtection malware_protection = 697;
 	repeated string network_interface_ids  = 2623;
 	repeated Redundancy redundancies  = 12185;
 	RemoteAttestation remote_attestation = 1044;
@@ -3741,6 +3803,7 @@ message ResourceGroup {
 	ChangeAndConfigurationManagement change_and_configuration_management = 33;
 	GeoLocation geo_location = 10139;
 	repeated Logging loggings  = 17486;
+	MalwareProtection malware_protection = 10760;
 	repeated Redundancy redundancies  = 11277;
 	optional string parent_id = 9625;
 	UsageStatistics usage_statistics = 16846;
@@ -3792,11 +3855,11 @@ message RoleAssignment {
 	string name = 2963 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10862;
-	Authenticity authenticity = 13687;
 	Authorization authorization = 18501;
 	ChangeAndConfigurationManagement change_and_configuration_management = 1801;
 	GeoLocation geo_location = 10092;
 	repeated Logging loggings  = 18727;
+	MalwareProtection malware_protection = 17663;
 	repeated Redundancy redundancies  = 18916;
 	optional string parent_id = 8394;
 	UsageStatistics usage_statistics = 18400;
@@ -3861,6 +3924,7 @@ message Secret {
 	GeoLocation geo_location = 4152;
 	Infrastructure used_by_multiple = 3559;
 	repeated Logging loggings  = 16085;
+	MalwareProtection malware_protection = 6751;
 	repeated Redundancy redundancies  = 14119;
 	optional string parent_id = 13608;
 	UsageStatistics usage_statistics = 5354;
@@ -3932,6 +3996,7 @@ message SecurityAdvisoryService {
 	GeoLocation geo_location = 11088;
 	repeated string key_ids  = 7181;
 	repeated Logging loggings  = 28;
+	MalwareProtection malware_protection = 7307;
 	repeated Redundancy redundancies  = 14683;
 	optional string parent_id = 11251;
 	repeated SecurityAdvisoryFeed security_advisory_feeds  = 4972;
@@ -3946,6 +4011,7 @@ message SecurityFeature {
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
 		ChangeAndConfigurationManagement change_and_configuration_management = 10648;
+		AssetInventory asset_inventory = 12832;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
@@ -4038,6 +4104,7 @@ message SingleSignOn {
 
 	bool context_is_checked = 14488;
 	bool enabled = 10569;
+	int32 failed_authentication_attempts = 10119;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 9185;
 }
@@ -4238,6 +4305,7 @@ message VMImage {
 	ChangeAndConfigurationManagement change_and_configuration_management = 5658;
 	GeoLocation geo_location = 18401;
 	repeated Logging loggings  = 14669;
+	MalwareProtection malware_protection = 8165;
 	repeated Redundancy redundancies  = 1511;
 	optional string parent_id = 6454;
 	UsageStatistics usage_statistics = 3468;
@@ -4324,6 +4392,7 @@ message VirtualNetwork {
 	ChangeAndConfigurationManagement change_and_configuration_management = 3467;
 	GeoLocation geo_location = 3004;
 	repeated Logging loggings  = 18851;
+	MalwareProtection malware_protection = 3504;
 	repeated Redundancy redundancies  = 9275;
 	optional string parent_id = 7611;
 	UsageStatistics usage_statistics = 2221;
@@ -4347,6 +4416,7 @@ message VirtualSubNetwork {
 	ChangeAndConfigurationManagement change_and_configuration_management = 4550;
 	GeoLocation geo_location = 518;
 	repeated Logging loggings  = 9326;
+	MalwareProtection malware_protection = 9469;
 	repeated Redundancy redundancies  = 16897;
 	optional string parent_id = 15829;
 	UsageStatistics usage_statistics = 13627;
@@ -4420,6 +4490,7 @@ message Workflow {
 	ChangeAndConfigurationManagement change_and_configuration_management = 10988;
 	GeoLocation geo_location = 18272;
 	repeated Logging loggings  = 4437;
+	MalwareProtection malware_protection = 11115;
 	repeated Redundancy redundancies  = 7788;
 	optional string parent_id = 14352;
 	UsageStatistics usage_statistics = 6102;
