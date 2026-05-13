@@ -8,7 +8,7 @@ implementationGuidelines:
     question: "What status do the assets have?"
     keywords: ["asset status", "coverage", "completeness", "inventory"]
 category: "AssetManagement"
-version: "1.0"
+version: "v1"
 comments: "This metric assesses the current status of an assets (e.g., active, inactive). Measured as string."
 # ====== Configuration ======
 configuration:

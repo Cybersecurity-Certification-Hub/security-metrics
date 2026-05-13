@@ -8,7 +8,7 @@ implementationGuidelines:
     question: "In which type of facility are asset records stored?"
     keywords: ["asset records", "facility type", "storage"]
 category: "AssetManagement"
-version: "1.0"
+version: "v1"
 comments: "This metric assesses the facility type used to store asset records. Measured as string."
 # ====== Configuration ======
 configuration:
