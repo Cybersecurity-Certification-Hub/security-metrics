@@ -5,6 +5,7 @@ description: This rule assesses whether a [Resource] that offers the property [c
 implementationGuidelines:
   FSC:
     details: ["- Date and time of change approval and deployment", "- Information from Change ticket"]
+    previous_name: "MT-CCM-04.1H-1"
 category: DevelopmentLifeCycle
 version: "v1"
 comments: "Check whether there was a change approval before deployment to production."
