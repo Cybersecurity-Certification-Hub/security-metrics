@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["asset status", "coverage", "completeness", "inventory"]
 category: "AssetManagement"
 version: "v1"
-comments: "This metric assesses the current status of an assets (e.g., active, inactive). Measured as string."
+comments: "This metric assesses the current status of an asset inventory (e.g., active, inactive). Measured as string."
 # ====== Configuration ======
 configuration:
   p1:
