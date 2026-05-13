@@ -392,7 +392,6 @@ message Backup {
 	// The interval refers to the update interval in days.
 	google.protobuf.Duration interval = 7186;
 	google.protobuf.Duration retention_period = 6795;
-	optional string storage_id = 17051;
 	TransportEncryption transport_encryption = 2398;
 }
 
@@ -1080,7 +1079,6 @@ message CustomerKeyEncryption {
 	bool enabled = 14976;
 	string key_url = 13999;
 	Cipher based_on = 13151;
-	optional string secret_id = 4394;
 }
 
 // CyberSecurityRiskAssessmentDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1163,10 +1161,37 @@ message Data {
 		MachineLearningDataset machine_learning_dataset = 2040;
 		MachineLearningModel machine_learning_model = 15393;
 		CoordinatedVulnerabilityDisclosurePolicy coordinated_vulnerability_disclosure_policy = 18002;
+		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 18631;
+		LeastPrivilegePolicy least_privilege_policy = 9544;
+		NeedToKnowPolicy need_to_know_policy = 8800;
+		SDNFunctionValidationPolicy sdn_function_validation_policy = 7153;
+		SeparationOfDutiesPolicy separation_of_duties_policy = 6331;
 		AndRule and_rule = 1114;
 		Token token = 5266;
 		Value value = 652;
 	}
+}
+
+// DataConfidentialitySDNPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a [PolicyDocument] describing data confidentiality requirements for Software Defined Networking (SDN). isDefined: whether this policy section is present and defined.
+message DataConfidentialitySDNPolicy {
+	option (resource_type_names) = "DataConfidentialitySDNPolicy";
+	option (resource_type_names) = "Policy";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 15489;
+	string description = 876;
+	string id = 3163 [ (buf.validate.field).required = true ];
+	bool is_defined = 17955;
+	map<string, string> labels = 14977;
+	string name = 7916 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 5124;
+	optional string context_id = 11333;
+	DataLocation data_location = 3177;
+	repeated string policy_rule_ids  = 5689;
+	optional string parent_id = 16709;
 }
 
 // DataLocation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1320,7 +1345,6 @@ message DiskEncryption {
 	string key_url = 6086;
 	BlockStorage used_by = 14240;
 	Cipher based_on = 6881;
-	optional string secret_id = 10114;
 }
 
 // DiskEncryptionOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -2244,7 +2268,6 @@ message JwtAuthentication {
 	int32 failed_authentication_attempts = 16139;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 3257;
-	optional string token_id = 17648;
 }
 
 // TokenBasedAuthentication is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -2370,6 +2393,28 @@ message L3Firewall {
 	bool enabled = 9476;
 	bool inbound = 1000;
 	string restricted_ports = 7341;
+}
+
+// LeastPrivilegePolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a [PolicyDocument] describing least privilege requirements. isDefined: whether this policy section is present and defined.
+message LeastPrivilegePolicy {
+	option (resource_type_names) = "LeastPrivilegePolicy";
+	option (resource_type_names) = "Policy";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 7311;
+	string description = 13895;
+	string id = 8817 [ (buf.validate.field).required = true ];
+	bool is_defined = 18699;
+	map<string, string> labels = 13802;
+	string name = 4494 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 7445;
+	optional string context_id = 3990;
+	DataLocation data_location = 6882;
+	repeated string policy_rule_ids  = 8085;
+	optional string parent_id = 13204;
 }
 
 // Library is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2770,7 +2815,6 @@ message ManagedKeyEncryption {
 	bool enabled = 13201;
 	string key_url = 16982;
 	Cipher based_on = 9630;
-	optional string secret_id = 13805;
 }
 
 // Memory is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2905,6 +2949,28 @@ message MultiModalDatabaseService {
 	repeated string storage_ids  = 10582;
 	TransportEncryption transport_encryption = 7542;
 	UsageStatistics usage_statistics = 1641;
+}
+
+// NeedToKnowPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a [PolicyDocument] describing need-to-know access control requirements. isDefined: whether this policy section is present and defined.
+message NeedToKnowPolicy {
+	option (resource_type_names) = "NeedToKnowPolicy";
+	option (resource_type_names) = "Policy";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 12273;
+	string description = 6717;
+	string id = 10876 [ (buf.validate.field).required = true ];
+	bool is_defined = 11624;
+	map<string, string> labels = 17695;
+	string name = 8236 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 820;
+	optional string context_id = 8403;
+	DataLocation data_location = 18121;
+	repeated string policy_rule_ids  = 17372;
+	optional string parent_id = 2396;
 }
 
 // NetworkInterface is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3279,6 +3345,11 @@ message Policy {
 
 	oneof type {
 		CoordinatedVulnerabilityDisclosurePolicy coordinated_vulnerability_disclosure_policy = 18002;
+		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 18631;
+		LeastPrivilegePolicy least_privilege_policy = 9544;
+		NeedToKnowPolicy need_to_know_policy = 8800;
+		SDNFunctionValidationPolicy sdn_function_validation_policy = 7153;
+		SeparationOfDutiesPolicy separation_of_duties_policy = 6331;
 	}
 }
 
@@ -3298,12 +3369,17 @@ message PolicyDocument {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5038;
 	repeated CryptographicHash cryptographic_hashs  = 12896;
+	optional string data_confidentiality_sdn_policy_id = 4864;
 	DataLocation data_location = 11474;
 	repeated DocumentSignature document_signatures  = 7191;
 	repeated Governance governances  = 4759;
+	optional string least_privilege_policy_id = 12663;
+	optional string need_to_know_policy_id = 3585;
 	optional string parent_id = 18208;
+	optional string sdn_function_validation_policy_id = 8099;
 	SchemaValidation validated_by = 5620;
 	repeated SecurityFeature security_features  = 13896;
+	optional string separation_of_duties_policy_id = 6434;
 }
 
 // PolicyOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -3758,6 +3834,11 @@ message Resource {
 		MachineLearningDataset machine_learning_dataset = 2040;
 		MachineLearningModel machine_learning_model = 15393;
 		CoordinatedVulnerabilityDisclosurePolicy coordinated_vulnerability_disclosure_policy = 18002;
+		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 18631;
+		LeastPrivilegePolicy least_privilege_policy = 9544;
+		NeedToKnowPolicy need_to_know_policy = 8800;
+		SDNFunctionValidationPolicy sdn_function_validation_policy = 7153;
+		SeparationOfDutiesPolicy separation_of_duties_policy = 6331;
 		AndRule and_rule = 1114;
 		Token token = 5266;
 		Value value = 652;
@@ -3874,6 +3955,28 @@ message SBOMDocument {
 	optional string parent_id = 12294;
 	SchemaValidation validated_by = 17308;
 	repeated SecurityFeature security_features  = 4541;
+}
+
+// SDNFunctionValidationPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a [PolicyDocument] describing validation and testing requirements for SDN functions. isDefined: whether this policy section is present and defined.
+message SDNFunctionValidationPolicy {
+	option (resource_type_names) = "SDNFunctionValidationPolicy";
+	option (resource_type_names) = "Policy";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 14647;
+	string description = 5378;
+	string id = 3498 [ (buf.validate.field).required = true ];
+	bool is_defined = 12864;
+	map<string, string> labels = 12485;
+	string name = 14269 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 16190;
+	optional string context_id = 708;
+	DataLocation data_location = 13722;
+	repeated string policy_rule_ids  = 9678;
+	optional string parent_id = 8717;
 }
 
 // SchemaValidation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4047,6 +4150,28 @@ message SecurityTraining {
 
 	bool annual_update_completed = 10890;
 	bool successfully_completed_percentage = 18938;
+}
+
+// SeparationOfDutiesPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a [PolicyDocument] describing separation of duties requirements. isDefined: whether this policy section is present and defined.
+message SeparationOfDutiesPolicy {
+	option (resource_type_names) = "SeparationOfDutiesPolicy";
+	option (resource_type_names) = "Policy";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 1232;
+	string description = 13879;
+	string id = 5002 [ (buf.validate.field).required = true ];
+	bool is_defined = 6623;
+	map<string, string> labels = 18569;
+	string name = 12303 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 10731;
+	optional string context_id = 10827;
+	DataLocation data_location = 15124;
+	repeated string policy_rule_ids  = 16493;
+	optional string parent_id = 13819;
 }
 
 // ServiceMetadataDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4226,7 +4351,6 @@ message TransportEncryption {
 	string tls_signature_algorithm = 14996;
 	Cipher based_on = 17349;
 	repeated CipherSuite cipher_suites  = 5672;
-	optional string secret_id = 9451;
 }
 
 // UnlockEncryptedDisk is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.

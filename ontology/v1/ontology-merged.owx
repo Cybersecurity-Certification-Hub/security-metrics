@@ -219,6 +219,9 @@
         <Class IRI="/classes/Data"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/DataLocation"/>
     </Declaration>
     <Declaration>
@@ -447,6 +450,9 @@
         <Class IRI="/classes/L3Firewall"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/LeastPrivilegePolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Library"/>
     </Declaration>
     <Declaration>
@@ -544,6 +550,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/MultiModalDatabaseService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/NeedToKnowPolicy"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/NetworkInterface"/>
@@ -705,6 +714,9 @@
         <Class IRI="/classes/SBOMDocument"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/SDNFunctionValidationPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/SchemaValidation"/>
     </Declaration>
     <Declaration>
@@ -727,6 +739,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/SecurityTraining"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/SeparationOfDutiesPolicy"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ServiceMetadataDocument"/>
@@ -1002,6 +1017,9 @@
         <DataProperty IRI="/classes/isActive"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/isDefined"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/isManaged"/>
     </Declaration>
     <Declaration>
@@ -1165,9 +1183,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/apiListFunction"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/properties/approvedBeforeImplementation"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/argument"/>
@@ -1504,6 +1519,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/describes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/isDefined"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/properties/scope"/>
@@ -1867,13 +1885,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/classes/offersInterface"/>
             <Class IRI="/classes/TransportEncryption"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Backup"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Storage"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2477,6 +2488,17 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
+        <Class IRI="/classes/Policy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/DataLocation"/>
         <Class IRI="/classes/Functionality"/>
     </SubClassOf>
@@ -2707,13 +2729,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/classes/basedOn"/>
             <Class IRI="/classes/Cipher"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Encryption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Secret"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3357,13 +3372,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/JwtBasedAuthentication"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/Token"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/JwtBasedAuthentication"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
@@ -3450,6 +3458,17 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/restrictedPorts"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/LeastPrivilegePolicy"/>
+        <Class IRI="/classes/Policy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/LeastPrivilegePolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3893,6 +3912,17 @@
         <Class IRI="/classes/DatabaseService"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/NeedToKnowPolicy"/>
+        <Class IRI="/classes/Policy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/NeedToKnowPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/NetworkInterface"/>
         <Class IRI="/classes/Networking"/>
     </SubClassOf>
@@ -4097,6 +4127,41 @@
     <SubClassOf>
         <Class IRI="/classes/PolicyDocument"/>
         <Class IRI="/classes/Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/LeastPrivilegePolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/NeedToKnowPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/SDNFunctionValidationPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/SeparationOfDutiesPolicy"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/PolicyDocument"/>
@@ -4580,6 +4645,17 @@
         <Class IRI="/classes/Document"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/SDNFunctionValidationPolicy"/>
+        <Class IRI="/classes/Policy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SDNFunctionValidationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/SchemaValidation"/>
         <Class IRI="/classes/Functionality"/>
     </SubClassOf>
@@ -4680,6 +4756,17 @@
     <SubClassOf>
         <Class IRI="/classes/SecurityTraining"/>
         <Class IRI="/classes/Training"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SeparationOfDutiesPolicy"/>
+        <Class IRI="/classes/Policy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SeparationOfDutiesPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ServiceMetadataDocument"/>
@@ -5950,6 +6037,16 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/DataConfidentialitySDNPolicy</IRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing data confidentiality requirements for Software Defined Networking (SDN). isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/DataConfidentialitySDNPolicy</IRI>
+        <Literal>DataConfidentialitySDNPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/DataLocation</IRI>
         <Literal>path: Describes either local path or path in URL format</Literal>
     </AnnotationAssertion>
@@ -6469,6 +6566,16 @@ name = metadata.name</Literal>
         <Literal>L3Firewall</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LeastPrivilegePolicy</IRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing least privilege requirements. isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LeastPrivilegePolicy</IRI>
+        <Literal>LeastPrivilegePolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Library</IRI>
         <Literal>Library</Literal>
@@ -6692,6 +6799,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/MultiModalDatabaseService</IRI>
         <Literal>MultiModalDatabaseService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/NeedToKnowPolicy</IRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing need-to-know access control requirements. isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/NeedToKnowPolicy</IRI>
+        <Literal>NeedToKnowPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7034,6 +7151,16 @@ name = metadata.name</Literal>
         <Literal>SBOMDocument</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/SDNFunctionValidationPolicy</IRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing validation and testing requirements for SDN functions. isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/SDNFunctionValidationPolicy</IRI>
+        <Literal>SDNFunctionValidationPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/SchemaValidation</IRI>
         <Literal>SchemaValidation</Literal>
@@ -7072,6 +7199,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/SecurityFeature</IRI>
         <Literal xml:lang="english">SecurityFeature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/SeparationOfDutiesPolicy</IRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing separation of duties requirements. isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/SeparationOfDutiesPolicy</IRI>
+        <Literal>SeparationOfDutiesPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7487,6 +7624,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/isActive</IRI>
         <Literal>isActive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/isDefined</IRI>
+        <Literal>isDefined</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
