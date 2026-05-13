@@ -88,6 +88,9 @@
         <ObjectProperty abbreviatedIRI="prop:validatedBy"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:failedAuthenticationAttempts"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:apiHitsPerMonth"/>
     </Declaration>
     <Declaration>

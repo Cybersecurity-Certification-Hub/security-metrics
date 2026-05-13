@@ -502,6 +502,7 @@ message CertificateBasedAuthentication {
 
 	bool context_is_checked = 14958;
 	bool enabled = 11983;
+	int32 failed_authentication_attempts = 2906;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 9404;
 }
@@ -1378,7 +1379,6 @@ message DocumentDatabaseService {
 	string raw = 7317;
 	ActivityLogging activity_logging = 6357;
 	repeated AnomalyDetection anomaly_detections  = 3091;
-	Authenticity authenticity = 1700;
 	repeated string compute_ids  = 15914;
 	GeoLocation geo_location = 8772;
 	HttpEndpoint http_endpoint = 8315;
@@ -1625,7 +1625,6 @@ message FileStorageService {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 13948;
 	ActivityLogging activity_logging = 16844;
-	Authenticity authenticity = 515;
 	repeated string compute_ids  = 11010;
 	GeoLocation geo_location = 14794;
 	HttpEndpoint http_endpoint = 16772;
@@ -1706,7 +1705,6 @@ message FunctionService {
 	repeated uint32 ports = 17713;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 4925;
-	Authenticity authenticity = 11275;
 	repeated string compute_ids  = 10103;
 	repeated string function_ids  = 2977;
 	GeoLocation geo_location = 17812;
@@ -1826,7 +1824,6 @@ message GenericNetworkService {
 	repeated uint32 ports = 532;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10844;
-	Authenticity authenticity = 18424;
 	repeated string compute_ids  = 17384;
 	GeoLocation geo_location = 1874;
 	repeated Logging loggings  = 1801;
@@ -2085,7 +2082,6 @@ message Identity {
 	bool privileged = 2301;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 16151;
-	Authenticity authenticity = 11686;
 	Authorization authorization = 16314;
 	GeoLocation geo_location = 8606;
 	repeated Logging loggings  = 11698;
@@ -2218,6 +2214,7 @@ message JwtAuthentication {
 	bool context_is_checked = 3538;
 	bool enabled = 3085;
 	bool enforced = 13206;
+	int32 failed_authentication_attempts = 16139;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 3257;
 	optional string token_id = 17648;
@@ -2296,7 +2293,6 @@ message KeyValueDatabaseService {
 	string raw = 14509;
 	ActivityLogging activity_logging = 4083;
 	repeated AnomalyDetection anomaly_detections  = 121;
-	Authenticity authenticity = 4800;
 	repeated string compute_ids  = 13039;
 	GeoLocation geo_location = 13241;
 	HttpEndpoint http_endpoint = 11793;
@@ -2400,7 +2396,6 @@ message LoadBalancer {
 	string raw = 16379;
 	string url = 2355;
 	AccessRestriction access_restriction = 11292;
-	Authenticity authenticity = 4102;
 	repeated string compute_ids  = 16161;
 	GeoLocation geo_location = 10722;
 	repeated HttpEndpoint http_endpoints  = 10771;
@@ -2607,7 +2602,6 @@ message LoggingService {
 	repeated uint32 ports = 2549;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 3703;
-	Authenticity authenticity = 17309;
 	repeated string compute_ids  = 18796;
 	GeoLocation geo_location = 4817;
 	repeated Logging loggings  = 2206;
@@ -2694,7 +2688,6 @@ message MachineLearningService {
 	repeated uint32 ports = 6816;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5983;
-	Authenticity authenticity = 8549;
 	repeated string compute_ids  = 16877;
 	GeoLocation geo_location = 4584;
 	repeated Logging loggings  = 12431;
@@ -2837,6 +2830,7 @@ message MultiFactorAuthentiation {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool context_is_checked = 17335;
+	int32 failed_authentication_attempts = 15562;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 11722;
 	repeated Authenticity authenticities  = 14430;
@@ -2865,7 +2859,6 @@ message MultiModalDatabaseService {
 	string raw = 17449;
 	ActivityLogging activity_logging = 9310;
 	repeated AnomalyDetection anomaly_detections  = 9066;
-	Authenticity authenticity = 16292;
 	repeated string compute_ids  = 913;
 	GeoLocation geo_location = 17721;
 	HttpEndpoint http_endpoint = 6447;
@@ -2978,6 +2971,7 @@ message NoAuthentication {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool context_is_checked = 12023;
+	int32 failed_authentication_attempts = 4797;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 11214;
 }
@@ -3006,6 +3000,7 @@ message OTPBasedAuthentication {
 
 	bool activated = 7456;
 	bool context_is_checked = 18913;
+	int32 failed_authentication_attempts = 11364;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 12621;
 }
@@ -3072,7 +3067,6 @@ message ObjectStorageService {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 16651;
 	ActivityLogging activity_logging = 16914;
-	Authenticity authenticity = 8513;
 	repeated string compute_ids  = 15695;
 	GeoLocation geo_location = 9923;
 	HttpEndpoint http_endpoint = 11411;
@@ -3212,6 +3206,7 @@ message PasswordBasedAuthentication {
 
 	bool activated = 11798;
 	bool context_is_checked = 1362;
+	int32 failed_authentication_attempts = 14390;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 9048;
 }
@@ -3564,7 +3559,6 @@ message RelationalDatabaseService {
 	string raw = 308;
 	ActivityLogging activity_logging = 17935;
 	repeated AnomalyDetection anomaly_detections  = 18542;
-	Authenticity authenticity = 8756;
 	repeated string compute_ids  = 5357;
 	GeoLocation geo_location = 13809;
 	HttpEndpoint http_endpoint = 3492;
@@ -3799,7 +3793,6 @@ message RoleAssignment {
 	string name = 2963 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10862;
-	Authenticity authenticity = 13687;
 	Authorization authorization = 18501;
 	GeoLocation geo_location = 10092;
 	repeated Logging loggings  = 18727;
@@ -3933,7 +3926,6 @@ message SecurityAdvisoryService {
 	repeated uint32 ports = 4555;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10467;
-	Authenticity authenticity = 16717;
 	repeated string compute_ids  = 18065;
 	GeoLocation geo_location = 11088;
 	repeated string key_ids  = 7181;
@@ -4047,6 +4039,7 @@ message SingleSignOn {
 
 	bool context_is_checked = 14488;
 	bool enabled = 10569;
+	int32 failed_authentication_attempts = 10119;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 9185;
 }

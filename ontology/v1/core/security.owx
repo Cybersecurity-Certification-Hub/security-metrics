@@ -482,6 +482,13 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Authenticity"/>
         <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:failedAuthenticationAttempts"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Authenticity"/>
+        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:contextIsChecked"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
