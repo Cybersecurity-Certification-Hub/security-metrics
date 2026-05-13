@@ -71,8 +71,8 @@ message Account {
 	string name = 18836 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 14088;
-	ChangeAndConfigurationManagement change_and_configuration_management = 15247;
 	AssetInventory asset_inventory = 14263;
+	ChangeAndConfigurationManagement change_and_configuration_management = 15247;
 	GeoLocation geo_location = 402;
 	repeated Logging loggings  = 11094;
 	MalwareProtection malware_protection = 8981;
@@ -269,8 +269,8 @@ message Auditing {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
-		ChangeAndConfigurationManagement change_and_configuration_management = 10648;
 		AssetInventory asset_inventory = 12832;
+		ChangeAndConfigurationManagement change_and_configuration_management = 10648;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
@@ -1399,7 +1399,6 @@ message DocumentDatabaseService {
 	string raw = 7317;
 	ActivityLogging activity_logging = 6357;
 	repeated AnomalyDetection anomaly_detections  = 3091;
-	Authenticity authenticity = 1700;
 	ChangeAndConfigurationManagement change_and_configuration_management = 1388;
 	repeated string compute_ids  = 15914;
 	GeoLocation geo_location = 8772;
@@ -1647,7 +1646,6 @@ message FileStorageService {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 13948;
 	ActivityLogging activity_logging = 16844;
-	Authenticity authenticity = 515;
 	ChangeAndConfigurationManagement change_and_configuration_management = 14631;
 	repeated string compute_ids  = 11010;
 	GeoLocation geo_location = 14794;
@@ -1730,7 +1728,6 @@ message FunctionService {
 	repeated uint32 ports = 17713;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 4925;
-	Authenticity authenticity = 11275;
 	ChangeAndConfigurationManagement change_and_configuration_management = 13498;
 	repeated string compute_ids  = 10103;
 	repeated string function_ids  = 2977;
@@ -1852,7 +1849,6 @@ message GenericNetworkService {
 	repeated uint32 ports = 532;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10844;
-	Authenticity authenticity = 18424;
 	ChangeAndConfigurationManagement change_and_configuration_management = 5247;
 	repeated string compute_ids  = 17384;
 	GeoLocation geo_location = 1874;
@@ -2326,7 +2322,6 @@ message KeyValueDatabaseService {
 	string raw = 14509;
 	ActivityLogging activity_logging = 4083;
 	repeated AnomalyDetection anomaly_detections  = 121;
-	Authenticity authenticity = 4800;
 	ChangeAndConfigurationManagement change_and_configuration_management = 17178;
 	repeated string compute_ids  = 13039;
 	GeoLocation geo_location = 13241;
@@ -2432,7 +2427,6 @@ message LoadBalancer {
 	string raw = 16379;
 	string url = 2355;
 	AccessRestriction access_restriction = 11292;
-	Authenticity authenticity = 4102;
 	ChangeAndConfigurationManagement change_and_configuration_management = 2521;
 	repeated string compute_ids  = 16161;
 	GeoLocation geo_location = 10722;
@@ -2640,7 +2634,6 @@ message LoggingService {
 	repeated uint32 ports = 2549;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 3703;
-	Authenticity authenticity = 17309;
 	ChangeAndConfigurationManagement change_and_configuration_management = 18500;
 	repeated string compute_ids  = 18796;
 	GeoLocation geo_location = 4817;
@@ -2728,7 +2721,6 @@ message MachineLearningService {
 	repeated uint32 ports = 6816;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5983;
-	Authenticity authenticity = 8549;
 	ChangeAndConfigurationManagement change_and_configuration_management = 10857;
 	repeated string compute_ids  = 16877;
 	GeoLocation geo_location = 4584;
@@ -2902,7 +2894,6 @@ message MultiModalDatabaseService {
 	string raw = 17449;
 	ActivityLogging activity_logging = 9310;
 	repeated AnomalyDetection anomaly_detections  = 9066;
-	Authenticity authenticity = 16292;
 	ChangeAndConfigurationManagement change_and_configuration_management = 17553;
 	repeated string compute_ids  = 913;
 	GeoLocation geo_location = 17721;
@@ -3115,7 +3106,6 @@ message ObjectStorageService {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 16651;
 	ActivityLogging activity_logging = 16914;
-	Authenticity authenticity = 8513;
 	ChangeAndConfigurationManagement change_and_configuration_management = 12496;
 	repeated string compute_ids  = 15695;
 	GeoLocation geo_location = 9923;
@@ -3611,7 +3601,6 @@ message RelationalDatabaseService {
 	string raw = 308;
 	ActivityLogging activity_logging = 17935;
 	repeated AnomalyDetection anomaly_detections  = 18542;
-	Authenticity authenticity = 8756;
 	ChangeAndConfigurationManagement change_and_configuration_management = 2183;
 	repeated string compute_ids  = 5357;
 	GeoLocation geo_location = 13809;
@@ -3990,7 +3979,6 @@ message SecurityAdvisoryService {
 	repeated uint32 ports = 4555;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10467;
-	Authenticity authenticity = 16717;
 	ChangeAndConfigurationManagement change_and_configuration_management = 8210;
 	repeated string compute_ids  = 18065;
 	GeoLocation geo_location = 11088;
@@ -4010,8 +3998,8 @@ message SecurityFeature {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
-		ChangeAndConfigurationManagement change_and_configuration_management = 10648;
 		AssetInventory asset_inventory = 12832;
+		ChangeAndConfigurationManagement change_and_configuration_management = 10648;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
