@@ -127,9 +127,6 @@
         <Class abbreviatedIRI="core:CoordinatedVulnerabilityDisclosurePolicy"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:Governance"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
