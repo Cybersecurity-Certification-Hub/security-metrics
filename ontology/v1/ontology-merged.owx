@@ -2068,15 +2068,15 @@
     <SubClassOf>
         <Class IRI="/classes/CloudResource"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/hasMultiple"/>
-            <Class IRI="/classes/Logging"/>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ChangeAndConfigurationManagement"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/CloudResource"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/offers"/>
-            <Class IRI="/classes/ChangeAndConfigurationManagement"/>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
+            <Class IRI="/classes/Logging"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
