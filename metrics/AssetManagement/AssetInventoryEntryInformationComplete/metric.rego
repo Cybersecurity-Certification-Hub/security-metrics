@@ -10,7 +10,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    ai.assetInventory
+    ai
 }
 
 compliant if {
