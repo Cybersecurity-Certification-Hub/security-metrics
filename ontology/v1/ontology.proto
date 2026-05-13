@@ -3686,7 +3686,7 @@ message RequestForChange {
 	option (resource_type_names) = "RequestForChange";
 	option (resource_type_names) = "Functionality";
 
-	bool approved_before_implementation = 13396;
+	bool approved_before_deployment = 16813;
 }
 
 // Resource is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".

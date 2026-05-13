@@ -1545,6 +1545,9 @@
         <ObjectProperty IRI="/classes/hasType"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/approvedBeforeDeployment"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/annualUpdateCompleted"/>
     </Declaration>
     <Declaration>
@@ -4506,7 +4509,7 @@
     <SubClassOf>
         <Class IRI="/classes/RequestForChange"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/approvedBeforeImplementation"/>
+            <DataProperty IRI="/properties/approvedBeforeDeployment"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
