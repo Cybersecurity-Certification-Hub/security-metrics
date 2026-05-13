@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "d8f28ac7-eee9-41b6-b898-cc7d7d91c6f0"
-name: ChangeApprovalBeforeImplementation
+name: ChangeApprovalBeforeDeployment
 description: This rule assesses whether a [Resource] that offers the property [changeAndConfigurationManagement.requestForChange], has [p1:approvedBeforeImplementation] set correctly.
 implementationGuidelines:
   FSC:

@@ -529,7 +529,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:RequestForChange"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:approvedBeforeImplementation"/>
+            <DataProperty abbreviatedIRI="prop:approvedBeforeDeployment"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>

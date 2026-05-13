@@ -1,4 +1,4 @@
-package cch.metrics.change_approval_before_implementation
+package cch.metrics.change_approval_before_deployment
 
 import data.cch.compare
 import rego.v1
@@ -13,5 +13,5 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, ccm.requestForChange.approvedBeforeImplementation)
+    compare(data.operator, data.target_value, ccm.requestForChange.approvedBeforeDeployment)
 }
