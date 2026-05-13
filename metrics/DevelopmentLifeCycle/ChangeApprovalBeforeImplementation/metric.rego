@@ -9,7 +9,6 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    resource.type[_] == "Infrastructure"
 	resource.changeAndConfigurationManagement
 }
 
