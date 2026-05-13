@@ -7,7 +7,7 @@ implementationGuidelines:
     details: ["- Date and time of change approval and deployment", "- Information from Change ticket"]
 category: DevelopmentLifeCycle
 version: "v1"
-comments: "Change approval before deployment to production - Check whether there was a change approval before deployment to production | [Previous name: MT-CCM-04.1H-1]"
+comments: "Check whether there was a change approval before deployment to production."
 # ====== Configuration ======
 configuration:
   p1:
