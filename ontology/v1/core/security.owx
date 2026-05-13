@@ -158,9 +158,6 @@
         <Class abbreviatedIRI="core:RemoteAttestation"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:RequestForChange"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:ResourceLogging"/>
     </Declaration>
     <Declaration>
@@ -197,9 +194,6 @@
         <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="prop:has"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty abbreviatedIRI="prop:offers"/>
     </Declaration>
     <Declaration>
@@ -210,9 +204,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:apiHitsPerMonth"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="prop:approvedBeforeImplementation"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:broadAssignments"/>
@@ -435,13 +426,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Encryption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="core:Secret"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Encryption"/>
         <Class abbreviatedIRI="core:Confidentiality"/>
     </SubClassOf>
     <SubClassOf>
@@ -551,13 +535,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="core:offersInterface"/>
             <Class abbreviatedIRI="core:TransportEncryption"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Backup"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="core:Storage"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -689,13 +666,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
         <Class abbreviatedIRI="core:Authenticity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="core:Token"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:JwtBasedAuthentication"/>
