@@ -1938,7 +1938,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ChangeAndConfigurationManagement"/>
-        <Class IRI="/classes/Auditing"/>
+        <Class IRI="/classes/Functionality"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ChangeAndConfigurationManagement"/>
@@ -4094,6 +4094,13 @@
     <SubClassOf>
         <Class IRI="/classes/PolicyDocument"/>
         <Class IRI="/classes/Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ChangeAndConfigurationManagement"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/PolicyDocument"/>
