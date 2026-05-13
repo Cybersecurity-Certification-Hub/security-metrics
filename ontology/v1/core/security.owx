@@ -59,9 +59,6 @@
         <Class abbreviatedIRI="core:Backup"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:ChangeAndConfigurationManagement"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:BootLog"/>
     </Declaration>
     <Declaration>
@@ -313,17 +310,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ActivityLog"/>
         <Class abbreviatedIRI="core:Logging"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:ChangeAndConfigurationManagement"/>
-        <Class abbreviatedIRI="core:Auditing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:ChangeAndConfigurationManagement"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="core:RequestForChange"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:AnomalyDetection"/>

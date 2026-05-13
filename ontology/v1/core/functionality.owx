@@ -20,6 +20,9 @@
         <Class abbreviatedIRI="core:RequestForChange"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:ChangeAndConfigurationManagement"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:Allocate"/>
     </Declaration>
     <Declaration>
@@ -511,6 +514,17 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:RequestForChange"/>
         <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ChangeAndConfigurationManagement"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ChangeAndConfigurationManagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:RequestForChange"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:RequestForChange"/>
