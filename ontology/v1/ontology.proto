@@ -270,7 +270,6 @@ message Auditing {
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
 		AssetInventory asset_inventory = 12832;
-		ChangeAndConfigurationManagement change_and_configuration_management = 10648;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
@@ -514,10 +513,9 @@ message CertificateBasedAuthentication {
 // ChangeAndConfigurationManagement is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message ChangeAndConfigurationManagement {
 	option (resource_type_names) = "ChangeAndConfigurationManagement";
-	option (resource_type_names) = "Auditing";
-	option (resource_type_names) = "SecurityFeature";
+	option (resource_type_names) = "Functionality";
 
-	RequestForChange request_for_change = 2532;
+	RequestForChange request_for_change = 5737;
 }
 
 // CheckAccess is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1746,6 +1744,7 @@ message Functionality {
 
 	oneof type {
 		Boundary boundary = 10636;
+		ChangeAndConfigurationManagement change_and_configuration_management = 12231;
 		AsymmetricCipher asymmetric_cipher = 10409;
 		HybridCipher hybrid_cipher = 5502;
 		SymmetricCipher symmetric_cipher = 8917;
@@ -3298,6 +3297,7 @@ message PolicyDocument {
 	string name = 2052 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5038;
+	ChangeAndConfigurationManagement change_and_configuration_management = 13785;
 	repeated CryptographicHash cryptographic_hashs  = 12896;
 	DataLocation data_location = 11474;
 	repeated DocumentSignature document_signatures  = 7191;
@@ -3999,7 +3999,6 @@ message SecurityFeature {
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
 		AssetInventory asset_inventory = 12832;
-		ChangeAndConfigurationManagement change_and_configuration_management = 10648;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
