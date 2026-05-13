@@ -392,6 +392,7 @@ message Backup {
 	// The interval refers to the update interval in days.
 	google.protobuf.Duration interval = 7186;
 	google.protobuf.Duration retention_period = 6795;
+	optional string storage_id = 17051;
 	TransportEncryption transport_encryption = 2398;
 }
 
@@ -1079,6 +1080,7 @@ message CustomerKeyEncryption {
 	bool enabled = 14976;
 	string key_url = 13999;
 	Cipher based_on = 13151;
+	optional string secret_id = 4394;
 }
 
 // CyberSecurityRiskAssessmentDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1345,6 +1347,7 @@ message DiskEncryption {
 	string key_url = 6086;
 	BlockStorage used_by = 14240;
 	Cipher based_on = 6881;
+	optional string secret_id = 10114;
 }
 
 // DiskEncryptionOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1557,6 +1560,7 @@ message ExitBoundaryOperation {
 message ExplainableResults {
 	option (resource_type_names) = "ExplainableResults";
 	option (resource_type_names) = "Reliability";
+	option (resource_type_names) = "SecurityFeature";
 
 }
 
@@ -2268,6 +2272,7 @@ message JwtAuthentication {
 	int32 failed_authentication_attempts = 16139;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 3257;
+	optional string token_id = 17648;
 }
 
 // TokenBasedAuthentication is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -2815,6 +2820,7 @@ message ManagedKeyEncryption {
 	bool enabled = 13201;
 	string key_url = 16982;
 	Cipher based_on = 9630;
+	optional string secret_id = 13805;
 }
 
 // Memory is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3694,8 +3700,8 @@ message RelationalDatabaseService {
 message Reliability {
 
 	oneof type {
-		ExplainableResults explainable_results = 11881;
-		RobustnessScore robustness_score = 5812;
+		ExplainableResults explainable_results = 6217;
+		RobustnessScore robustness_score = 12988;
 	}
 }
 
@@ -3905,6 +3911,7 @@ message ResourceType {
 message RobustnessScore {
 	option (resource_type_names) = "RobustnessScore";
 	option (resource_type_names) = "Reliability";
+	option (resource_type_names) = "SecurityFeature";
 
 }
 
@@ -4138,6 +4145,8 @@ message SecurityFeature {
 		CryptographicHash cryptographic_hash = 18167;
 		Immutability immutability = 2008;
 		DocumentSignature document_signature = 7943;
+		ExplainableResults explainable_results = 6217;
+		RobustnessScore robustness_score = 12988;
 	}
 }
 
@@ -4351,6 +4360,7 @@ message TransportEncryption {
 	string tls_signature_algorithm = 14996;
 	Cipher based_on = 17349;
 	repeated CipherSuite cipher_suites  = 5672;
+	optional string secret_id = 9451;
 }
 
 // UnlockEncryptedDisk is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.

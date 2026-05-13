@@ -1889,6 +1889,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Backup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/Storage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Backup"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
@@ -2732,6 +2739,13 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/Encryption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/Secret"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/EncryptionInUse"/>
         <Class IRI="/classes/Confidentiality"/>
     </SubClassOf>
@@ -3369,6 +3383,13 @@
     <SubClassOf>
         <Class IRI="/classes/JwtBasedAuthentication"/>
         <Class IRI="/classes/Authenticity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/JwtBasedAuthentication"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/Token"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/JwtBasedAuthentication"/>
@@ -4515,6 +4536,10 @@
     <SubClassOf>
         <Class IRI="/classes/RelationalDatabaseService"/>
         <Class IRI="/classes/DatabaseService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Reliability"/>
+        <Class IRI="/classes/SecurityFeature"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/RemoteAttestation"/>
