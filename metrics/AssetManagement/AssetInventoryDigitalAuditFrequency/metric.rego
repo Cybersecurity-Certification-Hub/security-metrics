@@ -10,7 +10,7 @@ default compliant := false
 
 applicable if {
     "PolicyDocument" in input.type
-    input.type == "digital"
+    ai.type == "digital"
 }
 
 compliant if {
