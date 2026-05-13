@@ -12,4 +12,4 @@ comments: "Change approval before deployment to production - Check whether there
 configuration:
   p1:
     operator: "=="
-    targetValue: "true"
+    targetValue: True
