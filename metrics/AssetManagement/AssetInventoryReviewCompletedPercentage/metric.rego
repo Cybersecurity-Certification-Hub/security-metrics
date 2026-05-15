@@ -10,6 +10,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
+    "Account" in input.type
     ai
 }
 
