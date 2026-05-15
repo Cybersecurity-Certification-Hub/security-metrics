@@ -571,6 +571,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:CodeSignoff"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:CustomerKeyEncryption"/>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
     </SubClassOf>
@@ -1151,6 +1158,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:CodeSignoff</AbbreviatedIRI>
         <Literal>Percentage: Percentage of commits with "Signed-off-by" lines. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:CodeSignoff</AbbreviatedIRI>
+        <Literal>PercentageLastMonth: Percentage of commits with "Signed-off-by" lines in the last 30 days. </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
