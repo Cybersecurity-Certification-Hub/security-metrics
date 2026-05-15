@@ -35,7 +35,6 @@
     <Declaration>
         <Class abbreviatedIRI="cl:Certificate"/>
     </Declaration>
-    </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cl:CloudResource"/>
     </Declaration>
