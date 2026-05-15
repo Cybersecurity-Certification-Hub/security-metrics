@@ -350,31 +350,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:SignedCommits"/>
-        <Class abbreviatedIRI="core:Auditing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:SignedCommits"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:enforced"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:SignedCommits"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:percentage"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:SignedCommits"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:percentageLastMonth"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:AnomalyDetection"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
@@ -653,6 +628,31 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SignedCommits"/>
+        <Class abbreviatedIRI="core:Integrity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SignedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:enforced"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SignedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SignedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
