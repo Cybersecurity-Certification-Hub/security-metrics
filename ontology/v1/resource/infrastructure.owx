@@ -407,6 +407,13 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="cl:CodeRepository" />
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:numberOfReviewer" />
+            <Datatype abbreviatedIRI="xsd:int" />
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="cl:CloudResource"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>

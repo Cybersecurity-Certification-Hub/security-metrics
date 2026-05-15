@@ -260,9 +260,6 @@
         <DataProperty abbreviatedIRI="prop:enabled"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:enforced"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="prop:inbound"/>
     </Declaration>
     <Declaration>
