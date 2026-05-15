@@ -656,6 +656,24 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:VerifiedCommits"/>
+        <Class abbreviatedIRI="core:Integrity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:VerifiedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:VerifiedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:Integrity"/>
         <Class abbreviatedIRI="core:SecurityFeature"/>
     </SubClassOf>
@@ -1413,6 +1431,26 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:UsageStatistics</AbbreviatedIRI>
         <Literal>UsageStatistics</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:VerifiedCommits</AbbreviatedIRI>
+        <Literal> VerifiedCommits ensure that cryptographic signatures on commits are successfully validated against trusted keys, confirming author authenticity and code integrity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:VerifiedCommits</AbbreviatedIRI>
+        <Literal>Percentage: Percentage of verified commits. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:VerifiedCommits</AbbreviatedIRI>
+        <Literal>PercentageLastMonth: Percentage of verified commits in the last 30 days. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:VerifiedCommits</AbbreviatedIRI>
+        <Literal>VerifiedCommits</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
