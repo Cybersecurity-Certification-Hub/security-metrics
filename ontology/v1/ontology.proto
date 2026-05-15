@@ -71,8 +71,11 @@ message Account {
 	string name = 18836 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 14088;
+	AssetInventory asset_inventory = 14263;
+	ChangeAndConfigurationManagement change_and_configuration_management = 7524;
 	GeoLocation geo_location = 402;
 	repeated Logging loggings  = 11094;
+	MalwareProtection malware_protection = 8981;
 	repeated Redundancy redundancies  = 2929;
 	optional string parent_id = 1286;
 	UsageStatistics usage_statistics = 4034;
@@ -201,6 +204,32 @@ message ApplicationLogging {
 	repeated string logging_service_ids  = 3884;
 }
 
+// AssetInventory is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// AuditInterval contains the frequency of asset inventory audits in month.
+// Class representing the inventory of assets.
+// Status contains the status of the asset (e.g., active, inactive).
+// StorageFacility contains the storage facility type of the asset (e.g., central, decentralized).
+// Type: contains the type of the asset, e.g., digital
+// UpdateInterval contains the frequency of asset inventory updates in month.
+message AssetInventory {
+	option (resource_type_names) = "AssetInventory";
+	option (resource_type_names) = "Auditing";
+	option (resource_type_names) = "SecurityFeature";
+
+	// Indicates whether all required information for an asset inventory entry has been recorded.
+	bool all_required_information_recorded = 5806;
+	// The time needed for an audit.
+	int32 audit_interval = 15088;
+	// Percentage of completed reviews and updates of asset inventory entries.
+	float completed_review_percentage = 15931;
+	string status = 11933;
+	string storage_facility = 2637;
+	string type = 11720;
+	// The time needed for an update.
+	int32 update_duration = 5698;
+	int32 update_interval = 4178;
+}
+
 // AsymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message AsymmetricCipher {
 	option (resource_type_names) = "AsymmetricCipher";
@@ -240,6 +269,7 @@ message Auditing {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
+		AssetInventory asset_inventory = 12832;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
@@ -345,18 +375,10 @@ message AwarenessTraining {
 	option (resource_type_names) = "AwarenessTraining";
 	option (resource_type_names) = "Training";
 	option (resource_type_names) = "Governance";
-	option (resource_type_names) = "Resource";
+	option (resource_type_names) = "Functionality";
 
-	bool annual_update_completed = 5546;
-	google.protobuf.Timestamp creation_time = 6371;
-	string description = 1978;
-	string id = 10258 [ (buf.validate.field).required = true ];
-	map<string, string> labels = 7290;
-	string name = 8381 [ (buf.validate.field).required = true ];
-	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 3963;
-	bool successfully_completed_percentage = 832;
-	optional string parent_id = 17698;
+	bool annual_update_completed = 4205;
+	bool successfully_completed_percentage = 9380;
 }
 
 // Backup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -392,9 +414,11 @@ message BlockStorage {
 	ActivityLogging activity_logging = 16146;
 	AtRestEncryption at_rest_encryption = 12598;
 	repeated Backup backups  = 2815;
+	ChangeAndConfigurationManagement change_and_configuration_management = 8917;
 	GeoLocation geo_location = 3908;
 	Immutability immutability = 2967;
 	repeated Logging loggings  = 7973;
+	MalwareProtection malware_protection = 14705;
 	repeated Redundancy redundancies  = 16302;
 	optional string parent_id = 15420;
 	ResourceLogging resource_logging = 4514;
@@ -463,9 +487,11 @@ message Certificate {
 	google.protobuf.Timestamp not_before_date = 11770;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 7199;
+	ChangeAndConfigurationManagement change_and_configuration_management = 9330;
 	GeoLocation geo_location = 4443;
 	Infrastructure used_by_multiple = 13381;
 	repeated Logging loggings  = 3178;
+	MalwareProtection malware_protection = 13721;
 	repeated Redundancy redundancies  = 15810;
 	optional string parent_id = 9548;
 	UsageStatistics usage_statistics = 3679;
@@ -479,8 +505,17 @@ message CertificateBasedAuthentication {
 
 	bool context_is_checked = 14958;
 	bool enabled = 11983;
+	int32 failed_authentication_attempts = 2906;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 9404;
+}
+
+// ChangeAndConfigurationManagement is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ChangeAndConfigurationManagement {
+	option (resource_type_names) = "ChangeAndConfigurationManagement";
+	option (resource_type_names) = "Functionality";
+
+	RequestForChange request_for_change = 5737;
 }
 
 // CheckAccess is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -614,9 +649,11 @@ message CodeRepository {
 	string name = 12766 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 15664;
+	ChangeAndConfigurationManagement change_and_configuration_management = 1727;
 	CodeSignoff code_signoff = 1837;
 	GeoLocation geo_location = 111;
 	repeated Logging loggings  = 133;
+	MalwareProtection malware_protection = 2071;
 	repeated Redundancy redundancies  = 11273;
 	optional string parent_id = 5357;
 	UsageStatistics usage_statistics = 3480;
@@ -830,19 +867,11 @@ message ConfigurationSource {
 message ContactPerson {
 	option (resource_type_names) = "ContactPerson";
 	option (resource_type_names) = "Governance";
-	option (resource_type_names) = "Resource";
+	option (resource_type_names) = "Functionality";
 
-	google.protobuf.Timestamp creation_time = 15387;
-	string description = 16050;
-	string email_address = 8616;
-	string id = 10681 [ (buf.validate.field).required = true ];
-	string job_title = 8334;
-	map<string, string> labels = 11792;
-	string name = 8652 [ (buf.validate.field).required = true ];
-	string phone_number = 10029;
-	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 11703;
-	optional string parent_id = 11554;
+	string email_address = 15629;
+	string job_title = 6896;
+	string phone_number = 13203;
 }
 
 // Container is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -860,10 +889,12 @@ message Container {
 	string name = 736 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 18367;
+	ChangeAndConfigurationManagement change_and_configuration_management = 1837;
 	EncryptionInUse encryption_in_use = 295;
 	GeoLocation geo_location = 5503;
 	optional string image_id = 11948;
 	repeated Logging loggings  = 4933;
+	MalwareProtection malware_protection = 10187;
 	repeated string network_interface_ids  = 5591;
 	repeated Redundancy redundancies  = 9300;
 	RemoteAttestation remote_attestation = 4110;
@@ -888,8 +919,10 @@ message ContainerImage {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10543;
 	optional string application_id = 758;
+	ChangeAndConfigurationManagement change_and_configuration_management = 3018;
 	GeoLocation geo_location = 117;
 	repeated Logging loggings  = 12269;
+	MalwareProtection malware_protection = 11095;
 	repeated Redundancy redundancies  = 16536;
 	optional string parent_id = 462;
 	UsageStatistics usage_statistics = 349;
@@ -910,9 +943,11 @@ message ContainerOrchestration {
 	string name = 18187 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 17471;
+	ChangeAndConfigurationManagement change_and_configuration_management = 4641;
 	repeated string container_ids  = 1059;
 	GeoLocation geo_location = 8832;
 	repeated Logging loggings  = 2512;
+	MalwareProtection malware_protection = 201;
 	repeated Redundancy redundancies  = 5269;
 	optional string parent_id = 139;
 	ResourceLogging resource_logging = 1847;
@@ -933,8 +968,10 @@ message ContainerRegistry {
 	string name = 1523 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5030;
+	ChangeAndConfigurationManagement change_and_configuration_management = 8763;
 	GeoLocation geo_location = 5019;
 	repeated Logging loggings  = 685;
+	MalwareProtection malware_protection = 18536;
 	repeated Redundancy redundancies  = 12740;
 	optional string parent_id = 14247;
 	UsageStatistics usage_statistics = 13554;
@@ -1135,10 +1172,37 @@ message Data {
 		MachineLearningDataset machine_learning_dataset = 2040;
 		MachineLearningModel machine_learning_model = 15393;
 		CoordinatedVulnerabilityDisclosurePolicy coordinated_vulnerability_disclosure_policy = 18002;
+		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 18631;
+		LeastPrivilegePolicy least_privilege_policy = 9544;
+		NeedToKnowPolicy need_to_know_policy = 8800;
+		SDNFunctionValidationPolicy sdn_function_validation_policy = 7153;
+		SeparationOfDutiesPolicy separation_of_duties_policy = 6331;
 		AndRule and_rule = 1114;
 		Token token = 5266;
 		Value value = 652;
 	}
+}
+
+// DataConfidentialitySDNPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a [PolicyDocument] describing data confidentiality requirements for Software Defined Networking (SDN). isDefined: whether this policy section is present and defined.
+message DataConfidentialitySDNPolicy {
+	option (resource_type_names) = "DataConfidentialitySDNPolicy";
+	option (resource_type_names) = "Policy";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 15489;
+	string description = 876;
+	string id = 3163 [ (buf.validate.field).required = true ];
+	bool is_defined = 17955;
+	map<string, string> labels = 14977;
+	string name = 7916 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 5124;
+	optional string context_id = 11333;
+	DataLocation data_location = 3177;
+	repeated string policy_rule_ids  = 5689;
+	optional string parent_id = 16709;
 }
 
 // DataLocation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1219,9 +1283,11 @@ message DatabaseStorage {
 	ActivityLogging activity_logging = 14738;
 	AtRestEncryption at_rest_encryption = 16710;
 	repeated Backup backups  = 6649;
+	ChangeAndConfigurationManagement change_and_configuration_management = 5963;
 	GeoLocation geo_location = 17276;
 	Immutability immutability = 16030;
 	repeated Logging loggings  = 5231;
+	MalwareProtection malware_protection = 1289;
 	repeated Redundancy redundancies  = 5699;
 	optional string parent_id = 1057;
 	ResourceLogging resource_logging = 7886;
@@ -1268,8 +1334,10 @@ message DeviceProvisioningService {
 	string name = 9731 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 14841;
+	ChangeAndConfigurationManagement change_and_configuration_management = 18538;
 	GeoLocation geo_location = 3548;
 	repeated Logging loggings  = 3832;
+	MalwareProtection malware_protection = 13981;
 	repeated Redundancy redundancies  = 4325;
 	optional string parent_id = 7483;
 	UsageStatistics usage_statistics = 15375;
@@ -1365,7 +1433,7 @@ message DocumentDatabaseService {
 	string raw = 7317;
 	ActivityLogging activity_logging = 6357;
 	repeated AnomalyDetection anomaly_detections  = 3091;
-	Authenticity authenticity = 1700;
+	ChangeAndConfigurationManagement change_and_configuration_management = 12101;
 	repeated string compute_ids  = 15914;
 	GeoLocation geo_location = 8772;
 	HttpEndpoint http_endpoint = 8315;
@@ -1581,9 +1649,11 @@ message FileStorage {
 	ActivityLogging activity_logging = 108;
 	AtRestEncryption at_rest_encryption = 12115;
 	repeated Backup backups  = 4043;
+	ChangeAndConfigurationManagement change_and_configuration_management = 3773;
 	GeoLocation geo_location = 10014;
 	Immutability immutability = 1506;
 	repeated Logging loggings  = 9165;
+	MalwareProtection malware_protection = 16292;
 	repeated Redundancy redundancies  = 1252;
 	optional string parent_id = 13904;
 	ResourceLogging resource_logging = 12122;
@@ -1611,11 +1681,12 @@ message FileStorageService {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 13948;
 	ActivityLogging activity_logging = 16844;
-	Authenticity authenticity = 515;
+	ChangeAndConfigurationManagement change_and_configuration_management = 9861;
 	repeated string compute_ids  = 11010;
 	GeoLocation geo_location = 14794;
 	HttpEndpoint http_endpoint = 16772;
 	repeated Logging loggings  = 6801;
+	MalwareProtection malware_protection = 7182;
 	repeated Redundancy redundancies  = 14092;
 	optional string parent_id = 8578;
 	optional string service_metadata_document_id = 5580;
@@ -1661,9 +1732,11 @@ message Function {
 	string raw = 1531;
 	string runtime_language = 7048;
 	string runtime_version = 16017;
+	ChangeAndConfigurationManagement change_and_configuration_management = 2041;
 	EncryptionInUse encryption_in_use = 9821;
 	GeoLocation geo_location = 5466;
 	repeated Logging loggings  = 2200;
+	MalwareProtection malware_protection = 17601;
 	repeated string network_interface_ids  = 8092;
 	repeated Redundancy redundancies  = 13881;
 	RemoteAttestation remote_attestation = 153;
@@ -1690,11 +1763,12 @@ message FunctionService {
 	repeated uint32 ports = 17713;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 4925;
-	Authenticity authenticity = 11275;
+	ChangeAndConfigurationManagement change_and_configuration_management = 3264;
 	repeated string compute_ids  = 10103;
 	repeated string function_ids  = 2977;
 	GeoLocation geo_location = 17812;
 	repeated Logging loggings  = 10958;
+	MalwareProtection malware_protection = 3901;
 	repeated Redundancy redundancies  = 1327;
 	optional string parent_id = 2810;
 	optional string service_metadata_document_id = 1408;
@@ -1707,6 +1781,7 @@ message Functionality {
 
 	oneof type {
 		Boundary boundary = 10636;
+		ChangeAndConfigurationManagement change_and_configuration_management = 12231;
 		AsymmetricCipher asymmetric_cipher = 10409;
 		HybridCipher hybrid_cipher = 5502;
 		SymmetricCipher symmetric_cipher = 8917;
@@ -1720,6 +1795,10 @@ message Functionality {
 		Main main = 1117;
 		HttpEndpoint http_endpoint = 8995;
 		Error error = 6544;
+		ContactPerson contact_person = 1620;
+		MonitoringProcedure monitoring_procedure = 9388;
+		AwarenessTraining awareness_training = 8227;
+		SecurityTraining security_training = 8543;
 		HttpClient http_client = 18121;
 		HttpRequestContext http_request_context = 4279;
 		HttpRequestHandler http_request_handler = 147;
@@ -1771,6 +1850,7 @@ message Functionality {
 		Padding padding = 9245;
 		Principal principal = 16173;
 		ProtectedAsset protected_asset = 10697;
+		RequestForChange request_for_change = 5340;
 		SchemaValidation schema_validation = 16331;
 		SecurityAdvisoryFeed security_advisory_feed = 13903;
 		Time time = 16225;
@@ -1806,10 +1886,11 @@ message GenericNetworkService {
 	repeated uint32 ports = 532;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10844;
-	Authenticity authenticity = 18424;
+	ChangeAndConfigurationManagement change_and_configuration_management = 235;
 	repeated string compute_ids  = 17384;
 	GeoLocation geo_location = 1874;
 	repeated Logging loggings  = 1801;
+	MalwareProtection malware_protection = 12461;
 	repeated Redundancy redundancies  = 13999;
 	optional string parent_id = 14004;
 	optional string service_metadata_document_id = 9192;
@@ -1862,10 +1943,10 @@ message GetSecret {
 message Governance {
 
 	oneof type {
-		ContactPerson contact_person = 7415;
-		MonitoringProcedure monitoring_procedure = 4844;
-		AwarenessTraining awareness_training = 18321;
-		SecurityTraining security_training = 16425;
+		ContactPerson contact_person = 1620;
+		MonitoringProcedure monitoring_procedure = 9388;
+		AwarenessTraining awareness_training = 8227;
+		SecurityTraining security_training = 8543;
 	}
 }
 
@@ -2064,10 +2145,11 @@ message Identity {
 	bool privileged = 2301;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 16151;
-	Authenticity authenticity = 11686;
 	Authorization authorization = 16314;
+	ChangeAndConfigurationManagement change_and_configuration_management = 5595;
 	GeoLocation geo_location = 8606;
 	repeated Logging loggings  = 11698;
+	MalwareProtection malware_protection = 1541;
 	repeated Redundancy redundancies  = 16086;
 	optional string parent_id = 13088;
 	UsageStatistics usage_statistics = 7855;
@@ -2177,8 +2259,10 @@ message Job {
 	string name = 18498 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5776;
+	ChangeAndConfigurationManagement change_and_configuration_management = 13997;
 	GeoLocation geo_location = 9162;
 	repeated Logging loggings  = 13308;
+	MalwareProtection malware_protection = 649;
 	repeated Redundancy redundancies  = 10691;
 	optional string parent_id = 161;
 	UsageStatistics usage_statistics = 6673;
@@ -2195,6 +2279,7 @@ message JwtAuthentication {
 	bool context_is_checked = 3538;
 	bool enabled = 3085;
 	bool enforced = 13206;
+	int32 failed_authentication_attempts = 16139;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 3257;
 	optional string token_id = 17648;
@@ -2233,9 +2318,11 @@ message Key {
 	google.protobuf.Timestamp not_before_date = 235;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 11846;
+	ChangeAndConfigurationManagement change_and_configuration_management = 15846;
 	GeoLocation geo_location = 215;
 	Infrastructure used_by_multiple = 5694;
 	repeated Logging loggings  = 13175;
+	MalwareProtection malware_protection = 1845;
 	repeated Redundancy redundancies  = 7868;
 	optional string parent_id = 95;
 	UsageStatistics usage_statistics = 7188;
@@ -2272,7 +2359,7 @@ message KeyValueDatabaseService {
 	string raw = 14509;
 	ActivityLogging activity_logging = 4083;
 	repeated AnomalyDetection anomaly_detections  = 121;
-	Authenticity authenticity = 4800;
+	ChangeAndConfigurationManagement change_and_configuration_management = 16118;
 	repeated string compute_ids  = 13039;
 	GeoLocation geo_location = 13241;
 	HttpEndpoint http_endpoint = 11793;
@@ -2300,9 +2387,11 @@ message KeyVault {
 	string name = 5705 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 16199;
+	ChangeAndConfigurationManagement change_and_configuration_management = 11331;
 	repeated string credential_ids  = 16714;
 	GeoLocation geo_location = 7862;
 	repeated Logging loggings  = 1262;
+	MalwareProtection malware_protection = 14918;
 	repeated Redundancy redundancies  = 11552;
 	optional string parent_id = 7075;
 	UsageStatistics usage_statistics = 13634;
@@ -2319,6 +2408,28 @@ message L3Firewall {
 	bool enabled = 9476;
 	bool inbound = 1000;
 	string restricted_ports = 7341;
+}
+
+// LeastPrivilegePolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a [PolicyDocument] describing least privilege requirements. isDefined: whether this policy section is present and defined.
+message LeastPrivilegePolicy {
+	option (resource_type_names) = "LeastPrivilegePolicy";
+	option (resource_type_names) = "Policy";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 7311;
+	string description = 13895;
+	string id = 8817 [ (buf.validate.field).required = true ];
+	bool is_defined = 18699;
+	map<string, string> labels = 13802;
+	string name = 4494 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 7445;
+	optional string context_id = 3990;
+	DataLocation data_location = 6882;
+	repeated string policy_rule_ids  = 8085;
+	optional string parent_id = 13204;
 }
 
 // Library is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2375,11 +2486,12 @@ message LoadBalancer {
 	string raw = 16379;
 	string url = 2355;
 	AccessRestriction access_restriction = 11292;
-	Authenticity authenticity = 4102;
+	ChangeAndConfigurationManagement change_and_configuration_management = 799;
 	repeated string compute_ids  = 16161;
 	GeoLocation geo_location = 10722;
 	repeated HttpEndpoint http_endpoints  = 10771;
 	repeated Logging loggings  = 2461;
+	MalwareProtection malware_protection = 12749;
 	repeated string network_service_ids  = 1926;
 	repeated Redundancy redundancies  = 14687;
 	optional string parent_id = 9758;
@@ -2581,10 +2693,11 @@ message LoggingService {
 	repeated uint32 ports = 2549;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 3703;
-	Authenticity authenticity = 17309;
+	ChangeAndConfigurationManagement change_and_configuration_management = 853;
 	repeated string compute_ids  = 18796;
 	GeoLocation geo_location = 4817;
 	repeated Logging loggings  = 2206;
+	MalwareProtection malware_protection = 2951;
 	repeated Redundancy redundancies  = 4732;
 	optional string parent_id = 5257;
 	optional string service_metadata_document_id = 10739;
@@ -2667,11 +2780,12 @@ message MachineLearningService {
 	repeated uint32 ports = 6816;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5983;
-	Authenticity authenticity = 8549;
+	ChangeAndConfigurationManagement change_and_configuration_management = 7490;
 	repeated string compute_ids  = 16877;
 	GeoLocation geo_location = 4584;
 	repeated Logging loggings  = 12431;
 	repeated string machine_learning_ids  = 3782;
+	MalwareProtection malware_protection = 3121;
 	repeated Redundancy redundancies  = 15904;
 	optional string parent_id = 14660;
 	optional string service_metadata_document_id = 11927;
@@ -2774,8 +2888,10 @@ message MessagingHub {
 	string name = 4131 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 6465;
+	ChangeAndConfigurationManagement change_and_configuration_management = 1045;
 	GeoLocation geo_location = 392;
 	repeated Logging loggings  = 13600;
+	MalwareProtection malware_protection = 5650;
 	repeated Redundancy redundancies  = 771;
 	optional string parent_id = 5514;
 	UsageStatistics usage_statistics = 8646;
@@ -2795,18 +2911,10 @@ message CodeModule {
 message MonitoringProcedure {
 	option (resource_type_names) = "MonitoringProcedure";
 	option (resource_type_names) = "Governance";
-	option (resource_type_names) = "Resource";
+	option (resource_type_names) = "Functionality";
 
-	google.protobuf.Timestamp creation_time = 13504;
-	string description = 17881;
-	string id = 11072 [ (buf.validate.field).required = true ];
 	// The interval refers to the interval in months.
-	int32 interval_months = 5083;
-	map<string, string> labels = 9724;
-	string name = 6599 [ (buf.validate.field).required = true ];
-	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 5928;
-	optional string parent_id = 18171;
+	int32 interval_months = 13218;
 }
 
 // MultiFactorAuthentiation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2816,6 +2924,7 @@ message MultiFactorAuthentiation {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool context_is_checked = 17335;
+	int32 failed_authentication_attempts = 15562;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 11722;
 	repeated Authenticity authenticities  = 14430;
@@ -2844,7 +2953,7 @@ message MultiModalDatabaseService {
 	string raw = 17449;
 	ActivityLogging activity_logging = 9310;
 	repeated AnomalyDetection anomaly_detections  = 9066;
-	Authenticity authenticity = 16292;
+	ChangeAndConfigurationManagement change_and_configuration_management = 3349;
 	repeated string compute_ids  = 913;
 	GeoLocation geo_location = 17721;
 	HttpEndpoint http_endpoint = 6447;
@@ -2856,6 +2965,28 @@ message MultiModalDatabaseService {
 	repeated string storage_ids  = 10582;
 	TransportEncryption transport_encryption = 7542;
 	UsageStatistics usage_statistics = 1641;
+}
+
+// NeedToKnowPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a [PolicyDocument] describing need-to-know access control requirements. isDefined: whether this policy section is present and defined.
+message NeedToKnowPolicy {
+	option (resource_type_names) = "NeedToKnowPolicy";
+	option (resource_type_names) = "Policy";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 12273;
+	string description = 6717;
+	string id = 10876 [ (buf.validate.field).required = true ];
+	bool is_defined = 11624;
+	map<string, string> labels = 17695;
+	string name = 8236 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 820;
+	optional string context_id = 8403;
+	DataLocation data_location = 18121;
+	repeated string policy_rule_ids  = 17372;
+	optional string parent_id = 2396;
 }
 
 // NetworkInterface is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2874,8 +3005,10 @@ message NetworkInterface {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5176;
 	AccessRestriction access_restriction = 17872;
+	ChangeAndConfigurationManagement change_and_configuration_management = 11699;
 	GeoLocation geo_location = 10038;
 	repeated Logging loggings  = 8003;
+	MalwareProtection malware_protection = 9038;
 	optional string network_service_id = 14403;
 	repeated Redundancy redundancies  = 3740;
 	optional string parent_id = 8306;
@@ -2897,8 +3030,10 @@ message NetworkSecurityGroup {
 	string name = 11440 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 11170;
+	ChangeAndConfigurationManagement change_and_configuration_management = 15869;
 	GeoLocation geo_location = 11423;
 	repeated Logging loggings  = 393;
+	MalwareProtection malware_protection = 8872;
 	repeated Redundancy redundancies  = 14376;
 	optional string parent_id = 15293;
 	UsageStatistics usage_statistics = 9388;
@@ -2955,6 +3090,7 @@ message NoAuthentication {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool context_is_checked = 12023;
+	int32 failed_authentication_attempts = 4797;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 11214;
 }
@@ -2983,6 +3119,7 @@ message OTPBasedAuthentication {
 
 	bool activated = 7456;
 	bool context_is_checked = 18913;
+	int32 failed_authentication_attempts = 11364;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 12621;
 }
@@ -3006,9 +3143,11 @@ message ObjectStorage {
 	ActivityLogging activity_logging = 11889;
 	AtRestEncryption at_rest_encryption = 6489;
 	repeated Backup backups  = 4514;
+	ChangeAndConfigurationManagement change_and_configuration_management = 686;
 	GeoLocation geo_location = 8943;
 	Immutability immutability = 4592;
 	repeated Logging loggings  = 11121;
+	MalwareProtection malware_protection = 14679;
 	repeated Redundancy redundancies  = 13679;
 	optional string parent_id = 16072;
 	ResourceLogging resource_logging = 5368;
@@ -3048,11 +3187,12 @@ message ObjectStorageService {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 16651;
 	ActivityLogging activity_logging = 16914;
-	Authenticity authenticity = 8513;
+	ChangeAndConfigurationManagement change_and_configuration_management = 777;
 	repeated string compute_ids  = 15695;
 	GeoLocation geo_location = 9923;
 	HttpEndpoint http_endpoint = 11411;
 	repeated Logging loggings  = 12719;
+	MalwareProtection malware_protection = 2705;
 	repeated Redundancy redundancies  = 18648;
 	optional string parent_id = 11624;
 	optional string service_metadata_document_id = 1823;
@@ -3187,6 +3327,7 @@ message PasswordBasedAuthentication {
 
 	bool activated = 11798;
 	bool context_is_checked = 1362;
+	int32 failed_authentication_attempts = 14390;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 9048;
 }
@@ -3205,8 +3346,10 @@ message PasswordPolicy {
 	string name = 8966 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10264;
+	ChangeAndConfigurationManagement change_and_configuration_management = 7943;
 	GeoLocation geo_location = 8344;
 	repeated Logging loggings  = 6081;
+	MalwareProtection malware_protection = 15271;
 	repeated Redundancy redundancies  = 4959;
 	optional string parent_id = 12653;
 	UsageStatistics usage_statistics = 863;
@@ -3218,6 +3361,11 @@ message Policy {
 
 	oneof type {
 		CoordinatedVulnerabilityDisclosurePolicy coordinated_vulnerability_disclosure_policy = 18002;
+		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 18631;
+		LeastPrivilegePolicy least_privilege_policy = 9544;
+		NeedToKnowPolicy need_to_know_policy = 8800;
+		SDNFunctionValidationPolicy sdn_function_validation_policy = 7153;
+		SeparationOfDutiesPolicy separation_of_duties_policy = 6331;
 	}
 }
 
@@ -3237,12 +3385,17 @@ message PolicyDocument {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5038;
 	repeated CryptographicHash cryptographic_hashs  = 12896;
+	optional string data_confidentiality_sdn_policy_id = 4864;
 	DataLocation data_location = 11474;
 	repeated DocumentSignature document_signatures  = 7191;
-	optional string governance_id = 15049;
+	repeated Governance governances  = 4759;
+	optional string least_privilege_policy_id = 12663;
+	optional string need_to_know_policy_id = 3585;
 	optional string parent_id = 18208;
+	optional string sdn_function_validation_policy_id = 8099;
 	SchemaValidation validated_by = 5620;
 	repeated SecurityFeature security_features  = 13896;
+	optional string separation_of_duties_policy_id = 6434;
 }
 
 // PolicyOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -3300,9 +3453,9 @@ message Product {
 	google.protobuf.Timestamp support_ends = 14253;
 	string type = 6467;
 	repeated string code_ids  = 10540;
-	optional string contact_person_id = 8641;
+	ContactPerson contact_person = 8641;
 	repeated string data_ids  = 11462;
-	repeated string governance_ids  = 16685;
+	repeated Governance governances  = 16685;
 	repeated string hardware_ids  = 7586;
 	repeated string infrastructure_ids  = 2977;
 	optional string parent_id = 715;
@@ -3405,9 +3558,11 @@ message QPU {
 	string name = 1538 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 8462;
+	ChangeAndConfigurationManagement change_and_configuration_management = 2743;
 	EncryptionInUse encryption_in_use = 7289;
 	GeoLocation geo_location = 16264;
 	repeated Logging loggings  = 14768;
+	MalwareProtection malware_protection = 697;
 	repeated string network_interface_ids  = 2623;
 	repeated Redundancy redundancies  = 12185;
 	RemoteAttestation remote_attestation = 1044;
@@ -3537,7 +3692,7 @@ message RelationalDatabaseService {
 	string raw = 308;
 	ActivityLogging activity_logging = 17935;
 	repeated AnomalyDetection anomaly_detections  = 18542;
-	Authenticity authenticity = 8756;
+	ChangeAndConfigurationManagement change_and_configuration_management = 11313;
 	repeated string compute_ids  = 5357;
 	GeoLocation geo_location = 13809;
 	HttpEndpoint http_endpoint = 3492;
@@ -3617,6 +3772,14 @@ message ReportDocument {
 	repeated SecurityFeature security_features  = 10419;
 }
 
+// RequestForChange is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message RequestForChange {
+	option (resource_type_names) = "RequestForChange";
+	option (resource_type_names) = "Functionality";
+
+	bool approved_before_deployment = 16813;
+}
+
 // Resource is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Resource {
 
@@ -3687,13 +3850,14 @@ message Resource {
 		MachineLearningDataset machine_learning_dataset = 2040;
 		MachineLearningModel machine_learning_model = 15393;
 		CoordinatedVulnerabilityDisclosurePolicy coordinated_vulnerability_disclosure_policy = 18002;
+		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 18631;
+		LeastPrivilegePolicy least_privilege_policy = 9544;
+		NeedToKnowPolicy need_to_know_policy = 8800;
+		SDNFunctionValidationPolicy sdn_function_validation_policy = 7153;
+		SeparationOfDutiesPolicy separation_of_duties_policy = 6331;
 		AndRule and_rule = 1114;
 		Token token = 5266;
 		Value value = 652;
-		ContactPerson contact_person = 7415;
-		MonitoringProcedure monitoring_procedure = 4844;
-		AwarenessTraining awareness_training = 18321;
-		SecurityTraining security_training = 16425;
 		Memory memory = 967;
 		Product product = 7503;
 		Application application = 18554;
@@ -3721,8 +3885,10 @@ message ResourceGroup {
 	string name = 18950 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 16903;
+	ChangeAndConfigurationManagement change_and_configuration_management = 6025;
 	GeoLocation geo_location = 10139;
 	repeated Logging loggings  = 17486;
+	MalwareProtection malware_protection = 10760;
 	repeated Redundancy redundancies  = 11277;
 	optional string parent_id = 9625;
 	UsageStatistics usage_statistics = 16846;
@@ -3775,10 +3941,11 @@ message RoleAssignment {
 	string name = 2963 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10862;
-	Authenticity authenticity = 13687;
 	Authorization authorization = 18501;
+	ChangeAndConfigurationManagement change_and_configuration_management = 12427;
 	GeoLocation geo_location = 10092;
 	repeated Logging loggings  = 18727;
+	MalwareProtection malware_protection = 17663;
 	repeated Redundancy redundancies  = 18916;
 	optional string parent_id = 8394;
 	UsageStatistics usage_statistics = 18400;
@@ -3805,6 +3972,28 @@ message SBOMDocument {
 	optional string parent_id = 12294;
 	SchemaValidation validated_by = 17308;
 	repeated SecurityFeature security_features  = 4541;
+}
+
+// SDNFunctionValidationPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a [PolicyDocument] describing validation and testing requirements for SDN functions. isDefined: whether this policy section is present and defined.
+message SDNFunctionValidationPolicy {
+	option (resource_type_names) = "SDNFunctionValidationPolicy";
+	option (resource_type_names) = "Policy";
+	option (resource_type_names) = "Data";
+	option (resource_type_names) = "Resource";
+
+	google.protobuf.Timestamp creation_time = 14647;
+	string description = 5378;
+	string id = 3498 [ (buf.validate.field).required = true ];
+	bool is_defined = 12864;
+	map<string, string> labels = 12485;
+	string name = 14269 [ (buf.validate.field).required = true ];
+	// The raw field contains the raw information that is used to fill in the fields of the ontology.
+	string raw = 16190;
+	optional string context_id = 708;
+	DataLocation data_location = 13722;
+	repeated string policy_rule_ids  = 9678;
+	optional string parent_id = 8717;
 }
 
 // SchemaValidation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3838,10 +4027,12 @@ message Secret {
 	google.protobuf.Timestamp not_before_date = 13335;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5998;
+	ChangeAndConfigurationManagement change_and_configuration_management = 7249;
 	Cipher based_on = 7866;
 	GeoLocation geo_location = 4152;
 	Infrastructure used_by_multiple = 3559;
 	repeated Logging loggings  = 16085;
+	MalwareProtection malware_protection = 6751;
 	repeated Redundancy redundancies  = 14119;
 	optional string parent_id = 13608;
 	UsageStatistics usage_statistics = 5354;
@@ -3907,11 +4098,12 @@ message SecurityAdvisoryService {
 	repeated uint32 ports = 4555;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 10467;
-	Authenticity authenticity = 16717;
+	ChangeAndConfigurationManagement change_and_configuration_management = 3016;
 	repeated string compute_ids  = 18065;
 	GeoLocation geo_location = 11088;
 	repeated string key_ids  = 7181;
 	repeated Logging loggings  = 28;
+	MalwareProtection malware_protection = 7307;
 	repeated Redundancy redundancies  = 14683;
 	optional string parent_id = 11251;
 	repeated SecurityAdvisoryFeed security_advisory_feeds  = 4972;
@@ -3925,6 +4117,7 @@ message SecurityFeature {
 
 	oneof type {
 		AnomalyDetection anomaly_detection = 4728;
+		AssetInventory asset_inventory = 12832;
 		CodeSignoff code_signoff = 16789;
 		ActivityLogging activity_logging = 2956;
 		ApplicationLogging application_logging = 12791;
@@ -3972,18 +4165,32 @@ message SecurityTraining {
 	option (resource_type_names) = "SecurityTraining";
 	option (resource_type_names) = "Training";
 	option (resource_type_names) = "Governance";
+	option (resource_type_names) = "Functionality";
+
+	bool annual_update_completed = 10890;
+	bool successfully_completed_percentage = 18938;
+}
+
+// SeparationOfDutiesPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a [PolicyDocument] describing separation of duties requirements. isDefined: whether this policy section is present and defined.
+message SeparationOfDutiesPolicy {
+	option (resource_type_names) = "SeparationOfDutiesPolicy";
+	option (resource_type_names) = "Policy";
+	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	bool annual_update_completed = 12324;
-	google.protobuf.Timestamp creation_time = 2973;
-	string description = 16969;
-	string id = 16887 [ (buf.validate.field).required = true ];
-	map<string, string> labels = 15328;
-	string name = 2030 [ (buf.validate.field).required = true ];
+	google.protobuf.Timestamp creation_time = 1232;
+	string description = 13879;
+	string id = 5002 [ (buf.validate.field).required = true ];
+	bool is_defined = 6623;
+	map<string, string> labels = 18569;
+	string name = 12303 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 11220;
-	bool successfully_completed_percentage = 11821;
-	optional string parent_id = 10643;
+	string raw = 10731;
+	optional string context_id = 10827;
+	DataLocation data_location = 15124;
+	repeated string policy_rule_ids  = 16493;
+	optional string parent_id = 13819;
 }
 
 // ServiceMetadataDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4027,6 +4234,7 @@ message SingleSignOn {
 
 	bool context_is_checked = 14488;
 	bool enabled = 10569;
+	int32 failed_authentication_attempts = 10119;
 	// Maximum password rotation interval in months
 	int32 rotation_interval = 9185;
 }
@@ -4141,8 +4349,8 @@ message Token {
 message Training {
 
 	oneof type {
-		AwarenessTraining awareness_training = 18321;
-		SecurityTraining security_training = 16425;
+		AwarenessTraining awareness_training = 8227;
+		SecurityTraining security_training = 8543;
 	}
 }
 
@@ -4224,8 +4432,10 @@ message VMImage {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 3459;
 	optional string application_id = 5181;
+	ChangeAndConfigurationManagement change_and_configuration_management = 3927;
 	GeoLocation geo_location = 18401;
 	repeated Logging loggings  = 14669;
+	MalwareProtection malware_protection = 8165;
 	repeated Redundancy redundancies  = 1511;
 	optional string parent_id = 6454;
 	UsageStatistics usage_statistics = 3468;
@@ -4280,6 +4490,7 @@ message VirtualMachine {
 	AutomaticUpdates automatic_updates = 14565;
 	repeated string block_storage_ids  = 17882;
 	BootLogging boot_logging = 10025;
+	ChangeAndConfigurationManagement change_and_configuration_management = 5993;
 	EncryptionInUse encryption_in_use = 1520;
 	GeoLocation geo_location = 14863;
 	repeated Logging loggings  = 1737;
@@ -4308,8 +4519,10 @@ message VirtualNetwork {
 	string name = 818 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 14216;
+	ChangeAndConfigurationManagement change_and_configuration_management = 157;
 	GeoLocation geo_location = 3004;
 	repeated Logging loggings  = 18851;
+	MalwareProtection malware_protection = 3504;
 	repeated Redundancy redundancies  = 9275;
 	optional string parent_id = 7611;
 	UsageStatistics usage_statistics = 2221;
@@ -4330,8 +4543,10 @@ message VirtualSubNetwork {
 	string name = 1563 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 15165;
+	ChangeAndConfigurationManagement change_and_configuration_management = 9134;
 	GeoLocation geo_location = 518;
 	repeated Logging loggings  = 9326;
+	MalwareProtection malware_protection = 9469;
 	repeated Redundancy redundancies  = 16897;
 	optional string parent_id = 15829;
 	UsageStatistics usage_statistics = 13627;
@@ -4402,8 +4617,10 @@ message Workflow {
 	string name = 12414 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 9416;
+	ChangeAndConfigurationManagement change_and_configuration_management = 7785;
 	GeoLocation geo_location = 18272;
 	repeated Logging loggings  = 4437;
+	MalwareProtection malware_protection = 11115;
 	repeated Redundancy redundancies  = 7788;
 	optional string parent_id = 14352;
 	UsageStatistics usage_statistics = 6102;
