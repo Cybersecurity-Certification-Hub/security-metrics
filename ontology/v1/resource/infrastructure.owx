@@ -349,6 +349,13 @@
         <Class abbreviatedIRI="cl:CloudResource"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="cl:Account"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:offers"/>
+            <Class abbreviatedIRI="cl:AssetInventory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="cl:BlockStorage"/>
         <Class abbreviatedIRI="cl:Storage"/>
     </SubClassOf>
@@ -381,6 +388,13 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:CloudResource"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:ChangeAndConfigurationManagement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CloudResource"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="cl:GeoLocation"/>
         </ObjectSomeValuesFrom>
@@ -397,6 +411,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="cl:CodeSignoff"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CloudResource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:offers"/>
+            <Class abbreviatedIRI="cl:MalwareProtection"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -544,13 +565,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="cl:DatabaseService"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="cl:MalwareProtection"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="cl:DatabaseStorage"/>
         <Class abbreviatedIRI="cl:Storage"/>
     </SubClassOf>
@@ -627,13 +641,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:Identifiable"/>
         <Class abbreviatedIRI="cl:CloudResource"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:Identifiable"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="cl:Authenticity"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:Identifiable"/>
@@ -853,13 +860,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:NetworkService"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="cl:offersInterface"/>
-            <Class abbreviatedIRI="cl:Authenticity"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:NetworkService"/>
-        <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="cl:Compute"/>
         </ObjectSomeValuesFrom>
@@ -1047,13 +1047,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="cl:BootLog"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:VirtualMachine"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="cl:MalwareProtection"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
