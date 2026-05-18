@@ -71,6 +71,9 @@
         <Class abbreviatedIRI="core:ProctectedAsset"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:PullRequest"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:MemoryOperation"/>
     </Declaration>
     <Declaration>
@@ -510,6 +513,24 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Http"/>
         <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:PullRequest"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:PullRequest"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:reviewPercentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:PullRequest"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:reviewPercentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:RequestForChange"/>
@@ -1719,6 +1740,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Principal</AbbreviatedIRI>
         <Literal>Represents a principal that is allowed to access a resource. This can for example be a (structure representing) a user or a group of users.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:PullRequest</AbbreviatedIRI>
+        <Literal>ReviewPercentage is the percentage of merged pull requests with code reviews. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:PullRequest</AbbreviatedIRI>
+        <Literal>ReviewPercentageLastMonth is the percentage of merged pull requests with code reviews in the last 30 days.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
