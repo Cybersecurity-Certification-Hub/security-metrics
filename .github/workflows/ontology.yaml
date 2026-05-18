@@ -68,8 +68,9 @@ jobs:
               -o buf/validate/validate.proto
             buf lint --path ontology/v1/ontology.proto --error-format github-actions --config '{"version":"v1","lint":{"use":["STANDARD"],"except":["PACKAGE_DIRECTORY_MATCH"]}}'
         
-        # Commit and push to the PR branch
+        # Commit and push to the PR branch (skipped for fork PRs — GITHUB_TOKEN is read-only in that context)
         - name: Commit merged OWX file
+          if: github.event.pull_request.head.repo.full_name == github.repository
           env:
             github_token: ${{ github.token }}
           run: |

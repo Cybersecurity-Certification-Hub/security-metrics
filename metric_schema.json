@@ -58,6 +58,9 @@
               "items": {
                 "type": "string"
               }
+            },
+            "previous_name": {
+              "type": "string"
             }
           },
           "additionalProperties": false

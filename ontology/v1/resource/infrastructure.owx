@@ -388,6 +388,13 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:CloudResource"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:ChangeAndConfigurationManagement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CloudResource"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="cl:GeoLocation"/>
         </ObjectSomeValuesFrom>
@@ -660,13 +667,6 @@
         <Class abbreviatedIRI="cl:Identifiable"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="cl:Authenticity"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:Identifiable"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="cl:Authorization"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -877,13 +877,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:NetworkService"/>
         <Class abbreviatedIRI="cl:Networking"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:NetworkService"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="cl:offersInterface"/>
-            <Class abbreviatedIRI="cl:Authenticity"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:NetworkService"/>
