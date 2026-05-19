@@ -435,6 +435,20 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="cl:CodeRepository"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:reviewPercentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CodeRepository"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:reviewPercentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="cl:CloudResource"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
@@ -1525,6 +1539,16 @@ name = metadata.name</Literal>
         <AbbreviatedIRI>cl:CodeRepository</AbbreviatedIRI>
         <Literal>CodeRepository</Literal>
     </AnnotationAssertion>
+    <AnnotationAssertion>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <AbbreviatedIRI>cl:CodeRepository</AbbreviatedIRI>
+            <Literal>ReviewPercentage is the percentage of merged pull requests with code reviews.</Literal>
+        </AnnotationAssertion>
+        <AnnotationAssertion>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <AbbreviatedIRI>cl:CodeRepository</AbbreviatedIRI>
+            <Literal>ReviewPercentageLastMonth is the percentage of merged pull requests with code reviews in the last 30 days.</Literal>
+        </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:Compute</AbbreviatedIRI>
