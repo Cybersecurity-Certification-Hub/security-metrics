@@ -9,9 +9,10 @@ default applicable = false
 default compliant = false
 
 applicable if {
-	codeRepo
+    codeRepo
+    "CodeRepository" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, codeRepo.numberOfRequiredReviewers)
+    compare(data.operator, data.target_value, codeRepo.numberOfRequiredReviewers)
 }

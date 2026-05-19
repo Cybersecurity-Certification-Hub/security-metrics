@@ -2,16 +2,18 @@ package cch.metrics.pull_requests_with_reviews_percentage
 
 import data.cch.compare
 import rego.v1
-import input.codeRepository.pullRequest as pr
+import input.codeRepository as repo
 
 default applicable = false
 
 default compliant = false
 
 applicable if {
-	pr
+    repo
+    "CodeRepository" in input.type
+    repo.pullRequest
 }
 
 compliant if {
-	compare(data.operator, data.target_value, pr.reviewPercentage)
+    compare(data.operator, data.target_value, repo.pullRequest.reviewPercentage)
 }

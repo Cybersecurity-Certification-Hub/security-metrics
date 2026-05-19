@@ -2,16 +2,18 @@ package cch.metrics.code_signoff_percentage
 
 import data.cch.compare
 import rego.v1
-import input.codeRepository.codeSignoff as cs
+import input.codeRepository as repo
 
 default applicable = false
 
 default compliant = false
 
 applicable if {
-	cs
+    repo
+    "CodeRepository" in input.type
+    repo.codeSignoff
 }
 
 compliant if {
-	compare(data.operator, data.target_value, cs.percentage)
+    compare(data.operator, data.target_value, repo.codeSignoff.percentage)
 }

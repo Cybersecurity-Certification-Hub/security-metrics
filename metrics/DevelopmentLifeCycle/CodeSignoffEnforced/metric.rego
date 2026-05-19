@@ -9,8 +9,9 @@ default applicable = false
 default compliant = false
 
 applicable if {
-	# we are only interested in code repositories with the codeSignoff property
-	repo.codeSignoff
+    repo
+    "CodeRepository" in input.type
+    repo.codeSignoff
 }
 
 compliant if {

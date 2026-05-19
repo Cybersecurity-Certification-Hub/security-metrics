@@ -2,16 +2,18 @@ package cch.metrics.signed_commits_enforced
 
 import data.cch.compare
 import rego.v1
-import input.codeRepository.signedCommits as sc
+import input.codeRepository as repo
 
 default applicable = false
 
 default compliant = false
 
 applicable if {
-	sc
+    repo
+    "CodeRepository" in input.type
+    repo.signedCommits
 }
 
 compliant if {
-	compare(data.operator, data.target_value, sc.enforced)
+    compare(data.operator, data.target_value, repo.signedCommits.enforced)
 }

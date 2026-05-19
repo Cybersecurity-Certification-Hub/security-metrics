@@ -2,16 +2,18 @@ package cch.metrics.verified_commits_percentage_last_month
 
 import data.cch.compare
 import rego.v1
-import input.codeRepository.verifiedCommits as vc
+import input.codeRepository as repo
 
 default applicable = false
 
 default compliant = false
 
 applicable if {
-	vc
+    repo
+    "CodeRepository" in input.type
+    repo.verifiedCommits
 }
 
 compliant if {
-	compare(data.operator, data.target_value, vc.percentageLastMonth)
+    compare(data.operator, data.target_value, repo.verifiedCommits.percentageLastMonth)
 }
