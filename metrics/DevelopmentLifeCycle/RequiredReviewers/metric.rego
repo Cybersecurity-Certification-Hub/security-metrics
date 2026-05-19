@@ -2,16 +2,16 @@ package cch.metrics.required_reviewers
 
 import data.cch.compare
 import rego.v1
-import input.codeRepository.reviewer as rev
+import input.codeRepository as codeRepo
 
 default applicable = false
 
 default compliant = false
 
 applicable if {
-	rev
+	codeRepo
 }
 
 compliant if {
-	compare(data.operator, data.target_value, rev.numberOfReviewer)
+	compare(data.operator, data.target_value, codeRepo.numberOfRequiredReviewers)
 }

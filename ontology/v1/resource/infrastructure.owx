@@ -430,7 +430,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:CodeRepository" />
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:numberOfReviewer" />
+            <DataProperty abbreviatedIRI="prop:numberOfRequiredReviewers" />
             <Datatype abbreviatedIRI="xsd:int" />
         </DataSomeValuesFrom>
     </SubClassOf>
