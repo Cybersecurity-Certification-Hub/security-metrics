@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: DataInTransitEncryptedVMStorageEnabled
+description: This rule assesses whether a [VirtualMachine] that exposes a [SecurityProfile] with [EncryptionAtHost] has [p1:dataInTransitEncryptedVmStorageEnabled] configured correctly.
+category: InfrastructureVirtualizationSecurity
+version: "1.0"
+comments: Enforcing encryption for virtual machine storage traffic protects data moving between the host and underlying storage, mitigating interception or snooping risks within the infrastructure fabric.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True

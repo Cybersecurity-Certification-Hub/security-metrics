@@ -1,0 +1,47 @@
+[
+  {
+    "id": "IVS",
+    "name": "Infrastructure & Virtualization Security",
+    "description": "Controls that address hardening of compute hosts, guests, and virtualization infrastructure.",
+    "metadata": {
+      "color": "#004C97"
+    },
+    "short_name": "IVS",
+    "assurance_levels": [
+      "substantial",
+      "high"
+    ],
+    "all_in_scope": true,
+    "categories": [
+      {
+        "name": "OS Hardening and Base Controls",
+        "description": "Baseline operating system and hypervisor protections for virtualized workloads.",
+        "controls": [
+          {
+            "id": "IVS-04",
+            "name": "Harden Hosts and Guests",
+            "description": "Harden host and guest OS, hypervisor or infrastructure control plane according to their respective best practices, supported by technical controls as part of a security baseline.",
+            "metrics": [
+              { "id": "ActivityLoggingEnabled" },
+              { "id": "L3FirewallEnabled" },
+              { "id": "BootLoggingEnabled" },
+              { "id": "OSLoggingEnabled" },
+              { "id": "MonitoringLogDataEnabled" },
+              { "id": "SecurityAlertsEnabled" },
+              { "id": "AutomaticUpdatesEnabled" },
+              { "id": "MalwareProtectionEnabled" },
+              { "id": "SecureBootEnabled" },
+              { "id": "VTPMEnabled" },
+              { "id": "EncryptionAtHostEnabled" },
+              { "id": "CacheEncryptionEnabled" },
+              { "id": "TempDiskEncryptionEnabled" },
+              { "id": "DataInTransitEncryptedVMStorageEnabled" },
+              { "id": "IVS04SecurityBaseline" }
+            ],
+            "assurance_level": "high"
+          }
+        ]
+      }
+    ]
+  }
+]
