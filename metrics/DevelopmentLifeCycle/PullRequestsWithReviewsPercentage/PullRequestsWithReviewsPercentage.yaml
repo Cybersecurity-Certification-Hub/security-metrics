@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: f6dd93c1-a244-3f37-8bdd-49161662adba
 name: PullRequestsWithReviewsPercentage
-description: This rule verifies that the [CodeRepository]'s [PullRequest][p1:reviewPercentage] exceeds the minimum acceptable threshold for merged pull requests with code reviews.
+description: This rule verifies that the [CodeRepository] property [p1:reviewPercentage] exceeds the minimum acceptable threshold for merged pull requests with code reviews.
 category: DevelopmentLifeCycle
 version: "v1"
 comments: Measures the fraction of merged pull requests that include at least one code review. Code reviews ensure changes are assessed by peers before merging, improving code quality and reducing the risk of introducing defects. Rule enforces high review rates for a consistent and accountable development process.

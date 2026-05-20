@@ -11,9 +11,8 @@ default compliant = false
 applicable if {
     repo
     "CodeRepository" in input.type
-    repo.pullRequest
 }
 
 compliant if {
-    compare(data.operator, data.target_value, repo.pullRequest.reviewPercentage)
+    compare(data.operator, data.target_value, repo.reviewPercentage)
 }
