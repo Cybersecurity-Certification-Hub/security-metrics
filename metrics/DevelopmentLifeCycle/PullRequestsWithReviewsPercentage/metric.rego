@@ -1,4 +1,4 @@
-package cch.metrics.code_signoff_enforced
+package cch.metrics.pull_requests_with_reviews_percentage
 
 import data.cch.compare
 import rego.v1
@@ -11,9 +11,8 @@ default compliant = false
 applicable if {
     repo
     "CodeRepository" in input.type
-    repo.codeSignoff
 }
 
 compliant if {
-	compare(data.operator, data.target_value, repo.codeSignoff.enforced)
+    compare(data.operator, data.target_value, repo.reviewPercentage)
 }

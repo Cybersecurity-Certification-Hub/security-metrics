@@ -170,6 +170,9 @@
         <Class abbreviatedIRI="core:Signature"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:SignedCommits"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:SingleSignOn"/>
     </Declaration>
     <Declaration>
@@ -257,9 +260,6 @@
         <DataProperty abbreviatedIRI="prop:enabled"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:enforced"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="prop:inbound"/>
     </Declaration>
     <Declaration>
@@ -327,6 +327,27 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:CodeSignoff"/>
         <Class abbreviatedIRI="core:Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CodeSignoff"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:enforced"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CodeSignoff"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CodeSignoff"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:AnomalyDetection"/>
@@ -610,13 +631,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:CodeSignoff"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:enforced"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:CustomerKeyEncryption"/>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
     </SubClassOf>
@@ -667,6 +681,49 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SignedCommits"/>
+        <Class abbreviatedIRI="core:Integrity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SignedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:enforced"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SignedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SignedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:VerifiedCommits"/>
+        <Class abbreviatedIRI="core:Integrity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:VerifiedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:VerifiedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1219,6 +1276,16 @@
         <Literal>Signoffs enable users to affirm that a commit complies with the rules and licensing governing a repository</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:CodeSignoff</AbbreviatedIRI>
+        <Literal>Percentage: Percentage of commits with "Signed-off-by" lines. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:CodeSignoff</AbbreviatedIRI>
+        <Literal>PercentageLastMonth: Percentage of commits with "Signed-off-by" lines in the last 30 days. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:CodeSignoff</AbbreviatedIRI>
         <Literal>CodeSignoff</Literal>
@@ -1404,6 +1471,26 @@
         <Literal>DocumentSignature</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:SignedCommits</AbbreviatedIRI>
+        <Literal> SignedCommits cryptographically verify the identity of the commit author.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:SignedCommits</AbbreviatedIRI>
+        <Literal>Percentage: Percentage of signed commits. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:SignedCommits</AbbreviatedIRI>
+        <Literal>PercentageLastMonth: Percentage of signed commits in the last 30 days. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:SignedCommits</AbbreviatedIRI>
+        <Literal>SignedCommits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:SingleSignOn</AbbreviatedIRI>
         <Literal xml:lang="english">SingleSignOn</Literal>
@@ -1422,6 +1509,26 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:UsageStatistics</AbbreviatedIRI>
         <Literal>UsageStatistics</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:VerifiedCommits</AbbreviatedIRI>
+        <Literal> VerifiedCommits ensure that cryptographic signatures on commits are successfully validated against trusted keys, confirming author authenticity and code integrity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:VerifiedCommits</AbbreviatedIRI>
+        <Literal>Percentage: Percentage of verified commits. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:VerifiedCommits</AbbreviatedIRI>
+        <Literal>PercentageLastMonth: Percentage of verified commits in the last 30 days. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:VerifiedCommits</AbbreviatedIRI>
+        <Literal>VerifiedCommits</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

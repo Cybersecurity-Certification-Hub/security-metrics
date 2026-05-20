@@ -1,4 +1,4 @@
-package cch.metrics.code_signoff_enforced
+package cch.metrics.verified_commits_percentage
 
 import data.cch.compare
 import rego.v1
@@ -11,9 +11,9 @@ default compliant = false
 applicable if {
     repo
     "CodeRepository" in input.type
-    repo.codeSignoff
+    repo.verifiedCommits
 }
 
 compliant if {
-	compare(data.operator, data.target_value, repo.codeSignoff.enforced)
+    compare(data.operator, data.target_value, repo.verifiedCommits.percentage)
 }

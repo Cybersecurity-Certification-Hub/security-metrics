@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: dc1923ee-38de-30a4-b0db-1168db0eabfc
+name: SignedCommitsPercentage
+description: This rule assesses that the [CodeRepository]'s [SignedCommits] [p1:percentage] exceeds the minimum acceptable threshold for cryptographically signed commits.
+category: DevelopmentLifeCycle
+version: "v1"
+comments: Measures the fraction of commits with cryptographic signatures verifying author identity and integrity. Rule ensures repositories maintain high signed commit rates, enhancing security, authenticity, and tamper-proof history of code changes.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: 0.8

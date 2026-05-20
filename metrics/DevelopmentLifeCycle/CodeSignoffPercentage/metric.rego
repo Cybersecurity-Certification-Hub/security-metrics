@@ -1,4 +1,4 @@
-package cch.metrics.code_signoff_enforced
+package cch.metrics.code_signoff_percentage
 
 import data.cch.compare
 import rego.v1
@@ -15,5 +15,5 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, repo.codeSignoff.enforced)
+    compare(data.operator, data.target_value, repo.codeSignoff.percentage)
 }
