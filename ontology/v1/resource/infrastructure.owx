@@ -449,6 +449,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="cl:CodeRepository"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:approvedCommitAuthorEnforced"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="cl:CloudResource"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
@@ -1540,15 +1547,20 @@ name = metadata.name</Literal>
         <Literal>CodeRepository</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <AbbreviatedIRI>cl:CodeRepository</AbbreviatedIRI>
-            <Literal>ReviewPercentage is the percentage of merged pull requests with code reviews.</Literal>
-        </AnnotationAssertion>
-        <AnnotationAssertion>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <AbbreviatedIRI>cl:CodeRepository</AbbreviatedIRI>
-            <Literal>ReviewPercentageLastMonth is the percentage of merged pull requests with code reviews in the last 30 days.</Literal>
-        </AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:CodeRepository</AbbreviatedIRI>
+        <Literal>ReviewPercentage is the percentage of merged pull requests with code reviews.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:CodeRepository</AbbreviatedIRI>
+        <Literal>ReviewPercentageLastMonth is the percentage of merged pull requests with code reviews in the last 30 days.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:CodeRepository</AbbreviatedIRI>
+        <Literal>ApprovedCommitAuthorEnforced verifies that code modifications are made by authorized developers whose changes have been validated, enhancing accountability and traceability.</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:Compute</AbbreviatedIRI>
