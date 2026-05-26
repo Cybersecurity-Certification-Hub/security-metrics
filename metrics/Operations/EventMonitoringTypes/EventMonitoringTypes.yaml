@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "76a94461-c17e-4820-89ec-8c1cd470ddba"
+name: "EventMonitoringTypes"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityIncident.Event.SIEM], has [p1:types] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: EventMonitoringPolicyCheckQ1
+    question: "Which functional events are monitored by the SIEM?"
+    keywords: ["logging", "monitoring", "metrics", "events", "availability", "performance"]
+category: "Operations"
+version: "1.0"
+comments: "This metric assesses the functional events monitored by the SIEM. Measured as string."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[availability, performance, all, none]"

@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "4fc63588-f711-4c94-b2cf-a9423664e0d9"
+name: "ComplianceReviewInterval"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Audit], has [p1:reviewInterval] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: ComplianceReviewFrequencyQ2
+    question: "How frequently should reviews be conducted?"
+    keywords: ["reviews", "frequency", "schedule"]
+category: "Procurement Management"
+version: "1.0"
+comments: "This metric assesses the recommended frequency for conducting reviews. Measured in months."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 12
