@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "d8f28ac7-eee9-41b6-b898-cc7d7d91c6f0"
 name: ChangeApprovalBeforeDeployment
-description: This rule assesses whether a [Resource] includes [changeAndConfigurationManagement.requestForChange] with [p1:approvedBeforeDeployment] set correctly.
+description: This rule assesses whether a [Resource] includes [RequestForChange] with [p1:approvedBeforeDeployment] set correctly.
 implementationGuidelines:
   FSC:
     details: ["- Date and time of change approval and deployment", "- Information from Change ticket"]
