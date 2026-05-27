@@ -2,18 +2,17 @@ package cch.metrics.code_signoff_percentage_last_month
 
 import data.cch.compare
 import rego.v1
-import input.codeRepository as repo
+import input.codeSignoff as cs
 
 default applicable = false
 
 default compliant = false
 
 applicable if {
-    repo
+    cs
     "CodeRepository" in input.type
-    repo.codeSignoff
 }
 
 compliant if {
-    compare(data.operator, data.target_value, repo.codeSignoff.percentageLastMonth)
+    compare(data.operator, data.target_value, cs.percentageLastMonth)
 }
