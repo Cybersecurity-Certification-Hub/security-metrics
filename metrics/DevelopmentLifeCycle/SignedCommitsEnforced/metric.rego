@@ -11,7 +11,6 @@ default compliant = false
 applicable if {
     repo
     "CodeRepository" in input.type
-    repo.signedCommits
 }
 
 compliant if {
