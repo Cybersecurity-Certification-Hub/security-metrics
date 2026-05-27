@@ -15,7 +15,7 @@ jobs:
 
         steps:
         - name: Checkout repository
-          uses: actions/checkout@v4
+          uses: actions/checkout@v6
         - name: Install buf
           uses: bufbuild/buf-setup-action@v1.50.0
           with:
@@ -42,7 +42,7 @@ jobs:
               --input ontology/v1/ontology.owx 
               --output ontology/v1/ontology-merged.owx
         - name: Upload merged ontology
-          uses: actions/upload-artifact@v4
+          uses: actions/upload-artifact@v7
           with:
             name: ontology-merged
             path: ontology/v1/ontology-merged.owx
@@ -56,7 +56,7 @@ jobs:
             --full-semantic-mode=false \
             --deterministic-field-numbers=true
         - name: Upload proto file
-          uses: actions/upload-artifact@v4
+          uses: actions/upload-artifact@v7
           with:
             name: proto-file
             path: ontology/v1/ontology.proto
