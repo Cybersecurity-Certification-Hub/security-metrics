@@ -750,6 +750,9 @@
         <Class IRI="/classes/Signature"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/SignedCommits"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/SingleSignOn"/>
     </Declaration>
     <Declaration>
@@ -1524,6 +1527,9 @@
         <DataProperty IRI="/properties/isDefined"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/numberOfRequiredReviewers"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/properties/scope"/>
     </Declaration>
     <Declaration>
@@ -1551,16 +1557,25 @@
         <AnnotationProperty IRI="rdfs:comment"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/reviewPercentage"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="/classes/Implementation"/>
     </Declaration>
     <Declaration>
         <Datatype IRI="/datatypes/listCpgNodes"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/percentageLastMonth"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/modelStealResilience"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/hasType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/approvedCommitAuthorEnforced"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/approvedBeforeDeployment"/>
@@ -1570,6 +1585,15 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/purpose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/VerifiedCommits"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/reviewPercentageLastMonth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/percentage"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Specification"/>
@@ -2169,6 +2193,48 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/CodeRepository"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/SignedCommits"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CodeRepository"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/VerifiedCommits"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CodeRepository"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/approvedCommitAuthorEnforced"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CodeRepository"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/numberOfRequiredReviewers"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CodeRepository"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/reviewPercentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CodeRepository"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/reviewPercentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/CodeSignoff"/>
         <Class IRI="/classes/Auditing"/>
     </SubClassOf>
@@ -2177,6 +2243,20 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/enforced"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CodeSignoff"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/percentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CodeSignoff"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/percentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4816,6 +4896,31 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/SignedCommits"/>
+        <Class IRI="/classes/Integrity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SignedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/enforced"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SignedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/percentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SignedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/percentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/SingleSignOn"/>
         <Class IRI="/classes/Authenticity"/>
     </SubClassOf>
@@ -5039,6 +5144,24 @@
     <SubClassOf>
         <Class IRI="/classes/Value"/>
         <Class IRI="/classes/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/VerifiedCommits"/>
+        <Class IRI="/classes/Integrity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/VerifiedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/percentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/VerifiedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/percentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/VirtualMachine"/>
@@ -5881,9 +6004,34 @@ name = metadata.name</Literal>
         <Literal>CodeRegion</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/CodeRepository</IRI>
+        <Literal>ApprovedCommitAuthorEnforced verifies that code modifications are made by authorized developers whose changes have been validated, enhancing accountability and traceability.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/CodeRepository</IRI>
+        <Literal>ReviewPercentage is the percentage of merged pull requests with code reviews.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/CodeRepository</IRI>
+        <Literal>ReviewPercentageLastMonth is the percentage of merged pull requests with code reviews in the last 30 days.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/CodeRepository</IRI>
         <Literal>CodeRepository</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/CodeSignoff</IRI>
+        <Literal>Percentage: Percentage of commits with &quot;Signed-off-by&quot; lines. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/CodeSignoff</IRI>
+        <Literal>PercentageLastMonth: Percentage of commits with &quot;Signed-off-by&quot; lines in the last 30 days. </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7246,6 +7394,26 @@ name = metadata.name</Literal>
         <Literal>DocumentSignature</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/SignedCommits</IRI>
+        <Literal> SignedCommits cryptographically verify the identity of the commit author.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/SignedCommits</IRI>
+        <Literal>Percentage: Percentage of signed commits. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/SignedCommits</IRI>
+        <Literal>PercentageLastMonth: Percentage of signed commits in the last 30 days. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/SignedCommits</IRI>
+        <Literal>SignedCommits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/SingleSignOn</IRI>
         <Literal xml:lang="english">SingleSignOn</Literal>
@@ -7374,6 +7542,26 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Value</IRI>
         <Literal>Value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/VerifiedCommits</IRI>
+        <Literal> VerifiedCommits ensure that cryptographic signatures on commits are successfully validated against trusted keys, confirming author authenticity and code integrity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/VerifiedCommits</IRI>
+        <Literal>Percentage: Percentage of verified commits. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/VerifiedCommits</IRI>
+        <Literal>PercentageLastMonth: Percentage of verified commits in the last 30 days. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/VerifiedCommits</IRI>
+        <Literal>VerifiedCommits</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

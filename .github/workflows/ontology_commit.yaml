@@ -1,0 +1,28 @@
+name: Commit merged ontology after merge
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'ontology/v1/ontology-merged.owx'
+      - 'ontology/v1/ontology.proto'
+
+permissions:
+  contents: write
+
+jobs:
+  commit-ontology-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Set up Git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Commit merged OWX and proto files
+        run: |
+          git add ontology/v1/ontology-merged.owx ontology/v1/ontology.proto
+          git commit -m "Auto-update merged ontology and proto files after merge [skip ci]" || echo "No changes to commit"
+          git push

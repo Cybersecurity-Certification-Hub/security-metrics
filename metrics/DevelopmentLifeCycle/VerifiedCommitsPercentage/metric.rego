@@ -2,18 +2,17 @@ package cch.metrics.verified_commits_percentage
 
 import data.cch.compare
 import rego.v1
-import input.codeRepository as repo
+import input.verifiedCommits as vc
 
 default applicable = false
 
 default compliant = false
 
 applicable if {
-    repo
+    vc
     "CodeRepository" in input.type
-    repo.verifiedCommits
 }
 
 compliant if {
-    compare(data.operator, data.target_value, repo.verifiedCommits.percentage)
+    compare(data.operator, data.target_value, vc.percentage)
 }
