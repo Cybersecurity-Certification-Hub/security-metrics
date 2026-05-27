@@ -636,19 +636,26 @@ message CodeRegion {
 }
 
 // CodeRepository is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// ApprovedCommitAuthorEnforced verifies that code modifications are made by authorized developers whose changes have been validated, enhancing accountability and traceability.
+// ReviewPercentage is the percentage of merged pull requests with code reviews.
+// ReviewPercentageLastMonth is the percentage of merged pull requests with code reviews in the last 30 days.
 message CodeRepository {
 	option (resource_type_names) = "CodeRepository";
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
+	bool approved_commit_author_enforced = 16902;
 	google.protobuf.Timestamp creation_time = 14345;
 	string description = 5754;
 	string id = 1358 [ (buf.validate.field).required = true ];
 	bool internet_accessible_endpoint = 8874;
 	map<string, string> labels = 6055;
 	string name = 12766 [ (buf.validate.field).required = true ];
+	int32 number_of_required_reviewers = 11195;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 15664;
+	float review_percentage = 17697;
+	float review_percentage_last_month = 747;
 	ChangeAndConfigurationManagement change_and_configuration_management = 1727;
 	CodeSignoff code_signoff = 1837;
 	GeoLocation geo_location = 111;
@@ -656,10 +663,14 @@ message CodeRepository {
 	MalwareProtection malware_protection = 2071;
 	repeated Redundancy redundancies  = 11273;
 	optional string parent_id = 5357;
+	SignedCommits signed_commits = 434;
 	UsageStatistics usage_statistics = 3480;
+	VerifiedCommits verified_commits = 11661;
 }
 
 // CodeSignoff is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Percentage: Percentage of commits with "Signed-off-by" lines. 
+// PercentageLastMonth: Percentage of commits with "Signed-off-by" lines in the last 30 days. 
 // Signoffs enable users to affirm that a commit complies with the rules and licensing governing a repository
 message CodeSignoff {
 	option (resource_type_names) = "CodeSignoff";
@@ -667,6 +678,8 @@ message CodeSignoff {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enforced = 18628;
+	float percentage = 12099;
+	float percentage_last_month = 3739;
 }
 
 // Component is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -2210,6 +2223,8 @@ message Integrity {
 		CryptographicHash cryptographic_hash = 18167;
 		Immutability immutability = 2008;
 		DocumentSignature document_signature = 7943;
+		SignedCommits signed_commits = 9972;
+		VerifiedCommits verified_commits = 16208;
 	}
 }
 
@@ -4145,6 +4160,8 @@ message SecurityFeature {
 		CryptographicHash cryptographic_hash = 18167;
 		Immutability immutability = 2008;
 		DocumentSignature document_signature = 7943;
+		SignedCommits signed_commits = 9972;
+		VerifiedCommits verified_commits = 16208;
 		ExplainableResults explainable_results = 6217;
 		RobustnessScore robustness_score = 12988;
 	}
@@ -4214,6 +4231,20 @@ message DocumentSignature {
 
 	string algorithm = 4031;
 	repeated Error errors  = 14433;
+}
+
+// SignedCommits is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+//  SignedCommits cryptographically verify the identity of the commit author.
+// Percentage: Percentage of signed commits. 
+// PercentageLastMonth: Percentage of signed commits in the last 30 days. 
+message SignedCommits {
+	option (resource_type_names) = "SignedCommits";
+	option (resource_type_names) = "Integrity";
+	option (resource_type_names) = "SecurityFeature";
+
+	bool enforced = 3239;
+	float percentage = 11723;
+	float percentage_last_month = 3788;
 }
 
 // SingleSignOn is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4459,6 +4490,19 @@ message Value {
 	string raw = 7659;
 	DataLocation data_location = 18490;
 	optional string parent_id = 18063;
+}
+
+// VerifiedCommits is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+//  VerifiedCommits ensure that cryptographic signatures on commits are successfully validated against trusted keys, confirming author authenticity and code integrity.
+// Percentage: Percentage of verified commits. 
+// PercentageLastMonth: Percentage of verified commits in the last 30 days. 
+message VerifiedCommits {
+	option (resource_type_names) = "VerifiedCommits";
+	option (resource_type_names) = "Integrity";
+	option (resource_type_names) = "SecurityFeature";
+
+	float percentage = 14857;
+	float percentage_last_month = 6431;
 }
 
 // VirtualMachine is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
