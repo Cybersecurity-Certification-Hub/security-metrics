@@ -9,10 +9,10 @@ default applicable = false
 default compliant = false
 
 applicable if {
-	# we are only interested in code repositories
-	repo
+    repo
+    "CodeRepository" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, repo.approvedCommitAuthorEnforced)
+    compare(data.operator, data.target_value, repo.approvedCommitAuthorEnforced)
 }
