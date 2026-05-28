@@ -1,0 +1,20 @@
+# ====== Metadata ======
+id: "REPLACE_ME"
+name: "BackupFrequency"
+description: "This rule assesses whether a [PolicyDocument] includes [Backup] with [p1:frequency] set correctly."
+
+implementationGuidelines:
+  AMOE:
+    question: "What is the minimum required frequency for performing backups of workstations, software, and data?"
+    is_headline_based:  false
+    keywords: [ "Backup" ]
+
+category: "Backup"
+version: "v1"
+comments: "This metric assesses the backup frequency. Measured in days."
+
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 7
