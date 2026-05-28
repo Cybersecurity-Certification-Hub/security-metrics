@@ -1,0 +1,20 @@
+# ====== Metadata ======
+id: "REPLACE_ME"
+name: "BackupRecoveryFrequency"
+description: "This rule assesses whether a [PolicyDocument] includes [Backup] with [p1:recoveryFrequency] set correctly."
+
+implementationGuidelines:
+  AMOE:
+    question: "How frequently must the backup recovery procedures be tested?"
+    is_headline_based: false
+    keywords: ["backup"]
+
+category: "Backup"
+version: "v1"
+comments: "This metric assesses the backup recovery frequency. Measured in months."
+
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 6
