@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: "REPLACE_ME"
+id: "7ef999bd-6d26-4414-9fa0-e25e5cce5c74"
 name: "BackupFrequency"
 description: "This rule assesses whether a [PolicyDocument] includes [Backup] with [p1:frequency] set correctly."
 

@@ -100,6 +100,18 @@
         <Class abbreviatedIRI="cl:SDNFunctionValidationPolicy"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="cl:AssetInventory"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cl:Backup"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cl:CloudFeature"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cl:SecurityIncident"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="cl:SecurityAdvisoryDocument"/>
     </Declaration>
     <Declaration>
@@ -459,6 +471,34 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="cl:PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:AssetInventory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:Backup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:CloudFeature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:SecurityIncident"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -518,6 +558,49 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:isDefined"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:AssetInventory"/>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:reviewFrequency"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:Backup"/>
+        <Class abbreviatedIRI="core:Backup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:Backup"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:frequency"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:Backup"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:recoveryFrequency"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CloudFeature"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:property"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:team"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>

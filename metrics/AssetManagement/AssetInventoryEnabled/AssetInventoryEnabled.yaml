@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: "REPLACE_ME"
+id: "fec3bdbe-b53a-4ffe-a334-2e01a86aa054"
 name: "AssetInventoryEnabled"
 description: "This rule assesses whether a [PolicyDocument] includes [CloudFeature] with [p1:property] set correctly."
 
@@ -9,7 +9,7 @@ implementationGuidelines:
     is_headline_based: false
     keywords: ["Asset management"]
 
-category: "Asset Management"
+category: "AssetManagement"
 version: "v1"
 comments: "This metric assesses if the asset inventory is enabled."
 
