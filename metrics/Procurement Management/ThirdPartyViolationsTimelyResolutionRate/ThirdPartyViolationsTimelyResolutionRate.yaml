@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "b3dac1ca-7618-4380-b928-1a7ddb6c4ae6"
+name: "ThirdPartyViolationsTimelyResolutionRate"
+description: "This rule assesses whether a [Resource] that offers the property [ProcurementManagement.ThirdPartyViolations], has [p1:timelyResolutionRate] set correctly."
+implementationGuidelines:
+  FSC:
+    details: ["- Date and time of identification of the third party violation ", "- Information on (internal) resolution time"]
+category: "Procurement Management"
+version: "1.0"
+comments: "Timely resolution of identified third party violations - Check whether identified violations/discrepancies from third parties are resolved in a timely manner | Selector: FSC (Resource Type) [TargetValue is measured in units] [Previous name: MT-PM-04.9H-2]"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: 1
