@@ -13,5 +13,5 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, enc[_].enforced)
+	compare(data.operator, data.target_value, enc.enforced)
 }
