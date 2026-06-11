@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: 8d5e6fe4-d600-4e5b-aba6-03035d59f329
+id: b31c526a-503d-4240-9526-228ef91a33c9
 name: L3FirewallRestrictedPorts
 description: This rule assesses whether an [NetworkInterface] that offers the property [l3Firewall], has [p1:restrictedPorts] configured such that SSH (port 22) is restricted.
 category: NetworkSecurity
