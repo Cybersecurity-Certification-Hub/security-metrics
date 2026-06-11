@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: eeda50fb-7064-4607-a5bf-7c9d3b54a8d6
+name: VirtualMachinePublicIpDisabled
+description: This rule assesses whether a [VirtualMachine] that offers the property [internetAccessibleEndpoint], has [p1:internetAccessibleEndpoint] configured correctly.
+category: NetworkSecurity
+version: "v1"
+comments: Compute instances (virtual machines) should not have public IP addresses assigned, as direct internet exposure increases the attack surface significantly.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: false
