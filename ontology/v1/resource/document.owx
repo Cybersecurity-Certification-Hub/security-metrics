@@ -100,12 +100,6 @@
         <Class abbreviatedIRI="cl:SDNFunctionValidationPolicy"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cl:AssetInventory"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cl:Backup"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="cl:CloudFeature"/>
     </Declaration>
     <Declaration>
@@ -561,29 +555,21 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="cl:AssetInventory"/>
         <Class abbreviatedIRI="core:AssetInventory"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:reviewFrequency"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="cl:Backup"/>
         <Class abbreviatedIRI="core:Backup"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:Backup"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:frequency"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="cl:Backup"/>
+        <Class abbreviatedIRI="core:Backup"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:recoveryFrequency"/>
             <Datatype abbreviatedIRI="xsd:int"/>
