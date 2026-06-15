@@ -1,0 +1,20 @@
+# ====== Metadata ======
+id: "5df7827e-00b2-4086-af1a-ed4c3b8ce397"
+name: "IncidentReportingTeam"
+description: "This rule assesses whether a [PolicyDocument] includes [SecurityIncident] with [p1:team] set correctly."
+
+implementationGuidelines:
+  AMOE:
+    question: "To whom must cybersecurity incidents affecting the company's services, applications, or IT systems be reported?"
+    is_headline_based:  false
+    keywords: [ "security incident", "team"]
+
+category: "SecurityIncidents"
+version: "v1"
+comments: "This metric assesses if incident reporting team is defined."
+
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: ["Security Commitee"]
