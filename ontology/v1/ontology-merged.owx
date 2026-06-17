@@ -609,6 +609,9 @@
         <Class IRI="/classes/PasswordPolicy"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Policies"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Policy"/>
     </Declaration>
     <Declaration>
@@ -2576,7 +2579,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
-        <Class IRI="/classes/Policy"/>
+        <Class IRI="/classes/Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
@@ -3563,7 +3566,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/LeastPrivilegePolicy"/>
-        <Class IRI="/classes/Policy"/>
+        <Class IRI="/classes/Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/LeastPrivilegePolicy"/>
@@ -4014,7 +4017,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/NeedToKnowPolicy"/>
-        <Class IRI="/classes/Policy"/>
+        <Class IRI="/classes/Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/NeedToKnowPolicy"/>
@@ -4206,6 +4209,10 @@
     <SubClassOf>
         <Class IRI="/classes/PasswordPolicy"/>
         <Class IRI="/classes/CloudResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Policies"/>
+        <Class IRI="/classes/Functionality"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Policy"/>
@@ -4751,7 +4758,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SDNFunctionValidationPolicy"/>
-        <Class IRI="/classes/Policy"/>
+        <Class IRI="/classes/Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SDNFunctionValidationPolicy"/>
@@ -4864,7 +4871,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SeparationOfDutiesPolicy"/>
-        <Class IRI="/classes/Policy"/>
+        <Class IRI="/classes/Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SeparationOfDutiesPolicy"/>
@@ -7112,6 +7119,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/PasswordPolicy</IRI>
         <Literal>PasswordPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Policies</IRI>
+        <Literal>Represents the functional capability of enforcing and managing policies within an application.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Policies</IRI>
+        <Literal>Policies</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
