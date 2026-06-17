@@ -40,6 +40,9 @@
         <Class abbreviatedIRI="core:Policy"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:Policies"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:FileHandle"/>
     </Declaration>
     <Declaration>
@@ -467,7 +470,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:DataConfidentialitySDNPolicy"/>
-        <Class abbreviatedIRI="core:Policy"/>
+        <Class abbreviatedIRI="core:Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:DataConfidentialitySDNPolicy"/>
@@ -478,7 +481,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:LeastPrivilegePolicy"/>
-        <Class abbreviatedIRI="core:Policy"/>
+        <Class abbreviatedIRI="core:Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:LeastPrivilegePolicy"/>
@@ -489,7 +492,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:NeedToKnowPolicy"/>
-        <Class abbreviatedIRI="core:Policy"/>
+        <Class abbreviatedIRI="core:Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:NeedToKnowPolicy"/>
@@ -500,7 +503,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:SeparationOfDutiesPolicy"/>
-        <Class abbreviatedIRI="core:Policy"/>
+        <Class abbreviatedIRI="core:Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:SeparationOfDutiesPolicy"/>
@@ -511,7 +514,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:SDNFunctionValidationPolicy"/>
-        <Class abbreviatedIRI="core:Policy"/>
+        <Class abbreviatedIRI="core:Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:SDNFunctionValidationPolicy"/>
