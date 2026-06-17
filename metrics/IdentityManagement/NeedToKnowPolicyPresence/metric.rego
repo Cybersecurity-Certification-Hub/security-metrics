@@ -2,18 +2,18 @@ package cch.metrics.need_to_know_policy_presence
 
 import data.cch.compare
 import rego.v1
-import input as document
+import input.needToKnowPolicy as needToKnowPolicy
 
 default applicable := false
 default compliant := false
 
 applicable if {
-	document.needToKnowPolicy
-	"PolicyDocument" in document.type
+	needToKnowPolicy
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.needToKnowPolicy.isDefined)
+	compare(data.operator, data.target_value, needToKnowPolicy.isDefined)
 }
 
 message := "The policy document defines a need-to-know policy." if {
