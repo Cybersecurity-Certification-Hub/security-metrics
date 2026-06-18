@@ -40,9 +40,6 @@
         <Class abbreviatedIRI="core:Policy"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:Policies"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:FileHandle"/>
     </Declaration>
     <Declaration>
