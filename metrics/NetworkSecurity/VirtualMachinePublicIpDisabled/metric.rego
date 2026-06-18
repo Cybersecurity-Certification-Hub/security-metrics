@@ -2,7 +2,7 @@ package cch.metrics.virtual_machine_public_ip_disabled
 
 import data.cch.compare
 import rego.v1
-import input as vm
+import input.virtualMachine as vm
 
 default applicable = false
 default compliant = false
