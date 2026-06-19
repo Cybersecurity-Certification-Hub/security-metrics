@@ -2,18 +2,18 @@ package cch.metrics.sdn_function_validation_policy_presence
 
 import data.cch.compare
 import rego.v1
-import input as document
+import input.sdnFunctionValidationPolicy as sdnFunctionValidationPolicy
 
 default applicable := false
 default compliant := false
 
 applicable if {
-	document.sdnFunctionValidationPolicy
-	"PolicyDocument" in document.type
+	sdnFunctionValidationPolicy
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.sdnFunctionValidationPolicy.isDefined)
+	compare(data.operator, data.target_value, sdnFunctionValidationPolicy.isDefined)
 }
 
 message := "The policy document defines a validation and testing policy for SDN functions." if {

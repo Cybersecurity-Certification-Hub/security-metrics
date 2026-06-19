@@ -120,9 +120,6 @@
         <Class IRI="/classes/CipherSuite"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/CloudFeature"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/classes/CloudResource"/>
     </Declaration>
     <Declaration>
@@ -612,6 +609,9 @@
         <Class IRI="/classes/PasswordPolicy"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/Policies"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Policy"/>
     </Declaration>
     <Declaration>
@@ -739,9 +739,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/SecurityFeature"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/classes/SecurityIncident"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/SecurityTraining"/>
@@ -1530,10 +1527,10 @@
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/OneQubitErrorRate"/>
+        <Class IRI="/classes/SecurityIncident"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/properties/reviewFrequency"/>
+        <DataProperty IRI="/classes/OneQubitErrorRate"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/SpamErrorRate"/>
@@ -1554,13 +1551,13 @@
         <DataProperty IRI="/properties/numberOfRequiredReviewers"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/properties/property"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/properties/scope"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/CloudFeature"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/TwoQubitErrorRate"/>
@@ -1570,9 +1567,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/evasionEfficacyLevel"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/properties/frequency"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/contextOfUse"/>
@@ -1602,9 +1596,6 @@
         <DataProperty IRI="/classes/modelStealResilience"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/properties/team"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/classes/hasType"/>
     </Declaration>
     <Declaration>
@@ -1624,9 +1615,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/reviewPercentageLastMonth"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/properties/recoveryFrequency"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/percentage"/>
@@ -1766,13 +1754,6 @@
         <Class IRI="/classes/AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/auditInterval"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/AssetInventory"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/reviewFrequency"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1970,20 +1951,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Backup"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/frequency"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Backup"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/recoveryFrequency"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Backup"/>
         <DataHasValue>
             <DataProperty IRI="/classes/interval"/>
             <Literal>xsd:java.time.Duration</Literal>
@@ -2132,13 +2099,6 @@
         <Class IRI="/classes/CipherSuite"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/sessionCipher"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/CloudFeature"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/property"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -2640,7 +2600,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
-        <Class IRI="/classes/Policy"/>
+        <Class IRI="/classes/Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
@@ -3627,7 +3587,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/LeastPrivilegePolicy"/>
-        <Class IRI="/classes/Policy"/>
+        <Class IRI="/classes/Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/LeastPrivilegePolicy"/>
@@ -4078,7 +4038,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/NeedToKnowPolicy"/>
-        <Class IRI="/classes/Policy"/>
+        <Class IRI="/classes/Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/NeedToKnowPolicy"/>
@@ -4270,6 +4230,10 @@
     <SubClassOf>
         <Class IRI="/classes/PasswordPolicy"/>
         <Class IRI="/classes/CloudResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Policies"/>
+        <Class IRI="/classes/Functionality"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Policy"/>
@@ -4843,7 +4807,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SDNFunctionValidationPolicy"/>
-        <Class IRI="/classes/Policy"/>
+        <Class IRI="/classes/Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SDNFunctionValidationPolicy"/>
@@ -4951,19 +4915,12 @@
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/SecurityIncident"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/team"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/classes/SecurityTraining"/>
         <Class IRI="/classes/Training"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SeparationOfDutiesPolicy"/>
-        <Class IRI="/classes/Policy"/>
+        <Class IRI="/classes/Policies"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SeparationOfDutiesPolicy"/>
@@ -7211,6 +7168,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/PasswordPolicy</IRI>
         <Literal>PasswordPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/Policies</IRI>
+        <Literal>Represents the functional capability of enforcing and managing policies within an application.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/Policies</IRI>
+        <Literal>Policies</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

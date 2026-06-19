@@ -293,6 +293,24 @@
         <Class abbreviatedIRI="core:Vulnerability"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:Policies"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LeastPrivilegePolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:NeedToKnowPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:SeparationOfDutiesPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:SDNFunctionValidationPolicy"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -525,6 +543,65 @@
             <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:RequestForChange"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Policies"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LeastPrivilegePolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LeastPrivilegePolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:NeedToKnowPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:NeedToKnowPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SeparationOfDutiesPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SeparationOfDutiesPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SDNFunctionValidationPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SDNFunctionValidationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:RequestForChange"/>
@@ -2987,5 +3064,65 @@
     <AbbreviatedIRI>core:contextIsChecked</AbbreviatedIRI>
     <Literal>Check additional information, e.g. which device is used or the time of the login</Literal>
 </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:Policies</AbbreviatedIRI>
+        <Literal>Represents the functional capability of enforcing and managing policies within an application.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:Policies</AbbreviatedIRI>
+        <Literal>Policies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:DataConfidentialitySDNPolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing data confidentiality requirements for Software Defined Networking (SDN). isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:DataConfidentialitySDNPolicy</AbbreviatedIRI>
+        <Literal>DataConfidentialitySDNPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:LeastPrivilegePolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing least privilege requirements. isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:LeastPrivilegePolicy</AbbreviatedIRI>
+        <Literal>LeastPrivilegePolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:NeedToKnowPolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing need-to-know access control requirements. isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:NeedToKnowPolicy</AbbreviatedIRI>
+        <Literal>NeedToKnowPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:SeparationOfDutiesPolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing separation of duties requirements. isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:SeparationOfDutiesPolicy</AbbreviatedIRI>
+        <Literal>SeparationOfDutiesPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:SDNFunctionValidationPolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing validation and testing requirements for SDN functions. isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:SDNFunctionValidationPolicy</AbbreviatedIRI>
+        <Literal>SDNFunctionValidationPolicy</Literal>
+    </AnnotationAssertion>
 </Ontology>
 <!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->

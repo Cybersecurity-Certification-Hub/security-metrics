@@ -2,18 +2,18 @@ package cch.metrics.separation_of_duties_policy_presence
 
 import data.cch.compare
 import rego.v1
-import input as document
+import input.separationOfDutiesPolicy as separationOfDutiesPolicy
 
 default applicable := false
 default compliant := false
 
 applicable if {
-	document.separationOfDutiesPolicy
-	"PolicyDocument" in document.type
+	separationOfDutiesPolicy
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.separationOfDutiesPolicy.isDefined)
+	compare(data.operator, data.target_value, separationOfDutiesPolicy.isDefined)
 }
 
 message := "The policy document defines a separation of duties policy." if {
