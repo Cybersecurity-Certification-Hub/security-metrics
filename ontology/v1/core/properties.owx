@@ -136,6 +136,21 @@
         <DataProperty abbreviatedIRI="res:isDefined"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:reviewFrequency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:frequency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:recoveryFrequency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:property"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:team"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:endColumn"/>
     </Declaration>
     <Declaration>
@@ -644,6 +659,31 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:isDefined</AbbreviatedIRI>
         <Literal>isDefined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:reviewFrequency</AbbreviatedIRI>
+        <Literal>reviewFrequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:frequency</AbbreviatedIRI>
+        <Literal>frequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:recoveryFrequency</AbbreviatedIRI>
+        <Literal>recoveryFrequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:property</AbbreviatedIRI>
+        <Literal>property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:team</AbbreviatedIRI>
+        <Literal>team</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
