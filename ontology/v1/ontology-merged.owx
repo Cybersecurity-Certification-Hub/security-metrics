@@ -120,9 +120,6 @@
         <Class IRI="/classes/CipherSuite"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/CloudFeature"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/classes/CloudResource"/>
     </Declaration>
     <Declaration>
@@ -742,9 +739,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/SecurityFeature"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/classes/SecurityIncident"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/SecurityTraining"/>
@@ -1533,10 +1527,10 @@
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/OneQubitErrorRate"/>
+        <Class IRI="/classes/SecurityIncident"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/properties/reviewFrequency"/>
+        <DataProperty IRI="/classes/OneQubitErrorRate"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/SpamErrorRate"/>
@@ -1557,13 +1551,13 @@
         <DataProperty IRI="/properties/numberOfRequiredReviewers"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/properties/property"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/properties/scope"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/CloudFeature"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/TwoQubitErrorRate"/>
@@ -1573,9 +1567,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/evasionEfficacyLevel"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/properties/frequency"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/contextOfUse"/>
@@ -1605,9 +1596,6 @@
         <DataProperty IRI="/classes/modelStealResilience"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/properties/team"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/classes/hasType"/>
     </Declaration>
     <Declaration>
@@ -1627,9 +1615,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/reviewPercentageLastMonth"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/properties/recoveryFrequency"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/percentage"/>
@@ -1769,13 +1754,6 @@
         <Class IRI="/classes/AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/auditInterval"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/AssetInventory"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/reviewFrequency"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1973,20 +1951,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Backup"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/frequency"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Backup"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/recoveryFrequency"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Backup"/>
         <DataHasValue>
             <DataProperty IRI="/classes/interval"/>
             <Literal>xsd:java.time.Duration</Literal>
@@ -2135,13 +2099,6 @@
         <Class IRI="/classes/CipherSuite"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/sessionCipher"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/CloudFeature"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/property"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -4956,13 +4913,6 @@
     <SubClassOf>
         <Class IRI="/classes/SecurityFeature"/>
         <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/SecurityIncident"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/team"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SecurityTraining"/>
