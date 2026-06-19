@@ -222,6 +222,7 @@ message AssetInventory {
 	int32 audit_interval = 15088;
 	// Percentage of completed reviews and updates of asset inventory entries.
 	float completed_review_percentage = 15931;
+	int32 review_frequency = 12717;
 	string status = 11933;
 	string storage_facility = 2637;
 	string type = 11720;
@@ -389,8 +390,10 @@ message Backup {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 2815;
+	int32 frequency = 9581;
 	// The interval refers to the update interval in days.
 	google.protobuf.Duration interval = 7186;
+	int32 recovery_frequency = 8809;
 	google.protobuf.Duration retention_period = 6795;
 	optional string storage_id = 17051;
 	TransportEncryption transport_encryption = 2398;
@@ -563,6 +566,13 @@ message CipherSuite {
 	// naming schema: AES-128-GCM
 	string session_cipher = 5742;
 	repeated Cipher ciphers  = 8372;
+}
+
+// CloudFeature is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message CloudFeature {
+	option (resource_type_names) = "CloudFeature";
+
+	string property = 15213;
 }
 
 // Infrastructure is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -3361,6 +3371,9 @@ message PolicyDocument {
 	string name = 2052 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5038;
+	AssetInventory asset_inventory = 16496;
+	Backup backup = 16402;
+	CloudFeature cloud_feature = 1878;
 	repeated CryptographicHash cryptographic_hashs  = 12896;
 	DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 4864;
 	DataLocation data_location = 11474;
@@ -4120,6 +4133,13 @@ message SecurityFeature {
 		ExplainableResults explainable_results = 6217;
 		RobustnessScore robustness_score = 12988;
 	}
+}
+
+// SecurityIncident is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message SecurityIncident {
+	option (resource_type_names) = "SecurityIncident";
+
+	string team = 10796;
 }
 
 // SecurityTraining is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.

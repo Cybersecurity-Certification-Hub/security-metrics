@@ -120,6 +120,9 @@
         <Class IRI="/classes/CipherSuite"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/CloudFeature"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/CloudResource"/>
     </Declaration>
     <Declaration>
@@ -741,6 +744,9 @@
         <Class IRI="/classes/SecurityFeature"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/SecurityIncident"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/SecurityTraining"/>
     </Declaration>
     <Declaration>
@@ -1005,6 +1011,9 @@
         <DataProperty IRI="/classes/format"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/frequency"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/geo"/>
     </Declaration>
     <Declaration>
@@ -1107,6 +1116,9 @@
         <DataProperty IRI="/classes/programmingVersion"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/property"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/protocol"/>
     </Declaration>
     <Declaration>
@@ -1122,6 +1134,9 @@
         <DataProperty IRI="/classes/raw"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/recoveryFrequency"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/reqBody"/>
     </Declaration>
     <Declaration>
@@ -1129,6 +1144,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/retentionPeriod"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/reviewFrequency"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/robustness"/>
@@ -1168,6 +1186,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/startLine"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/team"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/timeWindowSeconds"/>
@@ -1515,6 +1536,9 @@
         <DataProperty IRI="/classes/OneQubitErrorRate"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/reviewFrequency"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/SpamErrorRate"/>
     </Declaration>
     <Declaration>
@@ -1533,6 +1557,9 @@
         <DataProperty IRI="/properties/numberOfRequiredReviewers"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/property"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/properties/scope"/>
     </Declaration>
     <Declaration>
@@ -1546,6 +1573,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/evasionEfficacyLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/frequency"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/contextOfUse"/>
@@ -1575,6 +1605,9 @@
         <DataProperty IRI="/classes/modelStealResilience"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/team"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/classes/hasType"/>
     </Declaration>
     <Declaration>
@@ -1594,6 +1627,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/reviewPercentageLastMonth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/recoveryFrequency"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/percentage"/>
@@ -1733,6 +1769,13 @@
         <Class IRI="/classes/AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/auditInterval"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/reviewFrequency"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1930,6 +1973,20 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Backup"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/frequency"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Backup"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/recoveryFrequency"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Backup"/>
         <DataHasValue>
             <DataProperty IRI="/classes/interval"/>
             <Literal>xsd:java.time.Duration</Literal>
@@ -2078,6 +2135,13 @@
         <Class IRI="/classes/CipherSuite"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/sessionCipher"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CloudFeature"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/property"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -4240,6 +4304,27 @@
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/AssetInventory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/Backup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/CloudFeature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -4262,6 +4347,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/SDNFunctionValidationPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/SecurityIncident"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4864,6 +4956,13 @@
     <SubClassOf>
         <Class IRI="/classes/SecurityFeature"/>
         <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/team"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SecurityTraining"/>
@@ -7817,6 +7916,11 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/frequency</IRI>
+        <Literal>frequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/geo</IRI>
         <Literal>geo</Literal>
     </AnnotationAssertion>
@@ -8042,6 +8146,11 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/property</IRI>
+        <Literal>property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/protects</IRI>
         <Literal>protects</Literal>
     </AnnotationAssertion>
@@ -8077,6 +8186,11 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/recoveryFrequency</IRI>
+        <Literal>recoveryFrequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/reqBody</IRI>
         <Literal>reqBody</Literal>
     </AnnotationAssertion>
@@ -8094,6 +8208,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/retentionPeriod</IRI>
         <Literal>retentionPeriod</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/reviewFrequency</IRI>
+        <Literal>reviewFrequency</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8189,6 +8308,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/target</IRI>
         <Literal>target</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/team</IRI>
+        <Literal>team</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
