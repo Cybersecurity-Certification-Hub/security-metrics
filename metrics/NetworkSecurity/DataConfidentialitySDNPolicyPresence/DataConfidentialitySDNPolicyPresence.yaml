@@ -9,7 +9,7 @@ implementationGuidelines:
     is_headline_based: true
     keywords: []
 
-category: "Software Defined Networking"
+category: "NetworkSecurity"
 version: "v1"
 comments: "This metric assesses if Data Confidentiality in SDN is described. Measured in boolean."
 
