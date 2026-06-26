@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	document.backup
+	document.backup != {}
 	"PolicyDocument" in document.type
 }
 

@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	separationOfDutiesPolicy
+	separationOfDutiesPolicy != {}
 	"PolicyDocument" in input.type
 }
 
