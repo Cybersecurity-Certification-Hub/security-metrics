@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	document.securityIncident
+	document.securityIncident != {}
 	"PolicyDocument" in document.type
 }
 

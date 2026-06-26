@@ -9,8 +9,9 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    "PolicyDocument" in input.type
-    ai.type == "digital"
+  ai != {}
+  "PolicyDocument" in input.type
+  ai.type == "digital"
 }
 
 compliant if {

@@ -8,6 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
+	document != {}
 	document.assetInventory
 	"PolicyDocument" in document.type
 }

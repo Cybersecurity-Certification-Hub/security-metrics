@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	governance
+	governance != {}
 	"PolicyDocument" in input.type
 }
 

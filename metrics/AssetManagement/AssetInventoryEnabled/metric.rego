@@ -8,6 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
+	document != {}
 	document.cloudFeature
 	"PolicyDocument" in document.type
 }
