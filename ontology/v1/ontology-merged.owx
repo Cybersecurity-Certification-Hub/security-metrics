@@ -804,6 +804,9 @@
         <Class IRI="/classes/Value"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/VerifiedCommits"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/VirtualMachine"/>
     </Declaration>
     <Declaration>
@@ -826,6 +829,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ZoneRedundancy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/core/security/SoftwareAttestation"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/basedOn"/>
@@ -895,6 +901,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/properties/runsOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/properties/scope"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/properties/serviceOf"/>
@@ -1293,6 +1302,12 @@
         <DataProperty IRI="/properties/path"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/percentage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/percentageLastMonth"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/phoneNumber"/>
     </Declaration>
     <Declaration>
@@ -1551,9 +1566,6 @@
         <DataProperty IRI="/properties/numberOfRequiredReviewers"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/properties/scope"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
     </Declaration>
     <Declaration>
@@ -1590,9 +1602,6 @@
         <Datatype IRI="/datatypes/listCpgNodes"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/properties/percentageLastMonth"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/modelStealResilience"/>
     </Declaration>
     <Declaration>
@@ -1611,13 +1620,7 @@
         <DataProperty IRI="/properties/purpose"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/VerifiedCommits"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/properties/reviewPercentageLastMonth"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/properties/percentage"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Specification"/>
@@ -5334,6 +5337,10 @@
     <SubClassOf>
         <Class IRI="/classes/ZoneRedundancy"/>
         <Class IRI="/classes/Redundancy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/core/security/SoftwareAttestation"/>
+        <Class IRI="/classes/Attestation"/>
     </SubClassOf>
     <ClassAssertion>
         <Class IRI="/classes/CICDService"/>

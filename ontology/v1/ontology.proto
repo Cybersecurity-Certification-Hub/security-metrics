@@ -261,6 +261,7 @@ message Attestation {
 	oneof type {
 		LocalAttestation local_attestation = 4296;
 		RemoteAttestation remote_attestation = 13640;
+		SoftwareAttestation software_attestation = 2415;
 	}
 }
 
@@ -2213,6 +2214,7 @@ message Integrity {
 	oneof type {
 		LocalAttestation local_attestation = 4296;
 		RemoteAttestation remote_attestation = 13640;
+		SoftwareAttestation software_attestation = 2415;
 		AutomaticUpdates automatic_updates = 9990;
 		CryptographicHash cryptographic_hash = 18167;
 		Immutability immutability = 2008;
@@ -4121,6 +4123,7 @@ message SecurityFeature {
 		EncryptionInUse encryption_in_use = 15775;
 		LocalAttestation local_attestation = 4296;
 		RemoteAttestation remote_attestation = 13640;
+		SoftwareAttestation software_attestation = 2415;
 		AutomaticUpdates automatic_updates = 9990;
 		CryptographicHash cryptographic_hash = 18167;
 		Immutability immutability = 2008;
@@ -4627,4 +4630,14 @@ message ZoneRedundancy {
 	option (resource_type_names) = "SecurityFeature";
 
 	repeated GeoLocation geo_locations  = 955;
+}
+
+// SoftwareAttestation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message SoftwareAttestation {
+	option (resource_type_names) = "SoftwareAttestation";
+	option (resource_type_names) = "Attestation";
+	option (resource_type_names) = "Integrity";
+	option (resource_type_names) = "SecurityFeature";
+
+	bool enabled = 5129;
 }
