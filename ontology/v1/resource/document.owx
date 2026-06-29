@@ -88,6 +88,9 @@
         <Class abbreviatedIRI="cl:SecurityAdvisoryDocument"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="cl:SecurityIncident"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="cl:ServiceMetadataDocument"/>
     </Declaration>
     <Declaration>
