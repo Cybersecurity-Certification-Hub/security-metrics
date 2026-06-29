@@ -759,6 +759,9 @@
         <Class IRI="/classes/SingleSignOn"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/SoftwareAttestation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/SoftwareResource"/>
     </Declaration>
     <Declaration>
@@ -829,9 +832,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ZoneRedundancy"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/core/security/SoftwareAttestation"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/basedOn"/>
@@ -4991,6 +4991,10 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/SoftwareAttestation"/>
+        <Class IRI="/classes/Attestation"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/SoftwareResource"/>
         <Class IRI="/classes/Resource"/>
     </SubClassOf>
@@ -5013,6 +5017,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/Module"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SoftwareResource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/hasMultiple"/>
+            <Class IRI="/classes/SoftwareAttestation"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -5337,10 +5348,6 @@
     <SubClassOf>
         <Class IRI="/classes/ZoneRedundancy"/>
         <Class IRI="/classes/Redundancy"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/core/security/SoftwareAttestation"/>
-        <Class IRI="/classes/Attestation"/>
     </SubClassOf>
     <ClassAssertion>
         <Class IRI="/classes/CICDService"/>

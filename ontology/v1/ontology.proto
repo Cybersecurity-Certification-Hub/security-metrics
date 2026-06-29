@@ -116,6 +116,7 @@ message Agnostic {
 	optional string code_repository_id = 5545;
 	repeated Functionality functionalities  = 4188;
 	optional string parent_id = 746;
+	repeated SoftwareAttestation software_attestations  = 12742;
 }
 
 // Allocate is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -186,6 +187,7 @@ message Application {
 	repeated Functionality functionalities  = 6572;
 	repeated string library_ids  = 11626;
 	optional string parent_id = 3984;
+	repeated SoftwareAttestation software_attestations  = 16475;
 }
 
 // ApplicationLogging is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1153,6 +1155,7 @@ message Darwin {
 	optional string code_repository_id = 3877;
 	repeated Functionality functionalities  = 12307;
 	optional string parent_id = 1392;
+	repeated SoftwareAttestation software_attestations  = 14509;
 }
 
 // Data is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -2440,6 +2443,7 @@ message Library {
 	repeated Functionality functionalities  = 16350;
 	repeated string library_ids  = 7387;
 	optional string parent_id = 18076;
+	repeated SoftwareAttestation software_attestations  = 17085;
 	repeated Vulnerability vulnerabilities  = 17577;
 }
 
@@ -3263,6 +3267,7 @@ message POSIX {
 	optional string code_repository_id = 13099;
 	repeated Functionality functionalities  = 2402;
 	optional string parent_id = 15543;
+	repeated SoftwareAttestation software_attestations  = 4834;
 }
 
 // Package is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3284,6 +3289,7 @@ message Package {
 	optional string code_repository_id = 17202;
 	repeated Functionality functionalities  = 8054;
 	optional string parent_id = 18906;
+	repeated SoftwareAttestation software_attestations  = 10448;
 }
 
 // Padding is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4222,6 +4228,16 @@ message SingleSignOn {
 	int32 rotation_interval = 9185;
 }
 
+// SoftwareAttestation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message SoftwareAttestation {
+	option (resource_type_names) = "SoftwareAttestation";
+	option (resource_type_names) = "Attestation";
+	option (resource_type_names) = "Integrity";
+	option (resource_type_names) = "SecurityFeature";
+
+	bool enabled = 5129;
+}
+
 // Code is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Code {
 
@@ -4255,6 +4271,7 @@ message SourceCodeFile {
 	optional string code_repository_id = 8294;
 	repeated Functionality functionalities  = 3267;
 	optional string parent_id = 12296;
+	repeated SoftwareAttestation software_attestations  = 11190;
 }
 
 // Storage is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -4596,6 +4613,7 @@ message Win32 {
 	optional string code_repository_id = 16090;
 	repeated Functionality functionalities  = 18689;
 	optional string parent_id = 10020;
+	repeated SoftwareAttestation software_attestations  = 10723;
 }
 
 // Workflow is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4630,14 +4648,4 @@ message ZoneRedundancy {
 	option (resource_type_names) = "SecurityFeature";
 
 	repeated GeoLocation geo_locations  = 955;
-}
-
-// SoftwareAttestation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message SoftwareAttestation {
-	option (resource_type_names) = "SoftwareAttestation";
-	option (resource_type_names) = "Attestation";
-	option (resource_type_names) = "Integrity";
-	option (resource_type_names) = "SecurityFeature";
-
-	bool enabled = 5129;
 }
