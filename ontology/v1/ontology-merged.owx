@@ -741,6 +741,9 @@
         <Class IRI="/classes/SecurityFeature"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/SecurityIncident"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/SecurityTraining"/>
     </Declaration>
     <Declaration>
@@ -1525,9 +1528,6 @@
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/classes/SecurityIncident"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/OneQubitErrorRate"/>
