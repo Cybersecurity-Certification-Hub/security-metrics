@@ -17,4 +17,4 @@ comments: "This metric assesses if incident reporting team is defined."
 configuration:
   p1:
     operator: "isIn"
-    targetValue: ["Security Commitee"]
+    targetValue: ["Security Committee"]

@@ -1854,6 +1854,7 @@ message Functionality {
 		RequestForChange request_for_change = 5340;
 		SchemaValidation schema_validation = 16331;
 		SecurityAdvisoryFeed security_advisory_feed = 13903;
+		SecurityIncident security_incident = 5083;
 		Time time = 16225;
 		Vulnerability vulnerability = 5095;
 	}
@@ -4144,7 +4145,9 @@ message SecurityFeature {
 // SecurityIncident is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message SecurityIncident {
 	option (resource_type_names) = "SecurityIncident";
+	option (resource_type_names) = "Functionality";
 
+	repeated string team = 3344;
 }
 
 // SecurityTraining is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.

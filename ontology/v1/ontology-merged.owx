@@ -741,6 +741,9 @@
         <Class IRI="/classes/SecurityFeature"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/SecurityIncident"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/SecurityTraining"/>
     </Declaration>
     <Declaration>
@@ -1542,9 +1545,6 @@
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/SecurityIncident"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/OneQubitErrorRate"/>
     </Declaration>
     <Declaration>
@@ -1603,6 +1603,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/modelStealResilience"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/team"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/hasType"/>
@@ -4916,6 +4919,17 @@
     <SubClassOf>
         <Class IRI="/classes/SecurityFeature"/>
         <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityIncident"/>
+        <Class IRI="/classes/Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/team"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SecurityTraining"/>

@@ -290,6 +290,9 @@
         <Class abbreviatedIRI="core:SecurityAdvisoryFeed"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:SecurityIncident"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:Vulnerability"/>
     </Declaration>
     <Declaration>
@@ -1675,6 +1678,17 @@
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="core:SecurityAdvisoryDocument"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityIncident"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:team"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Vulnerability"/>
