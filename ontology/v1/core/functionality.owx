@@ -314,6 +314,9 @@
         <Class abbreviatedIRI="core:SDNFunctionValidationPolicy"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:AccessControlTypePolicy"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -604,6 +607,17 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:isDefined"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AccessControlTypePolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AccessControlTypePolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:authorizationTypes"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
