@@ -46,6 +46,15 @@ message ABAC {
 
 }
 
+// AccessControlTypePolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message AccessControlTypePolicy {
+	option (resource_type_names) = "AccessControlTypePolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	string authorization_types = 2672;
+}
+
 // AccessRestriction is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message AccessRestriction {
 
@@ -1844,6 +1853,7 @@ message Functionality {
 		GetSecret get_secret = 2809;
 		Output output = 7223;
 		Padding padding = 9245;
+		AccessControlTypePolicy access_control_type_policy = 13002;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
 		LeastPrivilegePolicy least_privilege_policy = 15025;
 		NeedToKnowPolicy need_to_know_policy = 17201;
@@ -3344,6 +3354,7 @@ message PasswordPolicy {
 message Policies {
 
 	oneof type {
+		AccessControlTypePolicy access_control_type_policy = 13002;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
 		LeastPrivilegePolicy least_privilege_policy = 15025;
 		NeedToKnowPolicy need_to_know_policy = 17201;
