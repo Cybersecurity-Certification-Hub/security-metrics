@@ -6,16 +6,16 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://ontology.cybersecuritycertcluster.eu/core/security">
-     <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/core/security#"/>
-     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-     <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
-     <Prefix name="cl" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
-     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
-     <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
-     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="" IRI="https://ontology.cybersecuritycertcluster.eu/core/security#"/>
+    <Prefix name="cl" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+    <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="core" IRI="https://ontology.cybersecuritycertcluster.eu/classes/"/>
+    <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
         <Class abbreviatedIRI="core:ABAC"/>
     </Declaration>
@@ -30,6 +30,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:ApplicationLog"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:AssetInventory"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
@@ -60,6 +63,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:CertificateBasedAuthentication"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:CodeSignoff"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:Confidentiality"/>
@@ -143,6 +149,9 @@
         <Class abbreviatedIRI="core:RBAC"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:RateLimiting"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:Redundancy"/>
     </Declaration>
     <Declaration>
@@ -164,6 +173,9 @@
         <Class abbreviatedIRI="core:Signature"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:SignedCommits"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:SingleSignOn"/>
     </Declaration>
     <Declaration>
@@ -179,6 +191,9 @@
         <Class abbreviatedIRI="core:ZoneRedundancy"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:SoftwareAttestation"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="core:offersInterface"/>
     </Declaration>
     <Declaration>
@@ -188,10 +203,16 @@
         <ObjectProperty abbreviatedIRI="prop:offers"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="core:allRequiredInformationRecorded"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="core:apiHitsPerMonth"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:broadAssignments"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:completedReviewPercentage"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="core:contextIsChecked"/>
@@ -233,9 +254,6 @@
         <DataProperty abbreviatedIRI="core:securityOnly"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="core:status"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="prop:activated"/>
     </Declaration>
     <Declaration>
@@ -243,9 +261,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:enabled"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="prop:enforced"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:inbound"/>
@@ -260,6 +275,9 @@
         <DataProperty abbreviatedIRI="prop:restrictedPorts"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:storageFacility"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:tlsSignatureAlgorithm"/>
     </Declaration>
     <Declaration>
@@ -269,15 +287,119 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:de.fraunhofer.aisec.cpg.graph.Node"/>
-    </Declaration>
-    <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionInUse"/>
-        <Class abbreviatedIRI="core:Confidentiality"/>
-    </SubClassOf>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:failedAuthenticationAttempts"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LocalEntryPoint"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:auditInterval"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:enforced"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:scope"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:logLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:maxRequests"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:ObjectStorageRequest"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LoadSymbol"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="core:basedOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="core:operatesOn"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Secret"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Storage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:has"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LoggingService"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="core:timeWindowSeconds"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:to"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Memory"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:percentageLastMonth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:status"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Cipher"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:MemoryOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Error"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:BlockStorage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:type"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Main"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:CipherSuite"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LoadLibrary"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:updateDuration"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:VerifiedCommits"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:updateInterval"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LibraryEntryPoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:usedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Token"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:percentage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Operation"/>
+    </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="core:ABAC"/>
         <Class abbreviatedIRI="core:Authorization"/>
@@ -302,13 +424,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:EncryptionInUse"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:enabled"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:AnomalyDetection"/>
         <ObjectHasValue>
             <ObjectProperty abbreviatedIRI="prop:scope"/>
@@ -327,33 +442,64 @@
         <Class abbreviatedIRI="core:Logging"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:DiskEncryption"/>
-        <Class abbreviatedIRI="core:AtRestEncryption"/>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <Class abbreviatedIRI="core:Auditing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:DiskEncryption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:usedBy"/>
-            <Class abbreviatedIRI="core:BlockStorage"/>
-        </ObjectSomeValuesFrom>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:allRequiredInformationRecorded"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:Encryption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:basedOn"/>
-            <Class abbreviatedIRI="core:Cipher"/>
-        </ObjectSomeValuesFrom>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:completedReviewPercentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:Encryption"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="core:Secret"/>
-        </ObjectSomeValuesFrom>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:auditInterval"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:Encryption"/>
-        <Class abbreviatedIRI="core:Confidentiality"/>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:status"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:storageFacility"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:updateDuration"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:updateInterval"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
@@ -404,6 +550,13 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:contextIsChecked"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Authenticity"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:failedAuthenticationAttempts"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -501,6 +654,31 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:CodeSignoff"/>
+        <Class abbreviatedIRI="core:Auditing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CodeSignoff"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:enforced"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CodeSignoff"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CodeSignoff"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:Confidentiality"/>
         <Class abbreviatedIRI="core:SecurityFeature"/>
     </SubClassOf>
@@ -529,6 +707,35 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:DDosProtection"/>
         <Class abbreviatedIRI="core:Availability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DiskEncryption"/>
+        <Class abbreviatedIRI="core:AtRestEncryption"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DiskEncryption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:usedBy"/>
+            <Class abbreviatedIRI="core:BlockStorage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Encryption"/>
+        <Class abbreviatedIRI="core:Confidentiality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Encryption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:basedOn"/>
+            <Class abbreviatedIRI="core:Cipher"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Encryption"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:Secret"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:EncryptionInUse"/>
@@ -613,48 +820,6 @@
         <Class abbreviatedIRI="core:Firewall"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:Main"/>
-        <Class abbreviatedIRI="core:LocalEntryPoint"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:MemoryOperation"/>
-        <Class abbreviatedIRI="core:Operation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:LibraryEntryPoint"/>
-        <Class abbreviatedIRI="core:LocalEntryPoint"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:LoadLibrary"/>
-        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:LoadSymbol"/>
-        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Logging"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:name"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:MemoryOperation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
-            <Class abbreviatedIRI="core:Memory"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:ObjectStorageRequest"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
-            <Class abbreviatedIRI="core:Storage"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    
-    <SubClassOf>
         <Class abbreviatedIRI="core:L3Firewall"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:enabled"/>
@@ -676,6 +841,18 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:LibraryEntryPoint"/>
+        <Class abbreviatedIRI="core:LocalEntryPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LoadLibrary"/>
+        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LoadSymbol"/>
+        <Class abbreviatedIRI="core:DynamicLoadingOperation"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:LocalAttestation"/>
         <Class abbreviatedIRI="core:Attestation"/>
     </SubClassOf>
@@ -693,6 +870,13 @@
             <ObjectProperty abbreviatedIRI="prop:to"/>
             <Class abbreviatedIRI="core:LoggingService"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Logging"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:logLevel"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Logging"/>
@@ -721,6 +905,10 @@
             <DataProperty abbreviatedIRI="core:retentionPeriod"/>
             <Literal>xsd:java.time.Duration</Literal>
         </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Main"/>
+        <Class abbreviatedIRI="core:LocalEntryPoint"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:MalwareProtection"/>
@@ -759,6 +947,17 @@
         <Class abbreviatedIRI="core:AtRestEncryption"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:MemoryOperation"/>
+        <Class abbreviatedIRI="core:Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:MemoryOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
+            <Class abbreviatedIRI="core:Memory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:MultiFactorAuthentiation"/>
         <Class abbreviatedIRI="core:Authenticity"/>
     </SubClassOf>
@@ -787,6 +986,13 @@
             <DataProperty abbreviatedIRI="prop:activated"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ObjectStorageRequest"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
+            <Class abbreviatedIRI="core:Storage"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:PasswordBasedAuthentication"/>
@@ -824,13 +1030,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:RateLimiting"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:enabled"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:RateLimiting"/>
-        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:maxRequests"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
@@ -842,7 +1041,13 @@
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
-    
+    <SubClassOf>
+        <Class abbreviatedIRI="core:RateLimiting"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:enabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:Redundancy"/>
         <Class abbreviatedIRI="core:Availability"/>
@@ -872,7 +1077,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:RemoteAttestation"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:status"/>
+            <DataProperty abbreviatedIRI="prop:status"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -904,6 +1109,31 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:algorithm"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SignedCommits"/>
+        <Class abbreviatedIRI="core:Integrity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SignedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:enforced"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SignedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SignedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -975,6 +1205,24 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:VerifiedCommits"/>
+        <Class abbreviatedIRI="core:Integrity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:VerifiedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:VerifiedCommits"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:percentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:WebApplicationFirewall"/>
         <Class abbreviatedIRI="core:Firewall"/>
     </SubClassOf>
@@ -989,11 +1237,10 @@
         <Class abbreviatedIRI="core:ZoneRedundancy"/>
         <Class abbreviatedIRI="core:Redundancy"/>
     </SubClassOf>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
-        <Literal xml:lang="english">xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
-    </AnnotationAssertion>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SoftwareAttestation"/>
+        <Class abbreviatedIRI="core:Attestation"/>
+    </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:listString</AbbreviatedIRI>
@@ -1038,6 +1285,41 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:ApplicationLog</AbbreviatedIRI>
         <Literal>ApplicationLogging</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
+        <Literal>AuditInterval contains the frequency of asset inventory audits in month.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
+        <Literal>Class representing the inventory of assets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
+        <Literal>Status contains the status of the asset (e.g., active, inactive).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
+        <Literal>StorageFacility contains the storage facility type of the asset (e.g., central, decentralized).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
+        <Literal>Type: contains the type of the asset, e.g., digital</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
+        <Literal>UpdateInterval contains the frequency of asset inventory updates in month.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
+        <Literal>AssetInventory</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1098,6 +1380,26 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:CertificateBasedAuthentication</AbbreviatedIRI>
         <Literal xml:lang="english">CertificateBasedAuthentication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:CodeSignoff</AbbreviatedIRI>
+        <Literal>Percentage: Percentage of commits with &quot;Signed-off-by&quot; lines. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:CodeSignoff</AbbreviatedIRI>
+        <Literal>PercentageLastMonth: Percentage of commits with &quot;Signed-off-by&quot; lines in the last 30 days. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:CodeSignoff</AbbreviatedIRI>
+        <Literal>Signoffs enable users to affirm that a commit complies with the rules and licensing governing a repository</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:CodeSignoff</AbbreviatedIRI>
+        <Literal>CodeSignoff</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1195,6 +1497,11 @@
         <Literal>LocalRedundancy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:Logging</AbbreviatedIRI>
+        <Literal>enum:logLevel=DEBUG,INFO,WARN,ERROR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:Logging</AbbreviatedIRI>
         <Literal xml:lang="english">Logging</Literal>
@@ -1275,6 +1582,26 @@
         <Literal>DocumentSignature</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:SignedCommits</AbbreviatedIRI>
+        <Literal> SignedCommits cryptographically verify the identity of the commit author.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:SignedCommits</AbbreviatedIRI>
+        <Literal>Percentage: Percentage of signed commits. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:SignedCommits</AbbreviatedIRI>
+        <Literal>PercentageLastMonth: Percentage of signed commits in the last 30 days. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:SignedCommits</AbbreviatedIRI>
+        <Literal>SignedCommits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:SingleSignOn</AbbreviatedIRI>
         <Literal xml:lang="english">SingleSignOn</Literal>
@@ -1296,6 +1623,26 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:VerifiedCommits</AbbreviatedIRI>
+        <Literal> VerifiedCommits ensure that cryptographic signatures on commits are successfully validated against trusted keys, confirming author authenticity and code integrity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:VerifiedCommits</AbbreviatedIRI>
+        <Literal>Percentage: Percentage of verified commits. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:VerifiedCommits</AbbreviatedIRI>
+        <Literal>PercentageLastMonth: Percentage of verified commits in the last 30 days. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:VerifiedCommits</AbbreviatedIRI>
+        <Literal>VerifiedCommits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:WebApplicationFirewall</AbbreviatedIRI>
         <Literal>A WAF is a L7 firewall that includes L3 capabilities</Literal>
     </AnnotationAssertion>
@@ -1308,6 +1655,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:ZoneRedundancy</AbbreviatedIRI>
         <Literal>ZoneRedundancy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:allRequiredInformationRecorded</AbbreviatedIRI>
+        <Literal>Indicates whether all required information for an asset inventory entry has been recorded.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:allRequiredInformationRecorded</AbbreviatedIRI>
+        <Literal>allRequiredInformationRecorded</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1346,13 +1703,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:calls</AbbreviatedIRI>
-        <Literal>calls</Literal>
+        <AbbreviatedIRI>core:code</AbbreviatedIRI>
+        <Literal>code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:completedReviewPercentage</AbbreviatedIRI>
+        <Literal>Percentage of completed reviews and updates of asset inventory entries.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:code</AbbreviatedIRI>
-        <Literal>code</Literal>
+        <AbbreviatedIRI>core:completedReviewPercentage</AbbreviatedIRI>
+        <Literal>completedReviewPercentage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1706,23 +2068,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:status</AbbreviatedIRI>
-        <Literal>status</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:target</AbbreviatedIRI>
         <Literal>target</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:tlsSignatureAlgorithm</AbbreviatedIRI>
-        <Literal>tlsSignatureAlgorithm</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>prop:tlsSignatureAlgorithm</AbbreviatedIRI>
-        <Literal>tlsSignatureAlgorithm: e.g., rsa_pss_rsae_sha256/384/512, ecdsa_secp256r1_sha256, ed25519</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1735,9 +2082,22 @@
         <Literal>zone</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:tlsSignatureAlgorithm</AbbreviatedIRI>
+        <Literal>tlsSignatureAlgorithm: e.g., rsa_pss_rsae_sha256/384/512, ecdsa_secp256r1_sha256, ed25519</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:tlsSignatureAlgorithm</AbbreviatedIRI>
+        <Literal>tlsSignatureAlgorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
         <IRI>wptmp:entity#contextIsChecked</IRI>
         <Literal>Check additional information, e.g. which device is used or the time of the login</Literal>
     </AnnotationAssertion>
 </Ontology>
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->

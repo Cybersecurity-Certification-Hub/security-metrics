@@ -342,14 +342,18 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:de.fraunhofer.aisec.cpg.graph.Node"/>
-    </Declaration>
-    <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="cl:Account"/>
         <Class abbreviatedIRI="cl:CloudResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:Account"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:offers"/>
+            <Class abbreviatedIRI="cl:AssetInventory"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:BlockStorage"/>
@@ -384,6 +388,13 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:CloudResource"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:ChangeAndConfigurationManagement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CloudResource"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="cl:GeoLocation"/>
         </ObjectSomeValuesFrom>
@@ -393,6 +404,62 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="cl:Logging"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CodeRepository"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:CodeSignoff"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CodeRepository"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:SignedCommits"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CodeRepository"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:VerifiedCommits"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CodeRepository" />
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:numberOfRequiredReviewers" />
+            <Datatype abbreviatedIRI="xsd:int" />
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CodeRepository"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:reviewPercentage"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CodeRepository"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:reviewPercentageLastMonth"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CodeRepository"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:approvedCommitAuthorEnforced"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:CloudResource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:offers"/>
+            <Class abbreviatedIRI="cl:MalwareProtection"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -540,15 +607,15 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="cl:DatabaseService"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="cl:MalwareProtection"/>
-        </ObjectSomeValuesFrom>
+        <Class abbreviatedIRI="cl:DatabaseStorage"/>
+        <Class abbreviatedIRI="cl:Storage"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:DatabaseStorage"/>
-        <Class abbreviatedIRI="cl:Storage"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:ttl"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:DeviceProvisioningService"/>
@@ -616,13 +683,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:Identifiable"/>
         <Class abbreviatedIRI="cl:CloudResource"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:Identifiable"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="cl:Authenticity"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:Identifiable"/>
@@ -842,13 +902,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:NetworkService"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="cl:offersInterface"/>
-            <Class abbreviatedIRI="cl:Authenticity"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:NetworkService"/>
-        <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
             <Class abbreviatedIRI="cl:Compute"/>
         </ObjectSomeValuesFrom>
@@ -1036,13 +1089,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:offers"/>
             <Class abbreviatedIRI="cl:BootLog"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:VirtualMachine"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:offers"/>
-            <Class abbreviatedIRI="cl:MalwareProtection"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1447,11 +1493,6 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
-        <Literal xml:lang="english">xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:listString</AbbreviatedIRI>
         <Literal>listString</Literal>
     </AnnotationAssertion>
@@ -1504,6 +1545,21 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:CodeRepository</AbbreviatedIRI>
         <Literal>CodeRepository</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:CodeRepository</AbbreviatedIRI>
+        <Literal>ReviewPercentage is the percentage of merged pull requests with code reviews.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:CodeRepository</AbbreviatedIRI>
+        <Literal>ReviewPercentageLastMonth is the percentage of merged pull requests with code reviews in the last 30 days.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cl:CodeRepository</AbbreviatedIRI>
+        <Literal>ApprovedCommitAuthorEnforced verifies that code modifications are made by authorized developers whose changes have been validated, enhancing accountability and traceability.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1834,11 +1890,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cl:broadAssignments</AbbreviatedIRI>
         <Literal>broadAssignments</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>cl:calls</AbbreviatedIRI>
-        <Literal>calls</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

@@ -9,4 +9,4 @@ comments: This check ensures that the runtime language and version are properly 
 configuration:
   p1:
     operator: ">="
-    targetValue: 21
+    targetValue: 17
