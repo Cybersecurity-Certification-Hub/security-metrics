@@ -308,6 +308,9 @@
         <Class abbreviatedIRI="core:NeedToKnowPolicy"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:SeparationOfDutiesPolicy"/>
     </Declaration>
     <Declaration>
@@ -585,6 +588,17 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:isDefined"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:coveredAttackTypes"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3131,6 +3145,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:NeedToKnowPolicy</AbbreviatedIRI>
         <Literal>NeedToKnowPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:NetworkThreatMitigationPolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing network threat mitigation mechanisms and attack coverage. coveredAttackTypes: the types of network-level attacks mitigated by implemented controls (e.g., DoS, DDoS).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:NetworkThreatMitigationPolicy</AbbreviatedIRI>
+        <Literal>NetworkThreatMitigationPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
