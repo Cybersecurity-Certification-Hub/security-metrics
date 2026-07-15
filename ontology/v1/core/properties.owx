@@ -115,7 +115,7 @@
         <DataProperty abbreviatedIRI="res:contextIsChecked"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="res:coveredAttackTypes"/>
+        <DataProperty abbreviatedIRI="prop:coveredAttackTypes"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:creation_time"/>
