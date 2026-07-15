@@ -1,4 +1,4 @@
 {
     "operator": "isIn",
-    "target_value": ["dos", "denial of service"]
+    "target_value": ["dos", "denial of service", "ddos", "distributed denial of service"]
 }
