@@ -412,6 +412,19 @@ When creating a new metric, you typically need to:
    - Security features and functionalities are typically attached to resources via properties
    - Use consistent naming conventions: camelCase for properties and classes
 
+**Namespace Prefixes and Datatypes for Properties:**
+
+When adding new properties to the ontology, use the correct namespace prefix and datatype:
+- **`prop:`** - Use for functional and policy properties (e.g., `prop:isDefined`, `prop:coveredAttackTypes`, `prop:authorizationTypes`)
+  - IRI: `https://ontology.cybersecuritycertcluster.eu/properties/`
+  - Used for properties that describe features, policies, and functionalities
+  - Datatype examples: `xsd:boolean` (for flags like isDefined), `xsd:string` (for single values), `xsd:listString` (for lists of strings)
+- **`res:`** - Use for resource/class-related properties (e.g., `res:cve`, `res:name`)
+  - IRI: `https://ontology.cybersecuritycertcluster.eu/classes/`
+  - Used for low-level properties specific to resources
+
+**Important:** Check existing ontology for list datatypes. For example, use `xsd:listString` for properties that contain multiple string values (see `prop:calls`, `prop:team` for examples).
+
 **How to Edit OWL/XML Files:**
 
 The ontology is best edited using **Protégé**, a dedicated OWL editor:
@@ -451,7 +464,8 @@ Before submitting your metric, verify:
 - [ ] `metric.rego` uses `compare()` function to evaluate configuration parameters
 - [ ] All Rego syntax is valid (consider running through Rego linter)
 - [ ] Ontology has been updated with new concepts (or noted for future update)
-- [ ] No syntax errors in any files (YAML, JSON, Rego)
+- [ ] If adding new properties: namespace prefixes are consistent (e.g., `prop:` for functional properties used in both `properties.owx` declarations and `functionality.owx` SubClassOf references)
+- [ ] No syntax errors in any files (YAML, JSON, Rego, OWL/XML)
 
 ## Testing Your Metric
 
@@ -504,6 +518,39 @@ Functionality
 
 **In metric descriptions:** Reference specific policy types and their properties
 - Example: "This rule assesses whether a [PolicyDocument] includes [DataConfidentialitySDNPolicy] with [p1:isDefined] set correctly."
+
+
+**Example - Adding a Property Beyond `isDefined`:**
+
+If your metric evaluates a policy property beyond the standard `isDefined` boolean:
+
+1. **Declare the property in `properties.owx`** with the appropriate prefix:
+```xml
+<Declaration>
+    <DataProperty abbreviatedIRI="prop:coveredAttackTypes"/>
+</Declaration>
+```
+
+2. **Add the property to your policy class in `functionality.owx`** using SubClassOf with DataSomeValuesFrom. For list properties, use `xsd:listString`:
+```xml
+<SubClassOf>
+    <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
+    <DataSomeValuesFrom>
+        <DataProperty abbreviatedIRI="prop:coveredAttackTypes"/>
+        <Datatype abbreviatedIRI="xsd:listString"/>
+    </DataSomeValuesFrom>
+</SubClassOf>
+```
+
+For single-value string properties, use `xsd:string` instead. For lists of other types, look for `xsd:list*` types in the existing ontology (e.g., `dt:listCpgNodes`).
+
+3. **Reference it in your metric description:**
+```yaml
+description: "This rule assesses whether a [PolicyDocument] includes [NetworkThreatMitigationPolicy] with [p1:coveredAttackTypes] set correctly."
+```
+
+Ensure namespace prefixes are consistent across all uses: if you declare a property with `prop:`, reference it with `prop:` everywhere (in functionality.owx SubClassOf declarations and in metric.rego).
+
 
 ### Comment Guidelines
 
