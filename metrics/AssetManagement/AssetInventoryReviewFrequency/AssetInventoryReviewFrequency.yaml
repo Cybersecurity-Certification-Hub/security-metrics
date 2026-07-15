@@ -1,0 +1,20 @@
+# ====== Metadata ======
+id: "a409700c-01fc-47f6-aa38-4faa0d8a3a35"
+name: "AssetInventoryReviewFrequency"
+description: "This rule assesses whether a [PolicyDocument] includes [AssetInventory] with [p1:reviewFrequency] set correctly."
+
+implementationGuidelines:
+  AMOE:
+    question: "How frequently is the asset inventory or definition reviewed?"
+    is_headline_based: false
+    keywords: ["Asset management"]
+
+category: "AssetManagement"
+version: "v1"
+comments: "This metric assesses the frequency of the asset inventory review. Measured in months."
+
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 12

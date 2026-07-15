@@ -15,6 +15,13 @@
     <Prefix name="prop" IRI="https://ontology.cybersecuritycertcluster.eu/properties/"/>
     <Prefix name="ind" IRI="https://ontology.cybersecuritycertcluster.eu/individuals/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="dt" IRI="https://ontology.cybersecuritycertcluster.eu/datatypes/"/>
+    <Declaration>
+        <Class abbreviatedIRI="core:RequestForChange"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:ChangeAndConfigurationManagement"/>
+    </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:Allocate"/>
     </Declaration>
@@ -283,7 +290,31 @@
         <Class abbreviatedIRI="core:SecurityAdvisoryFeed"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:SecurityIncident"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:Vulnerability"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:Policies"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LeastPrivilegePolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:NeedToKnowPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:SeparationOfDutiesPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:SDNFunctionValidationPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:AccessControlTypePolicy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
@@ -304,13 +335,13 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:de.fraunhofer.aisec.cpg.graph.Node"/>
-    </Declaration>
-    <Declaration>
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:criticality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:exploitable"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:source"/>
@@ -392,9 +423,6 @@
         <DataProperty abbreviatedIRI="prop:modify"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:call"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="prop:method"/>
     </Declaration>
     <Declaration>
@@ -432,9 +460,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:translationUnits"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="core:calls"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -478,6 +503,12 @@
     <Declaration>
         <DataProperty abbreviatedIRI="prop:algorithm"/>
     </Declaration>
+    <!-- <Declaration>
+        <DataType abbreviatedIRI="dt:listCpgNodes"/>
+    </Declaration>
+    <Declaration>
+        <DataType abbreviatedIRI="dt:cpgNode"/>
+    </Declaration> -->
     <SubClassOf>
         <Class abbreviatedIRI="core:EqualityCheck"/>
         <Class abbreviatedIRI="core:PolicyOperation"/>
@@ -503,6 +534,98 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Http"/>
         <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:RequestForChange"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ChangeAndConfigurationManagement"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ChangeAndConfigurationManagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:RequestForChange"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Policies"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LeastPrivilegePolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LeastPrivilegePolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:NeedToKnowPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:NeedToKnowPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SeparationOfDutiesPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SeparationOfDutiesPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SDNFunctionValidationPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SDNFunctionValidationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AccessControlTypePolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AccessControlTypePolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:authorizationTypes"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:RequestForChange"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:approvedBeforeDeployment"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpClient"/>
@@ -592,7 +715,7 @@
         <Class abbreviatedIRI="core:CryptographicOperation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="core:operatesOn"/>
-            <Class abbreviatedIRI="core:Confidentiality"/>
+            <Class abbreviatedIRI="core:SecurityFeature"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -603,10 +726,17 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:DatabaseOperation"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:call"/>
+            <Datatype abbreviatedIRI="dt:cpgNode"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:DeAllocate"/>
         <Class abbreviatedIRI="core:MemoryOperation"/>
     </SubClassOf>
-    
+
     <SubClassOf>
         <Class abbreviatedIRI="core:Cipher"/>
         <DataSomeValuesFrom>
@@ -1000,7 +1130,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:InputValidationOperation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="core:operatesOn"/>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="core:Output"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1181,7 +1311,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:DatabaseOperation"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:calls"/>
+            <DataProperty abbreviatedIRI="prop:calls"/>
             <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1194,6 +1324,20 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:modify"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DatabaseQuery"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:call"/>
+            <Datatype abbreviatedIRI="dt:cpgNode"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DatabaseQuery"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:parameters"/>
+            <Datatype abbreviatedIRI="dt:listCpgNodes"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1326,6 +1470,27 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpEndpoint"/>
         <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:input"/>
+            <Datatype abbreviatedIRI="dt:listCpgNodes"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpEndpoint"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:inputSize"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpEndpoint"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:RateLimiting"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpEndpoint"/>
+        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:path"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
@@ -1348,6 +1513,20 @@
         <Class abbreviatedIRI="core:HttpRequest"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:reqBody"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpRequest"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:arguments"/>
+            <Datatype abbreviatedIRI="dt:listCpgNodes"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpRequest"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:method"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1406,7 +1585,13 @@
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
-    
+    <SubClassOf>
+        <Class abbreviatedIRI="core:HttpClient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="core:uses"/>
+            <Class abbreviatedIRI="core:TransportEncryption"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:HttpClient"/>
         <ObjectSomeValuesFrom>
@@ -1509,6 +1694,17 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityIncident"/>
+        <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:team"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:Vulnerability"/>
         <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
@@ -1517,6 +1713,13 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:criticality"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Vulnerability"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:exploitable"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1543,13 +1746,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Vulnerability"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:name"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:Vulnerability"/>
-        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:url"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
@@ -1560,10 +1756,6 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="prop:apiListFunction"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty abbreviatedIRI="prop:call"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -1711,11 +1903,11 @@
         <AbbreviatedIRI>core:Policy</AbbreviatedIRI>
         <Literal>Policy</Literal>
     </AnnotationAssertion>
-    <AnnotationAssertion>
+    <!-- <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:operatesOn</AbbreviatedIRI>
         <Literal>Link to a concept of the CPG</Literal>
-    </AnnotationAssertion>
+    </AnnotationAssertion> -->
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:RegisterConfigurationGroup</AbbreviatedIRI>
@@ -2229,7 +2421,6 @@
        <AbbreviatedIRI>core:timeWindowSeconds</AbbreviatedIRI>
         <Literal>timeWindowSeconds</Literal>
     </AnnotationAssertion>
-    
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:rightPrincipal</AbbreviatedIRI>
@@ -2244,11 +2435,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:HttpClientOperation</AbbreviatedIRI>
         <Literal>HttpClientOperation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
-        <Literal xml:lang="english">xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2417,6 +2603,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:HttpRequest</AbbreviatedIRI>
+        <Literal>enum:method=GET,POST,PUT,HEAD,PATCH,OPTIONS,CONNECT,TRACE,DELETE,UNKNOWN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Vulnerability</AbbreviatedIRI>
         <Literal>cwe: Common Weakness Enumeration</Literal>
     </AnnotationAssertion>
@@ -2462,11 +2653,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:calls</AbbreviatedIRI>
-        <Literal>calls</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:code</AbbreviatedIRI>
         <Literal>code</Literal>
     </AnnotationAssertion>
@@ -2499,6 +2685,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>prop:criticality</AbbreviatedIRI>
         <Literal>criticality: Contains the criticality of a vulnerability, e.g., low, medium, high, critical</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:exploitable</AbbreviatedIRI>
+        <Literal>exploitable: Indicates whether a vulnerability is exploitable for the given target of evaluation (TOE)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:exploitable</AbbreviatedIRI>
+        <Literal>exploitable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2806,11 +3002,16 @@
         <AbbreviatedIRI>core:schemaURL</AbbreviatedIRI>
         <Literal>schemaURL</Literal>
     </AnnotationAssertion>
+    <!-- <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dt:cpgNode</AbbreviatedIRI>
+        <Literal>cpgNode</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:scope</AbbreviatedIRI>
-        <Literal>scope</Literal>
-    </AnnotationAssertion>
+        <AbbreviatedIRI>dt:listCpgNodes</AbbreviatedIRI>
+        <Literal>listCpgNodes</Literal>
+    </AnnotationAssertion> -->
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:securityAlertsEnabled</AbbreviatedIRI>
@@ -2853,11 +3054,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>core:status</AbbreviatedIRI>
-        <Literal>status</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:target</AbbreviatedIRI>
         <Literal>target</Literal>
     </AnnotationAssertion>
@@ -2874,27 +3070,87 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/AmazonWebServices</IRI>
-        <Literal xml:lang="english">Amazon Web Services</Literal>
+        <Literal>Amazon Web Services</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/CircleCI</IRI>
-        <Literal xml:lang="english">CircleCI</Literal>
+        <Literal>CircleCI</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/GitHubActions</IRI>
-        <Literal xml:lang="english">GitHub Actions</Literal>
+        <Literal>GitHub Actions</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://ontology.cybersecuritycertcluster.eu/individuals/TeamCity</IRI>
-        <Literal xml:lang="english">TeamCity</Literal>
+        <Literal>TeamCity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-        <IRI>wptmp:entity#contextIsChecked</IRI>
-        <Literal>Check additional information, e.g. which device is used or the time of the login</Literal>
+    <AnnotationProperty IRI="rdfs:comment"/>
+    <AbbreviatedIRI>core:contextIsChecked</AbbreviatedIRI>
+    <Literal>Check additional information, e.g. which device is used or the time of the login</Literal>
+</AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:Policies</AbbreviatedIRI>
+        <Literal>Represents the functional capability of enforcing and managing policies within an application.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:Policies</AbbreviatedIRI>
+        <Literal>Policies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:DataConfidentialitySDNPolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing data confidentiality requirements for Software Defined Networking (SDN). isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:DataConfidentialitySDNPolicy</AbbreviatedIRI>
+        <Literal>DataConfidentialitySDNPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:LeastPrivilegePolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing least privilege requirements. isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:LeastPrivilegePolicy</AbbreviatedIRI>
+        <Literal>LeastPrivilegePolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:NeedToKnowPolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing need-to-know access control requirements. isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:NeedToKnowPolicy</AbbreviatedIRI>
+        <Literal>NeedToKnowPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:SeparationOfDutiesPolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing separation of duties requirements. isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:SeparationOfDutiesPolicy</AbbreviatedIRI>
+        <Literal>SeparationOfDutiesPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:SDNFunctionValidationPolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing validation and testing requirements for SDN functions. isDefined: whether this policy section is present and defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:SDNFunctionValidationPolicy</AbbreviatedIRI>
+        <Literal>SDNFunctionValidationPolicy</Literal>
     </AnnotationAssertion>
 </Ontology>
 <!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->

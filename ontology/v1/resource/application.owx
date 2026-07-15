@@ -80,9 +80,6 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description" />
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:de.fraunhofer.aisec.cpg.graph.Node" />
-    </Declaration>
-    <Declaration>
         <Datatype abbreviatedIRI="xsd:listString" />
     </Declaration>
     <SubClassOf>
@@ -183,6 +180,13 @@
         <Class abbreviatedIRI="res:Module" />
         <Class abbreviatedIRI="res:SoftwareResource" />
     </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SoftwareResource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
+            <Class abbreviatedIRI="core:SoftwareAttestation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Darwin</AbbreviatedIRI>
@@ -212,12 +216,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:ExitBoundaryOperation</AbbreviatedIRI>
         <Literal>ExitBoundaryOperation</Literal>
-    </AnnotationAssertion>
-    
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label" />
-        <AbbreviatedIRI>xsd:de.fraunhofer.aisec.cpg.graph.Node</AbbreviatedIRI>
-        <Literal xml:lang="english">xsd:de.fraunhofer.aisec.cpg.graph.Node</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label" />
