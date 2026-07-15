@@ -14,4 +14,4 @@ comments: "This metric assesses the network-level attacks addressed by implement
 configuration:
   p1:
     operator: "isIn"
-    targetValue: ["dos", "denial of service"]
+    targetValue: ["dos", "denial of service", "ddos", "distributed denial of service"]
