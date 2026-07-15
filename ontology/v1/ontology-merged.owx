@@ -15,6 +15,9 @@
         <Class IRI="/classes/ABAC"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/AccessControlTypePolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/AccessRestriction"/>
     </Declaration>
     <Declaration>
@@ -1227,6 +1230,9 @@
         <DataProperty IRI="/properties/auditInterval"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/authorizationTypes"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/call"/>
     </Declaration>
     <Declaration>
@@ -1638,6 +1644,17 @@
     <SubClassOf>
         <Class IRI="/classes/ABAC"/>
         <Class IRI="/classes/Authorization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AccessControlTypePolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AccessControlTypePolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/authorizationTypes"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/AccessRestriction"/>

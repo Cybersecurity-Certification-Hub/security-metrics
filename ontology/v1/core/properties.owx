@@ -97,6 +97,9 @@
         <DataProperty abbreviatedIRI="res:authenticationMechanism"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:authorizationTypes"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:broadAssignments"/>
     </Declaration>
     <Declaration>
