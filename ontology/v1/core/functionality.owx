@@ -598,7 +598,7 @@
         <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:coveredAttackTypes"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>

@@ -9,7 +9,7 @@ implementationGuidelines:
     keywords: ["network security", "DoS", "DDoS", "proxy", "IDS", "Denial of service protection"]
 category: "NetworkSecurity"
 version: "v1"
-comments: "This metric assesses the network-level attacks addressed by implemented mechanisms, evaluating the coverage of threat mitigation controls."
+comments: "This metric assesses the network-level attacks addressed by implemented mechanisms, evaluating the coverage of threat mitigation controls. Measured as list of string values."
 # ====== Configuration ======
 configuration:
   p1:
