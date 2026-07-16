@@ -138,6 +138,12 @@
         <Class IRI="/classes/CodeSignoff"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/ComplianceMethodologyPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Component"/>
     </Declaration>
     <Declaration>
@@ -1275,6 +1281,9 @@
         <DataProperty IRI="/properties/inputSize"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/interval"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/ips"/>
     </Declaration>
     <Declaration>
@@ -1300,6 +1309,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/method"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/methodology"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/modify"/>
@@ -2304,6 +2316,28 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/percentageLastMonth"/>
             <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/interval"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ComplianceMethodologyPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ComplianceMethodologyPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/methodology"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -6146,6 +6180,16 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ComplianceAuditIntervalPolicy</IRI>
+        <Literal>ComplianceAuditIntervalPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ComplianceMethodologyPolicy</IRI>
+        <Literal>ComplianceMethodologyPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Component</IRI>
         <Literal>Component</Literal>
     </AnnotationAssertion>
@@ -8756,6 +8800,11 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/interval</IRI>
+        <Literal xml:lang="english">interval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/ips</IRI>
         <Literal xml:lang="english">ips</Literal>
     </AnnotationAssertion>
@@ -8793,6 +8842,11 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/method</IRI>
         <Literal xml:lang="english">method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/methodology</IRI>
+        <Literal xml:lang="english">methodology</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

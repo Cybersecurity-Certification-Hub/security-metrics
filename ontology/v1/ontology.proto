@@ -700,6 +700,24 @@ message CodeSignoff {
 	float percentage_last_month = 3739;
 }
 
+// ComplianceAuditIntervalPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ComplianceAuditIntervalPolicy {
+	option (resource_type_names) = "ComplianceAuditIntervalPolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	int32 interval = 3017;
+}
+
+// ComplianceMethodologyPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+message ComplianceMethodologyPolicy {
+	option (resource_type_names) = "ComplianceMethodologyPolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	string methodology = 8814;
+}
+
 // Component is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Component {
 
@@ -1854,6 +1872,8 @@ message Functionality {
 		Output output = 7223;
 		Padding padding = 9245;
 		AccessControlTypePolicy access_control_type_policy = 13002;
+		ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 3098;
+		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
 		LeastPrivilegePolicy least_privilege_policy = 15025;
 		NeedToKnowPolicy need_to_know_policy = 17201;
@@ -3355,6 +3375,8 @@ message Policies {
 
 	oneof type {
 		AccessControlTypePolicy access_control_type_policy = 13002;
+		ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 3098;
+		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
 		LeastPrivilegePolicy least_privilege_policy = 15025;
 		NeedToKnowPolicy need_to_know_policy = 17201;
