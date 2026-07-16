@@ -299,11 +299,12 @@ message := "Compliance message when compliant." if {
 - **Imports**: Always include:
   - `import data.cch.compare` - Function for comparing values with operators
   - `import rego.v1` - Rego v1 syntax
-  - `import input as document` - Reference to input document
+  - `import input as document` - General reference to entire input document (common when assessing policy documents), or use `import input.<fieldName> as <alias>` to import specific nested input fields directly. This pattern works for any input field type: policies (e.g., `accessControlTypePolicy`), features/functionalities (e.g., `bootLogging`), or nested structures (e.g., `accessRestriction.l3Firewall`). Using aliases makes the Rego logic more readable when focusing on a specific input structure.
 - **Default values**: Set default values for `applicable` and `compliant` to `false`
 - **applicable rule**: Define when this metric should be evaluated
-  - Check for presence of relevant document fields
-  - Check for document type or category
+  - Check for input type like `input.type[_] == "NetworkInterface"`
+  - In most cases we additionally check for presence of relevant fields with `<variable> != {}`. This ensures we only assess evidence that provides the required field. Add a comment explaining why: e.g., `networkThreatMitigationPolicy != {} # only evaluate if policy is provided`. It could also be correct to omit this check, which means we require the evidence to include this field (i.e., the metrics will be checked against the evidence regardless of whether it contains the relevant field). When reviewing already existing metrics: If this check is not done, raise at least a warning.
+  - For AMOE metrics evaluating policies: We want to check that input is a policy document (`"PolicyDocument" in input.type`) and that the policy is present (e.g., `leastPrivilegePolicy != {}`). The latter we do for now because AMOE can only provide evidence for one policy at a time. In the future, though, we want one evidence for all policies in the document and, thus, omit this second check.
   - Return false by default (fail-safe)
 - **compliant rule**: Define when the document passes this metric
   - Use `compare(data.operator, data.target_value, document_field)` to evaluate
