@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "cd3036df-a2e9-4c55-9a73-766d4874b343"
+name: "NumberOfFailedAuthenticationAttempts"
+description: "This rule assesses whether an [HttpEndpoint] that offers the property [Authenticity], has a maximum number of [p1:failedAuthenticationAttempts]."
+implementationGuidelines:
+  AppTelemetry:
+    previous_name: "MT-IAM-03.7H-1"
+    details: ["Number of failed authentication attempts (per Cloud Asset)"]
+category: "IdentityManagement"
+version: "1.0"
+comments: "Check whether the number of failed authentication attempts (per Cloud Asset) is below a defined threshold."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 3
