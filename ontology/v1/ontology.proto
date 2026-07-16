@@ -1877,6 +1877,7 @@ message Functionality {
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
 		LeastPrivilegePolicy least_privilege_policy = 15025;
 		NeedToKnowPolicy need_to_know_policy = 17201;
+		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
 		SeparationOfDutiesPolicy separation_of_duties_policy = 1439;
 		Principal principal = 16173;
@@ -3072,6 +3073,16 @@ message NetworkService {
 	}
 }
 
+// NetworkThreatMitigationPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a [PolicyDocument] describing network threat mitigation mechanisms and attack coverage. coveredAttackTypes: the types of network-level attacks mitigated by implemented controls (e.g., DoS, DDoS).
+message NetworkThreatMitigationPolicy {
+	option (resource_type_names) = "NetworkThreatMitigationPolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	repeated string covered_attack_types = 10498;
+}
+
 // Networking is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Networking {
 
@@ -3380,6 +3391,7 @@ message Policies {
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
 		LeastPrivilegePolicy least_privilege_policy = 15025;
 		NeedToKnowPolicy need_to_know_policy = 17201;
+		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
 		SeparationOfDutiesPolicy separation_of_duties_policy = 1439;
 	}

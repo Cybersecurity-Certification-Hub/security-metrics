@@ -573,6 +573,9 @@
         <Class IRI="/classes/NetworkService"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Networking"/>
     </Declaration>
     <Declaration>
@@ -1243,6 +1246,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/calls"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/coveredAttackTypes"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/criticality"/>
@@ -4164,6 +4170,17 @@
             <DataProperty IRI="/properties/ports"/>
             <Literal>xsd:java.util.ArrayList&lt;Short&gt;</Literal>
         </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/coveredAttackTypes"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Networking"/>
@@ -7152,6 +7169,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/NetworkService</IRI>
         <Literal xml:lang="english">NetworkService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/NetworkThreatMitigationPolicy</IRI>
+        <Literal>Represents a policy section within a [PolicyDocument] describing network threat mitigation mechanisms and attack coverage. coveredAttackTypes: the types of network-level attacks mitigated by implemented controls (e.g., DoS, DDoS).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/NetworkThreatMitigationPolicy</IRI>
+        <Literal>NetworkThreatMitigationPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
