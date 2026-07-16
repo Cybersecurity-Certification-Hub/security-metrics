@@ -2,23 +2,23 @@ package cch.metrics.compliance_audit_interval
 
 import data.cch.compare
 import rego.v1
-import input.compliance as compliance
+import input.complianceAuditIntervalPolicy as complianceAuditIntervalPolicy
 
 default applicable := false
 
 default compliant := false
 
 applicable if {
+    complianceAuditIntervalPolicy != {} # only evaluate if policy is provided
     "PolicyDocument" in input.type
-    compliance != {} # only evaluate if compliance policy is provided
 }
 
 compliant if {
-    compare(data.operator, data.target_value, compliance.interval)
+    compare(data.operator, data.target_value, complianceAuditIntervalPolicy.interval)
 }
 
-message := "Compliance audit interval is configured within acceptable limits." if {
+message := "The compliance audit interval is configured within acceptable limits." if {
     compliant
-} else := "Compliance audit interval exceeds acceptable limits." if {
+} else := "The compliance audit interval exceeds acceptable limits." if {
     not compliant
 }

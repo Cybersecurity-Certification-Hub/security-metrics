@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "df639bbe-64df-406a-87ac-5935fb5a922b"
 name: ComplianceAuditInterval
-description: This rule assesses whether a [PolicyDocument] that offers the property [Compliance], has [p1:interval] set correctly.
+description: This rule assesses whether a [PolicyDocument] includes [ComplianceAuditIntervalPolicy] with [p1:interval] set correctly.
 implementationGuidelines:
   AMOE:
     previous_name: ComplianceManagementQ2
