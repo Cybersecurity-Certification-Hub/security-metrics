@@ -9,7 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    complianceAuditIntervalPolicy != {} # only evaluate if policy is provided
+    complianceAuditIntervalPolicy != {} # only assess if policy is provided
     "PolicyDocument" in input.type
 }
 
