@@ -7,7 +7,7 @@ implementationGuidelines:
     previous_name: "MT-IAM-03.7H-1"
     details: ["Number of failed authentication attempts (per Cloud Asset)"]
 category: "IdentityManagement"
-version: "1.0"
+version: "v1"
 comments: "Check whether the number of failed authentication attempts (per Cloud Asset) is below a defined threshold."
 # ====== Configuration ======
 configuration:
