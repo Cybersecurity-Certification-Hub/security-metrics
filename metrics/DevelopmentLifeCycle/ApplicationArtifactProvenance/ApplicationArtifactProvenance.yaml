@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id:  514100d2-034f-4fa2-9254-9db272ca8ab0
+name: ApplicationArtifactProvenance
+description: This rule assesses whether an [Application]'s provenance is supported by [p1:softwareAttestations].
+category: DevelopmentLifeCycle
+version: "v1" 
+comments: Ensure that an application's artifact is verifiable with a provenance report as a form of software attestation. This provenance enables the verification that the artifact was built as expected. Hence, it supports trust in the build pipeline.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "hasAny"
+    targetValue: true
