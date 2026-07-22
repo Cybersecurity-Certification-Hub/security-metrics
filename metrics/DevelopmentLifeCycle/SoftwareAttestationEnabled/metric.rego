@@ -1,4 +1,4 @@
-package cch.metrics.approved_commit_author_enforced
+package cch.metrics.software_attestation_enabled
 
 import data.cch.compare
 import rego.v1
