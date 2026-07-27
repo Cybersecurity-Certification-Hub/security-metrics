@@ -1332,6 +1332,9 @@
         <DataProperty IRI="/properties/ports"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/predicate"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/programmingLanguage"/>
     </Declaration>
     <Declaration>
@@ -1363,6 +1366,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/storageFacility"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/subject"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/supportEnds"/>
@@ -5041,6 +5047,20 @@
     <SubClassOf>
         <Class IRI="/classes/SoftwareAttestation"/>
         <Class IRI="/classes/Attestation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SoftwareAttestation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/predicate"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SoftwareAttestation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/subject"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SoftwareResource"/>
@@ -8867,6 +8887,16 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">ports</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/predicate</IRI>
+        <Literal>predicate: TBD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/predicate</IRI>
+        <Literal>predicate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/programmingLanguage</IRI>
         <Literal xml:lang="english">programmingLanguage</Literal>
@@ -8935,6 +8965,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/storage</IRI>
         <Literal>storage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/subject</IRI>
+        <Literal>subject: TBD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/subject</IRI>
+        <Literal>subject</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
