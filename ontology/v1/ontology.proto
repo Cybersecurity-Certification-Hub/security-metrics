@@ -4262,9 +4262,9 @@ message SoftwareAttestation {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 5129;
-	// predicate: TBD
+	// Property being affirmed
 	string predicate = 6461;
-	// subject: TBD
+	// Subject of an assertion
 	repeated string subject = 13149;
 }
 
