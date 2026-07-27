@@ -269,6 +269,9 @@
         <DataProperty abbreviatedIRI="prop:keyUrl"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:predicate"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:region"/>
     </Declaration>
     <Declaration>
@@ -276,6 +279,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:storageFacility"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:subject"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:tlsSignatureAlgorithm"/>
@@ -1148,6 +1154,24 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:SoftwareAttestation"/>
+        <Class abbreviatedIRI="core:Attestation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SoftwareAttestation"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:predicate"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SoftwareAttestation"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:subject"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:TransportEncryption"/>
         <Class abbreviatedIRI="core:Encryption"/>
     </SubClassOf>
@@ -1236,10 +1260,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ZoneRedundancy"/>
         <Class abbreviatedIRI="core:Redundancy"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:SoftwareAttestation"/>
-        <Class abbreviatedIRI="core:Attestation"/>
     </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1547,6 +1567,11 @@
         <Literal xml:lang="en">PasswordBasedAuthentication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:predicate</AbbreviatedIRI>
+        <Literal>predicate: Property being affirmed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:RBAC</AbbreviatedIRI>
         <Literal xml:lang="english">RBAC</Literal>
@@ -1605,6 +1630,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:SingleSignOn</AbbreviatedIRI>
         <Literal xml:lang="english">SingleSignOn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:subject</AbbreviatedIRI>
+        <Literal>subject: Subject of an assertion</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1943,6 +1973,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:predicate</AbbreviatedIRI>
+        <Literal>predicate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:privileged</AbbreviatedIRI>
         <Literal>privileged</Literal>
     </AnnotationAssertion>
@@ -2065,6 +2100,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:startLine</AbbreviatedIRI>
         <Literal>startLine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:subject</AbbreviatedIRI>
+        <Literal>subject</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
