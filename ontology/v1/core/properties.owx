@@ -364,6 +364,9 @@
         <DataProperty abbreviatedIRI="prop:inbound"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:interval"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:ips"/>
     </Declaration>
     <Declaration>
@@ -395,6 +398,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:modify"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:methodology"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:path"/>
@@ -1153,6 +1159,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:interval</AbbreviatedIRI>
+        <Literal xml:lang="english">interval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:ips</AbbreviatedIRI>
         <Literal xml:lang="english">ips</Literal>
     </AnnotationAssertion>
@@ -1205,6 +1216,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:modify</AbbreviatedIRI>
         <Literal>modify</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:methodology</AbbreviatedIRI>
+        <Literal xml:lang="english">methodology</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
