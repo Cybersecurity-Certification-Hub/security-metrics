@@ -14,7 +14,7 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, complianceAuditIntervalPolicy.interval)
+    compare(data.operator, data.target_value, complianceAuditIntervalPolicy.auditInterval)
 }
 
 message := "The compliance audit interval is configured within acceptable limits." if {
