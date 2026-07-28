@@ -113,3 +113,12 @@ compare(operator, target_values, actual_values) if {
 		act_val in target_values
 	}
 }
+
+# Checks if any element exists in actual_values (array)
+compare(operator, target_value, actual_values) if {
+	operator == "hasAny"
+	is_array(actual_values)
+	
+	x := count(actual_values)
+	target_value == ( x > 0 )
+}

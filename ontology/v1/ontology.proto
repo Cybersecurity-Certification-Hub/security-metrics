@@ -4284,6 +4284,10 @@ message SoftwareAttestation {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 5129;
+	// predicate: Property being affirmed
+	string predicate = 6461;
+	// subject: Subject of an assertion
+	repeated string subject = 13149;
 }
 
 // Code is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
