@@ -2337,7 +2337,7 @@
     <SubClassOf>
         <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/interval"/>
+            <DataProperty IRI="/properties/auditInterval"/>
             <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
     </SubClassOf>

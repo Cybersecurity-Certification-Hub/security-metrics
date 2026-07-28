@@ -706,7 +706,8 @@ message ComplianceAuditIntervalPolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
-	int32 interval = 3017;
+	// The time needed for an audit.
+	int32 audit_interval = 7826;
 }
 
 // ComplianceMethodologyPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
