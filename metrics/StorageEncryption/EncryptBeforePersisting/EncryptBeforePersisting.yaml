@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: 7d2e7fb2-7351-4e43-956a-47a74cac3084
+name: EncryptBeforePersisting
+description: This rule assesses whether an [EncryptionOperation] [p1:exists] on a sensitive [CodeRegion] before being persisted to a [Storage].
+category: StorageEncryption
+version: "v1"
+comments: This rule checks if the data is encrypted before being stored. It ensures that sensitive information is protected and complies with security best practices.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
