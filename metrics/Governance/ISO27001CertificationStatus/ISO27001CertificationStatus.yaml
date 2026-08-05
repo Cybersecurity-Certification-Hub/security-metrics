@@ -5,7 +5,7 @@ description: "This rule assesses whether a [PolicyDocument] includes [Informatio
 
 implementationGuidelines:
   AMOE:
-    question: "What is the status for the ISO 27001?"
+    question: "What is the status for the ISO 27001? Is it compliant or non compliant?"
     is_headline_based: false
     keywords: ["ISO 27001", "certification", "status", "ISMS"]
 
@@ -16,5 +16,5 @@ comments: "This metric assesses whether the organization has ISO 27001 certifica
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["compliant"]
