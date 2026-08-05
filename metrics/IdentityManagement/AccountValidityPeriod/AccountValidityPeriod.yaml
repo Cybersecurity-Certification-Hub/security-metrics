@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: AccountValidityPeriod
+
+description: This rule assesses whether a [PolicyDocument] that offers the property [AccountManagementPolicy], has [p1:valid] set correctly.
+implementationGuidelines:
+  AMOE: "When are inactive accounts blocked?"
+  is_headline_based: false
+  keywords: ["account management", "valid", "inactivity", "inactive"]
+version: "1.0"
+
+category: IdentityManagement
+comments: This metric evaluates the validity of accounts after inactivity. It ensures that the length is set to a sensible minimum value of months.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: 6
