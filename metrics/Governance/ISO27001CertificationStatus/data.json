@@ -1,4 +1,4 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": ["compliant"]
 }
