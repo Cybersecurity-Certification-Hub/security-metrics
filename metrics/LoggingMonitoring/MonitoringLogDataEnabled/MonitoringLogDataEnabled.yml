@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: MonitoringLogDataEnabled
+description: This rule assesses whether the logging capabilities offered by a [VirtualMachine] have [p1:monitoringLogDataEnabled] configured correctly.
+category: LoggingMonitoring
+version: "1.0"
+comments: Forwarding operating system, boot, resource, and security monitoring data enables centralized detection of anomalous activity and supports compliance evidence collection.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True
