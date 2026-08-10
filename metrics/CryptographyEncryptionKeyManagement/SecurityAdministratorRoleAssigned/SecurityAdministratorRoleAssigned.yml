@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: SecurityAdministratorRoleAssigned
+description: This rule assesses whether a [RoleAssignment] covering cryptographic responsibilities has the property [p1:securityAdministratorRoleAssigned] indicating that at least one [Identity] is assigned to fulfil the responsibility.
+category: CryptographyEncryptionKeyManagement
+version: "1.0" 
+comments: Security administrator duties should never remain unassigned; the metric additionally considers available user assignments to ensure the role is covered.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
