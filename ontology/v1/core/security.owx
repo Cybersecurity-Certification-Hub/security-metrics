@@ -508,6 +508,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:reviewFrequency"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
         <Class abbreviatedIRI="core:Encryption"/>
     </SubClassOf>
@@ -643,6 +650,27 @@
             <DataProperty abbreviatedIRI="core:retentionPeriod"/>
             <Literal>xsd:java.time.Duration</Literal>
         </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Backup"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:frequency"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Backup"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:recoveryFrequency"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CloudFeature"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:property"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:BootLog"/>

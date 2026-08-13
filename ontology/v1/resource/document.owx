@@ -447,6 +447,27 @@
         <Class abbreviatedIRI="cl:PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:AccessControlTypePolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:NetworkThreatMitigationPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:MonitoringProcedure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="cl:AssetInventory"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
