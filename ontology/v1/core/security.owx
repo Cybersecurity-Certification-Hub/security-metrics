@@ -515,6 +515,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:property"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
         <Class abbreviatedIRI="core:Encryption"/>
     </SubClassOf>
@@ -663,13 +670,6 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:recoveryFrequency"/>
             <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:CloudFeature"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:property"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>

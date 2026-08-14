@@ -1599,9 +1599,6 @@
         <Class IRI="/classes/ConfigurationOperation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/CloudFeature"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/TwoQubitErrorRate"/>
     </Declaration>
     <Declaration>
@@ -1795,6 +1792,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/completedReviewPercentage"/>
             <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/property"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2167,13 +2171,6 @@
         <Class IRI="/classes/CipherSuite"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/sessionCipher"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/CloudFeature"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/property"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -4384,13 +4381,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Backup"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/PolicyDocument"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/CloudFeature"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
