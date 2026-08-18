@@ -218,6 +218,7 @@ message ApplicationLogging {
 // AssetInventory is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 // AuditInterval contains the frequency of asset inventory audits in month.
 // Class representing the inventory of assets.
+// Service contains the name of the service (e.g., Asset Management).
 // Status contains the status of the asset (e.g., active, inactive).
 // StorageFacility contains the storage facility type of the asset (e.g., central, decentralized).
 // Type: contains the type of the asset, e.g., digital
@@ -233,6 +234,9 @@ message AssetInventory {
 	int32 audit_interval = 15088;
 	// Percentage of completed reviews and updates of asset inventory entries.
 	float completed_review_percentage = 15931;
+	int32 review_frequency = 12717;
+	// Service contains the name of the service (e.g., Asset Management).
+	string service = 11727;
 	string status = 11933;
 	string storage_facility = 2637;
 	string type = 11720;
@@ -401,8 +405,10 @@ message Backup {
 	option (resource_type_names) = "SecurityFeature";
 
 	bool enabled = 2815;
+	int32 frequency = 9581;
 	// The interval refers to the update interval in days.
 	google.protobuf.Duration interval = 7186;
+	int32 recovery_frequency = 8809;
 	google.protobuf.Duration retention_period = 6795;
 	optional string storage_id = 17051;
 	TransportEncryption transport_encryption = 2398;
@@ -575,12 +581,6 @@ message CipherSuite {
 	// naming schema: AES-128-GCM
 	string session_cipher = 5742;
 	repeated Cipher ciphers  = 8372;
-}
-
-// CloudFeature is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-message CloudFeature {
-	option (resource_type_names) = "CloudFeature";
-
 }
 
 // Infrastructure is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -3422,16 +3422,18 @@ message PolicyDocument {
 	string name = 2052 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5038;
+	AccessControlTypePolicy access_control_type_policy = 9164;
 	AssetInventory asset_inventory = 16496;
 	Backup backup = 16402;
-	CloudFeature cloud_feature = 1878;
 	repeated CryptographicHash cryptographic_hashs  = 12896;
 	DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 4864;
 	DataLocation data_location = 11474;
 	repeated DocumentSignature document_signatures  = 7191;
 	repeated Governance governances  = 4759;
 	LeastPrivilegePolicy least_privilege_policy = 12663;
+	MonitoringProcedure monitoring_procedure = 11357;
 	NeedToKnowPolicy need_to_know_policy = 3585;
+	NetworkThreatMitigationPolicy network_threat_mitigation_policy = 9407;
 	optional string parent_id = 18208;
 	SDNFunctionValidationPolicy sdn_function_validation_policy = 8099;
 	SchemaValidation validated_by = 5620;
