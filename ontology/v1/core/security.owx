@@ -517,7 +517,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:AssetInventory"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:property"/>
+            <DataProperty abbreviatedIRI="core:service"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1343,6 +1343,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
         <Literal>Class representing the inventory of assets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
+        <Literal>Service contains the name of the service (e.g., Asset Management).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

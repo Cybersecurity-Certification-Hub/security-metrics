@@ -151,7 +151,7 @@
         <DataProperty abbreviatedIRI="res:recoveryFrequency"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="res:property"/>
+        <DataProperty abbreviatedIRI="res:service"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:team"/>
@@ -688,9 +688,14 @@
         <Literal>recoveryFrequency</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:service</AbbreviatedIRI>
+        <Literal>Service contains the name of the service (e.g., Asset Management).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:property</AbbreviatedIRI>
-        <Literal>property</Literal>
+        <AbbreviatedIRI>res:service</AbbreviatedIRI>
+        <Literal>service</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

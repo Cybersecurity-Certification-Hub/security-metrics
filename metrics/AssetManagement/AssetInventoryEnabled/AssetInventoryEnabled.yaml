@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "fec3bdbe-b53a-4ffe-a334-2e01a86aa054"
 name: "AssetInventoryEnabled"
-description: "This rule assesses whether a [PolicyDocument] includes [AssetInventory] with [p1:property] set correctly."
+description: "This rule assesses whether a [PolicyDocument] includes [AssetInventory] with [p1:service] set correctly."
 
 implementationGuidelines:
   AMOE:

@@ -14,7 +14,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.assetInventory.property)
+	compare(data.operator, data.target_value, document.assetInventory.service)
 }
 
 message := "The policy document defines an enabled asset inventory cloud feature." if {
