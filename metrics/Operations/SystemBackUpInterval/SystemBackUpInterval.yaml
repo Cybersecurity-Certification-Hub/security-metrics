@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "094bc5ff-8f94-495b-ae95-59ded51e1af5"
+name: "SystemBackUpInterval"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Backup], has [p1:interval] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: SystemBackUpPolicyQ05
+    question: "How often are backups made?"
+    keywords: ["backup", "schedule"]
+category: "Operations"
+version: "1.0"
+comments: "This metric assesses the backup frequency. Measured in days."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: 1

@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "0528790f-b7c6-4998-a444-ee2d04c27773"
+name: "BackupAvailabilityForCloudCustomers"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Backup.CloudCustomers], has [p1:availability] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: BackupPolicyQ3
+    question: "Are there backup services for cloud customers?"
+    keywords: ["backup", "customer", "consumer", "backup and restore process"]
+category: "Operations"
+version: "1.0"
+comments: "This metric assesses the availability of backup services for cloud customers. Measured as string."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "in"
+    targetValue: "[no, yes]"

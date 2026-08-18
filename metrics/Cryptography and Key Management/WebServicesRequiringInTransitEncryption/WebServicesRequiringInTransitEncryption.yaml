@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "874096f5-6b13-4e3b-bcac-33c22789d9ab"
+name: "WebServicesRequiringInTransitEncryption"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Encryption.WebService], has [p1:type] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: EncryptionPolicyQ11
+    question: "What type of web services must encrypt data in transit? "
+    keywords: ["encryption mechanisms", "web services", "data in transit"]
+category: "Cryptography and Key Management"
+version: "1.0"
+comments: "This metric assesses which web services must encrypt data in transit. Measured as string."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[storage of sensitive or confidential information,transaction of sensitive or confidential information,user logons]"

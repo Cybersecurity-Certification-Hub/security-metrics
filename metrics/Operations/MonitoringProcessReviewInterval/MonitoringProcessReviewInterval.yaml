@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "3272d68d-3a28-4d65-95c7-55f12292a2f0"
+name: "MonitoringProcessReviewInterval"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Log.Procedure], has [p1:reviewInterval] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: MonitoringProcessFrequencyQ2
+    question: "How frequently should the processes be verified?"
+    keywords: ["data collection", "consolidation", "storage", "tools"]
+category: "Operations"
+version: "1.0"
+comments: "This metric assesses the recommended frequency of process verification. Measured in months."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 12
