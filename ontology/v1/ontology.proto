@@ -218,6 +218,7 @@ message ApplicationLogging {
 // AssetInventory is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 // AuditInterval contains the frequency of asset inventory audits in month.
 // Class representing the inventory of assets.
+// Service contains the name of the service (e.g., Asset Management).
 // Status contains the status of the asset (e.g., active, inactive).
 // StorageFacility contains the storage facility type of the asset (e.g., central, decentralized).
 // Type: contains the type of the asset, e.g., digital
@@ -233,8 +234,9 @@ message AssetInventory {
 	int32 audit_interval = 15088;
 	// Percentage of completed reviews and updates of asset inventory entries.
 	float completed_review_percentage = 15931;
-	string property = 11459;
 	int32 review_frequency = 12717;
+	// Service contains the name of the service (e.g., Asset Management).
+	string service = 11727;
 	string status = 11933;
 	string storage_facility = 2637;
 	string type = 11720;

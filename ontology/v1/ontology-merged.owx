@@ -1134,9 +1134,6 @@
         <DataProperty IRI="/classes/programmingVersion"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/property"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/protocol"/>
     </Declaration>
     <Declaration>
@@ -1189,6 +1186,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/securityOnly"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/service"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/serviceID"/>
@@ -1797,15 +1797,15 @@
     <SubClassOf>
         <Class IRI="/classes/AssetInventory"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/property"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <DataProperty IRI="/classes/reviewFrequency"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/AssetInventory"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/reviewFrequency"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
+            <DataProperty IRI="/classes/service"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -6012,6 +6012,11 @@ name = metadata.name</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/AssetInventory</IRI>
+        <Literal>Service contains the name of the service (e.g., Asset Management).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AssetInventory</IRI>
         <Literal>Status contains the status of the asset (e.g., active, inactive).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -8271,11 +8276,6 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/property</IRI>
-        <Literal>property</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/protects</IRI>
         <Literal>protects</Literal>
     </AnnotationAssertion>
@@ -8393,6 +8393,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/securityOnly</IRI>
         <Literal>securityOnly</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/service</IRI>
+        <Literal>Service contains the name of the service (e.g., Asset Management).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/service</IRI>
+        <Literal>service</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
