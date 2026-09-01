@@ -2,16 +2,17 @@ package cch.metrics.backup_enabled
 
 import data.cch.compare
 import rego.v1
-import input.backups as backups
+import input as storage
 
 default applicable = false
 
 default compliant = false
 
 applicable if {
-	backups
+	storage.backups != {}
+	"Storage" in storage.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, backups[_].enabled)
+	compare(data.operator, data.target_value, storage.backups[_].enabled)
 }

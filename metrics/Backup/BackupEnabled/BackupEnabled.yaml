@@ -1,10 +1,10 @@
 # ====== Metadata ======
-id: 40f80c7d-a300-4eca-8b43-d4ac575ecc77
+id: c7a4fae4-216a-4440-93e9-637cb08d79a8
 name: BackupEnabled
-description: This rule assesses whether a resource that offers [p1:backups] has backup [p1:enabled].
-category: Backup
+description: This rule assesses whether a [Storage] includes [Backup] with [p1:enabled] set correctly.
+category: "Backup"
 version: "v1" 
-comments: The existing Backup metrics assess a policy document. This one assesses the resource itself, so an estate can be shown to have backups configured rather than only documented.
+comments: This metric assesses whether a storage resource has backups configured.
 # ====== Configuration ======
 configuration:
   p1:
