@@ -871,7 +871,7 @@
         <Class abbreviatedIRI="core:L3Firewall"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:restrictedPorts"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
