@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: 22a2746c-d934-4b99-afe1-adfaa3af11d1
+id: 470465a8-0eef-411d-b46a-43845bb288fa
 name: RestrictRDP
 description: This rule assesses whether an [NetworkInterface] that offers the property [l3Firewall], has [p1:restrictedPorts] configured such that RDP (port 3389) is restricted.
 category: NetworkSecurity
