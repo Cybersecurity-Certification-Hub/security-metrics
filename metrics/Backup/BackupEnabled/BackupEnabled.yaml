@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: 40f80c7d-a300-4eca-8b43-d4ac575ecc77
+name: BackupEnabled
+description: This rule assesses whether a resource that offers [p1:backups] has backup [p1:enabled].
+category: Backup
+version: "v1" 
+comments: The existing Backup metrics assess a policy document. This one assesses the resource itself, so an estate can be shown to have backups configured rather than only documented.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True
