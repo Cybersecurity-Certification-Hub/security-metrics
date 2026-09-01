@@ -9,7 +9,9 @@ default applicable = false
 default compliant = false
 
 applicable if {
-	# we are only interested in some kind of privileged user    
+	"Identity" in identity.type
+
+	# we are only interested in some kind of privileged user
 	identity.privileged
 }
 
