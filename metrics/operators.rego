@@ -40,6 +40,7 @@ compare(operator, target_values, actual_value) := x if {
 	operator == "isIn"
 
 	# Check if the input value actual_value is a string, otherwise the compare function for array must be used
+	is_array(target_values)
 	is_string(actual_value)
 	x := actual_value in target_values
 }
@@ -49,8 +50,20 @@ compare(operator, target_values, actual_value) := x if {
 	operator == "isIn"
 
 	# Check if the input value actual_value is a number, otherwise the compare function for array must be used
+	is_array(target_values)
 	is_number(actual_value)
 	x := actual_value in target_values
+}
+
+# Scalar against scalar: isIn degrades to equality, so a metric can move to
+# isIn before every evidence collector emits lists, without a regression.
+compare(operator, target_value, actual_value) := x if {
+	operator == "isIn"
+	not is_array(target_value)
+	not is_object(target_value)
+	not is_array(actual_value)
+	not is_object(actual_value)
+	x := actual_value == target_value
 }
 
 # Checks if the actual_values (array) contains the target_value (string)
@@ -66,9 +79,9 @@ compare(operator, target_value, actual_values) := x if {
 # Checks if one element of actual_values (array) exists in target_values (array)
 compare(operator, target_values, actual_values) := x if {
 	operator == "isIn"
+	is_array(target_values)
 	is_array(actual_values)
-	some act_val in actual_values
-	x := act_val in target_values
+	x := count([v | some v in actual_values; v in target_values]) > 0
 }
 
 # Checks if one element of target_values (array) exists in key of actual_values (object)
