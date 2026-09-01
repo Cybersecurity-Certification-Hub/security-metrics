@@ -275,9 +275,6 @@
         <DataProperty abbreviatedIRI="prop:region"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:restrictedPorts"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="prop:storageFacility"/>
     </Declaration>
     <Declaration>
