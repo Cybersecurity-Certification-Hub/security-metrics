@@ -14,5 +14,5 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, identity.enforceMFA)
+	compare(data.operator, data.target_value, identity.enforceMfa)
 }
