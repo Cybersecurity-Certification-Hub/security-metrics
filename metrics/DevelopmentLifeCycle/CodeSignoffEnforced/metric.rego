@@ -2,17 +2,17 @@ package cch.metrics.code_signoff_enforced
 
 import data.cch.compare
 import rego.v1
-import input.codeRepository as repo
+import input.codeSignoff as cs
 
 default applicable = false
 
 default compliant = false
 
 applicable if {
-	# we are only interested in code repositories with the codeSignoff property
-	repo.codeSignoff
+    cs
+    "CodeRepository" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, repo.codeSignoff.enforced)
+	compare(data.operator, data.target_value, cs.enforced)
 }

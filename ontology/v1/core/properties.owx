@@ -88,10 +88,16 @@
         <ObjectProperty abbreviatedIRI="prop:validatedBy"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:failedAuthenticationAttempts"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:apiHitsPerMonth"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:authenticationMechanism"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:authorizationTypes"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:broadAssignments"/>
@@ -107,6 +113,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:contextIsChecked"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:coveredAttackTypes"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:creation_time"/>
@@ -128,6 +137,24 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:disablePasswordPolicy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:isDefined"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:reviewFrequency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:frequency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:recoveryFrequency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:service"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:team"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:endColumn"/>
@@ -280,7 +307,10 @@
         <DataProperty abbreviatedIRI="res:startLine"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="res:status"/>
+        <DataProperty abbreviatedIRI="prop:status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:updateDuration"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:usesSalt"/>
@@ -302,6 +332,12 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:arguments"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:auditInterval"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:updateInterval"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:enabled"/>
@@ -326,6 +362,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:inbound"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:interval"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:ips"/>
@@ -359,6 +398,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:modify"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:methodology"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:path"/>
@@ -532,6 +574,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:auditInterval</AbbreviatedIRI>
+        <Literal>The time needed for an audit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>res:authenticationMechanism</AbbreviatedIRI>
         <Literal>for example: RSA, ECDSA</Literal>
     </AnnotationAssertion>
@@ -619,6 +666,41 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:disablePasswordPolicy</AbbreviatedIRI>
         <Literal>disablePasswordPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:isDefined</AbbreviatedIRI>
+        <Literal>isDefined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:reviewFrequency</AbbreviatedIRI>
+        <Literal>reviewFrequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:frequency</AbbreviatedIRI>
+        <Literal>frequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:recoveryFrequency</AbbreviatedIRI>
+        <Literal>recoveryFrequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:service</AbbreviatedIRI>
+        <Literal>Service contains the name of the service (e.g., Asset Management).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:service</AbbreviatedIRI>
+        <Literal>service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:team</AbbreviatedIRI>
+        <Literal>team</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -947,13 +1029,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:status</AbbreviatedIRI>
+        <AbbreviatedIRI>prop:status</AbbreviatedIRI>
         <Literal>status</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:target</AbbreviatedIRI>
         <Literal>target</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:updateDuration</AbbreviatedIRI>
+        <Literal>The time needed for an update.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1077,6 +1164,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:interval</AbbreviatedIRI>
+        <Literal xml:lang="english">interval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:ips</AbbreviatedIRI>
         <Literal xml:lang="english">ips</Literal>
     </AnnotationAssertion>
@@ -1129,6 +1221,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:modify</AbbreviatedIRI>
         <Literal>modify</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:methodology</AbbreviatedIRI>
+        <Literal xml:lang="english">methodology</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1281,7 +1378,3 @@
         <Literal xml:lang="english">value</Literal>
     </AnnotationAssertion>
 </Ontology>
-
-
-
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->

@@ -180,6 +180,13 @@
         <Class abbreviatedIRI="res:Module" />
         <Class abbreviatedIRI="res:SoftwareResource" />
     </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SoftwareResource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
+            <Class abbreviatedIRI="core:SoftwareAttestation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Darwin</AbbreviatedIRI>
