@@ -2,18 +2,18 @@ package cch.metrics.monitoring_review_frequency
 
 import data.cch.compare
 import rego.v1
-import input.governance as governance
+import input.monitoringProcedure as monitoringProcedure
 
 default applicable := false
 default compliant := false
 
 applicable if {
-	governance != {}
+	monitoringProcedure != {}
 	"PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, governance.monitoringProcedure.intervalMonths)
+	compare(data.operator, data.target_value, monitoringProcedure.intervalMonths)
 }
 
 message := "Monitoring procedures are reviewed frequently enough to ensure compliance." if {
