@@ -275,9 +275,6 @@
         <DataProperty abbreviatedIRI="prop:region"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:restrictedPorts"/>
-    </Declaration>
-    <Declaration>
         <DataProperty abbreviatedIRI="prop:storageFacility"/>
     </Declaration>
     <Declaration>
@@ -871,7 +868,7 @@
         <Class abbreviatedIRI="core:L3Firewall"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:restrictedPorts"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
