@@ -55,17 +55,6 @@ compare(operator, target_values, actual_value) := x if {
 	x := actual_value in target_values
 }
 
-# Scalar against scalar: isIn degrades to equality, so a metric can move to
-# isIn before every evidence collector emits lists, without a regression.
-compare(operator, target_value, actual_value) := x if {
-	operator == "isIn"
-	not is_array(target_value)
-	not is_object(target_value)
-	not is_array(actual_value)
-	not is_object(actual_value)
-	x := actual_value == target_value
-}
-
 # Checks if the actual_values (array) contains the target_value (string)
 compare(operator, target_value, actual_values) := x if {
 	operator == "isIn"

@@ -8,5 +8,5 @@ comments: The L3 Firewall provides network-layer security by controlling traffic
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: "22"
+    operator: "isIn"
+    targetValue: ["22"]

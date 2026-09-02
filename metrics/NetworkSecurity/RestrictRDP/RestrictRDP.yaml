@@ -9,4 +9,4 @@ comments: The L3 Firewall provides network-layer security by controlling traffic
 configuration:
   p1:
     operator: "isIn"
-    targetValue: "3389"
+    targetValue: ["3389"]

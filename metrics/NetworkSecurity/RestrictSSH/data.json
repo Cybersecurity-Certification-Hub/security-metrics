@@ -1,4 +1,4 @@
 {
     "operator" : "isIn",
-    "target_value" : "22"
+    "target_value" : ["22"]
 }
