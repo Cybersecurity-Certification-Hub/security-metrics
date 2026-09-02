@@ -10,6 +10,7 @@ default compliant = false
 
 applicable if {
 	storage.backups != {}
+	count(storage.backups) > 0
 	"Storage" in storage.type
 }
 
