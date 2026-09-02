@@ -872,6 +872,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:L3Firewall"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:allowedSources"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:LibraryEntryPoint"/>
         <Class abbreviatedIRI="core:LocalEntryPoint"/>
     </SubClassOf>
