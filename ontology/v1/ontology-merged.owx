@@ -1629,6 +1629,9 @@
         <Datatype IRI="/datatypes/listCpgNodes"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/allowedSources"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/modelStealResilience"/>
     </Declaration>
     <Declaration>
@@ -3661,6 +3664,13 @@
     <SubClassOf>
         <Class IRI="/classes/L3Firewall"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/allowedSources"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/L3Firewall"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/properties/enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
@@ -3676,7 +3686,7 @@
         <Class IRI="/classes/L3Firewall"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/restrictedPorts"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
