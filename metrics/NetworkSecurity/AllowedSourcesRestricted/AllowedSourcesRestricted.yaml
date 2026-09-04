@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: 3e7a9c41-55d2-4b08-9f2e-8a41c6d0b7aa
+name: AllowedSourcesRestricted
+description: This rule assesses whether an [NetworkInterface] that offers the property [l3Firewall], has [p1:allowedSources] configured correctly.
+category: NetworkSecurity
+version: "v1"
+comments: The allowlist target must use the same source descriptors the evidence emits, an IP with optional size such as "10.8.0.0/256", "vnet:<id>" for virtual-network scoped rules, or "0.0.0.0/0" for unrestricted rules. An empty allowedSources list is compliant, no source can reach the management ports at all.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "allIn"
+    targetValue: ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]
