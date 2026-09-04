@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "cf1c1d03-059a-44c7-a681-14c215474922"
+name: "NumberOfUnresolvedAuditNonConformities"
+description: "This rule assesses whether a [Resource] that offers the property [Compliance.Audit], has [p1:unresolvedNonConformities] set correctly."
+implementationGuidelines:
+  FSC:
+    details: ["- Information on Internal Audit findings and the corresponding status"]
+category: "Compliance"
+version: "1.0"
+comments: "Unresolved non-conformities based on internal audits - Check whether identified non-conformities were communicated and followed-up | Selector: FSC (Resource Type) [TargetValue is measured in units] [Previous name: MT-CO-03.4H-2]"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: 0
