@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: SecureBootEnabled
+description: This rule assesses whether a [VirtualMachine] that exposes a [SecurityProfile] with [UefiSettings] has [p1:secureBootEnabled] configured correctly.
+category: InfrastructureVirtualizationSecurity
+version: "1.0"
+comments: Secure Boot ensures that a virtual machine only boots trusted code signed by authorized authorities, protecting the guest operating system and hypervisor from tampering during the boot process.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True
