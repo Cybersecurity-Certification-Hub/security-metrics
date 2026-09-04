@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "e70bb32d-5313-44df-9668-df5669e764f6"
+name: "NetworkSecurityPolicyMitigationScope"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [NetworkSecurity], has [p1:mitigationScope] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: NetworkSecurityPolicy01
+    question: "Which network-level attacks are mitigated by the implemented mechanisms?"
+    keywords: ["network security", "DoS", "DDoS", "proxy", "IDS", "Denial of service protection"]
+category: "Communication Security"
+version: "1.0"
+comments: "This metric assesses the network-level attacks addressed by implemented mechanisms. Measured as string."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[dos, denial of service]"

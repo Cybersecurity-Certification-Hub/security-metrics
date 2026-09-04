@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "57778126-a7ae-4021-9c61-ac1ec5c50c22"
+name: "IncidentManagementForensicTeam"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityIncident], has [p1:forensicTeam] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: IncidentManagementPolicy13
+    question: "Which entity coordinates the forensic investigation?"
+    keywords: ["forensic", "incident management"]
+category: "Security Incident Management"
+version: "1.0"
+comments: "This metric assesses the entity responsible for coordinating forensic investigations. Measured as string."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[CERT]"
