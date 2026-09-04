@@ -353,9 +353,6 @@
         <DataProperty abbreviatedIRI="prop:percentageLastMonth"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:status"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:Cipher"/>
     </Declaration>
     <Declaration>

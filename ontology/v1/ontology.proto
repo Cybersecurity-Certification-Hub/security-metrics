@@ -2442,9 +2442,10 @@ message L3Firewall {
 	option (resource_type_names) = "Authorization";
 	option (resource_type_names) = "SecurityFeature";
 
+	repeated string allowed_sources = 4470;
 	bool enabled = 9476;
 	bool inbound = 1000;
-	string restricted_ports = 7341;
+	repeated string restricted_ports = 7341;
 }
 
 // LeastPrivilegePolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
