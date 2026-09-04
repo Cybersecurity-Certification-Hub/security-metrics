@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: IntrusionDetectionEnabled
+description: This rule assesses whether a [NetworkInterface] that uses an [AccessRestriction] with an [L3Firewall] has [p1:intrusionDetectionEnabled] configured correctly.
+category: NetworkSecurity
+version: "1.0"
+comments: Enabling intrusion detection on perimeter firewalls identifies malicious network flows and supports timely containment of network-based attacks.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True

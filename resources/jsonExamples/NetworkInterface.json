@@ -16,7 +16,8 @@
         "l3_firewall": {
             "enabled": true,
             "inbound": true,
-            "restricted_ports": "80,443"
+            "restricted_ports": "80,443",
+            "intrusion_detection_enabled": true
         }
     },
     "geo_location": {
