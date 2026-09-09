@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "2e3b5a7d-4ec4-4e64-9635-f3946f256a0a"
+name: "TestDataAnonymizationRequired"
+description: "This rule assesses whether a [PolicyDocument] governing test data has its [p1:anonymizationRequiredForNonProd] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the procedure require anonymization/pseudonymization/fictitious data specifically for development, testing, or non-production environments?"
+    keywords: ["anonymized", "pseudonymization", "fictitious data", "non-production"]
+category: "InformationProcessing"
+version: "v1"
+comments: "The procedure must require anonymization/pseudonymization/fictitious data specifically for development, testing, or non-production environments."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
