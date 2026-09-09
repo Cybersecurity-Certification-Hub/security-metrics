@@ -1,6 +1,7 @@
 package cch.metrics.code_notebook_vulnerabilities_detected
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 
 import input.Vulnerabilities as vuln
@@ -17,3 +18,5 @@ applicable if {
 compliant if {
 	compare(data.operator, data.target_value, count(vuln))
 }
+
+results := [comparison_result("Vulnerabilities.count", count(vuln))]

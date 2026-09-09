@@ -1,6 +1,7 @@
 package cch.metrics.os_logging_retention
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.osLogging as logging
 
@@ -18,3 +19,5 @@ compliant if {
 
 	compare(data.operator, data.target_value, days)
 }
+
+results := [comparison_result("osLogging.retentionPeriod.days", time.parse_duration_ns(logging.retentionPeriod) / (((1000 * 1000) * 1000) * 3600))]

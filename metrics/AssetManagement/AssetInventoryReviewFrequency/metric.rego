@@ -1,6 +1,7 @@
 package cch.metrics.asset_inventory_review_frequency
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input as document
 
@@ -22,3 +23,5 @@ message := "The policy document defines the asset inventory review frequency." i
 } else := "The policy document does not define the asset inventory review frequency within the specified interval." if {
 	not compliant
 }
+
+results := [comparison_result("assetInventory.reviewFrequency", document.assetInventory.reviewFrequency)]

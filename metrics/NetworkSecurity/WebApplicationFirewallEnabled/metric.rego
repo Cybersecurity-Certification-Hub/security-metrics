@@ -1,6 +1,7 @@
 package cch.metrics.web_application_firewall_enabled
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.accessRestriction.webApplicationFirewall as webApp
 
@@ -17,3 +18,5 @@ applicable if {
 compliant if {
 	compare(data.operator, data.target_value, webApp.enabled)
 }
+
+results := [comparison_result("accessRestriction.webApplicationFirewall.enabled", webApp.enabled)]

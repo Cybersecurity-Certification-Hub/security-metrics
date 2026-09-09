@@ -1,6 +1,7 @@
 package cch.metrics.data_confidentiality_sdn_policy_presence
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.dataConfidentialitySDNPolicy as dataConfidentialitySDNPolicy
 
@@ -21,3 +22,5 @@ message := "The policy document defines a data confidentiality policy for SDN." 
 } else := "The policy document does not define a data confidentiality policy for SDN." if {
 	not compliant
 }
+
+results := [comparison_result("dataConfidentialitySDNPolicy.isDefined", dataConfidentialitySDNPolicy.isDefined)]

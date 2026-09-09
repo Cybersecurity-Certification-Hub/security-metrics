@@ -1,6 +1,7 @@
 package cch.metrics.required_reviewers
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.numberOfRequiredReviewers as reviewers
 
@@ -16,3 +17,5 @@ applicable if {
 compliant if {
     compare(data.operator, data.target_value, reviewers)
 }
+
+results := [comparison_result("numberOfRequiredReviewers", reviewers)]

@@ -1,6 +1,7 @@
 package cch.metrics.monitoring_review_frequency
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.monitoringProcedure as monitoringProcedure
 
@@ -22,3 +23,4 @@ message := "Monitoring procedures are reviewed frequently enough to ensure compl
 	not compliant
 }
 
+results := [comparison_result("monitoringProcedure.intervalMonths", monitoringProcedure.intervalMonths)]

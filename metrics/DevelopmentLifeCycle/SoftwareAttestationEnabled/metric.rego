@@ -1,6 +1,7 @@
 package cch.metrics.software_attestation_enabled
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.softwareAttestations as sa
 
@@ -19,3 +20,5 @@ compliant if {
 		compare(data.operator, data.target_value, elem.enabled)
 	}
 }
+
+results := [comparison_result("softwareAttestations.enabled", elem.enabled) | elem := sa[_]]

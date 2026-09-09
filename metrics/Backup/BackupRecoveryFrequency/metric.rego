@@ -1,6 +1,7 @@
 package cch.metrics.backup_recovery_frequency
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input as document
 
@@ -21,3 +22,5 @@ message := "The policy document defines the backup recovery frequency." if {
 } else := "The policy document does not define the backup recovery frequency within the specified interval." if {
 	not compliant
 }
+
+results := [comparison_result("backup.recoveryFrequency", document.backup.recoveryFrequency)]

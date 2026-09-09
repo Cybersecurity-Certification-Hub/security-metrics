@@ -1,6 +1,7 @@
 package cch.metrics.strong_cryptographic_hash
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.cryptographicHash as ch
 
@@ -16,3 +17,5 @@ applicable if {
 compliant if {
 	compare(data.operator, data.target_value, ch.algorithm)
 }
+
+results := [comparison_result("cryptographicHash.algorithm", ch.algorithm)]

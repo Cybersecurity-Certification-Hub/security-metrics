@@ -1,6 +1,7 @@
 package cch.metrics.spam_error_rate
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 
 default applicable = false
@@ -14,3 +15,5 @@ applicable if {
 compliant if {
 	compare(data.operator, data.target_value, input.SPAMErrorRate)
 }
+
+results := [comparison_result("SPAMErrorRate", input.SPAMErrorRate)]

@@ -1,6 +1,7 @@
 package cch.metrics.model_steal_resilience
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 
 import input.modelStealResilience as resilience
@@ -17,3 +18,5 @@ applicable if {
 compliant if {
 	compare(data.operator, data.target_value, resilience)
 }
+
+results := [comparison_result("modelStealResilience", resilience)]

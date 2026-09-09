@@ -1,6 +1,7 @@
 package cch.metrics.asset_inventory_audit_frequency
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input as document
 
@@ -22,3 +23,5 @@ message := "Asset inventory audits are performed frequently enough." if {
 } else := "Asset inventory audits are not performed frequently enough. Audit frequency should be within the specified interval." if {
   not compliant
 }
+
+results := [comparison_result("assetInventory.auditInterval", document.assetInventory.auditInterval)]

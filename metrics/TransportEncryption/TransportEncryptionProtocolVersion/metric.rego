@@ -1,6 +1,7 @@
 package cch.metrics.transport_encryption_protocol_version
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.transportEncryption as enc
 
@@ -15,3 +16,5 @@ applicable if {
 compliant if {
 	compare(data.operator, data.target_value, enc.protocolVersion)
 }
+
+results := [comparison_result("transportEncryption.protocolVersion", enc.protocolVersion)]

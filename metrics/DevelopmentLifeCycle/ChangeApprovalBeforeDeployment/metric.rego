@@ -1,6 +1,7 @@
 package cch.metrics.change_approval_before_deployment
 
 import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.changeAndConfigurationManagement as ccm
 
@@ -15,3 +16,5 @@ applicable if {
 compliant if {
     compare(data.operator, data.target_value, ccm.requestForChange.approvedBeforeDeployment)
 }
+
+results := [comparison_result("changeAndConfigurationManagement.requestForChange.approvedBeforeDeployment", ccm.requestForChange.approvedBeforeDeployment)]
