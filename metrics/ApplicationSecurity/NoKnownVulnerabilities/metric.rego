@@ -9,7 +9,7 @@ default compliant = false
 default applicable = false
 
 applicable if {
-	vul
+	vul != {}
 }
 
 compliant if {
