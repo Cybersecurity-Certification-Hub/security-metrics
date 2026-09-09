@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "97cea29c-4409-485f-8b9d-350bc4b5d03a"
+name: "IncidentManagementProcedureDocumented"
+description: "This rule assesses whether a [PolicyDocument] describing incident management has its [p1:registryAndSlaStated] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the organization have an incident management procedure with an incident registry and a 72-hour handling reference?"
+    keywords: ["incident management procedure", "Incident Registry", "72 hours"]
+category: "SecurityIncidents"
+version: "v1"
+comments: "A documented incident management procedure must reference an incident registry and a 72-hour handling reference."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
