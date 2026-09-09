@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "97b2b5c6-0318-4876-ba4a-8b655dcc8094"
+name: "AuditAccessUnrestrictedClausePresent"
+description: "This rule assesses whether the audit [PolicyDocument] has its [p1:unrestrictedAccessGranted] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the clause grant direct, unrestricted, on-demand access (not only pre-scheduled)?"
+    keywords: ["direct and unrestricted access", "unrestricted access"]
+category: "Audit"
+version: "v1"
+comments: "The clause must grant direct, unrestricted, on-demand access (not only pre-scheduled) to supervisory/inspection entities."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
