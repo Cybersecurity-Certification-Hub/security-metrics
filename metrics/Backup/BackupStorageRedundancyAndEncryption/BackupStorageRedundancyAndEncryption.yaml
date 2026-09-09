@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "eeec9d69-0856-43ca-a827-e286a58c4cdd"
+name: "BackupStorageRedundancyAndEncryption"
+description: "This rule assesses whether a [Backup] configuration has its [p1:redundantAndEncrypted] property set correctly, in conjunction with the existing BackupFrequency (<=7 days) and BackupRecoveryFrequency (<=6 months) metrics."
+implementationGuidelines:
+  AMOE:
+    question: "Does the procedure require backups on redundant and encrypted storage systems?"
+    keywords: ["redundant and encrypted", "All backups are stored on redundant and encrypted systems"]
+category: "Backup"
+version: "v1"
+comments: "Backups must be stored on redundant and encrypted systems. This metric complements the existing BackupFrequency and BackupRecoveryFrequency metrics, which already cover the weekly-backup and 6-monthly-recovery-test requirements of this control; together the three satisfy the full control."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
