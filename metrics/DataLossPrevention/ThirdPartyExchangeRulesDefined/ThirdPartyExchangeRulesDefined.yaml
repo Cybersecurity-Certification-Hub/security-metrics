@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "7143c9c7-c366-404d-8c55-49fe221cab23"
+name: "ThirdPartyExchangeRulesDefined"
+description: "This rule assesses whether the DLP [PolicyDocument] has its [p1:thirdPartyExchangeRulesDefined] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the policy specifically define rules for information exchange with third parties?"
+    keywords: ["third parties", "third-party exchange"]
+category: "DataLossPrevention"
+version: "v1"
+comments: "The policy must specifically define rules for information exchange with third parties."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
