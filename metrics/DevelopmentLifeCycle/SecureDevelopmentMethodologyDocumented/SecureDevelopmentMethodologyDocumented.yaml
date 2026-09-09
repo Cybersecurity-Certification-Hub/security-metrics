@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "6b3539da-e0b6-4807-a0b1-ad17dd440305"
+name: "SecureDevelopmentMethodologyDocumented"
+description: "This rule assesses whether a [PolicyDocument] representing the Secure Development Methodology has its [p1:referencesIndustryFramework] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "What security requirements should be considered throughout the Software Development Lifecycle (SDLC)?"
+    keywords: ["Secure Development", "SDLC", "OWASP", "CERT Secure Coding standards"]
+category: "DevelopmentLifeCycle"
+version: "v1"
+comments: "A Secure Development Methodology document must exist and reference an industry framework (OWASP/SANS/SAFECode/CERT). Round 4 briefly proposed a pentest-topic question here, but that duplicated SDLC-02-M1 (Development_pentest) and was a copy/paste mix-up between rows in the assessment sheet; Round 5 confirmed the question is reverted to security-requirements phrasing matching the document's own Purpose paragraph, and the CERT Secure Coding standards keyword was added."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
