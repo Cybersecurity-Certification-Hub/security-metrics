@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "f3a1c9d0-6b7e-4a2f-9c5d-1e8b4a6f2c3d"
+name: "SecurityTrainingRoleFit"
+description: "This rule assesses whether a [Training] plan has its [p1:roleAdjustedTracksStated] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the plan include role-based tracks adjusted by employee function?"
+    keywords: ["role-based tracks", "role-based"]
+category: "Governance"
+version: "v1"
+comments: "The training plan must be role-adjusted for specific functions. Split out of the former combined SecurityTrainingCadenceAndRoleFit metric (see SecurityTrainingCadence for the annual-cadence check); the question was reworded from a yes/no phrasing (which AMOE cannot answer) to a literal-extraction phrasing targeting the document's role-based-tracks sentence."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
