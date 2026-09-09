@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "e06b9c22-44d3-450d-8822-92ca8ed68226"
+name: "SecurityTrainingCadence"
+description: "This rule assesses whether a [Training] plan has its [p1:annualCadenceStated] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Is the plan delivered at least annually to all employees?"
+    keywords: ["annually"]
+category: "Governance"
+version: "v1"
+comments: "The training plan must be delivered at least annually. Split out of the former combined SecurityTrainingCadenceAndRoleFit metric (see SecurityTrainingRoleFit for the role-adjustment check) after AMOE's assessment could not map the combined annually/role-based check correctly."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
