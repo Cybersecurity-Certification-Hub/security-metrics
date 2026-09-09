@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "653ed45d-bd64-4f2c-9a1a-31306eefc9d4"
+name: "AcceptableUsePolicyDocumented"
+description: "This rule assesses whether an [PolicyDocument] representing an Acceptable Use Policy is present, with its [p1:exists] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "What is the purpose of this document and its content?"
+    keywords: ["acceptable use", "use of information", "acceptable use of information"]
+category: "InformationProcessing"
+version: "v1"
+comments: "A formal procedure documenting acceptable use of information and company assets must exist in the evidence set. Question reworded from a yes/no 'does this exist' phrasing (which AMOE cannot answer) to a literal-extraction question targeting the document's Purpose sentence; the Internet Access, Email, and Removable Devices checks now live in their own split metrics (InternetAccessControlStated, EmailControlStated, RemovableDeviceControlStated)."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
