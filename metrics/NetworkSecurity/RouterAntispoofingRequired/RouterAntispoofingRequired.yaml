@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "d7c3e9a1-52f8-4b6d-8a0e-c4f1b9d6e825"
+name: "RouterAntispoofingRequired"
+description: "This rule assesses whether a [PolicyDocument] representing a [NetworkThreatMitigationPolicy] has its [p1:antispoofingRequired] property set correctly for internet-facing routers."
+implementationGuidelines:
+  AMOE:
+    question: "Do all Internet-facing routers implement antispoofing mechanisms?"
+    keywords: ["antispoofing", "All Internet-facing routers implement antispoofing mechanisms"]
+category: "NetworkSecurity"
+version: "v1"
+comments: "The standard must explicitly require antispoofing mechanisms on internet-facing routers. Split out of the former combined RouterFilteringAntispoofingRequired metric (see RouterFilteringRequired for the filtering check) after AMOE's assessment could not map the combined filtering-AND-antispoofing question correctly."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
