@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "8318095b-01b0-487e-b7ff-7835ae08e88b"
+name: "AcceptableUsePolicyScopeCoverage"
+description: "This rule assesses whether an Acceptable Use [PolicyDocument] has its [p1:mandatedAreaCoveragePercent] set correctly, covering internet access, email, and removable devices."
+implementationGuidelines:
+  AMOE:
+    question: "How many of the three mandated control areas (internet access, email, removable devices) are explicitly addressed?"
+    keywords: ["internet access controls", "email controls", "removable device controls"]
+category: "InformationProcessing"
+version: "v1"
+comments: "All three mandated control areas (internet access, email, removable devices) must be explicitly addressed."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: 100
