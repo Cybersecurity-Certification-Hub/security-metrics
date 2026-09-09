@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "d76355c0-7e34-4c6f-8fc1-eb7657dade73"
+name: "EncryptedTransferChannelRequired"
+description: "This rule assesses whether a [PolicyDocument] governing information transfer has its [p1:encryptedChannelRequired] property (e.g., sFTP/HTTPS) set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the policy require encrypted channels (sFTP/HTTPS) for data transmission/reception?"
+    keywords: ["encrypted channels", "HTTPS", "sFTP", "transfer"]
+category: "Cryptography"
+version: "v1"
+comments: "Confidential/secret information transfers must use encrypted channels (sFTP/HTTPS)."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
