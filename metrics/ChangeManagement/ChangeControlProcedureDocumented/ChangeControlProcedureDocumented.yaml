@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "0975d365-f240-4d96-8c2f-3a1f8eec74b2"
+name: "ChangeControlProcedureDocumented"
+description: "This rule assesses whether a [PolicyDocument] governing [RequestForChange] handling has its [p1:approvalRequiredBeforeProdChange] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does a formal change control procedure exist requiring approval before modifying production configuration?"
+    keywords: ["approving changes", "change control", "modification of the configuration"]
+category: "ChangeManagement"
+version: "v1"
+comments: "A formal change control procedure must require approval before modifying production configuration."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
