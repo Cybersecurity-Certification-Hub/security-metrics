@@ -9,7 +9,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
-    vc
+    vc != {}
     "CodeRepository" in input.type
 }
 

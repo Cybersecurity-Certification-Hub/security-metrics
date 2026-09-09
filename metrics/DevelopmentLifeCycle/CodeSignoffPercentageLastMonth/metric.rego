@@ -9,7 +9,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
-    cs
+    cs != {}
     "CodeRepository" in input.type
 }
 
