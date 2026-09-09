@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "1612597c-738a-4ef8-800b-bfae67d483f2"
+name: "SdlcChecklistCoverage"
+description: "This rule assesses whether the Secure Development Methodology [PolicyDocument] has its [p1:checklistCoveragePercent] set correctly, across the 10 mandated SDLC checklist items."
+implementationGuidelines:
+  AMOE:
+    question: "What fraction of the 10 mandated SDLC checklist items are explicitly present?"
+    keywords: ["architecture", "documentation", "testing", "static analysis", "rollback"]
+category: "DevelopmentLifeCycle"
+version: "v1"
+comments: "At least 70% of the 10 mandated SDLC checklist items (architecture, documentation, testing, exception handling, syntax, patterns, compiler tooling, static analysis, rollback, no libraries in production) must be explicitly present."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ">="
+    targetValue: 70
