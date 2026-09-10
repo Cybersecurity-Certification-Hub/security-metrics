@@ -1,6 +1,5 @@
 package cch.metrics.java_runtime
 
-import data.cch.compare
 import data.cch.comparison_result
 import rego.v1
 import input as func
@@ -14,7 +13,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, func.runtimeVersion)
+	every r in results { r.success }
 }
 
 results := [comparison_result("runtimeVersion", func.runtimeVersion)]

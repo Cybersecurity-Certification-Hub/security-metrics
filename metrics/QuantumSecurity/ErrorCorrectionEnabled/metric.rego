@@ -1,6 +1,5 @@
 package cch.metrics.error_correction_enabled
 
-import data.cch.compare
 import data.cch.comparison_result
 import rego.v1
 
@@ -13,7 +12,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, input.ErrorCorrectionEnabled)
+	every r in results { r.success }
 }
 
 results := [comparison_result("ErrorCorrectionEnabled", input.ErrorCorrectionEnabled)]

@@ -1,6 +1,5 @@
 package cch.metrics.anomaly_detection_enabled
 
-import data.cch.compare
 import data.cch.comparison_result
 import rego.v1
 
@@ -15,7 +14,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, enabled)
+	every r in results { r.success }
 }
 
 results := [comparison_result("anomalyDetection.enabled", enabled)]

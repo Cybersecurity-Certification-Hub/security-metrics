@@ -1,6 +1,5 @@
 package cch.metrics.need_to_know_policy_presence
 
-import data.cch.compare
 import data.cch.comparison_result
 import rego.v1
 import input.needToKnowPolicy as needToKnowPolicy
@@ -14,7 +13,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, needToKnowPolicy.isDefined)
+	every r in results { r.success }
 }
 
 message := "The policy document defines a need-to-know policy." if {

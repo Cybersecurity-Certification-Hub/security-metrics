@@ -1,6 +1,5 @@
 package cch.metrics.rate_limiting_enabled
 
-import data.cch.compare
 import data.cch.comparison_result
 import rego.v1
 
@@ -16,7 +15,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, rl.enabled)
+	every r in results { r.success }
 }
 
 results := [comparison_result("accessRestriction.rateLimiting.enabled", rl.enabled)]

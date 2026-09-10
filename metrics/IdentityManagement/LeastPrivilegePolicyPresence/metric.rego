@@ -1,6 +1,5 @@
 package cch.metrics.least_privilege_policy_presence
 
-import data.cch.compare
 import data.cch.comparison_result
 import rego.v1
 import input.leastPrivilegePolicy as leastPrivilegePolicy
@@ -14,7 +13,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, leastPrivilegePolicy.isDefined)
+	every r in results { r.success }
 }
 
 message := "The policy document defines a least privilege policy." if {

@@ -1,6 +1,5 @@
 package cch.metrics.asset_inventory_update_frequency
 
-import data.cch.compare
 import data.cch.comparison_result
 import rego.v1
 import input.assetInventory as ai
@@ -15,7 +14,7 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, ai.updateInterval)
+	every r in results { r.success }
 }
 
 message := "Asset inventory is updated frequently enough." if {

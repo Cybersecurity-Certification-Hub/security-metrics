@@ -1,6 +1,5 @@
 package cch.metrics.anomaly_detection_output
 
-import data.cch.compare
 import data.cch.comparison_result
 import rego.v1
 import input.anomalyDetection.applicationLogging as logging
@@ -14,7 +13,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, count(logging.loggingServiceIds))
+	every r in results { r.success }
 }
 
 results := [comparison_result("anomalyDetection.applicationLogging.loggingServiceIds.count", count(logging.loggingServiceIds))]

@@ -1,6 +1,5 @@
 package cch.metrics.approved_commit_author_enforced
 
-import data.cch.compare
 import data.cch.comparison_result
 import rego.v1
 import input.approvedCommitAuthorEnforced as author
@@ -15,7 +14,7 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, author)
+	every r in results { r.success }
 }
 
 results := [comparison_result("approvedCommitAuthorEnforced", author)]

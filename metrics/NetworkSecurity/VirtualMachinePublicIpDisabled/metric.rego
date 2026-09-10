@@ -1,6 +1,5 @@
 package cch.metrics.virtual_machine_public_ip_disabled
 
-import data.cch.compare
 import data.cch.comparison_result
 import rego.v1
 import input as vm
@@ -14,7 +13,7 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, vm.internetAccessibleEndpoint)
+	every r in results { r.success }
 }
 
 results := [comparison_result("internetAccessibleEndpoint", vm.internetAccessibleEndpoint)]

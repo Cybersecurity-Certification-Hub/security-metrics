@@ -1,6 +1,5 @@
 package cch.metrics.object_storage_public_access_disabled
 
-import data.cch.compare
 import data.cch.comparison_result
 import rego.v1
 
@@ -16,7 +15,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, storage.publicAccess)
+	every r in results { r.success }
 }
 
 results := [comparison_result("publicAccess", storage.publicAccess)]

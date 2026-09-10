@@ -1,6 +1,5 @@
 package cch.metrics.pull_requests_with_reviews_percentage_last_month
 
-import data.cch.compare
 import data.cch.comparison_result
 import rego.v1
 import input.reviewPercentageLastMonth as percentage
@@ -15,7 +14,7 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, percentage)
+	every r in results { r.success }
 }
 
 results := [comparison_result("reviewPercentageLastMonth", percentage)]

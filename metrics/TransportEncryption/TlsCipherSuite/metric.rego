@@ -1,6 +1,5 @@
 package cch.metrics.tls_cipher_suite
 
-import data.cch.compare
 import data.cch.comparison_result
 import rego.v1
 import input.transportEncryption as enc
@@ -14,7 +13,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, enc.cipherSuite)
+	every r in results { r.success }
 }
 
 results := [comparison_result("transportEncryption.cipherSuite", enc.cipherSuite)]

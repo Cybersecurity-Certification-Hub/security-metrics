@@ -1,6 +1,5 @@
 package cch.metrics.asset_inventory_review_completed_percentage
 
-import data.cch.compare
 import data.cch.comparison_result
 import rego.v1
 
@@ -16,7 +15,7 @@ applicable if {
 }
 
 compliant if {
-    compare(data.operator, data.target_value, ai.completedReviewPercentage)
+	every r in results { r.success }
 }
 
 results := [comparison_result("assetInventory.completedReviewPercentage", ai.completedReviewPercentage)]
