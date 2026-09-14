@@ -1,6 +1,6 @@
 package cch.metrics.asset_inventory_status
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.assetInventory as ai
 
@@ -14,7 +14,7 @@ applicable if {
 }
 
 compliant if {
-  compare(data.operator, data.target_value, ai.status)
+	every r in results { r.success }
 }
 
 message := "Asset status options are properly defined." if {
@@ -22,3 +22,5 @@ message := "Asset status options are properly defined." if {
 } else := "Asset status options are not properly defined. Status options should match the specified values." if {
   not compliant
 }
+
+results := [comparison_result("assetInventory.status", ai.status)]
