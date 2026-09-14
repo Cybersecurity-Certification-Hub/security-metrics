@@ -11,6 +11,7 @@ default compliant := false
 
 applicable if {
     "allRequiredInformationRecorded" in object.keys(ai)
+    is_boolean(ai.allRequiredInformationRecorded)
     "Account" in input.type
 }
 
