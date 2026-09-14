@@ -12,6 +12,7 @@ applicable if {
   ai.type == "digital"
   "auditInterval" in object.keys(ai)
   is_number(ai.auditInterval)
+  ai.auditInterval > 0
   "PolicyDocument" in input.type
 }
 
