@@ -11,6 +11,8 @@ default compliant := false
 applicable if {
   ai.type == "digital"
   "auditInterval" in object.keys(ai)
+  interval := document.assetInventory.auditInterval
+  is_number(interval)
   "PolicyDocument" in input.type
 }
 
