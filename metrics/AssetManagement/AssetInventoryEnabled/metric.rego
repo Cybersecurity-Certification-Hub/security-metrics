@@ -9,6 +9,8 @@ default compliant := false
 
 applicable if {
     "service" in object.keys(document.assetInventory)
+    is_string(document.assetInventory.service)
+	value != ""
     "PolicyDocument" in document.type
 }
 
