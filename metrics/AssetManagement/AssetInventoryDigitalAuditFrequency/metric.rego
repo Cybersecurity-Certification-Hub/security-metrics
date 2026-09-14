@@ -9,10 +9,13 @@ default applicable := false
 default compliant := false
 
 applicable if {
-  ai != {}
-  "PolicyDocument" in input.type
   ai.type == "digital"
+  "auditInterval" in object.keys(ai)
+  is_number(ai.auditInterval)
+  ai.auditInterval > 0
+  "PolicyDocument" in input.type
 }
+
 
 compliant if {
     compare(data.operator, data.target_value, ai.auditInterval)
