@@ -132,7 +132,7 @@ compare(operator, target_value, actual_values) if {
 comparison_result(property, value) := {
 	"property": property,
 	"value": value,
-	"target_value": data.target_value,
-	"operator": data.operator,
+	"target_value": data.cch.target_value,
+	"operator": data.cch.operator,
 	"success": compare(data.operator, data.target_value, value),
 }
