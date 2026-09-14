@@ -10,8 +10,7 @@ default compliant := false
 applicable if {
     "service" in object.keys(ai)
     is_string(ai.service)
-	value != ""
-    "PolicyDocument" in document.type
+	"PolicyDocument" in document.type
 }
 
 compliant if {
