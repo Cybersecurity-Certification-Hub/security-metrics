@@ -10,6 +10,8 @@ default compliant := false
 applicable if {
 	dataConfidentialitySDNPolicy != {}
 	"PolicyDocument" in input.type
+	dataConfidentialitySDNPolicy.isDefined != {}
+	dataConfidentialitySDNPolicy.isDefined != null
 }
 
 compliant if {

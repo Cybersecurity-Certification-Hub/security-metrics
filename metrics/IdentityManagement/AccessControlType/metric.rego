@@ -11,6 +11,8 @@ default compliant := false
 applicable if {
     accessControlTypePolicy != {}
     "PolicyDocument" in input.type
+    accessControlTypePolicy.authorizationTypes != {}
+    accessControlTypePolicy.authorizationTypes != null
 }
 
 compliant if {

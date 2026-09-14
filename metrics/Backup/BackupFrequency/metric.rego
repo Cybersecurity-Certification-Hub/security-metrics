@@ -10,6 +10,8 @@ default compliant := false
 applicable if {
 	document.backup != {}
 	"PolicyDocument" in document.type
+	document.backup.frequency != {}
+	document.backup.frequency != null
 }
 
 compliant if {

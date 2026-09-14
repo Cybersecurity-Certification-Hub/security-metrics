@@ -11,6 +11,8 @@ applicable if {
 	document != {}
 	document.assetInventory
 	"PolicyDocument" in document.type
+	document.assetInventory.service != {}
+	document.assetInventory.service != null
 }
 
 compliant if {

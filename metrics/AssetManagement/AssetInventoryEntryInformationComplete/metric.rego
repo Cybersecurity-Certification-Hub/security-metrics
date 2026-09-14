@@ -11,6 +11,8 @@ default compliant := false
 
 applicable if {
     ai
+    ai.allRequiredInformationRecorded != {}
+    ai.allRequiredInformationRecorded != null
 }
 
 compliant if {

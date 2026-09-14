@@ -11,6 +11,8 @@ default compliant := false
 applicable if {
   ai != {}
   "PolicyDocument" in input.type
+  ai.status != {}
+  ai.status != null
 }
 
 compliant if {
