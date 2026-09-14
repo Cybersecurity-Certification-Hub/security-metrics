@@ -9,6 +9,8 @@ default compliant := false
 
 applicable if {
     "auditInterval" in object.keys(document.assetInventory)
+	interval := document.assetInventory.auditInterval
+    is_number(interval)
 	"PolicyDocument" in document.type
 }
 
