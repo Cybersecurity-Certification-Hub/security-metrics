@@ -11,7 +11,7 @@ applicable if {
     "auditInterval" in object.keys(document.assetInventory)
 	interval := document.assetInventory.auditInterval
     is_number(interval)
-	"PolicyDocument" in document.type
+	"PolicyDocument" in input.type
 }
 
 compliant if {
