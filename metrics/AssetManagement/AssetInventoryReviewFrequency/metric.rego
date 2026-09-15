@@ -11,6 +11,8 @@ applicable if {
 	document != {}
 	document.assetInventory
 	"PolicyDocument" in document.type
+	document.assetInventory.reviewFrequency != {}
+	document.assetInventory.reviewFrequency != null
 }
 
 compliant if {

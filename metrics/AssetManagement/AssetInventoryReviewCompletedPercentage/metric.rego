@@ -12,6 +12,8 @@ default compliant := false
 applicable if {
     "Account" in input.type
     ai
+    ai.completedReviewPercentage != {}
+    ai.completedReviewPercentage != null
 }
 
 compliant if {

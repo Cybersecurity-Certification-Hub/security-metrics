@@ -11,6 +11,8 @@ default compliant := false
 applicable if {
     complianceAuditIntervalPolicy != {} # only assess if policy is provided
     "PolicyDocument" in input.type
+    complianceAuditIntervalPolicy.auditInterval != {}
+    complianceAuditIntervalPolicy.auditInterval != null
 }
 
 compliant if {

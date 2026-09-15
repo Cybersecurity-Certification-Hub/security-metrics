@@ -12,6 +12,8 @@ applicable if {
   ai != {}
   "PolicyDocument" in input.type
   ai.type == "digital"
+  ai.auditInterval != {}
+  ai.auditInterval != null
 }
 
 compliant if {

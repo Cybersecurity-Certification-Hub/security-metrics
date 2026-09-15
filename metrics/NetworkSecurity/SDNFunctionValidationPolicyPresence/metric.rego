@@ -10,6 +10,8 @@ default compliant := false
 applicable if {
 	sdnFunctionValidationPolicy != {}
 	"PolicyDocument" in input.type
+	sdnFunctionValidationPolicy.isDefined != {}
+	sdnFunctionValidationPolicy.isDefined != null
 }
 
 compliant if {

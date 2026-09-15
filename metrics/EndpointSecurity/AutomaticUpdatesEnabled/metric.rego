@@ -12,6 +12,8 @@ default compliant = false
 applicable if {
 	au
 	"VirtualMachine" in input.type
+	au.enabled != {}
+	au.enabled != null
 }
 
 compliant if {

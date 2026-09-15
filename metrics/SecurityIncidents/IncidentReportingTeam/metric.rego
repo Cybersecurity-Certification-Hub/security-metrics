@@ -10,6 +10,8 @@ default compliant := false
 applicable if {
 	document.securityIncident != {}
 	"PolicyDocument" in document.type
+	document.securityIncident.team != {}
+	document.securityIncident.team != null
 }
 
 compliant if {

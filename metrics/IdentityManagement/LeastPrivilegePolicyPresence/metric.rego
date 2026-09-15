@@ -10,6 +10,8 @@ default compliant := false
 applicable if {
 	leastPrivilegePolicy != {}
 	"PolicyDocument" in input.type
+	leastPrivilegePolicy.isDefined != {}
+	leastPrivilegePolicy.isDefined != null
 }
 
 compliant if {

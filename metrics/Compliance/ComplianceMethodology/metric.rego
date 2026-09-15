@@ -11,6 +11,8 @@ default compliant := false
 applicable if {
     complianceMethodologyPolicy != {} # only assess if policy is provided
     "PolicyDocument" in input.type
+    complianceMethodologyPolicy.methodology != {}
+    complianceMethodologyPolicy.methodology != null
 }
 
 compliant if {

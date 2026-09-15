@@ -10,6 +10,8 @@ default compliant := false
 applicable if {
 	separationOfDutiesPolicy != {}
 	"PolicyDocument" in input.type
+	separationOfDutiesPolicy.isDefined != {}
+	separationOfDutiesPolicy.isDefined != null
 }
 
 compliant if {

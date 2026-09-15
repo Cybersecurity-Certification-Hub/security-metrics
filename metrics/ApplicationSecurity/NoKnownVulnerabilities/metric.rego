@@ -10,6 +10,7 @@ default applicable = false
 
 applicable if {
 	vul != {}
+	vul != null
 }
 
 compliant if {
