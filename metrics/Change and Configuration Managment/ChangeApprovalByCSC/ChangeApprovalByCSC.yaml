@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "6ba0c7e7-12b9-4b24-b710-dd8284572d08"
+name: "ChangeApprovalByCSC"
+description: "This rule assesses whether a [Resource] that offers the property [ChangeAndConfigurationManagment.RFC], has [p1:changeApprovedByCSC] set correctly."
+implementationGuidelines:
+  FSC:
+    details: ["- Information from Change ticket", "- List of names and roles of authorised change approvers from the CSC"]
+category: "Change and Configuration Managment"
+version: "1.0"
+comments: "Change approval by CSC - Check whether there was a change approval by the CSC if applicable | Selector: FSC (Resource Type) [Previous name: MT-CCM-04.1H-3]"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "true"
