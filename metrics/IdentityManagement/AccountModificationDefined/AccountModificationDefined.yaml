@@ -1,0 +1,20 @@
+# ====== Metadata ======
+id: "c78b6217-199f-4f7a-98da-f3054ef836f6"
+name: "AccountModificationDefined"
+description: "This rule assesses whether a [PolicyDocument] includes [AccountManagementPolicy] with [p1:modificationDefined] set correctly."
+
+implementationGuidelines:
+  AMOE:
+    question: "What are the specific conditions or requirements for modifying an account?"
+    is_headline_based: false
+    keywords: ["account", "modification", "requirements", "conditions"]
+
+category: "IdentityManagement"
+version: "v1"
+comments: "This metric assesses whether the policy defines procedures and requirements for account modification."
+
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

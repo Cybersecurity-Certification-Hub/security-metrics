@@ -1,0 +1,20 @@
+# ====== Metadata ======
+id: "c6153f33-9f6c-4509-8070-dd18d861330f"
+name: "AccountDeletionDefined"
+description: "This rule assesses whether a [PolicyDocument] includes [AccountManagementPolicy] with [p1:deletionDefined] set correctly."
+
+implementationGuidelines:
+  AMOE:
+    question: "What are the guidelines for account deletion?"
+    is_headline_based: false
+    keywords: ["account", "deletion", "guidelines"]
+
+category: "IdentityManagement"
+version: "v1"
+comments: "This metric assesses whether the policy defines procedures and guidelines for account deletion."
+
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

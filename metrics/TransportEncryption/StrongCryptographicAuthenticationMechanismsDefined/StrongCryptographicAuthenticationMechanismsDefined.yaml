@@ -1,0 +1,20 @@
+# ====== Metadata ======
+id: "d1e8ed76-0b9e-4cbd-a563-3de8e38828ae"
+name: "StrongCryptographicAuthenticationMechanismsDefined"
+description: "This rule assesses whether a [PolicyDocument] includes [EncryptionPolicy] with [p1:isDefined] set correctly."
+
+implementationGuidelines:
+  AMOE:
+    question: "Which cryptographic authentication mechanisms are required for access to sensitive systems?"
+    is_headline_based: false
+    keywords: ["cryptographic", "authentication", "mechanism"]
+
+category: "TransportEncryption"
+version: "v1"
+comments: "This metric assesses whether strong cryptographic authentication mechanisms are defined for access to sensitive systems."
+
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

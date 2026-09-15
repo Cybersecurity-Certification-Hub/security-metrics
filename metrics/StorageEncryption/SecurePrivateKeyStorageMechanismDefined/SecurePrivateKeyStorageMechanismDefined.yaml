@@ -1,0 +1,20 @@
+# ====== Metadata ======
+id: "fad83b33-5a9b-4869-a4f1-62f559ccdbc5"
+name: "SecurePrivateKeyStorageMechanismDefined"
+description: "This rule assesses whether a [PolicyDocument] includes [KeyManagementPolicy] with [p1:isDefined] set correctly."
+
+implementationGuidelines:
+  AMOE:
+    question: "What mechanism is defined for securely storing private keys within the system?"
+    is_headline_based: false
+    keywords: ["private key", "storage", "secure", "mechanism"]
+
+category: "StorageEncryption"
+version: "v1"
+comments: "This metric assesses whether a secure mechanism for storing private keys is defined in the policy."
+
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
