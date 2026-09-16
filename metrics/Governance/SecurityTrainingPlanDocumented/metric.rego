@@ -1,19 +1,19 @@
 package cch.metrics.security_training_plan_documented
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input as document
+import input.training as training
 
 default applicable := false
-
 default compliant := false
 
 applicable if {
-	document != {}
-	"PolicyDocument" in document.type
-	document.training
+      training != {}
+      "PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.training.planDocumented)
+      every r in results { r.success }
 }
+
+results := [comparison_result("training.planDocumented", training.planDocumented)]
