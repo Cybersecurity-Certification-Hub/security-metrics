@@ -1,19 +1,19 @@
 package cch.metrics.teleworking_two_factor_required
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input as document
+import input.teleworking as teleworking
 
 default applicable := false
-
 default compliant := false
 
 applicable if {
-	document != {}
-	"PolicyDocument" in document.type
-	document.teleworking
+      teleworking != {}
+      "PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.teleworking.twoFactorRequired)
+      every r in results { r.success }
 }
+
+results := [comparison_result("teleworking.twoFactorRequired", teleworking.twoFactorRequired)]
