@@ -317,6 +317,9 @@
         <Class abbreviatedIRI="core:SDNFunctionValidationPolicy"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:TeleworkingPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:AccessControlTypePolicy"/>
     </Declaration>
     <Declaration>
@@ -348,6 +351,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:criticality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:encryptionRequired"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:exploitable"/>
@@ -660,6 +666,17 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:methodology"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:TeleworkingPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:TeleworkingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:encryptionRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
