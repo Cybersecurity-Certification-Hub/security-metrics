@@ -1,19 +1,19 @@
 package cch.metrics.external_audit_recency
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input as document
+import input.auditClause as auditClause
 
 default applicable := false
-
 default compliant := false
 
 applicable if {
-	document != {}
-	"PolicyDocument" in document.type
-	document.auditClause
+      auditClause != {}
+      "PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.auditClause.daysSinceLastAudit)
+      every r in results { r.success }
 }
+
+results := [comparison_result("auditClause.daysSinceLastAudit", auditClause.daysSinceLastAudit)]
