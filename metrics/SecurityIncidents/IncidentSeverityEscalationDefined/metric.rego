@@ -1,19 +1,19 @@
 package cch.metrics.incident_severity_escalation_defined
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input as document
+import input.incidentManagement as incidentManagement
 
 default applicable := false
-
 default compliant := false
 
 applicable if {
-	document != {}
-	"PolicyDocument" in document.type
-	document.incidentManagement
+      incidentManagement != {}
+      "PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.incidentManagement.severityAndEscalationDefined)
+      every r in results { r.success }
 }
+
+results := [comparison_result("incidentManagement.severityAndEscalationDefined", incidentManagement.severityAndEscalationDefined)]
