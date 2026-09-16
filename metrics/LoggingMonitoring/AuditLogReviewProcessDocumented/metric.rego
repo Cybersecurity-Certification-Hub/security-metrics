@@ -1,19 +1,19 @@
 package cch.metrics.audit_log_review_process_documented
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input as document
+import input.logManagement as logManagement
 
 default applicable := false
-
 default compliant := false
 
 applicable if {
-	document != {}
-	"PolicyDocument" in document.type
-	document.logManagement
+      logManagement != {}
+      "PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.logManagement.periodicAnomalyReviewRequired)
+      every r in results { r.success }
 }
+
+results := [comparison_result("logManagement.periodicAnomalyReviewRequired", logManagement.periodicAnomalyReviewRequired)]
