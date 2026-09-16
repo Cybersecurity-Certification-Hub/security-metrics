@@ -10,7 +10,8 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    ai
+    ai.allRequiredInformationRecorded
+    "Account" in input.type
 }
 
 compliant if {
