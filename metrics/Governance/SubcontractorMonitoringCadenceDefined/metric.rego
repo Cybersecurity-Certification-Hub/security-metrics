@@ -1,19 +1,19 @@
 package cch.metrics.subcontractor_monitoring_cadence_defined
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input as document
+import input.outsourcing as outsourcing
 
 default applicable := false
-
 default compliant := false
 
 applicable if {
-	document != {}
-	"PolicyDocument" in document.type
-	document.outsourcing
+      outsourcing != {}
+      "PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.outsourcing.monitoringMechanism)
+      every r in results { r.success }
 }
+
+results := [comparison_result("outsourcing.monitoringMechanism", outsourcing.monitoringMechanism)]
