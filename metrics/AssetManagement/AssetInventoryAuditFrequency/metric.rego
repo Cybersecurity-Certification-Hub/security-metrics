@@ -8,7 +8,6 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    document != {}
     document.assetInventory.auditInterval
     "PolicyDocument" in document.type
 }
