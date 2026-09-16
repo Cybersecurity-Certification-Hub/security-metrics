@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "a4b8f1e6-3d2c-4f7a-9e5b-6c1d8a3f0b27"
+name: "CryptoKeyRecipientHeld"
+description: "This rule assesses whether the encryption [PolicyDocument] has its [p1:recipientHeldKeyRequired] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Who must hold the encryption key used to protect the file?"
+    keywords: ["key known by the recipient", "recipient"]
+category: "Cryptography"
+version: "v1"
+comments: "The policy must require the encryption key to be known by the recipient. Split out of the former combined KeyCustodyAndFileNamingControlled metric (see CryptoFilenameRestricted for the file-naming check) after AMOE's assessment could not map the combined yes/no question correctly; reworded to a literal-extraction question AMOE can answer."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
