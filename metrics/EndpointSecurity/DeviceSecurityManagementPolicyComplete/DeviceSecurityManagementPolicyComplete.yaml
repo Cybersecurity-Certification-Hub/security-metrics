@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "4528d303-4cea-442b-b4fe-277a1b3e943a"
+name: "DeviceSecurityManagementPolicyComplete"
+description: "This rule assesses whether a [PolicyDocument] on device management has its [p1:allMandatedControlsAddressed] property set correctly across malware prevention, restricted installation, minimal network services, VPN-only connection, no OS command execution, storage encryption, and remote wipe."
+implementationGuidelines:
+  AMOE:
+    question: "Does the procedure address all 7 mandated device controls?"
+    keywords: ["malware prevention", "VPN", "storage encryption", "remote wipe"]
+category: "EndpointSecurity"
+version: "v1"
+comments: "All 7 mandated device controls must be addressed by the device management procedure."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
