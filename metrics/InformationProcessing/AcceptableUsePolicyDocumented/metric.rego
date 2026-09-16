@@ -1,19 +1,19 @@
 package cch.metrics.acceptable_use_policy_documented
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input as document
+import input.acceptableUse as acceptableUse
 
 default applicable := false
-
 default compliant := false
 
 applicable if {
-	document != {}
-	"PolicyDocument" in document.type
-	document.acceptableUse
+      acceptableUse != {}
+      "PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.acceptableUse.exists)
+      every r in results { r.success }
 }
+
+results := [comparison_result("acceptableUse.exists", acceptableUse.exists)]
