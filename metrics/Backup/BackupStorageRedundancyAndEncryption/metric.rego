@@ -1,19 +1,19 @@
 package cch.metrics.backup_storage_redundancy_and_encryption
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input as document
+import input.backupPolicy as backupPolicy
 
 default applicable := false
-
 default compliant := false
 
 applicable if {
-	document != {}
-	"PolicyDocument" in document.type
-	document.backupPolicy
+      backupPolicy != {}
+      "PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.backupPolicy.redundantAndEncrypted)
+      every r in results { r.success }
 }
+
+results := [comparison_result("backupPolicy.redundantAndEncrypted", backupPolicy.redundantAndEncrypted)]
