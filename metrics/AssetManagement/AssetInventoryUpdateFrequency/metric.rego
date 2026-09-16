@@ -9,7 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-  ai != {}
+  ai.updateInterval
   "PolicyDocument" in input.type
 }
 
