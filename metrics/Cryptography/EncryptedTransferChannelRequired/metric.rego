@@ -1,19 +1,19 @@
 package cch.metrics.encrypted_transfer_channel_required
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input as document
+import input.cryptoPolicy as cryptoPolicy
 
 default applicable := false
-
 default compliant := false
 
 applicable if {
-	document != {}
-	"PolicyDocument" in document.type
-	document.cryptoPolicy
+      cryptoPolicy != {}
+      "PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.cryptoPolicy.encryptedChannelRequired)
+      every r in results { r.success }
 }
+
+results := [comparison_result("cryptoPolicy.encryptedChannelRequired", cryptoPolicy.encryptedChannelRequired)]
