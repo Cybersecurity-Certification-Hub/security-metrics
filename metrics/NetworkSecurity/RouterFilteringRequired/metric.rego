@@ -1,19 +1,19 @@
 package cch.metrics.router_filtering_required
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input as document
+import input.networkStandard as networkStandard
 
 default applicable := false
-
 default compliant := false
 
 applicable if {
-	document != {}
-	"PolicyDocument" in document.type
-	document.networkStandard
+      networkStandard != {}
+      "PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.networkStandard.filteringRequired)
+      every r in results { r.success }
 }
+
+results := [comparison_result("networkStandard.filteringRequired", networkStandard.filteringRequired)]
