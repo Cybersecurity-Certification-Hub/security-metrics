@@ -9,7 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-  ai != {}
+  ai.storageFacility
   "PolicyDocument" in input.type
 }
 
