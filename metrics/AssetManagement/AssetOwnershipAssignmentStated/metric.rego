@@ -1,19 +1,19 @@
 package cch.metrics.asset_ownership_assignment_stated
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input as document
+import input.assetInventory as assetInventory
 
 default applicable := false
-
 default compliant := false
 
 applicable if {
-	document != {}
-	"PolicyDocument" in document.type
-	document.assetInventory
+      assetInventory != {}
+      "PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.assetInventory.ownerAssignmentStated)
+      every r in results { r.success }
 }
+
+results := [comparison_result("assetInventory.ownerAssignmentStated", assetInventory.ownerAssignmentStated)]
