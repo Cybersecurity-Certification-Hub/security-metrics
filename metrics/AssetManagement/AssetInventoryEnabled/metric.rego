@@ -9,7 +9,7 @@ default compliant := false
 
 applicable if {
 	ai.service
-	"PolicyDocument" in document.type
+	"PolicyDocument" in input.type
 }
 
 compliant if {
