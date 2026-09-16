@@ -1,19 +1,19 @@
 package cch.metrics.incident_reporting_contact_stated
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input as document
+import input.securityIncident as securityIncident
 
 default applicable := false
-
 default compliant := false
 
 applicable if {
-	document != {}
-	"PolicyDocument" in document.type
-	document.securityIncident
+      securityIncident != {}
+      "PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.securityIncident.reportingContactStated)
+      every r in results { r.success }
 }
+
+results := [comparison_result("securityIncident.reportingContactStated", securityIncident.reportingContactStated)]
