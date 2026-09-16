@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "d362be3d-48ee-480e-9716-8124f2801b5f"
+name: "AnonymizationTechniqueNamed"
+description: "This rule assesses whether a [PolicyDocument] governing test data names a specific [p1:technique] used for anonymization."
+implementationGuidelines:
+  AMOE:
+    question: "Does the procedure name a specific technique or standard used (e.g., masking algorithm, tokenization, k-anonymity)?"
+    keywords: ["masking", "tokenization", "data masking algorithm"]
+category: "InformationProcessing"
+version: "v1"
+comments: "The procedure must name a specific technique or standard used (e.g., masking algorithm, tokenization, k-anonymity)."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "masking tokenization k-anonymity"
