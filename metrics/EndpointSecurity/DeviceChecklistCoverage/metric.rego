@@ -1,19 +1,19 @@
 package cch.metrics.device_checklist_coverage
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input as document
+import input.deviceManagement as deviceManagement
 
 default applicable := false
-
 default compliant := false
 
 applicable if {
-	document != {}
-	"PolicyDocument" in document.type
-	document.deviceManagement
+      deviceManagement != {}
+      "PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.deviceManagement.checklistCoveragePercent)
+      every r in results { r.success }
 }
+
+results := [comparison_result("deviceManagement.checklistCoveragePercent", deviceManagement.checklistCoveragePercent)]
