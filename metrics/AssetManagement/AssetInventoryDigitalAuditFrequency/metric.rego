@@ -9,11 +9,9 @@ default applicable := false
 default compliant := false
 
 applicable if {
-  ai.type == "digital"
-  "auditInterval" in object.keys(ai)
-  is_number(ai.auditInterval)
-  ai.auditInterval > 0
+  ai.auditInterval
   "PolicyDocument" in input.type
+  ai.type == "digital"
 }
 
 
