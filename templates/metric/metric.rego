@@ -15,4 +15,4 @@ compliant if {
     every r in results { r.success }
 }
 
-results := [comparison_result("accessRestriction.l3Firewall.restrictedPorts", l3.restrictedPorts)]
+results := [comparison_result(<Enter the full property path here>, <Enter the variable to be checked here>)]
