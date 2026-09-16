@@ -8,8 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	document != {}
-	document.assetInventory
+	ai.service
 	"PolicyDocument" in document.type
 }
 

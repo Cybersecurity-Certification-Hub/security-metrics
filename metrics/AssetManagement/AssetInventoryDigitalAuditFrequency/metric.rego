@@ -9,7 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-  ai != {}
+  ai.auditInterval
   "PolicyDocument" in input.type
   ai.type == "digital"
 }
