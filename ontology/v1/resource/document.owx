@@ -447,6 +447,13 @@
         <Class abbreviatedIRI="cl:PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:TeleworkingPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="cl:AccessControlTypePolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
