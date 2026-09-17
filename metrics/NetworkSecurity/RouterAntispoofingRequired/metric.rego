@@ -2,18 +2,25 @@ package cch.metrics.router_antispoofing_required
 
 import data.cch.comparison_result
 import rego.v1
-import input.networkStandard as networkStandard
+import input.networkThreatMitigationPolicy as networkThreatMitigationPolicy
 
 default applicable := false
 default compliant := false
 
 applicable if {
-      networkStandard != {}
-      "PolicyDocument" in input.type
+	"antispoofingRequired" in object.keys(networkThreatMitigationPolicy)
+	is_boolean(networkThreatMitigationPolicy.antispoofingRequired)
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-      every r in results { r.success }
+	every r in results { r.success }
 }
 
-results := [comparison_result("networkStandard.antispoofingRequired", networkStandard.antispoofingRequired)]
+message := "The standard explicitly requires antispoofing mechanisms on internet-facing routers." if {
+	compliant
+} else := "The standard does not explicitly require antispoofing mechanisms on internet-facing routers." if {
+	not compliant
+}
+
+results := [comparison_result("networkThreatMitigationPolicy.antispoofingRequired", networkThreatMitigationPolicy.antispoofingRequired)]
