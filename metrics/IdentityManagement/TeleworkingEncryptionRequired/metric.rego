@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-      teleworking != {}
+      teleworking.encryptionRequired
       "PolicyDocument" in input.type
 }
 
