@@ -1,4 +1,4 @@
 {
-    "operator": "isIn",
-    "target_value": ["asset status", "coverage", "completeness", "inventory"]
+    "operator": "allIn",
+    "target_value": ["active", "inactive", "under repair", "disposed", "donated", "lost"]
 }
