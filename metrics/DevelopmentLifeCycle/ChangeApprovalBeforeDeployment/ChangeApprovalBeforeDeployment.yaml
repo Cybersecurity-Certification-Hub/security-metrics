@@ -6,9 +6,13 @@ implementationGuidelines:
   FSC:
     details: ["- Date and time of change approval and deployment", "- Information from Change ticket"]
     previous_name: "MT-CCM-04.1H-1"
+  AMOE:
+    previous_name: "CHG-01-M1"
+    question: "Does a formal change control procedure exist requiring approval before modifying production configuration?"
+    keywords: ["approving changes", "change control", "modification of the configuration"]
 category: DevelopmentLifeCycle
 version: "v1"
-comments: "Check whether there was a change approval before deployment to production."
+comments: "Check whether there was a change approval before deployment to production. Also backs AMOE's CHG-01-M1 (change_control_procedure), which asks the same question of the same RequestForChange.approvedBeforeDeployment field; a separate ChangeControlProcedureDocumented metric was proposed for it (PR #395) but would have been a functional duplicate of this metric with identical field, operator, and threshold, so the AMOE mapping was added here instead."
 # ====== Configuration ======
 configuration:
   p1:
