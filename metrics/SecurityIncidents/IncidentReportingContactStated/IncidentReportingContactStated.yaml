@@ -1,16 +1,16 @@
 # ====== Metadata ======
 id: "6e3b8a15-9c4d-4f27-a061-d8b5c2f47913"
 name: "IncidentReportingContactStated"
-description: "This rule assesses whether a [PolicyDocument] includes [SecurityIncident] with its [p1:reportingContactStated] property set correctly."
+description: "This rule assesses whether a [PolicyDocument] includes [SecurityIncident] with its [p1:team] property set correctly."
 implementationGuidelines:
   AMOE:
     question: "To whom must cybersecurity incidents affecting the company's services, applications, or IT systems be reported?"
     keywords: ["report to NovaBank", "notification contact", "designated contact", "CISO", "CISO's office", "the SOC", "SOC", "SOC team"]
 category: "SecurityIncidents"
 version: "v1"
-comments: "This metric assesses if an incident reporting contact/team is defined, using literal-extraction phrasing matching the final AMOE v2 spec's 8 alternate phrases. Added as a new dedicated metric for IM-02-M1 rather than modifying the pre-existing IncidentReportingTeam metric, since that metric already exists on main (isIn([\"Security Committee\"]) style) and may be relied on by other pilots/controls; this avoids any risk of changing its behavior for an existing consumer."
+comments: "This metric assesses if an incident reporting contact/team is defined, using literal-extraction phrasing matching the final AMOE v2 spec's 8 alternate phrases. Added as a new dedicated metric for IM-02-M1 rather than modifying the pre-existing IncidentReportingTeam metric, since that metric already exists on main (isIn([\"Security Committee\"]) style) and may be relied on by other pilots/controls; this avoids any risk of changing its behavior for an existing consumer. Checks the same underlying SecurityIncident.team field as that metric but with hasAny (non-empty), a compatible, non-conflicting assertion since a team containing \"Security Committee\" also satisfies \"a contact is stated\"."
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
+    operator: "hasAny"
     targetValue: true

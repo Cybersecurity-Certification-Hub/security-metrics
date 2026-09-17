@@ -8,12 +8,19 @@ default applicable := false
 default compliant := false
 
 applicable if {
-      securityIncident != {}
-      "PolicyDocument" in input.type
+	"team" in object.keys(securityIncident)
+	is_array(securityIncident.team)
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-      every r in results { r.success }
+	every r in results { r.success }
 }
 
-results := [comparison_result("securityIncident.reportingContactStated", securityIncident.reportingContactStated)]
+message := "The policy document states a contact for incident reporting." if {
+	compliant
+} else := "The policy document does not state a contact for incident reporting." if {
+	not compliant
+}
+
+results := [comparison_result("securityIncident.team", securityIncident.team)]
