@@ -1,6 +1,6 @@
 package cch.metrics.universal_gate_set_enabled
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 
 default applicable = false
@@ -12,5 +12,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, input.UniversalGateSetEnabled)
+	every r in results { r.success }
 }
+
+results := [comparison_result("UniversalGateSetEnabled", input.UniversalGateSetEnabled)]
