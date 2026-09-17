@@ -2,18 +2,25 @@ package cch.metrics.audit_log_review_process_documented
 
 import data.cch.comparison_result
 import rego.v1
-import input.logManagement as logManagement
+import input.anomalyDetection as anomalyDetection
 
 default applicable := false
 default compliant := false
 
 applicable if {
-      logManagement != {}
-      "PolicyDocument" in input.type
+	"enabled" in object.keys(anomalyDetection)
+	is_boolean(anomalyDetection.enabled)
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-      every r in results { r.success }
+	every r in results { r.success }
 }
 
-results := [comparison_result("logManagement.periodicAnomalyReviewRequired", logManagement.periodicAnomalyReviewRequired)]
+message := "The log management procedure requires periodic monitoring and anomaly review of audit logs." if {
+	compliant
+} else := "The log management procedure does not require periodic monitoring and anomaly review of audit logs." if {
+	not compliant
+}
+
+results := [comparison_result("anomalyDetection.enabled", anomalyDetection.enabled)]
