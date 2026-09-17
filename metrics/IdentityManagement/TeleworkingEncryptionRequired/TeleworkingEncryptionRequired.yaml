@@ -6,7 +6,7 @@ implementationGuidelines:
   AMOE:
     question: "Does the policy require data encryption for teleworking/remote access sessions?"
     keywords: ["data encryption", "All remote sessions must use data encryption, at minimum"]
-category: "IdentityManagement"
+category: "TransportEncryption"
 version: "v1"
 comments: "Teleworking access to internal systems over public networks must require data encryption. Split out of the former combined TeleworkingSecurityControlsRequired metric (see TeleworkingTwoFactorRequired for the 2FA-only check) after AMOE's assessment could not map the combined 2FA-AND-encryption question correctly; both sub-checks share the same metric_id (AIM-01-M1) in the AMOE v2 spec since they test the same control from two independent angles."
 # ====== Configuration ======
