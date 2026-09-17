@@ -9,7 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-  ai.status
+  input.assetInventory.status
   "PolicyDocument" in input.type
 }
 
