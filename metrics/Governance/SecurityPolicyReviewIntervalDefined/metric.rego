@@ -2,18 +2,25 @@ package cch.metrics.security_policy_review_interval_defined
 
 import data.cch.comparison_result
 import rego.v1
-import input.securityPolicy as securityPolicy
+import input.securityPolicyReview as securityPolicyReview
 
 default applicable := false
 default compliant := false
 
 applicable if {
-      securityPolicy != {}
-      "PolicyDocument" in input.type
+	"intervalMonths" in object.keys(securityPolicyReview)
+	is_number(securityPolicyReview.intervalMonths)
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-      every r in results { r.success }
+	every r in results { r.success }
 }
 
-results := [comparison_result("securityPolicy.reviewIntervalMonths", securityPolicy.reviewIntervalMonths)]
+message := "The Information Security Policy states a review interval within acceptable limits." if {
+	compliant
+} else := "The Information Security Policy does not state a review interval within acceptable limits." if {
+	not compliant
+}
+
+results := [comparison_result("securityPolicyReview.intervalMonths", securityPolicyReview.intervalMonths)]
