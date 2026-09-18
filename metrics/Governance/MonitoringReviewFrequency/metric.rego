@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	monitoringProcedure.intervalMonths
+	"intervalMonths" in object.keys(input.monitoringProcedure)
 	"PolicyDocument" in input.type
 }
 
