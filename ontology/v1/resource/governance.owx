@@ -80,6 +80,27 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="res:Training"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:annualCadenceStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Training"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:roleAdjustedTracksStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Training"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:planDocumented"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="res:ContactPerson"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:emailAddress"/>
