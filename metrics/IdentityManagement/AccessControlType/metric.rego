@@ -9,7 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    accessControlTypePolicy.authorizationTypes
+    "authorizationTypes" in object.keys(input.accessControlTypePolicy)
     "PolicyDocument" in input.type
 }
 

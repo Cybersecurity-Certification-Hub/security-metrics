@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	document.backup.recoveryFrequency
+	"recoveryFrequency" in object.keys(input.backup)
 	"PolicyDocument" in document.type
 }
 

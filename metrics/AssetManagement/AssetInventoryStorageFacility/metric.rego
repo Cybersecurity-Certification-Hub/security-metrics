@@ -9,7 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-  ai.storageFacility
+  "storageFacility" in object.keys(input.assetInventory)
   "PolicyDocument" in input.type
 }
 

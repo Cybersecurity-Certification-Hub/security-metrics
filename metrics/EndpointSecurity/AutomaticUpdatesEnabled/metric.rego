@@ -10,7 +10,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
-	au.enabled
+	"enabled" in object.keys(input.automaticUpdates)
 	"VirtualMachine" in input.type
 }
 

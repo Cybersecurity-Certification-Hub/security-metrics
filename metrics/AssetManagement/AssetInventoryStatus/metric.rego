@@ -9,7 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-  input.assetInventory.status
+  "enabled" in object.keys(input.assetInventory)
   "PolicyDocument" in input.type
 }
 
@@ -23,4 +23,4 @@ message := "Asset status options are properly defined." if {
   not compliant
 }
 
-results := [comparison_result("assetInventory.status", ai.status)]
+results := [comparison_result("assetInventory.status", ai.status)] if {applicable}
