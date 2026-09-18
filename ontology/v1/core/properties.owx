@@ -118,6 +118,9 @@
         <DataProperty abbreviatedIRI="prop:coveredAttackTypes"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:antispoofingRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:creation_time"/>
     </Declaration>
     <Declaration>
@@ -1376,5 +1379,15 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:value</AbbreviatedIRI>
         <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:antispoofingRequired</AbbreviatedIRI>
+        <Literal>Indicates whether the policy explicitly requires antispoofing mechanisms on internet-facing routers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:antispoofingRequired</AbbreviatedIRI>
+        <Literal>antispoofingRequired</Literal>
     </AnnotationAssertion>
 </Ontology>

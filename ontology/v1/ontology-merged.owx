@@ -1227,6 +1227,9 @@
         <DataProperty IRI="/properties/algorithm"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/antispoofingRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/apiListFunction"/>
     </Declaration>
     <Declaration>
@@ -4215,6 +4218,13 @@
     <SubClassOf>
         <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
         <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/antispoofingRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
@@ -8773,6 +8783,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/algorithm</IRI>
         <Literal xml:lang="english">algorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/antispoofingRequired</IRI>
+        <Literal>Indicates whether the policy explicitly requires antispoofing mechanisms on internet-facing routers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/antispoofingRequired</IRI>
+        <Literal>antispoofingRequired</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
