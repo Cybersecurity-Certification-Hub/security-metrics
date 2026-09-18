@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["network filters", "All Internet-facing routers implement antispoofing mechanisms"]
 category: "NetworkSecurity"
 version: "v1"
-comments: "The standard must explicitly require network filtering mechanisms on internet-facing routers. Split out of the former combined RouterFilteringAntispoofingRequired metric (see RouterAntispoofingRequired for the antispoofing check) after AMOE's assessment could not map the combined filtering-AND-antispoofing question correctly. filteringRequired is a new boolean property on the ontology's existing NetworkThreatMitigationPolicy, alongside its coveredAttackTypes list, since a general filtering requirement isn't itself an attack type."
+comments: "The standard must explicitly require network filtering mechanisms on internet-facing routers. Split out of the former combined RouterFilteringAntispoofingRequired metric (see RouterAntispoofingRequired for the antispoofing check)."
 # ====== Configuration ======
 configuration:
   p1:
