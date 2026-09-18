@@ -1880,6 +1880,7 @@ message Functionality {
 		NeedToKnowPolicy need_to_know_policy = 17201;
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
+		SecureDevelopmentPolicy secure_development_policy = 18265;
 		SeparationOfDutiesPolicy separation_of_duties_policy = 1439;
 		Principal principal = 16173;
 		ProtectedAsset protected_asset = 10697;
@@ -3395,6 +3396,7 @@ message Policies {
 		NeedToKnowPolicy need_to_know_policy = 17201;
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
+		SecureDevelopmentPolicy secure_development_policy = 18265;
 		SeparationOfDutiesPolicy separation_of_duties_policy = 1439;
 	}
 }
@@ -3438,6 +3440,7 @@ message PolicyDocument {
 	optional string parent_id = 18208;
 	SDNFunctionValidationPolicy sdn_function_validation_policy = 8099;
 	SchemaValidation validated_by = 5620;
+	SecureDevelopmentPolicy secure_development_policy = 11604;
 	repeated SecurityFeature security_features  = 13896;
 	SecurityIncident security_incident = 16664;
 	SeparationOfDutiesPolicy separation_of_duties_policy = 6434;
@@ -4073,6 +4076,19 @@ message SecretOperation {
 		CreateSecret create_secret = 3789;
 		GetSecret get_secret = 2809;
 	}
+}
+
+// SecureDevelopmentPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a secure development methodology / SDLC policy section within a PolicyDocument.
+message SecureDevelopmentPolicy {
+	option (resource_type_names) = "SecureDevelopmentPolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	float checklist_coverage_percent = 6485;
+	bool high_critical_findings_block_release = 16634;
+	bool pentest_gate_required = 9188;
+	bool references_industry_framework = 12037;
 }
 
 // SecurityAdvisoryDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
