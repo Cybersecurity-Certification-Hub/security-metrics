@@ -3083,6 +3083,8 @@ message NetworkThreatMitigationPolicy {
 	option (resource_type_names) = "Functionality";
 
 	repeated string covered_attack_types = 10498;
+	// Indicates whether the policy explicitly requires network filtering mechanisms on internet-facing routers.
+	bool filtering_required = 11116;
 }
 
 // Networking is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".

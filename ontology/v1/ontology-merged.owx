@@ -1269,6 +1269,9 @@
         <DataProperty IRI="/properties/field"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/filteringRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/from"/>
     </Declaration>
     <Declaration>
@@ -4221,6 +4224,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/coveredAttackTypes"/>
             <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/filteringRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -8858,6 +8868,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/field</IRI>
         <Literal xml:lang="english">field</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/filteringRequired</IRI>
+        <Literal>Indicates whether the policy explicitly requires network filtering mechanisms on internet-facing routers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/filteringRequired</IRI>
+        <Literal>filteringRequired</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
