@@ -756,9 +756,6 @@
         <Class IRI="/classes/SecurityIncident"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/SecurityPolicyReview"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/classes/SecurityTraining"/>
     </Declaration>
     <Declaration>
@@ -957,9 +954,6 @@
         <DataProperty IRI="/classes/allRequiredInformationRecorded"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/antispoofingRequired"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/apiHitsPerMonth"/>
     </Declaration>
     <Declaration>
@@ -999,9 +993,6 @@
         <DataProperty IRI="/classes/daysSinceActive"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/daysSinceLastAudit"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/description"/>
     </Declaration>
     <Declaration>
@@ -1033,9 +1024,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/filetype"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/classes/filteringRequired"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/format"/>
@@ -1164,16 +1152,10 @@
         <DataProperty IRI="/classes/recoveryFrequency"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/redundant"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/reqBody"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/resourceType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/classes/restrictsDownloadAndExtraction"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/retentionPeriod"/>
@@ -1225,9 +1207,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/team"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/classes/thirdPartyExchangeRulesDefined"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/timeWindowSeconds"/>
@@ -1605,9 +1584,6 @@
         <Datatype IRI="/datatypes/cpgNode"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/properties/restrictsDownloadAndExtraction"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes//mode"/>
     </Declaration>
     <Declaration>
@@ -1620,12 +1596,6 @@
         <DataProperty IRI="/properties/numberOfRequiredReviewers"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/properties/thirdPartyExchangeRulesDefined"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/properties/filteringRequired"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
     </Declaration>
     <Declaration>
@@ -1633,9 +1603,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/errorCorrectionEnabled"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/properties/daysSinceLastAudit"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/evasionEfficacyLevel"/>
@@ -1663,9 +1630,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/allowedSources"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/properties/antispoofingRequired"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/modelStealResilience"/>
@@ -2056,13 +2020,6 @@
     <SubClassOf>
         <Class IRI="/classes/Backup"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/redundant"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/Backup"/>
-        <DataSomeValuesFrom>
             <DataProperty IRI="/properties/enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
@@ -2413,13 +2370,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/daysSinceLastAudit"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/classes/ComplianceMethodologyPolicy"/>
         <Class IRI="/classes/Policies"/>
     </SubClassOf>
@@ -2753,20 +2703,6 @@
         <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/isDefined"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/restrictsDownloadAndExtraction"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/thirdPartyExchangeRulesDefined"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -4283,22 +4219,8 @@
     <SubClassOf>
         <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/antispoofingRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
-        <DataSomeValuesFrom>
             <DataProperty IRI="/properties/coveredAttackTypes"/>
             <Datatype abbreviatedIRI="xsd:listString"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/filteringRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4482,13 +4404,6 @@
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/PolicyDocument"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -4532,13 +4447,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/SecurityIncident"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/PolicyDocument"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/properties/has"/>
-            <Class IRI="/classes/SecurityPolicyReview"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -5151,17 +5059,6 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/team"/>
             <Datatype abbreviatedIRI="xsd:listString"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/SecurityPolicyReview"/>
-        <Class IRI="/classes/Governance"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/classes/SecurityPolicyReview"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/intervalMonths"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -7741,16 +7638,6 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/SecurityPolicyReview</IRI>
-        <Literal>Represents the review cadence of the organization&apos;s Information Security Policy, distinct from MonitoringProcedure&apos;s operational monitoring review cadence. intervalMonths: how often the policy must be reviewed, in months.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/SecurityPolicyReview</IRI>
-        <Literal>SecurityPolicyReview</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/SeparationOfDutiesPolicy</IRI>
         <Literal>Represents a policy section within a [PolicyDocument] describing separation of duties requirements. isDefined: whether this policy section is present and defined.</Literal>
     </AnnotationAssertion>
@@ -8015,16 +7902,6 @@ name = metadata.name</Literal>
         <Literal>allRequiredInformationRecorded</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/antispoofingRequired</IRI>
-        <Literal>Indicates whether the policy explicitly requires antispoofing mechanisms on internet-facing routers.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/antispoofingRequired</IRI>
-        <Literal>antispoofingRequired</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/apiHitsPerMonth</IRI>
         <Literal>apiHitsPerMonth</Literal>
@@ -8135,16 +8012,6 @@ name = metadata.name</Literal>
         <Literal>durationSinceActive</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/daysSinceLastAudit</IRI>
-        <Literal>The number of days elapsed since the last completed external/supervisory audit.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/daysSinceLastAudit</IRI>
-        <Literal>daysSinceLastAudit</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/description</IRI>
         <Literal>description</Literal>
@@ -8188,16 +8055,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/filetype</IRI>
         <Literal>filetype</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/filteringRequired</IRI>
-        <Literal>Indicates whether the policy explicitly requires network filtering mechanisms on internet-facing routers.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/filteringRequired</IRI>
-        <Literal>filteringRequired</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8475,16 +8332,6 @@ name = metadata.name</Literal>
         <Literal>recoveryFrequency</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/redundant</IRI>
-        <Literal>Indicates whether the resource is stored redundantly.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/redundant</IRI>
-        <Literal>redundant</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/reqBody</IRI>
         <Literal>reqBody</Literal>
@@ -8498,16 +8345,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/resourceType</IRI>
         <Literal>resourceType</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/restrictsDownloadAndExtraction</IRI>
-        <Literal>Indicates whether the policy restricts downloading or extracting information from the organization&apos;s systems.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/restrictsDownloadAndExtraction</IRI>
-        <Literal>restrictsDownloadAndExtraction</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8628,16 +8465,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/team</IRI>
         <Literal>team</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/thirdPartyExchangeRulesDefined</IRI>
-        <Literal>Indicates whether the policy specifically defines rules for information exchange with third parties.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/thirdPartyExchangeRulesDefined</IRI>
-        <Literal>thirdPartyExchangeRulesDefined</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["audit logs", "monitor", "anomalies", "security events"]
 category: "LoggingMonitoring"
 version: "v1"
-comments: "Audit logs must be periodically monitored to identify security events, abnormal behavior, or unusual activity, with a defined review-and-response process. Reuses the ontology's existing AnomalyDetection concept (attached to PolicyDocument here for the first time) rather than a separate logManagement concept."
+comments: "Audit logs must be periodically monitored to identify security events, abnormal behavior, or unusual activity, with a defined review-and-response process."
 # ====== Configuration ======
 configuration:
   p1:
