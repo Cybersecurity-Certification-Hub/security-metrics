@@ -9,7 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-  ai.auditInterval
+  "auditInterval" in object.keys(input.assetInventory)
   "PolicyDocument" in input.type
   ai.type == "digital"
 }

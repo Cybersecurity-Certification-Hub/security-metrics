@@ -10,7 +10,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    ai.completedReviewPercentage
+   "completedReviewPercentage" in object.keys(input.assetInventory)
     "Account" in input.type
 }
 
