@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "8b189157-161e-4762-8aa0-183ce6f13cf4"
+name: "AuditLogReviewProcessDocumented"
+description: "This rule assesses whether a [PolicyDocument] includes [AnomalyDetection] with its [p1:enabled] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the log management procedure require periodic monitoring and anomaly review of audit logs?"
+    keywords: ["audit logs", "monitor", "anomalies", "security events"]
+category: "LoggingMonitoring"
+version: "v1"
+comments: "Audit logs must be periodically monitored to identify security events, abnormal behavior, or unusual activity, with a defined review-and-response process."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
