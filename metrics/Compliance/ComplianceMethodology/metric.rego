@@ -9,7 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    complianceMethodologyPolicy != {} # only assess if policy is provided
+    complianceMethodologyPolicy.methodology
     "PolicyDocument" in input.type
 }
 
