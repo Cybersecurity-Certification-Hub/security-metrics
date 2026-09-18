@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["report to NovaBank", "notification contact", "designated contact", "CISO", "CISO's office", "the SOC", "SOC", "SOC team"]
 category: "SecurityIncidents"
 version: "v1"
-comments: "This metric assesses if an incident reporting contact/team is defined, using literal-extraction phrasing matching the final AMOE v2 spec's 8 alternate phrases. Added as a new dedicated metric for IM-02-M1 rather than modifying the pre-existing IncidentReportingTeam metric, since that metric already exists on main (isIn([\"Security Committee\"]) style) and may be relied on by other pilots/controls; this avoids any risk of changing its behavior for an existing consumer. Checks the same underlying SecurityIncident.team field as that metric but with hasAny (non-empty), a compatible, non-conflicting assertion since a team containing \"Security Committee\" also satisfies \"a contact is stated\"."
+comments: "This metric assesses if an incident reporting contact/team is defined. Added as a new dedicated metric rather than modifying the pre-existing IncidentReportingTeam metric, since that metric may be relied on by other consumers; this avoids any risk of changing its behavior."
 # ====== Configuration ======
 configuration:
   p1:
