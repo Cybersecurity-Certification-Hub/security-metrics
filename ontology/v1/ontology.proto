@@ -46,17 +46,6 @@ message ABAC {
 
 }
 
-// AcceptableUsePolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-// Represents an acceptable use policy within a PolicyDocument.
-message AcceptableUsePolicy {
-	option (resource_type_names) = "AcceptableUsePolicy";
-	option (resource_type_names) = "Policies";
-	option (resource_type_names) = "Functionality";
-
-	bool is_defined = 4786;
-	float mandated_area_coverage_percent = 2890;
-}
-
 // AccessControlTypePolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message AccessControlTypePolicy {
 	option (resource_type_names) = "AccessControlTypePolicy";
@@ -245,10 +234,6 @@ message AssetInventory {
 	int32 audit_interval = 15088;
 	// Percentage of completed reviews and updates of asset inventory entries.
 	float completed_review_percentage = 15931;
-	// Indicates whether an asset inventory is defined.
-	bool inventory_defined = 10244;
-	// Indicates whether an owner is assigned for each asset class/type.
-	bool owner_assignment_stated = 10728;
 	int32 review_frequency = 12717;
 	// Service contains the name of the service (e.g., Asset Management).
 	string service = 11727;
@@ -408,13 +393,7 @@ message AwarenessTraining {
 	option (resource_type_names) = "Governance";
 	option (resource_type_names) = "Functionality";
 
-	// Indicates whether the training plan states it is delivered at least annually.
-	bool annual_cadence_stated = 9832;
 	bool annual_update_completed = 4205;
-	// Indicates whether a documented training and awareness plan is maintained.
-	bool plan_documented = 10637;
-	// Indicates whether the training plan includes role-based tracks adjusted by employee function.
-	bool role_adjusted_tracks_stated = 3033;
 	bool successfully_completed_percentage = 9380;
 }
 
@@ -1139,18 +1118,6 @@ message CryptographicOperation {
 	}
 }
 
-// CryptographicTransferPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-// Represents a policy section within a PolicyDocument governing cryptographic protection of transferred information.
-message CryptographicTransferPolicy {
-	option (resource_type_names) = "CryptographicTransferPolicy";
-	option (resource_type_names) = "Policies";
-	option (resource_type_names) = "Functionality";
-
-	bool encrypted_channel_required = 17250;
-	bool non_descriptive_filename_required = 425;
-	bool recipient_held_key_required = 14966;
-}
-
 // CustomerKeyEncryption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message CustomerKeyEncryption {
 	option (resource_type_names) = "CustomerKeyEncryption";
@@ -1375,17 +1342,6 @@ message Decryption {
 	Cipher cipher = 10213;
 	CodeRegion code_region = 7584;
 	optional string secret_id = 2937;
-}
-
-// DeviceManagementPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-// Represents a device management policy section within a PolicyDocument.
-message DeviceManagementPolicy {
-	option (resource_type_names) = "DeviceManagementPolicy";
-	option (resource_type_names) = "Policies";
-	option (resource_type_names) = "Functionality";
-
-	bool all_mandated_controls_addressed = 5229;
-	float checklist_coverage_percent = 15738;
 }
 
 // DeviceProvisioningService is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1916,23 +1872,15 @@ message Functionality {
 		GetSecret get_secret = 2809;
 		Output output = 7223;
 		Padding padding = 9245;
-		AcceptableUsePolicy acceptable_use_policy = 12992;
 		AccessControlTypePolicy access_control_type_policy = 13002;
 		ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 3098;
 		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
-		CryptographicTransferPolicy cryptographic_transfer_policy = 15460;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
-		DeviceManagementPolicy device_management_policy = 12987;
 		LeastPrivilegePolicy least_privilege_policy = 15025;
-		LiabilityPolicy liability_policy = 13060;
 		NeedToKnowPolicy need_to_know_policy = 17201;
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
-		OutsourcingPolicy outsourcing_policy = 15704;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
-		SecureDevelopmentPolicy secure_development_policy = 18265;
 		SeparationOfDutiesPolicy separation_of_duties_policy = 1439;
-		TeleworkingPolicy teleworking_policy = 7516;
-		TestDataPolicy test_data_policy = 4903;
 		VulnerabilityManagementPolicy vulnerability_management_policy = 3972;
 		Principal principal = 16173;
 		ProtectedAsset protected_asset = 10697;
@@ -2509,16 +2457,6 @@ message LeastPrivilegePolicy {
 	option (resource_type_names) = "Functionality";
 
 	bool is_defined = 18064;
-}
-
-// LiabilityPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-// Represents a liability/cost-assignment clause within a PolicyDocument.
-message LiabilityPolicy {
-	option (resource_type_names) = "LiabilityPolicy";
-	option (resource_type_names) = "Policies";
-	option (resource_type_names) = "Functionality";
-
-	bool costs_explicitly_assigned_to_provider = 15728;
 }
 
 // Library is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3355,17 +3293,6 @@ message Output {
 
 }
 
-// OutsourcingPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-// Represents a subcontractor/outsourcing clause within a PolicyDocument.
-message OutsourcingPolicy {
-	option (resource_type_names) = "OutsourcingPolicy";
-	option (resource_type_names) = "Policies";
-	option (resource_type_names) = "Functionality";
-
-	string monitoring_mechanism = 16524;
-	bool monitoring_obligation_stated = 8257;
-}
-
 // POSIX is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 // Represents a POSIX architecture, commonly found on Linux systems.
 message POSIX {
@@ -3461,23 +3388,15 @@ message PasswordPolicy {
 message Policies {
 
 	oneof type {
-		AcceptableUsePolicy acceptable_use_policy = 12992;
 		AccessControlTypePolicy access_control_type_policy = 13002;
 		ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 3098;
 		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
-		CryptographicTransferPolicy cryptographic_transfer_policy = 15460;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
-		DeviceManagementPolicy device_management_policy = 12987;
 		LeastPrivilegePolicy least_privilege_policy = 15025;
-		LiabilityPolicy liability_policy = 13060;
 		NeedToKnowPolicy need_to_know_policy = 17201;
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
-		OutsourcingPolicy outsourcing_policy = 15704;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
-		SecureDevelopmentPolicy secure_development_policy = 18265;
 		SeparationOfDutiesPolicy separation_of_duties_policy = 1439;
-		TeleworkingPolicy teleworking_policy = 7516;
-		TestDataPolicy test_data_policy = 4903;
 		VulnerabilityManagementPolicy vulnerability_management_policy = 3972;
 	}
 }
@@ -3506,33 +3425,24 @@ message PolicyDocument {
 	string name = 2052 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5038;
-	AcceptableUsePolicy acceptable_use_policy = 15013;
 	AccessControlTypePolicy access_control_type_policy = 9164;
 	AssetInventory asset_inventory = 16496;
-	AwarenessTraining awareness_training = 16218;
 	Backup backup = 16402;
 	repeated CryptographicHash cryptographic_hashs  = 12896;
-	CryptographicTransferPolicy cryptographic_transfer_policy = 10024;
 	DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 4864;
 	DataLocation data_location = 11474;
-	DeviceManagementPolicy device_management_policy = 8439;
 	repeated DocumentSignature document_signatures  = 7191;
 	repeated Governance governances  = 4759;
 	LeastPrivilegePolicy least_privilege_policy = 12663;
-	LiabilityPolicy liability_policy = 9304;
 	MonitoringProcedure monitoring_procedure = 11357;
 	NeedToKnowPolicy need_to_know_policy = 3585;
 	NetworkThreatMitigationPolicy network_threat_mitigation_policy = 9407;
-	OutsourcingPolicy outsourcing_policy = 14425;
 	optional string parent_id = 18208;
 	SDNFunctionValidationPolicy sdn_function_validation_policy = 8099;
 	SchemaValidation validated_by = 5620;
-	SecureDevelopmentPolicy secure_development_policy = 11604;
 	repeated SecurityFeature security_features  = 13896;
 	SecurityIncident security_incident = 16664;
 	SeparationOfDutiesPolicy separation_of_duties_policy = 6434;
-	TeleworkingPolicy teleworking_policy = 17215;
-	TestDataPolicy test_data_policy = 11308;
 	VulnerabilityManagementPolicy vulnerability_management_policy = 2658;
 }
 
@@ -3916,7 +3826,6 @@ message RequestForChange {
 	option (resource_type_names) = "Functionality";
 
 	bool approved_before_deployment = 16813;
-	float mandatory_field_completeness_percent = 13417;
 }
 
 // Resource is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -4169,19 +4078,6 @@ message SecretOperation {
 	}
 }
 
-// SecureDevelopmentPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-// Represents a secure development methodology / SDLC policy section within a PolicyDocument.
-message SecureDevelopmentPolicy {
-	option (resource_type_names) = "SecureDevelopmentPolicy";
-	option (resource_type_names) = "Policies";
-	option (resource_type_names) = "Functionality";
-
-	float checklist_coverage_percent = 6485;
-	bool high_critical_findings_block_release = 16634;
-	bool pentest_gate_required = 9188;
-	bool references_industry_framework = 12037;
-}
-
 // SecurityAdvisoryDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message SecurityAdvisoryDocument {
 	option (resource_type_names) = "SecurityAdvisoryDocument";
@@ -4303,9 +4199,6 @@ message SecurityIncident {
 	option (resource_type_names) = "SecurityIncident";
 	option (resource_type_names) = "Functionality";
 
-	int32 notification_window_hours = 9271;
-	bool registry_and_sla_stated = 18381;
-	bool severity_and_escalation_defined = 11333;
 	repeated string team = 3344;
 }
 
@@ -4316,13 +4209,7 @@ message SecurityTraining {
 	option (resource_type_names) = "Governance";
 	option (resource_type_names) = "Functionality";
 
-	// Indicates whether the training plan states it is delivered at least annually.
-	bool annual_cadence_stated = 10262;
 	bool annual_update_completed = 10890;
-	// Indicates whether a documented training and awareness plan is maintained.
-	bool plan_documented = 6027;
-	// Indicates whether the training plan includes role-based tracks adjusted by employee function.
-	bool role_adjusted_tracks_stated = 10041;
 	bool successfully_completed_percentage = 18938;
 }
 
@@ -4490,29 +4377,6 @@ message SymmetricCipher {
 	string modus = 10292;
 	InitializationVector initialization_vector = 11325;
 	Padding padding = 2670;
-}
-
-// TeleworkingPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-// Represents a teleworking / remote access policy section within a PolicyDocument.
-message TeleworkingPolicy {
-	option (resource_type_names) = "TeleworkingPolicy";
-	option (resource_type_names) = "Policies";
-	option (resource_type_names) = "Functionality";
-
-	bool encryption_required = 2639;
-	bool mfa_and_federation_required_for_remote_access = 10016;
-	bool two_factor_required = 4379;
-}
-
-// TestDataPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-// Represents a policy section within a PolicyDocument governing the use and anonymization of test data.
-message TestDataPolicy {
-	option (resource_type_names) = "TestDataPolicy";
-	option (resource_type_names) = "Policies";
-	option (resource_type_names) = "Functionality";
-
-	bool anonymization_required_for_non_prod = 993;
-	string technique = 10604;
 }
 
 // Time is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
