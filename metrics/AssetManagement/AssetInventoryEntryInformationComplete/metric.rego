@@ -10,7 +10,8 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    ai
+   "allRequiredInformationRecorded" in object.keys(input.assetInventory)
+    "Account" in input.type
 }
 
 compliant if {

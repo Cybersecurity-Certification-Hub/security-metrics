@@ -2,15 +2,15 @@ package cch.metrics.asset_inventory_enabled
 
 import data.cch.comparison_result
 import rego.v1
-import input as document
+import input.assetInventory as ai
 
 default applicable := false
 default compliant := false
 
 applicable if {
-	document != {}
-	document.assetInventory
-	"PolicyDocument" in document.type
+	"type" in object.keys(input.assetInventory)
+    
+	"PolicyDocument" in input.type
 }
 
 compliant if {
@@ -23,4 +23,4 @@ message := "The policy document defines an enabled asset inventory cloud feature
 	not compliant
 }
 
-results := [comparison_result("assetInventory.service", document.assetInventory.service)]
+results := [comparison_result("assetInventory.service", ai.service)]
