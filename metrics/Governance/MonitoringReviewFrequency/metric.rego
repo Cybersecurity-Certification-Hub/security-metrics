@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	monitoringProcedure != {}
+	monitoringProcedure.intervalMonths
 	"PolicyDocument" in input.type
 }
 
