@@ -409,8 +409,6 @@ message Backup {
 	// The interval refers to the update interval in days.
 	google.protobuf.Duration interval = 7186;
 	int32 recovery_frequency = 8809;
-	// Indicates whether the resource is stored redundantly.
-	bool redundant = 18969;
 	google.protobuf.Duration retention_period = 6795;
 	optional string storage_id = 17051;
 	TransportEncryption transport_encryption = 2398;
@@ -710,7 +708,6 @@ message ComplianceAuditIntervalPolicy {
 
 	// The time needed for an audit.
 	int32 audit_interval = 7826;
-	int32 days_since_last_audit = 12483;
 }
 
 // ComplianceMethodologyPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1231,8 +1228,6 @@ message DataConfidentialitySDNPolicy {
 	option (resource_type_names) = "Functionality";
 
 	bool is_defined = 1199;
-	bool restricts_download_and_extraction = 16183;
-	bool third_party_exchange_rules_defined = 6688;
 }
 
 // DataLocation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1826,7 +1821,6 @@ message Functionality {
 		Error error = 6544;
 		ContactPerson contact_person = 1620;
 		MonitoringProcedure monitoring_procedure = 9388;
-		SecurityPolicyReview security_policy_review = 10907;
 		AwarenessTraining awareness_training = 8227;
 		SecurityTraining security_training = 8543;
 		HttpClient http_client = 18121;
@@ -1985,7 +1979,6 @@ message Governance {
 	oneof type {
 		ContactPerson contact_person = 1620;
 		MonitoringProcedure monitoring_procedure = 9388;
-		SecurityPolicyReview security_policy_review = 10907;
 		AwarenessTraining awareness_training = 8227;
 		SecurityTraining security_training = 8543;
 	}
@@ -3089,9 +3082,9 @@ message NetworkThreatMitigationPolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
+	// Indicates whether the policy explicitly requires antispoofing mechanisms on internet-facing routers.
 	bool antispoofing_required = 15371;
 	repeated string covered_attack_types = 10498;
-	bool filtering_required = 11116;
 }
 
 // Networking is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -3433,10 +3426,8 @@ message PolicyDocument {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5038;
 	AccessControlTypePolicy access_control_type_policy = 9164;
-	AnomalyDetection anomaly_detection = 15256;
 	AssetInventory asset_inventory = 16496;
 	Backup backup = 16402;
-	ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 11561;
 	repeated CryptographicHash cryptographic_hashs  = 12896;
 	DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 4864;
 	DataLocation data_location = 11474;
@@ -3451,7 +3442,6 @@ message PolicyDocument {
 	SchemaValidation validated_by = 5620;
 	repeated SecurityFeature security_features  = 13896;
 	SecurityIncident security_incident = 16664;
-	SecurityPolicyReview security_policy_review = 3099;
 	SeparationOfDutiesPolicy separation_of_duties_policy = 6434;
 }
 
@@ -4209,17 +4199,6 @@ message SecurityIncident {
 	option (resource_type_names) = "Functionality";
 
 	repeated string team = 3344;
-}
-
-// SecurityPolicyReview is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
-// Represents the review cadence of the organization's Information Security Policy, distinct from MonitoringProcedure's operational monitoring review cadence. intervalMonths: how often the policy must be reviewed, in months.
-message SecurityPolicyReview {
-	option (resource_type_names) = "SecurityPolicyReview";
-	option (resource_type_names) = "Governance";
-	option (resource_type_names) = "Functionality";
-
-	// The interval refers to the interval in months.
-	int32 interval_months = 7860;
 }
 
 // SecurityTraining is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
