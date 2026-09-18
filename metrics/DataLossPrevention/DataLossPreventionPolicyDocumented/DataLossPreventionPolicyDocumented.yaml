@@ -1,6 +1,6 @@
 # ====== Metadata ======
 id: "54d9ef9a-4e1c-4f5f-bfac-117967ed630d"
-name: "DlpPolicyDocumented"
+name: "DataLossPreventionPolicyDocumented"
 description: "This rule assesses whether a [PolicyDocument] includes [DataConfidentialitySDNPolicy] with its [p1:restrictsDownloadAndExtraction] property set correctly."
 implementationGuidelines:
   AMOE:
@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["Data Loss Prevention", "DLP", "prevent extraction", "downloading and extracting", "downloading and extracting information from NovaBank's systems"]
 category: "DataLossPrevention"
 version: "v1"
-comments: "A DLP Policy must exist that restricts downloading/extracting information. Modeled as a new property on the ontology's existing DataConfidentialitySDNPolicy (PolicyDocument's DLP policy slot, previously only exposing isDefined via DataConfidentialitySDNPolicyPresence) rather than a separate DLP concept."
+comments: "A Data Loss Prevention Policy must exist that restricts downloading/extracting information."
 # ====== Configuration ======
 configuration:
   p1:

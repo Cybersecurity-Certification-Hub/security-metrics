@@ -1,4 +1,4 @@
-package cch.metrics.dlp_policy_documented
+package cch.metrics.data_loss_prevention_policy_documented
 
 import data.cch.comparison_result
 import rego.v1
