@@ -577,13 +577,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:restrictsDownloadAndExtraction"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
-        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:thirdPartyExchangeRulesDefined"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
@@ -619,20 +612,6 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:coveredAttackTypes"/>
             <Datatype abbreviatedIRI="xsd:listString"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:filteringRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:antispoofingRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -676,13 +655,6 @@
         <Class abbreviatedIRI="core:ComplianceAuditIntervalPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:auditInterval"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:ComplianceAuditIntervalPolicy"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:daysSinceLastAudit"/>
             <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
     </SubClassOf>

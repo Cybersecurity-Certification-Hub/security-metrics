@@ -667,13 +667,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:Backup"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:redundant"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="core:BootLog"/>
         <Class abbreviatedIRI="core:Logging"/>
     </SubClassOf>

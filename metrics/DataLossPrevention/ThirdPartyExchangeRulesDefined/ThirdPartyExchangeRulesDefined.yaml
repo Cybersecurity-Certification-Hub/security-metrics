@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["third parties", "third-party exchange"]
 category: "DataLossPrevention"
 version: "v1"
-comments: "The policy must specifically define rules for information exchange with third parties. Modeled as a new property on the ontology's existing DataConfidentialitySDNPolicy (PolicyDocument's DLP policy slot, shared with the sibling DlpPolicyDocumented metric) rather than a separate DLP concept."
+comments: "The policy must specifically define rules for information exchange with third parties."
 # ====== Configuration ======
 configuration:
   p1:
