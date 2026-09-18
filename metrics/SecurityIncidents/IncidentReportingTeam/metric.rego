@@ -7,7 +7,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	input.securityIncident.team
+	"team" in object.keys(input.securityIncident)
 	"PolicyDocument" in input.type
 }
 

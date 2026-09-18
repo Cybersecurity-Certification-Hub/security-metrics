@@ -52,7 +52,7 @@ message AccessControlTypePolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
-	optional string authorization_types = 2672;
+	repeated string authorization_types = 2672;
 }
 
 // AccessRestriction is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -237,8 +237,8 @@ message AssetInventory {
 	optional int32 review_frequency = 12717;
 	// Service contains the name of the service (e.g., Asset Management).
 	optional string service = 11727;
-	optional string status = 11933;
-	optional string storage_facility = 2637;
+	repeated string status = 11933;
+	repeated string storage_facility = 2637;
 	optional string type = 11720;
 	// The time needed for an update.
 	optional int32 update_duration = 5698;
@@ -716,7 +716,7 @@ message ComplianceMethodologyPolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
-	optional string methodology = 8814;
+	repeated string methodology = 8814;
 }
 
 // Component is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".

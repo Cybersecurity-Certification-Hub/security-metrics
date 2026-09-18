@@ -14,4 +14,4 @@ comments: "This metric assesses the facility type used to store asset records. M
 configuration:
   p1:
     operator: "allIn"
-    targetValue: "[centrally, decentralized, distributed, central]"
+    targetValue: ["centrally", "decentralized", "distributed", "central"]
