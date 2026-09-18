@@ -151,6 +151,9 @@
         <DataProperty abbreviatedIRI="res:recoveryFrequency"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:redundant"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:service"/>
     </Declaration>
     <Declaration>
@@ -464,24 +467,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:value"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="res:restrictsDownloadAndExtraction"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="res:thirdPartyExchangeRulesDefined"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="res:redundant"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="res:daysSinceLastAudit"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="res:filteringRequired"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="res:antispoofingRequired"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
@@ -1397,26 +1382,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>res:restrictsDownloadAndExtraction</AbbreviatedIRI>
-        <Literal>Indicates whether the policy restricts downloading or extracting information from the organization's systems.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:restrictsDownloadAndExtraction</AbbreviatedIRI>
-        <Literal>restrictsDownloadAndExtraction</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>res:thirdPartyExchangeRulesDefined</AbbreviatedIRI>
-        <Literal>Indicates whether the policy specifically defines rules for information exchange with third parties.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:thirdPartyExchangeRulesDefined</AbbreviatedIRI>
-        <Literal>thirdPartyExchangeRulesDefined</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>res:redundant</AbbreviatedIRI>
         <Literal>Indicates whether the resource is stored redundantly.</Literal>
     </AnnotationAssertion>
@@ -1424,35 +1389,5 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:redundant</AbbreviatedIRI>
         <Literal>redundant</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>res:daysSinceLastAudit</AbbreviatedIRI>
-        <Literal>The number of days elapsed since the last completed external/supervisory audit.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:daysSinceLastAudit</AbbreviatedIRI>
-        <Literal>daysSinceLastAudit</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>res:filteringRequired</AbbreviatedIRI>
-        <Literal>Indicates whether the policy explicitly requires network filtering mechanisms on internet-facing routers.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:filteringRequired</AbbreviatedIRI>
-        <Literal>filteringRequired</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>res:antispoofingRequired</AbbreviatedIRI>
-        <Literal>Indicates whether the policy explicitly requires antispoofing mechanisms on internet-facing routers.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:antispoofingRequired</AbbreviatedIRI>
-        <Literal>antispoofingRequired</Literal>
     </AnnotationAssertion>
 </Ontology>

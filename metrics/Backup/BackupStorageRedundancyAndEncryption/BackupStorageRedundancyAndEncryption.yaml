@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["redundant and encrypted", "All backups are stored on redundant and encrypted systems"]
 category: "Backup"
 version: "v1"
-comments: "Backups must be stored on redundant and encrypted systems. This metric complements the existing BackupFrequency and BackupRecoveryFrequency metrics, which already cover the weekly-backup and 6-monthly-recovery-test requirements of this control; together the three satisfy the full control. Checks the existing Backup.transportEncryption field for the encryption half and a new Backup.redundant field for the redundancy half, rather than a single combined boolean."
+comments: "Backups must be stored on redundant and encrypted systems. This metric complements the existing BackupFrequency and BackupRecoveryFrequency metrics, which already cover the weekly-backup and 6-monthly-recovery-test requirements of this control; together the three satisfy the full control."
 # ====== Configuration ======
 configuration:
   p1:
