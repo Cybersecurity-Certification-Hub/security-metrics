@@ -10,7 +10,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
-	au
+	au.enabled
 	"VirtualMachine" in input.type
 }
 
