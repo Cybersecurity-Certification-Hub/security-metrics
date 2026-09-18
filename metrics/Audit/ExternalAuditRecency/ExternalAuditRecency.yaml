@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["audit date", "last audit", "last completed audit"]
 category: "Audit"
 version: "v1"
-comments: "The last completed external/supervisory audit must have occurred within the last 24 months (730 days). AMOE extracts the literal date (YYYY-MM-DD) from the sentence anchored on the phrase 'last completed audit'; the day-count itself is computed upstream during evidence collection and provided as daysSinceLastAudit, matching how every other interval-based AMOE metric in this repo receives a pre-computed number rather than parsing dates in REGO."
+comments: "The last completed external/supervisory audit must have occurred within the last 24 months (730 days)."
 # ====== Configuration ======
 configuration:
   p1:

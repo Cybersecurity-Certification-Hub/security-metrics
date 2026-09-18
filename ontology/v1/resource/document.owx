@@ -489,20 +489,6 @@
         <Class abbreviatedIRI="cl:PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="cl:SecurityPolicyReview"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:PolicyDocument"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
-            <Class abbreviatedIRI="cl:AnomalyDetection"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="cl:PolicyDocument"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="cl:ComplianceAuditIntervalPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
