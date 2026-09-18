@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	dataConfidentialitySDNPolicy != {}
+	dataConfidentialitySDNPolicy.isDefined
 	"PolicyDocument" in input.type
 }
 

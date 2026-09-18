@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	needToKnowPolicy != {}
+	needToKnowPolicy.isDefined
 	"PolicyDocument" in input.type
 }
 

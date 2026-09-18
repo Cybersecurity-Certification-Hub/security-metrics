@@ -10,7 +10,7 @@ default compliant := false
 
 applicable if {
 	input.type[_] == "HttpEndpoint"
-	auth
+	auth.failedAuthenticationAttempts
 }
 
 compliant if {
