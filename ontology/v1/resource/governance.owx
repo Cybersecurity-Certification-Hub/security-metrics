@@ -125,18 +125,18 @@
         <Literal>intervalMonths: Review frequency (in months) for reviewing monitoring procedures</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:ContactPerson</AbbreviatedIRI>
+        <Literal>ContactPerson</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>res:SecurityPolicyReview</AbbreviatedIRI>
-        <Literal>Represents the review cadence of the organization's Information Security Policy, distinct from MonitoringProcedure's operational monitoring review cadence. intervalMonths: how often the policy must be reviewed, in months.</Literal>
+        <Literal>Represents the review cadence of the organization's Information Security Policy. intervalMonths: how often the policy must be reviewed, in months.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:SecurityPolicyReview</AbbreviatedIRI>
         <Literal>SecurityPolicyReview</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:ContactPerson</AbbreviatedIRI>
-        <Literal>ContactPerson</Literal>
     </AnnotationAssertion>
 </Ontology>
