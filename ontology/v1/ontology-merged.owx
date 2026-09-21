@@ -1825,14 +1825,14 @@
         <Class IRI="/classes/AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/status"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/storageFacility"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
