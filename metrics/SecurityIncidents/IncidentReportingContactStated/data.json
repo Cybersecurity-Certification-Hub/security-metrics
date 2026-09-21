@@ -1,4 +1,4 @@
 {
-    "operator": "==",
+    "operator": "hasAny",
     "target_value": true
 }
