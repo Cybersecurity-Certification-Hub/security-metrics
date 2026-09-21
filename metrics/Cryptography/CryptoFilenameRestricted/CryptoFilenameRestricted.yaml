@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "98983100-2555-4cc1-a676-ec0e88db9520"
+name: "CryptoFilenameRestricted"
+description: "This rule assesses whether a [PolicyDocument] includes [CryptographicTransferPolicy] with its [p1:nonDescriptiveFilenameRequired] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "What must not be included in a transferred file name?"
+    keywords: ["file name"]
+category: "Cryptography"
+version: "v1"
+comments: "The policy must prohibit sensitive information in file names. Split out of the former combined KeyCustodyAndFileNamingControlled metric (see CryptoKeyRecipientHeld for the recipient-held-key check)."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

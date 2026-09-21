@@ -1118,6 +1118,18 @@ message CryptographicOperation {
 	}
 }
 
+// CryptographicTransferPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a PolicyDocument governing cryptographic protection of transferred information.
+message CryptographicTransferPolicy {
+	option (resource_type_names) = "CryptographicTransferPolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	bool encrypted_channel_required = 17250;
+	bool non_descriptive_filename_required = 425;
+	bool recipient_held_key_required = 14966;
+}
+
 // CustomerKeyEncryption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message CustomerKeyEncryption {
 	option (resource_type_names) = "CustomerKeyEncryption";
@@ -1875,6 +1887,7 @@ message Functionality {
 		AccessControlTypePolicy access_control_type_policy = 13002;
 		ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 3098;
 		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
+		CryptographicTransferPolicy cryptographic_transfer_policy = 15460;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
 		LeastPrivilegePolicy least_privilege_policy = 15025;
 		NeedToKnowPolicy need_to_know_policy = 17201;
@@ -3390,6 +3403,7 @@ message Policies {
 		AccessControlTypePolicy access_control_type_policy = 13002;
 		ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 3098;
 		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
+		CryptographicTransferPolicy cryptographic_transfer_policy = 15460;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
 		LeastPrivilegePolicy least_privilege_policy = 15025;
 		NeedToKnowPolicy need_to_know_policy = 17201;
@@ -3427,6 +3441,7 @@ message PolicyDocument {
 	AssetInventory asset_inventory = 16496;
 	Backup backup = 16402;
 	repeated CryptographicHash cryptographic_hashs  = 12896;
+	CryptographicTransferPolicy cryptographic_transfer_policy = 10024;
 	DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 4864;
 	DataLocation data_location = 11474;
 	repeated DocumentSignature document_signatures  = 7191;

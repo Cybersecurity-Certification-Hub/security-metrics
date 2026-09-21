@@ -466,6 +466,15 @@
         <DataProperty abbreviatedIRI="prop:value"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:recipientHeldKeyRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:nonDescriptiveFilenameRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:encryptedChannelRequired"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -1376,5 +1385,35 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:value</AbbreviatedIRI>
         <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:recipientHeldKeyRequired</AbbreviatedIRI>
+        <Literal>Indicates whether the encryption key used to protect a file must be held by the recipient.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:recipientHeldKeyRequired</AbbreviatedIRI>
+        <Literal>recipientHeldKeyRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:nonDescriptiveFilenameRequired</AbbreviatedIRI>
+        <Literal>Indicates whether transferred file names must not include descriptive content.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:nonDescriptiveFilenameRequired</AbbreviatedIRI>
+        <Literal>nonDescriptiveFilenameRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:encryptedChannelRequired</AbbreviatedIRI>
+        <Literal>Indicates whether encrypted channels (e.g., sFTP/HTTPS) are required for data transmission.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:encryptedChannelRequired</AbbreviatedIRI>
+        <Literal>encryptedChannelRequired</Literal>
     </AnnotationAssertion>
 </Ontology>
