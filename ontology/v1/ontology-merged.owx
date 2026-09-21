@@ -1164,6 +1164,9 @@
         <DataProperty IRI="/classes/resourceType"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/restrictsDownloadAndExtraction"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/retentionPeriod"/>
     </Declaration>
     <Declaration>
@@ -1591,6 +1594,9 @@
     </Declaration>
     <Declaration>
         <Datatype IRI="/datatypes/cpgNode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/restrictsDownloadAndExtraction"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes//mode"/>
@@ -2726,6 +2732,13 @@
         <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/restrictsDownloadAndExtraction"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -8406,6 +8419,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/resourceType</IRI>
         <Literal>resourceType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/restrictsDownloadAndExtraction</IRI>
+        <Literal>Indicates whether the policy restricts downloading or extracting information from the organization&apos;s systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/restrictsDownloadAndExtraction</IRI>
+        <Literal>restrictsDownloadAndExtraction</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
