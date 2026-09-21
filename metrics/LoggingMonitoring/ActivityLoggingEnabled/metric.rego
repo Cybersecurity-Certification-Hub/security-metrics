@@ -1,6 +1,6 @@
 package cch.metrics.activity_logging_enabled
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 
 default applicable = false
@@ -14,5 +14,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, enabled)
+	every r in results { r.success }
 }
+
+results := [comparison_result("activityLogging.enabled", enabled)]
