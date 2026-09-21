@@ -15,6 +15,7 @@ applicable if {
 }
 
 compliant if {
+	backup.transportEncryption.enabled == true
 	every r in results { r.success }
 }
 
@@ -25,6 +26,5 @@ message := "Backups are stored on redundant and encrypted systems." if {
 }
 
 results := [
-	comparison_result("backup.redundant", backup.redundant),
-	comparison_result("backup.transportEncryption.enabled", backup.transportEncryption.enabled),
+	comparison_result("backup.redundant", backup.redundant)
 ]
