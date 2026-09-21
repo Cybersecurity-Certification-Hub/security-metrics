@@ -409,6 +409,8 @@ message Backup {
 	// The interval refers to the update interval in days.
 	optional google.protobuf.Duration interval = 7186;
 	optional int32 recovery_frequency = 8809;
+	// Indicates whether the resource is stored redundantly.
+	optional bool redundant = 18969;
 	optional google.protobuf.Duration retention_period = 6795;
 	optional string storage_id = 17051;
 	TransportEncryption transport_encryption = 2398;
