@@ -1397,12 +1397,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>res:thirdPartyExchangeRulesDefined</AbbreviatedIRI>
+        <AbbreviatedIRI>prop:thirdPartyExchangeRulesDefined</AbbreviatedIRI>
         <Literal>Indicates whether the policy specifically defines rules for information exchange with third parties.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:thirdPartyExchangeRulesDefined</AbbreviatedIRI>
+        <AbbreviatedIRI>prop:thirdPartyExchangeRulesDefined</AbbreviatedIRI>
         <Literal>thirdPartyExchangeRulesDefined</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
