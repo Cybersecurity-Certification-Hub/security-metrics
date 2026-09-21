@@ -1,6 +1,6 @@
 package cch.metrics.boot_logging_retention
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.bootLogging as logging
 
@@ -13,8 +13,7 @@ applicable if {
 }
 
 compliant if {
-	# time.Duration is nanoseconds, we want to convert this to days
-	days := time.parse_duration_ns(logging.retentionPeriod) / (((1000 * 1000) * 1000) * 3600)
-
-	compare(data.operator, data.target_value, days)
+	every r in results { r.success }
 }
+
+results := [comparison_result("bootLogging.retentionPeriod.days", time.parse_duration_ns(logging.retentionPeriod) / (((1000 * 1000) * 1000) * 3600))]
