@@ -1155,16 +1155,10 @@
         <DataProperty IRI="/classes/recoveryFrequency"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/redundant"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes/reqBody"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/resourceType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/classes/restrictsDownloadAndExtraction"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/retentionPeriod"/>
@@ -1216,9 +1210,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/team"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/classes/thirdPartyExchangeRulesDefined"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/timeWindowSeconds"/>
@@ -1377,6 +1368,9 @@
         <DataProperty IRI="/properties/public"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/redundant"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/region"/>
     </Declaration>
     <Declaration>
@@ -1384,6 +1378,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/restrictedPorts"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/restrictsDownloadAndExtraction"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/serves"/>
@@ -1405,6 +1402,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/supportEnds"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/thirdPartyExchangeRulesDefined"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/tlsSignatureAlgorithm"/>
@@ -1605,9 +1605,6 @@
         <Datatype IRI="/datatypes/cpgNode"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/properties/restrictsDownloadAndExtraction"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/classes//mode"/>
     </Declaration>
     <Declaration>
@@ -1618,9 +1615,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/numberOfRequiredReviewers"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/properties/thirdPartyExchangeRulesDefined"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
@@ -2047,14 +2041,14 @@
     <SubClassOf>
         <Class IRI="/classes/Backup"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/redundant"/>
+            <DataProperty IRI="/properties/enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Backup"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/enabled"/>
+            <DataProperty IRI="/properties/redundant"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -2744,6 +2738,13 @@
         <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/restrictsDownloadAndExtraction"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -8422,16 +8423,6 @@ name = metadata.name</Literal>
         <Literal>recoveryFrequency</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/redundant</IRI>
-        <Literal>Indicates whether the resource is stored redundantly.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/redundant</IRI>
-        <Literal>redundant</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/reqBody</IRI>
         <Literal>reqBody</Literal>
@@ -8445,16 +8436,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/resourceType</IRI>
         <Literal>resourceType</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/restrictsDownloadAndExtraction</IRI>
-        <Literal>Indicates whether the policy restricts downloading or extracting information from the organization&apos;s systems.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/restrictsDownloadAndExtraction</IRI>
-        <Literal>restrictsDownloadAndExtraction</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8575,16 +8556,6 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/team</IRI>
         <Literal>team</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/classes/thirdPartyExchangeRulesDefined</IRI>
-        <Literal>Indicates whether the policy specifically defines rules for information exchange with third parties.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/classes/thirdPartyExchangeRulesDefined</IRI>
-        <Literal>thirdPartyExchangeRulesDefined</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -9187,6 +9158,16 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">public</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/redundant</IRI>
+        <Literal>Indicates whether the resource is stored redundantly.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/redundant</IRI>
+        <Literal>redundant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/region</IRI>
         <Literal xml:lang="english">region</Literal>
@@ -9200,6 +9181,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/restrictedPorts</IRI>
         <Literal xml:lang="english">restrictedPorts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/restrictsDownloadAndExtraction</IRI>
+        <Literal>Indicates whether the policy restricts downloading or extracting information from the organization&apos;s systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/restrictsDownloadAndExtraction</IRI>
+        <Literal>restrictsDownloadAndExtraction</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -9255,6 +9246,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/supportEnds</IRI>
         <Literal>supportEnds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/thirdPartyExchangeRulesDefined</IRI>
+        <Literal>Indicates whether the policy specifically defines rules for information exchange with third parties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/thirdPartyExchangeRulesDefined</IRI>
+        <Literal>thirdPartyExchangeRulesDefined</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
