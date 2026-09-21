@@ -9,7 +9,7 @@ default compliant := false
 
 applicable if {
 	"team" in object.keys(securityIncident)
-	is_boolean(securityIncident.team)
+	is_array(securityIncident.team)
 	"PolicyDocument" in input.type
 }
 
