@@ -12,5 +12,5 @@ comments: "This metric assesses if an incident reporting contact/team is defined
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
+    operator: "hasAny"
     targetValue: true
