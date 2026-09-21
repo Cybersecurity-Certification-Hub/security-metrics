@@ -1409,6 +1409,7 @@
         <AbbreviatedIRI>prop:restrictsDownloadAndExtraction</AbbreviatedIRI>
         <Literal>restrictsDownloadAndExtraction</Literal>
     </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>prop:daysSinceLastAudit</AbbreviatedIRI>
         <Literal>The number of days elapsed since the last completed external/supervisory audit.</Literal>
@@ -1417,8 +1418,8 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:daysSinceLastAudit</AbbreviatedIRI>
         <Literal>daysSinceLastAudit</Literal>
-     </AnnotationAssertion>
-     <AnnotationAssertion>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>prop:redundant</AbbreviatedIRI>
         <Literal>Indicates whether the resource is stored redundantly.</Literal>
