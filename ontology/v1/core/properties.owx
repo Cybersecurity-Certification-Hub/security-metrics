@@ -142,7 +142,7 @@
         <DataProperty abbreviatedIRI="res:isDefined"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="res:restrictsDownloadAndExtraction"/>
+        <DataProperty abbreviatedIRI="prop:restrictsDownloadAndExtraction"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:reviewFrequency"/>
@@ -1382,12 +1382,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>res:restrictsDownloadAndExtraction</AbbreviatedIRI>
+        <AbbreviatedIRI>prop:restrictsDownloadAndExtraction</AbbreviatedIRI>
         <Literal>Indicates whether the policy restricts downloading or extracting information from the organization's systems.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>res:restrictsDownloadAndExtraction</AbbreviatedIRI>
+        <AbbreviatedIRI>prop:restrictsDownloadAndExtraction</AbbreviatedIRI>
         <Literal>restrictsDownloadAndExtraction</Literal>
     </AnnotationAssertion>
 </Ontology>
