@@ -1155,6 +1155,9 @@
         <DataProperty IRI="/classes/recoveryFrequency"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/redundant"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/reqBody"/>
     </Declaration>
     <Declaration>
@@ -2018,6 +2021,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/recoveryFrequency"/>
             <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Backup"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/redundant"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -8354,6 +8364,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/recoveryFrequency</IRI>
         <Literal>recoveryFrequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/redundant</IRI>
+        <Literal>Indicates whether the resource is stored redundantly.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/redundant</IRI>
+        <Literal>redundant</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

@@ -151,6 +151,9 @@
         <DataProperty abbreviatedIRI="res:recoveryFrequency"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:redundant"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:service"/>
     </Declaration>
     <Declaration>
@@ -1376,5 +1379,15 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:value</AbbreviatedIRI>
         <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:redundant</AbbreviatedIRI>
+        <Literal>Indicates whether the resource is stored redundantly.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:redundant</AbbreviatedIRI>
+        <Literal>redundant</Literal>
     </AnnotationAssertion>
 </Ontology>
