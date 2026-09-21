@@ -6,9 +6,11 @@ on:
       - main
     paths:
       - 'ontology/**'
+  workflow_dispatch:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   generate-and-commit:
@@ -61,13 +63,26 @@ jobs:
           mkdir -p buf/validate
           curl -L https://raw.githubusercontent.com/bufbuild/protovalidate/refs/heads/main/proto/protovalidate/buf/validate/validate.proto -o buf/validate/validate.proto
           buf lint --path ontology/v1/ontology.proto --error-format github-actions --config '{"version":"v1","lint":{"use":["STANDARD"],"except":["PACKAGE_DIRECTORY_MATCH"]}}'
-        
-      - name: Commit and push to main
+      - name: Commit, push and create PR
         run: |
+          BRANCH_NAME="auto-update-${{ github.run_id }}-${{ github.run_attempt }}"
+          git checkout -b $BRANCH_NAME
           git add ontology/v1/ontology-merged.owx ontology/v1/ontology.proto
           if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Auto-update merged ontology and proto files after merge [skip ci]"
-            git push
+            echo "No changes – no PR needed."
+            exit 0
           fi
+          git commit -m "Auto-update merged ontology and proto files [skip ci]"
+          git push origin HEAD:$BRANCH_NAME
+          echo "Successfully pushed branch: $BRANCH_NAME"
+          # Create pull request
+          gh pr create --base main --head $BRANCH_NAME \
+            --title "Auto-generierte Ontologie-Updates" \
+            --body "Automatically created from workflow run."
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+
+
+
+
