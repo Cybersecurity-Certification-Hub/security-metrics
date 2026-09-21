@@ -3433,6 +3433,7 @@ message PolicyDocument {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	optional string raw = 5038;
 	AccessControlTypePolicy access_control_type_policy = 9164;
+	AnomalyDetection anomaly_detection = 15256;
 	AssetInventory asset_inventory = 16496;
 	Backup backup = 16402;
 	ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 11561;
