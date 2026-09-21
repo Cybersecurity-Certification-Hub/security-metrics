@@ -80,6 +80,27 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="res:Training"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:annualCadenceStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Training"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:roleAdjustedTracksStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:Training"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:planDocumented"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="res:ContactPerson"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:emailAddress"/>
@@ -114,5 +135,35 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:ContactPerson</AbbreviatedIRI>
         <Literal>ContactPerson</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:annualCadenceStated</AbbreviatedIRI>
+        <Literal>Indicates whether the training plan states it is delivered at least annually.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:annualCadenceStated</AbbreviatedIRI>
+        <Literal>annualCadenceStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:roleAdjustedTracksStated</AbbreviatedIRI>
+        <Literal>Indicates whether the training plan includes role-based tracks adjusted by employee function.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:roleAdjustedTracksStated</AbbreviatedIRI>
+        <Literal>roleAdjustedTracksStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:planDocumented</AbbreviatedIRI>
+        <Literal>Indicates whether a documented training and awareness plan is maintained.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:planDocumented</AbbreviatedIRI>
+        <Literal>planDocumented</Literal>
     </AnnotationAssertion>
 </Ontology>

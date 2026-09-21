@@ -468,6 +468,13 @@
         <Class abbreviatedIRI="cl:PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="cl:AwarenessTraining"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cl:PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
             <Class abbreviatedIRI="cl:AssetInventory"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>

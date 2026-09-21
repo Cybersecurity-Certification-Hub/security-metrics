@@ -393,7 +393,13 @@ message AwarenessTraining {
 	option (resource_type_names) = "Governance";
 	option (resource_type_names) = "Functionality";
 
+	// Indicates whether the training plan states it is delivered at least annually.
+	bool annual_cadence_stated = 9832;
 	bool annual_update_completed = 4205;
+	// Indicates whether a documented training and awareness plan is maintained.
+	bool plan_documented = 10637;
+	// Indicates whether the training plan includes role-based tracks adjusted by employee function.
+	bool role_adjusted_tracks_stated = 3033;
 	bool successfully_completed_percentage = 9380;
 }
 
@@ -3425,6 +3431,7 @@ message PolicyDocument {
 	string raw = 5038;
 	AccessControlTypePolicy access_control_type_policy = 9164;
 	AssetInventory asset_inventory = 16496;
+	AwarenessTraining awareness_training = 16218;
 	Backup backup = 16402;
 	repeated CryptographicHash cryptographic_hashs  = 12896;
 	DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 4864;
@@ -4206,7 +4213,13 @@ message SecurityTraining {
 	option (resource_type_names) = "Governance";
 	option (resource_type_names) = "Functionality";
 
+	// Indicates whether the training plan states it is delivered at least annually.
+	bool annual_cadence_stated = 10262;
 	bool annual_update_completed = 10890;
+	// Indicates whether a documented training and awareness plan is maintained.
+	bool plan_documented = 6027;
+	// Indicates whether the training plan includes role-based tracks adjusted by employee function.
+	bool role_adjusted_tracks_stated = 10041;
 	bool successfully_completed_percentage = 18938;
 }
 
