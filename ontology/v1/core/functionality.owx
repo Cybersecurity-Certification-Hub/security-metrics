@@ -1742,6 +1742,27 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:SecurityIncident"/>
         <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:notificationWindowHours"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:severityAndEscalationDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:registryAndSlaStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityIncident"/>
+        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:team"/>
             <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>

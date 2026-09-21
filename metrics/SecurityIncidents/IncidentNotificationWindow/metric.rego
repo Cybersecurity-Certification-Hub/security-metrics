@@ -2,18 +2,25 @@ package cch.metrics.incident_notification_window
 
 import data.cch.comparison_result
 import rego.v1
-import input.incidentManagement as incidentManagement
+import input.securityIncident as securityIncident
 
 default applicable := false
 default compliant := false
 
 applicable if {
-      incidentManagement != {}
-      "PolicyDocument" in input.type
+	"notificationWindowHours" in object.keys(securityIncident)
+	is_number(securityIncident.notificationWindowHours)
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-      every r in results { r.success }
+	every r in results { r.success }
 }
 
-results := [comparison_result("incidentManagement.notificationWindowHours", incidentManagement.notificationWindowHours)]
+message := "The procedure states a maximum notification window within the required limit." if {
+	compliant
+} else := "The procedure does not state a maximum notification window within the required limit." if {
+	not compliant
+}
+
+results := [comparison_result("securityIncident.notificationWindowHours", securityIncident.notificationWindowHours)]

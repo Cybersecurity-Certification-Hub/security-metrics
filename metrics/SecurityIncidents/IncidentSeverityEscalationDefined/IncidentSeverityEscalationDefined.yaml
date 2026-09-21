@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "f2253c0b-9267-4934-92a2-d13866611c8e"
+name: "IncidentSeverityEscalationDefined"
+description: "This rule assesses whether a [PolicyDocument] includes [SecurityIncident] with its [p1:severityAndEscalationDefined] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Who is responsible for the escalation of critical and high severity incidents?"
+    keywords: ["severity", "escalation", "CISO", "Crisis Management Team", "The SOC shift lead"]
+category: "SecurityIncidents"
+version: "v1"
+comments: "The procedure must define severity categorization and a named escalation owner/team."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

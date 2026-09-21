@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "e0b37fa1-0cb2-44e3-9c56-19472f413659"
 name: "IncidentNotificationWindow"
-description: "This rule assesses whether a [SecurityIncident] management procedure has its [p1:notificationWindowHours] set correctly."
+description: "This rule assesses whether a [PolicyDocument] includes [SecurityIncident] with its [p1:notificationWindowHours] property set correctly."
 implementationGuidelines:
   AMOE:
     question: "Does the procedure state a maximum notification window (e.g., 24-72 hours) consistent with the contract SLA?"

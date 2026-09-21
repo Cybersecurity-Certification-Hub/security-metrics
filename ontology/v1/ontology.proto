@@ -4196,6 +4196,9 @@ message SecurityIncident {
 	option (resource_type_names) = "SecurityIncident";
 	option (resource_type_names) = "Functionality";
 
+	int32 notification_window_hours = 9271;
+	bool registry_and_sla_stated = 18381;
+	bool severity_and_escalation_defined = 11333;
 	repeated string team = 3344;
 }
 

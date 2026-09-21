@@ -1113,6 +1113,9 @@
         <DataProperty IRI="/classes/notBeforeDate"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/notificationWindowHours"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/numberOfThreatsFound"/>
     </Declaration>
     <Declaration>
@@ -1150,6 +1153,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/recoveryFrequency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/registryAndSlaStated"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/reqBody"/>
@@ -1195,6 +1201,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/sessionCipher"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/severityAndEscalationDefined"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/size"/>
@@ -1575,6 +1584,9 @@
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/severityAndEscalationDefined"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/OneQubitErrorRate"/>
     </Declaration>
     <Declaration>
@@ -1626,6 +1638,9 @@
         <NamedIndividual IRI="/classes/Implementation"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/notificationWindowHours"/>
+    </Declaration>
+    <Declaration>
         <Datatype IRI="/datatypes/listCpgNodes"/>
     </Declaration>
     <Declaration>
@@ -1636,6 +1651,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/team"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/registryAndSlaStated"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/hasType"/>
@@ -5050,6 +5068,27 @@
     <SubClassOf>
         <Class IRI="/classes/SecurityIncident"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/notificationWindowHours"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/registryAndSlaStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/severityAndEscalationDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityIncident"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/properties/team"/>
             <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
@@ -8235,6 +8274,16 @@ name = metadata.name</Literal>
         <Literal>notBeforeDate</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/notificationWindowHours</IRI>
+        <Literal>The maximum incident notification window, in hours.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/notificationWindowHours</IRI>
+        <Literal>notificationWindowHours</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/numberOfThreatsFound</IRI>
         <Literal>numberOfThreatsFound</Literal>
@@ -8323,6 +8372,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/recoveryFrequency</IRI>
         <Literal>recoveryFrequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/registryAndSlaStated</IRI>
+        <Literal>Indicates whether an incident registry and handling SLA are stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/registryAndSlaStated</IRI>
+        <Literal>registryAndSlaStated</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8433,6 +8492,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/sessionCipher</IRI>
         <Literal>sessionCipher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/severityAndEscalationDefined</IRI>
+        <Literal>Indicates whether escalation responsibility for critical/high severity incidents is defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/severityAndEscalationDefined</IRI>
+        <Literal>severityAndEscalationDefined</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
