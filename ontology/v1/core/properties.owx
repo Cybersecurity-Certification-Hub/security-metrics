@@ -154,6 +154,9 @@
         <DataProperty abbreviatedIRI="res:recoveryFrequency"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:redundant"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:service"/>
     </Declaration>
     <Declaration>
@@ -338,6 +341,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:auditInterval"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:daysSinceLastAudit"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:updateInterval"/>
@@ -1389,5 +1395,24 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:restrictsDownloadAndExtraction</AbbreviatedIRI>
         <Literal>restrictsDownloadAndExtraction</Literal>
+    </AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:daysSinceLastAudit</AbbreviatedIRI>
+        <Literal>The number of days elapsed since the last completed external/supervisory audit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:daysSinceLastAudit</AbbreviatedIRI>
+        <Literal>daysSinceLastAudit</Literal>
+     </AnnotationAssertion>
+     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:redundant</AbbreviatedIRI>
+        <Literal>Indicates whether the resource is stored redundantly.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:redundant</AbbreviatedIRI>
+        <Literal>redundant</Literal>
     </AnnotationAssertion>
 </Ontology>

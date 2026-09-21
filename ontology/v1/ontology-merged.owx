@@ -756,6 +756,9 @@
         <Class IRI="/classes/SecurityIncident"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/SecurityPolicyReview"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/SecurityTraining"/>
     </Declaration>
     <Declaration>
@@ -1152,6 +1155,9 @@
         <DataProperty IRI="/classes/recoveryFrequency"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/redundant"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/reqBody"/>
     </Declaration>
     <Declaration>
@@ -1255,6 +1261,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/criticality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/daysSinceLastAudit"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/emailAddress"/>
@@ -1828,14 +1837,14 @@
         <Class IRI="/classes/AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/status"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/storageFacility"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2021,6 +2030,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/recoveryFrequency"/>
             <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Backup"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/redundant"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2372,6 +2388,13 @@
         <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/auditInterval"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/daysSinceLastAudit"/>
             <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -4410,6 +4433,13 @@
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -4453,6 +4483,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/SecurityIncident"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/SecurityPolicyReview"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -5065,6 +5102,17 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/team"/>
             <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityPolicyReview"/>
+        <Class IRI="/classes/Governance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityPolicyReview"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/intervalMonths"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -7644,6 +7692,16 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/SecurityPolicyReview</IRI>
+        <Literal>Represents the review cadence of the organization&apos;s Information Security Policy. intervalMonths: how often the policy must be reviewed, in months.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/SecurityPolicyReview</IRI>
+        <Literal>SecurityPolicyReview</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/SeparationOfDutiesPolicy</IRI>
         <Literal>Represents a policy section within a [PolicyDocument] describing separation of duties requirements. isDefined: whether this policy section is present and defined.</Literal>
     </AnnotationAssertion>
@@ -8338,6 +8396,16 @@ name = metadata.name</Literal>
         <Literal>recoveryFrequency</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/redundant</IRI>
+        <Literal>Indicates whether the resource is stored redundantly.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/redundant</IRI>
+        <Literal>redundant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/reqBody</IRI>
         <Literal>reqBody</Literal>
@@ -8846,6 +8914,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/properties/criticality</IRI>
         <Literal>criticality: Contains the criticality of a vulnerability, e.g., low, medium, high, critical</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/daysSinceLastAudit</IRI>
+        <Literal>The number of days elapsed since the last completed external/supervisory audit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/daysSinceLastAudit</IRI>
+        <Literal>daysSinceLastAudit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
