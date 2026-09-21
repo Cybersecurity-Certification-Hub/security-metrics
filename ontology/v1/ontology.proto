@@ -4210,7 +4210,7 @@ message SecurityPolicyReview {
 	option (resource_type_names) = "Functionality";
 
 	// The interval refers to the interval in months.
-	int32 interval_months = 7860;
+	optional int32 interval_months = 7860;
 }
 
 // SecurityTraining is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
