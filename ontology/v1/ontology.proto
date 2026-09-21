@@ -280,6 +280,16 @@ message Attestation {
 	}
 }
 
+// AuditLogMonitoringPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a [PolicyDocument] defining requirements for the periodic monitoring and review of audit logs, including the identification of anomalies, security events, and unusual activity.
+message AuditLogMonitoringPolicy {
+	option (resource_type_names) = "AuditLogMonitoringPolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	optional bool enabled = 10159;
+}
+
 // Auditing is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
 message Auditing {
 
@@ -409,6 +419,8 @@ message Backup {
 	// The interval refers to the update interval in days.
 	optional google.protobuf.Duration interval = 7186;
 	optional int32 recovery_frequency = 8809;
+	// Indicates whether the resource is stored redundantly.
+	optional bool redundant = 18969;
 	optional google.protobuf.Duration retention_period = 6795;
 	optional string storage_id = 17051;
 	TransportEncryption transport_encryption = 2398;
@@ -707,9 +719,9 @@ message ComplianceAuditIntervalPolicy {
 	option (resource_type_names) = "Functionality";
 
 	// The time needed for an audit.
-	int32 audit_interval = 7826;
+	optional int32 audit_interval = 7826;
 	// The number of days elapsed since the last completed external/supervisory audit.
-	int32 days_since_last_audit = 12483;
+	optional int32 days_since_last_audit = 12483;
 }
 
 // ComplianceMethodologyPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1229,8 +1241,11 @@ message DataConfidentialitySDNPolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
-	bool is_defined = 1199;
-	bool third_party_exchange_rules_defined = 6688;
+	optional bool is_defined = 1199;
+	// Indicates whether the policy restricts downloading or extracting information from the organization's systems.
+	optional bool restricts_download_and_extraction = 16183;
+	// Indicates whether the policy specifically defines rules for information exchange with third parties.
+	optional bool third_party_exchange_rules_defined = 6688;
 }
 
 // DataLocation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1877,6 +1892,7 @@ message Functionality {
 		Output output = 7223;
 		Padding padding = 9245;
 		AccessControlTypePolicy access_control_type_policy = 13002;
+		AuditLogMonitoringPolicy audit_log_monitoring_policy = 4146;
 		ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 3098;
 		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
@@ -3088,10 +3104,10 @@ message NetworkThreatMitigationPolicy {
 	option (resource_type_names) = "Functionality";
 
 	// Indicates whether the policy explicitly requires antispoofing mechanisms on internet-facing routers.
-	bool antispoofing_required = 15371;
+	optional bool antispoofing_required = 15371;
 	repeated string covered_attack_types = 10498;
 	// Indicates whether the policy explicitly requires network filtering mechanisms on internet-facing routers.
-	bool filtering_required = 11116;
+	optional bool filtering_required = 11116;
 }
 
 // Networking is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -3397,6 +3413,7 @@ message Policies {
 
 	oneof type {
 		AccessControlTypePolicy access_control_type_policy = 13002;
+		AuditLogMonitoringPolicy audit_log_monitoring_policy = 4146;
 		ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 3098;
 		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
@@ -3433,8 +3450,8 @@ message PolicyDocument {
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	optional string raw = 5038;
 	AccessControlTypePolicy access_control_type_policy = 9164;
-	AnomalyDetection anomaly_detection = 15256;
 	AssetInventory asset_inventory = 16496;
+	AuditLogMonitoringPolicy audit_log_monitoring_policy = 2724;
 	Backup backup = 16402;
 	ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 11561;
 	repeated CryptographicHash cryptographic_hashs  = 12896;
