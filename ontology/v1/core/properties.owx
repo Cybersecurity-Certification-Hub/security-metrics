@@ -118,6 +118,9 @@
         <DataProperty abbreviatedIRI="prop:coveredAttackTypes"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:filteringRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:creation_time"/>
     </Declaration>
     <Declaration>
@@ -1388,6 +1391,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:filteringRequired</AbbreviatedIRI>
+        <Literal>Indicates whether the policy explicitly requires network filtering mechanisms on internet-facing routers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:filteringRequired</AbbreviatedIRI>
+        <Literal>filteringRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>prop:restrictsDownloadAndExtraction</AbbreviatedIRI>
         <Literal>Indicates whether the policy restricts downloading or extracting information from the organization's systems.</Literal>
     </AnnotationAssertion>
@@ -1396,6 +1409,7 @@
         <AbbreviatedIRI>prop:restrictsDownloadAndExtraction</AbbreviatedIRI>
         <Literal>restrictsDownloadAndExtraction</Literal>
     </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>prop:daysSinceLastAudit</AbbreviatedIRI>
         <Literal>The number of days elapsed since the last completed external/supervisory audit.</Literal>
@@ -1404,8 +1418,8 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:daysSinceLastAudit</AbbreviatedIRI>
         <Literal>daysSinceLastAudit</Literal>
-     </AnnotationAssertion>
-     <AnnotationAssertion>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>prop:redundant</AbbreviatedIRI>
         <Literal>Indicates whether the resource is stored redundantly.</Literal>
