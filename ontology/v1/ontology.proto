@@ -707,7 +707,9 @@ message ComplianceAuditIntervalPolicy {
 	option (resource_type_names) = "Functionality";
 
 	// The time needed for an audit.
-	optional int32 audit_interval = 7826;
+	int32 audit_interval = 7826;
+	// The number of days elapsed since the last completed external/supervisory audit.
+	int32 days_since_last_audit = 12483;
 }
 
 // ComplianceMethodologyPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3428,6 +3430,7 @@ message PolicyDocument {
 	AccessControlTypePolicy access_control_type_policy = 9164;
 	AssetInventory asset_inventory = 16496;
 	Backup backup = 16402;
+	ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 11561;
 	repeated CryptographicHash cryptographic_hashs  = 12896;
 	DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 4864;
 	DataLocation data_location = 11474;

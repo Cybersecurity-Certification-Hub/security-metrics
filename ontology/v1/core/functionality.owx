@@ -652,6 +652,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:ComplianceAuditIntervalPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:daysSinceLastAudit"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:ComplianceMethodologyPolicy"/>
         <Class abbreviatedIRI="core:Policies"/>
     </SubClassOf>

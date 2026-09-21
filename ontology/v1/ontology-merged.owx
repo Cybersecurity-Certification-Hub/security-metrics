@@ -1260,6 +1260,9 @@
         <DataProperty IRI="/properties/criticality"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/daysSinceLastAudit"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/emailAddress"/>
     </Declaration>
     <Declaration>
@@ -2379,6 +2382,13 @@
         <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/auditInterval"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/daysSinceLastAudit"/>
             <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -4404,6 +4414,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Backup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -8874,6 +8891,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/properties/criticality</IRI>
         <Literal>criticality: Contains the criticality of a vulnerability, e.g., low, medium, high, critical</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/daysSinceLastAudit</IRI>
+        <Literal>The number of days elapsed since the last completed external/supervisory audit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/daysSinceLastAudit</IRI>
+        <Literal>daysSinceLastAudit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

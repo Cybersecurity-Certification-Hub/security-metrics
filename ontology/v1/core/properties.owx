@@ -340,6 +340,9 @@
         <DataProperty abbreviatedIRI="prop:auditInterval"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:daysSinceLastAudit"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:updateInterval"/>
     </Declaration>
     <Declaration>
@@ -1382,6 +1385,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:daysSinceLastAudit</AbbreviatedIRI>
+        <Literal>The number of days elapsed since the last completed external/supervisory audit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:daysSinceLastAudit</AbbreviatedIRI>
+        <Literal>daysSinceLastAudit</Literal>
         <AbbreviatedIRI>prop:redundant</AbbreviatedIRI>
         <Literal>Indicates whether the resource is stored redundantly.</Literal>
     </AnnotationAssertion>
