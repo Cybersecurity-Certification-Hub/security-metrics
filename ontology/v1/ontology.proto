@@ -3086,6 +3086,8 @@ message NetworkThreatMitigationPolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
+	// Indicates whether the policy explicitly requires antispoofing mechanisms on internet-facing routers.
+	bool antispoofing_required = 15371;
 	repeated string covered_attack_types = 10498;
 	// Indicates whether the policy explicitly requires network filtering mechanisms on internet-facing routers.
 	bool filtering_required = 11116;

@@ -617,6 +617,13 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
         <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:antispoofingRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
+        <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:filteringRequired"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
