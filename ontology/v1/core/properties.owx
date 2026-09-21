@@ -148,6 +148,9 @@
         <DataProperty abbreviatedIRI="res:isDefined"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:thirdPartyExchangeRulesDefined"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:restrictsDownloadAndExtraction"/>
     </Declaration>
     <Declaration>
@@ -1391,6 +1394,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:value</AbbreviatedIRI>
         <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:thirdPartyExchangeRulesDefined</AbbreviatedIRI>
+        <Literal>Indicates whether the policy specifically defines rules for information exchange with third parties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:thirdPartyExchangeRulesDefined</AbbreviatedIRI>
+        <Literal>thirdPartyExchangeRulesDefined</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

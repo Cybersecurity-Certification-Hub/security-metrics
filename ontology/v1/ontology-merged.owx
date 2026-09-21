@@ -1218,6 +1218,9 @@
         <DataProperty IRI="/classes/team"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/thirdPartyExchangeRulesDefined"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/timeWindowSeconds"/>
     </Declaration>
     <Declaration>
@@ -1615,6 +1618,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/numberOfRequiredReviewers"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/thirdPartyExchangeRulesDefined"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
@@ -2744,7 +2750,7 @@
     <SubClassOf>
         <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/properties/restrictsDownloadAndExtraction"/>
+            <DataProperty IRI="/properties/thirdPartyExchangeRulesDefined"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -8569,6 +8575,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/team</IRI>
         <Literal>team</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/thirdPartyExchangeRulesDefined</IRI>
+        <Literal>Indicates whether the policy specifically defines rules for information exchange with third parties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/thirdPartyExchangeRulesDefined</IRI>
+        <Literal>thirdPartyExchangeRulesDefined</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

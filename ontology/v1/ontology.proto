@@ -1229,7 +1229,8 @@ message DataConfidentialitySDNPolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
-	optional bool is_defined = 1199;
+	bool is_defined = 1199;
+	bool third_party_exchange_rules_defined = 6688;
 }
 
 // DataLocation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
