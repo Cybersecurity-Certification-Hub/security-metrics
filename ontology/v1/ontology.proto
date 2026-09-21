@@ -1821,6 +1821,7 @@ message Functionality {
 		Error error = 6544;
 		ContactPerson contact_person = 1620;
 		MonitoringProcedure monitoring_procedure = 9388;
+		SecurityPolicyReview security_policy_review = 10907;
 		AwarenessTraining awareness_training = 8227;
 		SecurityTraining security_training = 8543;
 		HttpClient http_client = 18121;
@@ -1979,6 +1980,7 @@ message Governance {
 	oneof type {
 		ContactPerson contact_person = 1620;
 		MonitoringProcedure monitoring_procedure = 9388;
+		SecurityPolicyReview security_policy_review = 10907;
 		AwarenessTraining awareness_training = 8227;
 		SecurityTraining security_training = 8543;
 	}
@@ -3440,6 +3442,7 @@ message PolicyDocument {
 	SchemaValidation validated_by = 5620;
 	repeated SecurityFeature security_features  = 13896;
 	SecurityIncident security_incident = 16664;
+	SecurityPolicyReview security_policy_review = 3099;
 	SeparationOfDutiesPolicy separation_of_duties_policy = 6434;
 }
 
@@ -4197,6 +4200,17 @@ message SecurityIncident {
 	option (resource_type_names) = "Functionality";
 
 	repeated string team = 3344;
+}
+
+// SecurityPolicyReview is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents the review cadence of the organization's Information Security Policy. intervalMonths: how often the policy must be reviewed, in months.
+message SecurityPolicyReview {
+	option (resource_type_names) = "SecurityPolicyReview";
+	option (resource_type_names) = "Governance";
+	option (resource_type_names) = "Functionality";
+
+	// The interval refers to the interval in months.
+	optional int32 interval_months = 7860;
 }
 
 // SecurityTraining is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.

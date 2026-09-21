@@ -756,6 +756,9 @@
         <Class IRI="/classes/SecurityIncident"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/SecurityPolicyReview"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/SecurityTraining"/>
     </Declaration>
     <Declaration>
@@ -4446,6 +4449,13 @@
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/SecurityPolicyReview"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/SeparationOfDutiesPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -5052,6 +5062,17 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/team"/>
             <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityPolicyReview"/>
+        <Class IRI="/classes/Governance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityPolicyReview"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/intervalMonths"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -7628,6 +7649,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/SecurityFeature</IRI>
         <Literal xml:lang="english">SecurityFeature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/SecurityPolicyReview</IRI>
+        <Literal>Represents the review cadence of the organization&apos;s Information Security Policy. intervalMonths: how often the policy must be reviewed, in months.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/SecurityPolicyReview</IRI>
+        <Literal>SecurityPolicyReview</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
