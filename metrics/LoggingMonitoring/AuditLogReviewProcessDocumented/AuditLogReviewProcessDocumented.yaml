@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "8b189157-161e-4762-8aa0-183ce6f13cf4"
 name: "AuditLogReviewProcessDocumented"
-description: "This rule assesses whether a [PolicyDocument] includes [AnomalyDetection] with its [p1:enabled] property set correctly."
+description: "This rule assesses whether a [PolicyDocument] includes [AuditLogMonitoringPolicy] with its [p1:enabled] property set correctly."
 implementationGuidelines:
   AMOE:
     question: "Does the log management procedure require periodic monitoring and anomaly review of audit logs?"
