@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "56e63981-b848-47e3-8122-f943bcb7bd18"
+name: "ExternalAuditRecency"
+description: "This rule assesses whether a [PolicyDocument] includes [ComplianceAuditIntervalPolicy] with its [p1:daysSinceLastAudit] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Was the last completed audit within the last 24 months?"
+    keywords: ["audit date", "last audit", "last completed audit"]
+category: "Audit"
+version: "v1"
+comments: "The last completed external/supervisory audit must have occurred within the last 24 months (730 days)."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 730
