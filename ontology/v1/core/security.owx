@@ -669,7 +669,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Backup"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="core:redundant"/>
+            <DataProperty abbreviatedIRI="prop:redundant"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
