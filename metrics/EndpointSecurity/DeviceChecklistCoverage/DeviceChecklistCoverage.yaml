@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "f45c0d04-9051-4956-859f-980893fa027c"
 name: "DeviceChecklistCoverage"
-description: "This rule assesses whether the device management [PolicyDocument] has its [p1:checklistCoveragePercent] set correctly, across the 7-point device checklist."
+description: "This rule assesses whether a [PolicyDocument] includes [DeviceManagementPolicy] with its [p1:checklistCoveragePercent] set correctly, across the 7-point device checklist."
 implementationGuidelines:
   AMOE:
     question: "What fraction of the 7-point device checklist is explicitly present?"

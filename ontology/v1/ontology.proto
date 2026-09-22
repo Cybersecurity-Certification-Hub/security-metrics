@@ -1344,6 +1344,17 @@ message Decryption {
 	optional string secret_id = 2937;
 }
 
+// DeviceManagementPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a device management policy section within a PolicyDocument.
+message DeviceManagementPolicy {
+	option (resource_type_names) = "DeviceManagementPolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	bool all_mandated_controls_addressed = 5229;
+	float checklist_coverage_percent = 15738;
+}
+
 // DeviceProvisioningService is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message DeviceProvisioningService {
 	option (resource_type_names) = "DeviceProvisioningService";
@@ -1876,6 +1887,7 @@ message Functionality {
 		ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 3098;
 		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
+		DeviceManagementPolicy device_management_policy = 12987;
 		LeastPrivilegePolicy least_privilege_policy = 15025;
 		NeedToKnowPolicy need_to_know_policy = 17201;
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
@@ -3391,6 +3403,7 @@ message Policies {
 		ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 3098;
 		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
+		DeviceManagementPolicy device_management_policy = 12987;
 		LeastPrivilegePolicy least_privilege_policy = 15025;
 		NeedToKnowPolicy need_to_know_policy = 17201;
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
@@ -3429,6 +3442,7 @@ message PolicyDocument {
 	repeated CryptographicHash cryptographic_hashs  = 12896;
 	DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 4864;
 	DataLocation data_location = 11474;
+	DeviceManagementPolicy device_management_policy = 8439;
 	repeated DocumentSignature document_signatures  = 7191;
 	repeated Governance governances  = 4759;
 	LeastPrivilegePolicy least_privilege_policy = 12663;
