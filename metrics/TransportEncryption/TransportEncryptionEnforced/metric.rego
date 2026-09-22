@@ -1,4 +1,4 @@
-regopackage cch.metrics.transport_encryption_enforced
+package cch.metrics.transport_encryption_enforced
 
 import data.cch.comparison_result
 import rego.v1
