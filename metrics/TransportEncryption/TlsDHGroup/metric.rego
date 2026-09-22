@@ -6,7 +6,7 @@ import rego.v1
 default applicable := false
 default compliant := false
 
-# Finds transportEncryption directly under input or at any nesting level.Verschachtelungsebene.
+# Finds transportEncryption directly under input or at any nesting level.
 transport_encryptions contains enc if {
 	walk(input, [path, enc])
 	count(path) > 0
@@ -21,7 +21,6 @@ applicable if {
 	dh_group != null
 }
 
-# Erzeugt ein Ergebnis für jede gefundene dhGroup.
 results := [
 	comparison_result("transportEncryption.dhGroup", dh_group) |
 	some enc in transport_encryptions
