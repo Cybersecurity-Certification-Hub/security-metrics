@@ -587,6 +587,7 @@ message CipherSuite {
 
 	// for example: RSA, ECDSA
 	optional string authentication_mechanism = 3667;
+	repeated string dh_group = 5906;
 	optional string key_exchange_algorithm = 14920;
 	// naming schema: SHA-256
 	optional string mac_algorithm = 2344;
