@@ -2,18 +2,25 @@ package cch.metrics.anonymization_technique_named
 
 import data.cch.comparison_result
 import rego.v1
-import input.testData as testData
+import input.testDataPolicy as testDataPolicy
 
 default applicable := false
 default compliant := false
 
 applicable if {
-      testData != {}
-      "PolicyDocument" in input.type
+	"technique" in object.keys(testDataPolicy)
+	is_string(testDataPolicy.technique)
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-      every r in results { r.success }
+	every r in results { r.success }
 }
 
-results := [comparison_result("testData.technique", testData.technique)]
+message := "The procedure names a specific anonymization technique or standard used." if {
+	compliant
+} else := "The procedure does not name a specific anonymization technique or standard used." if {
+	not compliant
+}
+
+results := [comparison_result("testDataPolicy.technique", testDataPolicy.technique)]

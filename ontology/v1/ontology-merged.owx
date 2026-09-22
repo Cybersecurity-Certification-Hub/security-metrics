@@ -792,6 +792,9 @@
         <Class IRI="/classes/SymmetricCipher"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/TestDataPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Time"/>
     </Declaration>
     <Declaration>
@@ -952,6 +955,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/allRequiredInformationRecorded"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/anonymizationRequiredForNonProd"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/apiHitsPerMonth"/>
@@ -1207,6 +1213,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/team"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/technique"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/timeWindowSeconds"/>
@@ -1596,6 +1605,9 @@
         <DataProperty IRI="/properties/numberOfRequiredReviewers"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/anonymizationRequiredForNonProd"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
     </Declaration>
     <Declaration>
@@ -1624,6 +1636,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Implementation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/technique"/>
     </Declaration>
     <Declaration>
         <Datatype IRI="/datatypes/listCpgNodes"/>
@@ -4452,6 +4467,13 @@
     <SubClassOf>
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/TestDataPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/Governance"/>
         </ObjectSomeValuesFrom>
@@ -5260,6 +5282,24 @@
         <Class IRI="/classes/SymmetricCipher"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/modus"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TestDataPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TestDataPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/anonymizationRequiredForNonProd"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TestDataPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/technique"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -7725,6 +7765,16 @@ name = metadata.name</Literal>
         <Literal>T2CoherenceTime</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/TestDataPolicy</IRI>
+        <Literal>Represents a policy section within a PolicyDocument governing the use and anonymization of test data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/TestDataPolicy</IRI>
+        <Literal>TestDataPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Time</IRI>
         <Literal>Time</Literal>
@@ -7893,6 +7943,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/allRequiredInformationRecorded</IRI>
         <Literal>allRequiredInformationRecorded</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/anonymizationRequiredForNonProd</IRI>
+        <Literal>Indicates whether anonymization/pseudonymization is required for non-production environments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/anonymizationRequiredForNonProd</IRI>
+        <Literal>anonymizationRequiredForNonProd</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8458,6 +8518,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/team</IRI>
         <Literal>team</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/technique</IRI>
+        <Literal>The named anonymization technique or standard used.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/technique</IRI>
+        <Literal>technique</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

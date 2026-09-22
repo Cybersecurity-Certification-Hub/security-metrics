@@ -466,6 +466,12 @@
         <DataProperty abbreviatedIRI="prop:value"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:technique"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:anonymizationRequiredForNonProd"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -1376,5 +1382,25 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:value</AbbreviatedIRI>
         <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:technique</AbbreviatedIRI>
+        <Literal>The named anonymization technique or standard used.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:technique</AbbreviatedIRI>
+        <Literal>technique</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:anonymizationRequiredForNonProd</AbbreviatedIRI>
+        <Literal>Indicates whether anonymization/pseudonymization is required for non-production environments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:anonymizationRequiredForNonProd</AbbreviatedIRI>
+        <Literal>anonymizationRequiredForNonProd</Literal>
     </AnnotationAssertion>
 </Ontology>

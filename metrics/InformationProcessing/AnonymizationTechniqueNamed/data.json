@@ -1,4 +1,4 @@
 {
     "operator": "isIn",
-    "target_value": "masking tokenization k-anonymity"
+    "target_value": ["masking", "tokenization", "k-anonymity"]
 }
