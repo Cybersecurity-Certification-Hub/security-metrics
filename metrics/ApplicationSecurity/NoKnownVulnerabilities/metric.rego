@@ -9,21 +9,18 @@ default compliant := false
 # Collect vulnerabilities from the top-level input path.
 vulnerability_sources contains vul if {
     vul := input.vulnerabilities
-    vul != {}
 }
 
 # Collect plural vulnerabilities from functionality objects.
 vulnerability_sources contains vul if {
     some functionality in input.functionalities
     vul := functionality.vulnerabilities
-    vul != {}
 }
 
 # Collect a singular vulnerability from functionality objects.
 vulnerability_sources contains vul if {
     some functionality in input.functionalities
     vul := functionality.vulnerability
-    vul != {}
 }
 
 # The metric is applicable if at least one vulnerability source exists.
@@ -38,9 +35,9 @@ results := [
 ]
 
 compliant if {
-    applicable
-    every r in results {
-        r.success
+	applicable
+   every vul in vulnerability_sources {
+        vul == {}
     }
 }
 
