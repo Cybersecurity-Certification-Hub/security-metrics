@@ -15,4 +15,4 @@ compliant if {
 	every r in results { r.success }
 }
 
-results := [comparison_result("ErrorCorrectionEnabled", input.ErrorCorrectionEnabled)]
+results := [comparison_result("errorCorrectionEnabled", input.errorCorrectionEnabled)]
