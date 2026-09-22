@@ -1602,7 +1602,7 @@
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/OneQubitErrorRate"/>
+        <DataProperty IRI="/classes/TwoQubitGateErrorRate"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/SpamErrorRate"/>
@@ -1624,9 +1624,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/classes/TwoQubitErrorRate"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/errorCorrectionEnabled"/>
@@ -1651,6 +1648,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Implementation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/OneQubitGateErrorRate"/>
     </Declaration>
     <Declaration>
         <Datatype IRI="/datatypes/listCpgNodes"/>
@@ -4751,7 +4751,7 @@
     <SubClassOf>
         <Class IRI="/classes/QPU"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/OneQubitErrorRate"/>
+            <DataProperty IRI="/classes/OneQubitGateErrorRate"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -4779,7 +4779,7 @@
     <SubClassOf>
         <Class IRI="/classes/QPU"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/TwoQubitErrorRate"/>
+            <DataProperty IRI="/classes/TwoQubitGateErrorRate"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>

@@ -15,4 +15,4 @@ compliant if {
 	every r in results { r.success }
 }
 
-results := [comparison_result("T2CoherenceTime", input.T2CoherenceTime)]
+results := [comparison_result("t2CoherenceTime", input.t2CoherenceTime)]
