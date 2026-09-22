@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	"type" in object.keys(input.assetInventory)
+	"service" in object.keys(input.assetInventory)
     
 	"PolicyDocument" in input.type
 }
