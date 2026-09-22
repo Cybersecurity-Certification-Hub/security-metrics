@@ -507,6 +507,9 @@
         <DataProperty abbreviatedIRI="prop:programmingLanguage"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="core:dhGroup"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="core:sessionCipher"/>
     </Declaration>
     <Declaration>
@@ -1234,6 +1237,13 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:authenticationMechanism"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CipherSuite"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:dhGroup"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
