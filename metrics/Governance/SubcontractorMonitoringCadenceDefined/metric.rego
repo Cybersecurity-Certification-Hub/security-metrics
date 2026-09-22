@@ -2,18 +2,25 @@ package cch.metrics.subcontractor_monitoring_cadence_defined
 
 import data.cch.comparison_result
 import rego.v1
-import input.outsourcing as outsourcing
+import input.outsourcingPolicy as outsourcingPolicy
 
 default applicable := false
 default compliant := false
 
 applicable if {
-      outsourcing != {}
-      "PolicyDocument" in input.type
+	"monitoringMechanism" in object.keys(outsourcingPolicy)
+	is_string(outsourcingPolicy.monitoringMechanism)
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-      every r in results { r.success }
+	every r in results { r.success }
 }
 
-results := [comparison_result("outsourcing.monitoringMechanism", outsourcing.monitoringMechanism)]
+message := "The addendum defines a monitoring cadence or mechanism for subcontractor compliance." if {
+	compliant
+} else := "The addendum does not define a monitoring cadence or mechanism for subcontractor compliance." if {
+	not compliant
+}
+
+results := [comparison_result("outsourcingPolicy.monitoringMechanism", outsourcingPolicy.monitoringMechanism)]

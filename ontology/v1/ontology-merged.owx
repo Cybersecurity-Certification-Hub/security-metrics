@@ -606,6 +606,9 @@
         <Class IRI="/classes/Output"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/OutsourcingPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/POSIX"/>
     </Declaration>
     <Declaration>
@@ -1102,6 +1105,12 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/monitoringEnabled"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/monitoringMechanism"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/monitoringObligationStated"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/mutual"/>
@@ -1644,6 +1653,9 @@
         <DataProperty IRI="/properties/approvedCommitAuthorEnforced"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/monitoringObligationStated"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/approvedBeforeDeployment"/>
     </Declaration>
     <Declaration>
@@ -1654,6 +1666,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/reviewPercentageLastMonth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/monitoringMechanism"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Specification"/>
@@ -4313,6 +4328,24 @@
         <Class IRI="/classes/Functionality"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/OutsourcingPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/OutsourcingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/monitoringMechanism"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/OutsourcingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/monitoringObligationStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/POSIX"/>
         <Class IRI="/classes/OperatingSystemArchitecture"/>
     </SubClassOf>
@@ -4426,6 +4459,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/OutsourcingPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -7321,6 +7361,16 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/OutsourcingPolicy</IRI>
+        <Literal>Represents a subcontractor/outsourcing clause within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/OutsourcingPolicy</IRI>
+        <Literal>OutsourcingPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/POSIX</IRI>
         <Literal>Represents a POSIX architecture, commonly found on Linux systems.</Literal>
     </AnnotationAssertion>
@@ -8218,6 +8268,26 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/monitoringEnabled</IRI>
         <Literal>monitoringLogDataEnabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/monitoringMechanism</IRI>
+        <Literal>The stated monitoring cadence or mechanism for subcontractor compliance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/monitoringMechanism</IRI>
+        <Literal>monitoringMechanism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/monitoringObligationStated</IRI>
+        <Literal>Indicates whether subcontracted/external providers are required to comply with and be monitored against the security policy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/monitoringObligationStated</IRI>
+        <Literal>monitoringObligationStated</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
