@@ -15,4 +15,4 @@ compliant if {
 	every r in results { r.success }
 }
 
-results := [comparison_result("SPAMErrorRate", input.SPAMErrorRate)]
+results := [comparison_result("spamErrorRate", input.spamErrorRate)]
