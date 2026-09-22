@@ -30,6 +30,4 @@ results := [
 		"anomalyDetection.applicationLogging.loggingServiceIds.count",
 		count(logging.loggingServiceIds),
 	),
-] if {
-	applicable
-}
+]

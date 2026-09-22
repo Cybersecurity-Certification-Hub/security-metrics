@@ -25,6 +25,4 @@ message := "Anomaly detection settings are properly defined." if {
 
 results := [
 	comparison_result("anomalyDetection.enabled", ad.enabled),
-] if {
-	applicable
-}
+]

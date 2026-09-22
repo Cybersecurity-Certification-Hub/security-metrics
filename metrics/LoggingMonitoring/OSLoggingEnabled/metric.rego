@@ -28,6 +28,4 @@ message := "OS logging is properly configured." if {
 
 results := [
 	comparison_result("osLogging.enabled", logging.enabled),
-] if {
-	applicable
-}
+] 

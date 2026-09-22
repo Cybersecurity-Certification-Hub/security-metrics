@@ -40,7 +40,4 @@ results := [
 		"osLogging.retentionPeriod.days",
 		days,
 	),
-] if {
-	applicable
-	days := retention_period_days
-}
+] 

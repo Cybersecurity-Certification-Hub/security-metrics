@@ -41,9 +41,4 @@ results := [
 		"bootLogging.retentionPeriod.days",
 		days,
 	),
-] if {
-	applicable
-	days := retention_period_days
-}
-Falls auch PolicyDocument nicht Voraussetzung sein soll, entferne diese Zeile:
-"PolicyDocument" in input.type
+] 

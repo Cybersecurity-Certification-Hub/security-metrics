@@ -30,6 +30,4 @@ results := [
 		"bootLogging.loggingServiceIds.count",
 		count(logging.loggingServiceIds),
 	),
-] if {
-	applicable
-}
+] 

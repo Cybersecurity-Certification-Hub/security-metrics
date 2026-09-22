@@ -31,6 +31,4 @@ results := [
 		"osLogging.loggingServiceIds.count",
 		count(logging.loggingServiceIds),
 	),
-] if {
-	applicable
-}
+] 

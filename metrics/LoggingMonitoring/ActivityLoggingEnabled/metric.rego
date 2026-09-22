@@ -25,6 +25,4 @@ message := "Activity logging settings are properly defined." if {
 
 results := [
 	comparison_result("activityLogging.enabled", al.enabled),
-] if {
-	applicable
-}
+]

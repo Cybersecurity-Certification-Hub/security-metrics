@@ -27,6 +27,4 @@ message := "Boot logging is properly configured." if {
 
 results := [
 	comparison_result("bootLogging.enabled", logging.enabled),
-] if {
-	applicable
-}
+] 
