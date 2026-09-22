@@ -4,16 +4,40 @@ import data.cch.comparison_result
 import rego.v1
 import input.bootLogging as logging
 
-default applicable = false
+default applicable := false
+default compliant := false
 
-default compliant = false
-
+# The metric is applicable when retentionPeriod is present.
 applicable if {
-	logging
+	"retentionPeriod" in object.keys(logging)
+	"VirtualMachine" in input.type
+}
+
+# Converts a valid duration value to days.
+retention_period_days := duration_ns / (1000 * 1000 * 1000 * 60 * 60 * 24) if {
+	is_string(logging.retentionPeriod)
+	duration_ns := time.parse_duration_ns(logging.retentionPeriod)
 }
 
 compliant if {
-	every r in results { r.success }
+	# Prevents an invalid retention period from being compliant
+	# because no comparison result could be created.
+	count(results) > 0
+
+	every r in results {
+		r.success
+	}
 }
 
-results := [comparison_result("bootLogging.retentionPeriod.days", time.parse_duration_ns(logging.retentionPeriod) / (((1000 * 1000) * 1000) * 3600))]
+message := "Boot logging retention is properly configured." if {
+	compliant
+} else := "Boot logging retention is not properly configured. The retention period in days should match the specified value." if {
+	not compliant
+}
+
+results := [
+	comparison_result(
+		"bootLogging.retentionPeriod.days",
+		days,
+	),
+] 
