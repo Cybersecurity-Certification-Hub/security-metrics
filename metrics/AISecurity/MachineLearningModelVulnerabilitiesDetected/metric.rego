@@ -18,4 +18,4 @@ compliant if {
 	every r in results { r.success }
 }
 
-results := [comparison_result("vulnerabilities.count", count(vuln))]
+results := [comparison_result("vulnerabilities", count(vuln))]
