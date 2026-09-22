@@ -1,4 +1,4 @@
-package cch.metrics.tls_dh_groups
+package cch.metrics.tls_dh_group
 
 import data.cch.comparison_result
 import rego.v1
@@ -6,7 +6,7 @@ import rego.v1
 default applicable := false
 default compliant := false
 
-# Finds transportEncryption directly under input or at any nesting level.Verschachtelungsebene.
+# Finds transportEncryption directly under input or at any nesting level.
 transport_encryptions contains enc if {
 	walk(input, [path, enc])
 	count(path) > 0
@@ -17,16 +17,15 @@ transport_encryptions contains enc if {
 # Checks if at least one dhGroup element is available
 applicable if {
 	some enc in transport_encryptions
-	dh_groups := object.get(enc, "dhGroups", null)
-	dh_groups != null
+	dh_group := object.get(enc, "dhGroup", null)
+	dh_group != null
 }
 
-# Erzeugt ein Ergebnis für jede gefundene dhGroups.
 results := [
-	comparison_result("transportEncryption.dhGroups", dh_groups) |
+	comparison_result("transportEncryption.dhGroup", dh_group) |
 	some enc in transport_encryptions
-	dh_groups := object.get(enc, "dhGroups", null)
-	dh_groups != null
+	dh_group := object.get(enc, "dhGroup", null)
+	dh_group != null
 ]
 
 compliant if {
