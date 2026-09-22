@@ -1,5 +1,4 @@
-Ja. Die Validierung erfolgt erst bei der Umrechnung; applicable prüft nur die Feldexistenz. Bei einem ungültigen Wert bleibt die Metrik applicable, aber wird nicht compliant.
-regopackage cch.metrics.boot_logging_retention
+package cch.metrics.boot_logging_retention
 
 import data.cch.comparison_result
 import rego.v1
