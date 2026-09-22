@@ -8,12 +8,19 @@ default applicable := false
 default compliant := false
 
 applicable if {
-      assetInventory != {}
-      "PolicyDocument" in input.type
+	"ownerAssignmentStated" in object.keys(assetInventory)
+	is_boolean(assetInventory.ownerAssignmentStated)
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-      every r in results { r.success }
+	every r in results { r.success }
+}
+
+message := "An owner is assigned for each asset class/type." if {
+	compliant
+} else := "An owner is not assigned for each asset class/type." if {
+	not compliant
 }
 
 results := [comparison_result("assetInventory.ownerAssignmentStated", assetInventory.ownerAssignmentStated)]

@@ -466,6 +466,12 @@
         <DataProperty abbreviatedIRI="prop:value"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:ownerAssignmentStated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:inventoryDefined"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -1376,5 +1382,25 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:value</AbbreviatedIRI>
         <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:ownerAssignmentStated</AbbreviatedIRI>
+        <Literal>Indicates whether an owner is assigned for each asset class/type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:ownerAssignmentStated</AbbreviatedIRI>
+        <Literal>ownerAssignmentStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:inventoryDefined</AbbreviatedIRI>
+        <Literal>Indicates whether an asset inventory is defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:inventoryDefined</AbbreviatedIRI>
+        <Literal>inventoryDefined</Literal>
     </AnnotationAssertion>
 </Ontology>
