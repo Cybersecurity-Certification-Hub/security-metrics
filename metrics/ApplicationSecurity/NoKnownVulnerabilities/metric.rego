@@ -1,42 +1,38 @@
 package cch.metrics.no_known_vulnerabilities
 
-import data.cch.comparison_result
 import rego.v1
 
 default applicable := false
 default compliant := false
 
-# Collect vulnerabilities from the top-level input path.
+# Collect the top-level vulnerabilities field if it exists.
 vulnerability_sources contains vul if {
     vul := input.vulnerabilities
 }
 
-# Collect plural vulnerabilities from functionality objects.
+# Collect the plural vulnerabilities field from functionality objects if it exists.
 vulnerability_sources contains vul if {
     some functionality in input.functionalities
     vul := functionality.vulnerabilities
 }
 
-# Collect a singular vulnerability from functionality objects.
+# Collect the singular vulnerability field from functionality objects if it exists.
+# This matches the JSON example you provided.
 vulnerability_sources contains vul if {
     some functionality in input.functionalities
     vul := functionality.vulnerability
 }
 
-# The metric is applicable if at least one vulnerability source exists.
+# The metric is applicable when at least one supported field exists.
 applicable if {
     count(vulnerability_sources) > 0
 }
 
-# Create one comparison result for every discovered vulnerability source.
-results := [
-    comparison_result("vulnerabilities", vul) |
-    some vul in vulnerability_sources
-]
-
+# The resource is compliant only when all found fields are empty objects.
 compliant if {
-	applicable
-   every vul in vulnerability_sources {
+    applicable
+
+    every vul in vulnerability_sources {
         vul == {}
     }
 }
