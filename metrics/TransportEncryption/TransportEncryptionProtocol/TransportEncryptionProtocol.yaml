@@ -9,4 +9,4 @@ comments: Using TLS (Transport Layer Security) ensures that data in transit is e
 configuration:
   p1:
     operator: "=="
-    targetValue: TLS
+    targetValue: "TLS"
