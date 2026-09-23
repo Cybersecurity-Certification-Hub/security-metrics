@@ -10,7 +10,6 @@ default compliant := false
 # The metric is applicable when enabled is present and boolean.
 applicable if {
 	"enabled" in object.keys(logging)
-	is_boolean(logging.enabled)
 	"VirtualMachine" in input.type
 }
 
