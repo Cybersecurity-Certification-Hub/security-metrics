@@ -1,4 +1,4 @@
 {
     "operator": "isIn",
-    "target_value": ["Security Committee"]
+    "target_value":  ["Security Committee", "Incident Management Team", "IMT"]
 }
