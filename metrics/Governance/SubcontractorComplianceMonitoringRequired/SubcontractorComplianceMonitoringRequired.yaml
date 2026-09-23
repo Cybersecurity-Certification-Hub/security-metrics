@@ -1,16 +1,16 @@
 # ====== Metadata ======
-id: "b1cd2a0b-dfaa-4462-aae0-b47908fa4b89"
-name: "SubcontractorComplianceMonitoringRequired"
-description: "This rule assesses whether a [PolicyDocument] includes [OutsourcingPolicy] with its [p1:monitoringObligationStated] property set correctly."
+id: "1020d975-e776-4137-b0a8-0092875aa3e6"
+name: "SubcontractorMonitoringCadenceDefined"
+description: "This rule assesses whether a [PolicyDocument]'s outsourcing clause has its [p1:monitoringMechanism] set to a compliant value."
 implementationGuidelines:
   AMOE:
-    question: "Does the contract identify subcontracted/external providers, and does it require them to comply with and be monitored against the security policy?"
-    keywords: ["providers", "subcontracted", "comply with the Policy", "monitoring compliance"]
+    question: "Does the addendum define a monitoring cadence or mechanism (e.g., annual review, right-to-audit, KPI reporting) for subcontractor compliance?"
+    keywords: ["annual review", "right to audit", "KPI", "compliance report"]
 category: "Governance"
 version: "v1"
-comments: "Outsourcing/subcontractor agreements must require the subcontracted provider to comply with, and be monitored against, the organization's security policy."
+comments: "The addendum must define a concrete monitoring cadence or mechanism (e.g., annual review, right-to-audit, KPI reporting) for subcontractor compliance."
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["annual review", "right-to-audit", "KPI", "compliance report", "Monitoring and Surveillance", "Vendor Risk Register"]
