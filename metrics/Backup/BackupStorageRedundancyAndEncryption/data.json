@@ -1,4 +1,6 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "redundant and encrypted"
+    ]
 }

@@ -12,5 +12,5 @@ comments: "A Data Loss Prevention Policy must exist that restricts downloading/e
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["downloading and extracting", "prevent extraction", "downloading and extracting information from NovaBank's systems"]
