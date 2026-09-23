@@ -9,9 +9,9 @@ default applicable = false
 default compliant = false
 
 applicable if {
-	"backups" in object.keys(input.storage)
+	"backups" in object.keys(input)
 	count(storage.backups) > 0
-	"Storage" in storage.type
+	"Storage" in input.type
 }
 
 compliant if {
