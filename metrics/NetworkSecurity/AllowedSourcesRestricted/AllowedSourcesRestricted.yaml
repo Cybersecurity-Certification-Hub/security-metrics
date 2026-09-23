@@ -9,4 +9,4 @@ comments: The target lists the allowed networks in CIDR notation, such as "10.0.
 configuration:
   p1:
     operator: "allIn"
-    targetValue: ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]
+    targetValue: ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "100.64.0.0/10"]
