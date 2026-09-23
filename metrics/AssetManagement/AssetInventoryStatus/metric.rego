@@ -9,7 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-  "enabled" in object.keys(input.assetInventory)
+  "status" in object.keys(input.assetInventory)
   "PolicyDocument" in input.type
 }
 
