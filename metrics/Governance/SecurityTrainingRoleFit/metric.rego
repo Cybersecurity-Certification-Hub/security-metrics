@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"roleAdjustedTracksStated" in object.keys(awarenessTraining)
-	is_boolean(awarenessTraining.roleAdjustedTracksStated)
 	"PolicyDocument" in input.type
 }
 

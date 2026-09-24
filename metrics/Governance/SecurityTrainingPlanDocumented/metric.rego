@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"planDocumented" in object.keys(awarenessTraining)
-	is_boolean(awarenessTraining.planDocumented)
 	"PolicyDocument" in input.type
 }
 

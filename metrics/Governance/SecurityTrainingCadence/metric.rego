@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"annualCadenceStated" in object.keys(awarenessTraining)
-	is_boolean(awarenessTraining.annualCadenceStated)
 	"PolicyDocument" in input.type
 }
 
