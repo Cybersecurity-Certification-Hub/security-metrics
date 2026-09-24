@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"recipientHeldKeyRequired" in object.keys(cryptographicTransferPolicy)
-	is_boolean(cryptographicTransferPolicy.recipientHeldKeyRequired)
 	"PolicyDocument" in input.type
 }
 

@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"nonDescriptiveFilenameRequired" in object.keys(cryptographicTransferPolicy)
-	is_boolean(cryptographicTransferPolicy.nonDescriptiveFilenameRequired)
 	"PolicyDocument" in input.type
 }
 

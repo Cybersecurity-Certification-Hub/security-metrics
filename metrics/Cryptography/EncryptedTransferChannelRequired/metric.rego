@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"encryptedChannelRequired" in object.keys(cryptographicTransferPolicy)
-	is_boolean(cryptographicTransferPolicy.encryptedChannelRequired)
 	"PolicyDocument" in input.type
 }
 
