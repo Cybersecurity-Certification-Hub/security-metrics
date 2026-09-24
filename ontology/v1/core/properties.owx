@@ -484,6 +484,9 @@
         <DataProperty abbreviatedIRI="prop:value"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:mandatedAreaCoveragePercent"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -1394,6 +1397,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:value</AbbreviatedIRI>
         <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:mandatedAreaCoveragePercent</AbbreviatedIRI>
+        <Literal>Percentage of mandated control areas explicitly addressed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:mandatedAreaCoveragePercent</AbbreviatedIRI>
+        <Literal>mandatedAreaCoveragePercent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

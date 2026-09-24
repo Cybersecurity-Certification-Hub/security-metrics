@@ -15,6 +15,9 @@
         <Class IRI="/classes/ABAC"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/AcceptableUsePolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/AccessControlTypePolicy"/>
     </Declaration>
     <Declaration>
@@ -1089,6 +1092,9 @@
         <DataProperty IRI="/classes/macAlgorithm"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/mandatedAreaCoveragePercent"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/maxRequests"/>
     </Declaration>
     <Declaration>
@@ -1662,6 +1668,9 @@
         <DataProperty IRI="/properties/team"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/mandatedAreaCoveragePercent"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/classes/hasType"/>
     </Declaration>
     <Declaration>
@@ -1692,6 +1701,24 @@
     <SubClassOf>
         <Class IRI="/classes/ABAC"/>
         <Class IRI="/classes/Authorization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AcceptableUsePolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AcceptableUsePolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AcceptableUsePolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/mandatedAreaCoveragePercent"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/AccessControlTypePolicy"/>
@@ -4453,6 +4480,13 @@
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/AcceptableUsePolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/AccessControlTypePolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -6042,6 +6076,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/ABAC</IRI>
         <Literal xml:lang="english">ABAC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AcceptableUsePolicy</IRI>
+        <Literal>Represents an acceptable use policy within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/AcceptableUsePolicy</IRI>
+        <Literal>AcceptableUsePolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8297,6 +8341,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/macAlgorithm</IRI>
         <Literal>macAlgorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/mandatedAreaCoveragePercent</IRI>
+        <Literal>Percentage of mandated control areas explicitly addressed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/mandatedAreaCoveragePercent</IRI>
+        <Literal>mandatedAreaCoveragePercent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
