@@ -299,6 +299,9 @@
         <Class abbreviatedIRI="core:Policies"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:AuditLogMonitoringPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
     </Declaration>
     <Declaration>
@@ -564,6 +567,17 @@
         <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:AuditLogMonitoringPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AuditLogMonitoringPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:enabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
         <Class abbreviatedIRI="core:Policies"/>
     </SubClassOf>
@@ -571,6 +585,20 @@
         <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:thirdPartyExchangeRulesDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:restrictsDownloadAndExtraction"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -605,6 +633,20 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:coveredAttackTypes"/>
             <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:antispoofingRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:filteringRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -649,6 +691,20 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:auditInterval"/>
             <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ComplianceAuditIntervalPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:daysSinceLastAudit"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ComplianceAuditIntervalPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:unrestrictedAccessGranted"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3143,6 +3199,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:Policies</AbbreviatedIRI>
         <Literal>Policies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AuditLogMonitoringPolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a [PolicyDocument] defining requirements for the periodic monitoring and review of audit logs, including the identification of anomalies, security events, and unusual activity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:AuditLogMonitoringPolicy</AbbreviatedIRI>
+        <Literal>AuditLogMonitoringPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
