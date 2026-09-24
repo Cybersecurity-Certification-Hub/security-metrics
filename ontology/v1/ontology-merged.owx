@@ -462,6 +462,9 @@
         <Class IRI="/classes/LeastPrivilegePolicy"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/LiabilityPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Library"/>
     </Declaration>
     <Declaration>
@@ -979,6 +982,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/contextIsChecked"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/costsExplicitlyAssignedToProvider"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/creation_time"/>
@@ -1582,6 +1588,9 @@
     </Declaration>
     <Declaration>
         <Datatype IRI="/datatypes/cpgNode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/costsExplicitlyAssignedToProvider"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes//mode"/>
@@ -3701,6 +3710,17 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/LiabilityPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/LiabilityPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/costsExplicitlyAssignedToProvider"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/Library"/>
         <Class IRI="/classes/Component"/>
     </SubClassOf>
@@ -4405,6 +4425,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/LeastPrivilegePolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/LiabilityPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -6985,6 +7012,16 @@ name = metadata.name</Literal>
         <Literal>LeastPrivilegePolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LiabilityPolicy</IRI>
+        <Literal>Represents a liability/cost-assignment clause within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LiabilityPolicy</IRI>
+        <Literal>LiabilityPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Library</IRI>
         <Literal>Library</Literal>
@@ -7983,6 +8020,16 @@ name = metadata.name</Literal>
         <AnnotationProperty IRI="rdfs:comment"/>
         <IRI>/classes/contextIsChecked</IRI>
         <Literal>Check additional information, e.g. which device is used or the time of the login</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/costsExplicitlyAssignedToProvider</IRI>
+        <Literal>Indicates whether the clause explicitly assigns cost responsibility to the service provider.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/costsExplicitlyAssignedToProvider</IRI>
+        <Literal>costsExplicitlyAssignedToProvider</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

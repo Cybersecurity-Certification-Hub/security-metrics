@@ -466,6 +466,9 @@
         <DataProperty abbreviatedIRI="prop:value"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:costsExplicitlyAssignedToProvider"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -1376,5 +1379,15 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:value</AbbreviatedIRI>
         <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:costsExplicitlyAssignedToProvider</AbbreviatedIRI>
+        <Literal>Indicates whether the clause explicitly assigns cost responsibility to the service provider.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:costsExplicitlyAssignedToProvider</AbbreviatedIRI>
+        <Literal>costsExplicitlyAssignedToProvider</Literal>
     </AnnotationAssertion>
 </Ontology>

@@ -2,18 +2,25 @@ package cch.metrics.liability_cost_assignment_explicit
 
 import data.cch.comparison_result
 import rego.v1
-import input.liabilityClause as liabilityClause
+import input.liabilityPolicy as liabilityPolicy
 
 default applicable := false
 default compliant := false
 
 applicable if {
-      liabilityClause != {}
-      "PolicyDocument" in input.type
+	"costsExplicitlyAssignedToProvider" in object.keys(liabilityPolicy)
+	is_boolean(liabilityPolicy.costsExplicitlyAssignedToProvider)
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-      every r in results { r.success }
+	every r in results { r.success }
 }
 
-results := [comparison_result("liabilityClause.costsExplicitlyAssignedToProvider", liabilityClause.costsExplicitlyAssignedToProvider)]
+message := "The clause explicitly assigns costs/responsibility to the Service Provider." if {
+	compliant
+} else := "The clause does not explicitly assign costs/responsibility to the Service Provider." if {
+	not compliant
+}
+
+results := [comparison_result("liabilityPolicy.costsExplicitlyAssignedToProvider", liabilityPolicy.costsExplicitlyAssignedToProvider)]

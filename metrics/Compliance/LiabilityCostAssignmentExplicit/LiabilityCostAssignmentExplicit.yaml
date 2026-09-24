@@ -1,14 +1,14 @@
 # ====== Metadata ======
 id: "5d44bb93-45e1-45de-8ec3-b75fd52ad1e9"
 name: "LiabilityCostAssignmentExplicit"
-description: "This rule assesses whether the liability [PolicyDocument] has its [p1:costsExplicitlyAssignedToProvider] property set correctly."
+description: "This rule assesses whether a [PolicyDocument] includes [LiabilityPolicy] with its [p1:costsExplicitlyAssignedToProvider] property set correctly."
 implementationGuidelines:
   AMOE:
     question: "How does the clause assign responsibility for costs arising from Service Provider non-compliance?"
     keywords: ["solely responsible", "assume the responsibility", "costs arising from such non-compliance", "must assume the responsibility and costs arising from such non-compliance"]
 category: "Compliance"
 version: "v1"
-comments: "The clause must explicitly assign costs/responsibility to the Service Provider, not just generic liability language. Question reworded from a yes/no phrasing to a literal-extraction question targeting the cost-assignment sentence."
+comments: "The clause must explicitly assign costs/responsibility to the Service Provider, not just generic liability language."
 # ====== Configuration ======
 configuration:
   p1:
