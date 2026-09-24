@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"unrestrictedAccessGranted" in object.keys(complianceAuditIntervalPolicy)
-	is_boolean(complianceAuditIntervalPolicy.unrestrictedAccessGranted)
 	"PolicyDocument" in input.type
 }
 
