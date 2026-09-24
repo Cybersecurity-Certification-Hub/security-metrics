@@ -258,6 +258,9 @@
         <Class IRI="/classes/DecryptionOperation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/DeviceManagementPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/DeviceProvisioningService"/>
     </Declaration>
     <Declaration>
@@ -957,6 +960,9 @@
         <DataProperty IRI="/classes/adversarialRobustnessScore"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/allMandatedControlsAddressed"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/allRequiredInformationRecorded"/>
     </Declaration>
     <Declaration>
@@ -973,6 +979,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/broadAssignments"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/checklistCoveragePercent"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/cipherName"/>
@@ -1602,6 +1611,9 @@
         <DataProperty IRI="/classes/TwoQubitGateErrorRate"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/checklistCoveragePercent"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/SpamErrorRate"/>
     </Declaration>
     <Declaration>
@@ -1666,6 +1678,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/approvedCommitAuthorEnforced"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/allMandatedControlsAddressed"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/approvedBeforeDeployment"/>
@@ -2897,6 +2912,24 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/algorithm"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DeviceManagementPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DeviceManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/allMandatedControlsAddressed"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DeviceManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/checklistCoveragePercent"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4489,6 +4522,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/DeviceManagementPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -6634,6 +6674,16 @@ name = metadata.name</Literal>
         <Literal>Decryption</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/DeviceManagementPolicy</IRI>
+        <Literal>Represents a device management policy section within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/DeviceManagementPolicy</IRI>
+        <Literal>DeviceManagementPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/DeviceProvisioningService</IRI>
         <Literal xml:lang="english">DeviceProvisioningService</Literal>
@@ -8015,6 +8065,16 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/allMandatedControlsAddressed</IRI>
+        <Literal>Indicates whether all mandated device controls are addressed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/allMandatedControlsAddressed</IRI>
+        <Literal>allMandatedControlsAddressed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/allRequiredInformationRecorded</IRI>
         <Literal>Indicates whether all required information for an asset inventory entry has been recorded.</Literal>
     </AnnotationAssertion>
@@ -8077,6 +8137,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/broadAssignments</IRI>
         <Literal>broadAssignments</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/checklistCoveragePercent</IRI>
+        <Literal>Percentage of the mandated checklist items explicitly present.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/checklistCoveragePercent</IRI>
+        <Literal>checklistCoveragePercent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
