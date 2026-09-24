@@ -1901,6 +1901,7 @@ message Functionality {
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
 		SeparationOfDutiesPolicy separation_of_duties_policy = 1439;
+		TestDataPolicy test_data_policy = 4903;
 		Principal principal = 16173;
 		ProtectedAsset protected_asset = 10697;
 		RequestForChange request_for_change = 5340;
@@ -3422,6 +3423,7 @@ message Policies {
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
 		SeparationOfDutiesPolicy separation_of_duties_policy = 1439;
+		TestDataPolicy test_data_policy = 4903;
 	}
 }
 
@@ -3470,6 +3472,7 @@ message PolicyDocument {
 	SecurityIncident security_incident = 16664;
 	SecurityPolicyReview security_policy_review = 3099;
 	SeparationOfDutiesPolicy separation_of_duties_policy = 6434;
+	TestDataPolicy test_data_policy = 11308;
 }
 
 // PolicyOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -4414,6 +4417,17 @@ message SymmetricCipher {
 	optional string modus = 10292;
 	InitializationVector initialization_vector = 11325;
 	Padding padding = 2670;
+}
+
+// TestDataPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a PolicyDocument governing the use and anonymization of test data.
+message TestDataPolicy {
+	option (resource_type_names) = "TestDataPolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	bool anonymization_required_for_non_prod = 993;
+	string technique = 10604;
 }
 
 // Time is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
