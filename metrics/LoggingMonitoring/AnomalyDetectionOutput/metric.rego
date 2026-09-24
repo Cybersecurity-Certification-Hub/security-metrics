@@ -9,7 +9,6 @@ default compliant := false
 
 # The metric is applicable when loggingServiceIds is configured as an array.
 applicable if {
-	is_array(logging.loggingServiceIds)
 	"DatabaseService" in input.type
 }
 

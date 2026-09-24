@@ -16,7 +16,6 @@ applicable if {
 # Converts a valid duration value from nanoseconds to days.
 retention_period_days := duration_ns / (1000 * 1000 * 1000 * 60 * 60 * 24) if {
 	applicable
-	is_string(logging.retentionPeriod)
 	duration_ns := time.parse_duration_ns(logging.retentionPeriod)
 }
 
