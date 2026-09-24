@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: "1020d975-e776-4137-b0a8-0092875aa3e6"
+id: "1020d975-e938-4137-b0a8-8372875aa3e6"
 name: "SubcontractorMonitoringCadenceDefined"
 description: "This rule assesses whether a [PolicyDocument] includes [OutsourcingPolicy] with its [p1:monitoringMechanism] property set to a compliant value."
 implementationGuidelines:
