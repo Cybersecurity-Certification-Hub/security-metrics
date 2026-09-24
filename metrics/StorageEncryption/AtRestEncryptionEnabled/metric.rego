@@ -1,6 +1,6 @@
 package cch.metrics.at_rest_encryption_enabled
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 
 import input.atRestEncryption as enc
@@ -14,5 +14,8 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, enc[_].enabled)
+	some r in results
+	r.success
 }
+
+results := [comparison_result("atRestEncryption.enabled", e.enabled) | e := enc[_]]
