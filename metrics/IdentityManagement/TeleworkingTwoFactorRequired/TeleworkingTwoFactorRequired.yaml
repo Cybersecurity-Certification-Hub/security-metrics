@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "7c1e4a92-8f3d-4b6c-a2e1-9d5f8b3c6a10"
+name: "TeleworkingTwoFactorRequired"
+description: "This rule assesses whether a [PolicyDocument] includes [TeleworkingPolicy] with its [p1:twoFactorRequired] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the policy require two-factor authentication for teleworking/remote access?"
+    keywords: ["two-factor authentication", "requires a two-factor authentication mechanism"]
+category: "IdentityManagement"
+version: "v1"
+comments: "Teleworking access to internal systems over public networks must require two-factor authentication. Split out of the former combined TeleworkingSecurityControlsRequired metric (see TeleworkingEncryptionRequired for the encryption-only check)."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

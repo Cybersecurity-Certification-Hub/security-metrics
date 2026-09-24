@@ -484,6 +484,15 @@
         <DataProperty abbreviatedIRI="prop:value"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:twoFactorRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:encryptionRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:mfaAndFederationRequiredForRemoteAccess"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -1397,6 +1406,36 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:twoFactorRequired</AbbreviatedIRI>
+        <Literal>Indicates whether two-factor authentication is required.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:twoFactorRequired</AbbreviatedIRI>
+        <Literal>twoFactorRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:encryptionRequired</AbbreviatedIRI>
+        <Literal>Indicates whether data encryption is required.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:encryptionRequired</AbbreviatedIRI>
+        <Literal>encryptionRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:mfaAndFederationRequiredForRemoteAccess</AbbreviatedIRI>
+        <Literal>Indicates whether MFA and federation are required for remote access.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:mfaAndFederationRequiredForRemoteAccess</AbbreviatedIRI>
+        <Literal>mfaAndFederationRequiredForRemoteAccess</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:thirdPartyExchangeRulesDefined</AbbreviatedIRI>
         <Literal>Indicates whether the policy specifically defines rules for information exchange with third parties.</Literal>
     </AnnotationAssertion>

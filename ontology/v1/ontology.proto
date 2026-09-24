@@ -1901,6 +1901,7 @@ message Functionality {
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
 		SeparationOfDutiesPolicy separation_of_duties_policy = 1439;
+		TeleworkingPolicy teleworking_policy = 7516;
 		Principal principal = 16173;
 		ProtectedAsset protected_asset = 10697;
 		RequestForChange request_for_change = 5340;
@@ -3422,6 +3423,7 @@ message Policies {
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
 		SeparationOfDutiesPolicy separation_of_duties_policy = 1439;
+		TeleworkingPolicy teleworking_policy = 7516;
 	}
 }
 
@@ -3470,6 +3472,7 @@ message PolicyDocument {
 	SecurityIncident security_incident = 16664;
 	SecurityPolicyReview security_policy_review = 3099;
 	SeparationOfDutiesPolicy separation_of_duties_policy = 6434;
+	TeleworkingPolicy teleworking_policy = 17215;
 }
 
 // PolicyOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -4414,6 +4417,18 @@ message SymmetricCipher {
 	optional string modus = 10292;
 	InitializationVector initialization_vector = 11325;
 	Padding padding = 2670;
+}
+
+// TeleworkingPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a teleworking / remote access policy section within a PolicyDocument.
+message TeleworkingPolicy {
+	option (resource_type_names) = "TeleworkingPolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	bool encryption_required = 2639;
+	bool mfa_and_federation_required_for_remote_access = 10016;
+	bool two_factor_required = 4379;
 }
 
 // Time is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
