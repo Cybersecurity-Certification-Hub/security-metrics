@@ -1901,6 +1901,7 @@ message Functionality {
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
 		SeparationOfDutiesPolicy separation_of_duties_policy = 1439;
+		VulnerabilityManagementPolicy vulnerability_management_policy = 3972;
 		Principal principal = 16173;
 		ProtectedAsset protected_asset = 10697;
 		RequestForChange request_for_change = 5340;
@@ -3422,6 +3423,7 @@ message Policies {
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
 		SeparationOfDutiesPolicy separation_of_duties_policy = 1439;
+		VulnerabilityManagementPolicy vulnerability_management_policy = 3972;
 	}
 }
 
@@ -3470,6 +3472,7 @@ message PolicyDocument {
 	SecurityIncident security_incident = 16664;
 	SecurityPolicyReview security_policy_review = 3099;
 	SeparationOfDutiesPolicy separation_of_duties_policy = 6434;
+	VulnerabilityManagementPolicy vulnerability_management_policy = 2658;
 }
 
 // PolicyOperation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -4676,6 +4679,19 @@ message Vulnerability {
 	// exploitable: Indicates whether a vulnerability is exploitable for the given target of evaluation (TOE)
 	optional bool exploitable = 15966;
 	optional string url = 11925;
+}
+
+// VulnerabilityManagementPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a vulnerability management procedure section within a PolicyDocument, covering CVSS scoring and severity-tiered resolution SLAs.
+message VulnerabilityManagementPolicy {
+	option (resource_type_names) = "VulnerabilityManagementPolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	bool critical_high_sla_stated = 13118;
+	bool cvss_scoring_used = 16848;
+	bool low_sla_stated = 14560;
+	bool medium_sla_stated = 3765;
 }
 
 // WebApplicationFirewall is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.

@@ -843,6 +843,9 @@
         <Class IRI="/classes/Vulnerability"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/VulnerabilityManagementPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/WebApplicationFirewall"/>
     </Declaration>
     <Declaration>
@@ -990,7 +993,13 @@
         <DataProperty IRI="/classes/creation_time"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/criticalHighSlaStated"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/cve"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/cvssScoringUsed"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/cwe"/>
@@ -1086,10 +1095,16 @@
         <DataProperty IRI="/classes/loginDefenderEnabled"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/lowSlaStated"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/macAlgorithm"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/maxRequests"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/mediumSlaStated"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/membershipInferenceResilience"/>
@@ -1608,6 +1623,9 @@
         <Datatype IRI="/datatypes/cpgNode"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/criticalHighSlaStated"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes//mode"/>
     </Declaration>
     <Declaration>
@@ -1624,6 +1642,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/errorCorrectionEnabled"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/lowSlaStated"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/evasionEfficacyLevel"/>
@@ -1645,6 +1666,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Implementation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/cvssScoringUsed"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/OneQubitGateErrorRate"/>
@@ -1675,6 +1699,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/purpose"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/mediumSlaStated"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/reviewPercentageLastMonth"/>
@@ -4550,6 +4577,13 @@
     <SubClassOf>
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/VulnerabilityManagementPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/Governance"/>
         </ObjectSomeValuesFrom>
@@ -5584,6 +5618,38 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/url"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/VulnerabilityManagementPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/VulnerabilityManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/criticalHighSlaStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/VulnerabilityManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/cvssScoringUsed"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/VulnerabilityManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/lowSlaStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/VulnerabilityManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/mediumSlaStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -7980,6 +8046,16 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/VulnerabilityManagementPolicy</IRI>
+        <Literal>Represents a vulnerability management procedure section within a PolicyDocument, covering CVSS scoring and severity-tiered resolution SLAs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/VulnerabilityManagementPolicy</IRI>
+        <Literal>VulnerabilityManagementPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/WebApplicationFirewall</IRI>
         <Literal>A WAF is a L7 firewall that includes L3 capabilities</Literal>
     </AnnotationAssertion>
@@ -8119,9 +8195,29 @@ name = metadata.name</Literal>
         <Literal>creationTime</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/criticalHighSlaStated</IRI>
+        <Literal>Indicates whether the critical/high severity vulnerability resolution SLA is stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/criticalHighSlaStated</IRI>
+        <Literal>criticalHighSlaStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/cve</IRI>
         <Literal>cve</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/cvssScoringUsed</IRI>
+        <Literal>Indicates whether CVSS scoring is used to prioritize vulnerability resolution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/cvssScoringUsed</IRI>
+        <Literal>cvssScoringUsed</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8290,6 +8386,16 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/lowSlaStated</IRI>
+        <Literal>Indicates whether the low severity vulnerability resolution SLA is stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/lowSlaStated</IRI>
+        <Literal>lowSlaStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/macAlgorithm</IRI>
         <Literal>naming schema: SHA-256</Literal>
     </AnnotationAssertion>
@@ -8307,6 +8413,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/measures</IRI>
         <Literal>measures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/mediumSlaStated</IRI>
+        <Literal>Indicates whether the medium severity vulnerability resolution SLA is stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/mediumSlaStated</IRI>
+        <Literal>mediumSlaStated</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

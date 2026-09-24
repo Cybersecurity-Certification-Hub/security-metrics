@@ -484,6 +484,18 @@
         <DataProperty abbreviatedIRI="prop:value"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:cvssScoringUsed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:criticalHighSlaStated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:mediumSlaStated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:lowSlaStated"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -1394,6 +1406,46 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:value</AbbreviatedIRI>
         <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:cvssScoringUsed</AbbreviatedIRI>
+        <Literal>Indicates whether CVSS scoring is used to prioritize vulnerability resolution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:cvssScoringUsed</AbbreviatedIRI>
+        <Literal>cvssScoringUsed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:criticalHighSlaStated</AbbreviatedIRI>
+        <Literal>Indicates whether the critical/high severity vulnerability resolution SLA is stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:criticalHighSlaStated</AbbreviatedIRI>
+        <Literal>criticalHighSlaStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:mediumSlaStated</AbbreviatedIRI>
+        <Literal>Indicates whether the medium severity vulnerability resolution SLA is stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:mediumSlaStated</AbbreviatedIRI>
+        <Literal>mediumSlaStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:lowSlaStated</AbbreviatedIRI>
+        <Literal>Indicates whether the low severity vulnerability resolution SLA is stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:lowSlaStated</AbbreviatedIRI>
+        <Literal>lowSlaStated</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
