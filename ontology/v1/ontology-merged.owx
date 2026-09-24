@@ -216,6 +216,9 @@
         <Class IRI="/classes/CryptographicOperation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/CryptographicTransferPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/CustomerKeyEncryption"/>
     </Declaration>
     <Declaration>
@@ -1005,6 +1008,9 @@
         <DataProperty IRI="/classes/disablePasswordPolicy"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/encryptedChannelRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/endColumn"/>
     </Declaration>
     <Declaration>
@@ -1116,6 +1122,9 @@
         <DataProperty IRI="/classes/name"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/nonDescriptiveFilenameRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/notBeforeDate"/>
     </Declaration>
     <Declaration>
@@ -1153,6 +1162,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/raw"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/recipientHeldKeyRequired"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/recoveryFrequency"/>
@@ -1602,6 +1614,9 @@
         <DataProperty IRI="/classes/TwoQubitGateErrorRate"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/recipientHeldKeyRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/SpamErrorRate"/>
     </Declaration>
     <Declaration>
@@ -1615,6 +1630,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/isDefined"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/nonDescriptiveFilenameRequired"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/numberOfRequiredReviewers"/>
@@ -1645,6 +1663,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Implementation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/encryptedChannelRequired"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/OneQubitGateErrorRate"/>
@@ -2716,6 +2737,31 @@
             <ObjectProperty IRI="/classes/operatesOn"/>
             <Class IRI="/classes/SecurityFeature"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CryptographicTransferPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CryptographicTransferPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/encryptedChannelRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CryptographicTransferPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/nonDescriptiveFilenameRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CryptographicTransferPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/recipientHeldKeyRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/CustomerKeyEncryption"/>
@@ -4475,6 +4521,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Backup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/CryptographicTransferPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -6539,6 +6592,16 @@ name = metadata.name</Literal>
         <Literal>CryptographicOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/CryptographicTransferPolicy</IRI>
+        <Literal>Represents a policy section within a PolicyDocument governing cryptographic protection of transferred information.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/CryptographicTransferPolicy</IRI>
+        <Literal>CryptographicTransferPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/CustomerKeyEncryption</IRI>
         <Literal xml:lang="english">CustomerKeyEncryption</Literal>
@@ -8144,6 +8207,16 @@ name = metadata.name</Literal>
         <Literal>disablePasswordPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/encryptedChannelRequired</IRI>
+        <Literal>Indicates whether encrypted channels (e.g., sFTP/HTTPS) are required for data transmission.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/encryptedChannelRequired</IRI>
+        <Literal>encryptedChannelRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/endColumn</IRI>
         <Literal>endColumn</Literal>
@@ -8359,6 +8432,16 @@ name = metadata.name</Literal>
         <Literal>name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/nonDescriptiveFilenameRequired</IRI>
+        <Literal>Indicates whether transferred file names must not include descriptive content.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/nonDescriptiveFilenameRequired</IRI>
+        <Literal>nonDescriptiveFilenameRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/notBeforeDate</IRI>
         <Literal>notBeforeDate</Literal>
@@ -8447,6 +8530,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/raw</IRI>
         <Literal>raw</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/recipientHeldKeyRequired</IRI>
+        <Literal>Indicates whether the encryption key used to protect a file must be held by the recipient.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/recipientHeldKeyRequired</IRI>
+        <Literal>recipientHeldKeyRequired</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
