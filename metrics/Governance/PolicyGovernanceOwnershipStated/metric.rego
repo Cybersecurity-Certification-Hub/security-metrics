@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"ownerAndApprovalDefined" in object.keys(securityPolicyReview)
-	is_boolean(securityPolicyReview.ownerAndApprovalDefined)
 	"PolicyDocument" in input.type
 }
 
