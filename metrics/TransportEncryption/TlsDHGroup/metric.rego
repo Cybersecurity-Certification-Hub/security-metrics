@@ -2,18 +2,37 @@ package cch.metrics.tls_dh_group
 
 import data.cch.comparison_result
 import rego.v1
-import input.transportEncryption as enc
 
-default applicable = false
+default applicable := false
+default compliant := false
 
-default compliant = false
-
-applicable if {
-	enc
+# Finds transportEncryption directly under input or at any nesting level.
+transport_encryptions contains enc if {
+	walk(input, [path, enc])
+	count(path) > 0
+	path[count(path) - 1] == "transportEncryption"
+	is_object(enc)
 }
+
+# Checks if at least one dhGroup element is available
+applicable if {
+	some enc in transport_encryptions
+	dh_group := object.get(enc, "dhGroup", null)
+	dh_group != null
+}
+
+results := [
+	comparison_result("transportEncryption.dhGroup", dh_group) |
+	some enc in transport_encryptions
+	dh_group := object.get(enc, "dhGroup", null)
+	dh_group != null
+]
 
 compliant if {
-	every r in results { r.success }
-}
+	applicable
+	count(results) > 0
 
-results := [comparison_result("transportEncryption.dhGroup", enc.dhGroup)]
+	every result in results {
+		result.success
+	}
+}
