@@ -46,6 +46,17 @@ message ABAC {
 
 }
 
+// AcceptableUsePolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents an acceptable use policy within a PolicyDocument.
+message AcceptableUsePolicy {
+	option (resource_type_names) = "AcceptableUsePolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	bool is_defined = 4786;
+	float mandated_area_coverage_percent = 2890;
+}
+
 // AccessControlTypePolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message AccessControlTypePolicy {
 	option (resource_type_names) = "AccessControlTypePolicy";
@@ -1872,6 +1883,7 @@ message Functionality {
 		GetSecret get_secret = 2809;
 		Output output = 7223;
 		Padding padding = 9245;
+		AcceptableUsePolicy acceptable_use_policy = 12992;
 		AccessControlTypePolicy access_control_type_policy = 13002;
 		ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 3098;
 		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
@@ -3387,6 +3399,7 @@ message PasswordPolicy {
 message Policies {
 
 	oneof type {
+		AcceptableUsePolicy acceptable_use_policy = 12992;
 		AccessControlTypePolicy access_control_type_policy = 13002;
 		ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 3098;
 		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
@@ -3423,6 +3436,7 @@ message PolicyDocument {
 	string name = 2052 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
 	string raw = 5038;
+	AcceptableUsePolicy acceptable_use_policy = 15013;
 	AccessControlTypePolicy access_control_type_policy = 9164;
 	AssetInventory asset_inventory = 16496;
 	Backup backup = 16402;

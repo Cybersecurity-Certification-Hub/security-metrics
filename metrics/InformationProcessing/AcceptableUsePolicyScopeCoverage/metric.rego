@@ -2,18 +2,25 @@ package cch.metrics.acceptable_use_policy_scope_coverage
 
 import data.cch.comparison_result
 import rego.v1
-import input.acceptableUse as acceptableUse
+import input.acceptableUsePolicy as acceptableUsePolicy
 
 default applicable := false
 default compliant := false
 
 applicable if {
-      acceptableUse != {}
-      "PolicyDocument" in input.type
+	"mandatedAreaCoveragePercent" in object.keys(acceptableUsePolicy)
+	is_number(acceptableUsePolicy.mandatedAreaCoveragePercent)
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-      every r in results { r.success }
+	every r in results { r.success }
 }
 
-results := [comparison_result("acceptableUse.mandatedAreaCoveragePercent", acceptableUse.mandatedAreaCoveragePercent)]
+message := "All three mandated control areas (internet access, email, removable devices) are explicitly addressed." if {
+	compliant
+} else := "Not all three mandated control areas (internet access, email, removable devices) are explicitly addressed." if {
+	not compliant
+}
+
+results := [comparison_result("acceptableUsePolicy.mandatedAreaCoveragePercent", acceptableUsePolicy.mandatedAreaCoveragePercent)]
