@@ -792,6 +792,9 @@
         <Class IRI="/classes/SymmetricCipher"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/TeleworkingPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/Time"/>
     </Declaration>
     <Declaration>
@@ -999,6 +1002,9 @@
         <DataProperty IRI="/classes/disablePasswordPolicy"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/encryptionRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/endColumn"/>
     </Declaration>
     <Declaration>
@@ -1090,6 +1096,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/message"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/mfaAndFederationRequiredForRemoteAccess"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/mixedDuties"/>
@@ -1210,6 +1219,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/timeWindowSeconds"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/twoFactorRequired"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/type"/>
@@ -1578,6 +1590,9 @@
         <DataProperty IRI="/classes/OneQubitErrorRate"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/mfaAndFederationRequiredForRemoteAccess"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/SpamErrorRate"/>
     </Declaration>
     <Declaration>
@@ -1594,6 +1609,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/numberOfRequiredReviewers"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/encryptionRequired"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
@@ -1657,6 +1675,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Specification"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/twoFactorRequired"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="/classes/ResourceType"/>
@@ -4452,6 +4473,13 @@
     <SubClassOf>
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/TeleworkingPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/hasMultiple"/>
             <Class IRI="/classes/Governance"/>
         </ObjectSomeValuesFrom>
@@ -5261,6 +5289,31 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/modus"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TeleworkingPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TeleworkingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/encryptionRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TeleworkingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/mfaAndFederationRequiredForRemoteAccess"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TeleworkingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/twoFactorRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -7725,6 +7778,16 @@ name = metadata.name</Literal>
         <Literal>T2CoherenceTime</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/TeleworkingPolicy</IRI>
+        <Literal>Represents a teleworking / remote access policy section within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/TeleworkingPolicy</IRI>
+        <Literal>TeleworkingPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Time</IRI>
         <Literal>Time</Literal>
@@ -8015,6 +8078,16 @@ name = metadata.name</Literal>
         <Literal>disablePasswordPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/encryptionRequired</IRI>
+        <Literal>Indicates whether data encryption is required.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/encryptionRequired</IRI>
+        <Literal>encryptionRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/endColumn</IRI>
         <Literal>endColumn</Literal>
@@ -8183,6 +8256,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/message</IRI>
         <Literal>message</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/mfaAndFederationRequiredForRemoteAccess</IRI>
+        <Literal>Indicates whether MFA and federation are required for remote access.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/mfaAndFederationRequiredForRemoteAccess</IRI>
+        <Literal>mfaAndFederationRequiredForRemoteAccess</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8463,6 +8546,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/timeWindowSeconds</IRI>
         <Literal>timeWindowSeconds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/twoFactorRequired</IRI>
+        <Literal>Indicates whether two-factor authentication is required.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/twoFactorRequired</IRI>
+        <Literal>twoFactorRequired</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

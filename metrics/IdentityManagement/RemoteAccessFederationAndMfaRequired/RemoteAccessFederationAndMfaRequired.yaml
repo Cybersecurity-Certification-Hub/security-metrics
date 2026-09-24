@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "ad806a81-b11f-4902-92fe-ea0f6c76d262"
+name: "RemoteAccessFederationAndMfaRequired"
+description: "This rule assesses whether a [PolicyDocument] includes [TeleworkingPolicy] with its [p1:mfaAndFederationRequiredForRemoteAccess] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the procedure require MFA and federation for remote/teleworking/VPN access?"
+    keywords: ["MFA", "multi-factor authentication", "teleworking", "VPN"]
+category: "IdentityManagement"
+version: "v1"
+comments: "Access by users and external delegated groups (EdGs) must be federated with the corporate identity directory and require MFA for remote/teleworking/VPN access."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
