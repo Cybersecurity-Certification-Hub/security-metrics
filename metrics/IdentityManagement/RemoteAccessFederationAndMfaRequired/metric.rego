@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"mfaAndFederationRequiredForRemoteAccess" in object.keys(teleworkingPolicy)
-	is_boolean(teleworkingPolicy.mfaAndFederationRequiredForRemoteAccess)
 	"PolicyDocument" in input.type
 }
 

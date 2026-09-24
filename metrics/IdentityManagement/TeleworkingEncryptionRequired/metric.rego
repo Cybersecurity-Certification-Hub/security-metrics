@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"encryptionRequired" in object.keys(teleworkingPolicy)
-	is_boolean(teleworkingPolicy.encryptionRequired)
 	"PolicyDocument" in input.type
 }
 

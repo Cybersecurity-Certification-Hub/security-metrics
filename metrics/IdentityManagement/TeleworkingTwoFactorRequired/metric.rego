@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"twoFactorRequired" in object.keys(teleworkingPolicy)
-	is_boolean(teleworkingPolicy.twoFactorRequired)
 	"PolicyDocument" in input.type
 }
 
