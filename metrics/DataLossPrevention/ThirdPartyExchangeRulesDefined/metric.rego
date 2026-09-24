@@ -9,7 +9,7 @@ default compliant := false
 
 applicable if {
 	"thirdPartyExchangeRulesDefined" in object.keys(dataConfidentialitySDNPolicy)
-	is_boolean(dataConfidentialitySDNPolicy.thirdPartyExchangeRulesDefined)
+	is_string(dataConfidentialitySDNPolicy.thirdPartyExchangeRulesDefined)
 	"PolicyDocument" in input.type
 }
 

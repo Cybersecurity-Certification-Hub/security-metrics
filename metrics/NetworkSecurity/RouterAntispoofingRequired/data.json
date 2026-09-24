@@ -1,4 +1,7 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "antispoofing",
+        "All Internet-facing routers implement antispoofing mechanisms"
+    ]
 }

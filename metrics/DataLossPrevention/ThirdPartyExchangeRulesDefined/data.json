@@ -1,4 +1,8 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "third parties",
+        "third-party exchange",
+        "establishes the security requirements"
+    ]
 }

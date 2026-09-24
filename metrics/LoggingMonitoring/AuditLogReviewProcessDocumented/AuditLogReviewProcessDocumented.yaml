@@ -12,5 +12,5 @@ comments: "Audit logs must be periodically monitored to identify security events
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["audit logs", "surveillance and control", "monitor", "24x7 monitor coverage by the SOC", "continuous surveillance", "anomalies", "verify the correct use", "security events"]

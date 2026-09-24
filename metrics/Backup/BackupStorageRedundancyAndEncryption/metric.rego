@@ -9,7 +9,7 @@ default compliant := false
 
 applicable if {
 	"redundant" in object.keys(backup)
-	is_boolean(backup.redundant)
+	is_string(backup.redundant)
 	"enabled" in object.keys(backup.transportEncryption)
 	"PolicyDocument" in input.type
 }

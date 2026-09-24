@@ -9,7 +9,7 @@ default compliant := false
 
 applicable if {
 	"antispoofingRequired" in object.keys(networkThreatMitigationPolicy)
-	is_boolean(networkThreatMitigationPolicy.antispoofingRequired)
+	is_string(networkThreatMitigationPolicy.antispoofingRequired)
 	"PolicyDocument" in input.type
 }
 
