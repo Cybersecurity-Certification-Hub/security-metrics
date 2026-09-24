@@ -670,6 +670,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:RequestForChange"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:mandatoryFieldCompletenessPercent"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:HttpClient"/>
         <Class abbreviatedIRI="core:Http"/>
     </SubClassOf>

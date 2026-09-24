@@ -3823,6 +3823,7 @@ message RequestForChange {
 	option (resource_type_names) = "Functionality";
 
 	bool approved_before_deployment = 16813;
+	float mandatory_field_completeness_percent = 13417;
 }
 
 // Resource is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".

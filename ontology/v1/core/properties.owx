@@ -466,6 +466,9 @@
         <DataProperty abbreviatedIRI="prop:value"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:mandatoryFieldCompletenessPercent"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -1376,5 +1379,15 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:value</AbbreviatedIRI>
         <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:mandatoryFieldCompletenessPercent</AbbreviatedIRI>
+        <Literal>Percentage of change register entries with all mandatory fields completed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:mandatoryFieldCompletenessPercent</AbbreviatedIRI>
+        <Literal>mandatoryFieldCompletenessPercent</Literal>
     </AnnotationAssertion>
 </Ontology>

@@ -1083,6 +1083,9 @@
         <DataProperty IRI="/classes/macAlgorithm"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/mandatoryFieldCompletenessPercent"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/maxRequests"/>
     </Declaration>
     <Declaration>
@@ -1657,6 +1660,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/classes/Specification"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/mandatoryFieldCompletenessPercent"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="/classes/ResourceType"/>
@@ -4859,6 +4865,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/approvedBeforeDeployment"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/RequestForChange"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/mandatoryFieldCompletenessPercent"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -8168,6 +8181,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/macAlgorithm</IRI>
         <Literal>macAlgorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/mandatoryFieldCompletenessPercent</IRI>
+        <Literal>Percentage of change register entries with all mandatory fields completed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/mandatoryFieldCompletenessPercent</IRI>
+        <Literal>mandatoryFieldCompletenessPercent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
