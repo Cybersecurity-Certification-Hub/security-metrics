@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"isDefined" in object.keys(acceptableUsePolicy)
-	is_boolean(acceptableUsePolicy.isDefined)
 	"PolicyDocument" in input.type
 }
 

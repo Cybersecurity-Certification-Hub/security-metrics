@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"mandatedAreaCoveragePercent" in object.keys(acceptableUsePolicy)
-	is_number(acceptableUsePolicy.mandatedAreaCoveragePercent)
 	"PolicyDocument" in input.type
 }
 
