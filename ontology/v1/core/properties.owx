@@ -484,6 +484,15 @@
         <DataProperty abbreviatedIRI="prop:value"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:notificationWindowHours"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:severityAndEscalationDefined"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:registryAndSlaStated"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -1394,6 +1403,36 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:value</AbbreviatedIRI>
         <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:notificationWindowHours</AbbreviatedIRI>
+        <Literal>The maximum incident notification window, in hours.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:notificationWindowHours</AbbreviatedIRI>
+        <Literal>notificationWindowHours</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:severityAndEscalationDefined</AbbreviatedIRI>
+        <Literal>Indicates whether escalation responsibility for critical/high severity incidents is defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:severityAndEscalationDefined</AbbreviatedIRI>
+        <Literal>severityAndEscalationDefined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:registryAndSlaStated</AbbreviatedIRI>
+        <Literal>Indicates whether an incident registry and handling SLA are stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:registryAndSlaStated</AbbreviatedIRI>
+        <Literal>registryAndSlaStated</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

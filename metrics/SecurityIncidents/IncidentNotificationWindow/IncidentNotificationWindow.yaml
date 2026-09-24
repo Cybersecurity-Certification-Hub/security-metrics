@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "e0b37fa1-0cb2-44e3-9c56-19472f413659"
+name: "IncidentNotificationWindow"
+description: "This rule assesses whether a [PolicyDocument] includes [SecurityIncident] with its [p1:notificationWindowHours] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the procedure state a maximum notification window (e.g., 24-72 hours) consistent with the contract SLA?"
+    keywords: ["72 hours", "24 hours", "without undue delay"]
+category: "SecurityIncidents"
+version: "v1"
+comments: "The procedure must state a maximum notification window (e.g., 24-72 hours) consistent with the contractual SLA."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 72
