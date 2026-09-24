@@ -1425,6 +1425,9 @@
         <DataProperty IRI="/properties/type"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/unrestrictedAccessGranted"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/updateDuration"/>
     </Declaration>
     <Declaration>
@@ -2416,6 +2419,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/daysSinceLastAudit"/>
             <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/unrestrictedAccessGranted"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -9317,6 +9327,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/ttl</IRI>
         <Literal>ttl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/unrestrictedAccessGranted</IRI>
+        <Literal>Indicates whether the audit clause grants direct, unrestricted, on-demand access.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/unrestrictedAccessGranted</IRI>
+        <Literal>unrestrictedAccessGranted</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

@@ -722,6 +722,8 @@ message ComplianceAuditIntervalPolicy {
 	optional int32 audit_interval = 7826;
 	// The number of days elapsed since the last completed external/supervisory audit.
 	optional int32 days_since_last_audit = 12483;
+	// Indicates whether the audit clause grants direct, unrestricted, on-demand access.
+	optional bool unrestricted_access_granted = 9367;
 }
 
 // ComplianceMethodologyPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.

@@ -355,6 +355,9 @@
         <DataProperty abbreviatedIRI="prop:daysSinceLastAudit"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:unrestrictedAccessGranted"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:updateInterval"/>
     </Declaration>
     <Declaration>
@@ -1439,6 +1442,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>prop:daysSinceLastAudit</AbbreviatedIRI>
         <Literal>The number of days elapsed since the last completed external/supervisory audit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:unrestrictedAccessGranted</AbbreviatedIRI>
+        <Literal>Indicates whether the audit clause grants direct, unrestricted, on-demand access.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:unrestrictedAccessGranted</AbbreviatedIRI>
+        <Literal>unrestrictedAccessGranted</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

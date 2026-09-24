@@ -701,6 +701,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:ComplianceAuditIntervalPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:unrestrictedAccessGranted"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:ComplianceMethodologyPolicy"/>
         <Class abbreviatedIRI="core:Policies"/>
     </SubClassOf>
