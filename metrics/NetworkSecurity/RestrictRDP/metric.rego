@@ -1,6 +1,6 @@
 package cch.metrics.restrict_rdp
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.accessRestriction.l3Firewall as l3
 
@@ -15,5 +15,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, l3.restrictedPorts)
+	every r in results { r.success }
 }
+
+results := [comparison_result("accessRestriction.l3Firewall.restrictedPorts", l3.restrictedPorts)]
