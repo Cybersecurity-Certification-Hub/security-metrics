@@ -1899,6 +1899,7 @@ message Functionality {
 		LeastPrivilegePolicy least_privilege_policy = 15025;
 		NeedToKnowPolicy need_to_know_policy = 17201;
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
+		OutsourcingPolicy outsourcing_policy = 15704;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
 		SeparationOfDutiesPolicy separation_of_duties_policy = 1439;
 		Principal principal = 16173;
@@ -3317,6 +3318,17 @@ message Output {
 
 }
 
+// OutsourcingPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a subcontractor/outsourcing clause within a PolicyDocument.
+message OutsourcingPolicy {
+	option (resource_type_names) = "OutsourcingPolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	string monitoring_mechanism = 16524;
+	bool monitoring_obligation_stated = 8257;
+}
+
 // POSIX is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 // Represents a POSIX architecture, commonly found on Linux systems.
 message POSIX {
@@ -3420,6 +3432,7 @@ message Policies {
 		LeastPrivilegePolicy least_privilege_policy = 15025;
 		NeedToKnowPolicy need_to_know_policy = 17201;
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
+		OutsourcingPolicy outsourcing_policy = 15704;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
 		SeparationOfDutiesPolicy separation_of_duties_policy = 1439;
 	}
@@ -3463,6 +3476,7 @@ message PolicyDocument {
 	MonitoringProcedure monitoring_procedure = 11357;
 	NeedToKnowPolicy need_to_know_policy = 3585;
 	NetworkThreatMitigationPolicy network_threat_mitigation_policy = 9407;
+	OutsourcingPolicy outsourcing_policy = 14425;
 	optional string parent_id = 18208;
 	SDNFunctionValidationPolicy sdn_function_validation_policy = 8099;
 	SchemaValidation validated_by = 5620;
