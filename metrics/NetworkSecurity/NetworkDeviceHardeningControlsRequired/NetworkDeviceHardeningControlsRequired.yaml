@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "c639dcf9-f78b-4739-b4e5-a4cb7a65cc8d"
 name: "NetworkDeviceHardeningControlsRequired"
-description: "This rule assesses whether a [PolicyDocument] representing the Network Security Standard has its [p1:authorizedSoftwareAndControlledInstallationRequired] property set correctly for internet-facing network devices."
+description: "This rule assesses whether a [PolicyDocument] includes [NetworkThreatMitigationPolicy] with its [p1:authorizedSoftwareAndControlledInstallationRequired] property set correctly for internet-facing network devices."
 implementationGuidelines:
   AMOE:
     question: "Does the standard require authorized-software/anti-malware controls and controlled hardware/software installation on network devices?"
