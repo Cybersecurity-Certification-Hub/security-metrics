@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"monitoringObligationStated" in object.keys(outsourcingPolicy)
-	is_boolean(outsourcingPolicy.monitoringObligationStated)
 	"PolicyDocument" in input.type
 }
 

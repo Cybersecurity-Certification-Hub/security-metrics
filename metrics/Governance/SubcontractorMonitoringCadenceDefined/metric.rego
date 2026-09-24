@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"monitoringMechanism" in object.keys(outsourcingPolicy)
-	is_string(outsourcingPolicy.monitoringMechanism)
 	"PolicyDocument" in input.type
 }
 
