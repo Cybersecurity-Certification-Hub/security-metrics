@@ -34,6 +34,9 @@
     <Declaration>
         <Class abbreviatedIRI="res:ContactPerson"/>
     </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="res:SecurityPolicyReview"/>
+    </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="res:AwarenessTraining"/>
         <Class abbreviatedIRI="res:Training"/>
@@ -59,7 +62,18 @@
         <Class abbreviatedIRI="res:Governance"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="res:SecurityPolicyReview"/>
+        <Class abbreviatedIRI="res:Governance"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="res:MonitoringProcedure"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:intervalMonths"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:SecurityPolicyReview"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="res:intervalMonths"/>
             <Datatype abbreviatedIRI="xsd:int"/>
@@ -165,5 +179,15 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:planDocumented</AbbreviatedIRI>
         <Literal>planDocumented</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:SecurityPolicyReview</AbbreviatedIRI>
+        <Literal>Represents the review cadence of the organization's Information Security Policy. intervalMonths: how often the policy must be reviewed, in months.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:SecurityPolicyReview</AbbreviatedIRI>
+        <Literal>SecurityPolicyReview</Literal>
     </AnnotationAssertion>
 </Ontology>

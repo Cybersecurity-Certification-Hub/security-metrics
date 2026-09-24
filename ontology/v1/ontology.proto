@@ -52,7 +52,7 @@ message AccessControlTypePolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
-	string authorization_types = 2672;
+	repeated string authorization_types = 2672;
 }
 
 // AccessRestriction is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -72,14 +72,14 @@ message Account {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 12742;
-	string description = 8955;
-	string id = 1395 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 5528;
+	optional google.protobuf.Timestamp creation_time = 12742;
+	optional string description = 8955;
+	optional string id = 1395 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 5528;
 	map<string, string> labels = 6485;
-	string name = 18836 [ (buf.validate.field).required = true ];
+	optional string name = 18836 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 14088;
+	optional string raw = 14088;
 	AssetInventory asset_inventory = 14263;
 	ChangeAndConfigurationManagement change_and_configuration_management = 7524;
 	GeoLocation geo_location = 402;
@@ -97,12 +97,12 @@ message ActivityLogging {
 	option (resource_type_names) = "Auditing";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 18133;
+	optional bool enabled = 18133;
 	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
-	string log_level = 11221;
-	bool monitoring_log_data_enabled = 13626;
-	google.protobuf.Duration retention_period = 10788;
-	bool security_alerts_enabled = 17680;
+	optional string log_level = 11221;
+	optional bool monitoring_log_data_enabled = 13626;
+	optional google.protobuf.Duration retention_period = 10788;
+	optional bool security_alerts_enabled = 17680;
 	repeated string logging_service_ids  = 16760;
 }
 
@@ -114,13 +114,13 @@ message Agnostic {
 	option (resource_type_names) = "Code";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 2486;
-	string description = 8346;
-	string id = 142 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 2486;
+	optional string description = 8346;
+	optional string id = 142 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 3423;
-	string name = 5900 [ (buf.validate.field).required = true ];
+	optional string name = 5900 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 10733;
+	optional string raw = 10733;
 	repeated string code_module_ids  = 16288;
 	optional string code_repository_id = 5545;
 	repeated Functionality functionalities  = 4188;
@@ -147,13 +147,13 @@ message AndRule {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 7268;
-	string description = 3559;
-	string id = 16497 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 7268;
+	optional string description = 3559;
+	optional string id = 16497 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 9934;
-	string name = 2112 [ (buf.validate.field).required = true ];
+	optional string name = 2112 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 15790;
+	optional string raw = 15790;
 	DataLocation data_location = 12945;
 	optional string parent_id = 13799;
 }
@@ -166,8 +166,8 @@ message AnomalyDetection {
 	option (resource_type_names) = "Auditing";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 8852;
-	string scope = 8482;
+	optional bool enabled = 8852;
+	optional string scope = 8482;
 	ApplicationLogging application_logging = 16001;
 }
 
@@ -179,15 +179,15 @@ message Application {
 	option (resource_type_names) = "Code";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 15057;
-	string description = 2283;
-	string id = 9299 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 15057;
+	optional string description = 2283;
+	optional string id = 9299 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 12760;
-	string name = 1409 [ (buf.validate.field).required = true ];
-	string programming_language = 1665;
-	string programming_version = 3150;
+	optional string name = 1409 [ (buf.validate.field).required = true ];
+	optional string programming_language = 1665;
+	optional string programming_version = 3150;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 18684;
+	optional string raw = 18684;
 	repeated string translation_units = 9449;
 	AutomaticUpdates automatic_updates = 1992;
 	repeated string code_module_ids  = 18101;
@@ -206,12 +206,12 @@ message ApplicationLogging {
 	option (resource_type_names) = "Auditing";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 13571;
+	optional bool enabled = 13571;
 	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
-	string log_level = 14273;
-	bool monitoring_log_data_enabled = 4205;
-	google.protobuf.Duration retention_period = 6319;
-	bool security_alerts_enabled = 17870;
+	optional string log_level = 14273;
+	optional bool monitoring_log_data_enabled = 4205;
+	optional google.protobuf.Duration retention_period = 6319;
+	optional bool security_alerts_enabled = 17870;
 	repeated string logging_service_ids  = 3884;
 }
 
@@ -229,20 +229,20 @@ message AssetInventory {
 	option (resource_type_names) = "SecurityFeature";
 
 	// Indicates whether all required information for an asset inventory entry has been recorded.
-	bool all_required_information_recorded = 5806;
+	optional bool all_required_information_recorded = 5806;
 	// The time needed for an audit.
-	int32 audit_interval = 15088;
+	optional int32 audit_interval = 15088;
 	// Percentage of completed reviews and updates of asset inventory entries.
-	float completed_review_percentage = 15931;
-	int32 review_frequency = 12717;
+	optional float completed_review_percentage = 15931;
+	optional int32 review_frequency = 12717;
 	// Service contains the name of the service (e.g., Asset Management).
-	string service = 11727;
-	string status = 11933;
-	string storage_facility = 2637;
-	string type = 11720;
+	optional string service = 11727;
+	repeated string status = 11933;
+	repeated string storage_facility = 2637;
+	optional string type = 11720;
 	// The time needed for an update.
-	int32 update_duration = 5698;
-	int32 update_interval = 4178;
+	optional int32 update_duration = 5698;
+	optional int32 update_interval = 4178;
 }
 
 // AsymmetricCipher is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -252,11 +252,11 @@ message AsymmetricCipher {
 	option (resource_type_names) = "Functionality";
 
 	// Block size of a cipher.
-	int32 block_size = 18752;
+	optional int32 block_size = 18752;
 	// Name of a cryptographic cipher.
-	string cipher_name = 10744;
+	optional string cipher_name = 10744;
 	// Key size refers to the length of a key used in an enryption.
-	int32 key_size = 8751;
+	optional int32 key_size = 8751;
 	Padding padding = 15741;
 }
 
@@ -278,6 +278,16 @@ message Attestation {
 		RemoteAttestation remote_attestation = 13640;
 		SoftwareAttestation software_attestation = 2415;
 	}
+}
+
+// AuditLogMonitoringPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a policy section within a [PolicyDocument] defining requirements for the periodic monitoring and review of audit logs, including the identification of anomalies, security events, and unusual activity.
+message AuditLogMonitoringPolicy {
+	option (resource_type_names) = "AuditLogMonitoringPolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	optional bool enabled = 10159;
 }
 
 // Auditing is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -367,10 +377,10 @@ message AutomaticUpdates {
 	option (resource_type_names) = "Integrity";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 2283;
+	optional bool enabled = 2283;
 	// The interval refers to the update interval in days.
-	google.protobuf.Duration interval = 2309;
-	bool security_only = 1034;
+	optional google.protobuf.Duration interval = 2309;
+	optional bool security_only = 1034;
 }
 
 // Availability is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -393,14 +403,8 @@ message AwarenessTraining {
 	option (resource_type_names) = "Governance";
 	option (resource_type_names) = "Functionality";
 
-	// Indicates whether the training plan states it is delivered at least annually.
-	bool annual_cadence_stated = 9832;
-	bool annual_update_completed = 4205;
-	// Indicates whether a documented training and awareness plan is maintained.
-	bool plan_documented = 10637;
-	// Indicates whether the training plan includes role-based tracks adjusted by employee function.
-	bool role_adjusted_tracks_stated = 3033;
-	bool successfully_completed_percentage = 9380;
+	optional bool annual_update_completed = 4205;
+	optional bool successfully_completed_percentage = 9380;
 }
 
 // Backup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -410,12 +414,14 @@ message Backup {
 	option (resource_type_names) = "Availability";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 2815;
-	int32 frequency = 9581;
+	optional bool enabled = 2815;
+	optional int32 frequency = 9581;
 	// The interval refers to the update interval in days.
-	google.protobuf.Duration interval = 7186;
-	int32 recovery_frequency = 8809;
-	google.protobuf.Duration retention_period = 6795;
+	optional google.protobuf.Duration interval = 7186;
+	optional int32 recovery_frequency = 8809;
+	// Indicates whether the resource is stored redundantly.
+	optional bool redundant = 18969;
+	optional google.protobuf.Duration retention_period = 6795;
 	optional string storage_id = 17051;
 	TransportEncryption transport_encryption = 2398;
 }
@@ -427,14 +433,14 @@ message BlockStorage {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 11167;
-	string description = 2163;
-	string id = 7003 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 15007;
+	optional google.protobuf.Timestamp creation_time = 11167;
+	optional string description = 2163;
+	optional string id = 7003 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 15007;
 	map<string, string> labels = 15784;
-	string name = 13869 [ (buf.validate.field).required = true ];
+	optional string name = 13869 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 11057;
+	optional string raw = 11057;
 	ActivityLogging activity_logging = 16146;
 	AtRestEncryption at_rest_encryption = 12598;
 	repeated Backup backups  = 2815;
@@ -466,12 +472,12 @@ message BootLogging {
 	option (resource_type_names) = "Auditing";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 17321;
+	optional bool enabled = 17321;
 	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
-	string log_level = 7946;
-	bool monitoring_log_data_enabled = 9135;
-	google.protobuf.Duration retention_period = 2338;
-	bool security_alerts_enabled = 3133;
+	optional string log_level = 7946;
+	optional bool monitoring_log_data_enabled = 9135;
+	optional google.protobuf.Duration retention_period = 2338;
+	optional bool security_alerts_enabled = 3133;
 	repeated string logging_service_ids  = 17105;
 }
 
@@ -499,18 +505,18 @@ message Certificate {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 18284;
-	string description = 10382;
-	bool enabled = 11036;
-	google.protobuf.Timestamp expiration_date = 17025;
-	string id = 1585 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 15261;
-	bool is_managed = 16025;
+	optional google.protobuf.Timestamp creation_time = 18284;
+	optional string description = 10382;
+	optional bool enabled = 11036;
+	optional google.protobuf.Timestamp expiration_date = 17025;
+	optional string id = 1585 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 15261;
+	optional bool is_managed = 16025;
 	map<string, string> labels = 1369;
-	string name = 18981 [ (buf.validate.field).required = true ];
-	google.protobuf.Timestamp not_before_date = 11770;
+	optional string name = 18981 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp not_before_date = 11770;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 7199;
+	optional string raw = 7199;
 	ChangeAndConfigurationManagement change_and_configuration_management = 9330;
 	GeoLocation geo_location = 4443;
 	Infrastructure used_by_multiple = 13381;
@@ -527,11 +533,11 @@ message CertificateBasedAuthentication {
 	option (resource_type_names) = "Authenticity";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool context_is_checked = 14958;
-	bool enabled = 11983;
-	int32 failed_authentication_attempts = 2906;
+	optional bool context_is_checked = 14958;
+	optional bool enabled = 11983;
+	optional int32 failed_authentication_attempts = 2906;
 	// Maximum password rotation interval in months
-	int32 rotation_interval = 9404;
+	optional int32 rotation_interval = 9404;
 }
 
 // ChangeAndConfigurationManagement is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -580,12 +586,12 @@ message CipherSuite {
 	option (resource_type_names) = "Functionality";
 
 	// for example: RSA, ECDSA
-	string authentication_mechanism = 3667;
-	string key_exchange_algorithm = 14920;
+	optional string authentication_mechanism = 3667;
+	optional string key_exchange_algorithm = 14920;
 	// naming schema: SHA-256
-	string mac_algorithm = 2344;
+	optional string mac_algorithm = 2344;
 	// naming schema: AES-128-GCM
-	string session_cipher = 5742;
+	optional string session_cipher = 5742;
 	repeated Cipher ciphers  = 8372;
 }
 
@@ -651,12 +657,12 @@ message CodeRegion {
 	option (resource_type_names) = "CodeRegion";
 	option (resource_type_names) = "Functionality";
 
-	string code = 11271;
-	int32 end_column = 18978;
-	int32 end_line = 7512;
-	string file = 1260;
-	int32 start_column = 5651;
-	int32 start_line = 11889;
+	optional string code = 11271;
+	optional int32 end_column = 18978;
+	optional int32 end_line = 7512;
+	optional string file = 1260;
+	optional int32 start_column = 5651;
+	optional int32 start_line = 11889;
 }
 
 // CodeRepository is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -668,18 +674,18 @@ message CodeRepository {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	bool approved_commit_author_enforced = 16902;
-	google.protobuf.Timestamp creation_time = 14345;
-	string description = 5754;
-	string id = 1358 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 8874;
+	optional bool approved_commit_author_enforced = 16902;
+	optional google.protobuf.Timestamp creation_time = 14345;
+	optional string description = 5754;
+	optional string id = 1358 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 8874;
 	map<string, string> labels = 6055;
-	string name = 12766 [ (buf.validate.field).required = true ];
-	int32 number_of_required_reviewers = 11195;
+	optional string name = 12766 [ (buf.validate.field).required = true ];
+	optional int32 number_of_required_reviewers = 11195;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 15664;
-	float review_percentage = 17697;
-	float review_percentage_last_month = 747;
+	optional string raw = 15664;
+	optional float review_percentage = 17697;
+	optional float review_percentage_last_month = 747;
 	ChangeAndConfigurationManagement change_and_configuration_management = 1727;
 	CodeSignoff code_signoff = 1837;
 	GeoLocation geo_location = 111;
@@ -701,9 +707,9 @@ message CodeSignoff {
 	option (resource_type_names) = "Auditing";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enforced = 18628;
-	float percentage = 12099;
-	float percentage_last_month = 3739;
+	optional bool enforced = 18628;
+	optional float percentage = 12099;
+	optional float percentage_last_month = 3739;
 }
 
 // ComplianceAuditIntervalPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -713,7 +719,9 @@ message ComplianceAuditIntervalPolicy {
 	option (resource_type_names) = "Functionality";
 
 	// The time needed for an audit.
-	int32 audit_interval = 7826;
+	optional int32 audit_interval = 7826;
+	// The number of days elapsed since the last completed external/supervisory audit.
+	optional int32 days_since_last_audit = 12483;
 }
 
 // ComplianceMethodologyPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -722,7 +730,7 @@ message ComplianceMethodologyPolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
-	string methodology = 8814;
+	repeated string methodology = 8814;
 }
 
 // Component is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -764,13 +772,13 @@ message Configuration {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 9313;
-	string description = 4417;
-	string id = 6322 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 9313;
+	optional string description = 4417;
+	optional string id = 6322 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 201;
-	string name = 6896 [ (buf.validate.field).required = true ];
+	optional string name = 6896 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 17099;
+	optional string raw = 17099;
 	repeated string configuration_group_ids  = 7024;
 	DataLocation data_location = 5147;
 	optional string parent_id = 13616;
@@ -783,14 +791,14 @@ message ConfigurationDocument {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 366;
-	string description = 13594;
-	string filetype = 17989;
-	string id = 6200 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 366;
+	optional string description = 13594;
+	optional string filetype = 17989;
+	optional string id = 6200 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 656;
-	string name = 1266 [ (buf.validate.field).required = true ];
+	optional string name = 1266 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 1506;
+	optional string raw = 1506;
 	repeated CryptographicHash cryptographic_hashs  = 11524;
 	DataLocation data_location = 1817;
 	repeated DocumentSignature document_signatures  = 14626;
@@ -806,13 +814,13 @@ message ConfigurationGroup {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 12120;
-	string description = 3778;
-	string id = 17529 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 12120;
+	optional string description = 3778;
+	optional string id = 17529 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 1612;
-	string name = 14875 [ (buf.validate.field).required = true ];
+	optional string name = 14875 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 15135;
+	optional string raw = 15135;
 	optional string configuration_id = 3610;
 	repeated string configuration_option_ids  = 5873;
 	DataLocation data_location = 10960;
@@ -826,13 +834,13 @@ message ConfigurationGroupSource {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 10113;
-	string description = 9933;
-	string id = 12139 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 10113;
+	optional string description = 9933;
+	optional string id = 12139 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 2039;
-	string name = 7188 [ (buf.validate.field).required = true ];
+	optional string name = 7188 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 10682;
+	optional string raw = 10682;
 	DataLocation data_location = 9790;
 	optional string parent_id = 11712;
 }
@@ -859,13 +867,13 @@ message ConfigurationOption {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 9806;
-	string description = 11906;
-	string id = 7923 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 9806;
+	optional string description = 11906;
+	optional string id = 7923 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 16245;
-	string name = 17275 [ (buf.validate.field).required = true ];
+	optional string name = 17275 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 8644;
+	optional string raw = 8644;
 	optional string configuration_group_id = 6079;
 	DataLocation data_location = 17197;
 	optional string key_id = 12044;
@@ -880,13 +888,13 @@ message ConfigurationOptionSource {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 9931;
-	string description = 9308;
-	string id = 6310 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 9931;
+	optional string description = 9308;
+	optional string id = 6310 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 7763;
-	string name = 15744 [ (buf.validate.field).required = true ];
+	optional string name = 15744 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 9031;
+	optional string raw = 9031;
 	DataLocation data_location = 11870;
 	optional string parent_id = 312;
 }
@@ -898,13 +906,13 @@ message ConfigurationSource {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 13741;
-	string description = 10663;
-	string id = 7343 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 13741;
+	optional string description = 10663;
+	optional string id = 7343 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 8766;
-	string name = 8639 [ (buf.validate.field).required = true ];
+	optional string name = 8639 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 16840;
+	optional string raw = 16840;
 	repeated string configuration_group_source_ids  = 4705;
 	DataLocation data_location = 16924;
 	optional string parent_id = 12170;
@@ -916,9 +924,9 @@ message ContactPerson {
 	option (resource_type_names) = "Governance";
 	option (resource_type_names) = "Functionality";
 
-	string email_address = 15629;
-	string job_title = 6896;
-	string phone_number = 13203;
+	optional string email_address = 15629;
+	optional string job_title = 6896;
+	optional string phone_number = 13203;
 }
 
 // Container is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -928,14 +936,14 @@ message Container {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 9429;
-	string description = 12773;
-	string id = 903 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 10112;
+	optional google.protobuf.Timestamp creation_time = 9429;
+	optional string description = 12773;
+	optional string id = 903 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 10112;
 	map<string, string> labels = 13214;
-	string name = 736 [ (buf.validate.field).required = true ];
+	optional string name = 736 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 18367;
+	optional string raw = 18367;
 	ChangeAndConfigurationManagement change_and_configuration_management = 1837;
 	EncryptionInUse encryption_in_use = 295;
 	GeoLocation geo_location = 5503;
@@ -957,14 +965,14 @@ message ContainerImage {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 11155;
-	string description = 10874;
-	string id = 6384 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 13186;
+	optional google.protobuf.Timestamp creation_time = 11155;
+	optional string description = 10874;
+	optional string id = 6384 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 13186;
 	map<string, string> labels = 18019;
-	string name = 2181 [ (buf.validate.field).required = true ];
+	optional string name = 2181 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 10543;
+	optional string raw = 10543;
 	optional string application_id = 758;
 	ChangeAndConfigurationManagement change_and_configuration_management = 3018;
 	GeoLocation geo_location = 117;
@@ -981,15 +989,15 @@ message ContainerOrchestration {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 10116;
-	string description = 259;
-	string id = 12671 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 2619;
+	optional google.protobuf.Timestamp creation_time = 10116;
+	optional string description = 259;
+	optional string id = 12671 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 2619;
 	map<string, string> labels = 15294;
-	string management_url = 1007;
-	string name = 18187 [ (buf.validate.field).required = true ];
+	optional string management_url = 1007;
+	optional string name = 18187 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 17471;
+	optional string raw = 17471;
 	ChangeAndConfigurationManagement change_and_configuration_management = 4641;
 	repeated string container_ids  = 1059;
 	GeoLocation geo_location = 8832;
@@ -1007,14 +1015,14 @@ message ContainerRegistry {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 4243;
-	string description = 17637;
-	string id = 17713 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 12721;
+	optional google.protobuf.Timestamp creation_time = 4243;
+	optional string description = 17637;
+	optional string id = 17713 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 12721;
 	map<string, string> labels = 2453;
-	string name = 1523 [ (buf.validate.field).required = true ];
+	optional string name = 1523 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 5030;
+	optional string raw = 5030;
 	ChangeAndConfigurationManagement change_and_configuration_management = 8763;
 	GeoLocation geo_location = 5019;
 	repeated Logging loggings  = 685;
@@ -1031,13 +1039,13 @@ message Context {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 8888;
-	string description = 18745;
-	string id = 2967 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 8888;
+	optional string description = 18745;
+	optional string id = 2967 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 16579;
-	string name = 12248 [ (buf.validate.field).required = true ];
+	optional string name = 12248 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 4517;
+	optional string raw = 4517;
 	DataLocation data_location = 14574;
 	optional string parent_id = 5287;
 }
@@ -1049,13 +1057,13 @@ message CoordinatedVulnerabilityDisclosurePolicy {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 16538;
-	string description = 7702;
-	string id = 4638 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 16538;
+	optional string description = 7702;
+	optional string id = 4638 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 13066;
-	string name = 17333 [ (buf.validate.field).required = true ];
+	optional string name = 17333 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 2293;
+	optional string raw = 2293;
 	optional string context_id = 13420;
 	DataLocation data_location = 7041;
 	repeated string policy_rule_ids  = 17592;
@@ -1112,7 +1120,7 @@ message CryptographicHash {
 	option (resource_type_names) = "Integrity";
 	option (resource_type_names) = "SecurityFeature";
 
-	string algorithm = 18383;
+	optional string algorithm = 18383;
 	repeated Error errors  = 4094;
 }
 
@@ -1132,9 +1140,9 @@ message CustomerKeyEncryption {
 	option (resource_type_names) = "Confidentiality";
 	option (resource_type_names) = "SecurityFeature";
 
-	string algorithm = 12685;
-	bool enabled = 14976;
-	string key_url = 13999;
+	optional string algorithm = 12685;
+	optional bool enabled = 14976;
+	optional string key_url = 13999;
 	Cipher based_on = 13151;
 	optional string secret_id = 4394;
 }
@@ -1146,14 +1154,14 @@ message CyberSecurityRiskAssessmentDocument {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 12137;
-	string description = 7939;
-	string filetype = 4377;
-	string id = 1847 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 12137;
+	optional string description = 7939;
+	optional string filetype = 4377;
+	optional string id = 1847 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 17859;
-	string name = 4291 [ (buf.validate.field).required = true ];
+	optional string name = 4291 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 14695;
+	optional string raw = 14695;
 	repeated CryptographicHash cryptographic_hashs  = 8879;
 	DataLocation data_location = 10511;
 	repeated DocumentSignature document_signatures  = 6497;
@@ -1178,13 +1186,13 @@ message Darwin {
 	option (resource_type_names) = "Code";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 11803;
-	string description = 6451;
-	string id = 18308 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 11803;
+	optional string description = 6451;
+	optional string id = 18308 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 4761;
-	string name = 9393 [ (buf.validate.field).required = true ];
+	optional string name = 9393 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 12162;
+	optional string raw = 12162;
 	repeated string code_module_ids  = 3304;
 	optional string code_repository_id = 3877;
 	repeated Functionality functionalities  = 12307;
@@ -1233,7 +1241,11 @@ message DataConfidentialitySDNPolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
-	bool is_defined = 1199;
+	optional bool is_defined = 1199;
+	// Indicates whether the policy restricts downloading or extracting information from the organization's systems.
+	optional bool restricts_download_and_extraction = 16183;
+	// Indicates whether the policy specifically defines rules for information exchange with third parties.
+	optional bool third_party_exchange_rules_defined = 6688;
 }
 
 // DataLocation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1276,7 +1288,7 @@ message DatabaseQuery {
 	option (resource_type_names) = "Functionality";
 
 	repeated string calls = 7647;
-	bool modify = 7601;
+	optional bool modify = 7601;
 	CodeRegion code_region = 5643;
 	repeated string database_service_ids  = 10199;
 	optional string database_storage_id = 15992;
@@ -1302,15 +1314,15 @@ message DatabaseStorage {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 14609;
-	string description = 4217;
-	string id = 5278 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 10131;
+	optional google.protobuf.Timestamp creation_time = 14609;
+	optional string description = 4217;
+	optional string id = 5278 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 10131;
 	map<string, string> labels = 15362;
-	string name = 1264 [ (buf.validate.field).required = true ];
+	optional string name = 1264 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 11538;
-	double ttl = 6277;
+	optional string raw = 11538;
+	optional double ttl = 6277;
 	ActivityLogging activity_logging = 14738;
 	AtRestEncryption at_rest_encryption = 16710;
 	repeated Backup backups  = 6649;
@@ -1344,7 +1356,7 @@ message Decryption {
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	string algorithm = 7747;
+	optional string algorithm = 7747;
 	Cipher cipher = 10213;
 	CodeRegion code_region = 7584;
 	optional string secret_id = 2937;
@@ -1357,14 +1369,14 @@ message DeviceProvisioningService {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 17874;
-	string description = 18095;
-	string id = 18723 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 15029;
+	optional google.protobuf.Timestamp creation_time = 17874;
+	optional string description = 18095;
+	optional string id = 18723 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 15029;
 	map<string, string> labels = 5934;
-	string name = 9731 [ (buf.validate.field).required = true ];
+	optional string name = 9731 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 14841;
+	optional string raw = 14841;
 	ChangeAndConfigurationManagement change_and_configuration_management = 18538;
 	GeoLocation geo_location = 3548;
 	repeated Logging loggings  = 3832;
@@ -1382,9 +1394,9 @@ message DiskEncryption {
 	option (resource_type_names) = "Confidentiality";
 	option (resource_type_names) = "SecurityFeature";
 
-	string algorithm = 2867;
-	bool enabled = 9285;
-	string key_url = 6086;
+	optional string algorithm = 2867;
+	optional bool enabled = 9285;
+	optional string key_url = 6086;
 	BlockStorage used_by = 14240;
 	Cipher based_on = 6881;
 	optional string secret_id = 10114;
@@ -1406,14 +1418,14 @@ message DistributionOfUpdatesDocument {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 2668;
-	string description = 8362;
-	string filetype = 6744;
-	string id = 3219 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 2668;
+	optional string description = 8362;
+	optional string filetype = 6744;
+	optional string id = 3219 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 11149;
-	string name = 9560 [ (buf.validate.field).required = true ];
+	optional string name = 9560 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 3530;
+	optional string raw = 3530;
 	repeated CryptographicHash cryptographic_hashs  = 10781;
 	DataLocation data_location = 18419;
 	repeated DocumentSignature document_signatures  = 12279;
@@ -1452,16 +1464,16 @@ message DocumentDatabaseService {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 11758;
-	string description = 13774;
-	string id = 7556 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 9855;
+	optional google.protobuf.Timestamp creation_time = 11758;
+	optional string description = 13774;
+	optional string id = 7556 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 9855;
 	repeated string ips = 7051;
 	map<string, string> labels = 3177;
-	string name = 12726 [ (buf.validate.field).required = true ];
+	optional string name = 12726 [ (buf.validate.field).required = true ];
 	repeated uint32 ports = 10225;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 7317;
+	optional string raw = 7317;
 	ActivityLogging activity_logging = 6357;
 	repeated AnomalyDetection anomaly_detections  = 3091;
 	ChangeAndConfigurationManagement change_and_configuration_management = 12101;
@@ -1503,14 +1515,14 @@ message EUDeclarationOfConformity {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 4057;
-	string description = 6464;
-	string filetype = 1936;
-	string id = 6567 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 4057;
+	optional string description = 6464;
+	optional string filetype = 1936;
+	optional string id = 6567 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 17602;
-	string name = 10440 [ (buf.validate.field).required = true ];
+	optional string name = 10440 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 3395;
+	optional string raw = 3395;
 	repeated CryptographicHash cryptographic_hashs  = 16462;
 	DataLocation data_location = 5046;
 	repeated DocumentSignature document_signatures  = 18195;
@@ -1537,7 +1549,7 @@ message EncryptionInUse {
 	option (resource_type_names) = "Confidentiality";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 8542;
+	optional bool enabled = 8542;
 }
 
 // EncryptionOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1546,7 +1558,7 @@ message EncryptionOperation {
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	string algorithm = 15092;
+	optional string algorithm = 15092;
 	CodeRegion code_region = 14814;
 	Encryption encryption = 9123;
 	optional string secret_id = 7662;
@@ -1582,7 +1594,7 @@ message Error {
 	option (resource_type_names) = "Error";
 	option (resource_type_names) = "Functionality";
 
-	string message = 3497;
+	optional string message = 3497;
 }
 
 // ExitBoundaryOperation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1611,13 +1623,13 @@ message File {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 11828;
-	string description = 14024;
-	string id = 6144 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 11828;
+	optional string description = 14024;
+	optional string id = 6144 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 6794;
-	string name = 16988 [ (buf.validate.field).required = true ];
+	optional string name = 16988 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 17122;
+	optional string raw = 17122;
 	DataLocation data_location = 9097;
 	optional string parent_id = 8615;
 }
@@ -1630,13 +1642,13 @@ message FileHandle {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 1760;
-	string description = 11112;
-	string id = 12444 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 1760;
+	optional string description = 11112;
+	optional string id = 12444 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 16187;
-	string name = 1128 [ (buf.validate.field).required = true ];
+	optional string name = 1128 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 13657;
+	optional string raw = 13657;
 	DataLocation data_location = 7246;
 	optional string parent_id = 8541;
 }
@@ -1668,15 +1680,15 @@ message FileStorage {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 3786;
-	string description = 6154;
-	string id = 4569 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 3582;
+	optional google.protobuf.Timestamp creation_time = 3786;
+	optional string description = 6154;
+	optional string id = 4569 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 3582;
 	map<string, string> labels = 2787;
-	string name = 16132 [ (buf.validate.field).required = true ];
-	bool public_access = 10539;
+	optional string name = 16132 [ (buf.validate.field).required = true ];
+	optional bool public_access = 10539;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 4379;
+	optional string raw = 4379;
 	ActivityLogging activity_logging = 108;
 	AtRestEncryption at_rest_encryption = 12115;
 	repeated Backup backups  = 4043;
@@ -1701,16 +1713,16 @@ message FileStorageService {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 18615;
-	string description = 9940;
-	string id = 17295 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 16036;
+	optional google.protobuf.Timestamp creation_time = 18615;
+	optional string description = 9940;
+	optional string id = 17295 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 16036;
 	repeated string ips = 6543;
 	map<string, string> labels = 9347;
-	string name = 3149 [ (buf.validate.field).required = true ];
+	optional string name = 3149 [ (buf.validate.field).required = true ];
 	repeated uint32 ports = 12509;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 13948;
+	optional string raw = 13948;
 	ActivityLogging activity_logging = 16844;
 	ChangeAndConfigurationManagement change_and_configuration_management = 9861;
 	repeated string compute_ids  = 11010;
@@ -1753,16 +1765,16 @@ message Function {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 4066;
-	string description = 18203;
-	string id = 11465 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 4184;
+	optional google.protobuf.Timestamp creation_time = 4066;
+	optional string description = 18203;
+	optional string id = 11465 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 4184;
 	map<string, string> labels = 15030;
-	string name = 6517 [ (buf.validate.field).required = true ];
+	optional string name = 6517 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 1531;
-	string runtime_language = 7048;
-	string runtime_version = 16017;
+	optional string raw = 1531;
+	optional string runtime_language = 7048;
+	optional string runtime_version = 16017;
 	ChangeAndConfigurationManagement change_and_configuration_management = 2041;
 	EncryptionInUse encryption_in_use = 9821;
 	GeoLocation geo_location = 5466;
@@ -1784,16 +1796,16 @@ message FunctionService {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 3632;
-	string description = 17359;
-	string id = 3617 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 5242;
+	optional google.protobuf.Timestamp creation_time = 3632;
+	optional string description = 17359;
+	optional string id = 3617 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 5242;
 	repeated string ips = 7370;
 	map<string, string> labels = 18713;
-	string name = 15731 [ (buf.validate.field).required = true ];
+	optional string name = 15731 [ (buf.validate.field).required = true ];
 	repeated uint32 ports = 17713;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 4925;
+	optional string raw = 4925;
 	ChangeAndConfigurationManagement change_and_configuration_management = 3264;
 	repeated string compute_ids  = 10103;
 	repeated string function_ids  = 2977;
@@ -1827,6 +1839,7 @@ message Functionality {
 		Error error = 6544;
 		ContactPerson contact_person = 1620;
 		MonitoringProcedure monitoring_procedure = 9388;
+		SecurityPolicyReview security_policy_review = 10907;
 		AwarenessTraining awareness_training = 8227;
 		SecurityTraining security_training = 8543;
 		HttpClient http_client = 18121;
@@ -1879,6 +1892,7 @@ message Functionality {
 		Output output = 7223;
 		Padding padding = 9245;
 		AccessControlTypePolicy access_control_type_policy = 13002;
+		AuditLogMonitoringPolicy audit_log_monitoring_policy = 4146;
 		ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 3098;
 		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
@@ -1916,16 +1930,16 @@ message GenericNetworkService {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 16606;
-	string description = 14235;
-	string id = 12784 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 2744;
+	optional google.protobuf.Timestamp creation_time = 16606;
+	optional string description = 14235;
+	optional string id = 12784 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 2744;
 	repeated string ips = 11538;
 	map<string, string> labels = 5016;
-	string name = 13467 [ (buf.validate.field).required = true ];
+	optional string name = 13467 [ (buf.validate.field).required = true ];
 	repeated uint32 ports = 532;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 10844;
+	optional string raw = 10844;
 	ChangeAndConfigurationManagement change_and_configuration_management = 235;
 	repeated string compute_ids  = 17384;
 	GeoLocation geo_location = 1874;
@@ -1944,7 +1958,7 @@ message GeoLocation {
 	option (resource_type_names) = "Availability";
 	option (resource_type_names) = "SecurityFeature";
 
-	string region = 7708;
+	optional string region = 7708;
 }
 
 // GeoRedundancy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1985,6 +1999,7 @@ message Governance {
 	oneof type {
 		ContactPerson contact_person = 1620;
 		MonitoringProcedure monitoring_procedure = 9388;
+		SecurityPolicyReview security_policy_review = 10907;
 		AwarenessTraining awareness_training = 8227;
 		SecurityTraining security_training = 8543;
 	}
@@ -2005,8 +2020,8 @@ message HashOperation {
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	string algorithm = 16160;
-	bool uses_salt = 14753;
+	optional string algorithm = 16160;
+	optional bool uses_salt = 14753;
 	CodeRegion code_region = 10758;
 	SecurityFeature security_feature = 10332;
 }
@@ -2029,7 +2044,7 @@ message HttpClient {
 	option (resource_type_names) = "Http";
 	option (resource_type_names) = "Functionality";
 
-	bool is_tls = 2674;
+	optional bool is_tls = 2674;
 	Authenticity authenticity = 14857;
 	TransportEncryption uses = 18191;
 }
@@ -2060,11 +2075,11 @@ message HttpEndpoint {
 	option (resource_type_names) = "EntryPoint";
 	option (resource_type_names) = "Functionality";
 
-	string handler = 8702;
-	int32 input_size = 13504;
-	string method = 1347;
-	string path = 11504;
-	string url = 16076;
+	optional string handler = 8702;
+	optional int32 input_size = 13504;
+	optional string method = 1347;
+	optional string path = 11504;
+	optional string url = 16076;
 	Authenticity authenticity = 3805;
 	Authorization authorization = 2327;
 	HttpRequestContext http_request_context = 4988;
@@ -2091,9 +2106,9 @@ message HttpRequest {
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	string call = 16831;
-	string method = 17392;
-	string req_body = 5634;
+	optional string call = 16831;
+	optional string method = 17392;
+	optional string req_body = 5634;
 	CodeRegion code_region = 681;
 	HttpClient http_client = 16750;
 	repeated HttpEndpoint http_endpoints  = 1360;
@@ -2114,7 +2129,7 @@ message HttpRequestHandler {
 	option (resource_type_names) = "Http";
 	option (resource_type_names) = "Functionality";
 
-	string path = 6440;
+	optional string path = 6440;
 	optional string application_id = 18018;
 	repeated HttpEndpoint http_endpoints  = 8156;
 }
@@ -2143,11 +2158,11 @@ message HybridCipher {
 	option (resource_type_names) = "Functionality";
 
 	// Block size of a cipher.
-	int32 block_size = 4029;
+	optional int32 block_size = 4029;
 	// Name of a cryptographic cipher.
-	string cipher_name = 4930;
+	optional string cipher_name = 4930;
 	// Key size refers to the length of a key used in an enryption.
-	int32 key_size = 5462;
+	optional int32 key_size = 5462;
 	AsymmetricCipher uses = 11248;
 	KeyDerivationFunction key_derivation_function = 16735;
 	MessageAuthenticationCode message_authentication_code = 14986;
@@ -2171,20 +2186,20 @@ message Identity {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	bool activated = 10116;
-	google.protobuf.Timestamp creation_time = 14103;
-	string description = 9218;
-	bool disable_password_policy = 5968;
-	bool enforce_mfa = 13721;
-	string id = 5350 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 15444;
+	optional bool activated = 10116;
+	optional google.protobuf.Timestamp creation_time = 14103;
+	optional string description = 9218;
+	optional bool disable_password_policy = 5968;
+	optional bool enforce_mfa = 13721;
+	optional string id = 5350 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 15444;
 	map<string, string> labels = 716;
-	google.protobuf.Timestamp last_activity = 2591;
-	bool login_defender_enabled = 18632;
-	string name = 2578 [ (buf.validate.field).required = true ];
-	bool privileged = 2301;
+	optional google.protobuf.Timestamp last_activity = 2591;
+	optional bool login_defender_enabled = 18632;
+	optional string name = 2578 [ (buf.validate.field).required = true ];
+	optional bool privileged = 2301;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 16151;
+	optional string raw = 16151;
 	Authorization authorization = 16314;
 	ChangeAndConfigurationManagement change_and_configuration_management = 5595;
 	GeoLocation geo_location = 8606;
@@ -2210,7 +2225,7 @@ message Immutability {
 	option (resource_type_names) = "Integrity";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 1859;
+	optional bool enabled = 1859;
 }
 
 // InitializationVector is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2294,14 +2309,14 @@ message Job {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 2948;
-	string description = 7869;
-	string id = 14780 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 5659;
+	optional google.protobuf.Timestamp creation_time = 2948;
+	optional string description = 7869;
+	optional string id = 14780 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 5659;
 	map<string, string> labels = 17969;
-	string name = 18498 [ (buf.validate.field).required = true ];
+	optional string name = 18498 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 5776;
+	optional string raw = 5776;
 	ChangeAndConfigurationManagement change_and_configuration_management = 13997;
 	GeoLocation geo_location = 9162;
 	repeated Logging loggings  = 13308;
@@ -2319,12 +2334,12 @@ message JwtAuthentication {
 	option (resource_type_names) = "Authenticity";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool context_is_checked = 3538;
-	bool enabled = 3085;
-	bool enforced = 13206;
-	int32 failed_authentication_attempts = 16139;
+	optional bool context_is_checked = 3538;
+	optional bool enabled = 3085;
+	optional bool enforced = 13206;
+	optional int32 failed_authentication_attempts = 16139;
 	// Maximum password rotation interval in months
-	int32 rotation_interval = 3257;
+	optional int32 rotation_interval = 3257;
 	optional string token_id = 17648;
 }
 
@@ -2346,21 +2361,21 @@ message Key {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	string algorithm = 1413;
-	google.protobuf.Timestamp creation_time = 4922;
-	string description = 17406;
-	bool enabled = 12499;
-	google.protobuf.Timestamp expiration_date = 15098;
-	string id = 15294 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 434;
-	bool is_managed = 16202;
+	optional string algorithm = 1413;
+	optional google.protobuf.Timestamp creation_time = 4922;
+	optional string description = 17406;
+	optional bool enabled = 12499;
+	optional google.protobuf.Timestamp expiration_date = 15098;
+	optional string id = 15294 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 434;
+	optional bool is_managed = 16202;
 	// Key size refers to the length of a key used in an enryption.
-	int32 key_size = 16391;
+	optional int32 key_size = 16391;
 	map<string, string> labels = 4273;
-	string name = 18961 [ (buf.validate.field).required = true ];
-	google.protobuf.Timestamp not_before_date = 235;
+	optional string name = 18961 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp not_before_date = 235;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 11846;
+	optional string raw = 11846;
 	ChangeAndConfigurationManagement change_and_configuration_management = 15846;
 	GeoLocation geo_location = 215;
 	Infrastructure used_by_multiple = 5694;
@@ -2376,7 +2391,7 @@ message KeyDerivationFunction {
 	option (resource_type_names) = "KeyDerivationFunction";
 	option (resource_type_names) = "Functionality";
 
-	string type = 3552;
+	optional string type = 3552;
 	Input input = 6321;
 }
 
@@ -2390,16 +2405,16 @@ message KeyValueDatabaseService {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 15632;
-	string description = 1436;
-	string id = 14675 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 1908;
+	optional google.protobuf.Timestamp creation_time = 15632;
+	optional string description = 1436;
+	optional string id = 14675 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 1908;
 	repeated string ips = 10855;
 	map<string, string> labels = 13607;
-	string name = 11207 [ (buf.validate.field).required = true ];
+	optional string name = 11207 [ (buf.validate.field).required = true ];
 	repeated uint32 ports = 6710;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 14509;
+	optional string raw = 14509;
 	ActivityLogging activity_logging = 4083;
 	repeated AnomalyDetection anomaly_detections  = 121;
 	ChangeAndConfigurationManagement change_and_configuration_management = 16118;
@@ -2422,14 +2437,14 @@ message KeyVault {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 13116;
-	string description = 4543;
-	string id = 11681 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 15576;
+	optional google.protobuf.Timestamp creation_time = 13116;
+	optional string description = 4543;
+	optional string id = 11681 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 15576;
 	map<string, string> labels = 11857;
-	string name = 5705 [ (buf.validate.field).required = true ];
+	optional string name = 5705 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 16199;
+	optional string raw = 16199;
 	ChangeAndConfigurationManagement change_and_configuration_management = 11331;
 	repeated string credential_ids  = 16714;
 	GeoLocation geo_location = 7862;
@@ -2449,8 +2464,8 @@ message L3Firewall {
 	option (resource_type_names) = "SecurityFeature";
 
 	repeated string allowed_sources = 4470;
-	bool enabled = 9476;
-	bool inbound = 1000;
+	optional bool enabled = 9476;
+	optional bool inbound = 1000;
 	repeated string restricted_ports = 7341;
 }
 
@@ -2461,7 +2476,7 @@ message LeastPrivilegePolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
-	bool is_defined = 18064;
+	optional bool is_defined = 18064;
 }
 
 // Library is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2471,13 +2486,13 @@ message Library {
 	option (resource_type_names) = "Code";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 11987;
-	string description = 2499;
-	string id = 11694 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 11987;
+	optional string description = 2499;
+	optional string id = 11694 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 7546;
-	string name = 18601 [ (buf.validate.field).required = true ];
+	optional string name = 18601 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 9988;
+	optional string raw = 9988;
 	repeated string code_module_ids  = 7635;
 	optional string code_repository_id = 17722;
 	repeated Functionality functionalities  = 16350;
@@ -2507,17 +2522,17 @@ message LoadBalancer {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 2708;
-	string description = 2822;
-	string id = 8281 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 16617;
+	optional google.protobuf.Timestamp creation_time = 2708;
+	optional string description = 2822;
+	optional string id = 8281 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 16617;
 	repeated string ips = 12489;
 	map<string, string> labels = 1121;
-	string name = 16420 [ (buf.validate.field).required = true ];
+	optional string name = 16420 [ (buf.validate.field).required = true ];
 	repeated uint32 ports = 5004;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 16379;
-	string url = 2355;
+	optional string raw = 16379;
+	optional string url = 2355;
 	AccessRestriction access_restriction = 11292;
 	ChangeAndConfigurationManagement change_and_configuration_management = 799;
 	repeated string compute_ids  = 16161;
@@ -2581,7 +2596,7 @@ message LocalAttestation {
 	option (resource_type_names) = "Integrity";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 12670;
+	optional bool enabled = 12670;
 }
 
 // LocalDataLocation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2590,7 +2605,7 @@ message LocalDataLocation {
 	option (resource_type_names) = "DataLocation";
 	option (resource_type_names) = "Functionality";
 
-	string path = 16659;
+	optional string path = 16659;
 	AtRestEncryption at_rest_encryption = 6913;
 	optional string storage_id = 231;
 }
@@ -2622,14 +2637,14 @@ message LogDocument {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 518;
-	string description = 106;
-	string filetype = 5258;
-	string id = 8449 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 518;
+	optional string description = 106;
+	optional string filetype = 5258;
+	optional string id = 8449 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 14750;
-	string name = 11879 [ (buf.validate.field).required = true ];
+	optional string name = 11879 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 546;
+	optional string raw = 546;
 	repeated CryptographicHash cryptographic_hashs  = 9077;
 	DataLocation data_location = 12350;
 	repeated DocumentSignature document_signatures  = 8195;
@@ -2666,8 +2681,8 @@ message LogOutput {
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	string call = 6341;
-	string value = 16550;
+	optional string call = 6341;
+	optional string value = 16550;
 	CodeRegion code_region = 3291;
 	Logging logging = 1240;
 }
@@ -2681,7 +2696,7 @@ message LogWrite {
 	option (resource_type_names) = "Functionality";
 
 	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
-	string log_level = 11587;
+	optional string log_level = 11587;
 	CodeRegion code_region = 3510;
 	Logging logging = 15543;
 }
@@ -2716,16 +2731,16 @@ message LoggingService {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 13718;
-	string description = 15076;
-	string id = 10888 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 3605;
+	optional google.protobuf.Timestamp creation_time = 13718;
+	optional string description = 15076;
+	optional string id = 10888 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 3605;
 	repeated string ips = 4262;
 	map<string, string> labels = 769;
-	string name = 3964 [ (buf.validate.field).required = true ];
+	optional string name = 3964 [ (buf.validate.field).required = true ];
 	repeated uint32 ports = 2549;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 3703;
+	optional string raw = 3703;
 	ChangeAndConfigurationManagement change_and_configuration_management = 853;
 	repeated string compute_ids  = 18796;
 	GeoLocation geo_location = 4817;
@@ -2755,15 +2770,15 @@ message MachineLearningDataset {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 14589;
-	string description = 4701;
-	string id = 13709 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 14589;
+	optional string description = 4701;
+	optional string id = 13709 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 3339;
-	string name = 14431 [ (buf.validate.field).required = true ];
+	optional string name = 14431 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 6307;
-	int32 size = 7901;
-	string type = 5204;
+	optional string raw = 6307;
+	optional int32 size = 7901;
+	optional string type = 5204;
 	DataLocation data_location = 14136;
 	optional string parent_id = 11544;
 }
@@ -2775,21 +2790,21 @@ message MachineLearningModel {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	float adversarial_robustness_score = 11136;
-	google.protobuf.Timestamp creation_time = 18005;
-	string description = 5272;
-	float evasion_efficacy_level = 17752;
-	float explainability = 1384;
-	bool explainability_enabled = 14424;
-	string id = 5520 [ (buf.validate.field).required = true ];
+	optional float adversarial_robustness_score = 11136;
+	optional google.protobuf.Timestamp creation_time = 18005;
+	optional string description = 5272;
+	optional float evasion_efficacy_level = 17752;
+	optional float explainability = 1384;
+	optional bool explainability_enabled = 14424;
+	optional string id = 5520 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 1548;
-	float membership_inference_resilience = 4244;
-	float model_steal_resilience = 1827;
-	string name = 1575 [ (buf.validate.field).required = true ];
-	float poisoned_data_level = 13816;
-	float poisoning_resilience_level = 16395;
+	optional float membership_inference_resilience = 4244;
+	optional float model_steal_resilience = 1827;
+	optional string name = 1575 [ (buf.validate.field).required = true ];
+	optional float poisoned_data_level = 13816;
+	optional float poisoning_resilience_level = 16395;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 12454;
+	optional string raw = 12454;
 	DataLocation data_location = 1022;
 	optional string parent_id = 17150;
 	repeated Vulnerability vulnerabilities  = 9542;
@@ -2803,16 +2818,16 @@ message MachineLearningService {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 18259;
-	string description = 2080;
-	string id = 14176 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 16109;
+	optional google.protobuf.Timestamp creation_time = 18259;
+	optional string description = 2080;
+	optional string id = 14176 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 16109;
 	repeated string ips = 11814;
 	map<string, string> labels = 18935;
-	string name = 6061 [ (buf.validate.field).required = true ];
+	optional string name = 6061 [ (buf.validate.field).required = true ];
 	repeated uint32 ports = 6816;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 5983;
+	optional string raw = 5983;
 	ChangeAndConfigurationManagement change_and_configuration_management = 7490;
 	repeated string compute_ids  = 16877;
 	GeoLocation geo_location = 4584;
@@ -2845,9 +2860,9 @@ message MalwareProtection {
 	option (resource_type_names) = "Auditing";
 	option (resource_type_names) = "SecurityFeature";
 
-	google.protobuf.Duration duration_since_active = 18754;
-	bool enabled = 18004;
-	int32 number_of_threats_found = 11973;
+	optional google.protobuf.Duration duration_since_active = 18754;
+	optional bool enabled = 18004;
+	optional int32 number_of_threats_found = 11973;
 	ApplicationLogging application_logging = 12380;
 }
 
@@ -2859,9 +2874,9 @@ message ManagedKeyEncryption {
 	option (resource_type_names) = "Confidentiality";
 	option (resource_type_names) = "SecurityFeature";
 
-	string algorithm = 4822;
-	bool enabled = 13201;
-	string key_url = 16982;
+	optional string algorithm = 4822;
+	optional bool enabled = 13201;
+	optional string key_url = 16982;
 	Cipher based_on = 9630;
 	optional string secret_id = 13805;
 }
@@ -2873,14 +2888,14 @@ message Memory {
 	option (resource_type_names) = "Hardware";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 13895;
-	string description = 3400;
-	string id = 5207 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 13895;
+	optional string description = 3400;
+	optional string id = 5207 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 14359;
-	string mode = 16940;
-	string name = 13793 [ (buf.validate.field).required = true ];
+	optional string mode = 16940;
+	optional string name = 13793 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 13754;
+	optional string raw = 13754;
 	optional string parent_id = 2283;
 }
 
@@ -2901,7 +2916,7 @@ message MessageAuthenticationCode {
 	option (resource_type_names) = "MessageAuthenticationCode";
 	option (resource_type_names) = "Functionality";
 
-	string type = 16668;
+	optional string type = 16668;
 	Input input = 14423;
 	optional string key_id = 3220;
 }
@@ -2913,14 +2928,14 @@ message MessagingHub {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 8454;
-	string description = 11913;
-	string id = 7039 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 5261;
+	optional google.protobuf.Timestamp creation_time = 8454;
+	optional string description = 11913;
+	optional string id = 7039 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 5261;
 	map<string, string> labels = 4650;
-	string name = 4131 [ (buf.validate.field).required = true ];
+	optional string name = 4131 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 6465;
+	optional string raw = 6465;
 	ChangeAndConfigurationManagement change_and_configuration_management = 1045;
 	GeoLocation geo_location = 392;
 	repeated Logging loggings  = 13600;
@@ -2947,7 +2962,7 @@ message MonitoringProcedure {
 	option (resource_type_names) = "Functionality";
 
 	// The interval refers to the interval in months.
-	int32 interval_months = 13218;
+	optional int32 interval_months = 13218;
 }
 
 // MultiFactorAuthentiation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2956,10 +2971,10 @@ message MultiFactorAuthentiation {
 	option (resource_type_names) = "Authenticity";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool context_is_checked = 17335;
-	int32 failed_authentication_attempts = 15562;
+	optional bool context_is_checked = 17335;
+	optional int32 failed_authentication_attempts = 15562;
 	// Maximum password rotation interval in months
-	int32 rotation_interval = 11722;
+	optional int32 rotation_interval = 11722;
 	repeated Authenticity authenticities  = 14430;
 }
 
@@ -2974,16 +2989,16 @@ message MultiModalDatabaseService {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 10465;
-	string description = 15631;
-	string id = 5439 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 16156;
+	optional google.protobuf.Timestamp creation_time = 10465;
+	optional string description = 15631;
+	optional string id = 5439 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 16156;
 	repeated string ips = 8280;
 	map<string, string> labels = 7492;
-	string name = 13533 [ (buf.validate.field).required = true ];
+	optional string name = 13533 [ (buf.validate.field).required = true ];
 	repeated uint32 ports = 5;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 17449;
+	optional string raw = 17449;
 	ActivityLogging activity_logging = 9310;
 	repeated AnomalyDetection anomaly_detections  = 9066;
 	ChangeAndConfigurationManagement change_and_configuration_management = 3349;
@@ -3007,7 +3022,7 @@ message NeedToKnowPolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
-	bool is_defined = 17587;
+	optional bool is_defined = 17587;
 }
 
 // NetworkInterface is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3017,14 +3032,14 @@ message NetworkInterface {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 5497;
-	string description = 10885;
-	string id = 17981 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 14370;
+	optional google.protobuf.Timestamp creation_time = 5497;
+	optional string description = 10885;
+	optional string id = 17981 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 14370;
 	map<string, string> labels = 4721;
-	string name = 12404 [ (buf.validate.field).required = true ];
+	optional string name = 12404 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 5176;
+	optional string raw = 5176;
 	AccessRestriction access_restriction = 17872;
 	ChangeAndConfigurationManagement change_and_configuration_management = 11699;
 	GeoLocation geo_location = 10038;
@@ -3043,14 +3058,14 @@ message NetworkSecurityGroup {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 7240;
-	string description = 3524;
-	string id = 11635 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 15045;
+	optional google.protobuf.Timestamp creation_time = 7240;
+	optional string description = 3524;
+	optional string id = 11635 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 15045;
 	map<string, string> labels = 5905;
-	string name = 11440 [ (buf.validate.field).required = true ];
+	optional string name = 11440 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 11170;
+	optional string raw = 11170;
 	ChangeAndConfigurationManagement change_and_configuration_management = 15869;
 	GeoLocation geo_location = 11423;
 	repeated Logging loggings  = 393;
@@ -3088,7 +3103,11 @@ message NetworkThreatMitigationPolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
+	// Indicates whether the policy explicitly requires antispoofing mechanisms on internet-facing routers.
+	optional bool antispoofing_required = 15371;
 	repeated string covered_attack_types = 10498;
+	// Indicates whether the policy explicitly requires network filtering mechanisms on internet-facing routers.
+	optional bool filtering_required = 11116;
 }
 
 // Networking is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -3120,10 +3139,10 @@ message NoAuthentication {
 	option (resource_type_names) = "Authenticity";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool context_is_checked = 12023;
-	int32 failed_authentication_attempts = 4797;
+	optional bool context_is_checked = 12023;
+	optional int32 failed_authentication_attempts = 4797;
 	// Maximum password rotation interval in months
-	int32 rotation_interval = 11214;
+	optional int32 rotation_interval = 11214;
 }
 
 // OSLogging is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3133,12 +3152,12 @@ message OSLogging {
 	option (resource_type_names) = "Auditing";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 207;
+	optional bool enabled = 207;
 	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
-	string log_level = 10256;
-	bool monitoring_log_data_enabled = 12434;
-	google.protobuf.Duration retention_period = 11358;
-	bool security_alerts_enabled = 7453;
+	optional string log_level = 10256;
+	optional bool monitoring_log_data_enabled = 12434;
+	optional google.protobuf.Duration retention_period = 11358;
+	optional bool security_alerts_enabled = 7453;
 	repeated string logging_service_ids  = 14966;
 }
 
@@ -3148,11 +3167,11 @@ message OTPBasedAuthentication {
 	option (resource_type_names) = "Authenticity";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool activated = 7456;
-	bool context_is_checked = 18913;
-	int32 failed_authentication_attempts = 11364;
+	optional bool activated = 7456;
+	optional bool context_is_checked = 18913;
+	optional int32 failed_authentication_attempts = 11364;
 	// Maximum password rotation interval in months
-	int32 rotation_interval = 12621;
+	optional int32 rotation_interval = 12621;
 }
 
 // ObjectStorage is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3162,15 +3181,15 @@ message ObjectStorage {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 3389;
-	string description = 7516;
-	string id = 4155 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 18085;
+	optional google.protobuf.Timestamp creation_time = 3389;
+	optional string description = 7516;
+	optional string id = 4155 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 18085;
 	map<string, string> labels = 15572;
-	string name = 13009 [ (buf.validate.field).required = true ];
-	bool public_access = 4621;
+	optional string name = 13009 [ (buf.validate.field).required = true ];
+	optional bool public_access = 4621;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 6632;
+	optional string raw = 6632;
 	ActivityLogging activity_logging = 11889;
 	AtRestEncryption at_rest_encryption = 6489;
 	repeated Backup backups  = 4514;
@@ -3191,7 +3210,7 @@ message ObjectStorageRequest {
 	option (resource_type_names) = "Operation";
 	option (resource_type_names) = "Functionality";
 
-	string source = 178;
+	optional string source = 178;
 	CodeRegion code_region = 11189;
 	repeated string object_storage_ids  = 17017;
 	optional string storage_id = 7565;
@@ -3207,16 +3226,16 @@ message ObjectStorageService {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 11795;
-	string description = 11196;
-	string id = 18683 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 16284;
+	optional google.protobuf.Timestamp creation_time = 11795;
+	optional string description = 11196;
+	optional string id = 18683 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 16284;
 	repeated string ips = 17168;
 	map<string, string> labels = 17764;
-	string name = 1365 [ (buf.validate.field).required = true ];
+	optional string name = 1365 [ (buf.validate.field).required = true ];
 	repeated uint32 ports = 8166;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 16651;
+	optional string raw = 16651;
 	ActivityLogging activity_logging = 16914;
 	ChangeAndConfigurationManagement change_and_configuration_management = 777;
 	repeated string compute_ids  = 15695;
@@ -3306,13 +3325,13 @@ message POSIX {
 	option (resource_type_names) = "Code";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 13531;
-	string description = 4720;
-	string id = 6746 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 13531;
+	optional string description = 4720;
+	optional string id = 6746 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 8873;
-	string name = 18076 [ (buf.validate.field).required = true ];
+	optional string name = 18076 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 6560;
+	optional string raw = 6560;
 	repeated string code_module_ids  = 5732;
 	optional string code_repository_id = 13099;
 	repeated Functionality functionalities  = 2402;
@@ -3328,13 +3347,13 @@ message Package {
 	option (resource_type_names) = "Code";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 17760;
-	string description = 13199;
-	string id = 11460 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 17760;
+	optional string description = 13199;
+	optional string id = 11460 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 3230;
-	string name = 11479 [ (buf.validate.field).required = true ];
+	optional string name = 11479 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 603;
+	optional string raw = 603;
 	repeated string code_module_ids  = 16160;
 	optional string code_repository_id = 17202;
 	repeated Functionality functionalities  = 8054;
@@ -3349,7 +3368,7 @@ message Padding {
 	option (resource_type_names) = "Functionality";
 
 	// Describes a certain scheme e.g. a padding scheme.
-	string scheme = 15940;
+	optional string scheme = 15940;
 }
 
 // PasswordBasedAuthentication is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3358,11 +3377,11 @@ message PasswordBasedAuthentication {
 	option (resource_type_names) = "Authenticity";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool activated = 11798;
-	bool context_is_checked = 1362;
-	int32 failed_authentication_attempts = 14390;
+	optional bool activated = 11798;
+	optional bool context_is_checked = 1362;
+	optional int32 failed_authentication_attempts = 14390;
 	// Maximum password rotation interval in months
-	int32 rotation_interval = 9048;
+	optional int32 rotation_interval = 9048;
 }
 
 // PasswordPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3371,14 +3390,14 @@ message PasswordPolicy {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 1562;
-	string description = 16661;
-	string id = 2029 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 14885;
+	optional google.protobuf.Timestamp creation_time = 1562;
+	optional string description = 16661;
+	optional string id = 2029 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 14885;
 	map<string, string> labels = 716;
-	string name = 8966 [ (buf.validate.field).required = true ];
+	optional string name = 8966 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 10264;
+	optional string raw = 10264;
 	ChangeAndConfigurationManagement change_and_configuration_management = 7943;
 	GeoLocation geo_location = 8344;
 	repeated Logging loggings  = 6081;
@@ -3394,6 +3413,7 @@ message Policies {
 
 	oneof type {
 		AccessControlTypePolicy access_control_type_policy = 13002;
+		AuditLogMonitoringPolicy audit_log_monitoring_policy = 4146;
 		ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 3098;
 		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
@@ -3421,18 +3441,19 @@ message PolicyDocument {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 8545;
-	string description = 1423;
-	string filetype = 11838;
-	string id = 6550 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 8545;
+	optional string description = 1423;
+	optional string filetype = 11838;
+	optional string id = 6550 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 5677;
-	string name = 2052 [ (buf.validate.field).required = true ];
+	optional string name = 2052 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 5038;
+	optional string raw = 5038;
 	AccessControlTypePolicy access_control_type_policy = 9164;
 	AssetInventory asset_inventory = 16496;
-	AwarenessTraining awareness_training = 16218;
+	AuditLogMonitoringPolicy audit_log_monitoring_policy = 2724;
 	Backup backup = 16402;
+	ComplianceAuditIntervalPolicy compliance_audit_interval_policy = 11561;
 	repeated CryptographicHash cryptographic_hashs  = 12896;
 	DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 4864;
 	DataLocation data_location = 11474;
@@ -3447,6 +3468,7 @@ message PolicyDocument {
 	SchemaValidation validated_by = 5620;
 	repeated SecurityFeature security_features  = 13896;
 	SecurityIncident security_incident = 16664;
+	SecurityPolicyReview security_policy_review = 3099;
 	SeparationOfDutiesPolicy separation_of_duties_policy = 6434;
 }
 
@@ -3491,19 +3513,19 @@ message Product {
 	option (resource_type_names) = "Product";
 	option (resource_type_names) = "Resource";
 
-	string context_of_use = 18080;
-	google.protobuf.Timestamp creation_time = 17898;
-	string description = 9219;
-	string id = 4962 [ (buf.validate.field).required = true ];
+	optional string context_of_use = 18080;
+	optional google.protobuf.Timestamp creation_time = 17898;
+	optional string description = 9219;
+	optional string id = 4962 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 13974;
-	string name = 1083 [ (buf.validate.field).required = true ];
-	string programming_version = 17597;
-	string purpose = 8719;
+	optional string name = 1083 [ (buf.validate.field).required = true ];
+	optional string programming_version = 17597;
+	optional string purpose = 8719;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 16261;
+	optional string raw = 16261;
 	// Support ends date for a certain resource.
-	google.protobuf.Timestamp support_ends = 14253;
-	string type = 6467;
+	optional google.protobuf.Timestamp support_ends = 14253;
+	optional string type = 6467;
 	repeated string code_ids  = 10540;
 	ContactPerson contact_person = 8641;
 	repeated string data_ids  = 11462;
@@ -3520,14 +3542,14 @@ message ProductionAndMonitoringProcessDocument {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 673;
-	string description = 16985;
-	string filetype = 15732;
-	string id = 3038 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 673;
+	optional string description = 16985;
+	optional string filetype = 15732;
+	optional string id = 3038 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 11986;
-	string name = 10714 [ (buf.validate.field).required = true ];
+	optional string name = 10714 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 12529;
+	optional string raw = 12529;
 	repeated CryptographicHash cryptographic_hashs  = 11667;
 	DataLocation data_location = 3635;
 	repeated DocumentSignature document_signatures  = 13921;
@@ -3592,24 +3614,24 @@ message QPU {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	float one_qubit_error_rate = 3838;
-	float spam_error_rate = 2960;
+	optional float one_qubit_gate_error_rate = 11747;
+	optional float spam_error_rate = 2960;
 	// Coherence times are a standard measure for the reliability of executing quantum circuits. T1 is the qubits's energy relaxation time (in seconds).
-	float t1_coherence_time = 10446;
+	optional float t1_coherence_time = 10446;
 	// Coherence times are a standard measure for the reliability of executing quantum circuits. T1 is the qubits's energy dephasing time (in seconds).
-	float t2_coherence_time = 16909;
-	float two_qubit_error_rate = 6385;
+	optional float t2_coherence_time = 16909;
+	optional float two_qubit_gate_error_rate = 12282;
 	// The physical operations shall include a finite set of gates capable of approximating any unitary operation on qubits. This is typically achieved through combinations of one-qubit gates and a two-qubit entangling gate, such as CNOT, enabling the execution of a broad range of quantum algorithms.
-	bool universal_gate_set_enabled = 15025;
-	google.protobuf.Timestamp creation_time = 3446;
-	string description = 4376;
-	bool error_correction_enabled = 12983;
-	string id = 14403 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 9684;
+	optional bool universal_gate_set_enabled = 15025;
+	optional google.protobuf.Timestamp creation_time = 3446;
+	optional string description = 4376;
+	optional bool error_correction_enabled = 12983;
+	optional string id = 14403 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 9684;
 	map<string, string> labels = 11544;
-	string name = 1538 [ (buf.validate.field).required = true ];
+	optional string name = 1538 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 8462;
+	optional string raw = 8462;
 	ChangeAndConfigurationManagement change_and_configuration_management = 2743;
 	EncryptionInUse encryption_in_use = 7289;
 	GeoLocation geo_location = 16264;
@@ -3630,9 +3652,9 @@ message RBAC {
 	option (resource_type_names) = "SecurityFeature";
 
 	// see Privacy Smells: Detecting Privacy Problems in Cloud Architectures (2020)
-	float broad_assignments = 5678;
+	optional float broad_assignments = 5678;
 	// see Privacy Smells: Detecting Privacy Problems in Cloud Architectures (2020)
-	float mixed_duties = 14446;
+	optional float mixed_duties = 14446;
 }
 
 // RateLimiting is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3643,9 +3665,9 @@ message RateLimiting {
 	option (resource_type_names) = "Authorization";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 11910;
-	int32 max_requests = 8962;
-	int32 time_window_seconds = 6657;
+	optional bool enabled = 11910;
+	optional int32 max_requests = 8962;
+	optional int32 time_window_seconds = 6657;
 }
 
 // ReadConfigurationGroup is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3732,16 +3754,16 @@ message RelationalDatabaseService {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 10783;
-	string description = 12776;
-	string id = 13147 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 12634;
+	optional google.protobuf.Timestamp creation_time = 10783;
+	optional string description = 12776;
+	optional string id = 13147 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 12634;
 	repeated string ips = 13907;
 	map<string, string> labels = 5189;
-	string name = 10710 [ (buf.validate.field).required = true ];
+	optional string name = 10710 [ (buf.validate.field).required = true ];
 	repeated uint32 ports = 285;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 308;
+	optional string raw = 308;
 	ActivityLogging activity_logging = 17935;
 	repeated AnomalyDetection anomaly_detections  = 18542;
 	ChangeAndConfigurationManagement change_and_configuration_management = 11313;
@@ -3774,9 +3796,9 @@ message RemoteAttestation {
 	option (resource_type_names) = "Integrity";
 	option (resource_type_names) = "SecurityFeature";
 
-	google.protobuf.Timestamp creation_time = 7501;
-	bool enabled = 1238;
-	bool status = 9341;
+	optional google.protobuf.Timestamp creation_time = 7501;
+	optional bool enabled = 1238;
+	optional bool status = 9341;
 }
 
 // RemoteDataLocation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3785,7 +3807,7 @@ message RemoteDataLocation {
 	option (resource_type_names) = "DataLocation";
 	option (resource_type_names) = "Functionality";
 
-	string path = 5099;
+	optional string path = 5099;
 	Authenticity authenticity = 1719;
 	optional string storage_id = 9156;
 	TransportEncryption transport_encryption = 1008;
@@ -3808,14 +3830,14 @@ message ReportDocument {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 8995;
-	string description = 17449;
-	string filetype = 8246;
-	string id = 17973 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 8995;
+	optional string description = 17449;
+	optional string filetype = 8246;
+	optional string id = 17973 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 4505;
-	string name = 14944 [ (buf.validate.field).required = true ];
+	optional string name = 14944 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 2605;
+	optional string raw = 2605;
 	repeated CryptographicHash cryptographic_hashs  = 17448;
 	DataLocation data_location = 18583;
 	repeated DocumentSignature document_signatures  = 367;
@@ -3829,7 +3851,7 @@ message RequestForChange {
 	option (resource_type_names) = "RequestForChange";
 	option (resource_type_names) = "Functionality";
 
-	bool approved_before_deployment = 16813;
+	optional bool approved_before_deployment = 16813;
 }
 
 // Resource is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -3924,14 +3946,14 @@ message ResourceGroup {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 16852;
-	string description = 12107;
-	string id = 11216 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 14821;
+	optional google.protobuf.Timestamp creation_time = 16852;
+	optional string description = 12107;
+	optional string id = 11216 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 14821;
 	map<string, string> labels = 17517;
-	string name = 18950 [ (buf.validate.field).required = true ];
+	optional string name = 18950 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 16903;
+	optional string raw = 16903;
 	ChangeAndConfigurationManagement change_and_configuration_management = 6025;
 	GeoLocation geo_location = 10139;
 	repeated Logging loggings  = 17486;
@@ -3948,12 +3970,12 @@ message ResourceLogging {
 	option (resource_type_names) = "Auditing";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 1509;
+	optional bool enabled = 1509;
 	// enum:logLevel=FATAL,CRITICAL,ERROR,WARN,INFO,DEBUG,TRACE,UNKNOWN
-	string log_level = 5969;
-	bool monitoring_log_data_enabled = 6804;
-	google.protobuf.Duration retention_period = 6776;
-	bool security_alerts_enabled = 6099;
+	optional string log_level = 5969;
+	optional bool monitoring_log_data_enabled = 6804;
+	optional google.protobuf.Duration retention_period = 6776;
+	optional bool security_alerts_enabled = 6099;
 	repeated string logging_service_ids  = 3295;
 }
 
@@ -3979,15 +4001,15 @@ message RoleAssignment {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	bool activated = 11248;
-	google.protobuf.Timestamp creation_time = 13977;
-	string description = 8960;
-	string id = 6310 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 16789;
+	optional bool activated = 11248;
+	optional google.protobuf.Timestamp creation_time = 13977;
+	optional string description = 8960;
+	optional string id = 6310 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 16789;
 	map<string, string> labels = 18346;
-	string name = 2963 [ (buf.validate.field).required = true ];
+	optional string name = 2963 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 10862;
+	optional string raw = 10862;
 	Authorization authorization = 18501;
 	ChangeAndConfigurationManagement change_and_configuration_management = 12427;
 	GeoLocation geo_location = 10092;
@@ -4005,14 +4027,14 @@ message SBOMDocument {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 18871;
-	string description = 12620;
-	string filetype = 11066;
-	string id = 12226 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 18871;
+	optional string description = 12620;
+	optional string filetype = 11066;
+	optional string id = 12226 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 9737;
-	string name = 3717 [ (buf.validate.field).required = true ];
+	optional string name = 3717 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 16176;
+	optional string raw = 16176;
 	repeated CryptographicHash cryptographic_hashs  = 1611;
 	DataLocation data_location = 2559;
 	repeated DocumentSignature document_signatures  = 2453;
@@ -4028,7 +4050,7 @@ message SDNFunctionValidationPolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
-	bool is_defined = 10249;
+	optional bool is_defined = 10249;
 }
 
 // SchemaValidation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4036,8 +4058,8 @@ message SchemaValidation {
 	option (resource_type_names) = "SchemaValidation";
 	option (resource_type_names) = "Functionality";
 
-	string format = 1670;
-	string schema_url = 13358;
+	optional string format = 1670;
+	optional string schema_url = 13358;
 	repeated Error errors  = 16452;
 }
 
@@ -4048,20 +4070,20 @@ message Secret {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 17509;
-	string description = 11419;
-	bool enabled = 5437;
-	google.protobuf.Timestamp expiration_date = 2358;
-	string id = 13519 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 2994;
-	bool is_managed = 3899;
+	optional google.protobuf.Timestamp creation_time = 17509;
+	optional string description = 11419;
+	optional bool enabled = 5437;
+	optional google.protobuf.Timestamp expiration_date = 2358;
+	optional string id = 13519 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 2994;
+	optional bool is_managed = 3899;
 	// Key size refers to the length of a key used in an enryption.
-	int32 key_size = 14835;
+	optional int32 key_size = 14835;
 	map<string, string> labels = 1676;
-	string name = 964 [ (buf.validate.field).required = true ];
-	google.protobuf.Timestamp not_before_date = 13335;
+	optional string name = 964 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp not_before_date = 13335;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 5998;
+	optional string raw = 5998;
 	ChangeAndConfigurationManagement change_and_configuration_management = 7249;
 	Cipher based_on = 7866;
 	GeoLocation geo_location = 4152;
@@ -4089,14 +4111,14 @@ message SecurityAdvisoryDocument {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 10952;
-	string description = 3599;
-	string filetype = 17266;
-	string id = 15804 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 10952;
+	optional string description = 3599;
+	optional string filetype = 17266;
+	optional string id = 15804 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 16720;
-	string name = 15161 [ (buf.validate.field).required = true ];
+	optional string name = 15161 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 3544;
+	optional string raw = 3544;
 	repeated CryptographicHash cryptographic_hashs  = 4824;
 	DataLocation data_location = 12507;
 	repeated DocumentSignature document_signatures  = 16888;
@@ -4123,16 +4145,16 @@ message SecurityAdvisoryService {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 3025;
-	string description = 2320;
-	string id = 18683 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 4910;
+	optional google.protobuf.Timestamp creation_time = 3025;
+	optional string description = 2320;
+	optional string id = 18683 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 4910;
 	repeated string ips = 2661;
 	map<string, string> labels = 837;
-	string name = 2102 [ (buf.validate.field).required = true ];
+	optional string name = 2102 [ (buf.validate.field).required = true ];
 	repeated uint32 ports = 4555;
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 10467;
+	optional string raw = 10467;
 	ChangeAndConfigurationManagement change_and_configuration_management = 3016;
 	repeated string compute_ids  = 18065;
 	GeoLocation geo_location = 11088;
@@ -4206,6 +4228,17 @@ message SecurityIncident {
 	repeated string team = 3344;
 }
 
+// SecurityPolicyReview is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents the review cadence of the organization's Information Security Policy. intervalMonths: how often the policy must be reviewed, in months.
+message SecurityPolicyReview {
+	option (resource_type_names) = "SecurityPolicyReview";
+	option (resource_type_names) = "Governance";
+	option (resource_type_names) = "Functionality";
+
+	// The interval refers to the interval in months.
+	optional int32 interval_months = 7860;
+}
+
 // SecurityTraining is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
 message SecurityTraining {
 	option (resource_type_names) = "SecurityTraining";
@@ -4213,14 +4246,8 @@ message SecurityTraining {
 	option (resource_type_names) = "Governance";
 	option (resource_type_names) = "Functionality";
 
-	// Indicates whether the training plan states it is delivered at least annually.
-	bool annual_cadence_stated = 10262;
-	bool annual_update_completed = 10890;
-	// Indicates whether a documented training and awareness plan is maintained.
-	bool plan_documented = 6027;
-	// Indicates whether the training plan includes role-based tracks adjusted by employee function.
-	bool role_adjusted_tracks_stated = 10041;
-	bool successfully_completed_percentage = 18938;
+	optional bool annual_update_completed = 10890;
+	optional bool successfully_completed_percentage = 18938;
 }
 
 // SeparationOfDutiesPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4230,7 +4257,7 @@ message SeparationOfDutiesPolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
-	bool is_defined = 14281;
+	optional bool is_defined = 14281;
 }
 
 // ServiceMetadataDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4240,14 +4267,14 @@ message ServiceMetadataDocument {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 5797;
-	string description = 3765;
-	string filetype = 4547;
-	string id = 8259 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 5797;
+	optional string description = 3765;
+	optional string filetype = 4547;
+	optional string id = 8259 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 1672;
-	string name = 10912 [ (buf.validate.field).required = true ];
+	optional string name = 10912 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 8064;
+	optional string raw = 8064;
 	repeated CryptographicHash cryptographic_hashs  = 12184;
 	DataLocation data_location = 14106;
 	repeated DocumentSignature document_signatures  = 4448;
@@ -4262,7 +4289,7 @@ message DocumentSignature {
 	option (resource_type_names) = "Integrity";
 	option (resource_type_names) = "SecurityFeature";
 
-	string algorithm = 4031;
+	optional string algorithm = 4031;
 	repeated Error errors  = 14433;
 }
 
@@ -4275,9 +4302,9 @@ message SignedCommits {
 	option (resource_type_names) = "Integrity";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enforced = 3239;
-	float percentage = 11723;
-	float percentage_last_month = 3788;
+	optional bool enforced = 3239;
+	optional float percentage = 11723;
+	optional float percentage_last_month = 3788;
 }
 
 // SingleSignOn is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4286,11 +4313,11 @@ message SingleSignOn {
 	option (resource_type_names) = "Authenticity";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool context_is_checked = 14488;
-	bool enabled = 10569;
-	int32 failed_authentication_attempts = 10119;
+	optional bool context_is_checked = 14488;
+	optional bool enabled = 10569;
+	optional int32 failed_authentication_attempts = 10119;
 	// Maximum password rotation interval in months
-	int32 rotation_interval = 9185;
+	optional int32 rotation_interval = 9185;
 }
 
 // SoftwareAttestation is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4300,9 +4327,9 @@ message SoftwareAttestation {
 	option (resource_type_names) = "Integrity";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 5129;
+	optional bool enabled = 5129;
 	// predicate: Property being affirmed
-	string predicate = 6461;
+	optional string predicate = 6461;
 	// subject: Subject of an assertion
 	repeated string subject = 13149;
 }
@@ -4329,13 +4356,13 @@ message SourceCodeFile {
 	option (resource_type_names) = "Code";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 7260;
-	string description = 14944;
-	string id = 10519 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 7260;
+	optional string description = 14944;
+	optional string id = 10519 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 7345;
-	string name = 14615 [ (buf.validate.field).required = true ];
+	optional string name = 14615 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 16625;
+	optional string raw = 16625;
 	repeated string code_module_ids  = 14101;
 	optional string code_repository_id = 8294;
 	repeated Functionality functionalities  = 3267;
@@ -4376,15 +4403,15 @@ message SymmetricCipher {
 	option (resource_type_names) = "Functionality";
 
 	// AuthTagSize of a symmetric cipher
-	int32 auth_tag_size = 7608;
+	optional int32 auth_tag_size = 7608;
 	// Block size of a cipher.
-	int32 block_size = 11096;
+	optional int32 block_size = 11096;
 	// Name of a cryptographic cipher.
-	string cipher_name = 1930;
+	optional string cipher_name = 1930;
 	// Key size refers to the length of a key used in an enryption.
-	int32 key_size = 488;
+	optional int32 key_size = 488;
 	// Describes a modus of something being executed. (e.g. used by an Encryption)
-	string modus = 10292;
+	optional string modus = 10292;
 	InitializationVector initialization_vector = 11325;
 	Padding padding = 2670;
 }
@@ -4403,13 +4430,13 @@ message Token {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 9208;
-	string description = 4081;
-	string id = 16665 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 9208;
+	optional string description = 4081;
+	optional string id = 16665 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 15658;
-	string name = 15808 [ (buf.validate.field).required = true ];
+	optional string name = 15808 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 16748;
+	optional string raw = 16748;
 	DataLocation data_location = 13703;
 	optional string parent_id = 10701;
 }
@@ -4431,12 +4458,12 @@ message TransportEncryption {
 	option (resource_type_names) = "Confidentiality";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 14517;
-	bool enforced = 9699;
-	string protocol = 6987;
-	float protocol_version = 11009;
+	optional bool enabled = 14517;
+	optional bool enforced = 9699;
+	optional string protocol = 6987;
+	optional float protocol_version = 11009;
 	// tlsSignatureAlgorithm: e.g., rsa_pss_rsae_sha256/384/512, ecdsa_secp256r1_sha256, ed25519
-	string tls_signature_algorithm = 14996;
+	optional string tls_signature_algorithm = 14996;
 	Cipher based_on = 17349;
 	repeated CipherSuite cipher_suites  = 5672;
 	optional string secret_id = 9451;
@@ -4459,7 +4486,7 @@ message UsageStatistics {
 	option (resource_type_names) = "Auditing";
 	option (resource_type_names) = "SecurityFeature";
 
-	int32 api_hits_per_month = 7625;
+	optional int32 api_hits_per_month = 7625;
 }
 
 // UserInformationAndIntructionDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4469,14 +4496,14 @@ message UserInformationAndIntructionDocument {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 4472;
-	string description = 8002;
-	string filetype = 9176;
-	string id = 7706 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 4472;
+	optional string description = 8002;
+	optional string filetype = 9176;
+	optional string id = 7706 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 4894;
-	string name = 13104 [ (buf.validate.field).required = true ];
+	optional string name = 13104 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 13906;
+	optional string raw = 13906;
 	repeated CryptographicHash cryptographic_hashs  = 5030;
 	DataLocation data_location = 10061;
 	repeated DocumentSignature document_signatures  = 8364;
@@ -4492,14 +4519,14 @@ message VMImage {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 8279;
-	string description = 4760;
-	string id = 17867 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 14985;
+	optional google.protobuf.Timestamp creation_time = 8279;
+	optional string description = 4760;
+	optional string id = 17867 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 14985;
 	map<string, string> labels = 17229;
-	string name = 6244 [ (buf.validate.field).required = true ];
+	optional string name = 6244 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 3459;
+	optional string raw = 3459;
 	optional string application_id = 5181;
 	ChangeAndConfigurationManagement change_and_configuration_management = 3927;
 	GeoLocation geo_location = 18401;
@@ -4529,13 +4556,13 @@ message Value {
 	option (resource_type_names) = "Data";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 2464;
-	string description = 9865;
-	string id = 4039 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 2464;
+	optional string description = 9865;
+	optional string id = 4039 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 6833;
-	string name = 3876 [ (buf.validate.field).required = true ];
+	optional string name = 3876 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 7659;
+	optional string raw = 7659;
 	DataLocation data_location = 18490;
 	optional string parent_id = 18063;
 }
@@ -4549,8 +4576,8 @@ message VerifiedCommits {
 	option (resource_type_names) = "Integrity";
 	option (resource_type_names) = "SecurityFeature";
 
-	float percentage = 14857;
-	float percentage_last_month = 6431;
+	optional float percentage = 14857;
+	optional float percentage_last_month = 6431;
 }
 
 // VirtualMachine is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4560,14 +4587,14 @@ message VirtualMachine {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 6633;
-	string description = 14513;
-	string id = 8104 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 2070;
+	optional google.protobuf.Timestamp creation_time = 6633;
+	optional string description = 14513;
+	optional string id = 8104 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 2070;
 	map<string, string> labels = 2416;
-	string name = 11617 [ (buf.validate.field).required = true ];
+	optional string name = 11617 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 14073;
+	optional string raw = 14073;
 	ActivityLogging activity_logging = 9858;
 	AutomaticUpdates automatic_updates = 14565;
 	repeated string block_storage_ids  = 17882;
@@ -4593,14 +4620,14 @@ message VirtualNetwork {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 1885;
-	string description = 9930;
-	string id = 4087 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 7871;
+	optional google.protobuf.Timestamp creation_time = 1885;
+	optional string description = 9930;
+	optional string id = 4087 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 7871;
 	map<string, string> labels = 6818;
-	string name = 818 [ (buf.validate.field).required = true ];
+	optional string name = 818 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 14216;
+	optional string raw = 14216;
 	ChangeAndConfigurationManagement change_and_configuration_management = 157;
 	GeoLocation geo_location = 3004;
 	repeated Logging loggings  = 18851;
@@ -4617,14 +4644,14 @@ message VirtualSubNetwork {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 317;
-	string description = 14512;
-	string id = 10226 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 14405;
+	optional google.protobuf.Timestamp creation_time = 317;
+	optional string description = 14512;
+	optional string id = 10226 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 14405;
 	map<string, string> labels = 4188;
-	string name = 1563 [ (buf.validate.field).required = true ];
+	optional string name = 1563 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 15165;
+	optional string raw = 15165;
 	ChangeAndConfigurationManagement change_and_configuration_management = 9134;
 	GeoLocation geo_location = 518;
 	repeated Logging loggings  = 9326;
@@ -4642,13 +4669,13 @@ message Vulnerability {
 	option (resource_type_names) = "Functionality";
 
 	// criticality: Contains the criticality of a vulnerability, e.g., low, medium, high, critical
-	string criticality = 9970;
-	string cve = 205;
+	optional string criticality = 9970;
+	optional string cve = 205;
 	repeated string cwe = 18325;
-	string description = 10690;
+	optional string description = 10690;
 	// exploitable: Indicates whether a vulnerability is exploitable for the given target of evaluation (TOE)
-	bool exploitable = 15966;
-	string url = 11925;
+	optional bool exploitable = 15966;
+	optional string url = 11925;
 }
 
 // WebApplicationFirewall is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4660,7 +4687,7 @@ message WebApplicationFirewall {
 	option (resource_type_names) = "Authorization";
 	option (resource_type_names) = "SecurityFeature";
 
-	bool enabled = 8961;
+	optional bool enabled = 8961;
 }
 
 // Win32 is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4671,13 +4698,13 @@ message Win32 {
 	option (resource_type_names) = "Code";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 9110;
-	string description = 2068;
-	string id = 8737 [ (buf.validate.field).required = true ];
+	optional google.protobuf.Timestamp creation_time = 9110;
+	optional string description = 2068;
+	optional string id = 8737 [ (buf.validate.field).required = true ];
 	map<string, string> labels = 12211;
-	string name = 8220 [ (buf.validate.field).required = true ];
+	optional string name = 8220 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 17302;
+	optional string raw = 17302;
 	repeated string code_module_ids  = 822;
 	optional string code_repository_id = 16090;
 	repeated Functionality functionalities  = 18689;
@@ -4692,14 +4719,14 @@ message Workflow {
 	option (resource_type_names) = "Infrastructure";
 	option (resource_type_names) = "Resource";
 
-	google.protobuf.Timestamp creation_time = 5596;
-	string description = 2895;
-	string id = 6168 [ (buf.validate.field).required = true ];
-	bool internet_accessible_endpoint = 5072;
+	optional google.protobuf.Timestamp creation_time = 5596;
+	optional string description = 2895;
+	optional string id = 6168 [ (buf.validate.field).required = true ];
+	optional bool internet_accessible_endpoint = 5072;
 	map<string, string> labels = 9318;
-	string name = 12414 [ (buf.validate.field).required = true ];
+	optional string name = 12414 [ (buf.validate.field).required = true ];
 	// The raw field contains the raw information that is used to fill in the fields of the ontology.
-	string raw = 9416;
+	optional string raw = 9416;
 	ChangeAndConfigurationManagement change_and_configuration_management = 7785;
 	GeoLocation geo_location = 18272;
 	repeated Logging loggings  = 4437;
