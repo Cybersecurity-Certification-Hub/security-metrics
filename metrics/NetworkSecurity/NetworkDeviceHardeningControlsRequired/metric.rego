@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"authorizedSoftwareAndControlledInstallationRequired" in object.keys(networkThreatMitigationPolicy)
-	is_boolean(networkThreatMitigationPolicy.authorizedSoftwareAndControlledInstallationRequired)
 	"PolicyDocument" in input.type
 }
 
