@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"costsExplicitlyAssignedToProvider" in object.keys(liabilityPolicy)
-	is_boolean(liabilityPolicy.costsExplicitlyAssignedToProvider)
 	"PolicyDocument" in input.type
 }
 
