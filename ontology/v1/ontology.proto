@@ -52,7 +52,7 @@ message AccessControlTypePolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
-	optional string authorization_types = 2672;
+	repeated string authorization_types = 2672;
 }
 
 // AccessRestriction is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -731,7 +731,7 @@ message ComplianceMethodologyPolicy {
 	option (resource_type_names) = "Policies";
 	option (resource_type_names) = "Functionality";
 
-	optional string methodology = 8814;
+	repeated string methodology = 8814;
 }
 
 // Component is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".

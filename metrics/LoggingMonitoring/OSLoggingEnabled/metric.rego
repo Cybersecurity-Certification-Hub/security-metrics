@@ -4,16 +4,27 @@ import data.cch.comparison_result
 import rego.v1
 import input.osLogging as logging
 
-default applicable = false
+default applicable := false
+default compliant := false
 
-default compliant = false
-
+# The metric is applicable when enabled is present and boolean.
 applicable if {
-	logging
+	"enabled" in object.keys(logging)
+	"VirtualMachine" in input.type
 }
 
 compliant if {
-	every r in results { r.success }
+	every r in results {
+		r.success
+	}
 }
 
-results := [comparison_result("osLogging.enabled", logging.enabled)]
+message := "OS logging is properly configured." if {
+	compliant
+} else := "OS logging is not properly configured. The enabled value should match the specified value." if {
+	not compliant
+}
+
+results := [
+	comparison_result("osLogging.enabled", logging.enabled),
+] 
