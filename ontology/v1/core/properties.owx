@@ -118,6 +118,12 @@
         <DataProperty abbreviatedIRI="prop:coveredAttackTypes"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:antispoofingRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:filteringRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:creation_time"/>
     </Declaration>
     <Declaration>
@@ -142,6 +148,12 @@
         <DataProperty abbreviatedIRI="res:isDefined"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:thirdPartyExchangeRulesDefined"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:restrictsDownloadAndExtraction"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:reviewFrequency"/>
     </Declaration>
     <Declaration>
@@ -149,6 +161,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:recoveryFrequency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:redundant"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:service"/>
@@ -335,6 +350,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:auditInterval"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:daysSinceLastAudit"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:updateInterval"/>
@@ -1415,5 +1433,65 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>res:mfaAndFederationRequiredForRemoteAccess</AbbreviatedIRI>
         <Literal>mfaAndFederationRequiredForRemoteAccess</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:thirdPartyExchangeRulesDefined</AbbreviatedIRI>
+        <Literal>Indicates whether the policy specifically defines rules for information exchange with third parties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:thirdPartyExchangeRulesDefined</AbbreviatedIRI>
+        <Literal>thirdPartyExchangeRulesDefined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:antispoofingRequired</AbbreviatedIRI>
+        <Literal>Indicates whether the policy explicitly requires antispoofing mechanisms on internet-facing routers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:antispoofingRequired</AbbreviatedIRI>
+        <Literal>antispoofingRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:filteringRequired</AbbreviatedIRI>
+        <Literal>Indicates whether the policy explicitly requires network filtering mechanisms on internet-facing routers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:filteringRequired</AbbreviatedIRI>
+        <Literal>filteringRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:restrictsDownloadAndExtraction</AbbreviatedIRI>
+        <Literal>Indicates whether the policy restricts downloading or extracting information from the organization's systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:restrictsDownloadAndExtraction</AbbreviatedIRI>
+        <Literal>restrictsDownloadAndExtraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:daysSinceLastAudit</AbbreviatedIRI>
+        <Literal>The number of days elapsed since the last completed external/supervisory audit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:daysSinceLastAudit</AbbreviatedIRI>
+        <Literal>daysSinceLastAudit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:redundant</AbbreviatedIRI>
+        <Literal>Indicates whether the resource is stored redundantly.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:redundant</AbbreviatedIRI>
+        <Literal>redundant</Literal>
     </AnnotationAssertion>
 </Ontology>
