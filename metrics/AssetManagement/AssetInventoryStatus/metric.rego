@@ -2,7 +2,7 @@ package cch.metrics.asset_inventory_status
 
 import data.cch.comparison_result
 import rego.v1
-import input.assetInventory as ai
+import input.assetInventory as assetInventory
 
 default applicable := false
 
@@ -23,4 +23,4 @@ message := "Asset status options are properly defined." if {
   not compliant
 }
 
-results := [comparison_result("assetInventory.status", ai.status)] if {applicable}
+results := [comparison_result("assetInventory.status",assetInventory.status)] if {applicable}

@@ -2,7 +2,7 @@ package cch.metrics.asset_inventory_review_frequency
 
 import data.cch.comparison_result
 import rego.v1
-import input.assetInventory as ai
+import input.assetInventory as assetInventory
 
 default applicable := false
 default compliant := false
@@ -22,4 +22,4 @@ message := "The policy document defines the asset inventory review frequency." i
 	not compliant
 }
 
-results := [comparison_result("assetInventory.reviewFrequency", ai.reviewFrequency)]
+results := [comparison_result("assetInventory.reviewFrequency",assetInventory.reviewFrequency)]
