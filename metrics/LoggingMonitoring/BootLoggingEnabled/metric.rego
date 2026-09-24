@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"enabled" in object.keys(logging)
-	is_boolean(logging.enabled)
 	"VirtualMachine" in input.type
 }
 

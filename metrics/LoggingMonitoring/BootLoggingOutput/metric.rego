@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"loggingServiceIds" in object.keys(logging)
-	is_array(logging.loggingServiceIds)
 	"VirtualMachine" in input.type
 }
 
