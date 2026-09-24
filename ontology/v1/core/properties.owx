@@ -484,6 +484,18 @@
         <DataProperty abbreviatedIRI="prop:value"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="res:pentestGateRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:checklistCoveragePercent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:referencesIndustryFramework"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:highCriticalFindingsBlockRelease"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="ind:resourceId"/>
     </Declaration>
     <Declaration>
@@ -1394,6 +1406,46 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:value</AbbreviatedIRI>
         <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:pentestGateRequired</AbbreviatedIRI>
+        <Literal>Indicates whether a pentest/static-analysis gate is required prior to production release.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:pentestGateRequired</AbbreviatedIRI>
+        <Literal>pentestGateRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:checklistCoveragePercent</AbbreviatedIRI>
+        <Literal>Percentage of the mandated checklist items explicitly present.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:checklistCoveragePercent</AbbreviatedIRI>
+        <Literal>checklistCoveragePercent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:referencesIndustryFramework</AbbreviatedIRI>
+        <Literal>Indicates whether the methodology references an industry framework (e.g., OWASP, SANS, CERT).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:referencesIndustryFramework</AbbreviatedIRI>
+        <Literal>referencesIndustryFramework</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:highCriticalFindingsBlockRelease</AbbreviatedIRI>
+        <Literal>Indicates whether high/critical findings block the production release.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:highCriticalFindingsBlockRelease</AbbreviatedIRI>
+        <Literal>highCriticalFindingsBlockRelease</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

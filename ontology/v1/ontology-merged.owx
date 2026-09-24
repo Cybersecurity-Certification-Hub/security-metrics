@@ -744,6 +744,9 @@
         <Class IRI="/classes/SecretOperation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/SecureDevelopmentPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/SecurityAdvisoryDocument"/>
     </Declaration>
     <Declaration>
@@ -975,6 +978,9 @@
         <DataProperty IRI="/classes/broadAssignments"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/checklistCoveragePercent"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/cipherName"/>
     </Declaration>
     <Declaration>
@@ -1039,6 +1045,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/geo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/highCriticalFindingsBlockRelease"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/id"/>
@@ -1128,6 +1137,9 @@
         <DataProperty IRI="/classes/overridePasswordPolicy"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/pentestGateRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/poisonedDataLevel"/>
     </Declaration>
     <Declaration>
@@ -1156,6 +1168,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/recoveryFrequency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/referencesIndustryFramework"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/reqBody"/>
@@ -1602,6 +1617,9 @@
         <DataProperty IRI="/classes/TwoQubitGateErrorRate"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/checklistCoveragePercent"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/SpamErrorRate"/>
     </Declaration>
     <Declaration>
@@ -1618,6 +1636,12 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/numberOfRequiredReviewers"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/pentestGateRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/highCriticalFindingsBlockRelease"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
@@ -1675,6 +1699,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/purpose"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/referencesIndustryFramework"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/reviewPercentageLastMonth"/>
@@ -4530,6 +4557,13 @@
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/SecureDevelopmentPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/SecurityIncident"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -5096,6 +5130,38 @@
             <ObjectProperty IRI="/classes/operatesOn"/>
             <Class IRI="/classes/Secret"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecureDevelopmentPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecureDevelopmentPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/checklistCoveragePercent"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecureDevelopmentPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/highCriticalFindingsBlockRelease"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecureDevelopmentPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/pentestGateRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecureDevelopmentPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/referencesIndustryFramework"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/SecurityAdvisoryDocument"/>
@@ -7724,6 +7790,16 @@ name = metadata.name</Literal>
         <Literal>SecretOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/SecureDevelopmentPolicy</IRI>
+        <Literal>Represents a secure development methodology / SDLC policy section within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/SecureDevelopmentPolicy</IRI>
+        <Literal>SecureDevelopmentPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/SecurityAdvisoryDocument</IRI>
         <Literal>SecurityAdvisoryDocument</Literal>
@@ -8080,6 +8156,16 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/checklistCoveragePercent</IRI>
+        <Literal>Percentage of the mandated checklist items explicitly present.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/checklistCoveragePercent</IRI>
+        <Literal>checklistCoveragePercent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/cipherName</IRI>
         <Literal>Name of a cryptographic cipher.</Literal>
     </AnnotationAssertion>
@@ -8192,6 +8278,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/geo</IRI>
         <Literal>geo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/highCriticalFindingsBlockRelease</IRI>
+        <Literal>Indicates whether high/critical findings block the production release.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/highCriticalFindingsBlockRelease</IRI>
+        <Literal>highCriticalFindingsBlockRelease</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8404,6 +8500,16 @@ name = metadata.name</Literal>
         <Literal>overridePasswordPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/pentestGateRequired</IRI>
+        <Literal>Indicates whether a pentest/static-analysis gate is required prior to production release.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/pentestGateRequired</IRI>
+        <Literal>pentestGateRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/privileged</IRI>
         <Literal>privileged</Literal>
@@ -8452,6 +8558,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/recoveryFrequency</IRI>
         <Literal>recoveryFrequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/referencesIndustryFramework</IRI>
+        <Literal>Indicates whether the methodology references an industry framework (e.g., OWASP, SANS, CERT).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/referencesIndustryFramework</IRI>
+        <Literal>referencesIndustryFramework</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
