@@ -124,6 +124,9 @@
         <DataProperty abbreviatedIRI="prop:filteringRequired"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:authorizedSoftwareAndControlledInstallationRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:creation_time"/>
     </Declaration>
     <Declaration>
@@ -1424,6 +1427,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:filteringRequired</AbbreviatedIRI>
         <Literal>filteringRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:authorizedSoftwareAndControlledInstallationRequired</AbbreviatedIRI>
+        <Literal>Indicates whether the standard requires authorized-software and controlled-installation controls on network devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:authorizedSoftwareAndControlledInstallationRequired</AbbreviatedIRI>
+        <Literal>authorizedSoftwareAndControlledInstallationRequired</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

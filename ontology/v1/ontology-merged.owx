@@ -1251,6 +1251,9 @@
         <DataProperty IRI="/properties/authorizationTypes"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/authorizedSoftwareAndControlledInstallationRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/call"/>
     </Declaration>
     <Declaration>
@@ -4283,6 +4286,13 @@
         <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/antispoofingRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/authorizedSoftwareAndControlledInstallationRequired"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -8932,6 +8942,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/properties/auditInterval</IRI>
         <Literal>The time needed for an audit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/authorizedSoftwareAndControlledInstallationRequired</IRI>
+        <Literal>Indicates whether the standard requires authorized-software and controlled-installation controls on network devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/authorizedSoftwareAndControlledInstallationRequired</IRI>
+        <Literal>authorizedSoftwareAndControlledInstallationRequired</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
