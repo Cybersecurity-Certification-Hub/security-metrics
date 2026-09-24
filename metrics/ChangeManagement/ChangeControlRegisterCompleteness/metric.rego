@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"mandatoryFieldCompletenessPercent" in object.keys(ccm.requestForChange)
-	is_number(ccm.requestForChange.mandatoryFieldCompletenessPercent)
 	"PolicyDocument" in input.type
 }
 
