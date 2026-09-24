@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"notificationWindowHours" in object.keys(securityIncident)
-	is_number(securityIncident.notificationWindowHours)
 	"PolicyDocument" in input.type
 }
 

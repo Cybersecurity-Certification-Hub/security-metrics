@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"registryAndSlaStated" in object.keys(securityIncident)
-	is_boolean(securityIncident.registryAndSlaStated)
 	"PolicyDocument" in input.type
 }
 

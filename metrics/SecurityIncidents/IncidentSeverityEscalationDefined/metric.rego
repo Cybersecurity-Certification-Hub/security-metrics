@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"severityAndEscalationDefined" in object.keys(securityIncident)
-	is_boolean(securityIncident.severityAndEscalationDefined)
 	"PolicyDocument" in input.type
 }
 
