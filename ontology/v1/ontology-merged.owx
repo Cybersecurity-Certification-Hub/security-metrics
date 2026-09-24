@@ -1704,7 +1704,7 @@
         <Class IRI="/classes/AccessControlTypePolicy"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/authorizationTypes"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2429,7 +2429,7 @@
         <Class IRI="/classes/ComplianceMethodologyPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/methodology"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
