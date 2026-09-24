@@ -80,6 +80,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="res:SecurityPolicyReview"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:ownerAndApprovalDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="res:Training"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="res:annualUpdateCompleted"/>

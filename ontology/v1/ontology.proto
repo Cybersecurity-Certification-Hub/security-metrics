@@ -4237,6 +4237,8 @@ message SecurityPolicyReview {
 
 	// The interval refers to the interval in months.
 	optional int32 interval_months = 7860;
+	// Indicates whether an accountable owner and an approval date/signature are both stated for the policy.
+	optional bool owner_and_approval_defined = 16461;
 }
 
 // SecurityTraining is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.

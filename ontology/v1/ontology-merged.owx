@@ -1128,6 +1128,9 @@
         <DataProperty IRI="/classes/overridePasswordPolicy"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/ownerAndApprovalDefined"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/poisonedDataLevel"/>
     </Declaration>
     <Declaration>
@@ -5164,6 +5167,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/SecurityPolicyReview"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/ownerAndApprovalDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/SecurityTraining"/>
         <Class IRI="/classes/Training"/>
     </SubClassOf>
@@ -8402,6 +8412,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/overridePasswordPolicy</IRI>
         <Literal>overridePasswordPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ownerAndApprovalDefined</IRI>
+        <Literal>Indicates whether an accountable owner and an approval date/signature are both stated for the policy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ownerAndApprovalDefined</IRI>
+        <Literal>ownerAndApprovalDefined</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
