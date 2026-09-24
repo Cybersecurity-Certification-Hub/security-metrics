@@ -1897,6 +1897,7 @@ message Functionality {
 		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
 		LeastPrivilegePolicy least_privilege_policy = 15025;
+		LiabilityPolicy liability_policy = 13060;
 		NeedToKnowPolicy need_to_know_policy = 17201;
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
@@ -2477,6 +2478,16 @@ message LeastPrivilegePolicy {
 	option (resource_type_names) = "Functionality";
 
 	optional bool is_defined = 18064;
+}
+
+// LiabilityPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
+// Represents a liability/cost-assignment clause within a PolicyDocument.
+message LiabilityPolicy {
+	option (resource_type_names) = "LiabilityPolicy";
+	option (resource_type_names) = "Policies";
+	option (resource_type_names) = "Functionality";
+
+	bool costs_explicitly_assigned_to_provider = 15728;
 }
 
 // Library is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3418,6 +3429,7 @@ message Policies {
 		ComplianceMethodologyPolicy compliance_methodology_policy = 3736;
 		DataConfidentialitySDNPolicy data_confidentiality_sdn_policy = 12690;
 		LeastPrivilegePolicy least_privilege_policy = 15025;
+		LiabilityPolicy liability_policy = 13060;
 		NeedToKnowPolicy need_to_know_policy = 17201;
 		NetworkThreatMitigationPolicy network_threat_mitigation_policy = 4508;
 		SDNFunctionValidationPolicy sdn_function_validation_policy = 1891;
@@ -3460,6 +3472,7 @@ message PolicyDocument {
 	repeated DocumentSignature document_signatures  = 7191;
 	repeated Governance governances  = 4759;
 	LeastPrivilegePolicy least_privilege_policy = 12663;
+	LiabilityPolicy liability_policy = 9304;
 	MonitoringProcedure monitoring_procedure = 11357;
 	NeedToKnowPolicy need_to_know_policy = 3585;
 	NetworkThreatMitigationPolicy network_threat_mitigation_policy = 9407;
