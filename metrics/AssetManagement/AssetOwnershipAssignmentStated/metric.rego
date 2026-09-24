@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"ownerAssignmentStated" in object.keys(assetInventory)
-	is_boolean(assetInventory.ownerAssignmentStated)
 	"PolicyDocument" in input.type
 }
 
