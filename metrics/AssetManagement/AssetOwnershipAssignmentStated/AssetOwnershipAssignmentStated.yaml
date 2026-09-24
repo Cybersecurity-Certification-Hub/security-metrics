@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "5508fa75-0c0f-455b-847f-761fffc9c32c"
+name: "AssetOwnershipAssignmentStated"
+description: "This rule assesses whether a [PolicyDocument] includes [AssetInventory] with its [p1:ownerAssignmentStated] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Who is assigned as the owner of each asset class/type?"
+    keywords: ["asset owner", "owner shall be assigned", "ownership is reassigned", "Asset Owners -- maintain accurate classification and ownership records"]
+category: "AssetManagement"
+version: "v1"
+comments: "The policy must explicitly assign an owner per asset class/type."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

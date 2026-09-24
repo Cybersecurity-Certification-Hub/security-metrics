@@ -1053,6 +1053,9 @@
         <DataProperty IRI="/classes/intervalMonths"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/inventoryDefined"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/isActive"/>
     </Declaration>
     <Declaration>
@@ -1126,6 +1129,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/overridePasswordPolicy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/ownerAssignmentStated"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/poisonedDataLevel"/>
@@ -1819,6 +1825,20 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/completedReviewPercentage"/>
             <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/inventoryDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/ownerAssignmentStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -8224,6 +8244,16 @@ name = metadata.name</Literal>
         <Literal>intervalMonths</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/inventoryDefined</IRI>
+        <Literal>Indicates whether an asset inventory is defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/inventoryDefined</IRI>
+        <Literal>inventoryDefined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/isActive</IRI>
         <Literal>isActive</Literal>
@@ -8402,6 +8432,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/overridePasswordPolicy</IRI>
         <Literal>overridePasswordPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ownerAssignmentStated</IRI>
+        <Literal>Indicates whether an owner is assigned for each asset class/type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ownerAssignmentStated</IRI>
+        <Literal>ownerAssignmentStated</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
