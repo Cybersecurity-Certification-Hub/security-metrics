@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"anonymizationRequiredForNonProd" in object.keys(testDataPolicy)
-	is_boolean(testDataPolicy.anonymizationRequiredForNonProd)
 	"PolicyDocument" in input.type
 }
 

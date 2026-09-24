@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"technique" in object.keys(testDataPolicy)
-	is_string(testDataPolicy.technique)
 	"PolicyDocument" in input.type
 }
 
