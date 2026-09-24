@@ -12,7 +12,7 @@ implementationGuidelines:
     keywords: ["approving changes", "change control", "modification of the configuration"]
 category: DevelopmentLifeCycle
 version: "v1"
-comments: "Check whether there was a change approval before deployment to production. Also backs AMOE's CHG-01-M1 (change_control_procedure), which asks the same question of the same RequestForChange.approvedBeforeDeployment field; a separate ChangeControlProcedureDocumented metric was proposed for it (PR #395) but would have been a functional duplicate of this metric with identical field, operator, and threshold, so the AMOE mapping was added here instead."
+comments: "Check whether there was a change approval before deployment to production."
 # ====== Configuration ======
 configuration:
   p1:
