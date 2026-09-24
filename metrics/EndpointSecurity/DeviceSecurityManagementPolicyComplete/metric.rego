@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"allMandatedControlsAddressed" in object.keys(deviceManagementPolicy)
-	is_boolean(deviceManagementPolicy.allMandatedControlsAddressed)
 	"PolicyDocument" in input.type
 }
 

@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"checklistCoveragePercent" in object.keys(deviceManagementPolicy)
-	is_number(deviceManagementPolicy.checklistCoveragePercent)
 	"PolicyDocument" in input.type
 }
 
