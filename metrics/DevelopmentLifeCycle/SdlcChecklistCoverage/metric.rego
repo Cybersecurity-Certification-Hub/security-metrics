@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"checklistCoveragePercent" in object.keys(secureDevelopmentPolicy)
-	is_number(secureDevelopmentPolicy.checklistCoveragePercent)
 	"PolicyDocument" in input.type
 }
 

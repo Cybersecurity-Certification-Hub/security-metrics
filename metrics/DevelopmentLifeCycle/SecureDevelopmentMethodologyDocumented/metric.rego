@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"referencesIndustryFramework" in object.keys(secureDevelopmentPolicy)
-	is_boolean(secureDevelopmentPolicy.referencesIndustryFramework)
 	"PolicyDocument" in input.type
 }
 
