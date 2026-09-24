@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "eb8d0814-9def-4031-840c-e0c19d681420"
+name: "SecurityTrainingPlanDocumented"
+description: "This rule assesses whether a [PolicyDocument] includes [AwarenessTraining] with its [p1:planDocumented] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the organization maintain a documented cybersecurity training and awareness plan?"
+    keywords: ["training plan", "training and awareness actions", "cybersecurity training"]
+category: "Governance"
+version: "v1"
+comments: "The organization must maintain a documented cybersecurity training and awareness plan for employees."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
