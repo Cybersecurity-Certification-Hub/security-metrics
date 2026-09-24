@@ -3851,6 +3851,7 @@ message RequestForChange {
 	option (resource_type_names) = "RequestForChange";
 	option (resource_type_names) = "Functionality";
 
+	optional float mandatory_field_completeness_percent = 13417;
 	optional bool approved_before_deployment = 16813;
 }
 
