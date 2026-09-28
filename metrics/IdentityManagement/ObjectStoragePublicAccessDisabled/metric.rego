@@ -11,7 +11,7 @@ default applicable = false
 
 applicable if {
 	# the resource type should be an ObjectStorage
-	storage.type[_] == "ObjectStorage"
+	input.type[_] == "ObjectStorage"
 	"publicAccess" in object.keys(input.publicAccess)
 }
 
