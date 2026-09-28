@@ -17,7 +17,6 @@ vulnerability_sources contains vul if {
 }
 
 # Collect the singular vulnerability field from functionality objects if it exists.
-# This matches the JSON example you provided.
 vulnerability_sources contains vul if {
     some functionality in input.functionalities
     vul := functionality.vulnerability
