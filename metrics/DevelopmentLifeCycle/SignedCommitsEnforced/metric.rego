@@ -9,7 +9,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
-    sc != {}
+    "enforced" in object.keys(input.signedCommits)
     "CodeRepository" in input.type
 }
 
