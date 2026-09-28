@@ -679,7 +679,7 @@
         <Class abbreviatedIRI="core:AccessControlTypePolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:authorizationTypes"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -708,7 +708,7 @@
         <Class abbreviatedIRI="core:ComplianceMethodologyPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:methodology"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
