@@ -9,7 +9,8 @@ default applicable = false
 default compliant = false
 
 applicable if {
-    sa != {}
+    some attestation in sa
+    attestation.enabled = _
     "Application" in input.type
 }
 
