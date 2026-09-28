@@ -6,11 +6,12 @@ import rego.v1
 import input.atRestEncryption as enc
 
 default applicable = false
-
 default compliant = false
 
 applicable if {
-	enc
+	"Storage" in input.type
+	e := enc[_]
+	"enabled" in object.keys(e)
 }
 
 compliant if {
