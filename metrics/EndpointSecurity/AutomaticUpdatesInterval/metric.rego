@@ -11,7 +11,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
-	au
+	"interval" in object.keys(input.automaticUpdates)
 	"VirtualMachine" in input.type
 }
 
