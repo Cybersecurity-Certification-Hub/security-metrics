@@ -1,4 +1,4 @@
 {
-    "operator": "isIn",
-    "target_value": "[centrally, decentralized, distributed, central]"
+    "operator": "allIn",
+    "target_value": ["centrally", "decentralized", "distributed", "central"]
 }
