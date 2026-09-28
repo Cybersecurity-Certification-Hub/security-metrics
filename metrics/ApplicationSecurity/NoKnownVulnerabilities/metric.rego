@@ -5,6 +5,10 @@ import rego.v1
 default applicable := false
 default compliant := false
 
+# Vulnerabilities are attached to various objects and can appear in different structures:
+# as a single element, an array, or at different nesting levels (e.g., `vulnerabilities` or `code.vulnerability`).
+# These checks account for these structural variations to ensure robust assessment..
+
 # Collect the top-level vulnerabilities field if it exists.
 vulnerability_sources contains vul if {
     vul := input.vulnerabilities
