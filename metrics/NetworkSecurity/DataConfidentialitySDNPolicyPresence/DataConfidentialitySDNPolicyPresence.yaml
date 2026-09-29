@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "dddd9af3-baef-4424-bad0-0bd824222c1f"
-name: "DataConfidentialitySDNPolicyPresence"
-description: "This rule assesses whether a [PolicyDocument] includes [DataConfidentialitySDNPolicy] with [p1:isDefined] set correctly."
+name: "DataConfidentialitySdnPolicyPresence"
+description: "This rule assesses whether a [PolicyDocument] includes [DataConfidentialitySdnPolicy] with [p1:isDefined] set correctly."
 
 implementationGuidelines:
   AMOE:

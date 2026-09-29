@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	dataConfidentialitySDNPolicy != {}
+	"isDefined" in object.keys(input.dataConfidentialitySdnPolicy)
 	"PolicyDocument" in input.type
 }
 
@@ -22,4 +22,4 @@ message := "The policy document defines a data confidentiality policy for SDN." 
 	not compliant
 }
 
-results := [comparison_result("dataConfidentialitySDNPolicy.isDefined", dataConfidentialitySDNPolicy.isDefined)]
+results := [comparison_result("dataConfidentialitySdnPolicy.isDefined", dataConfidentialitySdnPolicy.isDefined)]
