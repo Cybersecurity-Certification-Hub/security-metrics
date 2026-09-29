@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	leastPrivilegePolicy != {}
+	"isDefined" in object.keys(input.leastPrivilegePolicy)
 	"PolicyDocument" in input.type
 }
 

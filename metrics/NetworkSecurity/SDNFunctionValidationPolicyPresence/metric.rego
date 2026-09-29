@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	sdnFunctionValidationPolicy != {}
+	"isDefined" in object.keys(input.sdnFunctionValidationPolicy)
 	"PolicyDocument" in input.type
 }
 
