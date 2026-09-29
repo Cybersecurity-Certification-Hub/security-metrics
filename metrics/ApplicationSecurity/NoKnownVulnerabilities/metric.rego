@@ -33,9 +33,8 @@ applicable if {
 
 # The resource is compliant only when all found fields are empty objects.
 compliant if {
-    applicable
-
-    every vul in vulnerability_sources {
+	applicable
+   every vul in vulnerability_sources {
         vul == {}
     }
 }
