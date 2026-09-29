@@ -22,4 +22,4 @@ message := "The policy document defines a data confidentiality policy for SDN." 
 	not compliant
 }
 
-results := [comparison_result("dataConfidentialitySdnPolicy.isDefined", dataConfidentialitySDNPolicy.isDefined)]
+results := [comparison_result("dataConfidentialitySdnPolicy.isDefined", dataConfidentialitySdnPolicy.isDefined)]
