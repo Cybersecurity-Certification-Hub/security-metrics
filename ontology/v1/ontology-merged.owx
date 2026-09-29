@@ -4483,6 +4483,13 @@
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/AwarenessTraining"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Backup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -5397,7 +5404,7 @@
         <Class IRI="/classes/Training"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/annualCadenceStated"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -5411,14 +5418,14 @@
         <Class IRI="/classes/Training"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/planDocumented"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Training"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/roleAdjustedTracksStated"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>

@@ -12,5 +12,5 @@ comments: "The training plan must be role-adjusted for specific functions. Split
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["role-based tracks", "role-based", "In addition to the baseline module, the plan includes role-based tracks"]

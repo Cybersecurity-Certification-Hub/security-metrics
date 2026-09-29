@@ -12,5 +12,5 @@ comments: "The organization must maintain a documented cybersecurity training an
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["training plan", "training and awareness actions", "cybersecurity training", "Awareness Plan", "Information Security Training and Awareness Plan"]

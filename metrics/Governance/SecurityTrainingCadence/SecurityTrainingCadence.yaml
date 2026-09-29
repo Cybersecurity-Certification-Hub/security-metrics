@@ -12,5 +12,5 @@ comments: "The training plan must be delivered at least annually. Split out of t
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["annually"]

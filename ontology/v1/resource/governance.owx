@@ -97,21 +97,21 @@
         <Class abbreviatedIRI="res:Training"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="res:annualCadenceStated"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:Training"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="res:roleAdjustedTracksStated"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="res:Training"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="res:planDocumented"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>

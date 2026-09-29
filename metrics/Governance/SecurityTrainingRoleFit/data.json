@@ -1,4 +1,8 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "role-based tracks",
+        "role-based",
+        "In addition to the baseline module, the plan includes role-based tracks"
+    ]
 }
