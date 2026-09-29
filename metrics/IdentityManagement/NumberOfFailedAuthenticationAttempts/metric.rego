@@ -8,7 +8,7 @@ default compliant := false
 
 # Finds numeric failedAuthenticationAttempts values below an authenticity object
 # at any nesting level.
-failed_authentication_attempts := [
+failed_authentication_attempts_field := [
 	attempt |
 	walk(input, [path, attempt])
 	count(path) > 0
@@ -19,13 +19,13 @@ failed_authentication_attempts := [
 
 # The metric is applicable when at least one matching value exists.
 applicable if {
-	count(failed_authentication_attempts) > 0
+	count(failed_authentication_attempts_field) > 0
 }
 
 # Creates one comparison result for every discovered value.
 results := [
 	comparison_result("authenticity.failedAuthenticationAttempts", attempt) |
-	some attempt in failed_authentication_attempts
+	some attempt in failed_authentication_attempts_field
 ]
 
 compliant if {
