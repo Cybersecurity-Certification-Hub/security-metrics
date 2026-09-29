@@ -16,4 +16,4 @@ compliant if {
 	every r in results { r.success }
 }
 
-results := [comparison_result("numberOfRequiredReviewers", numberOfRequiredReviewers)]
+results := [comparison_result("numberOfRequiredReviewers", input.numberOfRequiredReviewers)]
