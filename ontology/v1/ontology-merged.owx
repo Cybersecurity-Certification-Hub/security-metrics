@@ -1002,6 +1002,9 @@
         <DataProperty IRI="/classes/description"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/dhGroup"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/disablePasswordPolicy"/>
     </Declaration>
     <Declaration>
@@ -2196,6 +2199,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/authenticationMechanism"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CipherSuite"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/dhGroup"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
