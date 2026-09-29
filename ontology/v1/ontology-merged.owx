@@ -1611,6 +1611,9 @@
         <Datatype IRI="/datatypes/cpgNode"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/roleAdjustedTracksStated"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes//mode"/>
     </Declaration>
     <Declaration>
@@ -1665,6 +1668,9 @@
         <DataProperty IRI="/properties/team"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/planDocumented"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/classes/hasType"/>
     </Declaration>
     <Declaration>
@@ -1675,6 +1681,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/annualUpdateCompleted"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/annualCadenceStated"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/purpose"/>
@@ -4484,6 +4493,13 @@
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/AwarenessTraining"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Backup"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -5397,8 +5413,29 @@
     <SubClassOf>
         <Class IRI="/classes/Training"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/annualCadenceStated"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Training"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/classes/annualUpdateCompleted"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Training"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/planDocumented"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Training"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/roleAdjustedTracksStated"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -8034,6 +8071,16 @@ name = metadata.name</Literal>
         <Literal>allRequiredInformationRecorded</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/annualCadenceStated</IRI>
+        <Literal>Indicates whether the training plan states it is delivered at least annually.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/annualCadenceStated</IRI>
+        <Literal>annualCadenceStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/apiHitsPerMonth</IRI>
         <Literal>apiHitsPerMonth</Literal>
@@ -8414,6 +8461,16 @@ name = metadata.name</Literal>
         <Literal>overridePasswordPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/planDocumented</IRI>
+        <Literal>Indicates whether a documented training and awareness plan is maintained.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/planDocumented</IRI>
+        <Literal>planDocumented</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/privileged</IRI>
         <Literal>privileged</Literal>
@@ -8492,6 +8549,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/rightPrincipal</IRI>
         <Literal>rightPrincipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/roleAdjustedTracksStated</IRI>
+        <Literal>Indicates whether the training plan includes role-based tracks adjusted by employee function.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/roleAdjustedTracksStated</IRI>
+        <Literal>roleAdjustedTracksStated</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
