@@ -9,7 +9,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
-    cs != {}
+    "enforced" in object.keys(input.codeSignoff)
     "CodeRepository" in input.type
 }
 
