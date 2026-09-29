@@ -6,11 +6,13 @@ import rego.v1
 import input.atRestEncryption as enc
 
 default applicable = false
-
 default compliant = false
 
 applicable if {
-	enc
+	"Storage" in input.type
+	some k
+	e := enc[k]
+	"algorithm" in object.keys(e)
 }
 
 compliant if {
@@ -18,4 +20,4 @@ compliant if {
 	r.success
 }
 
-results := [comparison_result("atRestEncryption.algorithm", e.algorithm) | e := enc[_]]
+results := [comparison_result(sprintf("atRestEncryption.%s.algorithm", [k]), e.algorithm) | some k; e := enc[k]]

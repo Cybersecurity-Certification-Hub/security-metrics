@@ -10,7 +10,8 @@ default compliant = false
 
 applicable if {
 	"Storage" in input.type
-	e := enc[_]
+	some k
+	e := enc[k]
 	"enabled" in object.keys(e)
 }
 
@@ -19,4 +20,4 @@ compliant if {
 	r.success
 }
 
-results := [comparison_result("atRestEncryption.enabled", e.enabled) | e := enc[_]]
+results := [comparison_result(sprintf("atRestEncryption.%s.enabled", [k]), e.enabled) | some k; e := enc[k]]

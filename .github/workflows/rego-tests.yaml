@@ -1,0 +1,51 @@
+name: Rego metric tests
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "metrics/**/*.rego"
+      - "metrics/**/data.json"
+      - ".github/workflows/rego-tests.yaml"
+  pull_request:
+    paths:
+      - "metrics/**/*.rego"
+      - "metrics/**/data.json"
+      - ".github/workflows/rego-tests.yaml"
+
+jobs:
+  opa-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Install OPA
+        uses: open-policy-agent/setup-opa@v2
+        with:
+          version: latest
+
+      - name: Check Rego syntax
+        run: opa check metrics/
+
+      - name: Run metric unit tests
+        run: |
+          set -euo pipefail
+
+          # Each metric's data.json defines operator/target_value at the root
+          # of the data document (see metrics/operators.rego), so metrics
+          # cannot be tested together in a single bundle - two data.json
+          # files would conflict on merge. Instead, run every metric's
+          # tests in its own isolated `opa test` invocation.
+          status=0
+          while IFS= read -r -d '' test_file; do
+            dir=$(dirname "$test_file")
+            echo "::group::opa test $dir"
+            if ! opa test metrics/operators.rego "$dir"; then
+              status=1
+            fi
+            echo "::endgroup::"
+          done < <(find metrics -type f -name 'metric_test.rego' -print0)
+
+          exit $status
