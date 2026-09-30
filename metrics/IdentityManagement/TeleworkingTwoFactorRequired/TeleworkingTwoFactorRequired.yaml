@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["two-factor authentication", "requires a two-factor authentication mechanism"]
 category: "IdentityManagement"
 version: "v1"
-comments: "Teleworking access to internal systems over public networks must require two-factor authentication. Split out of the former combined TeleworkingSecurityControlsRequired metric (see TeleworkingEncryptionRequired for the encryption-only check)."
+comments: "Teleworking access to internal systems over public networks must require two-factor authentication. See TeleworkingEncryptionRequired for the related encryption check."
 # ====== Configuration ======
 configuration:
   p1:

@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["key known by the recipient", "recipient"]
 category: "Cryptography"
 version: "v1"
-comments: "The policy must require the encryption key to be known by the recipient. Split out of the former combined KeyCustodyAndFileNamingControlled metric (see CryptoFilenameRestricted for the file-naming check)."
+comments: "The policy must require the encryption key to be known by the recipient. See CryptoFilenameRestricted for the related file-naming check."
 # ====== Configuration ======
 configuration:
   p1:

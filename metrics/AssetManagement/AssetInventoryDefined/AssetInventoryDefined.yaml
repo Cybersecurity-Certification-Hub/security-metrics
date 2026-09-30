@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["asset inventory", "Asset Inventory", "maintains a complete Asset Inventory"]
 category: "AssetManagement"
 version: "v1"
-comments: "The policy must define an Asset Inventory. Split out of the former combined AssetGovernancePolicyDocumented metric (see AssetOwnershipAssignmentStated for the asset-ownership check)."
+comments: "The policy must define an Asset Inventory. See AssetOwnershipAssignmentStated for the related asset-ownership check."
 # ====== Configuration ======
 configuration:
   p1:

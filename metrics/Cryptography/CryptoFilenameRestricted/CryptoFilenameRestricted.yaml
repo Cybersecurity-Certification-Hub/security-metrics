@@ -8,7 +8,7 @@ implementationGuidelines:
     keywords: ["file name"]
 category: "Cryptography"
 version: "v1"
-comments: "The policy must prohibit sensitive information in file names. Split out of the former combined KeyCustodyAndFileNamingControlled metric (see CryptoKeyRecipientHeld for the recipient-held-key check)."
+comments: "The policy must prohibit sensitive information in file names. See CryptoKeyRecipientHeld for the related recipient-held-key check."
 # ====== Configuration ======
 configuration:
   p1:
