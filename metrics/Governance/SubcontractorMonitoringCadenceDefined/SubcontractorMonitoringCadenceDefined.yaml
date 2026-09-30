@@ -13,4 +13,4 @@ comments: "The addendum must define a concrete monitoring cadence or mechanism (
 configuration:
   p1:
     operator: "isIn"
-    targetValue: ["annual review", "right to audit", "KPI", "compliance report"]
+    targetValue: ["annual review", "right to audit", "right-to-audit", "KPI", "compliance report", "Monitoring and Surveillance", "Vendor Risk Register"]

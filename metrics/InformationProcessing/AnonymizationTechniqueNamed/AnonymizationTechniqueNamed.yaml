@@ -13,4 +13,4 @@ comments: "The procedure must name a specific technique or standard used (e.g., 
 configuration:
   p1:
     operator: "isIn"
-    targetValue: ["masking", "tokenization", "k-anonymity"]
+    targetValue: ["masking", "tokenization", "k-anonymity", "anonymization", "pseudonymization", "dissociation", "fictitious data"]

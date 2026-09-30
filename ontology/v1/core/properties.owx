@@ -1845,9 +1845,4 @@
         <AbbreviatedIRI>res:mfaAndFederationRequiredForRemoteAccess</AbbreviatedIRI>
         <Literal>mfaAndFederationRequiredForRemoteAccess</Literal>
     </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:thirdPartyExchangeRulesDefined</AbbreviatedIRI>
-        <Literal>Indicates whether the policy specifically defines rules for information exchange with third parties.</Literal>
-    </AnnotationAssertion>
 </Ontology>
