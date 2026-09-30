@@ -9,9 +9,8 @@ default applicable = false
 default compliant = false
 
 applicable if {
-	l3
-    # the resource type should be an Network Interface
-	input.type[_] == "NetworkInterface"
+	"restrictedPorts" in object.keys(l3)
+    input.type[_] == "NetworkInterface"
 }
 
 compliant if {
