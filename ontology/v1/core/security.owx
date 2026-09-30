@@ -1297,6 +1297,20 @@
         <Class abbreviatedIRI="core:ZoneRedundancy"/>
         <Class abbreviatedIRI="core:Redundancy"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:ownerAssignmentStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:inventoryDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:listString</AbbreviatedIRI>
