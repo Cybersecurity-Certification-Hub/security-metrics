@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "9a2f6d3e-1c8b-4e7a-b5d2-3f8a1c9e6b47"
+name: "TeleworkingEncryptionRequired"
+description: "This rule assesses whether a [PolicyDocument] includes [TeleworkingPolicy] with its [p1:encryptionRequired] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the policy require data encryption for teleworking/remote access sessions?"
+    keywords: ["data encryption", "All remote sessions must use data encryption, at minimum"]
+category: "IdentityManagement"
+version: "v1"
+comments: "Teleworking access to internal systems over public networks must require data encryption."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

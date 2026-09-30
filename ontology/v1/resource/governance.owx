@@ -135,6 +135,13 @@
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="res:SecurityPolicyReview"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="res:ownerAndApprovalDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty IRI="rdfs:comment"/>
         <AbbreviatedIRI>core:Governance</AbbreviatedIRI>
