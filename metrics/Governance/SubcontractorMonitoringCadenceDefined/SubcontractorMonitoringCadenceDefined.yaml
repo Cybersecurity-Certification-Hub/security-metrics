@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "1020d975-e938-4137-b0a8-8372875aa3e6"
+name: "SubcontractorMonitoringCadenceDefined"
+description: "This rule assesses whether a [PolicyDocument] includes [OutsourcingPolicy] with its [p1:monitoringMechanism] property set to a compliant value."
+implementationGuidelines:
+  AMOE:
+    question: "Does the addendum define a monitoring cadence or mechanism (e.g., annual review, right-to-audit, KPI reporting) for subcontractor compliance?"
+    keywords: ["annual review", "right to audit", "KPI", "compliance report"]
+category: "Governance"
+version: "v1"
+comments: "The addendum must define a concrete monitoring cadence or mechanism (e.g., annual review, right-to-audit, KPI reporting) for subcontractor compliance."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: ["annual review", "right to audit", "KPI", "compliance report"]

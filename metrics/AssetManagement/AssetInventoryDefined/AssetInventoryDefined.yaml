@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "36c18abe-1f99-41a4-9924-945a04af81c1"
+name: "AssetInventoryDefined"
+description: "This rule assesses whether a [PolicyDocument] includes [AssetInventory] with its [p1:inventoryDefined] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the policy define an Asset Inventory?"
+    keywords: ["asset inventory", "Asset Inventory", "maintains a complete Asset Inventory"]
+category: "AssetManagement"
+version: "v1"
+comments: "The policy must define an Asset Inventory. Split out of the former combined AssetGovernancePolicyDocumented metric (see AssetOwnershipAssignmentStated for the asset-ownership check)."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
