@@ -1,4 +1,10 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "encryption policy",
+        "encrypted channels",
+        "HTTPS",
+        "sFTP",
+        "sFTP or HTTPS"
+    ]
 }

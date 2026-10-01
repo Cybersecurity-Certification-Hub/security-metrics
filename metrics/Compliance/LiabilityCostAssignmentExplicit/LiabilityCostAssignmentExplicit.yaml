@@ -12,5 +12,5 @@ comments: "The clause must explicitly assign costs/responsibility to the Service
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["solely responsible", "assume the responsibility", "costs arising from such non-compliance", "must assume the responsibility and costs arising from such non-compliance"]

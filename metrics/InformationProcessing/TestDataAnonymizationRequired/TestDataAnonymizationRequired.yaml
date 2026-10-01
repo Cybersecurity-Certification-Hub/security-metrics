@@ -12,5 +12,5 @@ comments: "The procedure must require anonymization/pseudonymization/fictitious 
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["anonymized", "pseudonymization", "fictitious data"]

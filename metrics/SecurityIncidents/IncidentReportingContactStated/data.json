@@ -1,4 +1,13 @@
 {
-    "operator": "hasAny",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "designated contact",
+        "notification contact",
+        "NovaBank",
+        "CISO",
+        "CISO's office",
+        "the SOC",
+        "SOC",
+        "SOC team"
+    ]
 }

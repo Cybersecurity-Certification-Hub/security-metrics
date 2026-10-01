@@ -1,4 +1,13 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "audit logs",
+        "surveillance and control",
+        "monitor",
+        "24x7 monitor coverage by the SOC",
+        "continuous surveillance",
+        "anomalies",
+        "verify the correct use",
+        "security events"
+    ]
 }
