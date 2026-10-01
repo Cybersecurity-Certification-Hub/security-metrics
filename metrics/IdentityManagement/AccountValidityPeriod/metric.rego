@@ -7,13 +7,13 @@ default applicable := false
 
 default compliant := false
 
-pwd := input.passwordBasedAuthentication
+amp := input.accountManagementPolicy
 
 applicable if {
-	"length" in object.keys(input.passwordBasedAuthentication)
+	"valid" in object.keys(input.accountManagementPolicy)
 }
 
 compliant if {
 	# length is in characters
-	compare(data.operator, data.target_value, pwd.length)
+	compare(data.operator, data.target_value, amp.valid)
 }
