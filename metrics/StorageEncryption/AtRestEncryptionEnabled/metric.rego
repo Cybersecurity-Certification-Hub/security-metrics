@@ -6,7 +6,6 @@ import rego.v1
 import input.atRestEncryption as enc
 
 default applicable = false
-
 default compliant = false
 
 applicable if {
