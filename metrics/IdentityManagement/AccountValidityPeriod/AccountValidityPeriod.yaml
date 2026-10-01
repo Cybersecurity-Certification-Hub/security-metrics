@@ -13,5 +13,5 @@ comments: This metric evaluates the validity of accounts after inactivity. It en
 # ====== Configuration ======
 configuration:
   p1:
-    operator: ">="
+    operator: "<="
     targetValue: 6
