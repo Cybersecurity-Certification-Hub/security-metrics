@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: "AESKeyLength"
+description: "Checks that when AES encryption is configured in code or infrastructure, the key length is secure. | Functionality.CipherSuite"
+category: "Cryptography"
+version: "1.0"
+comments: ""
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "256"
