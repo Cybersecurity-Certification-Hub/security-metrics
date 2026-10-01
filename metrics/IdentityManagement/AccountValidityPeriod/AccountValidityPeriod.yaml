@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: AccountValidityPeriod
+name: AccountValidityPeriod
 
 description: This rule assesses whether a [PolicyDocument] that offers the property [AccountManagementPolicy], has [p1:valid] set correctly.
 implementationGuidelines:
