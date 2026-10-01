@@ -10,7 +10,7 @@ default compliant := false
 pwd := input.passwordBasedAuthentication
 
 applicable if {
-	pwd
+	"length" in object.keys(pwd)
 }
 
 compliant if {
