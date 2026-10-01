@@ -1,4 +1,4 @@
-package cch.metrics.password_length
+package cch.metrics.account_management_policy
 
 import data.cch.compare
 import rego.v1
