@@ -269,13 +269,16 @@
         <DataProperty abbreviatedIRI="prop:keyUrl"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:predicate"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:region"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:restrictedPorts"/>
+        <DataProperty abbreviatedIRI="prop:storageFacility"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:storageFacility"/>
+        <DataProperty abbreviatedIRI="prop:subject"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:tlsSignatureAlgorithm"/>
@@ -502,6 +505,20 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:reviewFrequency"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:service"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:AtRestEncryption"/>
         <Class abbreviatedIRI="core:Encryption"/>
     </SubClassOf>
@@ -637,6 +654,20 @@
             <DataProperty abbreviatedIRI="core:retentionPeriod"/>
             <Literal>xsd:java.time.Duration</Literal>
         </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Backup"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:frequency"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Backup"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:recoveryFrequency"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:BootLog"/>
@@ -837,7 +868,14 @@
         <Class abbreviatedIRI="core:L3Firewall"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:restrictedPorts"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:L3Firewall"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:allowedSources"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1148,6 +1186,24 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:SoftwareAttestation"/>
+        <Class abbreviatedIRI="core:Attestation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SoftwareAttestation"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:predicate"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SoftwareAttestation"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:subject"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:TransportEncryption"/>
         <Class abbreviatedIRI="core:Encryption"/>
     </SubClassOf>
@@ -1237,10 +1293,6 @@
         <Class abbreviatedIRI="core:ZoneRedundancy"/>
         <Class abbreviatedIRI="core:Redundancy"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:SoftwareAttestation"/>
-        <Class abbreviatedIRI="core:Attestation"/>
-    </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>xsd:listString</AbbreviatedIRI>
@@ -1295,6 +1347,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
         <Literal>Class representing the inventory of assets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AssetInventory</AbbreviatedIRI>
+        <Literal>Service contains the name of the service (e.g., Asset Management).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1547,6 +1604,11 @@
         <Literal xml:lang="en">PasswordBasedAuthentication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:predicate</AbbreviatedIRI>
+        <Literal>predicate: Property being affirmed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:RBAC</AbbreviatedIRI>
         <Literal xml:lang="english">RBAC</Literal>
@@ -1605,6 +1667,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:SingleSignOn</AbbreviatedIRI>
         <Literal xml:lang="english">SingleSignOn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:subject</AbbreviatedIRI>
+        <Literal>subject: Subject of an assertion</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1943,6 +2010,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:predicate</AbbreviatedIRI>
+        <Literal>predicate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:privileged</AbbreviatedIRI>
         <Literal>privileged</Literal>
     </AnnotationAssertion>
@@ -2065,6 +2137,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:startLine</AbbreviatedIRI>
         <Literal>startLine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:subject</AbbreviatedIRI>
+        <Literal>subject</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

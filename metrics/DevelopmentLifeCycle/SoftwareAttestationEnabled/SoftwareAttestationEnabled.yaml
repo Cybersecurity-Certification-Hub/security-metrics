@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id:  514100d2-034f-4fa2-9254-9db272ca8ab0
+name: SoftwareAttestationEnabled
+description: This rule assesses whether an [Application] has enabled [p1:SoftwareAttestations].
+category: DevelopmentLifeCycle
+version: "v1" 
+comments: Ensure that an application's artifact is verifiable through software attestation. Each software attestation supports trust in the build pipeline.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

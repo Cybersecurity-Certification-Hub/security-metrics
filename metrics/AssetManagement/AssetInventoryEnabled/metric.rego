@@ -9,12 +9,12 @@ default compliant := false
 
 applicable if {
 	document != {}
-	document.cloudFeature
+	document.assetInventory
 	"PolicyDocument" in document.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.cloudFeature.property)
+	compare(data.operator, data.target_value, document.assetInventory.service)
 }
 
 message := "The policy document defines an enabled asset inventory cloud feature." if {
