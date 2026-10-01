@@ -1,0 +1,24 @@
+{
+    "creation_time": {
+        "seconds": 1633072800,
+        "nanos": 0
+    },
+    "description": "Example description for a public IP address",
+    "id": "123e4567-e89b-12d3-a456-426614175000",
+    "internet_accessible_endpoint": true,
+    "labels": {
+        "environment": "test"
+    },
+    "name": "Example Public IP",
+    "raw": "",
+    "geo_location": {
+        "region": "Germany"
+    },
+    "d_do_s_protection": {
+        "enabled": true
+    },
+    "parent_id": "123e4567-e89b-12d3-a456-426614175001",
+    "usage_statistics": {
+        "api_hits_per_month": 25
+    }
+}
