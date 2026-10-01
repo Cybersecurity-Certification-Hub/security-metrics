@@ -8,5 +8,5 @@ comments: Using secure TLS cipher suites (e.g., those that provide forward secre
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "isIn"
+    operator: "allIn"
     targetValue: ["TLS_AES_128_GCM_SHA256", "TLS_AES_256_GCM_SHA384", "TLS_CHACHA20_POLY1305", "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256", "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"]

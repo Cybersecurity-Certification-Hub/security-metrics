@@ -2,7 +2,7 @@ package cch.metrics.data_loss_prevention_policy_documented
 
 import data.cch.comparison_result
 import rego.v1
-import input.dataConfidentialitySDNPolicy as dataConfidentialitySDNPolicy
+import input.dataConfidentialitySdnPolicy as dataConfidentialitySDNPolicy
 
 default applicable := false
 default compliant := false
@@ -22,4 +22,4 @@ message := "The Data Loss Prevention policy restricts downloading and extracting
 	not compliant
 }
 
-results := [comparison_result("dataConfidentialitySDNPolicy.restrictsDownloadAndExtraction", dataConfidentialitySDNPolicy.restrictsDownloadAndExtraction)]
+results := [comparison_result("dataConfidentialitySdnPolicy.restrictsDownloadAndExtraction", dataConfidentialitySDNPolicy.restrictsDownloadAndExtraction)]

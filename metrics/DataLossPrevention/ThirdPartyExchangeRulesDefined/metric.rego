@@ -2,7 +2,7 @@ package cch.metrics.third_party_exchange_rules_defined
 
 import data.cch.comparison_result
 import rego.v1
-import input.dataConfidentialitySDNPolicy as dataConfidentialitySDNPolicy
+import input.dataConfidentialitySdnPolicy as dataConfidentialitySDNPolicy
 
 default applicable := false
 default compliant := false
@@ -22,4 +22,4 @@ message := "The policy specifically defines rules for information exchange with 
 	not compliant
 }
 
-results := [comparison_result("dataConfidentialitySDNPolicy.thirdPartyExchangeRulesDefined", dataConfidentialitySDNPolicy.thirdPartyExchangeRulesDefined)]
+results := [comparison_result("dataConfidentialitySdnPolicy.thirdPartyExchangeRulesDefined", dataConfidentialitySDNPolicy.thirdPartyExchangeRulesDefined)]
