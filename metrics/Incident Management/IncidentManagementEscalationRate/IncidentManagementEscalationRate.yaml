@@ -1,0 +1,15 @@
+# ====== Metadata ======
+id: "50cb5fec-bd79-4108-af20-e67754cc6c83"
+name: "IncidentManagementEscalationRate"
+description: "This rule assesses whether a [Resource] that offers the property [IncidentManagement], has [p1:correctIncidentEscalationRate] set correctly."
+implementationGuidelines:
+  FSC:
+    details: ["- Information on incidents that are upgraded to security incidents"]
+category: "Incident Management"
+version: "1.0"
+comments: "Incident escalation rate - Check whether escalation is in line with defined attributes for (security) incidents | Selector: FSC (Resource Type) [TargetValue is measured in units] [Previous name: MT-IM-02.6H-3]"
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: 1
