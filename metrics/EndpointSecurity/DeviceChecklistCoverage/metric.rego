@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	"checklistCoveragePercent" in object.keys(deviceManagementPolicy)
+	"mandatedControlsCount" in object.keys(deviceManagementPolicy)
 	"PolicyDocument" in input.type
 }
 
@@ -22,4 +22,4 @@ message := "All of the mandated 7-point device checklist is explicitly present."
 	not compliant
 }
 
-results := [comparison_result("deviceManagementPolicy.checklistCoveragePercent", deviceManagementPolicy.checklistCoveragePercent)]
+results := [comparison_result("deviceManagementPolicy.mandatedControlsCount", deviceManagementPolicy.mandatedControlsCount)]

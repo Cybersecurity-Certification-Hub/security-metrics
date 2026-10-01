@@ -1,4 +1,9 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "authorized software",
+        "malware",
+        "antivirus",
+        "Only authorized software may run on network appliances"
+    ]
 }

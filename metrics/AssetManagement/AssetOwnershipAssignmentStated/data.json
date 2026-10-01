@@ -1,4 +1,8 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "asset owner",
+        "ownership is reassigned",
+        "Asset Owners -- maintain accurate classification and ownership records"
+    ]
 }

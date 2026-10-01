@@ -12,5 +12,5 @@ comments: "A Secure Development Methodology document must exist and reference an
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["Secure Development", "SDLC", "OWASP", "CERT Secure Coding standards"]
