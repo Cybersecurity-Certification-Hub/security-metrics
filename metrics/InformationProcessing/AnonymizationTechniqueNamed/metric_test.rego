@@ -9,7 +9,7 @@ test_compliant_when_technique_is_valid if {
 }
 
 test_not_compliant_when_technique_is_out_of_range if {
-	fixture := {"type": ["PolicyDocument"], "testDataPolicy": {"technique": "no technique named"}}
+	fixture := {"type": ["PolicyDocument"], "testDataPolicy": {"technique": "not an accepted answer"}}
 	applicable with input as fixture
 	not compliant with input as fixture
 }

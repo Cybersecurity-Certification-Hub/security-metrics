@@ -12,5 +12,5 @@ comments: "Teleworking access to internal systems over public networks must requ
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["data encryption", "All remote sessions must use data encryption, at minimum"]

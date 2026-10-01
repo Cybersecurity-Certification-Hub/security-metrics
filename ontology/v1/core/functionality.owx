@@ -608,6 +608,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:AuditLogMonitoringPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:monitoringMechanisms"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
         <Class abbreviatedIRI="core:Policies"/>
     </SubClassOf>
@@ -622,14 +629,14 @@
         <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:thirdPartyExchangeRulesDefined"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:restrictsDownloadAndExtraction"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -669,14 +676,14 @@
         <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:antispoofingRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:filteringRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1886,28 +1893,28 @@
         <Class abbreviatedIRI="core:VulnerabilityManagementPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:cvssScoringUsed"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:VulnerabilityManagementPolicy"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:criticalHighSlaStated"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <DataProperty abbreviatedIRI="prop:criticalHighSlaDays"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:VulnerabilityManagementPolicy"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:mediumSlaStated"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <DataProperty abbreviatedIRI="prop:mediumSlaDays"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:VulnerabilityManagementPolicy"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:lowSlaStated"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <DataProperty abbreviatedIRI="prop:lowSlaDays"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1917,15 +1924,8 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:DeviceManagementPolicy"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:checklistCoveragePercent"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="core:DeviceManagementPolicy"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:allMandatedControlsAddressed"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <DataProperty abbreviatedIRI="prop:mandatedControlsCount"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1936,7 +1936,7 @@
         <Class abbreviatedIRI="core:SecureDevelopmentPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:pentestGateRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1950,14 +1950,14 @@
         <Class abbreviatedIRI="core:SecureDevelopmentPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:referencesIndustryFramework"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:SecureDevelopmentPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:highCriticalFindingsBlockRelease"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1968,7 +1968,7 @@
         <Class abbreviatedIRI="core:LiabilityPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:costsExplicitlyAssignedToProvider"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1982,14 +1982,21 @@
         <Class abbreviatedIRI="core:SecurityIncident"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:severityAndEscalationDefined"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:SecurityIncident"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:registryAndSlaStated"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <DataProperty abbreviatedIRI="prop:handlingPeriodHours"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:reportingContacts"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2007,7 +2014,7 @@
         <Class abbreviatedIRI="core:OutsourcingPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:monitoringObligationStated"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2018,21 +2025,21 @@
         <Class abbreviatedIRI="core:CryptographicTransferPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:recipientHeldKeyRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:CryptographicTransferPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:nonDescriptiveFilenameRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:CryptographicTransferPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:encryptedChannelRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2050,7 +2057,7 @@
         <Class abbreviatedIRI="core:TestDataPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:anonymizationRequiredForNonProd"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2067,8 +2074,8 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:AcceptableUsePolicy"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="prop:isDefined"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <DataProperty abbreviatedIRI="prop:documentPurpose"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2082,14 +2089,14 @@
         <Class abbreviatedIRI="core:ComplianceAuditIntervalPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:unrestrictedAccessGranted"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:authorizedSoftwareAndControlledInstallationRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2100,21 +2107,21 @@
         <Class abbreviatedIRI="core:TeleworkingPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:twoFactorRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:TeleworkingPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:encryptionRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:TeleworkingPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:mfaAndFederationRequiredForRemoteAccess"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubDataPropertyOf>

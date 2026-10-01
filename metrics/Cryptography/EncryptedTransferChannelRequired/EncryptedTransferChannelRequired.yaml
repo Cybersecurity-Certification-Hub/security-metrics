@@ -12,5 +12,5 @@ comments: "Confidential/secret information transfers must use encrypted channels
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["encryption policy", "encrypted channels", "HTTPS", "sFTP", "sFTP or HTTPS"]

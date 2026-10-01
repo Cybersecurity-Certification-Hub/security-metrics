@@ -12,5 +12,5 @@ comments: "The procedure must define severity categorization and a named escalat
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["SOC shift lead", "CISO", "Crisis Management Team", "The SOC shift lead"]

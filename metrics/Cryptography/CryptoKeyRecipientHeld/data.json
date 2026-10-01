@@ -1,4 +1,8 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "key known by the recipient",
+        "key known",
+        "the information must be encrypted using a key known by the recipient"
+    ]
 }

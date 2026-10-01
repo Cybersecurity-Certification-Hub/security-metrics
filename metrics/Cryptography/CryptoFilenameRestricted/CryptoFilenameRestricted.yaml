@@ -12,5 +12,5 @@ comments: "The policy must prohibit sensitive information in file names. See Cry
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["sensitive information", "confidential information", "sensitive", "confidential", "internal information", "file name"]

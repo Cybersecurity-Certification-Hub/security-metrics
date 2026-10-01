@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	"allMandatedControlsAddressed" in object.keys(deviceManagementPolicy)
+	"mandatedControlsCount" in object.keys(deviceManagementPolicy)
 	"PolicyDocument" in input.type
 }
 
@@ -22,4 +22,4 @@ message := "The procedure addresses all 7 mandated device controls." if {
 	not compliant
 }
 
-results := [comparison_result("deviceManagementPolicy.allMandatedControlsAddressed", deviceManagementPolicy.allMandatedControlsAddressed)]
+results := [comparison_result("deviceManagementPolicy.mandatedControlsCount", deviceManagementPolicy.mandatedControlsCount)]

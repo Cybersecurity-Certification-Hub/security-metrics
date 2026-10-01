@@ -1,0 +1,25 @@
+package cch.metrics.router_filtering_required
+
+import rego.v1
+
+test_compliant_when_filteringRequired_is_valid if {
+	fixture := {"type": ["PolicyDocument"], "networkThreatMitigationPolicy": {"filteringRequired": ["network filters"]}}
+	applicable with input as fixture
+	compliant with input as fixture
+}
+
+test_not_compliant_when_filteringRequired_is_out_of_range if {
+	fixture := {"type": ["PolicyDocument"], "networkThreatMitigationPolicy": {"filteringRequired": ["not an accepted answer"]}}
+	applicable with input as fixture
+	not compliant with input as fixture
+}
+
+test_not_applicable_when_filteringRequired_is_missing if {
+	fixture := {"type": ["PolicyDocument"], "networkThreatMitigationPolicy": {}}
+	not applicable with input as fixture
+}
+
+test_not_applicable_when_type_is_not_policy_document if {
+	fixture := {"type": ["Resource"], "networkThreatMitigationPolicy": {"filteringRequired": ["network filters"]}}
+	not applicable with input as fixture
+}
