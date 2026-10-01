@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "f9dff7ab-d6b7-40e1-abf1-73d14ee70547"
+name: "InformationSecurityPolicyExceptionsReviewFrequency"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [InformationSecurityPolicy.Exceptions], has [p1:reviewInterval] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: ExceptionsReviewFrequencyQ2
+    question: "How frequently is the list of exceptions reviewed to ensure they are still valid?"
+    keywords: ["exceptions list", "review frequency", "validity"]
+category: "Information Security Policies"
+version: "1.0"
+comments: "This metric assesses the review frequency of exception lists for validity. Measured in months."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 12

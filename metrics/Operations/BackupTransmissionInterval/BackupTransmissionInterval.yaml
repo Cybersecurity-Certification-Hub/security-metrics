@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "cc77962e-d2fb-401a-8468-e8333babf765"
+name: "BackupTransmissionInterval"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Backup], has [p1:transmissionInterval] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: BackupMonitoringPolicyCheckQ4
+    question: "How often is the transmission of backups done?"
+    keywords: ["backup", "data", "transmission"]
+category: "Operations"
+version: "1.0"
+comments: "This metric assesses the frequency of backup transmissions. Measured in days."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 1

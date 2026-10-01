@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "bdf75597-97ff-499a-b139-88d7263d938a"
+name: "SystemBackUpTestingReviewInterval"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [Data.Backup.Procedure], has [p1:reviewInterval] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: SystemBackUpTesting01
+    question: "How often is the system backup procedure checked?"
+    keywords: ["backup", "restore procedure"]
+category: "Operations"
+version: "1.0"
+comments: "This metric assesses the frequency of procedure checks. Measured as string."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: "annually"

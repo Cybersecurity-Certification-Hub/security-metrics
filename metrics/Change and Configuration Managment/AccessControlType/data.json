@@ -1,0 +1,4 @@
+{
+    "operator": "isIn",
+    "target_value": "[RBAC, DAC, MAC]"
+}

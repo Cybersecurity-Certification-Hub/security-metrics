@@ -1,0 +1,17 @@
+# ====== Metadata ======
+id: "84f6f1f0-5851-4b39-91f2-142f248c0a19"
+name: "IncidentManagementIdentificationProcedure"
+description: "This rule assesses whether a [PolicyDocument] that offers the property [SecurityIncident.Procedure], has [p1:identificationProcess] set correctly."
+implementationGuidelines:
+  AMOE:
+    previous_name: IncidentManagementPolicy09
+    question: "How are sources of information considered for identifying incidents?"
+    keywords: ["incident identification", "sources", "security-relevant"]
+category: "Security Incident Management"
+version: "1.0"
+comments: "This metric assesses how sources of information are used to identify incidents. Measured as string."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "isIn"
+    targetValue: "[multi-phase, internal, external]"
