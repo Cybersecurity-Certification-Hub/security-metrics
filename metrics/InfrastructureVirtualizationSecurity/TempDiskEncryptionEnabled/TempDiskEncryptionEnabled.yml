@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: TempDiskEncryptionEnabled
+description: This rule assesses whether a [VirtualMachine] that exposes a [SecurityProfile] with [EncryptionAtHost] has [p1:tempDiskEncryptionEnabled] configured correctly.
+category: InfrastructureVirtualizationSecurity
+version: "1.0"
+comments: Encrypting temporary disks at the host level prevents disclosure of transient workload data that may be written to ephemeral storage during runtime or failover scenarios.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True

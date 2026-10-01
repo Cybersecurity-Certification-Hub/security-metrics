@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: VTPMEnabled
+description: This rule assesses whether a [VirtualMachine] that exposes a [SecurityProfile] with [UefiSettings] has [p1:vTpmEnabled] configured correctly.
+category: InfrastructureVirtualizationSecurity
+version: "1.0"
+comments: Virtual TPMs safeguard the boot chain and provide attestation capabilities for virtual machines, enabling features such as measured boot and BitLocker key protection.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True

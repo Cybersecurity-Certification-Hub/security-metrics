@@ -1,0 +1,11 @@
+# ====== Metadata ======
+id: CacheEncryptionEnabled
+description: This rule assesses whether a [VirtualMachine] that exposes a [SecurityProfile] with [EncryptionAtHost] has [p1:cacheEncryptionEnabled] configured correctly.
+category: InfrastructureVirtualizationSecurity
+version: "1.0"
+comments: Enabling cache encryption at the host protects data cached on the hypervisor from being accessed in the clear, reducing exposure of sensitive information during maintenance operations.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: True

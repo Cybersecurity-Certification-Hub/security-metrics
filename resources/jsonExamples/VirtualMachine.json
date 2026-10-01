@@ -91,6 +91,18 @@
     "remote_attestation": {
         "enabled": true
     },
+    "security_profile": {
+        "uefi_settings": {
+            "secure_boot_enabled": true,
+            "v_tpm_enabled": true
+        },
+        "encryption_at_host": {
+            "enabled": true,
+            "cache_encryption_enabled": true,
+            "temp_disk_encryption_enabled": true,
+            "data_in_transit_encrypted_vm_storage_enabled": true
+        }
+    },
     "parent_id": "123e4567-e89b-12d3-a456-426614174003",
     "resource_logging": {
         "enabled": true,
