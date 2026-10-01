@@ -1,7 +1,12 @@
 # ====== Metadata ======
 id: ed9f79fb-ff19-4626-8911-a3484a9b7639
 name: AtRestEncryptionAlgorithm
-description: This rule assesses whether a [Storage] has its [AtRestEncryption] [p1:algorithm] correctly configured.
+description: This rule assesses whether a [Storage] or [PolicyDocument] has its [AtRestEncryption] [p1:algorithm] correctly configured.
+implementationGuidelines:
+  AMOE:
+    previous_name: EncryptionPolicyQ4
+    question: "What minimum key length must the Advanced Encryption Algorithm (AES) standard have? "
+    keywords: ["AES", "encryption mechanisms", "mobile devices", "portable devices"]
 category: StorageEncryption
 version: "v1"
 comments: A state of the art encryption algorithm is essential in keeping sensitive data confidential.
