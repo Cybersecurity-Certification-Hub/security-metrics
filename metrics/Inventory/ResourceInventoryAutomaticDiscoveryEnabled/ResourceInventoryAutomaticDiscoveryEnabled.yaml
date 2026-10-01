@@ -1,0 +1,12 @@
+# ====== Metadata ======
+id: 26F206B2-EF01-4183-A431-F17ED951A75E
+name: ResourceInventoryAutomaticDiscoveryEnabled
+description: This rule evaluates whether an [ResourceInventoryService] is [p1:automaticDiscoveryEnabled].
+category: Inventory
+version: "v1"
+comments: An asset inventory is a tool to manage resources and their lifecycles, an is essential for maintaining security and compliance. This rule checks if automatic discovery is enabled for the asset inventory.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: ==
+    targetValue: true
