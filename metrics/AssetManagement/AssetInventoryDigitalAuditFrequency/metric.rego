@@ -1,21 +1,21 @@
 package cch.metrics.asset_inventory_digital_audit_frequency
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input.assetInventory as ai
+import input.assetInventory as assetInventory
 
 default applicable := false
 
 default compliant := false
 
 applicable if {
-  ai != {}
+  "auditInterval" in object.keys(input.assetInventory)
   "PolicyDocument" in input.type
-  ai.type == "digital"
+ assetInventory.type == "digital"
 }
 
 compliant if {
-    compare(data.operator, data.target_value, ai.auditInterval)
+	every r in results { r.success }
 }
 
 message := "Digital asset security audits are performed frequently enough." if {
@@ -23,3 +23,5 @@ message := "Digital asset security audits are performed frequently enough." if {
 } else := "Digital asset security audits are not performed frequently enough. Audit frequency should be within the specified interval." if {
   not compliant
 }
+
+results := [comparison_result("assetInventory.auditInterval",assetInventory.auditInterval)]

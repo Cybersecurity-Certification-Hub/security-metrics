@@ -1112,14 +1112,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="cl:QPU" />
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="cl:OneQubitErrorRate" />
+            <DataProperty abbreviatedIRI="cl:OneQubitGateErrorRate" />
             <Datatype abbreviatedIRI="xsd:float" />
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="cl:QPU" />
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="cl:TwoQubitErrorRate" />
+            <DataProperty abbreviatedIRI="cl:TwoQubitGateErrorRate" />
             <Datatype abbreviatedIRI="xsd:float" />
         </DataSomeValuesFrom>
     </SubClassOf>

@@ -353,9 +353,6 @@
         <DataProperty abbreviatedIRI="prop:percentageLastMonth"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:status"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:Cipher"/>
     </Declaration>
     <Declaration>
@@ -473,14 +470,14 @@
         <Class abbreviatedIRI="core:AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:status"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:storageFacility"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -667,6 +664,13 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:recoveryFrequency"/>
             <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:Backup"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:redundant"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1299,6 +1303,20 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:ZoneRedundancy"/>
         <Class abbreviatedIRI="core:Redundancy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:ownerAssignmentStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:inventoryDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "653ed45d-bd64-4f2c-9a1a-31306eefc9d4"
+name: "AcceptableUsePolicyDocumented"
+description: "This rule assesses whether a [PolicyDocument] includes [AcceptableUsePolicy] with its [p1:isDefined] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "What is the purpose of this document and its content?"
+    keywords: ["acceptable use", "use of information", "acceptable use of information"]
+category: "InformationProcessing"
+version: "v1"
+comments: "A formal procedure documenting acceptable use of information and company assets must exist in the evidence set. The internet access, email, and removable devices checks live in the sibling AcceptableUsePolicyScopeCoverage metric."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

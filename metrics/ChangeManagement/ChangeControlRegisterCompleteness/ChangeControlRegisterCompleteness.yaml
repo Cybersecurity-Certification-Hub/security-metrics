@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "95b2dcdb-3764-41a3-bf30-0355918f55ec"
+name: "ChangeControlRegisterCompleteness"
+description: "This rule assesses whether a [ChangeAndConfigurationManagement] includes [RequestForChange] with its [p1:mandatoryFieldCompletenessPercent] set correctly (date, responsible, description, rollback, approval)."
+implementationGuidelines:
+  AMOE:
+    question: "Of the changes listed in the submitted Change Control Register, what percentage have all mandatory fields (date, responsible, description, rollback, approval) filled in?"
+    keywords: ["date", "responsible", "description", "rollback", "approval"]
+category: "ChangeManagement"
+version: "v1"
+comments: "Of the changes listed in the submitted Change Control Register, 100% must have all mandatory fields filled in."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: 100
