@@ -299,10 +299,19 @@
         <Class abbreviatedIRI="core:Policies"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:AccountManagementPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:AuditLogMonitoringPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:LeastPrivilegePolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:InformationSecurityManagementSystem"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:NeedToKnowPolicy"/>
@@ -504,6 +513,9 @@
         <DataProperty abbreviatedIRI="prop:programmingLanguage"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="core:dhGroup"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="core:sessionCipher"/>
     </Declaration>
     <Declaration>
@@ -518,6 +530,33 @@
     <Declaration>
         <DataType abbreviatedIRI="dt:cpgNode"/>
     </Declaration> -->
+    <Declaration>
+        <Class abbreviatedIRI="core:VulnerabilityManagementPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:DeviceManagementPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:SecureDevelopmentPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:LiabilityPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:OutsourcingPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:CryptographicTransferPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:TestDataPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:AcceptableUsePolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:TeleworkingPolicy"/>
+    </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="core:EqualityCheck"/>
         <Class abbreviatedIRI="core:PolicyOperation"/>
@@ -564,6 +603,35 @@
         <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:AccountManagementPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AccountManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:intervalMonths"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AccountManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:secretStorage"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AuditLogMonitoringPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AuditLogMonitoringPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:enabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
         <Class abbreviatedIRI="core:Policies"/>
     </SubClassOf>
@@ -571,6 +639,31 @@
         <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:InformationSecurityManagementSystem"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:InformationSecurityManagementSystem"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:iso27001Certified"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:thirdPartyExchangeRulesDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:restrictsDownloadAndExtraction"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -608,6 +701,20 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:antispoofingRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:filteringRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:SeparationOfDutiesPolicy"/>
         <Class abbreviatedIRI="core:Policies"/>
     </SubClassOf>
@@ -637,7 +744,7 @@
         <Class abbreviatedIRI="core:AccessControlTypePolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:authorizationTypes"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -652,6 +759,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:ComplianceAuditIntervalPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:daysSinceLastAudit"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:ComplianceMethodologyPolicy"/>
         <Class abbreviatedIRI="core:Policies"/>
     </SubClassOf>
@@ -659,7 +773,7 @@
         <Class abbreviatedIRI="core:ComplianceMethodologyPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:methodology"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1185,6 +1299,13 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:authenticationMechanism"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CipherSuite"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="core:dhGroup"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1790,6 +1911,245 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:url"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:VulnerabilityManagementPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:VulnerabilityManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:cvssScoringUsed"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:VulnerabilityManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:criticalHighSlaStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:VulnerabilityManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:mediumSlaStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:VulnerabilityManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:lowSlaStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DeviceManagementPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DeviceManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:checklistCoveragePercent"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:DeviceManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:allMandatedControlsAddressed"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecureDevelopmentPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecureDevelopmentPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:pentestGateRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecureDevelopmentPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:checklistCoveragePercent"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecureDevelopmentPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:referencesIndustryFramework"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecureDevelopmentPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:highCriticalFindingsBlockRelease"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LiabilityPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:LiabilityPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:costsExplicitlyAssignedToProvider"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:notificationWindowHours"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:severityAndEscalationDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:registryAndSlaStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:OutsourcingPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:OutsourcingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:monitoringMechanism"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:OutsourcingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:monitoringObligationStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CryptographicTransferPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CryptographicTransferPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:recipientHeldKeyRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CryptographicTransferPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:nonDescriptiveFilenameRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:CryptographicTransferPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:encryptedChannelRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:TestDataPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:TestDataPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:technique"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:TestDataPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:anonymizationRequiredForNonProd"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AcceptableUsePolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AcceptableUsePolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:mandatedAreaCoveragePercent"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AcceptableUsePolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:RequestForChange"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:mandatoryFieldCompletenessPercent"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:ComplianceAuditIntervalPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:unrestrictedAccessGranted"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:authorizedSoftwareAndControlledInstallationRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:TeleworkingPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:TeleworkingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:twoFactorRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:TeleworkingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:encryptionRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:TeleworkingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:mfaAndFederationRequiredForRemoteAccess"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubDataPropertyOf>
@@ -3146,6 +3506,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AuditLogMonitoringPolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a [PolicyDocument] defining requirements for the periodic monitoring and review of audit logs, including the identification of anomalies, security events, and unusual activity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:AuditLogMonitoringPolicy</AbbreviatedIRI>
+        <Literal>AuditLogMonitoringPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>core:DataConfidentialitySDNPolicy</AbbreviatedIRI>
         <Literal>Represents a policy section within a [PolicyDocument] describing data confidentiality requirements for Software Defined Networking (SDN). isDefined: whether this policy section is present and defined.</Literal>
     </AnnotationAssertion>
@@ -3213,6 +3583,96 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>core:ComplianceMethodologyPolicy</AbbreviatedIRI>
         <Literal>ComplianceMethodologyPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:VulnerabilityManagementPolicy</AbbreviatedIRI>
+        <Literal>Represents a vulnerability management procedure section within a PolicyDocument, covering CVSS scoring and severity-tiered resolution SLAs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:VulnerabilityManagementPolicy</AbbreviatedIRI>
+        <Literal>VulnerabilityManagementPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:DeviceManagementPolicy</AbbreviatedIRI>
+        <Literal>Represents a device management policy section within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:DeviceManagementPolicy</AbbreviatedIRI>
+        <Literal>DeviceManagementPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:SecureDevelopmentPolicy</AbbreviatedIRI>
+        <Literal>Represents a secure development methodology / SDLC policy section within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:SecureDevelopmentPolicy</AbbreviatedIRI>
+        <Literal>SecureDevelopmentPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:LiabilityPolicy</AbbreviatedIRI>
+        <Literal>Represents a liability/cost-assignment clause within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:LiabilityPolicy</AbbreviatedIRI>
+        <Literal>LiabilityPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:OutsourcingPolicy</AbbreviatedIRI>
+        <Literal>Represents a subcontractor/outsourcing clause within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:OutsourcingPolicy</AbbreviatedIRI>
+        <Literal>OutsourcingPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:CryptographicTransferPolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a PolicyDocument governing cryptographic protection of transferred information.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:CryptographicTransferPolicy</AbbreviatedIRI>
+        <Literal>CryptographicTransferPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:TestDataPolicy</AbbreviatedIRI>
+        <Literal>Represents a policy section within a PolicyDocument governing the use and anonymization of test data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:TestDataPolicy</AbbreviatedIRI>
+        <Literal>TestDataPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:AcceptableUsePolicy</AbbreviatedIRI>
+        <Literal>Represents an acceptable use policy within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:AcceptableUsePolicy</AbbreviatedIRI>
+        <Literal>AcceptableUsePolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>core:TeleworkingPolicy</AbbreviatedIRI>
+        <Literal>Represents a teleworking / remote access policy section within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>core:TeleworkingPolicy</AbbreviatedIRI>
+        <Literal>TeleworkingPolicy</Literal>
     </AnnotationAssertion>
 </Ontology>
 <!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->

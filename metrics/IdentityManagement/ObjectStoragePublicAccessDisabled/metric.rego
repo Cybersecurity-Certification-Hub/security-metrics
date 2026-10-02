@@ -1,6 +1,6 @@
 package cch.metrics.object_storage_public_access_disabled
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 
 import input as storage
@@ -11,9 +11,12 @@ default applicable = false
 
 applicable if {
 	# the resource type should be an ObjectStorage
-	storage.type[_] == "ObjectStorage"
+	input.type[_] == "ObjectStorage"
+	"publicAccess" in object.keys(input)
 }
 
 compliant if {
-	compare(data.operator, data.target_value, storage.publicAccess)
+	every r in results { r.success }
 }
+
+results := [comparison_result("publicAccess", storage.publicAccess)]

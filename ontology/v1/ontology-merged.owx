@@ -15,6 +15,9 @@
         <Class IRI="/classes/ABAC"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/AcceptableUsePolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/AccessControlTypePolicy"/>
     </Declaration>
     <Declaration>
@@ -22,6 +25,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Account"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/AccountManagementPolicy"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ActivityLog"/>
@@ -55,6 +61,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Attestation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/AuditLogMonitoringPolicy"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Auditing"/>
@@ -213,6 +222,9 @@
         <Class IRI="/classes/CryptographicOperation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/CryptographicTransferPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/CustomerKeyEncryption"/>
     </Declaration>
     <Declaration>
@@ -253,6 +265,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/DecryptionOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/DeviceManagementPolicy"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/DeviceProvisioningService"/>
@@ -414,6 +429,9 @@
         <Class IRI="/classes/Immutability"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/InformationSecurityManagementSystem"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/InitializationVector"/>
     </Declaration>
     <Declaration>
@@ -460,6 +478,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/LeastPrivilegePolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/LiabilityPolicy"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Library"/>
@@ -606,6 +627,9 @@
         <Class IRI="/classes/Output"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/OutsourcingPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/POSIX"/>
     </Declaration>
     <Declaration>
@@ -741,6 +765,9 @@
         <Class IRI="/classes/SecretOperation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/SecureDevelopmentPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/SecurityAdvisoryDocument"/>
     </Declaration>
     <Declaration>
@@ -754,6 +781,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/SecurityIncident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/SecurityPolicyReview"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/SecurityTraining"/>
@@ -790,6 +820,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/SymmetricCipher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/TeleworkingPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/TestDataPolicy"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Time"/>
@@ -835,6 +871,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Vulnerability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/VulnerabilityManagementPolicy"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/WebApplicationFirewall"/>
@@ -921,6 +960,9 @@
         <ObjectProperty IRI="/properties/scope"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/properties/secretStorage"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/properties/serviceOf"/>
     </Declaration>
     <Declaration>
@@ -937,6 +979,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/properties/validatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/properties/prop:iso27001Certified"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/T1CoherenceTime"/>
@@ -996,6 +1041,9 @@
         <DataProperty IRI="/classes/description"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/dhGroup"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/disablePasswordPolicy"/>
     </Declaration>
     <Declaration>
@@ -1045,6 +1093,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/intervalMonths"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/inventoryDefined"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/isActive"/>
@@ -1120,6 +1171,12 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/overridePasswordPolicy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/ownerAndApprovalDefined"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/ownerAssignmentStated"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/poisonedDataLevel"/>
@@ -1227,6 +1284,15 @@
         <DataProperty IRI="/properties/algorithm"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/allMandatedControlsAddressed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/anonymizationRequiredForNonProd"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/antispoofingRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/apiListFunction"/>
     </Declaration>
     <Declaration>
@@ -1242,22 +1308,46 @@
         <DataProperty IRI="/properties/authorizationTypes"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/authorizedSoftwareAndControlledInstallationRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/call"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/calls"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/checklistCoveragePercent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/costsExplicitlyAssignedToProvider"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/coveredAttackTypes"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/criticalHighSlaStated"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/criticality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/cvssScoringUsed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/daysSinceLastAudit"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/emailAddress"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/enabled"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/encryptedChannelRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/encryptionRequired"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/enforced"/>
@@ -1269,10 +1359,16 @@
         <DataProperty IRI="/properties/field"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/filteringRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/from"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/handler"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/highCriticalFindingsBlockRelease"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/impact"/>
@@ -1311,7 +1407,19 @@
         <DataProperty IRI="/properties/local"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/lowSlaStated"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/managementUrl"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/mandatedAreaCoveragePercent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/mandatoryFieldCompletenessPercent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/mediumSlaStated"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/method"/>
@@ -1320,13 +1428,31 @@
         <DataProperty IRI="/properties/methodology"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/mfaAndFederationRequiredForRemoteAccess"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/modify"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/monitoringMechanism"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/monitoringObligationStated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/nonDescriptiveFilenameRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/notificationWindowHours"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/parameters"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/path"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/pentestGateRequired"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/percentage"/>
@@ -1356,7 +1482,19 @@
         <DataProperty IRI="/properties/public"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/recipientHeldKeyRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/redundant"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/referencesIndustryFramework"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/region"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/registryAndSlaStated"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/remote"/>
@@ -1365,7 +1503,13 @@
         <DataProperty IRI="/properties/restrictedPorts"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/restrictsDownloadAndExtraction"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/serves"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/severityAndEscalationDefined"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/size"/>
@@ -1386,6 +1530,12 @@
         <DataProperty IRI="/properties/supportEnds"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/technique"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/thirdPartyExchangeRulesDefined"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/tlsSignatureAlgorithm"/>
     </Declaration>
     <Declaration>
@@ -1398,7 +1548,13 @@
         <DataProperty IRI="/properties/ttl"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/twoFactorRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/properties/type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/unrestrictedAccessGranted"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/updateDuration"/>
@@ -1575,13 +1731,22 @@
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/classes/OneQubitErrorRate"/>
+        <DataProperty IRI="/properties/intervalMonths"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/length"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/TwoQubitGateErrorRate"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/SpamErrorRate"/>
     </Declaration>
     <Declaration>
         <Datatype IRI="/datatypes/cpgNode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/roleAdjustedTracksStated"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes//mode"/>
@@ -1597,9 +1762,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/ConfigurationOperation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/classes/TwoQubitErrorRate"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/errorCorrectionEnabled"/>
@@ -1626,13 +1788,25 @@
         <NamedIndividual IRI="/classes/Implementation"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/classes/OneQubitGateErrorRate"/>
+    </Declaration>
+    <Declaration>
         <Datatype IRI="/datatypes/listCpgNodes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/allowedSources"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/modelStealResilience"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/team"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/iso27001Certified"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/planDocumented"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/classes/hasType"/>
@@ -1645,6 +1819,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/annualUpdateCompleted"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/classes/annualCadenceStated"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/purpose"/>
@@ -1667,6 +1844,24 @@
         <Class IRI="/classes/Authorization"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/AcceptableUsePolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AcceptableUsePolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AcceptableUsePolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/mandatedAreaCoveragePercent"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/AccessControlTypePolicy"/>
         <Class IRI="/classes/Policies"/>
     </SubClassOf>
@@ -1674,7 +1869,7 @@
         <Class IRI="/classes/AccessControlTypePolicy"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/authorizationTypes"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1691,6 +1886,24 @@
             <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/AssetInventory"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AccountManagementPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AccountManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/intervalMonths"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AccountManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/secretStorage"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ActivityLog"/>
@@ -1797,6 +2010,20 @@
     <SubClassOf>
         <Class IRI="/classes/AssetInventory"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/inventoryDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/ownerAssignmentStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AssetInventory"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/classes/reviewFrequency"/>
             <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
@@ -1819,14 +2046,14 @@
         <Class IRI="/classes/AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/status"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/storageFacility"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1885,6 +2112,17 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Attestation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/enabled"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AuditLogMonitoringPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AuditLogMonitoringPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
@@ -2023,6 +2261,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/Backup"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/redundant"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Backup"/>
         <DataHasValue>
             <DataProperty IRI="/classes/interval"/>
             <Literal>xsd:java.time.Duration</Literal>
@@ -2151,6 +2396,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/classes/authenticationMechanism"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CipherSuite"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/dhGroup"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2367,6 +2619,20 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/daysSinceLastAudit"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/unrestrictedAccessGranted"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/ComplianceMethodologyPolicy"/>
         <Class IRI="/classes/Policies"/>
     </SubClassOf>
@@ -2374,7 +2640,7 @@
         <Class IRI="/classes/ComplianceMethodologyPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/methodology"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2666,6 +2932,31 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/CryptographicTransferPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CryptographicTransferPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/encryptedChannelRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CryptographicTransferPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/nonDescriptiveFilenameRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/CryptographicTransferPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/recipientHeldKeyRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/CustomerKeyEncryption"/>
         <Class IRI="/classes/AtRestEncryption"/>
     </SubClassOf>
@@ -2700,6 +2991,20 @@
         <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/restrictsDownloadAndExtraction"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DataConfidentialitySDNPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/thirdPartyExchangeRulesDefined"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -2831,6 +3136,24 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/algorithm"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DeviceManagementPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DeviceManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/allMandatedControlsAddressed"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/DeviceManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/checklistCoveragePercent"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3522,6 +3845,17 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/InformationSecurityManagementSystem"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/InformationSecurityManagementSystem"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/iso27001Certified"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/InitializationVector"/>
         <Class IRI="/classes/Functionality"/>
     </SubClassOf>
@@ -3661,6 +3995,13 @@
     <SubClassOf>
         <Class IRI="/classes/L3Firewall"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/allowedSources"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/L3Firewall"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/properties/enabled"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
@@ -3676,7 +4017,7 @@
         <Class IRI="/classes/L3Firewall"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/restrictedPorts"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3687,6 +4028,17 @@
         <Class IRI="/classes/LeastPrivilegePolicy"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/isDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/LiabilityPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/LiabilityPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/costsExplicitlyAssignedToProvider"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -4209,8 +4561,29 @@
     <SubClassOf>
         <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/antispoofingRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/authorizedSoftwareAndControlledInstallationRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/properties/coveredAttackTypes"/>
             <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/NetworkThreatMitigationPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/filteringRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4303,6 +4676,24 @@
         <Class IRI="/classes/Functionality"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/OutsourcingPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/OutsourcingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/monitoringMechanism"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/OutsourcingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/monitoringObligationStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/POSIX"/>
         <Class IRI="/classes/OperatingSystemArchitecture"/>
     </SubClassOf>
@@ -4330,6 +4721,13 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/activated"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PasswordBasedAuthentication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/length"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4366,7 +4764,21 @@
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/AcceptableUsePolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/AccessControlTypePolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/AccountManagementPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4380,7 +4792,35 @@
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/AuditLogMonitoringPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/AwarenessTraining"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/Backup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/ComplianceAuditIntervalPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/CryptographicTransferPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4394,7 +4834,28 @@
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/DeviceManagementPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/InformationSecurityManagementSystem"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/LeastPrivilegePolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/LiabilityPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4422,7 +4883,21 @@
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/OutsourcingPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/SDNFunctionValidationPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/SecureDevelopmentPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4436,7 +4911,35 @@
         <Class IRI="/classes/PolicyDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/SecurityPolicyReview"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/SeparationOfDutiesPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/TeleworkingPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/TestDataPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/VulnerabilityManagementPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4633,7 +5136,7 @@
     <SubClassOf>
         <Class IRI="/classes/QPU"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/OneQubitErrorRate"/>
+            <DataProperty IRI="/classes/OneQubitGateErrorRate"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -4661,7 +5164,7 @@
     <SubClassOf>
         <Class IRI="/classes/QPU"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/classes/TwoQubitErrorRate"/>
+            <DataProperty IRI="/classes/TwoQubitGateErrorRate"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -4852,6 +5355,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/RequestForChange"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/mandatoryFieldCompletenessPercent"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/Resource"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/parent"/>
@@ -4990,6 +5500,38 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/SecureDevelopmentPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecureDevelopmentPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/checklistCoveragePercent"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecureDevelopmentPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/highCriticalFindingsBlockRelease"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecureDevelopmentPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/pentestGateRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecureDevelopmentPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/referencesIndustryFramework"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/SecurityAdvisoryDocument"/>
         <Class IRI="/classes/Document"/>
     </SubClassOf>
@@ -5040,8 +5582,47 @@
     <SubClassOf>
         <Class IRI="/classes/SecurityIncident"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/notificationWindowHours"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/registryAndSlaStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityIncident"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/severityAndEscalationDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityIncident"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/properties/team"/>
             <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityPolicyReview"/>
+        <Class IRI="/classes/Governance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityPolicyReview"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/intervalMonths"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/SecurityPolicyReview"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/ownerAndApprovalDefined"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -5254,6 +5835,49 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/TeleworkingPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TeleworkingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/encryptionRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TeleworkingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/mfaAndFederationRequiredForRemoteAccess"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TeleworkingPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/twoFactorRequired"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TestDataPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TestDataPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/anonymizationRequiredForNonProd"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/TestDataPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/technique"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/Time"/>
         <Class IRI="/classes/Functionality"/>
     </SubClassOf>
@@ -5268,8 +5892,29 @@
     <SubClassOf>
         <Class IRI="/classes/Training"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/annualCadenceStated"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Training"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/classes/annualUpdateCompleted"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Training"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/planDocumented"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/Training"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/classes/roleAdjustedTracksStated"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -5465,6 +6110,38 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/properties/url"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/VulnerabilityManagementPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/VulnerabilityManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/criticalHighSlaStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/VulnerabilityManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/cvssScoringUsed"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/VulnerabilityManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/lowSlaStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/VulnerabilityManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/mediumSlaStated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -5925,6 +6602,16 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">ABAC</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AcceptableUsePolicy</IRI>
+        <Literal>Represents an acceptable use policy within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/AcceptableUsePolicy</IRI>
+        <Literal>AcceptableUsePolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/AccessRestriction</IRI>
         <Literal xml:lang="english">AccessRestriction</Literal>
@@ -6053,6 +6740,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Attestation</IRI>
         <Literal>Attestation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/AuditLogMonitoringPolicy</IRI>
+        <Literal>Represents a policy section within a [PolicyDocument] defining requirements for the periodic monitoring and review of audit logs, including the identification of anomalies, security events, and unusual activity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/AuditLogMonitoringPolicy</IRI>
+        <Literal>AuditLogMonitoringPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6410,6 +7107,16 @@ name = metadata.name</Literal>
         <Literal>CryptographicOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/CryptographicTransferPolicy</IRI>
+        <Literal>Represents a policy section within a PolicyDocument governing cryptographic protection of transferred information.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/CryptographicTransferPolicy</IRI>
+        <Literal>CryptographicTransferPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/CustomerKeyEncryption</IRI>
         <Literal xml:lang="english">CustomerKeyEncryption</Literal>
@@ -6503,6 +7210,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/DecryptionOperation</IRI>
         <Literal>Decryption</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/DeviceManagementPolicy</IRI>
+        <Literal>Represents a device management policy section within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/DeviceManagementPolicy</IRI>
+        <Literal>DeviceManagementPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6975,6 +7692,16 @@ name = metadata.name</Literal>
         <Literal>LeastPrivilegePolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/LiabilityPolicy</IRI>
+        <Literal>Represents a liability/cost-assignment clause within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/LiabilityPolicy</IRI>
+        <Literal>LiabilityPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/Library</IRI>
         <Literal>Library</Literal>
@@ -7311,6 +8038,16 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/OutsourcingPolicy</IRI>
+        <Literal>Represents a subcontractor/outsourcing clause within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/OutsourcingPolicy</IRI>
+        <Literal>OutsourcingPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/POSIX</IRI>
         <Literal>Represents a POSIX architecture, commonly found on Linux systems.</Literal>
     </AnnotationAssertion>
@@ -7595,6 +8332,16 @@ name = metadata.name</Literal>
         <Literal>SecretOperation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/SecureDevelopmentPolicy</IRI>
+        <Literal>Represents a secure development methodology / SDLC policy section within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/SecureDevelopmentPolicy</IRI>
+        <Literal>SecureDevelopmentPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/SecurityAdvisoryDocument</IRI>
         <Literal>SecurityAdvisoryDocument</Literal>
@@ -7618,6 +8365,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/SecurityFeature</IRI>
         <Literal xml:lang="english">SecurityFeature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/SecurityPolicyReview</IRI>
+        <Literal>Represents the review cadence of the organization&apos;s Information Security Policy. intervalMonths: how often the policy must be reviewed, in months.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/SecurityPolicyReview</IRI>
+        <Literal>SecurityPolicyReview</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7713,6 +8470,26 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/T2CoherenceTime</IRI>
         <Literal>T2CoherenceTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/TeleworkingPolicy</IRI>
+        <Literal>Represents a teleworking / remote access policy section within a PolicyDocument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/TeleworkingPolicy</IRI>
+        <Literal>TeleworkingPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/TestDataPolicy</IRI>
+        <Literal>Represents a policy section within a PolicyDocument governing the use and anonymization of test data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/TestDataPolicy</IRI>
+        <Literal>TestDataPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7841,6 +8618,16 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/VulnerabilityManagementPolicy</IRI>
+        <Literal>Represents a vulnerability management procedure section within a PolicyDocument, covering CVSS scoring and severity-tiered resolution SLAs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/VulnerabilityManagementPolicy</IRI>
+        <Literal>VulnerabilityManagementPolicy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/classes/WebApplicationFirewall</IRI>
         <Literal>A WAF is a L7 firewall that includes L3 capabilities</Literal>
     </AnnotationAssertion>
@@ -7883,6 +8670,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/allRequiredInformationRecorded</IRI>
         <Literal>allRequiredInformationRecorded</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/annualCadenceStated</IRI>
+        <Literal>Indicates whether the training plan states it is delivered at least annually.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/annualCadenceStated</IRI>
+        <Literal>annualCadenceStated</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8085,6 +8882,16 @@ name = metadata.name</Literal>
         <Literal>intervalMonths</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/inventoryDefined</IRI>
+        <Literal>Indicates whether an asset inventory is defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/inventoryDefined</IRI>
+        <Literal>inventoryDefined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/isActive</IRI>
         <Literal>isActive</Literal>
@@ -8265,6 +9072,36 @@ name = metadata.name</Literal>
         <Literal>overridePasswordPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ownerAndApprovalDefined</IRI>
+        <Literal>Indicates whether an accountable owner and an approval date/signature are both stated for the policy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ownerAndApprovalDefined</IRI>
+        <Literal>ownerAndApprovalDefined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/ownerAssignmentStated</IRI>
+        <Literal>Indicates whether an owner is assigned for each asset class/type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/ownerAssignmentStated</IRI>
+        <Literal>ownerAssignmentStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/planDocumented</IRI>
+        <Literal>Indicates whether a documented training and awareness plan is maintained.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/planDocumented</IRI>
+        <Literal>planDocumented</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/privileged</IRI>
         <Literal>privileged</Literal>
@@ -8343,6 +9180,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/classes/rightPrincipal</IRI>
         <Literal>rightPrincipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/classes/roleAdjustedTracksStated</IRI>
+        <Literal>Indicates whether the training plan includes role-based tracks adjusted by employee function.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/classes/roleAdjustedTracksStated</IRI>
+        <Literal>roleAdjustedTracksStated</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8765,6 +9612,36 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">algorithm</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/allMandatedControlsAddressed</IRI>
+        <Literal>Indicates whether all mandated device controls are addressed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/allMandatedControlsAddressed</IRI>
+        <Literal>allMandatedControlsAddressed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/anonymizationRequiredForNonProd</IRI>
+        <Literal>Indicates whether anonymization/pseudonymization is required for non-production environments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/anonymizationRequiredForNonProd</IRI>
+        <Literal>anonymizationRequiredForNonProd</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/antispoofingRequired</IRI>
+        <Literal>Indicates whether the policy explicitly requires antispoofing mechanisms on internet-facing routers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/antispoofingRequired</IRI>
+        <Literal>antispoofingRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/apiListFunction</IRI>
         <Literal xml:lang="english">apiListFunction</Literal>
@@ -8785,6 +9662,16 @@ name = metadata.name</Literal>
         <Literal>The time needed for an audit.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/authorizedSoftwareAndControlledInstallationRequired</IRI>
+        <Literal>Indicates whether the standard requires authorized-software and controlled-installation controls on network devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/authorizedSoftwareAndControlledInstallationRequired</IRI>
+        <Literal>authorizedSoftwareAndControlledInstallationRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/backend</IRI>
         <Literal xml:lang="english">backend</Literal>
@@ -8800,6 +9687,16 @@ name = metadata.name</Literal>
         <Literal>calls</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/checklistCoveragePercent</IRI>
+        <Literal>Percentage of the mandated checklist items explicitly present.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/checklistCoveragePercent</IRI>
+        <Literal>checklistCoveragePercent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/collectionOf</IRI>
         <Literal xml:lang="english">collectionOf</Literal>
@@ -8811,8 +9708,48 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/costsExplicitlyAssignedToProvider</IRI>
+        <Literal>Indicates whether the clause explicitly assigns cost responsibility to the service provider.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/costsExplicitlyAssignedToProvider</IRI>
+        <Literal>costsExplicitlyAssignedToProvider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/criticalHighSlaStated</IRI>
+        <Literal>Indicates whether the critical/high severity vulnerability resolution SLA is stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/criticalHighSlaStated</IRI>
+        <Literal>criticalHighSlaStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/properties/criticality</IRI>
         <Literal>criticality: Contains the criticality of a vulnerability, e.g., low, medium, high, critical</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/cvssScoringUsed</IRI>
+        <Literal>Indicates whether CVSS scoring is used to prioritize vulnerability resolution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/cvssScoringUsed</IRI>
+        <Literal>cvssScoringUsed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/daysSinceLastAudit</IRI>
+        <Literal>The number of days elapsed since the last completed external/supervisory audit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/daysSinceLastAudit</IRI>
+        <Literal>daysSinceLastAudit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8828,6 +9765,26 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/enabled</IRI>
         <Literal xml:lang="english">enabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/encryptedChannelRequired</IRI>
+        <Literal>Indicates whether encrypted channels (e.g., sFTP/HTTPS) are required for data transmission.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/encryptedChannelRequired</IRI>
+        <Literal>encryptedChannelRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/encryptionRequired</IRI>
+        <Literal>Indicates whether data encryption is required.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/encryptionRequired</IRI>
+        <Literal>encryptionRequired</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8850,6 +9807,16 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">field</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/filteringRequired</IRI>
+        <Literal>Indicates whether the policy explicitly requires network filtering mechanisms on internet-facing routers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/filteringRequired</IRI>
+        <Literal>filteringRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/from</IRI>
         <Literal xml:lang="english">from</Literal>
@@ -8868,6 +9835,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/hasMultiple</IRI>
         <Literal xml:lang="english">hasMultiple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/highCriticalFindingsBlockRelease</IRI>
+        <Literal>Indicates whether high/critical findings block the production release.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/highCriticalFindingsBlockRelease</IRI>
+        <Literal>highCriticalFindingsBlockRelease</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8930,9 +9907,49 @@ name = metadata.name</Literal>
         <Literal>labels</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/lowSlaStated</IRI>
+        <Literal>Indicates whether the low severity vulnerability resolution SLA is stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/lowSlaStated</IRI>
+        <Literal>lowSlaStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/managementUrl</IRI>
         <Literal xml:lang="english">managementUrl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/mandatedAreaCoveragePercent</IRI>
+        <Literal>Percentage of mandated control areas explicitly addressed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/mandatedAreaCoveragePercent</IRI>
+        <Literal>mandatedAreaCoveragePercent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/mandatoryFieldCompletenessPercent</IRI>
+        <Literal>Percentage of change register entries with all mandatory fields completed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/mandatoryFieldCompletenessPercent</IRI>
+        <Literal>mandatoryFieldCompletenessPercent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/mediumSlaStated</IRI>
+        <Literal>Indicates whether the medium severity vulnerability resolution SLA is stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/mediumSlaStated</IRI>
+        <Literal>mediumSlaStated</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8945,9 +9962,59 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">methodology</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/mfaAndFederationRequiredForRemoteAccess</IRI>
+        <Literal>Indicates whether MFA and federation are required for remote access.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/mfaAndFederationRequiredForRemoteAccess</IRI>
+        <Literal>mfaAndFederationRequiredForRemoteAccess</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/modify</IRI>
         <Literal>modify</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/monitoringMechanism</IRI>
+        <Literal>The stated monitoring cadence or mechanism for subcontractor compliance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/monitoringMechanism</IRI>
+        <Literal>monitoringMechanism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/monitoringObligationStated</IRI>
+        <Literal>Indicates whether subcontracted/external providers are required to comply with and be monitored against the security policy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/monitoringObligationStated</IRI>
+        <Literal>monitoringObligationStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/nonDescriptiveFilenameRequired</IRI>
+        <Literal>Indicates whether transferred file names must not include descriptive content.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/nonDescriptiveFilenameRequired</IRI>
+        <Literal>nonDescriptiveFilenameRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/notificationWindowHours</IRI>
+        <Literal>The maximum incident notification window, in hours.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/notificationWindowHours</IRI>
+        <Literal>notificationWindowHours</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8973,6 +10040,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/path</IRI>
         <Literal xml:lang="english">path</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/pentestGateRequired</IRI>
+        <Literal>Indicates whether a pentest/static-analysis gate is required prior to production release.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/pentestGateRequired</IRI>
+        <Literal>pentestGateRequired</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -9020,9 +10097,49 @@ name = metadata.name</Literal>
         <Literal xml:lang="english">public</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/recipientHeldKeyRequired</IRI>
+        <Literal>Indicates whether the encryption key used to protect a file must be held by the recipient.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/recipientHeldKeyRequired</IRI>
+        <Literal>recipientHeldKeyRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/redundant</IRI>
+        <Literal>Indicates whether the resource is stored redundantly.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/redundant</IRI>
+        <Literal>redundant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/referencesIndustryFramework</IRI>
+        <Literal>Indicates whether the methodology references an industry framework (e.g., OWASP, SANS, CERT).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/referencesIndustryFramework</IRI>
+        <Literal>referencesIndustryFramework</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/region</IRI>
         <Literal xml:lang="english">region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/registryAndSlaStated</IRI>
+        <Literal>Indicates whether an incident registry and handling SLA are stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/registryAndSlaStated</IRI>
+        <Literal>registryAndSlaStated</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -9033,6 +10150,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/restrictedPorts</IRI>
         <Literal xml:lang="english">restrictedPorts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/restrictsDownloadAndExtraction</IRI>
+        <Literal>Indicates whether the policy restricts downloading or extracting information from the organization&apos;s systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/restrictsDownloadAndExtraction</IRI>
+        <Literal>restrictsDownloadAndExtraction</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -9053,6 +10180,16 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/serviceOf</IRI>
         <Literal xml:lang="english">serviceOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/severityAndEscalationDefined</IRI>
+        <Literal>Indicates whether escalation responsibility for critical/high severity incidents is defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/severityAndEscalationDefined</IRI>
+        <Literal>severityAndEscalationDefined</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -9091,6 +10228,26 @@ name = metadata.name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/technique</IRI>
+        <Literal>The named anonymization technique or standard used.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/technique</IRI>
+        <Literal>technique</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/thirdPartyExchangeRulesDefined</IRI>
+        <Literal>Indicates whether the policy specifically defines rules for information exchange with third parties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/thirdPartyExchangeRulesDefined</IRI>
+        <Literal>thirdPartyExchangeRulesDefined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/properties/tlsSignatureAlgorithm</IRI>
         <Literal>tlsSignatureAlgorithm: e.g., rsa_pss_rsae_sha256/384/512, ecdsa_secp256r1_sha256, ed25519</Literal>
     </AnnotationAssertion>
@@ -9118,6 +10275,26 @@ name = metadata.name</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/properties/ttl</IRI>
         <Literal>ttl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/twoFactorRequired</IRI>
+        <Literal>Indicates whether two-factor authentication is required.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/twoFactorRequired</IRI>
+        <Literal>twoFactorRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/properties/unrestrictedAccessGranted</IRI>
+        <Literal>Indicates whether the audit clause grants direct, unrestricted, on-demand access.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/properties/unrestrictedAccessGranted</IRI>
+        <Literal>unrestrictedAccessGranted</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -9159,4 +10336,3 @@ name = metadata.name</Literal>
 
 
 <!-- Generated by the OWL API (version 4.5.26) https://github.com/owlcs/owlapi -->
-

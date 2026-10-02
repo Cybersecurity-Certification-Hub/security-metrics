@@ -1,6 +1,6 @@
 package cch.metrics.admin_mfa_enabled
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input as identity
 
@@ -16,5 +16,7 @@ applicable if {
 }
 
 compliant if {
-	compare(data.operator, data.target_value, identity.enforceMfa)
+	every r in results { r.success }
 }
+
+results := [comparison_result("enforceMfa", identity.enforceMfa)]

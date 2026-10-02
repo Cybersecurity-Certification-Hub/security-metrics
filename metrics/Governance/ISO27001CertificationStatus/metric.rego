@@ -1,23 +1,24 @@
 package cch.metrics.iso27001_certification_status
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
-import input as document
 
 default applicable := false
 default compliant := false
 
 applicable if {
-	document.informationSecurityManagementSystem != {}
-	"PolicyDocument" in document.type
+	"iso27001Certified" in object.keys(input.informationSecurityManagementSystem)
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-	compare(data.operator, data.target_value, document.informationSecurityManagementSystem.iso27001Certified)
+	every r in results { r.success }
 }
 
-message := "The organization has ISO 27001 certification." if {
+message := "The policy document defines whether the organization has ISO 27001 certification for its Information Security Management System." if {
 	compliant
-} else := "The organization does not have ISO 27001 certification." if {
+} else := "The policy document does not define whether the organization has ISO 27001 certification for its Information Security Management System." if {
 	not compliant
 }
+
+results := [comparison_result("informationSecurityManagementSystem.iso27001Certified", input.informationSecurityManagementSystem.iso27001Certified)]

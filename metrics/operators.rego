@@ -124,3 +124,15 @@ compare(operator, target_value, actual_values) if {
 	x := count(actual_values)
 	target_value == ( x > 0 )
 }
+
+# Builds a single comparison-result object in the shape Go's evalMap()
+# expects for assessment.ComparisonResult (property/value/target_value/
+# operator/success), reusing the already-loaded operator/target_value and
+# the shared compare() logic.
+comparison_result(property, value) := {
+	"property": property,
+	"value": value,
+	"target_value": data.cch.target_value,
+	"operator": data.cch.operator,
+	"success": compare(data.operator, data.target_value, value),
+}

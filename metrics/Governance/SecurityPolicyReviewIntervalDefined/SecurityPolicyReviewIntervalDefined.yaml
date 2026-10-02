@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "5820907e-bc87-48b1-8778-cadfd4111765"
+name: "SecurityPolicyReviewIntervalDefined"
+description: "This rule assesses whether a [PolicyDocument] includes [SecurityPolicyReview] with its [p1:intervalMonths] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the organization maintain an approved Information Security Policy, and does it state that the policy is reviewed/audited on a defined cycle of at most two years?"
+    keywords: ["reviewed and updated", "audit", "every two years"]
+category: "Governance"
+version: "v1"
+comments: "An Information Security Policy must be reviewed for suitability, adequacy, and effectiveness on a defined cycle of at most 24 months (two years)."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 24
