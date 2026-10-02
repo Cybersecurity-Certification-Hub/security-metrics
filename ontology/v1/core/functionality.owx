@@ -308,6 +308,9 @@
         <Class abbreviatedIRI="core:LeastPrivilegePolicy"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:InformationSecurityManagementSystem"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:NeedToKnowPolicy"/>
     </Declaration>
     <Declaration>
@@ -593,6 +596,17 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:isDefined"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:InformationSecurityManagementSystem"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:InformationSecurityManagementSystem"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:iso27001Certified"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
