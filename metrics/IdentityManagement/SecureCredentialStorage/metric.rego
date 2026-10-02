@@ -1,4 +1,4 @@
-package cch.metrics.password_length
+package cch.metrics.secure_credential_storage
 
 import data.cch.compare
 import rego.v1
