@@ -1,6 +1,6 @@
 package cch.metrics.inactivation_delay_period
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.accountManagementPolicy as accountManagementPolicy
 
