@@ -3,9 +3,9 @@ package cch.metrics.password_length
 import data.cch.compare
 import rego.v1
 
-default applicable := false
+default applicable = false
 
-default compliant := false
+default compliant = false
 
 pwd := input.passwordBasedAuthentication
 
