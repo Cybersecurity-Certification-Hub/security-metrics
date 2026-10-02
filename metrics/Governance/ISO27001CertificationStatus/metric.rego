@@ -1,6 +1,6 @@
 package cch.metrics.iso27001_certification_status
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 
 default applicable := false
