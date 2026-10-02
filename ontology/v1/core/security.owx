@@ -1044,6 +1044,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:PasswordBasedAuthentication"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:length"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:RBAC"/>
         <Class abbreviatedIRI="core:Authorization"/>
     </SubClassOf>
