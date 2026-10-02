@@ -1,4 +1,4 @@
-package cch.metrics.account_management_policy
+package cch.metrics.inactivation_delay_period
 
 import data.cch.compare
 import rego.v1

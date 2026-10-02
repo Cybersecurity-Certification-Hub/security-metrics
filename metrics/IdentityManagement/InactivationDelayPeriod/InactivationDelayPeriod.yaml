@@ -1,6 +1,6 @@
 # ====== Metadata ======
-name: AccountValidityPeriod
-
+id: 4FB61CD5-884E-495B-A451-AB47B9A5019E
+name: InactivationDelayPeriod
 description: This rule assesses whether a [PolicyDocument] that offers the property [AccountManagementPolicy], has [p1:valid] set correctly.
 implementationGuidelines:
   AMOE: "When are inactive accounts blocked?"
