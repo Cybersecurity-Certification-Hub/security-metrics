@@ -299,6 +299,9 @@
         <Class abbreviatedIRI="core:Policies"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:AccountManagementPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
     </Declaration>
     <Declaration>
@@ -562,6 +565,17 @@
     <SubClassOf>
         <Class abbreviatedIRI="core:Policies"/>
         <Class abbreviatedIRI="core:Functionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AccountManagementPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AccountManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:intervalMonths"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
