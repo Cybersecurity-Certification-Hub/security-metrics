@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "b1cd2a0b-dfaa-4462-aae0-b47908fa4b89"
+name: "SubcontractorComplianceMonitoringRequired"
+description: "This rule assesses whether a [PolicyDocument] includes [OutsourcingPolicy] with its [p1:monitoringObligationStated] property set correctly."
+implementationGuidelines:
+  AMOE:
+    question: "Does the contract identify subcontracted/external providers, and does it require them to comply with and be monitored against the security policy?"
+    keywords: ["providers", "subcontracted", "comply with the Policy", "monitoring compliance"]
+category: "Governance"
+version: "v1"
+comments: "Outsourcing/subcontractor agreements must require the subcontracted provider to comply with, and be monitored against, the organization's security policy."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

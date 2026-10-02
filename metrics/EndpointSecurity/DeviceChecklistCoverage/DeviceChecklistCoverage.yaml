@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "f45c0d04-9051-4956-859f-980893fa027c"
+name: "DeviceChecklistCoverage"
+description: "This rule assesses whether a [PolicyDocument] includes [DeviceManagementPolicy] with its [p1:checklistCoveragePercent] set correctly, across the 7-point device checklist."
+implementationGuidelines:
+  AMOE:
+    question: "What fraction of the 7-point device checklist is explicitly present?"
+    keywords: ["device checklist", "coverage"]
+category: "EndpointSecurity"
+version: "v1"
+comments: "100% of the 7-point device checklist must be explicitly present."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: 100

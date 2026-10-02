@@ -1,6 +1,6 @@
 package cch.metrics.compliance_methodology
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.complianceMethodologyPolicy as complianceMethodologyPolicy
 
@@ -9,12 +9,12 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    complianceMethodologyPolicy != {} # only assess if policy is provided
+   "methodology" in object.keys(input.complianceAuditIntervalPolicy)
     "PolicyDocument" in input.type
 }
 
 compliant if {
-    compare(data.operator, data.target_value, complianceMethodologyPolicy.methodology)
+	every r in results { r.success }
 }
 
 message := "The compliance methodology is properly configured." if {
@@ -22,3 +22,5 @@ message := "The compliance methodology is properly configured." if {
 } else := "The compliance methodology is not properly configured." if {
     not compliant
 }
+
+results := [comparison_result("complianceMethodologyPolicy.methodology", complianceMethodologyPolicy.methodology)]

@@ -124,6 +124,12 @@
         <DataProperty abbreviatedIRI="prop:coveredAttackTypes"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:antispoofingRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:filteringRequired"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:creation_time"/>
     </Declaration>
     <Declaration>
@@ -148,6 +154,12 @@
         <DataProperty abbreviatedIRI="res:isDefined"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:thirdPartyExchangeRulesDefined"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:restrictsDownloadAndExtraction"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:reviewFrequency"/>
     </Declaration>
     <Declaration>
@@ -155,6 +167,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:recoveryFrequency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:redundant"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:service"/>
@@ -343,6 +358,9 @@
         <DataProperty abbreviatedIRI="prop:auditInterval"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:daysSinceLastAudit"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prop:updateInterval"/>
     </Declaration>
     <Declaration>
@@ -476,6 +494,96 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="res:logLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:cvssScoringUsed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:criticalHighSlaStated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:mediumSlaStated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:lowSlaStated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:allMandatedControlsAddressed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:checklistCoveragePercent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:pentestGateRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:referencesIndustryFramework"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:highCriticalFindingsBlockRelease"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:costsExplicitlyAssignedToProvider"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:ownerAssignmentStated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:inventoryDefined"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:notificationWindowHours"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:severityAndEscalationDefined"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:registryAndSlaStated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:monitoringMechanism"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:monitoringObligationStated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="res:ownerAndApprovalDefined"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:recipientHeldKeyRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:nonDescriptiveFilenameRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:encryptedChannelRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:technique"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:anonymizationRequiredForNonProd"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:mandatedAreaCoveragePercent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:mandatoryFieldCompletenessPercent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:unrestrictedAccessGranted"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:authorizedSoftwareAndControlledInstallationRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:twoFactorRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:encryptionRequired"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:mfaAndFederationRequiredForRemoteAccess"/>
     </Declaration>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="prop:hasMultiple"/>
@@ -1382,5 +1490,365 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>prop:value</AbbreviatedIRI>
         <Literal xml:lang="english">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:thirdPartyExchangeRulesDefined</AbbreviatedIRI>
+        <Literal>Indicates whether the policy specifically defines rules for information exchange with third parties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:thirdPartyExchangeRulesDefined</AbbreviatedIRI>
+        <Literal>thirdPartyExchangeRulesDefined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:antispoofingRequired</AbbreviatedIRI>
+        <Literal>Indicates whether the policy explicitly requires antispoofing mechanisms on internet-facing routers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:antispoofingRequired</AbbreviatedIRI>
+        <Literal>antispoofingRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:filteringRequired</AbbreviatedIRI>
+        <Literal>Indicates whether the policy explicitly requires network filtering mechanisms on internet-facing routers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:filteringRequired</AbbreviatedIRI>
+        <Literal>filteringRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:restrictsDownloadAndExtraction</AbbreviatedIRI>
+        <Literal>Indicates whether the policy restricts downloading or extracting information from the organization's systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:restrictsDownloadAndExtraction</AbbreviatedIRI>
+        <Literal>restrictsDownloadAndExtraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:daysSinceLastAudit</AbbreviatedIRI>
+        <Literal>The number of days elapsed since the last completed external/supervisory audit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:daysSinceLastAudit</AbbreviatedIRI>
+        <Literal>daysSinceLastAudit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:redundant</AbbreviatedIRI>
+        <Literal>Indicates whether the resource is stored redundantly.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:redundant</AbbreviatedIRI>
+        <Literal>redundant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:cvssScoringUsed</AbbreviatedIRI>
+        <Literal>Indicates whether CVSS scoring is used to prioritize vulnerability resolution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:cvssScoringUsed</AbbreviatedIRI>
+        <Literal>cvssScoringUsed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:criticalHighSlaStated</AbbreviatedIRI>
+        <Literal>Indicates whether the critical/high severity vulnerability resolution SLA is stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:criticalHighSlaStated</AbbreviatedIRI>
+        <Literal>criticalHighSlaStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:mediumSlaStated</AbbreviatedIRI>
+        <Literal>Indicates whether the medium severity vulnerability resolution SLA is stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:mediumSlaStated</AbbreviatedIRI>
+        <Literal>mediumSlaStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:lowSlaStated</AbbreviatedIRI>
+        <Literal>Indicates whether the low severity vulnerability resolution SLA is stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:lowSlaStated</AbbreviatedIRI>
+        <Literal>lowSlaStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:allMandatedControlsAddressed</AbbreviatedIRI>
+        <Literal>Indicates whether all mandated device controls are addressed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:allMandatedControlsAddressed</AbbreviatedIRI>
+        <Literal>allMandatedControlsAddressed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:checklistCoveragePercent</AbbreviatedIRI>
+        <Literal>Percentage of the mandated checklist items explicitly present.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:checklistCoveragePercent</AbbreviatedIRI>
+        <Literal>checklistCoveragePercent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:pentestGateRequired</AbbreviatedIRI>
+        <Literal>Indicates whether a pentest/static-analysis gate is required prior to production release.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:pentestGateRequired</AbbreviatedIRI>
+        <Literal>pentestGateRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:referencesIndustryFramework</AbbreviatedIRI>
+        <Literal>Indicates whether the methodology references an industry framework (e.g., OWASP, SANS, CERT).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:referencesIndustryFramework</AbbreviatedIRI>
+        <Literal>referencesIndustryFramework</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:highCriticalFindingsBlockRelease</AbbreviatedIRI>
+        <Literal>Indicates whether high/critical findings block the production release.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:highCriticalFindingsBlockRelease</AbbreviatedIRI>
+        <Literal>highCriticalFindingsBlockRelease</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:costsExplicitlyAssignedToProvider</AbbreviatedIRI>
+        <Literal>Indicates whether the clause explicitly assigns cost responsibility to the service provider.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:costsExplicitlyAssignedToProvider</AbbreviatedIRI>
+        <Literal>costsExplicitlyAssignedToProvider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:ownerAssignmentStated</AbbreviatedIRI>
+        <Literal>Indicates whether an owner is assigned for each asset class/type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:ownerAssignmentStated</AbbreviatedIRI>
+        <Literal>ownerAssignmentStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:inventoryDefined</AbbreviatedIRI>
+        <Literal>Indicates whether an asset inventory is defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:inventoryDefined</AbbreviatedIRI>
+        <Literal>inventoryDefined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:notificationWindowHours</AbbreviatedIRI>
+        <Literal>The maximum incident notification window, in hours.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:notificationWindowHours</AbbreviatedIRI>
+        <Literal>notificationWindowHours</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:severityAndEscalationDefined</AbbreviatedIRI>
+        <Literal>Indicates whether escalation responsibility for critical/high severity incidents is defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:severityAndEscalationDefined</AbbreviatedIRI>
+        <Literal>severityAndEscalationDefined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:registryAndSlaStated</AbbreviatedIRI>
+        <Literal>Indicates whether an incident registry and handling SLA are stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:registryAndSlaStated</AbbreviatedIRI>
+        <Literal>registryAndSlaStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:monitoringMechanism</AbbreviatedIRI>
+        <Literal>The stated monitoring cadence or mechanism for subcontractor compliance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:monitoringMechanism</AbbreviatedIRI>
+        <Literal>monitoringMechanism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:monitoringObligationStated</AbbreviatedIRI>
+        <Literal>Indicates whether subcontracted/external providers are required to comply with and be monitored against the security policy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:monitoringObligationStated</AbbreviatedIRI>
+        <Literal>monitoringObligationStated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>res:ownerAndApprovalDefined</AbbreviatedIRI>
+        <Literal>Indicates whether an accountable owner and an approval date/signature are both stated for the policy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>res:ownerAndApprovalDefined</AbbreviatedIRI>
+        <Literal>ownerAndApprovalDefined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:recipientHeldKeyRequired</AbbreviatedIRI>
+        <Literal>Indicates whether the encryption key used to protect a file must be held by the recipient.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:recipientHeldKeyRequired</AbbreviatedIRI>
+        <Literal>recipientHeldKeyRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:nonDescriptiveFilenameRequired</AbbreviatedIRI>
+        <Literal>Indicates whether transferred file names must not include descriptive content.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:nonDescriptiveFilenameRequired</AbbreviatedIRI>
+        <Literal>nonDescriptiveFilenameRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:encryptedChannelRequired</AbbreviatedIRI>
+        <Literal>Indicates whether encrypted channels (e.g., sFTP/HTTPS) are required for data transmission.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:encryptedChannelRequired</AbbreviatedIRI>
+        <Literal>encryptedChannelRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:technique</AbbreviatedIRI>
+        <Literal>The named anonymization technique or standard used.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:technique</AbbreviatedIRI>
+        <Literal>technique</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:anonymizationRequiredForNonProd</AbbreviatedIRI>
+        <Literal>Indicates whether anonymization/pseudonymization is required for non-production environments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:anonymizationRequiredForNonProd</AbbreviatedIRI>
+        <Literal>anonymizationRequiredForNonProd</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:mandatedAreaCoveragePercent</AbbreviatedIRI>
+        <Literal>Percentage of mandated control areas explicitly addressed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:mandatedAreaCoveragePercent</AbbreviatedIRI>
+        <Literal>mandatedAreaCoveragePercent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:mandatoryFieldCompletenessPercent</AbbreviatedIRI>
+        <Literal>Percentage of change register entries with all mandatory fields completed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:mandatoryFieldCompletenessPercent</AbbreviatedIRI>
+        <Literal>mandatoryFieldCompletenessPercent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:unrestrictedAccessGranted</AbbreviatedIRI>
+        <Literal>Indicates whether the audit clause grants direct, unrestricted, on-demand access.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:unrestrictedAccessGranted</AbbreviatedIRI>
+        <Literal>unrestrictedAccessGranted</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:authorizedSoftwareAndControlledInstallationRequired</AbbreviatedIRI>
+        <Literal>Indicates whether the standard requires authorized-software and controlled-installation controls on network devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:authorizedSoftwareAndControlledInstallationRequired</AbbreviatedIRI>
+        <Literal>authorizedSoftwareAndControlledInstallationRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:twoFactorRequired</AbbreviatedIRI>
+        <Literal>Indicates whether two-factor authentication is required.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:twoFactorRequired</AbbreviatedIRI>
+        <Literal>twoFactorRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:encryptionRequired</AbbreviatedIRI>
+        <Literal>Indicates whether data encryption is required.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:encryptionRequired</AbbreviatedIRI>
+        <Literal>encryptionRequired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:mfaAndFederationRequiredForRemoteAccess</AbbreviatedIRI>
+        <Literal>Indicates whether MFA and federation are required for remote access.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:mfaAndFederationRequiredForRemoteAccess</AbbreviatedIRI>
+        <Literal>mfaAndFederationRequiredForRemoteAccess</Literal>
     </AnnotationAssertion>
 </Ontology>

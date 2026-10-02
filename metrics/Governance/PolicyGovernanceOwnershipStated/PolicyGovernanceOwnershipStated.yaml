@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "6fc7b26e-e609-4325-974d-9b7262622202"
+name: "PolicyGovernanceOwnershipStated"
+description: "This rule assesses whether a [PolicyDocument] includes [SecurityPolicyReview] with its [p1:ownerAndApprovalDefined] property set correctly, i.e., an accountable owner (e.g., CISO or Security Committee) and an approval date/signature are both stated."
+implementationGuidelines:
+  AMOE:
+    question: "Does the policy identify an accountable owner (CISO/Security Committee) and an approval date/signature?"
+    keywords: ["approved by", "CISO", "Security Committee", "Board"]
+category: "Governance"
+version: "v1"
+comments: "A governed policy must identify an accountable owner and carry an approval date/signature, evidencing formal sign-off."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
