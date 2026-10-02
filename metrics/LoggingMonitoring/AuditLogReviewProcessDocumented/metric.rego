@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"enabled" in object.keys(auditLogMonitoringPolicy)
-	is_boolean(auditLogMonitoringPolicy.enabled)
 	"PolicyDocument" in input.type
 }
 

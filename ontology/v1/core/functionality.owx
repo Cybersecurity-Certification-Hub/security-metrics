@@ -657,14 +657,14 @@
         <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:thirdPartyExchangeRulesDefined"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:DataConfidentialitySDNPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:restrictsDownloadAndExtraction"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -704,14 +704,14 @@
         <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:antispoofingRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:filteringRequired"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
