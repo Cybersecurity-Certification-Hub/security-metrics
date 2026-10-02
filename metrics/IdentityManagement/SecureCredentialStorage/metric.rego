@@ -1,6 +1,6 @@
 package cch.metrics.secure_credential_storage
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.accountManagementPolicy as accountManagementPolicy
 
@@ -9,6 +9,7 @@ default compliant = false
 
 applicable if {
 	"secretStorage" in object.keys(accountManagementPolicy)
+	input.type[_] == "PolicyDocument"
 }
 
 compliant if {

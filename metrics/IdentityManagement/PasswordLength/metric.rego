@@ -1,6 +1,6 @@
 package cch.metrics.password_length
 
-import data.cch.compare
+import data.cch.comparison_result
 import rego.v1
 import input.passwordBasedAuthentication as pwd
 
@@ -9,6 +9,7 @@ default compliant = false
 
 applicable if {
 	"length" in object.keys(pwd)
+	input.type[_] == "PolicyDocument"
 }
 
 compliant if {
