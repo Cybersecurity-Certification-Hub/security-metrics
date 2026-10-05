@@ -15,4 +15,4 @@ compliant if {
 	every r in results { r.success }
 }
 
-results := [comparison_result("t1CoherenceTime", input.t1CoherenceTime)]
+results := [comparison_result("t1CoherenceTime", object.get(input, "t1CoherenceTime", null))]

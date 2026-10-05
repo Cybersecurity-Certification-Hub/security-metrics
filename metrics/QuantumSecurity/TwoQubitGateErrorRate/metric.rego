@@ -15,4 +15,4 @@ compliant if {
 	every r in results { r.success }
 }
 
-results := [comparison_result("twoQubitGateErrorRate", input.twoQubitGateErrorRate)]
+results := [comparison_result("twoQubitGateErrorRate", object.get(input, "twoQubitGateErrorRate", null))]

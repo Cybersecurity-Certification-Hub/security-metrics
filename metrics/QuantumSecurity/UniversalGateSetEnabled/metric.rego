@@ -15,4 +15,4 @@ compliant if {
 	every r in results { r.success }
 }
 
-results := [comparison_result("universalGateSetEnabled", input.universalGateSetEnabled)]
+results := [comparison_result("universalGateSetEnabled", object.get(input, "universalGateSetEnabled", null))]

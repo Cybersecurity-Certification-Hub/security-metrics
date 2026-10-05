@@ -15,4 +15,4 @@ compliant if {
 	every r in results { r.success }
 }
 
-results := [comparison_result("spamErrorRate", input.spamErrorRate)]
+results := [comparison_result("spamErrorRate", object.get(input, "spamErrorRate", null))]
