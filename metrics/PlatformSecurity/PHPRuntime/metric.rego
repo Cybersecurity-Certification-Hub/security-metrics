@@ -9,6 +9,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
+	"runtimeVersion" in object.keys(func)
 	func.runtimeLanguage == "PHP"
 }
 
