@@ -9,7 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-   "methodology" in object.keys(input.complianceAuditIntervalPolicy)
+   "methodology" in object.keys(input.complianceMethodologyPolicy)
     "PolicyDocument" in input.type
 }
 
