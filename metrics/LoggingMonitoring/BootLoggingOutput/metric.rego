@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	"loggingServiceIds" in object.keys(logging)
+	"bootLogging" in object.keys(input)
 	"VirtualMachine" in input.type
 }
 
@@ -27,6 +27,6 @@ message := "Boot logging output is properly configured." if {
 results := [
 	comparison_result(
 		"bootLogging.loggingServiceIds.count",
-		count(logging.loggingServiceIds),
+		count(object.get(logging, "loggingServiceIds", [])),
 	),
 ] 
