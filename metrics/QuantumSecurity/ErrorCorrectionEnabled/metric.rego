@@ -8,6 +8,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
+	"errorCorrectionEnabled" in object.keys(input)
 	input.type[_] == "QPU"
 }
 

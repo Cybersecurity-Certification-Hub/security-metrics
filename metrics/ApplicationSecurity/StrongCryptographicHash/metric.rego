@@ -10,7 +10,7 @@ default compliant = false
 
 applicable if {
 	# only applicable if the property is given
-	ch
+	"algorithm" in object.keys(ch)
 }
 
 compliant if {

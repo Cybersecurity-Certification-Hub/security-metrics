@@ -35,23 +35,14 @@ compare(operator, target_value, actual_value) := x if {
 	x := actual_value > target_value
 }
 
-# Checks if the actual_value (string) exists in target_values (array)
+# Checks if the actual_value (scalar) exists in target_values (array)
 compare(operator, target_values, actual_value) := x if {
 	operator == "isIn"
 
-	# Check if the input value actual_value is a string, otherwise the compare function for array must be used
+	# Arrays and objects have their own compare functions below
 	is_array(target_values)
-	is_string(actual_value)
-	x := actual_value in target_values
-}
-
-# Checks if the actual_value (number) exists in target_values (array)
-compare(operator, target_values, actual_value) := x if {
-	operator == "isIn"
-
-	# Check if the input value actual_value is a number, otherwise the compare function for array must be used
-	is_array(target_values)
-	is_number(actual_value)
+	not is_array(actual_value)
+	not is_object(actual_value)
 	x := actual_value in target_values
 }
 
@@ -76,19 +67,17 @@ compare(operator, target_values, actual_values) := x if {
 # Checks if one element of target_values (array) exists in key of actual_values (object)
 compare(operator, target_values, actual_values) := x if {
 	operator == "isIn"
+	is_array(target_values)
 	is_object(actual_values)
 
-	# Get all keys from objects
-	value := object.keys(actual_values)
-
-	# Check if one the keys is in array of target_values
-	some v in value
-	x := v in target_values
+	# Check if one of the object's keys is in array of target_values
+	x := count([k | some k in object.keys(actual_values); k in target_values]) > 0
 }
 
 # Checks if the target_value (string) exists in key of actual_values (object)
 compare(operator, target_value, actual_values) := x if {
 	operator == "isIn"
+	is_string(target_value)
 	is_object(actual_values)
 
 	# Get all keys from objects
@@ -108,21 +97,17 @@ compare(operator, target_values, actual_value) := x if {
 }
 
 # Checks if all elements of actual_values (array) exists in target_values (array)
-compare(operator, target_values, actual_values) if {
+compare(operator, target_values, actual_values) := x if {
 	operator == "allIn"
 	is_array(actual_values)
-	every act_val in actual_values {
-		act_val in target_values
-	}
+	x := count([v | some v in actual_values; not v in target_values]) == 0
 }
 
 # Checks if any element exists in actual_values (array)
-compare(operator, target_value, actual_values) if {
+compare(operator, target_value, actual_values) := x if {
 	operator == "hasAny"
 	is_array(actual_values)
-	
-	x := count(actual_values)
-	target_value == ( x > 0 )
+	x := target_value == (count(actual_values) > 0)
 }
 
 # Builds a single comparison-result object in the shape Go's evalMap()
