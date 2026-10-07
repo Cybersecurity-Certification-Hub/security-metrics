@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	"registryAndSlaStated" in object.keys(securityIncident)
+	"handlingPeriodHours" in object.keys(securityIncident)
 	"PolicyDocument" in input.type
 }
 
@@ -22,4 +22,4 @@ message := "The organization has an incident management procedure with an incide
 	not compliant
 }
 
-results := [comparison_result("securityIncident.registryAndSlaStated", securityIncident.registryAndSlaStated)]
+results := [comparison_result("securityIncident.handlingPeriodHours", securityIncident.handlingPeriodHours)]

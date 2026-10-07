@@ -139,7 +139,7 @@
         <Class abbreviatedIRI="res:SecurityPolicyReview"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="res:ownerAndApprovalDefined"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <AnnotationAssertion>

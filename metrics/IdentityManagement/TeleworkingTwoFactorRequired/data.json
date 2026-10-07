@@ -1,4 +1,7 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "two-factor authentication",
+        "requires a two-factor authentication mechanism"
+    ]
 }

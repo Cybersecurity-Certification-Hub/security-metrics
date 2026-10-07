@@ -1,4 +1,14 @@
 {
     "operator": "isIn",
-    "target_value": ["masking", "tokenization", "k-anonymity", "anonymization", "pseudonymization", "dissociation", "fictitious data"]
+    "target_value": [
+        "masking",
+        "tokenization",
+        "data masking algorithm",
+        "full anonymization",
+        "k-anonymity",
+        "anonymization",
+        "pseudonymization",
+        "dissociation",
+        "fictitious data"
+    ]
 }

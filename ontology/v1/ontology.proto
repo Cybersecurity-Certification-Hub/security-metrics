@@ -53,7 +53,8 @@ message AcceptableUsePolicy {
   option (resource_type_names) = "Policies";
   option (resource_type_names) = "Functionality";
 
-  optional bool is_defined = 4786;
+  // Statements of the purpose and scope of the acceptable use procedure, as extracted from the document.
+  repeated string document_purpose = 1170;
   // Percentage of mandated control areas explicitly addressed.
   optional float mandated_area_coverage_percent = 2890;
 }
@@ -256,9 +257,9 @@ message AssetInventory {
   // Percentage of completed reviews and updates of asset inventory entries.
   optional float completed_review_percentage = 15931;
   // Indicates whether an asset inventory is defined.
-  optional bool inventory_defined = 10244;
+  repeated string inventory_defined = 10244;
   // Indicates whether an owner is assigned for each asset class/type.
-  optional bool owner_assignment_stated = 10728;
+  repeated string owner_assignment_stated = 10728;
   optional int32 review_frequency = 12717;
   // Service contains the name of the service (e.g., Asset Management).
   optional string service = 11727;
@@ -311,6 +312,8 @@ message AuditLogMonitoringPolicy {
   option (resource_type_names) = "Functionality";
 
   optional bool enabled = 10159;
+  // Mechanisms the log management procedure uses to monitor audit logs and review detected anomalies, as extracted from the document.
+  repeated string monitoring_mechanisms = 1077;
 }
 
 // Auditing is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -742,7 +745,7 @@ message ComplianceAuditIntervalPolicy {
   // The number of days elapsed since the last completed external/supervisory audit.
   optional int32 days_since_last_audit = 12483;
   // Indicates whether the audit clause grants direct, unrestricted, on-demand access.
-  optional bool unrestricted_access_granted = 9367;
+  repeated string unrestricted_access_granted = 9367;
 }
 
 // ComplianceMethodologyPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1154,11 +1157,11 @@ message CryptographicTransferPolicy {
   option (resource_type_names) = "Functionality";
 
   // Indicates whether encrypted channels (e.g., sFTP/HTTPS) are required for data transmission.
-  optional bool encrypted_channel_required = 17250;
+  repeated string encrypted_channel_required = 17250;
   // Indicates whether transferred file names must not include descriptive content.
-  optional bool non_descriptive_filename_required = 425;
+  repeated string non_descriptive_filename_required = 425;
   // Indicates whether the encryption key used to protect a file must be held by the recipient.
-  optional bool recipient_held_key_required = 14966;
+  repeated string recipient_held_key_required = 14966;
 }
 
 // CustomerKeyEncryption is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -1270,9 +1273,9 @@ message DataConfidentialitySDNPolicy {
 
   optional bool is_defined = 1199;
   // Indicates whether the policy restricts downloading or extracting information from the organization's systems.
-  optional bool restricts_download_and_extraction = 16183;
+  repeated string restricts_download_and_extraction = 16183;
   // Indicates whether the policy specifically defines rules for information exchange with third parties.
-  optional bool third_party_exchange_rules_defined = 6688;
+  repeated string third_party_exchange_rules_defined = 6688;
 }
 
 // DataLocation is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -1393,10 +1396,8 @@ message DeviceManagementPolicy {
   option (resource_type_names) = "Policies";
   option (resource_type_names) = "Functionality";
 
-  // Indicates whether all mandated device controls are addressed.
-  optional bool all_mandated_controls_addressed = 5229;
-  // Percentage of the mandated checklist items explicitly present.
-  optional float checklist_coverage_percent = 15738;
+  // Number of the 7 mandated device security controls explicitly present in the procedure.
+  optional int32 mandated_controls_count = 15741;
 }
 
 // DeviceProvisioningService is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -2518,7 +2519,7 @@ message LiabilityPolicy {
   option (resource_type_names) = "Functionality";
 
   // Indicates whether the clause explicitly assigns cost responsibility to the service provider.
-  optional bool costs_explicitly_assigned_to_provider = 15728;
+  repeated string costs_explicitly_assigned_to_provider = 15728;
 }
 
 // Library is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -3138,12 +3139,12 @@ message NetworkThreatMitigationPolicy {
   option (resource_type_names) = "Functionality";
 
   // Indicates whether the policy explicitly requires antispoofing mechanisms on internet-facing routers.
-  optional bool antispoofing_required = 15371;
+  repeated string antispoofing_required = 15371;
   // Indicates whether the standard requires authorized-software and controlled-installation controls on network devices.
-  optional bool authorized_software_and_controlled_installation_required = 18685;
+  repeated string authorized_software_and_controlled_installation_required = 18685;
   repeated string covered_attack_types = 10498;
   // Indicates whether the policy explicitly requires network filtering mechanisms on internet-facing routers.
-  optional bool filtering_required = 11116;
+  repeated string filtering_required = 11116;
 }
 
 // Networking is an abstract class in our ontology, it cannot be instantiated but acts as an "interface".
@@ -3359,7 +3360,7 @@ message OutsourcingPolicy {
   // The stated monitoring cadence or mechanism for subcontractor compliance.
   optional string monitoring_mechanism = 16524;
   // Indicates whether subcontracted/external providers are required to comply with and be monitored against the security policy.
-  optional bool monitoring_obligation_stated = 8257;
+  repeated string monitoring_obligation_stated = 8257;
 }
 
 // POSIX is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4172,11 +4173,11 @@ message SecureDevelopmentPolicy {
   // Percentage of the mandated checklist items explicitly present.
   optional float checklist_coverage_percent = 6485;
   // Indicates whether high/critical findings block the production release.
-  optional bool high_critical_findings_block_release = 16634;
+  repeated string high_critical_findings_block_release = 16634;
   // Indicates whether a pentest/static-analysis gate is required prior to production release.
-  optional bool pentest_gate_required = 9188;
+  repeated string pentest_gate_required = 9188;
   // Indicates whether the methodology references an industry framework (e.g., OWASP, SANS, CERT).
-  optional bool references_industry_framework = 12037;
+  repeated string references_industry_framework = 12037;
 }
 
 // SecurityAdvisoryDocument is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4299,12 +4300,14 @@ message SecurityIncident {
   option (resource_type_names) = "SecurityIncident";
   option (resource_type_names) = "Functionality";
 
+  // Notification/handling period, in hours, stated by the incident management procedure.
+  optional int32 handling_period_hours = 13487;
   // The maximum incident notification window, in hours.
   optional int32 notification_window_hours = 9271;
-  // Indicates whether an incident registry and handling SLA are stated.
-  optional bool registry_and_sla_stated = 18381;
+  // Contacts or channels named for reporting a cybersecurity incident, as extracted from the document.
+  repeated string reporting_contacts = 1924;
   // Indicates whether escalation responsibility for critical/high severity incidents is defined.
-  optional bool severity_and_escalation_defined = 11333;
+  repeated string severity_and_escalation_defined = 11333;
   repeated string team = 3344;
 }
 
@@ -4318,7 +4321,7 @@ message SecurityPolicyReview {
   // The interval refers to the interval in months.
   optional int32 interval_months = 7860;
   // Indicates whether an accountable owner and an approval date/signature are both stated for the policy.
-  optional bool owner_and_approval_defined = 16461;
+  repeated string owner_and_approval_defined = 16461;
 }
 
 // SecurityTraining is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4509,11 +4512,11 @@ message TeleworkingPolicy {
   option (resource_type_names) = "Functionality";
 
   // Indicates whether data encryption is required.
-  optional bool encryption_required = 2639;
+  repeated string encryption_required = 2639;
   // Indicates whether MFA and federation are required for remote access.
-  optional bool mfa_and_federation_required_for_remote_access = 10016;
+  repeated string mfa_and_federation_required_for_remote_access = 10016;
   // Indicates whether two-factor authentication is required.
-  optional bool two_factor_required = 4379;
+  repeated string two_factor_required = 4379;
 }
 
 // TestDataPolicy is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.
@@ -4524,7 +4527,7 @@ message TestDataPolicy {
   option (resource_type_names) = "Functionality";
 
   // Indicates whether anonymization/pseudonymization is required for non-production environments.
-  optional bool anonymization_required_for_non_prod = 993;
+  repeated string anonymization_required_for_non_prod = 993;
   // The named anonymization technique or standard used.
   optional string technique = 10604;
 }
@@ -4796,14 +4799,14 @@ message VulnerabilityManagementPolicy {
   option (resource_type_names) = "Policies";
   option (resource_type_names) = "Functionality";
 
-  // Indicates whether the critical/high severity vulnerability resolution SLA is stated.
-  optional bool critical_high_sla_stated = 13118;
+  // Maximum resolution time, in days, stated for Critical/High severity vulnerabilities.
+  optional int32 critical_high_sla_days = 5750;
   // Indicates whether CVSS scoring is used to prioritize vulnerability resolution.
-  optional bool cvss_scoring_used = 16848;
-  // Indicates whether the low severity vulnerability resolution SLA is stated.
-  optional bool low_sla_stated = 14560;
-  // Indicates whether the medium severity vulnerability resolution SLA is stated.
-  optional bool medium_sla_stated = 3765;
+  repeated string cvss_scoring_used = 16848;
+  // Maximum resolution time, in days, stated for Low severity vulnerabilities.
+  optional int32 low_sla_days = 11108;
+  // Maximum resolution time, in days, stated for Medium severity vulnerabilities.
+  optional int32 medium_sla_days = 11175;
 }
 
 // WebApplicationFirewall is an entity class in our ontology. It can be instantiated and contains all of its properties as well of its implemented interfaces.

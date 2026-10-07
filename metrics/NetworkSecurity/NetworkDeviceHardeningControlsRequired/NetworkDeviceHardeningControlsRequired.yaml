@@ -12,5 +12,5 @@ comments: "The standard must require authorized-software/anti-malware controls a
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["authorized software", "malware", "antivirus", "Only authorized software may run on network appliances"]

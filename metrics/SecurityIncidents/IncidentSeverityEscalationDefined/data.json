@@ -1,4 +1,9 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "SOC shift lead",
+        "CISO",
+        "Crisis Management Team",
+        "The SOC shift lead"
+    ]
 }

@@ -12,5 +12,5 @@ comments: "The policy must require the encryption key to be known by the recipie
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["key known by the recipient", "key known", "the information must be encrypted using a key known by the recipient"]

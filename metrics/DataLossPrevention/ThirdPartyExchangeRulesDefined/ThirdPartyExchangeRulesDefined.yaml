@@ -12,5 +12,5 @@ comments: "The policy must specifically define rules for information exchange wi
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["third parties", "third-party exchange", "establishes the security requirements"]
