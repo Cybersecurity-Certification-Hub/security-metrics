@@ -12,5 +12,5 @@ comments: "The standard must explicitly require antispoofing mechanisms on inter
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["antispoofing", "All Internet-facing routers implement antispoofing mechanisms"]

@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"restrictsDownloadAndExtraction" in object.keys(dataConfidentialitySDNPolicy)
-	is_boolean(dataConfidentialitySDNPolicy.restrictsDownloadAndExtraction)
 	"PolicyDocument" in input.type
 }
 

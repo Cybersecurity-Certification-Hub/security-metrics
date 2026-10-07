@@ -12,5 +12,5 @@ comments: "Backups must be stored on redundant and encrypted systems. This metri
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["redundant and encrypted"]
