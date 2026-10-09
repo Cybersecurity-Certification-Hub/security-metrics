@@ -2,12 +2,11 @@ package cch.metrics.anomaly_detection_output
 
 import data.cch.comparison_result
 import rego.v1
-import input.anomalyDetection.applicationLogging as logging
 
 default applicable := false
 default compliant := false
 
-# The metric is applicable when loggingServiceIds is configured as an array.
+# The metric is applicable to database services. Missing logging service IDs count as zero.
 applicable if {
 	"DatabaseService" in input.type
 }
@@ -27,6 +26,6 @@ message := "Anomaly detection output settings are properly defined." if {
 results := [
 	comparison_result(
 		"anomalyDetection.applicationLogging.loggingServiceIds.count",
-		count(logging.loggingServiceIds),
+		count(object.get(input, ["anomalyDetection", "applicationLogging", "loggingServiceIds"], [])),
 	),
 ]

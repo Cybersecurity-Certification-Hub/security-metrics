@@ -8,6 +8,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
+	"oneQubitGateErrorRate" in object.keys(input)
 	input.type[_] == "QPU"
 }
 

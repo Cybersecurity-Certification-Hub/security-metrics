@@ -27,6 +27,9 @@
         <Class IRI="/classes/Account"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/classes/AccountManagementPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/classes/ActivityLog"/>
     </Declaration>
     <Declaration>
@@ -424,6 +427,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/classes/Immutability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/InformationSecurityManagementSystem"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/InitializationVector"/>
@@ -954,6 +960,9 @@
         <ObjectProperty IRI="/properties/scope"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/properties/secretStorage"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/properties/serviceOf"/>
     </Declaration>
     <Declaration>
@@ -970,6 +979,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/properties/validatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/properties/prop:iso27001Certified"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/T1CoherenceTime"/>
@@ -1719,6 +1731,12 @@
         <Datatype abbreviatedIRI="xsd:listString"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/properties/intervalMonths"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/length"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/classes/TwoQubitGateErrorRate"/>
     </Declaration>
     <Declaration>
@@ -1783,6 +1801,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/team"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/properties/iso27001Certified"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/classes/planDocumented"/>
@@ -1865,6 +1886,24 @@
             <ObjectProperty IRI="/properties/offers"/>
             <Class IRI="/classes/AssetInventory"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AccountManagementPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AccountManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/intervalMonths"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/AccountManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/secretStorage"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/classes/ActivityLog"/>
@@ -3806,6 +3845,17 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/InformationSecurityManagementSystem"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/InformationSecurityManagementSystem"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/iso27001Certified"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/InitializationVector"/>
         <Class IRI="/classes/Functionality"/>
     </SubClassOf>
@@ -4674,6 +4724,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/PasswordBasedAuthentication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/properties/length"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/PasswordPolicy"/>
         <Class IRI="/classes/CloudResource"/>
     </SubClassOf>
@@ -4715,6 +4772,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/AccessControlTypePolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/AccountManagementPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -4771,6 +4835,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/DeviceManagementPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/InformationSecurityManagementSystem"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -10265,4 +10336,3 @@ name = metadata.name</Literal>
 
 
 <!-- Generated by the OWL API (version 4.5.26) https://github.com/owlcs/owlapi -->
-

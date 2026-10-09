@@ -299,6 +299,9 @@
         <Class abbreviatedIRI="core:Policies"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:AccountManagementPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:AuditLogMonitoringPolicy"/>
     </Declaration>
     <Declaration>
@@ -306,6 +309,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:LeastPrivilegePolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="core:InformationSecurityManagementSystem"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="core:NeedToKnowPolicy"/>
@@ -597,6 +603,24 @@
         <Class abbreviatedIRI="core:Functionality"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:AccountManagementPolicy"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AccountManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:intervalMonths"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:AccountManagementPolicy"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:secretStorage"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:AuditLogMonitoringPolicy"/>
         <Class abbreviatedIRI="core:Policies"/>
     </SubClassOf>
@@ -616,6 +640,17 @@
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="prop:isDefined"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:InformationSecurityManagementSystem"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:InformationSecurityManagementSystem"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="prop:iso27001Certified"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>

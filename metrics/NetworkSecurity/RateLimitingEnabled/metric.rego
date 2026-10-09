@@ -11,7 +11,7 @@ default compliant = false
 
 applicable if {
 	input.type[_] == "LoadBalancer"
-	rl
+	"enabled" in object.keys(rl)
 }
 
 compliant if {

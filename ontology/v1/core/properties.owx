@@ -55,6 +55,9 @@
         <ObjectProperty abbreviatedIRI="prop:implements"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:prop:iso27001Certified"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="prop:offers"/>
     </Declaration>
     <Declaration>
@@ -68,6 +71,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:runsOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prop:secretStorage"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="prop:serviceOf"/>

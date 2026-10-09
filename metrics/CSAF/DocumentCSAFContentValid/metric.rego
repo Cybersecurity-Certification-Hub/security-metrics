@@ -9,6 +9,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
+	"schemaValidation" in object.keys(document)
 	# check resource type
 	"SecurityAdvisoryDocument" in document.type
 }
@@ -17,4 +18,4 @@ compliant if {
 	every r in results { r.success }
 }
 
-results := [comparison_result("schemaValidation.errors.count", count(document.schemaValidation.errors))]
+results := [comparison_result("schemaValidation.errors.count", count(object.get(document.schemaValidation, "errors", [])))]

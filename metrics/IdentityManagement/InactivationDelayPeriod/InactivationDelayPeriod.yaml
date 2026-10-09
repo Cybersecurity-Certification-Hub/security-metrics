@@ -1,0 +1,18 @@
+# ====== Metadata ======
+id: 4FB61CD5-884E-495B-A451-AB47B9A5019E
+name: InactivationDelayPeriod
+description: This rule assesses whether a [PolicyDocument] that offers the property [AccountManagementPolicy], has [p1:intervalMonths] set correctly.
+implementationGuidelines:
+  AMOE: 
+    question: "When are inactive accounts blocked?"
+    is_headline_based: false
+    keywords: ["account management", "valid", "inactivity", "inactive"]
+version: "1.0"
+
+category: IdentityManagement
+comments: This metric evaluates the validity of accounts after inactivity. It ensures that the length is set to a sensible minimum value of months.
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "<="
+    targetValue: 6
