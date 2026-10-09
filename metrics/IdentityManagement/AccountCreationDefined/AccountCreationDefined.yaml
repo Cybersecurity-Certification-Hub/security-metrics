@@ -1,0 +1,20 @@
+# ====== Metadata ======
+id: "54b463a1-bcaf-45cd-8059-3ada3ff43751"
+name: "AccountCreationDefined"
+description: "This rule assesses whether a [PolicyDocument] includes [AccountManagementPolicy] with [p1:creationDefined] set correctly."
+
+implementationGuidelines:
+  AMOE:
+    question: "How are accounts created?"
+    is_headline_based: false
+    keywords: ["account", "creation", "defined"]
+
+category: "IdentityManagement"
+version: "v1"
+comments: "This metric assesses whether the policy defines procedures for account creation."
+
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
