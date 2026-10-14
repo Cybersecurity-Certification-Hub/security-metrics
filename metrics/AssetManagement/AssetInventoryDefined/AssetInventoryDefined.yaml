@@ -12,5 +12,5 @@ comments: "The policy must define an Asset Inventory. See AssetOwnershipAssignme
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["Asset Inventory", "maintains a complete Asset Inventory"]

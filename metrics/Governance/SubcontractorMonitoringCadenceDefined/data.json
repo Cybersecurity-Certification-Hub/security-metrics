@@ -1,4 +1,12 @@
 {
     "operator": "isIn",
-    "target_value": ["annual review", "right to audit", "right-to-audit", "KPI", "compliance report", "Monitoring and Surveillance", "Vendor Risk Register"]
+    "target_value": [
+        "annual review",
+        "right-to-audit",
+        "right to audit",
+        "KPI",
+        "compliance report",
+        "Monitoring and Surveillance",
+        "Vendor Risk Register"
+    ]
 }

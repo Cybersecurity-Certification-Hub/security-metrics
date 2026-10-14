@@ -9,7 +9,6 @@ default compliant := false
 
 applicable if {
 	"filteringRequired" in object.keys(networkThreatMitigationPolicy)
-	is_boolean(networkThreatMitigationPolicy.filteringRequired)
 	"PolicyDocument" in input.type
 }
 

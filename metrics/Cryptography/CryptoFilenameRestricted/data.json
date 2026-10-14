@@ -1,4 +1,11 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "sensitive information",
+        "confidential information",
+        "sensitive",
+        "confidential",
+        "internal information",
+        "file name"
+    ]
 }

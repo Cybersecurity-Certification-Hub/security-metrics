@@ -12,5 +12,5 @@ comments: "The policy must explicitly assign an owner per asset class/type."
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["asset owner", "ownership is reassigned", "Asset Owners -- maintain accurate classification and ownership records"]
