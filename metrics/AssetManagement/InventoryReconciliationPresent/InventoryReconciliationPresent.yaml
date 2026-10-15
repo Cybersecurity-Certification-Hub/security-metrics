@@ -6,9 +6,14 @@ implementationGuidelines:
   Manual:
     question: "Are inventory reconciliation reports available?"
     keywords: ["reconciliation", "inventory comparison", "reconciliation report"]
+    guidance: "Ask for the latest reconciliation report and check that it is not older than the interval that the organisation has set for itself. It should list the differences and what was done about them."
+    evidence:
+      - "The latest reconciliation report"
+      - "The tickets or records that handle the differences"
+      - "The defined interval for reconciliation"
 category: "AssetManagement"
 version: "v1"
-comments: "Manual-only metric: assessed by an auditor who provides the result via StoreManualAssessmentResult."
+comments: "Answer true if the discovered assets are compared with the inventory at regular intervals and the differences are followed up."
 # ====== Configuration ======
 configuration:
   p1:

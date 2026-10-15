@@ -6,9 +6,14 @@ implementationGuidelines:
   Manual:
     question: "Is a change management policy document available?"
     keywords: ["change management policy", "change approval policy", "change management standard"]
+    guidance: "Open the policy and check that it has an owner, an approval and a date of its last review. A draft or an outdated version counts as not present. The policy states the rules for changes; the steps are in the procedure (see ChangeManagementProcedurePresence)."
+    evidence:
+      - "The policy document with version, owner and approval"
+      - "The date of the last review"
+      - "Where it is published for staff (ISMS, intranet)"
 category: "DevelopmentLifeCycle"
 version: "v1"
-comments: "Manual-only metric: assessed by an auditor who provides the result via StoreManualAssessmentResult."
+comments: "Answer true if a change management policy exists in its current, approved version and is available to the people it applies to."
 # ====== Configuration ======
 configuration:
   p1:

@@ -6,9 +6,14 @@ implementationGuidelines:
   Manual:
     question: "Is a documented asset inventory procedure available?"
     keywords: ["asset inventory procedure", "inventory process", "asset management procedure"]
+    guidance: "Check that the procedure says which assets are recorded, who is responsible for the entries, how new, changed and retired assets are handled and how often the inventory is reviewed."
+    evidence:
+      - "The asset inventory procedure in its current version"
+      - "The inventory itself or an export of it"
+      - "Records of the last review of the inventory"
 category: "AssetManagement"
 version: "v1"
-comments: "Manual-only metric: assessed by an auditor who provides the result via StoreManualAssessmentResult."
+comments: "Answer true if a documented procedure describes how assets are recorded in the inventory and kept up to date."
 # ====== Configuration ======
 configuration:
   p1:

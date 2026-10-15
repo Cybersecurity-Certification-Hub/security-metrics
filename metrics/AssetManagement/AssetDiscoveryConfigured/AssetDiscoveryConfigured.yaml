@@ -6,9 +6,14 @@ implementationGuidelines:
   Manual:
     question: "Is automated asset discovery configured?"
     keywords: ["asset discovery", "auto discovery", "inventory automation", "discovery tool"]
+    guidance: "Check the configuration of the discovery tool: that it runs regularly without manual action and that its scope covers the systems in scope, for example the cloud accounts and networks. A one-off scan does not count."
+    evidence:
+      - "An export or screenshot of the discovery configuration with its schedule and scope"
+      - "The result of the last discovery run"
+      - "The list of connected sources, for example cloud accounts or network ranges"
 category: "AssetManagement"
 version: "v1"
-comments: "Manual-only metric: assessed by an auditor who provides the result via StoreManualAssessmentResult."
+comments: "Answer true if assets are discovered automatically, on a schedule, in the whole scope of the assessment."
 # ====== Configuration ======
 configuration:
   p1:

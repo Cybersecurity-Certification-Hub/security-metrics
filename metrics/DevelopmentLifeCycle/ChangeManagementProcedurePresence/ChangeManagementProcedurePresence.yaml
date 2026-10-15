@@ -6,9 +6,14 @@ implementationGuidelines:
   Manual:
     question: "Is a formal change management procedure documented?"
     keywords: ["change procedure", "change management process", "RFC procedure"]
+    guidance: "Read the procedure and check that it covers the whole life of a change and names the roles involved. Check that it also covers urgent changes and the rollback. A procedure that only says that changes must be approved is not enough."
+    evidence:
+      - "The procedure document in its current version"
+      - "A process diagram or ticket workflow that shows the steps"
+      - "The list of roles and their responsibilities in the process"
 category: "DevelopmentLifeCycle"
 version: "v1"
-comments: "Manual-only metric: assessed by an auditor who provides the result via StoreManualAssessmentResult."
+comments: "Answer true if a formal procedure describes how a change is requested, assessed, approved, tested, deployed and, if needed, rolled back."
 # ====== Configuration ======
 configuration:
   p1:
