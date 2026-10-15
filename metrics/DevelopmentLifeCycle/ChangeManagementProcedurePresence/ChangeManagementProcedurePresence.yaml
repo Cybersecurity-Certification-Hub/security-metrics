@@ -3,7 +3,7 @@ id: "cd140a5e-7898-4d80-908f-c7a4aa42b4a6"
 name: "ChangeManagementProcedurePresence"
 description: "This rule assesses whether a formal change management procedure is documented."
 implementationGuidelines:
-  Manual:
+  Questionnaire:
     question: "Is a formal change management procedure documented?"
     keywords: ["change procedure", "change management process", "RFC procedure"]
     guidance: "Read the procedure and check that it covers the whole life of a change and names the roles involved. Check that it also covers urgent changes and the rollback. A procedure that only says that changes must be approved is not enough."

@@ -3,7 +3,7 @@ id: "27f5d378-d98c-4e58-b4fd-44e5bf8de6b1"
 name: "ProductionDeploymentRecordsPresent"
 description: "This rule assesses whether production deployment records linked to approved changes are available."
 implementationGuidelines:
-  Manual:
+  Questionnaire:
     question: "Are production deployment records linked to approved changes available?"
     keywords: ["deployment log", "release record", "production deployment", "deployment approval"]
     guidance: "Take a sample of recent production deployments and follow each one back to its change request and approval. Answer true only if all deployments in the sample can be traced."

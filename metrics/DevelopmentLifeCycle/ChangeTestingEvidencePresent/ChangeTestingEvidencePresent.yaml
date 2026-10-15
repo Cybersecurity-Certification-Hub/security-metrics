@@ -3,7 +3,7 @@ id: "db22023b-5143-451c-a20f-e5d71dea0ef6"
 name: "ChangeTestingEvidencePresent"
 description: "This rule assesses whether evidence of change testing is available."
 implementationGuidelines:
-  Manual:
+  Questionnaire:
     question: "Is evidence of change testing available?"
     keywords: ["test results", "change testing", "test report", "UAT"]
     guidance: "Take a sample of recent changes, for example from the last three months, and look for test evidence linked to each of them. Answer true only if every change in the sample has it."

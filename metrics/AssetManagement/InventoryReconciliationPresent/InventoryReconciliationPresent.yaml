@@ -3,7 +3,7 @@ id: "e5aedcbc-e917-49a3-ac38-21e75ab71e57"
 name: "InventoryReconciliationPresent"
 description: "This rule assesses whether inventory reconciliation reports are available."
 implementationGuidelines:
-  Manual:
+  Questionnaire:
     question: "Are inventory reconciliation reports available?"
     keywords: ["reconciliation", "inventory comparison", "reconciliation report"]
     guidance: "Ask for the latest reconciliation report and check that it is not older than the interval that the organisation has set for itself. It should list the differences and what was done about them."
