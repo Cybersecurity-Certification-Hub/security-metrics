@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "cd140a5e-7898-4d80-908f-c7a4aa42b4a6"
+name: "ChangeManagementProcedurePresence"
+description: "This rule assesses whether a formal change management procedure is documented."
+implementationGuidelines:
+  Manual:
+    question: "Is a formal change management procedure documented?"
+    keywords: ["change procedure", "change management process", "RFC procedure"]
+category: "DevelopmentLifeCycle"
+version: "v1"
+comments: "Manual-only metric: assessed by an auditor who provides the result via StoreManualAssessmentResult."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

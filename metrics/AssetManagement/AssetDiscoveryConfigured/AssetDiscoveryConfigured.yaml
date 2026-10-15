@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "4991c360-7fda-4d0d-b59e-0a93581b5a12"
+name: "AssetDiscoveryConfigured"
+description: "This rule assesses whether automated asset discovery is configured."
+implementationGuidelines:
+  Manual:
+    question: "Is automated asset discovery configured?"
+    keywords: ["asset discovery", "auto discovery", "inventory automation", "discovery tool"]
+category: "AssetManagement"
+version: "v1"
+comments: "Manual-only metric: assessed by an auditor who provides the result via StoreManualAssessmentResult."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

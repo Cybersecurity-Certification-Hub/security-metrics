@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "e5aedcbc-e917-49a3-ac38-21e75ab71e57"
+name: "InventoryReconciliationPresent"
+description: "This rule assesses whether inventory reconciliation reports are available."
+implementationGuidelines:
+  Manual:
+    question: "Are inventory reconciliation reports available?"
+    keywords: ["reconciliation", "inventory comparison", "reconciliation report"]
+category: "AssetManagement"
+version: "v1"
+comments: "Manual-only metric: assessed by an auditor who provides the result via StoreManualAssessmentResult."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

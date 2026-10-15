@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "77eee81c-7c93-444c-a0c5-12e1bac8565b"
+name: "AssetInventoryProcedurePresence"
+description: "This rule assesses whether a documented asset inventory procedure is available."
+implementationGuidelines:
+  Manual:
+    question: "Is a documented asset inventory procedure available?"
+    keywords: ["asset inventory procedure", "inventory process", "asset management procedure"]
+category: "AssetManagement"
+version: "v1"
+comments: "Manual-only metric: assessed by an auditor who provides the result via StoreManualAssessmentResult."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

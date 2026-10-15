@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "db22023b-5143-451c-a20f-e5d71dea0ef6"
+name: "ChangeTestingEvidencePresent"
+description: "This rule assesses whether evidence of change testing is available."
+implementationGuidelines:
+  Manual:
+    question: "Is evidence of change testing available?"
+    keywords: ["test results", "change testing", "test report", "UAT"]
+category: "DevelopmentLifeCycle"
+version: "v1"
+comments: "Manual-only metric: assessed by an auditor who provides the result via StoreManualAssessmentResult."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

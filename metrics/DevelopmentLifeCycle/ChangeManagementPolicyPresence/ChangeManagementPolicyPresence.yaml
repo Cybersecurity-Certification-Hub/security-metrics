@@ -1,0 +1,16 @@
+# ====== Metadata ======
+id: "b2a8f5aa-c1ab-4943-a115-652db50c83ef"
+name: "ChangeManagementPolicyPresence"
+description: "This rule assesses whether a change management policy is present and documented."
+implementationGuidelines:
+  Manual:
+    question: "Is a change management policy document available?"
+    keywords: ["change management policy", "change approval policy", "change management standard"]
+category: "DevelopmentLifeCycle"
+version: "v1"
+comments: "Manual-only metric: assessed by an auditor who provides the result via StoreManualAssessmentResult."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
