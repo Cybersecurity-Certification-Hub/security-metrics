@@ -8,8 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	"enabled" in object.keys(auditLogMonitoringPolicy)
-	is_boolean(auditLogMonitoringPolicy.enabled)
+	"monitoringMechanisms" in object.keys(auditLogMonitoringPolicy)
 	"PolicyDocument" in input.type
 }
 
@@ -23,4 +22,4 @@ message := "The log management procedure requires periodic monitoring and anomal
 	not compliant
 }
 
-results := [comparison_result("auditLogMonitoringPolicy.enabled", auditLogMonitoringPolicy.enabled)]
+results := [comparison_result("auditLogMonitoringPolicy.monitoringMechanisms", auditLogMonitoringPolicy.monitoringMechanisms)]

@@ -12,5 +12,5 @@ comments: "A governed policy must identify an accountable owner and carry an app
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["CISO", "The CISO", "Security Committee"]

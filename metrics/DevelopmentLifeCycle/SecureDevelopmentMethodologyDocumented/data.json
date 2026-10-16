@@ -1,4 +1,9 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "Secure Development",
+        "SDLC",
+        "OWASP",
+        "CERT Secure Coding standards"
+    ]
 }

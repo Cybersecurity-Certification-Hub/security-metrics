@@ -22,4 +22,4 @@ message := "The policy document states a contact for incident reporting." if {
 	not compliant
 }
 
-results := [comparison_result("securityIncident.team", object.get(securityIncident, "team", []))]
+results := [comparison_result("securityIncident.reportingContacts", object.get(securityIncident, "reportingContacts", []))]

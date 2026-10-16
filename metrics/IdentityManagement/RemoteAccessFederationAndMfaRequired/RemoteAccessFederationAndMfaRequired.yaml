@@ -12,5 +12,5 @@ comments: "Access by users and external delegated groups (EdGs) must be federate
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["MFA", "multi-factor authentication", "two-factor authentication"]

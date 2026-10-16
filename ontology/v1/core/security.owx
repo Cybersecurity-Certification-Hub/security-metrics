@@ -1308,14 +1308,14 @@
         <Class abbreviatedIRI="core:AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:ownerAssignmentStated"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:AssetInventory"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="core:inventoryDefined"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <Datatype abbreviatedIRI="xsd:listString"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <AnnotationAssertion>
