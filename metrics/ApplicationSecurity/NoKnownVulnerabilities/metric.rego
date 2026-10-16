@@ -31,11 +31,14 @@ applicable if {
     count(vulnerability_sources) > 0
 }
 
-# The resource is compliant only when all found fields are empty objects.
+# The resource is compliant only when all found vulnerability fields are empty (no entries).
+# A field may serialize as an empty array `[]` (repeated proto field, the common case)
+# or as an empty object `{}`; `count(vul) == 0` covers both, whereas `vul == {}`
+# only matched the empty-object shape and falsely flagged empty arrays as non-compliant.
 compliant if {
 	applicable
-   every vul in vulnerability_sources {
-        vul == {}
+    every vul in vulnerability_sources {
+        count(vul) == 0
     }
 }
 
