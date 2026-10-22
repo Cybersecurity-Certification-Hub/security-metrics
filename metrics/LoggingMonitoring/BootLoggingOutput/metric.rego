@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	"bootLogging" in object.keys(input)
+	"loggingServiceIds" in object.keys(input)
 	"VirtualMachine" in input.type
 }
 
