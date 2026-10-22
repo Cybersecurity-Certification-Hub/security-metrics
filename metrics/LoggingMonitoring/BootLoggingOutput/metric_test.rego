@@ -11,7 +11,7 @@ test_compliant_when_logging_service_ids_are_set if {
 # protojson omits empty repeated fields, so missing logging service IDs count as zero
 test_not_compliant_has_details_when_logging_service_ids_are_missing if {
 	fixture := {"type": ["VirtualMachine"], "bootLogging": {"enabled": true}}
-	applicable with input as fixture
+	not applicable with input as fixture
 	not compliant with input as fixture
 	rs := results with input as fixture
 	count(rs) == 1
