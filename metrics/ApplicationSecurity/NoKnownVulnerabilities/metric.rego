@@ -1,6 +1,7 @@
 package cch.metrics.no_known_vulnerabilities
 
 import rego.v1
+import data.cch.comparison_result
 
 default applicable := false
 default compliant := false
