@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	"loggingServiceIds" in object.keys(input)
+	"loggingServiceIds" in object.keys(logging)
 	"VirtualMachine" in input.type
 }
 
