@@ -1,0 +1,21 @@
+# ====== Metadata ======
+id: "27f5d378-d98c-4e58-b4fd-44e5bf8de6b1"
+name: "ProductionDeploymentRecordsPresent"
+description: "This rule assesses whether production deployment records linked to approved changes are available."
+implementationGuidelines:
+  Questionnaire:
+    question: "Are production deployment records linked to approved changes available?"
+    keywords: ["deployment log", "release record", "production deployment", "deployment approval"]
+    guidance: "Take a sample of recent production deployments and follow each one back to its change request and approval. Answer true only if all deployments in the sample can be traced."
+    evidence:
+      - "Deployment or release logs"
+      - "Pipeline run records that reference the change ticket"
+      - "Release notes that name the approved changes"
+category: "DevelopmentLifeCycle"
+version: "v1"
+comments: "Answer true if each deployment to production can be traced back to an approved change."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
