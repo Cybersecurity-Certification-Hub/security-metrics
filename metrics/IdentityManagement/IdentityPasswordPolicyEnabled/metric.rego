@@ -9,6 +9,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
+	"disablePasswordPolicy" in object.keys(identity)
 	# the resource type should be an Identity
 	identity.type[_] == "Identity"
 }

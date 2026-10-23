@@ -12,5 +12,5 @@ comments: "The clause must grant direct, unrestricted, on-demand access (not onl
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["direct and unrestricted access", "unrestricted access", "unrestricted"]

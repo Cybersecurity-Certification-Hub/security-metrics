@@ -9,7 +9,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
-	webApp
+	"enabled" in object.keys(webApp)
     # the resource type should be an Load Balancer
 	input.type[_] == "LoadBalancer"
 }

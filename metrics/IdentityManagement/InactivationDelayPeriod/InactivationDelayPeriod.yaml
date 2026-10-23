@@ -1,5 +1,5 @@
 # ====== Metadata ======
-id: 4FB61CD5-884E-495B-A451-AB47B9A5019E
+id: 4fb61cd5-884e-495b-a451-ab47b9a5019e
 name: InactivationDelayPeriod
 description: This rule assesses whether a [PolicyDocument] that offers the property [AccountManagementPolicy], has [p1:intervalMonths] set correctly.
 implementationGuidelines:

@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "8b189157-161e-4762-8aa0-183ce6f13cf4"
 name: "AuditLogReviewProcessDocumented"
-description: "This rule assesses whether a [PolicyDocument] includes [AuditLogMonitoringPolicy] with its [p1:enabled] property set correctly."
+description: "This rule assesses whether a [PolicyDocument] includes [AuditLogMonitoringPolicy] with its [p1:monitoringMechanisms] property set correctly."
 implementationGuidelines:
   AMOE:
     question: "Does the log management procedure require periodic monitoring and anomaly review of audit logs?"
@@ -12,5 +12,5 @@ comments: "Audit logs must be periodically monitored to identify security events
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["audit logs", "surveillance and control", "monitor", "24x7 monitor coverage by the SOC", "continuous surveillance", "anomalies", "verify the correct use", "security events"]

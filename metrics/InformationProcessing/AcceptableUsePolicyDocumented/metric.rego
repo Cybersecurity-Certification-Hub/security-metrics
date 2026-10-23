@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	"isDefined" in object.keys(acceptableUsePolicy)
+	"documentPurpose" in object.keys(acceptableUsePolicy)
 	"PolicyDocument" in input.type
 }
 
@@ -22,4 +22,4 @@ message := "A formal procedure documenting acceptable use of information and com
 	not compliant
 }
 
-results := [comparison_result("acceptableUsePolicy.isDefined", acceptableUsePolicy.isDefined)]
+results := [comparison_result("acceptableUsePolicy.documentPurpose", acceptableUsePolicy.documentPurpose)]

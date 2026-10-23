@@ -9,6 +9,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
+	"enforceMfa" in object.keys(identity)
 	"Identity" in identity.type
 
 	# we are only interested in some kind of privileged user

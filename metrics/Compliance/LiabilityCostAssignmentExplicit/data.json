@@ -1,4 +1,9 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "solely responsible",
+        "assume the responsibility",
+        "costs arising from such non-compliance",
+        "must assume the responsibility and costs arising from such non-compliance"
+    ]
 }

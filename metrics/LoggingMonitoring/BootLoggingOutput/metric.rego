@@ -27,6 +27,6 @@ message := "Boot logging output is properly configured." if {
 results := [
 	comparison_result(
 		"bootLogging.loggingServiceIds.count",
-		count(logging.loggingServiceIds),
+		count(object.get(logging, "loggingServiceIds", [])),
 	),
 ] 

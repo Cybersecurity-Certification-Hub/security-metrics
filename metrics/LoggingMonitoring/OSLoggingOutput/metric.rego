@@ -7,10 +7,9 @@ import input.osLogging as logging
 default applicable := false
 default compliant := false
 
-# The metric is applicable when loggingServiceIds is present and an array.
+# The metric is applicable when osLogging is configured. Missing logging service IDs count as zero.
 applicable if {
-	"loggingServiceIds" in object.keys(logging)
-	is_array(logging.loggingServiceIds)
+	"osLogging" in object.keys(input)
 	"VirtualMachine" in input.type
 }
 
@@ -29,6 +28,6 @@ message := "OS logging output is properly configured." if {
 results := [
 	comparison_result(
 		"osLogging.loggingServiceIds.count",
-		count(logging.loggingServiceIds),
+		count(object.get(logging, "loggingServiceIds", [])),
 	),
 ] 

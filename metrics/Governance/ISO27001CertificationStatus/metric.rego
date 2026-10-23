@@ -1,4 +1,4 @@
-package cch.metrics.iso27001_certification_status
+package cch.metrics.iso_27001_certification_status
 
 import data.cch.comparison_result
 import rego.v1

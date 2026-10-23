@@ -12,5 +12,5 @@ comments: "The standard must explicitly require network filtering mechanisms on 
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["network filters", "All Internet-facing routers implement antispoofing mechanisms"]

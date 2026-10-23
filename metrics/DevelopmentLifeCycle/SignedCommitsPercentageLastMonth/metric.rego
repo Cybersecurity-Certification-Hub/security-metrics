@@ -9,7 +9,7 @@ default applicable = false
 default compliant = false
 
 applicable if {
-    sc != {}
+    "percentageLastMonth" in object.keys(sc)
     "CodeRepository" in input.type
 }
 

@@ -8,7 +8,7 @@ default applicable := false
 default compliant := false
 
 applicable if {
-	separationOfDutiesPolicy != {}
+	"isDefined" in object.keys(separationOfDutiesPolicy)
 	"PolicyDocument" in input.type
 }
 

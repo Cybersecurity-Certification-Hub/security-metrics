@@ -23,4 +23,4 @@ message := "The policy document defines network threat mitigation mechanisms cov
     not compliant
 }
 
-results := [comparison_result("networkThreatMitigationPolicy.coveredAttackTypes", networkThreatMitigationPolicy.coveredAttackTypes)]
+results := [comparison_result("networkThreatMitigationPolicy.coveredAttackTypes", object.get(networkThreatMitigationPolicy, "coveredAttackTypes", []))]
