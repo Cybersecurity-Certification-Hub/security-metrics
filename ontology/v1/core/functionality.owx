@@ -722,6 +722,10 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="core:PasswordBasedAuthentication"/>
+        <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="core:SeparationOfDutiesPolicy"/>
         <Class abbreviatedIRI="core:Policies"/>
     </SubClassOf>
