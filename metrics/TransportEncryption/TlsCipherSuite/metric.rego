@@ -16,7 +16,7 @@ transport_encryptions contains enc if {
 
 applicable if {
 	some enc in transport_encryptions
-	is_array(enc.cipherSuite)
+	is_array(enc.cipherSuites)
 }
 
 compliant if {
@@ -29,9 +29,9 @@ compliant if {
 	}
 }
 
-# Creates one comparison result for every discovered cipherSuite array.
+# Creates one comparison result for every discovered cipherSuites array.
 results := [
-	comparison_result("transportEncryption.cipherSuite", enc.cipherSuite) |
+	comparison_result("transportEncryption.cipherSuites", enc.cipherSuites) |
 	some enc in transport_encryptions
-	is_array(enc.cipherSuite)
+	is_array(enc.cipherSuites)
 ]
