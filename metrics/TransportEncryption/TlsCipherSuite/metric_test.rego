@@ -3,7 +3,7 @@ package cch.metrics.tls_cipher_suite
 import rego.v1
 
 test_compliant_when_all_cipher_suites_are_allowed if {
-	fixture := {"transportEncryption": {"cipherSuites": ["TLS_AES_128_GCM_SHA256", "TLS_CHACHA20_POLY1305"]}}
+	fixture := {"transportEncryption": {"cipherSuites": ["TLS_AES_128_GCM_SHA256", "TLS_CHACHA20_POLY1305_SHA256"]}}
 	applicable with input as fixture
 	compliant with input as fixture
 }
