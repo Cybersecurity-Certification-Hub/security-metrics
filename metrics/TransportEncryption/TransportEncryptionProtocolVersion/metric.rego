@@ -18,7 +18,7 @@ transport_encryptions contains enc if {
 applicable if {
 	some enc in transport_encryptions
 	protocol_version := object.get(enc, "protocolVersion", null)
-	is_string(protocol_version)
+	is_number(protocol_version)
 }
 
 # Creates one comparison result for every discovered protocolVersion value.
@@ -26,7 +26,7 @@ results := [
 	comparison_result("transportEncryption.protocolVersion", protocol_version) |
 	some enc in transport_encryptions
 	protocol_version := object.get(enc, "protocolVersion", null)
-	is_string(protocol_version)
+	is_number(protocol_version)
 ]
 
 compliant if {
