@@ -3528,6 +3528,7 @@ message PolicyDocument {
   NetworkThreatMitigationPolicy network_threat_mitigation_policy = 9407;
   OutsourcingPolicy outsourcing_policy = 14425;
   optional string parent_id = 18208;
+  PasswordBasedAuthentication password_based_authentication = 18209;
   SDNFunctionValidationPolicy sdn_function_validation_policy = 8099;
   SchemaValidation validated_by = 5620;
   SecureDevelopmentPolicy secure_development_policy = 11604;
