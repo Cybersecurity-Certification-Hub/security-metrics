@@ -6,7 +6,7 @@ import rego.v1
 default applicable := false
 default compliant := false
 
-# Finds transportEncryption directly under input or at any nesting level.
+# Finds all transportEncryption objects at any nesting level.
 transport_encryptions contains enc if {
 	walk(input, [path, enc])
 	count(path) > 0
@@ -16,7 +16,7 @@ transport_encryptions contains enc if {
 
 # Collects all discovered cipherSuites arrays.
 cipher_suite_arrays := [
-enc.cipherSuites |
+	enc.cipherSuites |
 	some enc in transport_encryptions
 	is_array(enc.cipherSuites)
 ]
@@ -26,7 +26,7 @@ applicable if {
 }
 
 compliant if {
-	# At least one cipherSuites array must exist.
+	# At least one comparison result must exist.
 	count(results) > 0
 
 	# Empty cipherSuites arrays are not compliant.
@@ -34,68 +34,79 @@ compliant if {
 		count(cipher_suites) > 0
 	}
 
-	# Every generated comparison result must be successful.
+	# Every comparison result must be successful.
 	every result in results {
 		result.success
 	}
 }
 
-# Creates one comparison result for every discovered cipherSuites array.
-results := [
-comparison_result(
-	"transportEncryption.cipherSuites",
-	normalize_cipher_suites(cipher_suites),
-) |
-	some cipher_suites in cipher_suite_arrays
-]
-
-# Converts all cipher-suite objects in an array into TLS names.
-normalize_cipher_suites(cipher_suites) := [
-cipher_suite_name(cipher_suite) |
-	some cipher_suite in cipher_suites
-]
-
-# normalize_component normalizes algorithm names for TLS cipher suites.
+# Stores normalized components for each cipher suite.
 #
-# Examples:
-# AES-128-GCM -> AES_128_GCM
-# SHA-256     -> SHA256
-normalize_component(value) := normalized if {
-	is_string(value)
+# The key consists of:
+# <cipherSuites array index>:<cipher suite index>
+#
+# Example: "0:2"
+cipher_suite_components[key] := components if {
+	some array_index, cipher_suites in cipher_suite_arrays
+	some suite_index, cipher_suite in cipher_suites
 
-	uppercase := upper(value)
-	with_underscores := replace(uppercase, "-", "_")
-	normalized := replace(with_underscores, "SHA_", "SHA")
-}
+	key := sprintf("%d:%d", [array_index, suite_index])
 
-# Extracts and normalizes all components of a cipher-suite object.
-cipher_suite_components(cipher_suite) := components if {
 	is_object(cipher_suite)
 
+	mac_raw := object.get(
+		cipher_suite,
+		"macAlgorithm",
+		"",
+	)
+	authentication_raw := object.get(
+		cipher_suite,
+		"authenticationMechanism",
+		"",
+	)
+	session_cipher_raw := object.get(
+		cipher_suite,
+		"sessionCipher",
+		"",
+	)
+	key_exchange_raw := object.get(
+		cipher_suite,
+		"keyExchangeAlgorithm",
+		"",
+	)
+
+	is_string(mac_raw)
+	is_string(authentication_raw)
+	is_string(session_cipher_raw)
+	is_string(key_exchange_raw)
+
 	components := {
-		"mac": normalize_component(object.get(cipher_suite, "macAlgorithm", "")),
-		"authentication": normalize_component(object.get(cipher_suite, "authenticationMechanism", "")),
-		"session_cipher": normalize_component(object.get(cipher_suite, "sessionCipher", "")),
-		"key_exchange": normalize_component(object.get(cipher_suite, "keyExchangeAlgorithm", "")),
+		"mac": replace(
+			replace(upper(mac_raw), "-", "_"),
+			"SHA_",
+			"SHA",
+		),
+		"authentication": replace(
+			replace(upper(authentication_raw), "-", "_"),
+			"SHA_",
+			"SHA",
+		),
+		"session_cipher": replace(
+			replace(upper(session_cipher_raw), "-", "_"),
+			"SHA_",
+			"SHA",
+		),
+		"key_exchange": replace(
+			replace(upper(key_exchange_raw), "-", "_"),
+			"SHA_",
+			"SHA",
+		),
 	}
 }
 
-# Removes empty values from an array.
-non_empty(values) := [
-value |
-	some value in values
-	value != ""
-]
-
-# Converts a TLS 1.2 cipher-suite object into its standard name.
-#
-# Format:
-# TLS_<key exchange>_<authentication>_WITH_<cipher>_<MAC>
-#
-# Example:
-# TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-cipher_suite_name(cipher_suite) := name if {
-	components := cipher_suite_components(cipher_suite)
+# Creates names for valid TLS 1.2 cipher suites.
+tls12_cipher_suite_names[key] := name if {
+	components := cipher_suite_components[key]
 
 	components.key_exchange != ""
 	components.authentication != ""
@@ -113,25 +124,22 @@ cipher_suite_name(cipher_suite) := name if {
 	)
 }
 
-# Converts a TLS 1.3 cipher-suite object into its standard name.
-#
-# Format:
-# TLS_<cipher>_<hash>
-#
-# Examples:
-# TLS_AES_128_GCM_SHA256
-# TLS_CHACHA20_POLY1305
-cipher_suite_name(cipher_suite) := name if {
-	components := cipher_suite_components(cipher_suite)
+# Creates names for valid TLS 1.3 cipher suites.
+tls13_cipher_suite_names[key] := name if {
+	components := cipher_suite_components[key]
 
 	components.key_exchange == ""
 	components.authentication == ""
 	components.session_cipher != ""
 
-	name_components := non_empty([
-		components.session_cipher,
-		components.mac,
-	])
+	name_components := [
+		component |
+		some component in [
+			components.session_cipher,
+			components.mac,
+		]
+		component != ""
+	]
 
 	name := sprintf(
 		"TLS_%s",
@@ -139,32 +147,49 @@ cipher_suite_name(cipher_suite) := name if {
 	)
 }
 
-# Ensures that incomplete or unsupported cipher suites fail the comparison
-# instead of being silently ignored.
-cipher_suite_name(cipher_suite) := name if {
-	not valid_cipher_suite(cipher_suite)
+# Creates a normalized TLS-name array for each original
+# cipherSuites array.
+normalized_cipher_suite_arrays := [
+	normalized_cipher_suites |
+	some array_index, cipher_suites in cipher_suite_arrays
 
-	name := sprintf(
-		"__UNRECOGNIZED_CIPHER_SUITE__:%v",
-		[cipher_suite],
-	)
-}
+	normalized_cipher_suites := [
+		name |
+		some suite_index, cipher_suite in cipher_suites
 
-# A cipher-suite object is valid if it can be represented as either
-# a TLS 1.2 or TLS 1.3 cipher-suite name.
-valid_cipher_suite(cipher_suite) if {
-	components := cipher_suite_components(cipher_suite)
+		key := sprintf(
+			"%d:%d",
+			[array_index, suite_index],
+		)
 
-	components.key_exchange != ""
-	components.authentication != ""
-	components.session_cipher != ""
-	components.mac != ""
-}
+		# Invalid or unsupported cipher suites must fail the
+		# comparison instead of being silently ignored.
+		fallback := sprintf(
+			"__UNRECOGNIZED_CIPHER_SUITE__:%v",
+			[cipher_suite],
+		)
 
-valid_cipher_suite(cipher_suite) if {
-	components := cipher_suite_components(cipher_suite)
+		# Prefer a TLS 1.3 name over the fallback value.
+		tls13_or_fallback := object.get(
+			tls13_cipher_suite_names,
+			key,
+			fallback,
+		)
 
-	components.key_exchange == ""
-	components.authentication == ""
-	components.session_cipher != ""
-}
+		# Prefer a TLS 1.2 name over the TLS 1.3 or fallback value.
+		name := object.get(
+			tls12_cipher_suite_names,
+			key,
+			tls13_or_fallback,
+		)
+	]
+]
+
+# Creates one comparison result for each discovered cipherSuites array.
+results := [
+	comparison_result(
+		"transportEncryption.cipherSuites",
+		normalized_cipher_suites,
+	) |
+	some normalized_cipher_suites in normalized_cipher_suite_arrays
+]
