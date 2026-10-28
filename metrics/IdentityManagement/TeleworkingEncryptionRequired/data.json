@@ -1,4 +1,7 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "data encryption",
+        "All remote sessions must use data encryption, at minimum"
+    ]
 }

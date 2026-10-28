@@ -12,5 +12,5 @@ comments: "Outsourcing/subcontractor agreements must require the subcontracted p
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "=="
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["comply with the Policy", "monitoring compliance", "surveillance and control", "formally agree in writing"]

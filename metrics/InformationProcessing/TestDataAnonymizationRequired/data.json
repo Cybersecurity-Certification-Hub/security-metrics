@@ -1,4 +1,8 @@
 {
-    "operator": "==",
-    "target_value": true
+    "operator": "isIn",
+    "target_value": [
+        "anonymized",
+        "pseudonymization",
+        "fictitious data"
+    ]
 }

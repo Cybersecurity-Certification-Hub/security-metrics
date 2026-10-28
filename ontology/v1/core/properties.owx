@@ -160,6 +160,15 @@
         <DataProperty abbreviatedIRI="prop:restrictsDownloadAndExtraction"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="prop:reportingContacts"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:monitoringMechanisms"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prop:documentPurpose"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="res:reviewFrequency"/>
     </Declaration>
     <Declaration>
@@ -499,16 +508,16 @@
         <DataProperty abbreviatedIRI="prop:cvssScoringUsed"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:criticalHighSlaStated"/>
+        <DataProperty abbreviatedIRI="prop:criticalHighSlaDays"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:mediumSlaStated"/>
+        <DataProperty abbreviatedIRI="prop:mediumSlaDays"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:lowSlaStated"/>
+        <DataProperty abbreviatedIRI="prop:lowSlaDays"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:allMandatedControlsAddressed"/>
+        <DataProperty abbreviatedIRI="prop:mandatedControlsCount"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:checklistCoveragePercent"/>
@@ -538,7 +547,7 @@
         <DataProperty abbreviatedIRI="prop:severityAndEscalationDefined"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="prop:registryAndSlaStated"/>
+        <DataProperty abbreviatedIRI="prop:handlingPeriodHours"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prop:monitoringMechanism"/>
@@ -1533,6 +1542,36 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:reportingContacts</AbbreviatedIRI>
+        <Literal>Contacts or channels named for reporting a cybersecurity incident, as extracted from the document.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:reportingContacts</AbbreviatedIRI>
+        <Literal>reportingContacts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:monitoringMechanisms</AbbreviatedIRI>
+        <Literal>Mechanisms the log management procedure uses to monitor audit logs and review detected anomalies, as extracted from the document.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:monitoringMechanisms</AbbreviatedIRI>
+        <Literal>monitoringMechanisms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>prop:documentPurpose</AbbreviatedIRI>
+        <Literal>Statements of the purpose and scope of the acceptable use procedure, as extracted from the document.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>prop:documentPurpose</AbbreviatedIRI>
+        <Literal>documentPurpose</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>prop:daysSinceLastAudit</AbbreviatedIRI>
         <Literal>The number of days elapsed since the last completed external/supervisory audit.</Literal>
     </AnnotationAssertion>
@@ -1563,43 +1602,43 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>prop:criticalHighSlaStated</AbbreviatedIRI>
-        <Literal>Indicates whether the critical/high severity vulnerability resolution SLA is stated.</Literal>
+        <AbbreviatedIRI>prop:criticalHighSlaDays</AbbreviatedIRI>
+        <Literal>Maximum resolution time, in days, stated for Critical/High severity vulnerabilities.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:criticalHighSlaStated</AbbreviatedIRI>
-        <Literal>criticalHighSlaStated</Literal>
+        <AbbreviatedIRI>prop:criticalHighSlaDays</AbbreviatedIRI>
+        <Literal>criticalHighSlaDays</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>prop:mediumSlaStated</AbbreviatedIRI>
-        <Literal>Indicates whether the medium severity vulnerability resolution SLA is stated.</Literal>
+        <AbbreviatedIRI>prop:mediumSlaDays</AbbreviatedIRI>
+        <Literal>Maximum resolution time, in days, stated for Medium severity vulnerabilities.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:mediumSlaStated</AbbreviatedIRI>
-        <Literal>mediumSlaStated</Literal>
+        <AbbreviatedIRI>prop:mediumSlaDays</AbbreviatedIRI>
+        <Literal>mediumSlaDays</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>prop:lowSlaStated</AbbreviatedIRI>
-        <Literal>Indicates whether the low severity vulnerability resolution SLA is stated.</Literal>
+        <AbbreviatedIRI>prop:lowSlaDays</AbbreviatedIRI>
+        <Literal>Maximum resolution time, in days, stated for Low severity vulnerabilities.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:lowSlaStated</AbbreviatedIRI>
-        <Literal>lowSlaStated</Literal>
+        <AbbreviatedIRI>prop:lowSlaDays</AbbreviatedIRI>
+        <Literal>lowSlaDays</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>prop:allMandatedControlsAddressed</AbbreviatedIRI>
-        <Literal>Indicates whether all mandated device controls are addressed.</Literal>
+        <AbbreviatedIRI>prop:mandatedControlsCount</AbbreviatedIRI>
+        <Literal>Number of the 7 mandated device security controls explicitly present in the procedure.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:allMandatedControlsAddressed</AbbreviatedIRI>
-        <Literal>allMandatedControlsAddressed</Literal>
+        <AbbreviatedIRI>prop:mandatedControlsCount</AbbreviatedIRI>
+        <Literal>mandatedControlsCount</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1693,13 +1732,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>prop:registryAndSlaStated</AbbreviatedIRI>
-        <Literal>Indicates whether an incident registry and handling SLA are stated.</Literal>
+        <AbbreviatedIRI>prop:handlingPeriodHours</AbbreviatedIRI>
+        <Literal>Notification/handling period, in hours, stated by the incident management procedure.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>prop:registryAndSlaStated</AbbreviatedIRI>
-        <Literal>registryAndSlaStated</Literal>
+        <AbbreviatedIRI>prop:handlingPeriodHours</AbbreviatedIRI>
+        <Literal>handlingPeriodHours</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

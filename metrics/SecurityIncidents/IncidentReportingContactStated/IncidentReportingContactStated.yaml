@@ -1,7 +1,7 @@
 # ====== Metadata ======
 id: "6e3b8a15-9c4d-4f27-a061-d8b5c2f47913"
 name: "IncidentReportingContactStated"
-description: "This rule assesses whether a [PolicyDocument] includes [SecurityIncident] with its [p1:team] property set correctly."
+description: "This rule assesses whether a [PolicyDocument] includes [SecurityIncident] with its [p1:reportingContacts] property set correctly."
 implementationGuidelines:
   AMOE:
     question: "To whom must cybersecurity incidents affecting the company's services, applications, or IT systems be reported?"
@@ -12,5 +12,5 @@ comments: "This metric assesses if an incident reporting contact/team is defined
 # ====== Configuration ======
 configuration:
   p1:
-    operator: "hasAny"
-    targetValue: true
+    operator: "isIn"
+    targetValue: ["designated contact", "notification contact", "NovaBank", "CISO", "CISO's office", "the SOC", "SOC", "SOC team"]
