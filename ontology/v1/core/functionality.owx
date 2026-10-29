@@ -320,6 +320,9 @@
         <Class abbreviatedIRI="core:NetworkThreatMitigationPolicy"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="core:PasswordBasedAuthenticationPolicy"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="core:SeparationOfDutiesPolicy"/>
     </Declaration>
     <Declaration>
@@ -722,8 +725,15 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="core:PasswordBasedAuthentication"/>
+        <Class abbreviatedIRI="core:PasswordBasedAuthenticationPolicy"/>
         <Class abbreviatedIRI="core:Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="core:PasswordBasedAuthenticationPolicy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="prop:has"/>
+            <Class abbreviatedIRI="core:PasswordBasedAuthentication"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="core:SeparationOfDutiesPolicy"/>
