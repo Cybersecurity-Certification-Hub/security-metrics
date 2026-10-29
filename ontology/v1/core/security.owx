@@ -143,9 +143,6 @@
         <Class abbreviatedIRI="core:OTPBasedAuthentication"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="core:PasswordBasedAuthentication"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="core:RBAC"/>
     </Declaration>
     <Declaration>
