@@ -639,7 +639,7 @@
         <Class IRI="/classes/Padding"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/classes/PasswordBasedAuthentication"/>
+        <Class IRI="/classes/PasswordBasedAuthenticationPolicy"/>
     </Declaration>
     <Declaration>
         <Class IRI="/classes/PasswordPolicy"/>
@@ -1822,6 +1822,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/approvedCommitAuthorEnforced"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/classes/PasswordBasedAuthentication"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/properties/approvedBeforeDeployment"/>
@@ -4740,6 +4743,17 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/classes/PasswordBasedAuthenticationPolicy"/>
+        <Class IRI="/classes/Policies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PasswordBasedAuthenticationPolicy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/PasswordBasedAuthentication"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/classes/PasswordPolicy"/>
         <Class IRI="/classes/CloudResource"/>
     </SubClassOf>
@@ -4893,6 +4907,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/properties/has"/>
             <Class IRI="/classes/OutsourcingPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/classes/PolicyDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/properties/has"/>
+            <Class IRI="/classes/PasswordBasedAuthenticationPolicy"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
