@@ -1,0 +1,21 @@
+# ====== Metadata ======
+id: "e5aedcbc-e917-49a3-ac38-21e75ab71e57"
+name: "InventoryReconciliationPresent"
+description: "This rule assesses whether inventory reconciliation reports are available."
+implementationGuidelines:
+  Questionnaire:
+    question: "Are inventory reconciliation reports available?"
+    keywords: ["reconciliation", "inventory comparison", "reconciliation report"]
+    guidance: "Ask for the latest reconciliation report and check that it is not older than the interval that the organisation has set for itself. It should list the differences and what was done about them."
+    evidence:
+      - "The latest reconciliation report"
+      - "The tickets or records that handle the differences"
+      - "The defined interval for reconciliation"
+category: "AssetManagement"
+version: "v1"
+comments: "Answer true if the discovered assets are compared with the inventory at regular intervals and the differences are followed up."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

@@ -1,0 +1,21 @@
+# ====== Metadata ======
+id: "b2a8f5aa-c1ab-4943-a115-652db50c83ef"
+name: "ChangeManagementPolicyPresence"
+description: "This rule assesses whether a change management policy is present and documented."
+implementationGuidelines:
+  Questionnaire:
+    question: "Is a change management policy document available?"
+    keywords: ["change management policy", "change approval policy", "change management standard"]
+    guidance: "Open the policy and check that it has an owner, an approval and a date of its last review. A draft or an outdated version counts as not present. The policy states the rules for changes; the steps are in the procedure (see ChangeManagementProcedurePresence)."
+    evidence:
+      - "The policy document with version, owner and approval"
+      - "The date of the last review"
+      - "Where it is published for staff (ISMS, intranet)"
+category: "DevelopmentLifeCycle"
+version: "v1"
+comments: "Answer true if a change management policy exists in its current, approved version and is available to the people it applies to."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true

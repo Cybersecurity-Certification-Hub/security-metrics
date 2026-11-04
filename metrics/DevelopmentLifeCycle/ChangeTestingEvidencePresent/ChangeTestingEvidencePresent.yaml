@@ -1,0 +1,21 @@
+# ====== Metadata ======
+id: "db22023b-5143-451c-a20f-e5d71dea0ef6"
+name: "ChangeTestingEvidencePresent"
+description: "This rule assesses whether evidence of change testing is available."
+implementationGuidelines:
+  Questionnaire:
+    question: "Is evidence of change testing available?"
+    keywords: ["test results", "change testing", "test report", "UAT"]
+    guidance: "Take a sample of recent changes, for example from the last three months, and look for test evidence linked to each of them. Answer true only if every change in the sample has it."
+    evidence:
+      - "Test reports or results of the changes in the sample"
+      - "Sign-off of acceptance tests"
+      - "Pipeline runs or test jobs that are linked to the change ticket"
+category: "DevelopmentLifeCycle"
+version: "v1"
+comments: "Answer true if changes are tested before they go to production and the test evidence can be shown."
+# ====== Configuration ======
+configuration:
+  p1:
+    operator: "=="
+    targetValue: true
