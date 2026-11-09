@@ -1,10 +1,12 @@
 package cch.metrics.liability_cost_assignment_explicit
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.liabilityPolicy as liabilityPolicy
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 applicable if {
@@ -13,7 +15,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "The clause explicitly assigns costs/responsibility to the Service Provider." if {

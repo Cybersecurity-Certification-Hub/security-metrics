@@ -1,15 +1,17 @@
 package cch.metrics.number_of_failed_authentication_attempts
 
+import data.cch.all_compliant
 import data.cch.comparison_result
 import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 # Finds numeric failedAuthenticationAttempts values below an authenticity object
 # at any nesting level.
 failed_authentication_attempts_field := [
-	attempt |
+attempt |
 	walk(input, [path, attempt])
 	count(path) > 0
 	path[count(path) - 1] == "failedAuthenticationAttempts"
@@ -24,7 +26,7 @@ applicable if {
 
 # Creates one comparison result for every discovered value.
 results := [
-	comparison_result("authenticity.failedAuthenticationAttempts", attempt) |
+comparison_result("authenticity.failedAuthenticationAttempts", attempt) |
 	some attempt in failed_authentication_attempts_field
 ]
 
@@ -33,7 +35,5 @@ compliant if {
 	count(results) > 0
 
 	# All discovered values must satisfy the comparison.
-	every result in results {
-		result.success
-	}
+	all_compliant(results)
 }

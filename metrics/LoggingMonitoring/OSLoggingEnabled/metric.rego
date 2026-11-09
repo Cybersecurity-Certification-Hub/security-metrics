@@ -1,10 +1,12 @@
 package cch.metrics.os_logging_enabled
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.osLogging as logging
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 # The metric is applicable when enabled is present and boolean.
@@ -14,9 +16,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results {
-		r.success
-	}
+	all_compliant(results)
 }
 
 message := "OS logging is properly configured." if {
@@ -27,4 +27,4 @@ message := "OS logging is properly configured." if {
 
 results := [
 	comparison_result("osLogging.enabled", logging.enabled),
-] 
+]

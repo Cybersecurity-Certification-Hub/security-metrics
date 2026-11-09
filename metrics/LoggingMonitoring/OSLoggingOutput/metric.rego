@@ -1,10 +1,12 @@
 package cch.metrics.os_logging_output
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.osLogging as logging
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 # The metric is applicable when osLogging is configured. Missing logging service IDs count as zero.
@@ -14,9 +16,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results {
-		r.success
-	}
+	all_compliant(results)
 }
 
 message := "OS logging output is properly configured." if {
@@ -30,4 +30,4 @@ results := [
 		"osLogging.loggingServiceIds.count",
 		count(object.get(logging, "loggingServiceIds", [])),
 	),
-] 
+]

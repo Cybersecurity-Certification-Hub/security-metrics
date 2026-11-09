@@ -1,11 +1,13 @@
 package cch.metrics.secure_credential_storage
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.accountManagementPolicy as accountManagementPolicy
+import rego.v1
 
-default applicable = false
-default compliant = false
+default applicable := false
+
+default compliant := false
 
 applicable if {
 	"secretStorage" in object.keys(accountManagementPolicy)
@@ -13,7 +15,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "The policy document defines a tool to be used for secure storage of credentials." if {

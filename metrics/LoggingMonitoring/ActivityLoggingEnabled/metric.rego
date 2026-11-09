@@ -1,10 +1,12 @@
 package cch.metrics.activity_logging_enabled
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.activityLogging as al
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 applicable if {
@@ -12,9 +14,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results {
-		r.success
-	}
+	all_compliant(results)
 }
 
 message := "Activity logging settings are properly defined." if {

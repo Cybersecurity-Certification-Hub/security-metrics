@@ -1,20 +1,21 @@
 package cch.metrics.verified_commits_percentage
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.verifiedCommits as vc
+import rego.v1
 
-default applicable = false
+default applicable := false
 
-default compliant = false
+default compliant := false
 
 applicable if {
-    "percentage" in object.keys(vc)
-    "CodeRepository" in input.type
+	"percentage" in object.keys(vc)
+	"CodeRepository" in input.type
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 results := [comparison_result("verifiedCommits.percentage", vc.percentage)]

@@ -1,10 +1,12 @@
 package cch.metrics.boot_logging_retention
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.bootLogging as logging
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 # The metric is applicable when retentionPeriod is present.
@@ -14,7 +16,7 @@ applicable if {
 }
 
 # Converts a valid duration value to days.
-retention_period_days := duration_ns / (1000 * 1000 * 1000 * 60 * 60 * 24) if {
+retention_period_days := duration_ns / (((((1000 * 1000) * 1000) * 60) * 60) * 24) if {
 	applicable
 	duration_ns := time.parse_duration_ns(logging.retentionPeriod)
 }
@@ -24,9 +26,7 @@ compliant if {
 	# because no comparison result could be created.
 	count(results) > 0
 
-	every r in results {
-		r.success
-	}
+	all_compliant(results)
 }
 
 message := "Boot logging retention is properly configured." if {

@@ -1,20 +1,22 @@
 package cch.metrics.allowed_sources_restricted
 
-import rego.v1
+import data.cch.all_compliant
 import input.accessRestriction.l3Firewall as l3
+import rego.v1
 
-default applicable = false
+default applicable := false
 
-default compliant = false
+default compliant := false
 
 applicable if {
 	l3.allowedSources
-    # the resource type should be an Network Interface
+
+	# the resource type should be an Network Interface
 	input.type[_] == "NetworkInterface"
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 # The evidence describes each source the way OpenNebula stores it: "<ip>" for

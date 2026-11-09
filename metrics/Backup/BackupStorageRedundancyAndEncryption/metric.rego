@@ -1,10 +1,12 @@
 package cch.metrics.backup_storage_redundancy_and_encryption
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.backup as backup
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 applicable if {
@@ -16,7 +18,7 @@ applicable if {
 
 compliant if {
 	backup.transportEncryption.enabled == true
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "Backups are stored on redundant and encrypted systems." if {
@@ -26,5 +28,5 @@ message := "Backups are stored on redundant and encrypted systems." if {
 }
 
 results := [
-	comparison_result("backup.redundant", backup.redundant)
+	comparison_result("backup.redundant", backup.redundant),
 ]

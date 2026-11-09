@@ -1,5 +1,6 @@
 package cch.metrics.asset_inventory_entry_information_complete
 
+import data.cch.all_compliant
 import data.cch.comparison_result
 import rego.v1
 
@@ -10,12 +11,12 @@ default applicable := false
 default compliant := false
 
 applicable if {
-   "allRequiredInformationRecorded" in object.keys(input.assetInventory)
-    "Account" in input.type
+	"allRequiredInformationRecorded" in object.keys(input.assetInventory)
+	"Account" in input.type
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
-results := [comparison_result("assetInventory.allRequiredInformationRecorded",assetInventory.allRequiredInformationRecorded)]
+results := [comparison_result("assetInventory.allRequiredInformationRecorded", assetInventory.allRequiredInformationRecorded)]

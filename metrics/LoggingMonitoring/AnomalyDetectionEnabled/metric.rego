@@ -1,10 +1,12 @@
 package cch.metrics.anomaly_detection_enabled
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.anomalyDetection as ad
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 applicable if {
@@ -12,9 +14,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results {
-		r.success
-	}
+	all_compliant(results)
 }
 
 message := "Anomaly detection settings are properly defined." if {

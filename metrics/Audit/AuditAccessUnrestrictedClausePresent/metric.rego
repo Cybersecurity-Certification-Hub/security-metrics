@@ -1,10 +1,12 @@
 package cch.metrics.audit_access_unrestricted_clause_present
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.complianceAuditIntervalPolicy as complianceAuditIntervalPolicy
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 applicable if {
@@ -13,7 +15,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "The clause grants direct, unrestricted, on-demand access to supervisory/inspection entities." if {

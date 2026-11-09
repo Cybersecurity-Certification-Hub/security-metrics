@@ -1,10 +1,12 @@
 package cch.metrics.acceptable_use_policy_documented
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.acceptableUsePolicy as acceptableUsePolicy
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 applicable if {
@@ -13,7 +15,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "A formal procedure documenting acceptable use of information and company assets exists." if {

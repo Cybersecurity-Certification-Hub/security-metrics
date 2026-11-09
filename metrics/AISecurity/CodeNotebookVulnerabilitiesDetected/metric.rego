@@ -1,13 +1,14 @@
 package cch.metrics.code_notebook_vulnerabilities_detected
 
+import data.cch.all_compliant
 import data.cch.comparison_result
 import rego.v1
 
 import input.vulnerabilities as vuln
 
-default applicable = false
+default applicable := false
 
-default compliant = false
+default compliant := false
 
 applicable if {
 	input.type[_] == "CodeNotebook"
@@ -15,7 +16,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 results := [comparison_result("vulnerabilities", count(vuln))]

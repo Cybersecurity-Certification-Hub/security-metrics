@@ -1,10 +1,12 @@
 package cch.metrics.external_audit_recency
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.complianceAuditIntervalPolicy as complianceAuditIntervalPolicy
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 applicable if {
@@ -14,7 +16,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "The last completed external audit occurred within the required window." if {

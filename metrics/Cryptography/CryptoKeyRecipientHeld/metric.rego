@@ -1,10 +1,12 @@
 package cch.metrics.crypto_key_recipient_held
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.cryptographicTransferPolicy as cryptographicTransferPolicy
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 applicable if {
@@ -13,7 +15,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "The encryption key used to protect the file must be held by the recipient." if {

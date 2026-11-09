@@ -1,10 +1,12 @@
 package cch.metrics.sdlc_checklist_coverage
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.secureDevelopmentPolicy as secureDevelopmentPolicy
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 applicable if {
@@ -13,7 +15,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "At least 70% of the 10 mandated SDLC checklist items are explicitly present." if {

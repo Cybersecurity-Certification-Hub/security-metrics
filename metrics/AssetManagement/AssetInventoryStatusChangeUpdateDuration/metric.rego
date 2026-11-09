@@ -1,26 +1,27 @@
 package cch.metrics.asset_inventory_status_change_update_duration
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.assetInventory as assetInventory
+import rego.v1
 
 default applicable := false
 
 default compliant := false
 
 applicable if {
-  "updateDuration" in object.keys(input.assetInventory)
-  "PolicyDocument" in input.type
+	"updateDuration" in object.keys(input.assetInventory)
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "Asset status changes are recorded within the required timeframe." if {
-  compliant
+	compliant
 } else := "Asset status changes are not recorded within the required timeframe. Update interval should be within the specified period." if {
-  not compliant
+	not compliant
 }
 
-results := [comparison_result("assetInventory.updateDuration",assetInventory.updateDuration)]
+results := [comparison_result("assetInventory.updateDuration", assetInventory.updateDuration)]

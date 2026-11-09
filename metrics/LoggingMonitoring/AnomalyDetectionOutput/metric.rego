@@ -1,9 +1,11 @@
 package cch.metrics.anomaly_detection_output
 
+import data.cch.all_compliant
 import data.cch.comparison_result
 import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 # The metric is applicable to database services. Missing logging service IDs count as zero.
@@ -12,9 +14,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results {
-		r.success
-	}
+	all_compliant(results)
 }
 
 message := "Anomaly detection output settings are properly defined." if {

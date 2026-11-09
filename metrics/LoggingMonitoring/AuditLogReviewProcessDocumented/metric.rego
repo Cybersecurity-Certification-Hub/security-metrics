@@ -1,10 +1,12 @@
 package cch.metrics.audit_log_review_process_documented
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.auditLogMonitoringPolicy as auditLogMonitoringPolicy
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 applicable if {
@@ -13,7 +15,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "The log management procedure requires periodic monitoring and anomaly review of audit logs." if {

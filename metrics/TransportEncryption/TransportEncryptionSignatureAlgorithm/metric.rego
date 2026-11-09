@@ -1,9 +1,11 @@
 package cch.metrics.transport_encryption_signature_algorithm
 
+import data.cch.all_compliant
 import data.cch.comparison_result
 import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 # Finds transportEncryption directly under input or at any nesting level.
@@ -23,7 +25,7 @@ applicable if {
 
 # Creates one comparison result for every discovered tlsSignatureAlgorithm value.
 results := [
-	comparison_result("transportEncryption.tlsSignatureAlgorithm", signature_algorithm) |
+comparison_result("transportEncryption.tlsSignatureAlgorithm", signature_algorithm) |
 	some enc in transport_encryptions
 	signature_algorithm := object.get(enc, "tlsSignatureAlgorithm", null)
 	is_string(signature_algorithm)
@@ -34,7 +36,5 @@ compliant if {
 	count(results) > 0
 
 	# All discovered tlsSignatureAlgorithm values must satisfy the comparison.
-	every result in results {
-		result.success
-	}
+	all_compliant(results)
 }

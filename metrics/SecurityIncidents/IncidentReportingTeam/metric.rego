@@ -1,9 +1,11 @@
 package cch.metrics.incident_reporting_team
 
+import data.cch.all_compliant
 import data.cch.comparison_result
 import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 applicable if {
@@ -12,7 +14,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "The policy document defines an incident reporting team." if {

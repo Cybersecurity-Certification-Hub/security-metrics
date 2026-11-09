@@ -1,9 +1,11 @@
 package cch.metrics.tls_dh_group
 
+import data.cch.all_compliant
 import data.cch.comparison_result
 import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 # Finds transportEncryption directly under input or at any nesting level.
@@ -22,7 +24,7 @@ applicable if {
 }
 
 results := [
-	comparison_result("transportEncryption.dhGroup", dh_group) |
+comparison_result("transportEncryption.dhGroup", dh_group) |
 	some enc in transport_encryptions
 	dh_group := object.get(enc, "dhGroup", null)
 	dh_group != null
@@ -32,7 +34,5 @@ compliant if {
 	applicable
 	count(results) > 0
 
-	every result in results {
-		result.success
-	}
+	all_compliant(results)
 }

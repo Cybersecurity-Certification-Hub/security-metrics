@@ -1,10 +1,12 @@
 package cch.metrics.policy_governance_ownership_stated
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.securityPolicyReview as securityPolicyReview
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 applicable if {
@@ -13,7 +15,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "The policy identifies an accountable owner and carries an approval date/signature." if {

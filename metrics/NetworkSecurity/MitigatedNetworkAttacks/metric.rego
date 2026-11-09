@@ -1,26 +1,27 @@
 package cch.metrics.mitigated_network_attacks
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.networkThreatMitigationPolicy as networkThreatMitigationPolicy
+import rego.v1
 
 default applicable := false
 
 default compliant := false
 
 applicable if {
-    networkThreatMitigationPolicy != {}
-    "PolicyDocument" in input.type
+	networkThreatMitigationPolicy != {}
+	"PolicyDocument" in input.type
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "The policy document defines network threat mitigation mechanisms covering the specified attack types." if {
-    compliant
+	compliant
 } else := "The policy document does not adequately define mitigated network attack types." if {
-    not compliant
+	not compliant
 }
 
 results := [comparison_result("networkThreatMitigationPolicy.coveredAttackTypes", object.get(networkThreatMitigationPolicy, "coveredAttackTypes", []))]

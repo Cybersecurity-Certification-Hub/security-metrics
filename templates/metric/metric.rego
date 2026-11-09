@@ -12,7 +12,7 @@ applicable if {
 }
 
 compliant if {
-    every r in results { r.success }
+    data.cch.all_compliant(results)
 }
 
 results := [comparison_result("accessRestriction.l3Firewall.restrictedPorts", l3.restrictedPorts)]

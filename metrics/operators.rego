@@ -1,14 +1,15 @@
 package cch
+
 import rego.v1
 
 # operator and target_value are declared here to add them to the output of each single policy (so assessment can use it)
-operator = data.operator
+operator := data.operator
 
-target_value = data.target_value
+target_value := data.target_value
 
 # we also expose the whole metric configuration as well. In the future we then could get rid of operator and target
 # value as individual variables
-config = data.config
+config := data.config
 
 compare(operator, target_value, actual_value) := x if {
 	operator == "=="
@@ -120,4 +121,13 @@ comparison_result(property, value) := {
 	"target_value": data.cch.target_value,
 	"operator": data.cch.operator,
 	"success": compare(data.operator, data.target_value, value),
+}
+
+# all_compliant checks that every comparison result in the given results array
+# is successful. This is the non-HE counterpart to operators_he.rego's
+# all_compliant, which instead batch-decrypts encrypted_success values via
+# fhe_decrypt. Metric .rego files use data.cch.all_compliant(results) in their
+# compliant rule so the same metric code works in both paths.
+all_compliant(results) if {
+	count([r | some r in results; not r.success]) == 0
 }

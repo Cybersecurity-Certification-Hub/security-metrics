@@ -1,8 +1,9 @@
 package cch.metrics.inactivation_delay_period
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.accountManagementPolicy as accountManagementPolicy
+import rego.v1
 
 default applicable := false
 
@@ -16,7 +17,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "The policy document defines the validity of accounts after inactivity. It ensures that the length is set to a sensible minimum value of months." if {

@@ -1,10 +1,12 @@
 package cch.metrics.sdn_function_validation_policy_presence
 
+import data.cch.all_compliant
 import data.cch.comparison_result
-import rego.v1
 import input.sdnFunctionValidationPolicy as sdnFunctionValidationPolicy
+import rego.v1
 
 default applicable := false
+
 default compliant := false
 
 applicable if {
@@ -13,7 +15,7 @@ applicable if {
 }
 
 compliant if {
-	every r in results { r.success }
+	all_compliant(results)
 }
 
 message := "The policy document defines a validation and testing policy for SDN functions." if {
